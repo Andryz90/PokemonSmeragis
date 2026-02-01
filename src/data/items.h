@@ -11701,17 +11701,18 @@ const struct Item gItemsInfo[] =
             .fieldUseFunc = ItemUseOutOfBattle_TMHM,
             .secondaryId = MOVE_CRUNCH, // Todo
         },
-        [ITEM_TM_METRONOME] = {
+        [ITEM_TM_POISON_DRAIN] = {
 
             .name = _("TM85"), .price = 3000,
-            .description = COMPOUND_STRING("Waggles a finger\n"
-                                           "to use any Pokémon\n"
-                                           "move at random."), // Todo
+            .description = COMPOUND_STRING(                    
+                    "Recovers half the HP\n"
+                    "of the damage done.\n"
+                    "May Poison."), 
             .importance = I_REUSABLE_TMS,
             .pocket = POCKET_TM_HM,
             .type = ITEM_USE_PARTY_MENU,
             .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-            .secondaryId = MOVE_METRONOME, // Todo
+            .secondaryId = MOVE_POISON_DRAIN, 
         },
         [ITEM_TM_SNARL] = {
 

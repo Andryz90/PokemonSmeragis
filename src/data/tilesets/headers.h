@@ -252,17 +252,6 @@ const struct Tileset gTileset_PokemonFanClub =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_AreaZero =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_AreaZero,
-    .palettes = gTilesetPalettes_AreaZero,
-    .metatiles = gMetatiles_AreaZero,
-    .metatileAttributes = gMetatileAttributes_AreaZero,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_MeteorFalls =
 {
     .isCompressed = TRUE,
@@ -836,4 +825,27 @@ const struct Tileset gTileset_UnionRoom =
     .metatiles = gMetatiles_UnionRoom,
     .metatileAttributes = gMetatileAttributes_UnionRoom,
     .callback = NULL,
+};
+
+//Custom
+const struct Tileset gTileset_AreaZero =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_AreaZero,
+    .palettes = gTilesetPalettes_AreaZero,
+    .metatiles = gMetatiles_AreaZero,
+    .metatileAttributes = gMetatileAttributes_AreaZero,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Sewer =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Sewer,
+    .palettes = gTilesetPalettes_Sewer,
+    .metatiles = gMetatiles_Sewer,
+    .metatileAttributes = gMetatileAttributes_Sewer,
+    .callback = InitTilesetAnim_Sewer,
 };

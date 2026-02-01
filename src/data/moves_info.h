@@ -22987,7 +22987,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_POISON_DRAIN] =
     {
         .name = COMPOUND_STRING("Poison Drain"),
-        .description = sMegaDrainDescription,
+        .description = COMPOUND_STRING("Recovers half the HP\n"
+                                        "of the damage done.\n"
+                                        "May Poison."),
         .power = 75,
         .pp = 10,
         .effect = EFFECT_ABSORB,

@@ -86,7 +86,7 @@
     F(LUNGE) \
     F(CLOSE_COMBAT) \
     F(CRUNCH) \
-    F(METRONOME) \
+    F(POISON_DRAIN) \
     F(SNARL) \
     F(DISARMING_VOICE) \
     F(DRAINING_KISS) \

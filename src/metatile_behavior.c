@@ -133,6 +133,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_SIDEWAYS_STAIRS_RIGHT_SIDE_BOTTOM]  = TILE_FLAG_UNUSED,
     [MB_SIDEWAYS_STAIRS_LEFT_SIDE_BOTTOM]   = TILE_FLAG_UNUSED,
     [MB_ROCK_STAIRS]                        = TILE_FLAG_UNUSED,
+    [MB_DIRTY_WATER]                        = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -788,7 +789,8 @@ bool8 MetatileBehavior_IsBridgeOverWater(u8 metatileBehavior)
       || (metatileBehavior == MB_BRIDGE_OVER_POND_HIGH_EDGE_1
        || metatileBehavior == MB_BRIDGE_OVER_POND_HIGH_EDGE_2
        || metatileBehavior == MB_UNUSED_BRIDGE
-       || metatileBehavior == MB_BIKE_BRIDGE_OVER_BARRIER))
+       || metatileBehavior == MB_BIKE_BRIDGE_OVER_BARRIER
+       || metatileBehavior == MB_DIRTY_WATER))
         return TRUE;
     else
         return FALSE;
@@ -818,8 +820,9 @@ u8 MetatileBehavior_GetBridgeType(u8 metatileBehavior)
 // Used to allow fishing below the bridge metatiles.
 bool8 MetatileBehavior_IsBridgeOverWaterNoEdge(u8 metatileBehavior)
 {
-    if (metatileBehavior >= MB_BRIDGE_OVER_OCEAN
-     && metatileBehavior <= MB_BRIDGE_OVER_POND_HIGH)
+    if ((metatileBehavior == MB_DIRTY_WATER) ||
+        (metatileBehavior >= MB_BRIDGE_OVER_OCEAN && 
+        metatileBehavior <= MB_BRIDGE_OVER_POND_HIGH))
         return TRUE;
     else
         return FALSE;
@@ -1178,7 +1181,8 @@ bool8 MetatileBehavior_IsSurfableFishableWater(u8 metatileBehavior)
      || (metatileBehavior == MB_EASTWARD_CURRENT
       || metatileBehavior == MB_WESTWARD_CURRENT
       || metatileBehavior == MB_NORTHWARD_CURRENT
-      || metatileBehavior == MB_SOUTHWARD_CURRENT))
+      || metatileBehavior == MB_SOUTHWARD_CURRENT
+      || metatileBehavior == MB_DIRTY_WATER))
         return TRUE;
     else
         return FALSE;

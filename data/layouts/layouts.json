@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_AreaZero",
       "border_filepath": "data/layouts/AreaZero_Outside/border.bin",
       "blockdata_filepath": "data/layouts/AreaZero_Outside/map.bin"
+    },
+    {
+      "id": "LAYOUT_SLATETPORT_SEWER",
+      "name": "Slatetport_Sewer_Layout",
+      "width": 30,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sewer",
+      "border_filepath": "data/layouts/Slatetport_Sewer/border.bin",
+      "blockdata_filepath": "data/layouts/Slatetport_Sewer/map.bin"
     }
   ]
 }

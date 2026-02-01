@@ -66,7 +66,7 @@
     },
     {
       "id": "MAPSEC_SLATEPORT_CITY",
-      "name": "SLATEPORT CITY",
+      "name": "SLATEPORT SEWERS",
       "x": 8,
       "y": 10,
       "width": 1,
@@ -498,7 +498,7 @@
     },
     {
       "id": "MAPSEC_ABANDONED_SHIP",
-      "name": "Area Zero",
+      "name": "Slateport Sewer",
       "x": 1,
       "y": 14,
       "width": 1,

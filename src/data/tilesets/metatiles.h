@@ -64,8 +64,6 @@ const u16 gMetatileAttributes_PokemonSchool[] = INCBIN_U16("data/tilesets/second
 const u16 gMetatiles_PokemonFanClub[] = INCBIN_U16("data/tilesets/secondary/pokemon_fan_club/metatiles.bin");
 const u16 gMetatileAttributes_PokemonFanClub[] = INCBIN_U16("data/tilesets/secondary/pokemon_fan_club/metatile_attributes.bin");
 
-const u16 gMetatiles_AreaZero[] = INCBIN_U16("data/tilesets/secondary/area_zero/metatiles.bin");
-const u16 gMetatileAttributes_AreaZero[] = INCBIN_U16("data/tilesets/secondary/area_zero/metatile_attributes.bin");
 
 const u16 gMetatiles_MeteorFalls[] = INCBIN_U16("data/tilesets/secondary/meteor_falls/metatiles.bin");
 const u16 gMetatileAttributes_MeteorFalls[] = INCBIN_U16("data/tilesets/secondary/meteor_falls/metatile_attributes.bin");
@@ -207,3 +205,10 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+//Custom
+const u16 gMetatiles_AreaZero[] = INCBIN_U16("data/tilesets/secondary/area_zero/metatiles.bin");
+const u16 gMetatileAttributes_AreaZero[] = INCBIN_U16("data/tilesets/secondary/area_zero/metatile_attributes.bin");
+
+const u16 gMetatiles_Sewer[] = INCBIN_U16("data/tilesets/secondary/sewer/metatiles.bin");
+const u16 gMetatileAttributes_Sewer[] = INCBIN_U16("data/tilesets/secondary/sewer/metatile_attributes.bin");

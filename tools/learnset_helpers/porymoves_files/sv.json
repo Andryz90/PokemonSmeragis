@@ -29717,7 +29717,8 @@
       "MOVE_TOXIC",
       "MOVE_PAIN_SPLIT",
       "MOVE_SLUDGE_WAVE",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_POISON_DRAIN"
     ],
     "EggMoves": [
       "MOVE_ACID_ARMOR",
@@ -29853,7 +29854,8 @@
       "MOVE_PAIN_SPLIT",
       "MOVE_DOUBLE_EDGE",
       "MOVE_SLUDGE_WAVE",
-      "MOVE_CURSE"
+      "MOVE_CURSE",
+      "MOVE_POISON_DRAIN"
     ],
     "EggMoves": [
       "MOVE_ACID_ARMOR",

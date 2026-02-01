@@ -35139,16 +35139,13 @@ gBattleAnimMove_POISON_DRAIN::
 	delay 2
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 5, 5, 1
 	waitforvisualfinish
-	delay 3
-	call PoisonBubblesEffect
-	waitforvisualfinish
-	clearmonbg ANIM_TARGET
-	blendoff
-	delay 3
 	call GigaDrainAbsorbEffect
 	waitforvisualfinish
 	delay 15
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 3, 0, 15, 1
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 1, 2, 0, 12, RGB(30, 0, 31)
 	call HealingEffect
+	call PoisonBubblesEffect
 	waitforvisualfinish
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 1, 12, 0, RGB(29, 0, 29)
 	waitforvisualfinish

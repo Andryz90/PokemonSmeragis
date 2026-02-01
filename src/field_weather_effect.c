@@ -93,6 +93,33 @@ static const struct SpriteTemplate sCloudSpriteTemplate =
     .callback = UpdateCloudSprite,
 };
 
+#define BGCNT_PRIORITY_MASK 0x0003
+
+static EWRAM_DATA u16 sPrevBg3Cnt = 0u;
+static EWRAM_DATA bool8 sBg3PriorityForced = 0u;
+
+static void Clouds_ForceBg3Priority(u8 prio)
+{
+    if (!sBg3PriorityForced)
+    {
+        sPrevBg3Cnt = GetGpuReg(REG_OFFSET_BG3CNT);
+        sBg3PriorityForced = TRUE;
+    }
+
+    u16 bg3 = GetGpuReg(REG_OFFSET_BG3CNT);
+    bg3 = (bg3 & ~BGCNT_PRIORITY_MASK) | (prio & BGCNT_PRIORITY_MASK);
+    SetGpuReg(REG_OFFSET_BG3CNT, bg3);
+}
+
+static void Clouds_RestoreBg3Priority(void)
+{
+    if (sBg3PriorityForced)
+    {
+        SetGpuReg(REG_OFFSET_BG3CNT, sPrevBg3Cnt);
+        sBg3PriorityForced = FALSE;
+    }
+}
+
 void Clouds_InitVars(void)
 {
     gWeatherPtr->noShadows = FALSE;

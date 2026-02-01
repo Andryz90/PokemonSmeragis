@@ -711,7 +711,7 @@
               {
                 "min_level": 12,
                 "max_level": 20,
-                "species": "SPECIES_CROAGUNK"
+                "species": "SPECIES_GULPIN"
               },
               {
                 "min_level": 13,
@@ -726,12 +726,12 @@
               {
                 "min_level": 13,
                 "max_level": 20,
-                "species": "SPECIES_ODDISH"
+                "species": "SPECIES_GULPIN"
               },
               {
                 "min_level": 13,
                 "max_level": 20,
-                "species": "SPECIES_WATTREL"
+                "species": "SPECIES_CROAGUNK"
               },
               {
                 "min_level": 13,
@@ -12551,6 +12551,65 @@
                 "min_level": 40,
                 "max_level": 40,
                 "species": "SPECIES_SPIRITOMB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SLATETPORT_SEWER",
+          "base_label": "gSlatetport_Sewer",
+          "fishing_mons": {
+            "encounter_rate": 100,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_SKRELP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER_ALOLA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GRIMER_ALOLA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_SKRELP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
               }
             ]
           }

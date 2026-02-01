@@ -107,7 +107,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_EventScript_Sandygast",
+      "script": "Common_EventScript_WildOWMon",
       "flag": "FLAG_TEMP_1"
     },
     {
@@ -120,7 +120,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_EventScript_Sandygast",
+      "script": "Common_EventScript_WildOWMon",
       "flag": "FLAG_TEMP_2"
     },
     {

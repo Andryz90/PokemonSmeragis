@@ -478,24 +478,6 @@ Route109_EventScript_Elijah::
 	msgbox Route109_Text_ElijahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DewfordTown_EventScript_Pyukumuku::
-	lockall
-	faceplayer
-	setwildbattle SPECIES_PYUKUMUKU, 20
-	waitse
-	playmoncry SPECIES_PYUKUMUKU, CRY_MODE_ENCOUNTER
-	delay 40
-	waitmoncry
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	dowildbattle
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, DewfordTown_EventScript_DefeatedSandy
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, DewfordTown_EventScript_DefeatedSandy
-	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, DewfordTown_EventScript_DefeatedSandy 
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, DewfordTown_EventScript_DefeatedSandy
-	releaseall
-	end
 
 Route109_EventScript_StaticCursola1::
 	lock 	

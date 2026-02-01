@@ -88,7 +88,7 @@
 // - MOVE_LUNGE                                        //
 // - MOVE_CLOSE_COMBAT                                 //
 // - MOVE_CRUNCH                                       //
-// - MOVE_METRONOME                                    //
+// - MOVE_POISON_DRAIN                                 //
 // - MOVE_SNARL                                        //
 // - MOVE_DISARMING_VOICE                              //
 // - MOVE_DRAINING_KISS                                //
@@ -9910,6 +9910,7 @@ static const u16 sKabutopsTeachableLearnset[] = {
     MOVE_BLIZZARD,
     MOVE_BRICK_BREAK,
     MOVE_BRINE,
+    MOVE_CEASELESS_EDGE,
     MOVE_CROSS_POISON,
     MOVE_DIG,
     MOVE_DIVE,
@@ -9941,6 +9942,7 @@ static const u16 sKabutopsTeachableLearnset[] = {
     MOVE_SCALD,
     MOVE_SCREECH,
     MOVE_STEALTH_ROCK,
+    MOVE_STONE_AXE,
     MOVE_STONE_EDGE,
     MOVE_SUPERPOWER,
     MOVE_SURF,
@@ -19437,6 +19439,7 @@ static const u16 sGulpinTeachableLearnset[] = {
     MOVE_ICE_BEAM,
     MOVE_MUD_SHOT,
     MOVE_PAIN_SPLIT,
+    MOVE_POISON_DRAIN,
     MOVE_POISON_JAB,
     MOVE_PROTECT,
     MOVE_RAIN_DANCE,
@@ -19488,6 +19491,7 @@ static const u16 sSwalotTeachableLearnset[] = {
     MOVE_KNOCK_OFF,
     MOVE_MUD_SHOT,
     MOVE_PAIN_SPLIT,
+    MOVE_POISON_DRAIN,
     MOVE_POISON_JAB,
     MOVE_PROTECT,
     MOVE_RAIN_DANCE,

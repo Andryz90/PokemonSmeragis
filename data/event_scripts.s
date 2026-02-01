@@ -1104,6 +1104,30 @@ Common_EventScript_PokemonPartner::
 	release
 	end
 
+Common_EventScript_WildOWMon::
+	lockall
+	faceplayer
+	special ReturnPokemonSpeciesFromOW
+	setwildbattle VAR_RESULT, VAR_UNUSED_0x8014
+	waitse
+	playmoncry VAR_RESULT, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Common_EventScript_RemoveOWPokemon
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Common_EventScript_RemoveOWPokemon
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_RemoveOWPokemon 
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Common_EventScript_RemoveOWPokemon
+	releaseall
+	end
+Common_EventScript_RemoveOWPokemon::
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+
 EventScript_VsSeekerChargingDone::
 	special VsSeekerFreezeObjectsAfterChargeComplete
 	waitstate
@@ -1189,3 +1213,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/DesertUnderpass_Tunnel/scripts.inc"
 
 	.include "data/maps/AreaZero_Outside/scripts.inc"
+
+	.include "data/maps/Slatetport_Sewer/scripts.inc"

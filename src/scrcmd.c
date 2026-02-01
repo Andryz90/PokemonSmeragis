@@ -2527,6 +2527,12 @@ bool8 ScrCmd_setwildbattle(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
 
+    if (species >= VAR_0x8000 && species <= SPECIAL_VARS_END)
+    {
+        species = VarGet(species);
+        level = VarGet(VAR_UNUSED_0x8014);
+    }
+        
     if(species2 == SPECIES_NONE)
     {
         CreateScriptedWildMon(species, level, item);
@@ -2534,6 +2540,11 @@ bool8 ScrCmd_setwildbattle(struct ScriptContext *ctx)
     }
     else
     {
+        if (species2 >= VAR_0x8000 && species2 <= SPECIAL_VARS_END)
+        {
+            species2 = VarGet(species2);
+            level2 = VarGet(level2);
+        }
         CreateScriptedDoubleWildMon(species, level, item, species2, level2, item2);
         sIsScriptedWildDouble = TRUE;
     }
@@ -2723,7 +2734,7 @@ bool8 ScrCmd_playmoncry(struct ScriptContext *ctx)
     u16 mode = VarGet(ScriptReadHalfword(ctx));
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
-
+MgbaPrintf(MGBA_LOG_ERROR, "species cry:%u", species);
     PlayCry_Script(species, mode);
     return FALSE;
 }

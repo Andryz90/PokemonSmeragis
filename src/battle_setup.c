@@ -653,7 +653,7 @@ u8 BattleSetup_GetEnvironmentId(void)
     case MAP_TYPE_UNDERGROUND:
         if (MetatileBehavior_IsIndoorEncounter(tileBehavior))
             return BATTLE_ENVIRONMENT_BUILDING;
-        if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+        if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior) || MetatileBehavior_IsBridgeOverWaterNoEdge(tileBehavior))
             return BATTLE_ENVIRONMENT_POND;
         return BATTLE_ENVIRONMENT_CAVE;
     case MAP_TYPE_INDOOR:

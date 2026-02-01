@@ -4568,14 +4568,20 @@ void ReturnPokemonSpeciesFromOW (void)
 
     for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
     {
-        if (gObjectEvents[i].active && gObjectEvents[i].localId == gSpecialVar_LastTalked)
+        if (gObjectEvents[i].active && gObjectEvents[i].localId == gSpecialVar_LastTalked && gObjectEvents[i].active)
+        {
             pokemon = gObjectEvents[i].graphicsId;
+            //Level of the wild battle if used by that script
+            if (gObjectEvents[i].trainerRange_berryTreeId != 0)
+                gSpecialVar_Unused_0x8014 = gObjectEvents[i].trainerRange_berryTreeId; 
+            else
+                gSpecialVar_Unused_0x8014 = 20u; //default if it's not specified
+        }
+            
     }
 
-    MgbaPrintf(MGBA_LOG_ERROR, "pkmn: %u", gSpecialVar_Result);
     if (pokemon & OBJ_EVENT_MON)
     {
         gSpecialVar_Result = pokemon & OBJ_EVENT_MON_SPECIES_MASK;
-        MgbaPrintf(MGBA_LOG_ERROR, "species: %u", gSpecialVar_Result);
     }
 }
