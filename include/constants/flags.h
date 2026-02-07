@@ -60,7 +60,7 @@
 #define FLAG_HOARFROST_TM                               0x2E 
 #define SPLITFACE_ENCOUNTERED                           0x2F 
 #define HEART_SCALE_ALTER_FOREST                        0x30 
-#define FLAG_RARE_CANDY_HISUIAN_AMULER_109              0x31 
+#define FLAG_RARE_CANDY_HISUIAN_AMULET_109              0x31 
 #define FLAG_TRADE_POKEMON_FAN_CLUB_MILCERY             0x32
 #define FLAG_CUTIEFLY_MILCERY_SWITCH                    0x33 
 #define FLAG_MINECTITE                                  0x34 
@@ -657,9 +657,9 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 #define FLAG_HISUIAN_AMULET_FOREST                           (FLAG_HIDDEN_ITEMS_START + 0x70) 
-#define FLAG_HIDE_PETALBURG_CITY_RIVAL                       0x265 
-#define FLAG_HEAVVY_DUTY_BOOTS                               0x266
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
+#define FLAG_HIDE_PETALBURG_CITY_RIVAL                       (FLAG_HIDDEN_ITEMS_START + 0x71)   // Not an hidden item LMFAO
+#define FLAG_HEAVVY_DUTY_BOOTS                               (FLAG_HIDDEN_ITEMS_START + 0x72) 
+#define FLAG_SOAL_SHELL                                      (FLAG_HIDDEN_ITEMS_START + 0x73) 
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag

@@ -253,6 +253,7 @@ gScriptCmdTable::
 	script_cmd_table_entry SCR_OP_DYNMULTIPUSH                  ScrCmd_dynmultipush,                requests_effects=1  @ 0xe4
 	script_cmd_table_entry SCR_OP_BUFFERNATURENAME			    ScrCmd_buffernaturename,			requests_effects=1  @ 0xe5
 	script_cmd_table_entry SCR_OP_CHECKITEMSLIST			    ScrCmd_checkitemslist,				requests_effects=1  @ 0xe6
+	script_cmd_table_entry SCR_OP_REFRESHOBJECTINMAP            ScrCmd_refreshobjectsinmap,         requests_effects=1  @ 0xe7
 	.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

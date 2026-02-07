@@ -4520,7 +4520,7 @@ bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct Evoluti
     u32 i, j;
     u32 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
     u32 gender = GetMonGender(mon);
-    u16 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
+    //u16 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
     u32 friendship = GetMonData(mon, MON_DATA_FRIENDSHIP, 0);
     u32 attack = GetMonData(mon, MON_DATA_ATK, 0);
     u32 defense = GetMonData(mon, MON_DATA_DEF, 0);

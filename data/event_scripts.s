@@ -1215,3 +1215,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/AreaZero_Outside/scripts.inc"
 
 	.include "data/maps/Slatetport_Sewer/scripts.inc"
+
+	.include "data/maps/DesertUnderpass_Tunnel2/scripts.inc"

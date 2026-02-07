@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "LOCALID_ROOT_FOSSIL",
+      "local_id": "LOCALID_SAIL_FOSSIL",
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
       "x": 16,
       "y": 10,
@@ -24,7 +24,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_sight_or_berry_tree_id": "SAIL_FOSSIL",
       "script": "DesertUnderpass_EventScript_Fossil",
       "flag": "FLAG_HIDE_DESERT_UNDERPASS_FOSSIL"
     },
@@ -38,14 +38,14 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_sight_or_berry_tree_id": "SKULL_FOSSIL",
       "script": "DesertUnderpass_EventScript_Fossil",
       "flag": "FLAG_HIDE_DESERT_UNDERPASS_FOSSIL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 3,
-      "y": 18,
+      "x": 5,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -57,8 +57,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 15,
-      "y": 18,
+      "x": 14,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -88,7 +88,7 @@
       "x": 9,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_DESERT_UNDERPASS",
+      "dest_map": "MAP_DESERT_UNDERPASS_TUNNEL2",
       "dest_warp_id": "1"
     }
   ],

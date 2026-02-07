@@ -1,0 +1,115 @@
+{
+  "id": "MAP_DESERT_UNDERPASS_TUNNEL2",
+  "name": "DesertUnderpass_Tunnel2",
+  "layout": "LAYOUT_DESERT_UNDERPASS_TUNNEL2",
+  "music": "MUS_MT_CHIMNEY",
+  "region_map_section": "MAPSEC_DESERT_UNDERPASS",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_COVER_FOSSIL",
+      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
+      "x": 3,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "COVER_FOSSIL",
+      "script": "DesertUnderpass_EventScript_Fossil",
+      "flag": "FLAG_HIDE_DESERT_UNDERPASS_FOSSIL"
+    },
+    {
+      "local_id": "LOCALID_ARMOR_FOSSIL",
+      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
+      "x": 16,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ARMOR_FOSSIL",
+      "script": "DesertUnderpass_EventScript_Fossil",
+      "flag": "FLAG_HIDE_DESERT_UNDERPASS_FOSSIL"
+    },
+    {
+      "local_id": "LOCALID_OLD_AMBER",
+      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "OLD_AMBER",
+      "script": "DesertUnderpass_EventScript_Fossil",
+      "flag": "FLAG_HIDE_DESERT_UNDERPASS_FOSSIL"
+    },
+    {
+      "local_id": "LOCALID_PLUME_FOSSIL",
+      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
+      "x": 3,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "PLUME_FOSSIL",
+      "script": "DesertUnderpass_EventScript_Fossil",
+      "flag": "FLAG_HIDE_DESERT_UNDERPASS_FOSSIL"
+    },
+    {
+      "local_id": "LOCALID_JAW_FOSSIL",
+      "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
+      "x": 16,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "JAW_FOSSIL",
+      "script": "DesertUnderpass_EventScript_Fossil",
+      "flag": "FLAG_HIDE_DESERT_UNDERPASS_FOSSIL"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_DESERT_UNDERPASS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_DESERT_UNDERPASS_TUNNEL",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 15,
+      "y": 2,
+      "elevation": 0,
+      "item": "ITEM_SHOAL_SHELL",
+      "flag": "FLAG_SOAL_SHELL"
+    }
+  ]
+}

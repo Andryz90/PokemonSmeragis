@@ -367,4 +367,22 @@ enum EvoSpinDirections {
 #define LEGENDARY_PERFECT_IV_COUNT 0
 #endif
 
+// Custom Scripts var
+enum Fossils_Enum_t
+{
+    HELIX_FOSSIL = 1,
+    DOME_FOSSIL  = 2,
+    OLD_AMBER    = 3,
+    ROOT_FOSSIL  = 4,
+    CLAW_FOSSIL  = 5,
+    ARMOR_FOSSIL = 6,
+    SKULL_FOSSIL = 7,
+    COVER_FOSSIL = 8,
+    PLUME_FOSSIL = 9,
+    JAW_FOSSIL   = 10,
+    SAIL_FOSSIL  = 11,
+
+    FOSSILS_COUNT
+};
+
 #endif // GUARD_CONSTANTS_POKEMON_H

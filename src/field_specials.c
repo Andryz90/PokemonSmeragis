@@ -4543,22 +4543,35 @@ void Script_GiveMonSpecial (void)
 
 void RegisterTalkedFossil (void)
 {
-    static const u8 FossilName_LookUpTable[][TRAINER_NAME_LENGTH + 1] =
+    u8 i = 0u;
+    u16 fossil_item = 0u;
+
+    static const u8 FossilItem_LookUpTable[FOSSILS_COUNT] =
     {
-        [DESERT_UNDERPASS_HELIX_FOSSIL] = _("Helix Fossil"),
-        [DESERT_UNDERPASS_DOME_FOSSIL]  = _("Dome Fossil"),
-        [DESERT_UNDERPASS_OLD_AMBER]    = _("Old Amber"),
-        [DESERT_UNDERPASS_ROOT_FOSSIL]  = _("Root Fossil"),
-        [DESERT_UNDERPASS_CLAW_FOSSIL]  = _("Claw Fossil"),
-        [DESERT_UNDERPASS_ARMOR_FOSSIL] = _("Armor Fossil"),
-        [DESERT_UNDERPASS_SKULL_FOSSIL] = _("Skull Fossil"),
-        [DESERT_UNDERPASS_COVER_FOSSIL] = _("Cover Fossil"),
-        [DESERT_UNDERPASS_PLUME_FOSSIL] = _("Plume Fossil"),
-        [DESERT_UNDERPASS_JAW_FOSSIL]   = _("Jaw Fossil"),
-        [DESERT_UNDERPASS_SAIL_FOSSIL]  = _("Sail Fossil"),
+        [HELIX_FOSSIL] = ITEM_HELIX_FOSSIL,
+        [DOME_FOSSIL]  = ITEM_DOME_FOSSIL,
+        [OLD_AMBER]    = ITEM_OLD_AMBER,
+        [ROOT_FOSSIL]  = ITEM_ROOT_FOSSIL,
+        [CLAW_FOSSIL]  = ITEM_CLAW_FOSSIL,
+        [ARMOR_FOSSIL] = ITEM_ARMOR_FOSSIL,
+        [SKULL_FOSSIL] = ITEM_SKULL_FOSSIL,
+        [COVER_FOSSIL] = ITEM_COVER_FOSSIL,
+        [PLUME_FOSSIL] = ITEM_PLUME_FOSSIL,
+        [JAW_FOSSIL]   = ITEM_JAW_FOSSIL,
+        [SAIL_FOSSIL]  = ITEM_SAIL_FOSSIL,
     };
 
-    StringCopy(gStringVar1, FossilName_LookUpTable[gSpecialVar_Unused_0x8014]);
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        if (gObjectEvents[i].active && gObjectEvents[i].localId == gSpecialVar_LastTalked && gObjectEvents[i].active)
+        {
+            fossil_item = FossilItem_LookUpTable[gObjectEvents[i].trainerRange_berryTreeId];
+            MgbaPrintf(MGBA_LOG_ERROR, "item: %u", fossil_item);
+            MgbaPrintf(MGBA_LOG_ERROR, "ID: %u", gObjectEvents[i].trainerRange_berryTreeId);
+            VarSet(VAR_UNUSED_0x8014, fossil_item);
+            StringCopy(gStringVar1, gItemsInfo[fossil_item].name);
+        }
+    }
 }
 
 void ReturnPokemonSpeciesFromOW (void)

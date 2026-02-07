@@ -3445,6 +3445,39 @@ void UpdateObjectEventsForCameraUpdate(s16 x, s16 y)
     RemoveObjectEventsOutsideView();
 }
 
+void RefreshObjectEventsInCurrentMap(void)
+{
+    u8 i, j;
+    bool8 isActiveLinkPlayer;
+
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        for (j = 0, isActiveLinkPlayer = FALSE; j < ARRAY_COUNT(gLinkPlayerObjectEvents); j++)
+        {
+            if (gLinkPlayerObjectEvents[j].active && i == gLinkPlayerObjectEvents[j].objEventId)
+                isActiveLinkPlayer = TRUE;
+        }
+        if (isActiveLinkPlayer)
+            continue;
+
+        struct ObjectEvent *objectEvent = &gObjectEvents[i];
+        if (!objectEvent->active || objectEvent->isPlayer)
+            continue;
+        if (objectEvent->localId == OBJ_EVENT_ID_FOLLOWER || objectEvent->localId == OBJ_EVENT_ID_NPC_FOLLOWER)
+            continue;
+
+        const struct ObjectEventTemplate *template = GetObjectEventTemplateByLocalIdAndMap(objectEvent->localId, objectEvent->mapNum, objectEvent->mapGroup);
+        if (template == NULL)
+            continue;
+
+        if (FlagGet(template->flagId))
+            RemoveObjectEvent(objectEvent);
+    }
+
+    TrySpawnObjectEvents(0, 0);
+    RemoveObjectEventsOutsideView();
+}
+
 // The "CameraObject" functions below are responsible for an invisible sprite
 // that follows the movements of a different sprite (normally the player's sprite)
 // and tracks x/y movement distances for the camera so it knows where to move.

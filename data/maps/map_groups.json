@@ -436,7 +436,8 @@
     "Seaspray_Cave_B1F",
     "GraniteCave_B3F",
     "DuneCave",
-    "DesertUnderpass_Tunnel"
+    "DesertUnderpass_Tunnel",
+    "DesertUnderpass_Tunnel2"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

@@ -4530,6 +4530,16 @@
       "secondary_tileset": "gTileset_Sewer",
       "border_filepath": "data/layouts/Slatetport_Sewer/border.bin",
       "blockdata_filepath": "data/layouts/Slatetport_Sewer/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESERT_UNDERPASS_TUNNEL2",
+      "name": "DesertUnderpass_Tunnel2_Layout",
+      "width": 19,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DesertUnderpass_Tunnel2/border.bin",
+      "blockdata_filepath": "data/layouts/DesertUnderpass_Tunnel2/map.bin"
     }
   ]
 }

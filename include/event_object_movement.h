@@ -226,6 +226,7 @@ void ShiftStillObjectEventCoords(struct ObjectEvent *objEvent);
 void ObjectEventMoveDestCoords(struct ObjectEvent *objEvent, u32 direction, s16 *x, s16 *y);
 u8 AddCameraObject(u8 linkedSpriteId);
 void UpdateObjectEventsForCameraUpdate(s16 x, s16 y);
+void RefreshObjectEventsInCurrentMap(void);
 u8 GetWalkSlowMovementAction(u32);
 u8 GetWalkSlowStairsMovementAction(u32);
 u8 GetJumpMovementAction(u32);

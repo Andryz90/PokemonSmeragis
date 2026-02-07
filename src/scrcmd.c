@@ -1019,6 +1019,13 @@ bool8 ScrCmd_warpsilent(struct ScriptContext *ctx)
     return TRUE;
 }
 
+bool8 ScrCmd_refreshobjectsinmap (struct ScriptContext *ctx)
+{ 
+    Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE | SCREFF_HARDWARE);
+    RefreshObjectEventsInCurrentMap();
+    return FALSE;
+}
+
 bool8 ScrCmd_warpdoor(struct ScriptContext *ctx)
 {
     u8 mapGroup = ScriptReadByte(ctx);
