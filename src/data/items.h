@@ -77,9 +77,9 @@ static const u8 sEvolutionStoneDesc[] = _("Makes certain\n"
                                           "species of Pokémon\n"
                                           "evolve.");
 
-static const u8 sHisuianAmDesc[] = _("Makes hisuian\n"
-                                     "Pokemon species\n"
-                                     "to evolve.");
+static const u8 sHisuianAmDesc[] = _("A pokemon with Hisui\n"
+                                    "regional form can hold\n"
+                                    "it to evolve into it.");
 
 static const u8 sNectarDesc[] = _("Flower nectar that\n"
                                   "changes the form\n"

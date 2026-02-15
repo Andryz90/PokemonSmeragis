@@ -42,5 +42,5 @@ EverGrandeCity_HallOfFame_EventScript_ReadyReceiveSSTicketEvent::
 	return
 
 EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent::
-	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1
+	@setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1
 	return

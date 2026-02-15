@@ -36,7 +36,7 @@ AI_SINGLE_BATTLE_TEST("AI switches if Perish Song is about to kill")
             TURN { ; }
             TURN { EXPECT_SWITCH(opponent, 1); }
     } SCENE {
-        MESSAGE(AI_TRAINER_NAME " sent out Crobat! ");
+        MESSAGE(AI_TRAINER_NAME " sent out Crobat!");
     }
 }
 
@@ -60,11 +60,11 @@ AI_DOUBLE_BATTLE_TEST("AI will not try to switch for the same pokemon for 2 spot
     } WHEN {
         TURN { EXPECT_SWITCH(opponentLeft, 3); };
     } SCENE {
-        MESSAGE(AI_TRAINER_NAME " withdrew Gengar! ");
-        MESSAGE(AI_TRAINER_NAME " sent out Raticate! ");
+        MESSAGE(AI_TRAINER_NAME " withdrew Gengar!");
+        MESSAGE(AI_TRAINER_NAME " sent out Raticate!");
         NONE_OF {
-            MESSAGE(AI_TRAINER_NAME " withdrew Haunter! ");
-            MESSAGE(AI_TRAINER_NAME " sent out Raticate! ");
+            MESSAGE(AI_TRAINER_NAME " withdrew Haunter!");
+            MESSAGE(AI_TRAINER_NAME " sent out Raticate!");
         }
     }
 }
@@ -113,11 +113,11 @@ AI_DOUBLE_BATTLE_TEST("AI will not try to switch for the same pokemon for 2 spot
     } WHEN {
         TURN { EXPECT_SWITCH(opponentLeft, 3); };
     } SCENE {
-        MESSAGE(AI_TRAINER_NAME " withdrew Linoone! ");
-        MESSAGE(AI_TRAINER_NAME " sent out Gengar! ");
+        MESSAGE(AI_TRAINER_NAME " withdrew Linoone!");
+        MESSAGE(AI_TRAINER_NAME " sent out Gengar!");
         NONE_OF {
-            MESSAGE(AI_TRAINER_NAME " withdrew Zigzagoon! ");
-            MESSAGE(AI_TRAINER_NAME " sent out Gengar! ");
+            MESSAGE(AI_TRAINER_NAME " withdrew Zigzagoon!");
+            MESSAGE(AI_TRAINER_NAME " sent out Gengar!");
         }
     }
 }
@@ -196,7 +196,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: Number of hits to KO calculati
     } WHEN {
             TURN { MOVE(player, MOVE_SCRATCH); EXPECT_MOVES(opponent, MOVE_ZIPPY_ZAP, MOVE_EXTREME_SPEED, MOVE_IRON_TAIL, MOVE_KNOCK_OFF); }
     } SCENE {
-        MESSAGE("Venusaur fainted! ");
+        MESSAGE("Venusaur fainted!");
     }
 }
 
@@ -213,7 +213,7 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: Number of hits to KO calculati
     } WHEN {
             TURN { MOVE(player, MOVE_SWORDS_DANCE); EXPECT_MOVES(opponent, MOVE_SCRATCH); }
     } SCENE {
-        MESSAGE("Bulbasaur fainted! ");
+        MESSAGE("Bulbasaur fainted!");
     }
 }
 
@@ -258,11 +258,11 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_MON_CHOICES: AI will not switch in a Pokemo
     } WHEN {
             TURN { MOVE(player, MOVE_NIGHT_SLASH) ; EXPECT_SEND_OUT(opponent, alakazamFirst ? 1 : 2); } // AI doesn't send out Alakazam if it gets outsped
     } SCENE {
-        MESSAGE("The opposing Kadabra fainted! ");
+        MESSAGE("The opposing Kadabra fainted!");
         if (alakazamFirst) {
-            MESSAGE(AI_TRAINER_NAME " sent out Alakazam! ");
+            MESSAGE(AI_TRAINER_NAME " sent out Alakazam!");
         } else {
-            MESSAGE(AI_TRAINER_NAME " sent out Blastoise! ");
+            MESSAGE(AI_TRAINER_NAME " sent out Blastoise!");
         }
     }
 }
@@ -454,7 +454,8 @@ AI_SINGLE_BATTLE_TEST("AI_FLAG_SMART_SWITCHING: AI will not switch out if Pokemo
         ASSUME(GetMoveCategory(MOVE_HEADBUTT) == DAMAGE_CATEGORY_PHYSICAL);
         AI_FLAGS(AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING);
         PLAYER(SPECIES_HITMONTOP) { Level(30); Moves(MOVE_CHARM, MOVE_SCRATCH, MOVE_STEALTH_ROCK, MOVE_EARTHQUAKE); Ability(ABILITY_INTIMIDATE); Speed(5); }
-        OPPONENT(SPECIES_GRIMER) { Level(30); Moves(MOVE_SCRATCH); Item(ITEM_FOCUS_SASH); Speed(4); }
+        // Ensure Earthquake would KO so Focus Sash leaves Grimer at 1 HP.
+        OPPONENT(SPECIES_GRIMER) { Level(30); Moves(MOVE_SCRATCH); Item(ITEM_FOCUS_SASH); Speed(4); Defense(1); }
         OPPONENT(SPECIES_PONYTA) { Level(30); Moves(MOVE_HEADBUTT, move1); Speed(4); }
     } WHEN {
         TURN { MOVE(player, MOVE_STEALTH_ROCK); }

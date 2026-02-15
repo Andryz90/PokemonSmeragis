@@ -1,7 +1,7 @@
 {
-  "id": "MAP_SLATETPORT_SEWER",
-  "name": "Slatetport_Sewer",
-  "layout": "LAYOUT_SLATETPORT_SEWER",
+  "id": "MAP_SLATEPORT_SEWER",
+  "name": "Slateport_Sewer",
+  "layout": "LAYOUT_SLATEPORT_SEWER",
   "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_SLATEPORT_CITY",
   "requires_flash": false,

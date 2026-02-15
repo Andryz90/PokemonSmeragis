@@ -3567,8 +3567,6 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     && gBattleStruct->illusion[diagonalBattler].state != ILLUSION_ON
                     && !(gStatuses3[diagonalBattler] & STATUS3_SEMI_INVULNERABLE_NO_COMMANDER))
                 {
-                    SaveBattlerAttacker(gBattlerAttacker);
-                    SaveBattlerTarget(gBattlerTarget);
                     gBattlerAttacker = battler;
                     gBattlerTarget = diagonalBattler;
                     BattleScriptPushCursorAndCallback(BattleScript_ImposterActivates);
@@ -3734,7 +3732,6 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 if (CompareStat(battler, statId, MAX_STAT_STAGE, CMP_LESS_THAN))
                 {
                     SET_STATCHANGER(statId, 1, FALSE);
-                    SaveBattlerAttacker(gBattlerAttacker);
                     gBattlerAttacker = battler;
                     PREPARE_STAT_BUFFER(gBattleTextBuff1, statId);
                     BattleScriptPushCursorAndCallback(BattleScript_AttackerAbilityStatRaiseEnd3);
@@ -3885,7 +3882,6 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
         case ABILITY_INTIMIDATE:
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
-                SaveBattlerAttacker(gBattlerAttacker);
                 gBattlerAttacker = battler;
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
                 SET_STATCHANGER(STAT_ATK, 1, TRUE);
@@ -3897,7 +3893,6 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             if (!gSpecialStatuses[battler].switchInAbilityDone
              && !gBattleStruct->partyState[GetBattlerSide(battler)][gBattlerPartyIndexes[battler]].supersweetSyrup)
             {
-                SaveBattlerAttacker(gBattlerAttacker);
                 gBattlerAttacker = battler;
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
                 gBattleStruct->partyState[GetBattlerSide(battler)][gBattlerPartyIndexes[battler]].supersweetSyrup = TRUE;
@@ -5765,7 +5760,7 @@ bool32 CanBeFrozen(u32 battlerAtk, u32 battlerDef, u32 abilityDef)
                                 battlerDef,
                                 ABILITY_NONE, // attacker ability does not matter
                                 abilityDef,
-                                MOVE_EFFECT_FREEZE,
+                                MOVE_EFFECT_FREEZE_OR_FROSTBITE,
                                 STATUS_CHECK_TRIGGER))
         return TRUE;
     return FALSE;

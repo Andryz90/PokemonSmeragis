@@ -6221,37 +6221,61 @@ Music: Male
 Double Battle: No
 AI: Check bad Move/ Try To Faint/ Prefer Highest Damage Move/ Check Viability/ HP Aware/ Smart Switching/ Smart Mon Choices
 
-Spinda
-Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Teeter Dance
-- Psybeam
-- Facade
-- Encore
+Cyclizar @ Sitrus Berry  
+Ability: Regenerator  
+Level: 53  
+Timid Nature  
+- Shed Tail  
+- Draco Meteor  
+- Hyper Voice  
+- Knock Off  
 
-Vigoroth
-Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Facade
-- Encore
-- Feint Attack
+Zoroark-Hisui @ Choice Specs  
+Ability: Illusion  
+Level: 54   
+Timid Nature  
+- Hyper Voice  
+- Bitter Malice  
+- U-turn  
+- Extrasensory  
 
-Linoone
-Level: 29
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Belly Drum
-- Facade
-- Headbutt
+Lopunny (M) @ Lopunnite  
+Ability: Scrappy  
+Level: 55    
+Jolly Nature  
+- High Jump Kick  
+- Return  
+- Facade  
+- Triple Axel  
 
-Slaking @ Sitrus Berry
-Level: 31
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Counter
-- Yawn
-- Facade
-- Feint Attack
+Slaking @ Figy Berry  
+Ability: Gluttony  
+Level: 54  
+Jolly Nature  
+- Facade  
+- High Horsepower  
+- Drain Punch  
+- Slack Off  
+
+Farigiraf @ Colbur Berry  
+Ability: Armor Tail  
+Level: 54  
+Modest Nature  
+IVs: 0 Atk  
+- Psychic Noise  
+- Hyper Voice  
+- Dazzling Gleam  
+- Psyshock  
+
+Obstagoon (M) @ Flame Orb  
+Ability: Guts  
+Level: 54  
+Jolly Nature  
+- Obstruct  
+- Facade  
+- Knock Off  
+- Sucker Punch  
+
 
 === TRAINER_WINONA_1 ===
 Name: WINONA
@@ -13594,11 +13618,11 @@ IVs: 0 Atk
 - Bug Buzz  
 - Giga Drain  
 
-Garchomp @ Bright Powder  
+Garchomp
 Ability: Sand Veil  
 Level: 49    
 Adamant Nature  
-- Dragon Dance  
+- Scale Shot 
 - Stone Edge  
 - Earthquake  
 - Brick Break  

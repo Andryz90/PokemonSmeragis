@@ -73691,7 +73691,15 @@
         "Move": "MOVE_SCARY_FACE"
       },
       {
-        "Level": 42,
+        "Level": 38,
+        "Move": "MOVE_SUCKER_PUNCH"
+      },
+      {
+        "Level": 41,
+        "Move": "MOVE_KNOCK_OFF"
+      },
+      {
+        "Level": 45,
         "Move": "MOVE_COUNTER"
       },
       {
@@ -81198,6 +81206,10 @@
       {
         "Level": 33,
         "Move": "MOVE_SCARY_FACE"
+      },
+      {
+        "Level": 35,
+        "Move": "MOVE_KNOCK_OFF"
       },
       {
         "Level": 38,

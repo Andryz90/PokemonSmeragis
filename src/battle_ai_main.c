@@ -1111,6 +1111,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             case MOVE_EFFECT_POISON:
             case MOVE_EFFECT_TOXIC:
             case MOVE_EFFECT_BURN:
+            case MOVE_EFFECT_FREEZE_OR_FROSTBITE:
                 ADJUST_SCORE(-5);
                 break;
             }
@@ -2878,6 +2879,12 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
         if (!ShouldBurn(battlerAtk, battlerDef, aiData->abilities[battlerDef]))
             ADJUST_SCORE(-5);
         break;
+    case MOVE_EFFECT_FREEZE_OR_FROSTBITE:
+        if (!AI_CanGiveFrostbite(battlerAtk, battlerDef, aiData->abilities[battlerDef], BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove))
+            ADJUST_SCORE(-15);
+        else if (!ShouldFreezeOrFrostbite(battlerAtk, battlerDef, aiData->abilities[battlerDef]))
+            ADJUST_SCORE(-5);
+        break;
     }
 
     // Choice items
@@ -3821,6 +3828,9 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
         break;
     case MOVE_EFFECT_BURN:
         IncreaseBurnScore(battlerAtk, battlerDef, move, &score);
+        break;
+    case MOVE_EFFECT_FREEZE_OR_FROSTBITE:
+        IncreaseFrostbiteScore(battlerAtk, battlerDef, move, &score);
         break;
     }
     // move effect checks

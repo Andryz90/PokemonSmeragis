@@ -565,6 +565,10 @@ bool32 IsDamageMoveUnusable(u32 battlerAtk, u32 battlerDef, u32 move, u32 moveTy
         if (battlerDefAbility == ABILITY_DAMP || partnerDefAbility == ABILITY_DAMP)
             return TRUE;
         break;
+    case EFFECT_PURIFYING_WATER:
+        if (IS_BATTLER_OF_TYPE(battlerDef, TYPE_WATER))
+            return TRUE;
+        break;
     default:
         break;
     }
@@ -3747,6 +3751,7 @@ bool32 PartnerMoveEffectIsStatusSameTarget(u32 battlerAtkPartner, u32 battlerDef
        || nonVolatileStatus == MOVE_EFFECT_SLEEP
        || nonVolatileStatus == MOVE_EFFECT_PARALYSIS
        || nonVolatileStatus == MOVE_EFFECT_BURN
+       || nonVolatileStatus == MOVE_EFFECT_FREEZE_OR_FROSTBITE
        || partnerEffect == EFFECT_YAWN
        || partnerEffect == EFFECT_HOARFROST))
         return TRUE;

@@ -528,6 +528,8 @@ PKMN_Center_EventScript_MaxIVs::
 	dynmultipush PKMN_Center_One, 0
 	dynmultipush PKMN_Center_All, 1 
 	dynmultistack 0, 0, FALSE, 2, FALSE, 0, NULL
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
 	switch VAR_RESULT
 	case 0, PKMN_Center_EventScript_MaxIVs_Single
 	case 1, PKMN_Center_EventScript_MaxIVs_All
@@ -549,6 +551,8 @@ PKMN_Center_EventScript_MaxIVs_Single::
 	dynmultipush PKMN_Center_SpAtk_IV, 4
 	dynmultipush PKMN_Center_SpDef_IV, 5
 	dynmultistack 0, 0, FALSE, 6, FALSE, 0, NULL
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
 	copyvar VAR_0x8005, VAR_RESULT
 	special BufferMonNickname
 	special bufferIVname 

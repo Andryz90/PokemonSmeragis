@@ -176,7 +176,7 @@ FallarborTown_Tutor_EventScript_MaxCantTeachEgg::
 	end
 FallarborTown_Tutor_Text_ImTheMoveTutor:
 	.string "I can teach special moves\nto your Pokémon.\p"
-	.string "This service requires,\njust 1 Heart Scale.\p"
+	.string "This service requires just\n1 Heart Scale.\p"
 	.string "Are you interested?  $"
 
 
