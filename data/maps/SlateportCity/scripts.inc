@@ -663,6 +663,40 @@ SlateportCity_Pokemart_PowerTMs:
 	release
 	end
 
+SlateportCity_EventScript_MegaStones::
+	lock
+	faceplayer
+	checkitem ITEM_MEGA_RING
+	goto_if_eq VAR_RESULT, FALSE, SlateportCity_PleaseComeAgain
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart SlateportCity_Pokemart_MegaStones
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_MegaStones:
+	.2byte ITEM_BEEDRILLITE
+	.2byte ITEM_PINSIRITE 
+	.2byte ITEM_HOUNDOOMINITE
+	.2byte ITEM_HERACRONITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_AGGRONITE
+	.2byte ITEM_SHARPEDONITE
+	.2byte ITEM_CAMERUPTITE
+	.2byte ITEM_BANETTITE
+	.2byte ITEM_GLALITITE
+	.2byte ITEM_ABSOLITE
+	.2byte ITEM_NONE
+	release
+	end
+
+SlateportCity_PleaseComeAgain::
+	msgbox SlateportCity_EventScript_MegaRing_Quit_Text, MSGBOX_DEFAULT
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine
 SlateportCity_EventScript_CaptStern::
 	lockall
@@ -1487,3 +1521,6 @@ SlateportCity_Text_GruntsGuard_Text::
 	.string "What do you want?!\pNobody can leave the city\n"
 	.string "as long as we take the Devon Goods\p"
 	.string "Get Lost! $"
+
+SlateportCity_EventScript_MegaRing_Quit_Text::
+	.string "It seems you don't have\na MEGA RING to use these stones.$"

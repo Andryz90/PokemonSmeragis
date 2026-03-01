@@ -4804,6 +4804,24 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ChestOpen = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trees = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TREES_ANIM,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_S,
+    .inanimate = TRUE,
+    .compressed = FALSE,
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Trees,
+    .images = sPicTable_Trees,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TempItemBall = {TAG_NONE, OBJ_EVENT_PAL_TEMP_BALL, OBJ_EVENT_PAL_TAG_NONE, 128, 16, 16, 3, SHADOW_SIZE_S, TRUE, FALSE, TRACKS_NONE, &gObjectEventBaseOam_16x16, sOamTables_16x16, sAnimTable_Inanimate, sPicTable_TempItemBall, gDummySpriteAffineAnimTable};
 //from Inclement Emerald

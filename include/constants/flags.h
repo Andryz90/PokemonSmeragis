@@ -1233,8 +1233,8 @@
 #define FLAG_ABILITY_PATCH_HEART_SCALE_R112                         0x49B
 #define FLAG_RARE_CANDY_HEART_SCALE_MTCH                            0x49C
 #define FLAG_SEASPRAY_HEART_SCALE                                   0x49D
-#define FLAG_UNUSED_0x49E                                           0x49E 
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
+#define FLAG_HIDE_RIVALS_R110                                       0x49E 
+#define FLAG_CHILLING_WATER_TM                                      0x49F
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
@@ -1349,9 +1349,9 @@
 
 // System Flags
 
-#define SYSTEM_FLAGS                                 (TRAINER_FLAGS_START + 1) // 0x860 -> modified and removed the space for the trainer flags, because they're handled separately
+#define SYSTEM_FLAGS                                 (TRAINER_FLAGS_START + 1) // 0x500 -> modified and removed the space for the trainer flags, because they're handled separately
 
-#define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
+#define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x500
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
 #define FLAG_RIVAL_110                               (SYSTEM_FLAGS + 0x3) 

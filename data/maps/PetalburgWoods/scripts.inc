@@ -327,9 +327,15 @@ PetalburgWoods_Bugsy_Lost::
 	releaseall
 	end
 PetalburgWoods_EventScript_Bugsy_BattleBegin::
+	goto_if_unset FLAG_BADGE03_GET, PetalburgWoods_EventScript_Bugsy_BattleFirst
 	trainerbattle_single TRAINER_BUGSY, PetalburgWoods_Text_Bugsy_Accepted, PetalburgWoods_Text_Bugsy_Lost, PetalburgWoods_Bugsy_Lost, NO_MUSIC
 	releaseall
 	end
+PetalburgWoods_EventScript_Bugsy_BattleFirst::
+	trainerbattle_single TRAINER_BUGSY_2, PetalburgWoods_Text_Bugsy_Accepted, PetalburgWoods_Text_Bugsy_Lost, PetalburgWoods_Bugsy_Lost, NO_MUSIC
+	releaseall
+	end
+
 PetalburgWoods_Bugsy_NotReady::
 	msgbox PetalburgWoods_Text_Bugsy_NotReady, MSGBOX_DEFAULT
 	releaseall

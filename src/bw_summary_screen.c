@@ -4058,6 +4058,8 @@ static void BufferMonTrainerMemo(void)
         {
             if (sum->metLevel == 0)
                 text = (!locationFound) ? gText_XNatureHatchedSomewhereAt : gText_XNatureHatchedAtYZ;
+            else if (sum->metLocation == METLOC_BAG) //Starter
+                text = gText_FoundInBag;
             else
                 text = (!locationFound) ? gText_XNatureMetSomewhereAt : gText_XNatureMetAtYZ;
         }

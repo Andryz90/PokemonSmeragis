@@ -66,6 +66,10 @@ Debug_CheatStart::
 	setflag FLAG_LANDMARK_BATTLE_FRONTIER
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
+    giveitem ITEM_RARE_CANDY_KEY_ITEM
+	giveitem ITEM_INFINITE_REPEL
+    giveitem ITEM_POKE_VIAL, 1
+	setvar VAR_POKE_VIAL_CHARGES, 1
 	release
 	end
 

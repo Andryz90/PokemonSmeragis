@@ -1429,3 +1429,12 @@ static const struct SpriteFrameImage sPicTable_Chest_Open[] = {
     
     overworld_ascending_frames(gObjectEventPic_ChestOpen, 2, 4),
 };
+
+static const struct SpriteFrameImage sPicTable_Trees[] = 
+{
+    overworld_frame(gObjectEventPic_Trees, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Trees, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Trees, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Trees, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Trees, 2, 4, 4),
+};

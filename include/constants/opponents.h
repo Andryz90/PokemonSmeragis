@@ -894,6 +894,7 @@ enum Opponents_Additional_Trainer_enum
     TRAINER_SARAH_2,
     TRAINER_JERRY_6,
     TRAINER_JANICE_2,
+    TRAINER_BUGSY_2,
 
     ADDITIONAL_OPPONENTS_TRAINER_COUNT
 

@@ -133,6 +133,7 @@ Desert_Ruin_Maxie_Trigger::
 	setflag FLAG_HIDE_MAGMA_GRUNT_DESERT
 	clearflag FLAG_HIDE_TRAINER_DESERT
 	setvar VAR_WALLY_ROUTE111_TRIGGER, 4
+	setvar VAR_R110_STATE, 1
 	removeobject LOCALID_MAXIE_REGIROCK_CHAMBER
 	fadescreen FADE_FROM_BLACK
 	releaseall

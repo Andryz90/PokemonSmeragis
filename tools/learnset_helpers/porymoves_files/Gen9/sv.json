@@ -24332,6 +24332,10 @@
       },
       {
         "Level": 1,
+        "Move": "MOVE_TWISTER"
+      },
+      {
+        "Level": 1,
         "Move": "MOVE_FURY_CUTTER"
       },
       {
@@ -24341,10 +24345,6 @@
       {
         "Level": 1,
         "Move": "MOVE_ENERGY_BALL"
-      },
-      {
-        "Level": 1,
-        "Move": "MOVE_SHED_TAIL"
       },
       {
         "Level": 1,
@@ -24405,6 +24405,10 @@
       {
         "Level": 49,
         "Move": "MOVE_ENDEAVOR"
+      },
+      {
+        "Level": 53,
+        "Move": "MOVE_SHED_TAIL"
       },
       {
         "Level": 56,
@@ -47839,8 +47843,12 @@
         "Move": "MOVE_STOMP"
       },
       {
-        "Level": 36,
+        "Level": 34,
         "Move": "MOVE_DISCHARGE"
+      },
+      {
+        "Level": 38,
+        "Move": "MOVE_SUPERCELL_SLAM"
       },
       {
         "Level": 42,

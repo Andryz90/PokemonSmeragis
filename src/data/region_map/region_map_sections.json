@@ -66,7 +66,7 @@
     },
     {
       "id": "MAPSEC_SLATEPORT_CITY",
-      "name": "SLATEPORT SEWERS",
+      "name": "SLATEPORT CITY",
       "x": 8,
       "y": 10,
       "width": 1,
@@ -1769,6 +1769,22 @@
     },
     {
       "id": "MAPSEC_AREA_ZERO"
+    },
+    {
+      "id": "MAPSEC_SLATEPORT_SEWERS",
+      "name": "SLATEPORT SEWERS",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_TRICK_HOUSE",
+      "name": "TRICK HOUSE",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
     }
   ]
 }

@@ -228,11 +228,14 @@ enum {
     MAPSEC_GAME_CORNER,
     MAPSEC_POKEMON_DAY_CARE,
     MAPSEC_AREA_ZERO,
+    MAPSEC_SLATEPORT_SEWERS,
+    MAPSEC_TRICK_HOUSE,
     MAPSEC_NONE,
     MAPSEC_COUNT
 };
 
 // Special location IDs that use the same value space as MAPSECs.
+#define METLOC_BAG                 0xFC // Starters
 #define METLOC_SPECIAL_EGG         0xFD
 #define METLOC_IN_GAME_TRADE       0xFE
 #define METLOC_FATEFUL_ENCOUNTER   0xFF

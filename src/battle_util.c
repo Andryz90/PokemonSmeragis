@@ -37,6 +37,7 @@
 #include "berry.h"
 #include "pokedex.h"
 #include "mail.h"
+#include "overworld.h"
 #include "field_weather.h"
 #include "constants/abilities.h"
 #include "constants/battle_anim.h"
@@ -46,6 +47,7 @@
 #include "constants/hold_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "constants/region_map_sections.h"
 #include "constants/songs.h"
 #include "constants/species.h"
 #include "constants/trainers.h"
@@ -11841,7 +11843,8 @@ bool8 SetTrainerLevelIfDynamic (const struct Trainer *trainer, u8* MonLevel)
     /*Confronting each name to see if there is the right one*/
     for (uint8_t i = 0u; i < MAX_TRAINER_DYNAMIC_LEVEL; i++)
     {
-        if (strcmp((const char*)trainer->trainerName, (const char*) LookupTable_TrainerWithDynamicLevel[i]) == 0) 
+        if ((strcmp((const char*)trainer->trainerName, (const char*) LookupTable_TrainerWithDynamicLevel[i]) == 0) ||
+            GetCurrentRegionMapSectionId() == MAPSEC_TRICK_HOUSE) 
         {
             /*Now search into the Players party*/
             for (uint8_t j = 0u; j < PARTY_SIZE; j++)

@@ -27,6 +27,8 @@ struct LoadedSaveData
 {
  /*0x0000*/ struct ItemSlot items[BAG_ITEMS_COUNT];
  /*0x0078*/ struct ItemSlot keyItems[BAG_KEYITEMS_COUNT];
+            struct ItemSlot teraShards[BAG_TERASHARDS_COUNT];
+            struct ItemSlot megaStones[BAG_MEGASTONES_COUNT];
  /*0x00F0*/ struct ItemSlot pokeBalls[BAG_POKEBALLS_COUNT];
  /*0x0130*/ struct ItemSlot TMsHMs[BAG_TMHM_COUNT];
  /*0x0230*/ struct ItemSlot berries[BAG_BERRIES_COUNT];
@@ -271,6 +273,14 @@ void LoadPlayerBag(void)
     // load player pokeballs.
     for (i = 0; i < BAG_POKEBALLS_COUNT; i++)
         gLoadedSaveData.pokeBalls[i] = gSaveBlock1Ptr->bagPocket_PokeBalls[i];
+
+    // load player tera shards.
+    for (i = 0; i < BAG_TERASHARDS_COUNT; i++)
+        gLoadedSaveData.teraShards[i] = gSaveBlock1Ptr->bagPocket_TeraShards[i];
+
+    // load player tera shards.
+    for (i = 0; i < BAG_MEGASTONES_COUNT; i++)
+        gLoadedSaveData.megaStones[i] = gSaveBlock1Ptr->bagPocket_MegaStones[i];
 
     // load player TMs and HMs.
     for (i = 0; i < BAG_TMHM_COUNT; i++)

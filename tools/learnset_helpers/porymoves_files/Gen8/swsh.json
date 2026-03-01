@@ -40381,10 +40381,14 @@
       },
       {
         "Level": 20,
+        "Move": "MOVE_ROUND"
+      },
+      {
+        "Level": 23,
         "Move": "MOVE_SWAGGER"
       },
       {
-        "Level": 24,
+        "Level": 26,
         "Move": "MOVE_FEATHER_DANCE"
       },
       {
@@ -40472,6 +40476,10 @@
       },
       {
         "Level": 20,
+        "Move": "MOVE_ROUND"
+      },
+      {
+        "Level": 24,
         "Move": "MOVE_SWAGGER"
       },
       {
@@ -40485,6 +40493,10 @@
       {
         "Level": 38,
         "Move": "MOVE_AIR_SLASH"
+      },
+      {
+        "Level": 40,
+        "Move": "MOVE_HYPER_VOICE"
       },
       {
         "Level": 44,
@@ -40563,6 +40575,10 @@
       },
       {
         "Level": 20,
+        "Move": "MOVE_ROUND"
+      },
+      {
+        "Level": 24,
         "Move": "MOVE_SWAGGER"
       },
       {
@@ -40572,6 +40588,10 @@
       {
         "Level": 36,
         "Move": "MOVE_DETECT"
+      },
+      {
+        "Level": 38,
+        "Move": "MOVE_HYPER_VOICE"
       },
       {
         "Level": 42,

@@ -23898,7 +23898,8 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //P_FAMILY_MILCERY
 
 #if P_FAMILY_FALINKS
-    const u32 gMonFrontPic_Falinks[] = INCBIN_U32("graphics/pokemon/falinks/front.4bpp.lz");
+    // const u32 gMonFrontPic_Falinks[] = INCBIN_U32("graphics/pokemon/falinks/front.4bpp.lz");
+    const u32 gMonFrontPic_Falinks[] = INCBIN_U32("graphics/pokemon/falinks/anim_front.4bpp.lz");
     const u16 gMonPalette_Falinks[] = INCBIN_U16("graphics/pokemon/falinks/normal.gbapal");
     const u32 gMonBackPic_Falinks[] = INCBIN_U32("graphics/pokemon/falinks/back.4bpp.lz");
     const u16 gMonShinyPalette_Falinks[] = INCBIN_U16("graphics/pokemon/falinks/shiny.gbapal");

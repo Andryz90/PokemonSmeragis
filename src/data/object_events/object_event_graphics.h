@@ -396,6 +396,9 @@ const u16 gObjectEventPal_Chest[] = INCBIN_U16("graphics/object_events/pics/misc
 const u32 gObjectEventPic_ChestOpen[] = INCBIN_U32("graphics/object_events/pics/misc/chest_open.4bpp");
 const u16 gObjectEventPal_ChestOpen[] = INCBIN_U16("graphics/object_events/pics/misc/chest_open.gbapal");
 
+const u32 gObjectEventPic_Trees[] = INCBIN_U32("graphics/object_events/pics/misc/trees_animate.4bpp");
+const u16 gObjectEventPal_Trees[] = INCBIN_U16("graphics/object_events/pics/misc/trees_animate.gbapal");
+
 const u32 gTrainerPic_EdoCap[] = INCBIN_U32("graphics/object_events/pics/people/edo_cap_sprite.4bpp");   //Edo Cappellino LMFAO
 const u16 gTrainerPal_EdoCap[] = INCBIN_U16("graphics/object_events/pics/people/edo_cap_sprite.gbapal"); //Edo Cappellino LMFAO
 

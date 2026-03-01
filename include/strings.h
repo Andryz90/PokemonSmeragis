@@ -50,6 +50,8 @@ extern const u8 gText_Tough2[];
 
 extern const u8 gText_Items[];
 extern const u8 gText_Key_Items[];
+extern const u8 gText_Tera_Shards[];
+extern const u8 gText_MegaStones[];
 extern const u8 gText_Poke_Balls[];
 extern const u8 gText_TMs_Hms[];
 extern const u8 gText_Berries2[];
@@ -737,6 +739,7 @@ extern const u8 gText_XNatureMetAtYZ[];
 extern const u8 gText_XNatureMetSomewhereAt[];
 extern const u8 gText_XNatureFatefulEncounter[];
 extern const u8 gText_XNatureProbablyMetAt[];
+extern const u8 gText_FoundInBag[];
 extern const u8 gText_XNatureObtainedInTrade[];
 extern const u8 gText_EmptyString5[];
 extern const u8 gText_EggWillTakeALongTime[];

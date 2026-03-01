@@ -67,8 +67,10 @@
 #define MAX_POCKET_ITEMS  ((max(BAG_TMHM_COUNT,              \
                             max(BAG_BERRIES_COUNT,           \
                             max(BAG_ITEMS_COUNT,             \
+                            max(BAG_TERASHARDS_COUNT,        \
+                            max(BAG_MEGASTONES_COUNT,        \
                             max(BAG_KEYITEMS_COUNT,          \
-                                BAG_POKEBALLS_COUNT))))) + 1)
+                                BAG_POKEBALLS_COUNT))))))) + 1)
 
 // Up to 8 item slots can be visible at a time
 #define MAX_ITEMS_SHOWN 8
@@ -218,6 +220,7 @@ static void Task_ItemContext_GiveToParty(u8);
 static void Task_ItemContext_Sell(u8);
 static void Task_ItemContext_Deposit(u8);
 static void Task_ItemContext_GiveToPC(u8);
+static bool8 CanItemBeGivenToMon(u16 itemId);
 static void ConfirmToss(u8);
 static void CancelToss(u8);
 static void ConfirmSell(u8);
@@ -385,6 +388,11 @@ static const u8 sContextMenuItems_BerriesPocket[] = {
 
 static const u8 sContextMenuItems_TeraShardsPocket[] = {
     ACTION_USE,         ACTION_DUMMY,
+    ACTION_MOVE,        ACTION_CANCEL
+};
+
+static const u8 sContextMenuItems_MegaStonesPocket[] = {
+    ACTION_GIVE,        ACTION_DUMMY,
     ACTION_MOVE,        ACTION_CANCEL
 };
 
@@ -2000,10 +2008,14 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BerriesPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BerriesPocket);
                 break;
-            // case TERASHARDS_POCKET:
-            //     gBagMenu->contextMenuItemsPtr = sContextMenuItems_TeraShardsPocket;
-            //     gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_TeraShardsPocket);
-            //     break;
+            case TERASHARDS_POCKET:
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_TeraShardsPocket;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_TeraShardsPocket);
+                break;
+            case MEGASTONES_POCKET:
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_MegaStonesPocket;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_MegaStonesPocket);
+                break;
             }
         }
     }
@@ -2368,8 +2380,7 @@ static void ItemMenu_Give(u8 taskId)
     {
         DisplayItemMessage(taskId, FONT_NORMAL, gText_CantWriteMail, HandleErrorMessage);
     }
-    else if ((!GetItemImportance(gSpecialVar_ItemId) && GetItemPocket(gSpecialVar_ItemId) != POCKET_KEY_ITEMS) //This basically exclused HM's and TMs (if infinite)
-             || GetItemPocket(gSpecialVar_ItemId) == POCKET_ITEMS) //This allows even items that can be purchased 1 time to be held by a pokemon
+    else if (CanItemBeGivenToMon(gSpecialVar_ItemId))
     {
         if (CalculatePlayerPartyCount() == 0)
         {
@@ -2481,7 +2492,7 @@ static void Task_ItemContext_GiveToParty(u8 taskId)
         StringExpandPlaceholders(gStringVar4, gText_Var1CantBeHeldHere);
         DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, HandleErrorMessage);
     }
-    else if (gBagPosition.pocket != KEYITEMS_POCKET && !GetItemImportance(gSpecialVar_ItemId))
+    else if (CanItemBeGivenToMon(gSpecialVar_ItemId))
     {
         Task_FadeAndCloseBagMenu(taskId);
     }
@@ -2496,10 +2507,18 @@ static void Task_ItemContext_GiveToPC(u8 taskId)
 {
     if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
         DisplayItemMessage(taskId, FONT_NORMAL, gText_CantWriteMail, HandleErrorMessage);
-    else if (gBagPosition.pocket != KEYITEMS_POCKET && !GetItemImportance(gSpecialVar_ItemId))
+    else if (CanItemBeGivenToMon(gSpecialVar_ItemId))
         gTasks[taskId].func = Task_FadeAndCloseBagMenu;
     else
         PrintItemCantBeHeld(taskId);
+}
+
+static bool8 CanItemBeGivenToMon(u16 itemId)
+{
+    u8 pocket = GetItemPocket(itemId);
+
+    return (pocket == POCKET_ITEMS
+            || (!GetItemImportance(itemId) && pocket != POCKET_KEY_ITEMS));
 }
 
 #define tUsingRegisteredKeyItem data[3] // See usage in item_use.c
@@ -3354,9 +3373,12 @@ static void SortItemsInBag(u8 pocket, u8 type)
         itemMem = gSaveBlock1Ptr->bagPocket_TMHM;
         itemAmount = BAG_TMHM_COUNT;
         break;
-    // case TERASHARDS_POCKET:
-    //     itemMem = gSaveBlock1Ptr->bagPocket_TeraShards;
-    //     itemAmount = BAG_TERASHARDS_COUNT;
+    case TERASHARDS_POCKET:
+        itemMem = gSaveBlock1Ptr->bagPocket_TeraShards;
+        itemAmount = BAG_TERASHARDS_COUNT;
+    case MEGASTONES_POCKET:
+        itemMem = gSaveBlock1Ptr->bagPocket_MegaStones;
+        itemAmount = BAG_MEGASTONES_COUNT;
     default:
         return;
     }

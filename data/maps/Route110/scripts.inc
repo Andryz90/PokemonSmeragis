@@ -18,14 +18,35 @@ Route110_OnTransition:
 	call Common_EventScript_SetupRivalOnBikeGfxId
 	goto_if_eq VAR_BIRCH_TRIGGER_110, 1, Route110_ChangeBirchPos
 	call_if_eq VAR_CYCLING_CHALLENGE_STATE, 1, Route110_EventScript_SaveCyclingMusic
+	goto_if_eq VAR_R110_STATE, 1, Route110_EventScript_MovePokemonInWay
 	end
 
 Route110_EventScript_SaveCyclingMusic::
 	savebgm MUS_CYCLING
 	return
 
+Route110_Trigger_Rivals_Event::
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call_if_ne VAR_TEMP_0, 16, Common_Script_End
+	call_if_ne VAR_TEMP_1, 89, Common_Script_End
+	goto Route110_EventScript_Wally_Rival
+	return
+
+Route110_EventScript_MovePokemonInWay::
+	call_if_unset FLAG_MAXIE_DESERT, Common_Script_End
+	setobjectxyperm LOCALID_FENNEK_R110_1, 5, 20
+	setobjectxyperm LOCALID_FENNEK_R110_2, 4, 21
+	setobjectxyperm LOCALID_FENNEK_R110_3, 3, 20
+	setobjectxyperm LOCALID_CUBONE_R110_1, 4, 20
+	setobjectxyperm LOCALID_CUBONE_R110_2, 3, 21
+	setobjectxyperm LOCALID_CUBONE_R110_3, 5, 21
+	setobjectxyperm LOCALID_RIVAL_R110_2, 16, 91
+	setobjectxyperm LOCALID_WALLY_R110, 15, 91
+	return
+
 Route110_OnFrame:
 	map_script_2 VAR_CYCLING_CHALLENGE_STATE, 1, Route110_EventScript_BeginCylcingRoadChallenge
+	map_script_2 VAR_R110_STATE, 1, Route110_Trigger_Rivals_Event
 	.2byte 0
 
 Route110_EventScript_BeginCylcingRoadChallenge::
@@ -789,6 +810,78 @@ Route110_Movement_BirchExit4:
 	walk_up
 	step_end
 
+Route110_EventScript_Wally_Rival::
+	lock 
+	applymovement LOCALID_RIVAL_R110_2, Common_Movement_FacePlayer
+	waitmovement 0
+	applymovement LOCALID_WALLY_R110, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_WALLY_R110, Common_Movement_ExclamationMark
+	applymovement LOCALID_RIVAL_R110_2, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Common_Text_PlayerName, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	msgbox Route110_Text_Rival, MSGBOX_DEFAULT
+	msgbox Route110_Wally_Text, MSGBOX_DEFAULT
+	msgbox Route110_Text_Rival2, MSGBOX_DEFAULT
+	msgbox Route110_Wally_Text2, MSGBOX_DEFAULT
+	msgbox Route110_Text_Rival_MegaRing, MSGBOX_DEFAULT
+	giveitem ITEM_MEGA_RING
+	applymovement LOCALID_WALLY_R110, Common_Movement_QuestionMark
+	waitmovement 0
+	msgbox Route110_Wally_Text3, MSGBOX_DEFAULT
+	msgbox Route110_Text_Rival_Final, MSGBOX_DEFAULT
+	applymovement LOCALID_WALLY_R110, Route110_Wally_Exit_Movement
+	applymovement LOCALID_RIVAL_R110_2, Route110_Wally_Exit_Movement
+	waitmovement 0
+	removeobject LOCALID_WALLY_R110
+	removeobject LOCALID_RIVAL_R110_2
+	removeobject LOCALID_FENNEK_R110_1
+	removeobject LOCALID_FENNEK_R110_2
+	removeobject LOCALID_FENNEK_R110_3
+	removeobject LOCALID_CUBONE_R110_1
+	removeobject LOCALID_CUBONE_R110_2
+	removeobject LOCALID_CUBONE_R110_3
+	removeobject LOCALID_RIVAL_R110_2
+	removeobject LOCALID_WALLY_R110
+	setvar VAR_R110_STATE, 2
+	release
+	end 
+
+
+Route110_Wally_Exit_Movement::
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+Route110_Rival_Exit_Movement::
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+Common_Text_PlayerName::
+	.string "{PLAYER}!$"
+
 Route110_Text_WeCantTalkAboutAquaActivities:
 	.string "TEAM AQUA's activities…\n"
 	.string "We can't talk about them yet. $"
@@ -1047,3 +1140,23 @@ Route110_Text_BadgeOk::
 	.string "I believe you can take this,\nit has a rare species inside. $"
 Route110_Text_BadgeOk_End::
 	.string "Stay on guard and be safe, please. $"
+
+Route110_Text_Rival::
+	.string "WALLY and I are here to talk\nabout TEAM MAGMA in the desert.$"
+Route110_Wally_Text::
+	.string "WALLY: Right. They need to be stopped.\nWe don't know their next move yet,\p"
+	.string "but we can't let them get away. $"
+Route110_Text_Rival2::
+	.string "We need to keep moving on our journey\nand reach FORTREE CITY.\p"
+	.string "We're meeting the others there\nto decide our next step.$"
+Route110_Wally_Text2::
+	.string "WALLY: We just earned the FIFTH BADGE,\nso we're heading to FORTREE CITY\lthrough Route 119.\p"
+	.string "I don't think you'll have any trouble\nearning it too.$"
+Route110_Wally_Text3::
+	.string "WALLY: Hm? Are there POKéMON blocking\nthe way?\p"
+	.string "They must have fled the desert when\nTEAM MAGMA caused that commotion.\p"
+	.string "We'll calm them down, don't worry. $"
+Route110_Text_Rival_MegaRing::
+	.string "Here, {PLAYER}. I'm sure you'll put this\nto good use.$"
+Route110_Text_Rival_Final::
+	.string "{PLAYER}, we have to go now.\nWe'll be waiting for you.\pBye! $"

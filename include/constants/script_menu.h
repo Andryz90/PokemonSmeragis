@@ -165,6 +165,9 @@
 #define STDSTRING_BATTLE_ARENA     27
 #define STDSTRING_BATTLE_PIKE      28
 #define STDSTRING_BATTLE_PYRAMID   29
+#define STDSTRING_TERASHARDS       30
+#define STDSTRING_MEGASTONES       31
+
 
 // Dynamic Multichoice Callbacks
 

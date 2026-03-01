@@ -446,3 +446,19 @@ static const union AnimCmd *const sAnims_Kommo_O[] =
     },
 };
 #endif //P_FAMILY_JANGMO_O
+
+#if P_FAMILY_FALINKS
+static const union AnimCmd *const sAnims_Falinks[] =
+{
+    sAnim_GeneralFrame0,
+    (const union AnimCmd[]) {
+        ANIMCMD_FRAME(0, 10),
+        ANIMCMD_FRAME(1, 50),
+        ANIMCMD_FRAME(0, 10),
+        ANIMCMD_FRAME(1, 10),
+        ANIMCMD_FRAME(0, 1),
+        ANIMCMD_END,
+    },
+};
+#endif //P_FAMILY_FALINKS
+

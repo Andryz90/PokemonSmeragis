@@ -50372,9 +50372,7 @@
   "GARBODOR": {
     "LevelMoves": [],
     "PreEvoMoves": [],
-    "TMMoves": [
-      "MOVE_DETERIO"
-    ],
+    "TMMoves": [],
     "EggMoves": [],
     "TutorMoves": []
   },

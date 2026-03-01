@@ -7,6 +7,19 @@ static const union AnimCmd sAnim_StayStill[] =
     ANIMCMD_JUMP(0),
 };
 
+static const union AnimCmd sAnim_TreesSway[] =
+{
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(2, 10),
+    ANIMCMD_FRAME(3, 10),
+    ANIMCMD_FRAME(4, 10),
+    ANIMCMD_FRAME(3, 10),
+    ANIMCMD_FRAME(2, 10),
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_JUMP(0),
+};
+
 static const union AnimCmd sAnim_QuintyPlumpFaceSouth[] =
 {
     ANIMCMD_FRAME(0, 16),
@@ -1474,6 +1487,29 @@ static const union AnimCmd *const sAnimTable_BreakableRock[] = {
 static const union AnimCmd *const sAnimTable_CuttableTree[] = {
     [ANIM_STAY_STILL] = sAnim_StayStill,
     [ANIM_REMOVE_OBSTACLE] = sAnim_TreeCut,
+};
+
+static const union AnimCmd *const sAnimTable_Trees[] = {
+    [ANIM_STD_FACE_SOUTH] = sAnim_TreesSway,
+    [ANIM_STD_FACE_NORTH] = sAnim_TreesSway,
+    [ANIM_STD_FACE_WEST] = sAnim_TreesSway,
+    [ANIM_STD_FACE_EAST] = sAnim_TreesSway,
+    [ANIM_STD_GO_SOUTH] = sAnim_TreesSway,
+    [ANIM_STD_GO_NORTH] = sAnim_TreesSway,
+    [ANIM_STD_GO_WEST] = sAnim_TreesSway,
+    [ANIM_STD_GO_EAST] = sAnim_TreesSway,
+    [ANIM_STD_GO_FAST_SOUTH] = sAnim_TreesSway,
+    [ANIM_STD_GO_FAST_NORTH] = sAnim_TreesSway,
+    [ANIM_STD_GO_FAST_WEST] = sAnim_TreesSway,
+    [ANIM_STD_GO_FAST_EAST] = sAnim_TreesSway,
+    [ANIM_STD_GO_FASTER_SOUTH] = sAnim_TreesSway,
+    [ANIM_STD_GO_FASTER_NORTH] = sAnim_TreesSway,
+    [ANIM_STD_GO_FASTER_WEST] = sAnim_TreesSway,
+    [ANIM_STD_GO_FASTER_EAST] = sAnim_TreesSway,
+    [ANIM_STD_GO_FASTEST_SOUTH] = sAnim_TreesSway,
+    [ANIM_STD_GO_FASTEST_NORTH] = sAnim_TreesSway,
+    [ANIM_STD_GO_FASTEST_WEST] = sAnim_TreesSway,
+    [ANIM_STD_GO_FASTEST_EAST] = sAnim_TreesSway,
 };
 
 static const union AnimCmd *const sAnimTable_Fishing[] = {

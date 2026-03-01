@@ -5312,7 +5312,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Venusaur to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5322,12 +5322,12 @@ const struct Item gItemsInfo[] =
 
         [ITEM_CHARIZARDITE_X] =
             {
-        .name = _("Charizardite X"),
+                .name = _("Charizardite X"),
                 .pluralName = _("Charizardites X"),
                 .price = 0,
                 .holdEffect = HOLD_EFFECT_MEGA_STONE,
                 .description = sCharizarditeDesc,
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5342,7 +5342,7 @@ const struct Item gItemsInfo[] =
                 .price = 0,
                 .holdEffect = HOLD_EFFECT_MEGA_STONE,
                 .description = sCharizarditeDesc,
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5359,7 +5359,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Blastoise to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5376,7 +5376,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Beedrill to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5393,7 +5393,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Pidgeot to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5410,7 +5410,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Alakazam to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5427,7 +5427,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Slowbro to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5444,7 +5444,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Gengar to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5461,7 +5461,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Kangaskhan to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5478,7 +5478,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Pinsir to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5495,7 +5495,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Gyarados to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5512,7 +5512,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Aerodactyl to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5527,7 +5527,7 @@ const struct Item gItemsInfo[] =
                 .price = 0,
                 .holdEffect = HOLD_EFFECT_MEGA_STONE,
                 .description = sMewtwoniteDesc,
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5542,7 +5542,7 @@ const struct Item gItemsInfo[] =
                 .price = 0,
                 .holdEffect = HOLD_EFFECT_MEGA_STONE,
                 .description = sMewtwoniteDesc,
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5559,7 +5559,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Ampharos to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5576,7 +5576,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Steelix to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5593,7 +5593,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Scizor to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5610,7 +5610,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Heracross to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5627,7 +5627,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Houndoom to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5644,7 +5644,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Tyranitar to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5661,7 +5661,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Sceptile to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5678,7 +5678,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Blaziken to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5695,7 +5695,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Swampert to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5712,7 +5712,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Gardevoir to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5729,7 +5729,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Sableye to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5746,7 +5746,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Mawile to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5763,7 +5763,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Aggron to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5780,7 +5780,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Medicham to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5797,7 +5797,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Manectric to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5814,7 +5814,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Sharpedo to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5831,7 +5831,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Camerupt to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5848,7 +5848,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Altaria to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5865,7 +5865,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Banette to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5882,7 +5882,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Absol to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5899,7 +5899,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Glalie to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5916,7 +5916,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Salamence to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5933,7 +5933,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Metagross to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5950,7 +5950,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Latias to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5967,7 +5967,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Latios to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -5984,7 +5984,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Lopunny to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -6001,7 +6001,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Garchomp to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -6018,7 +6018,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Lucario to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -6035,7 +6035,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Abomasnow to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -6052,7 +6052,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Gallade to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -6069,7 +6069,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Audino to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -6086,7 +6086,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Diancie to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -6102,7 +6102,7 @@ const struct Item gItemsInfo[] =
                     "This stone enables\n"
                     "Feraligatr to Mega\n"
                     "Evolve in battle."),
-                .pocket = POCKET_ITEMS,
+                .pocket = POCKET_MEGASTONES,
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
@@ -13444,218 +13444,255 @@ const struct Item gItemsInfo[] =
     [ITEM_BUG_TERA_SHARD] =
     {
         .name = _("Bug Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_BugTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_BUG,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_BugTeraShard,
+    },
 
     [ITEM_DARK_TERA_SHARD] =
     {
         .name = _("Dark Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_DarkTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_DARK,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_DarkTeraShard,
+    },
 
     [ITEM_DRAGON_TERA_SHARD] =
     {
         .name = _("Dragon Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_DragonTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_DRAGON,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_DragonTeraShard,
+    },
 
     [ITEM_ELECTRIC_TERA_SHARD] =
     {
         .name = _("Electric Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_ElectricTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_ELECTRIC,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_ElectricTeraShard,
+    },
 
     [ITEM_FAIRY_TERA_SHARD] =
     {
         .name = _("Fairy Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_FairyTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_FAIRY,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_FairyTeraShard,
+    },
 
     [ITEM_FIGHTING_TERA_SHARD] =
     {
         .name = _("Fighting Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_FightingTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_FIGHTING,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_FightingTeraShard,
+    },
 
     [ITEM_FIRE_TERA_SHARD] =
     {
         .name = _("Fire Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_FireTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_FIRE,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_FireTeraShard,
+    },
 
     [ITEM_FLYING_TERA_SHARD] =
     {
         .name = _("Flying Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_FlyingTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_FLYING,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_FlyingTeraShard,
+    },
 
     [ITEM_GHOST_TERA_SHARD] =
     {
         .name = _("Ghost Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_GhostTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_GHOST,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_GhostTeraShard,
+    },
 
     [ITEM_GRASS_TERA_SHARD] =
     {
         .name = _("Grass Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_GrassTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_GRASS,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_GrassTeraShard,
+    },
 
     [ITEM_GROUND_TERA_SHARD] =
     {
         .name = _("Ground Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_GroundTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_GROUND,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_GroundTeraShard,
+    },
 
     [ITEM_ICE_TERA_SHARD] =
     {
         .name = _("Ice Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_IceTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_ICE,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_IceTeraShard,
+    },
 
     [ITEM_NORMAL_TERA_SHARD] =
     {
         .name = _("Normal Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_NormalTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_NORMAL,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_NormalTeraShard,
+    },
 
     [ITEM_POISON_TERA_SHARD] =
     {
         .name = _("Poison Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_PoisonTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_POISON,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_PoisonTeraShard,
+    },
 
     [ITEM_PSYCHIC_TERA_SHARD] =
     {
         .name = _("Psychic Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_PsychicTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_PSYCHIC,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_PsychicTeraShard,
+    },
 
     [ITEM_ROCK_TERA_SHARD] =
     {
         .name = _("Rock Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_RockTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_ROCK,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_RockTeraShard,
+    },
 
     [ITEM_STEEL_TERA_SHARD] =
     {
         .name = _("Steel Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_SteelTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_STEEL,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_SteelTeraShard,
+    },
 
     [ITEM_WATER_TERA_SHARD] =
     {
         .name = _("Water Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_TeraShard,
-            .iconPalette = gItemIconPalette_WaterTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_WATER,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_WaterTeraShard,
+    },
+
 
     [ITEM_ADAMANT_CRYSTAL] =
     {
@@ -14036,14 +14073,16 @@ const struct Item gItemsInfo[] =
     [ITEM_STELLAR_TERA_SHARD] =
     {
         .name = _("Stellar Tera Shard"),
-            .price = 0,
-            .description = sTeraShardDesc,
-            .pocket = POCKET_ITEMS,
-            .type = ITEM_USE_BAG_MENU,
-            .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-            .iconPic = gItemIcon_StellarTeraShard,
-            .iconPalette = gItemIconPalette_StellarTeraShard,
-        },
+        .price = 0,
+        .importance = 1,
+        .description = sTeraShardDesc,
+        .pocket = POCKET_TERA_SHARDS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TeraShard,
+        .secondaryId = TYPE_STELLAR,
+        .iconPic = gItemIcon_StellarTeraShard,
+        .iconPalette = gItemIconPalette_StellarTeraShard,
+    },
 
     [ITEM_JUBILIFE_MUFFIN] =
     {
