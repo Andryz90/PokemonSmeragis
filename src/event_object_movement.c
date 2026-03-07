@@ -537,7 +537,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gTrainerPal_EdoCap,                    OBJ_EVENT_PAL_EDOCAP},
     {gTrainerPal_Andry,                     OBJ_EVENT_PAL_ANDRY},
     {gObjectEventPal_Chest,                 OBJ_EVENT_PAL_CHEST},
-    {gObjectEventPal_Trees,                 OBJ_EVENT_PAL_TREES_ANIM},
+    {gObjectEventPal_Trees_NoBckgrnd,       OBJ_EVENT_PAL_TREES_ANIM},
+    {gObjectEventPal_Trees_Bckgrnd,         OBJ_EVENT_PAL_TREES_ANIM_BCKGRND},
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},
@@ -3442,8 +3443,13 @@ static bool8 ObjectEventDoesElevationMatch(struct ObjectEvent *objectEvent, u8 e
 void UpdateObjectEventsForCameraUpdate(s16 x, s16 y)
 {
     UpdateObjectEventCoordsForCameraUpdate();
+    // Pre-spawn first so nearby edge objects are ready during scroll.
     TrySpawnObjectEvents(x, y);
     RemoveObjectEventsOutsideView();
+    // Only retry when all object slots are occupied.
+    // This fixes map-edge misses while avoiding a full second spawn scan every frame.
+    if (GetFirstInactiveObjectEventId() == OBJECT_EVENTS_COUNT)
+        TrySpawnObjectEvents(x, y);
 }
 
 void RefreshObjectEventsInCurrentMap(void)

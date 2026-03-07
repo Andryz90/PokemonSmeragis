@@ -14,9 +14,6 @@ static const union AnimCmd sAnim_TreesSway[] =
     ANIMCMD_FRAME(2, 10),
     ANIMCMD_FRAME(3, 10),
     ANIMCMD_FRAME(4, 10),
-    ANIMCMD_FRAME(3, 10),
-    ANIMCMD_FRAME(2, 10),
-    ANIMCMD_FRAME(1, 10),
     ANIMCMD_JUMP(0),
 };
 

@@ -426,6 +426,9 @@ $(OBJEVENTGFXDIR)/misc/chest_open.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/trees_animate.4bpp: $(OBJEVENTGFXDIR)/misc/trees_animate.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/misc/trees_animate_background.4bpp: $(OBJEVENTGFXDIR)/misc/trees_animate_background.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 $(OBJEVENTGFXDIR)/pokemon_old/azumarill.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 

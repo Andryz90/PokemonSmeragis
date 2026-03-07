@@ -814,6 +814,11 @@ static bool32 HandleEndTurnSaltCure(u32 battler)
             gBattleStruct->moveDamage[battler] = gBattleMons[battler].maxHP / 8;
         if (gBattleStruct->moveDamage[battler] == 0)
             gBattleStruct->moveDamage[battler] = 1;
+        // Salt Cure script uses both BS_ATTACKER and BS_TARGET.
+        // Keep them in sync with the afflicted battler so healthbox/faint handling
+        // doesn't reference a stale battler from a prior KO.
+        gBattlerAttacker = battler;
+        gBattlerTarget = battler;
         PREPARE_MOVE_BUFFER(gBattleTextBuff1, MOVE_SALT_CURE);
         BattleScriptExecute(BattleScript_SaltCureExtraDamage);
         effect = TRUE;

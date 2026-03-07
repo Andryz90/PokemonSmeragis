@@ -15,9 +15,9 @@
 #define BALLS_POCKET       1
 #define TERASHARDS_POCKET  2
 #define MEGASTONES_POCKET  3
-#define BERRIES_POCKET     4
-#define KEYITEMS_POCKET    5
-#define TMHM_POCKET        6
+#define TMHM_POCKET        4
+#define BERRIES_POCKET     5
+#define KEYITEMS_POCKET    6
 #define POCKETS_COUNT      7
 
 #define REPEL_LURE_MASK         (1 << 15)
