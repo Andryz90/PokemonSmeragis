@@ -47696,28 +47696,8 @@
     "TutorMoves": []
   },
   "WATCHOG": {
-    "LevelMoves": [
-      {
-        "Level": 0,
-        "Move": "MOVE_PSYBEAM"
-      },
-      {
-        "Level": 27,
-        "Move": "MOVE_PSYCHIC_FANGS"
-      },
-      {
-        "Level": 34,
-        "Move": "MOVE_MEDITATE"
-      },
-      {
-        "Level": 60,
-        "Move": "MOVE_TRICK_ROOM"
-      }
-    ],
-    "PreEvoMoves": [
-      "MOVE_PSYCHIC",
-      "MOVE_TRICK_ROOM"
-    ],
+    "LevelMoves": [],
+    "PreEvoMoves": [],
     "TMMoves": [],
     "EggMoves": [],
     "TutorMoves": []
