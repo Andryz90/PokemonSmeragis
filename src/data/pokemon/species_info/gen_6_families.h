@@ -211,6 +211,72 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .levelUpLearnset = sChesnaughtLevelUpLearnset,
         .teachableLearnset = sChesnaughtTeachableLearnset,
     },
+
+#if P_MEGA_EVOLUTIONS
+    [SPECIES_CHESNAUGHT_MEGA] =
+    {
+        .baseHP        = 88,
+        .baseAttack    = 107,
+        .baseDefense   = 122,
+        .baseSpeed     = 64,
+        .baseSpAttack  = 74,
+        .baseSpDefense = 75,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIGHTING),
+        .catchRate = 45,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 265 : 239,
+        .evYield_Defense = 3,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_OVERGROW, ABILITY_BULLETPROOF, ABILITY_ROUGH_SKIN },
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("Chesnaught"),
+        .cryId = CRY_CHESNAUGHT,
+        .natDexNum = NATIONAL_DEX_CHESNAUGHT,
+        .categoryName = _("Spiny Armor"),
+        .height = 16,
+        .weight = 900,
+        .description = COMPOUND_STRING(
+            "It shields its allies from danger with\n"
+            "its own body. When it takes a defensive\n"
+            "posture with its fists guarding its face,\n"
+            "it can withstand a bomb blast."),
+        .pokemonScale = 259,
+        .pokemonOffset = 1,
+        .trainerScale = 296,
+        .trainerOffset = 1,
+        .frontPic = gMonFrontPic_ChesnaughtMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 4,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_GROW,
+        .backPic = gMonBackPic_ChesnaughtMega,
+        .backPicSize = MON_COORDS_SIZE(64, 56),
+        .backPicYOffset = 10,
+        .backAnimId = ANIM_GROW,
+        .palette = gMonPalette_ChesnaughtMega,
+        .shinyPalette = gMonShinyPalette_ChesnaughtMega,
+        .iconSprite = gMonIcon_ChesnaughtMega,
+        .iconPalIndex = 1,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(4, 10, SHADOW_SIZE_L)
+        FOOTPRINT(Chesnaught)
+        OVERWORLD(
+            sPicTable_Chesnaught,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Chesnaught,
+            gShinyOverworldPalette_Chesnaught
+        )
+        .isMegaEvolution = TRUE,
+        .levelUpLearnset = sChesnaughtLevelUpLearnset,
+        .teachableLearnset = sChesnaughtTeachableLearnset,
+    },
+#endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_CHESPIN
 
 #if P_FAMILY_FENNEKIN
@@ -425,6 +491,72 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .levelUpLearnset = sDelphoxLevelUpLearnset,
         .teachableLearnset = sDelphoxTeachableLearnset,
     },
+
+#if P_MEGA_EVOLUTIONS
+    [SPECIES_DELPHOX_MEGA] =
+    {
+        .baseHP        = 75,
+        .baseAttack    = 69,
+        .baseDefense   = 72,
+        .baseSpeed     = 104,
+        .baseSpAttack  = 114,
+        .baseSpDefense = 100,
+        .types = MON_TYPES(TYPE_FIRE, TYPE_PSYCHIC),
+        .catchRate = 45,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 267 : 240,
+        .evYield_SpAttack = 3,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_BLAZE, ABILITY_MAGICIAN, ABILITY_MAGIC_GUARD },
+        .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Delphox"),
+        .cryId = CRY_DELPHOX,
+        .natDexNum = NATIONAL_DEX_DELPHOX,
+        .categoryName = _("Fox"),
+        .height = 15,
+        .weight = 390,
+        .description = COMPOUND_STRING(
+            "It gazes into the flame at the tip of its\n"
+            "branch to achieve a focused state, which\n"
+            "allows it to see into the future. It uses\n"
+            "psychic power to incinerate its foes."),
+        .pokemonScale = 268,
+        .pokemonOffset = 2,
+        .trainerScale = 271,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_DelphoxMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_V_SLIDE,
+        .backPic = gMonBackPic_DelphoxMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .backAnimId = ANIM_V_SLIDE,
+        .palette = gMonPalette_DelphoxMega,
+        .shinyPalette = gMonShinyPalette_DelphoxMega,
+        .iconSprite = gMonIcon_DelphoxMega,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(7, 14, SHADOW_SIZE_M)
+        FOOTPRINT(Delphox)
+        .isMegaEvolution = TRUE,
+        OVERWORLD(
+            sPicTable_Delphox,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Delphox,
+            gShinyOverworldPalette_Delphox
+        )
+        .levelUpLearnset = sDelphoxLevelUpLearnset,
+        .teachableLearnset = sDelphoxTeachableLearnset,
+    },
+#endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_FENNEKIN
 
 #if P_FAMILY_FROAKIE

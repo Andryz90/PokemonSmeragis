@@ -164,12 +164,46 @@ NewMauville_Inside_EventScript_SetGeneratorOffMetatiles::
 NewMauville_Inside_EventScript_Generator::
 	lockall
 	goto_if_eq VAR_NEW_MAUVILLE_STATE, 2, NewMauville_Inside_EventScript_GeneratorOff
+	goto_if_eq VAR_NEW_MAUVILLE_STATE, 3, NewMauville_Inside_EventScript_GeneratorOff_2
 	msgbox NewMauville_Inside_Text_GeneratorRadiatingHeat, MSGBOX_DEFAULT
 	releaseall
 	end
 
-NewMauville_Inside_EventScript_GeneratorOff::
+NewMauville_Inside_EventScript_GeneratorOff_2::
+	lock
 	msgbox NewMauville_Inside_Text_GeneratorQuietedDown, MSGBOX_DEFAULT
+	release 
+	end
+NewMauville_Inside_EventScript_GeneratorOff::
+	lockall
+	message NewMauville_Inside_Text_GeneratorQuietedDown
+	waitmessage
+	message NewMauville_Inside_Text_SomethingInside
+	waitmessage
+	setwildbattle SPECIES_ROTOM, 50
+	waitse
+	playmoncry SPECIES_ROTOM, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	message NewMauville_Inside_Text_SomethingInside
+	waitmessage
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedRotom
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedRotom
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, NewMauville_Inside_EventScript_DefeatedRotom 
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedRotom
+	setflag FLAG_DEFEATED_ROTOM
+	setvar VAR_NEW_MAUVILLE_STATE, 3
+	releaseall
+	end
+NewMauville_Inside_EventScript_DefeatedRotom::
+	setflag FLAG_DEFEATED_ROTOM
+	setvar VAR_NEW_MAUVILLE_STATE, 3
 	releaseall
 	end
 
@@ -253,6 +287,12 @@ NewMauville_Inside_Text_GeneratorRadiatingHeat:
 
 NewMauville_Inside_Text_GeneratorQuietedDown:
 	.string "The generator quieted down. $"
+
+NewMauville_Inside_Text_SomethingInside:
+	.string "Something seems to move inside the generator... $"
+
+NewMauville_Inside_Text_RotomAttack:
+	.string "It came out for attacking! $"
 
 NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
 	.string "{PLAYER} stepped on the switch.\p"

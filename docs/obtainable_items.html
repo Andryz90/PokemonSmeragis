@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obtainable Items</title>
+  <style>
+    :root {
+      --bg: #f4efe4;
+      --bg-alt: #e8dfcf;
+      --card: #fffaf1;
+      --ink: #1f2a2e;
+      --muted: #5c6a70;
+      --line: #d8ccba;
+      --accent: #2c7a7b;
+      --accent-2: #d97706;
+      --good: #166534;
+      --warn: #92400e;
+      --shadow: 0 10px 30px rgba(38, 40, 45, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+      line-height: 1.45;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(44, 122, 123, 0.16), transparent 38%),
+        radial-gradient(circle at 90% 0%, rgba(217, 119, 6, 0.15), transparent 34%),
+        linear-gradient(160deg, var(--bg), var(--bg-alt));
+      min-height: 100vh;
+      animation: page-in 420ms ease-out;
+    }
+
+    .wrap {
+      width: min(1100px, 92vw);
+      margin: 28px auto 40px;
+    }
+
+    .hero {
+      background: linear-gradient(125deg, rgba(44, 122, 123, 0.95), rgba(35, 100, 104, 0.95));
+      color: #f5f8f7;
+      border-radius: 18px;
+      padding: 24px 24px 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      letter-spacing: 0.3px;
+    }
+
+    .hero p {
+      margin: 0;
+      color: rgba(243, 248, 248, 0.92);
+      max-width: 72ch;
+    }
+
+    .scope {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.18);
+      color: #f5f8f7;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 0.82rem;
+    }
+
+    .section-title {
+      margin: 28px 0 12px;
+      font-size: 1.25rem;
+      letter-spacing: 0.2px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(23, 27, 30, 0.08);
+      padding: 14px 14px 12px;
+      animation: card-in 460ms ease both;
+    }
+
+    .card:nth-child(2) { animation-delay: 45ms; }
+    .card:nth-child(3) { animation-delay: 90ms; }
+    .card:nth-child(4) { animation-delay: 135ms; }
+    .card:nth-child(5) { animation-delay: 180ms; }
+    .card:nth-child(6) { animation-delay: 225ms; }
+    .card:nth-child(7) { animation-delay: 270ms; }
+
+    .card h3 {
+      margin: 2px 0 8px;
+      font-size: 1.04rem;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .card li + li {
+      margin-top: 4px;
+    }
+
+    .tag {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-left: 6px;
+      border: 1px solid transparent;
+      vertical-align: 1px;
+      text-transform: uppercase;
+    }
+
+    .tag-choice {
+      background: #fef3c7;
+      color: var(--warn);
+      border-color: #f7db99;
+    }
+
+    .totals {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 8px 24px rgba(23, 27, 30, 0.08);
+    }
+
+    .stat h4 {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .stat .n {
+      margin-top: 6px;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .stat .sub {
+      margin-top: 4px;
+      color: var(--good);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .notes {
+      margin-top: 18px;
+      background: #fff9ef;
+      border: 1px dashed #d2b48b;
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .notes h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .notes ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 16px;
+      color: #6b7280;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 860px) {
+      .grid,
+      .totals {
+        grid-template-columns: 1fr;
+      }
+
+      .wrap {
+        margin-top: 20px;
+      }
+    }
+
+    @keyframes page-in {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes card-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>Obtainable Items</h1>
+      <p>Tracking sheet for item availability by boss split, currently scoped up to Norman.</p>
+      <div class="scope">
+        <span class="chip">Tracked: Heart Scale</span>
+        <span class="chip">Tracked: Rare Candy</span>
+        <span class="chip">Includes temp cases</span>
+      </div>
+    </header>
+
+    <h2 class="section-title">Splits</h2>
+    <section class="grid" aria-label="Boss split list">
+      <article class="card">
+        <h3>Roxanne Badge</h3>
+        <ul>
+          <li>Petalburg City: Heart Scale / Rare Candy <span class="tag tag-choice">Choice</span></li>
+          <li>Route 104: Heart Scale</li>
+          <li>Rustboro: Rare Candy</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Brawly Badge</h3>
+        <ul>
+          <li>Rustboro Rival: HS / RC based on first temp pick <span class="tag tag-choice">Choice</span></li>
+          <li>Route 106: HS Hidden Item</li>
+          <li>Route 106: RC Hidden Item</li>
+          <li>Granite Cave: HS</li>
+          <li>Route 109: RC Hidden</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Wattson Badge</h3>
+        <ul>
+          <li>Trick House: RC</li>
+          <li>Route 103: HS</li>
+          <li>Route 110: HS</li>
+          <li>Route 118: HS</li>
+          <li>Route 117: RC</li>
+          <li>Route 116: HS</li>
+          <li>Route 111: RC</li>
+          <li>Dune Cave: HS / AP <span class="tag tag-choice">Choice</span></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Mt. Chimney Split</h3>
+        <ul>
+          <li>Route 112: HS / AP <span class="tag tag-choice">Choice</span></li>
+          <li>Route 114: HS</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Flannery Badge</h3>
+        <ul>
+          <li>Meteor Falls 1F: RC</li>
+          <li>Route 115: HS</li>
+          <li>Route 115: RC</li>
+          <li>Mt. Chimney: RC / HS <span class="tag tag-choice">Choice</span></li>
+          <li>Jagged Pass: RC</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Route 111 Desert</h3>
+        <ul>
+          <li>RC</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Norman Split</h3>
+        <ul>
+          <li>HS / RC on Cycling Road <span class="tag tag-choice">Choice</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <h2 class="section-title">Declared Totals</h2>
+    <section class="totals" aria-label="Declared totals">
+      <article class="stat">
+        <h4>Heart Scales up to Norman</h4>
+        <div class="n">13</div>
+        <div class="sub">10 without temp balls</div>
+      </article>
+      <article class="stat">
+        <h4>Rare Candies up to Norman</h4>
+        <div class="n">14</div>
+        <div class="sub">10 without temp balls</div>
+      </article>
+    </section>
+
+    <section class="notes" aria-label="Operational notes">
+      <h3>Operational Notes</h3>
+      <ul>
+        <li>For any split with a choice (A/B), specify what is actually obtainable in a single run.</li>
+        <li>Clearly mark whether choosing one item blocks the other.</li>
+        <li>For flag/event-dependent spawns, add explicit flag and map references in the next update.</li>
+      </ul>
+    </section>
+
+    <footer>Source baseline: <code>docs/obtainable_items.md</code></footer>
+  </main>
+</body>
+</html>

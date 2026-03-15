@@ -348,7 +348,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_RARE_CANDY",
+      "trainer_sight_or_berry_tree_id": "ITEM_ABILITY_CAPSULE",
       "script": "Common_EventScript_FindItem_Temp",
       "flag": "FLAG_RARE_CANDY_HISUIAN_AMULET_109"
     },
@@ -570,7 +570,7 @@
       "x": 24,
       "y": 22,
       "elevation": 3,
-      "item": "ITEM_HEART_SCALE",
+      "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_HEART_SCALE_2"
     },
     {

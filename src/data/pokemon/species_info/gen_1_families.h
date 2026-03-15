@@ -3955,6 +3955,152 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .formSpeciesIdTable = sRaichuFormSpeciesIdTable,
     },
 
+#if P_MEGA_EVOLUTIONS
+    [SPECIES_RAICHU_MEGA_X] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 110,
+        .baseDefense   = 55,
+        .baseSpeed     = RAICHU_SPEED,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 80,
+        .types = MON_TYPES(TYPE_ELECTRIC),
+        .catchRate = 75,
+        .expYield = RAICHU_EXP_YIELD,
+        .evYield_Speed = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 10,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
+        .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_LIGHTNING_ROD },
+        .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Raichu"),
+        .cryId = CRY_RAICHU,
+        .natDexNum = NATIONAL_DEX_RAICHU,
+        .categoryName = _("Mouse"),
+        .height = 8,
+        .weight = 300,
+        .description = COMPOUND_STRING(
+            "If it stores too much electricity, its\n"
+            "behavior turns aggressive. To avoid this,\n"
+            "it occasionally discharges excess energy\n"
+            "and calms itself down."),
+        .pokemonScale = 426,
+        .pokemonOffset = 13,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_RaichuMegaX,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_H_SHAKE_FAST,
+        .backPic = gMonBackPic_RaichuMegaX,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = ANIM_H_SHAKE_FAST,
+        .palette = gMonPalette_RaichuMegaX,
+        .shinyPalette = gMonShinyPalette_RaichuMegaX,
+        .iconSprite = gMonIcon_RaichuMegaX,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(2, 10, SHADOW_SIZE_M)
+        FOOTPRINT(Raichu)
+        OVERWORLD(
+            sPicTable_Raichu,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Raichu,
+            gShinyOverworldPalette_Raichu
+        )
+        OVERWORLD_FEMALE(
+            sPicTable_RaichuF,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following
+        )
+        .isMegaEvolution = TRUE,
+        .levelUpLearnset = sRaichuLevelUpLearnset,
+        .teachableLearnset = sRaichuTeachableLearnset,
+        .formSpeciesIdTable = sRaichuFormSpeciesIdTable,
+    },
+
+    [SPECIES_RAICHU_MEGA_Y] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 110,
+        .baseDefense   = 55,
+        .baseSpeed     = RAICHU_SPEED,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 80,
+        .types = MON_TYPES(TYPE_ELECTRIC),
+        .catchRate = 75,
+        .expYield = RAICHU_EXP_YIELD,
+        .evYield_Speed = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 10,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
+        .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_LIGHTNING_ROD },
+        .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Raichu"),
+        .cryId = CRY_RAICHU,
+        .natDexNum = NATIONAL_DEX_RAICHU,
+        .categoryName = _("Mouse"),
+        .height = 8,
+        .weight = 300,
+        .description = COMPOUND_STRING(
+            "If it stores too much electricity, its\n"
+            "behavior turns aggressive. To avoid this,\n"
+            "it occasionally discharges excess energy\n"
+            "and calms itself down."),
+        .pokemonScale = 426,
+        .pokemonOffset = 13,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_RaichuMegaY,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_SHAKE_FLASH_YELLOW_FAST,
+        .backPic = gMonBackPic_RaichuMegaY,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = ANIM_SHAKE_FLASH_YELLOW_FAST,
+        .palette = gMonPalette_RaichuMegaY,
+        .shinyPalette = gMonShinyPalette_RaichuMegaY,
+        .iconSprite = gMonIcon_RaichuMegaY,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(2, 10, SHADOW_SIZE_M)
+        FOOTPRINT(Raichu)
+        OVERWORLD(
+            sPicTable_Raichu,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Raichu,
+            gShinyOverworldPalette_Raichu
+        )
+        OVERWORLD_FEMALE(
+            sPicTable_RaichuF,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following
+        )
+        .isMegaEvolution = TRUE,
+        .levelUpLearnset = sRaichuLevelUpLearnset,
+        .teachableLearnset = sRaichuTeachableLearnset,
+        .formSpeciesIdTable = sRaichuFormSpeciesIdTable,
+    },
+#endif //P_MEGA_EVOLUTIONS
+
 #if P_ALOLAN_FORMS
     [SPECIES_RAICHU_ALOLA] =
     {
@@ -19852,6 +19998,71 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sDragoniteLevelUpLearnset,
         .teachableLearnset = sDragoniteTeachableLearnset,
     },
+
+#if P_MEGA_EVOLUTIONS
+    [SPECIES_DRAGONITE_MEGA] =
+    {
+        .baseHP        = 91,
+        .baseAttack    = 134,
+        .baseDefense   = 95,
+        .baseSpeed     = 80,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 100,
+        .types = MON_TYPES(TYPE_DRAGON, TYPE_FLYING),
+        .catchRate = 45,
+    #if P_UPDATED_EXP_YIELDS >= GEN_8
+        .expYield = 300,
+    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+        .expYield = 270,
+    #else
+        .expYield = 218,
+    #endif
+        .evYield_Attack = 3,
+        .itemRare = ITEM_DRAGON_SCALE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 40,
+        .friendship = 35,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_DRAGON),
+        .abilities = { ABILITY_INNER_FOCUS, ABILITY_NONE, ABILITY_MULTISCALE },
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Dragonite"),
+        .cryId = CRY_DRAGONITE,
+        .natDexNum = NATIONAL_DEX_DRAGONITE,
+        .categoryName = _("Dragon"),
+        .height = 22,
+        .weight = 2100,
+        .description = COMPOUND_STRING(
+            "It can circle the globe in just 16 hours.\n"
+            "It is a kindhearted Pokémon that leads\n"
+            "lost and foundering ships in a storm\n"
+            "to the safety of land."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 309,
+        .trainerOffset = 4,
+        .frontPic = gMonFrontPic_DragoniteMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = P_GBA_STYLE_SPECIES_GFX ? 6 : 0,
+        .backPic = gMonBackPic_Dragonite,
+        .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 56) : MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 6 : 1,
+        .backAnimId = BACK_ANIM_V_SHAKE,
+        .palette = gMonPalette_DragoniteMega,
+        .shinyPalette = gMonShinyPalette_DragoniteMega,
+        .iconSprite = gMonIcon_Dragonite,
+        .iconPalIndex = 2,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(0, 11, SHADOW_SIZE_XL_BATTLE_ONLY)
+        FOOTPRINT(Dragonite)
+        .isMegaEvolution = TRUE,
+        .levelUpLearnset = sDragoniteLevelUpLearnset,
+        .teachableLearnset = sDragoniteTeachableLearnset,
+    },
+#endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_DRATINI
 
 #if P_FAMILY_MEWTWO

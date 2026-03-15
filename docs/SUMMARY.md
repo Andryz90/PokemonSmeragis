@@ -5,6 +5,8 @@
     - [Setting up WSL1 (Legacy Portion)](./legacy_WSL1_INSTALL.md)
 - [Run documentation site locally](local_mdbook/index.md)
     - [Ubuntu WSL1/WSL2](local_mdbook/ubuntu_WSL.md)
+- [HackROM Documentation Sites](Documentation_Sites/README.md)
+    - [ItemsDoc](Documentation_Sites/ItemsDoc/obtainable_items.md)
 - [Contributing](./CONTRIBUTING.md)
 - [Credits](./CREDITS.md)
 - [Tutorials]()

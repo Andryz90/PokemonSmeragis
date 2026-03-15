@@ -11807,6 +11807,14 @@ typedef enum Trainer_DynamicLevel_t
     SARAH_R116              = 14u, // Double Battle R116 for mints
     JANICE_R116             = 15u, // Double Battle R116 for mints
     JERRY_R116              = 16u, // Double Battle R116 for mints
+    DAISY_ROUTE_103         = 17u, // Single battle Route 103
+    AMY_AND_LIV_ROUTE_103   = 18u, // Double + rematch Route 103
+    ANDREW_ROUTE_103        = 19u, // Single battle Route 103
+    MIGUEL_ROUTE_103        = 20u, // Single + rematch Route 103
+    MARCOS_ROUTE_103        = 21u, // Single battle Route 103
+    RHETT_ROUTE_103         = 22u, // Single battle Route 103
+    PETE_ROUTE_103          = 23u, // Single battle Route 103
+    ISABELLE_ROUTE_103      = 24u, // Single battle Route 103
 
     MAX_TRAINER_DYNAMIC_LEVEL
 
@@ -11832,6 +11840,14 @@ static const u8 LookupTable_TrainerWithDynamicLevel[MAX_TRAINER_DYNAMIC_LEVEL][T
     [SARAH_R116]                =_("SARAH"),
     [JANICE_R116]               =_("JANICE"),
     [JERRY_R116]                =_("JERRY"),
+    [DAISY_ROUTE_103]           =_("DAISY"),
+    [AMY_AND_LIV_ROUTE_103]     =_("AMY & LIV"),
+    [ANDREW_ROUTE_103]          =_("ANDREW"),
+    [MIGUEL_ROUTE_103]          =_("MIGUEL"),
+    [MARCOS_ROUTE_103]          =_("MARCOS"),
+    [RHETT_ROUTE_103]           =_("RHETT"),
+    [PETE_ROUTE_103]            =_("PETE"),
+    [ISABELLE_ROUTE_103]        =_("ISABELLE"),
 
 };
 
@@ -11844,7 +11860,7 @@ bool8 SetTrainerLevelIfDynamic (const struct Trainer *trainer, u8* MonLevel)
     for (uint8_t i = 0u; i < MAX_TRAINER_DYNAMIC_LEVEL; i++)
     {
         if ((strcmp((const char*)trainer->trainerName, (const char*) LookupTable_TrainerWithDynamicLevel[i]) == 0) ||
-            GetCurrentRegionMapSectionId() == MAPSEC_TRICK_HOUSE) 
+            GetCurrentRegionMapSectionId() == MAPSEC_TRICK_HOUSE || GetCurrentRegionMapSectionId() == MAPSEC_ROUTE_115) 
         {
             /*Now search into the Players party*/
             for (uint8_t j = 0u; j < PARTY_SIZE; j++)
@@ -11864,10 +11880,6 @@ bool8 SetTrainerLevelIfDynamic (const struct Trainer *trainer, u8* MonLevel)
                     {
                         MaxLevel = LocalLevel;
                     }
-                }
-                else if (species != SPECIES_EGG)
-                {
-                    continue;
                 }
                 else
                 {

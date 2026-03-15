@@ -65914,6 +65914,10 @@
         "Move": "MOVE_CONFUSE_RAY"
       },
       {
+        "Level": 0,
+        "Move": "MOVE_PSYBEAM"
+      },
+      {
         "Level": 1,
         "Move": "MOVE_CONFUSE_RAY"
       },
@@ -65974,12 +65978,20 @@
         "Move": "MOVE_AFTER_YOU"
       },
       {
+        "Level": 27,
+        "Move": "MOVE_PSYCHIC_FANGS"
+      },
+      {
         "Level": 29,
         "Move": "MOVE_FOCUS_ENERGY"
       },
       {
         "Level": 32,
         "Move": "MOVE_PSYCH_UP"
+      },
+      {
+        "Level": 34,
+        "Move": "MOVE_MEDITATE"
       },
       {
         "Level": 36,
@@ -65990,7 +66002,11 @@
         "Move": "MOVE_NASTY_PLOT"
       },
       {
-        "Level": 43,
+        "Level": 41,
+        "Move": "MOVE_ZEN_HEADBUTT"
+      },
+      {
+        "Level": 44,
         "Move": "MOVE_MEAN_LOOK"
       },
       {
@@ -66000,6 +66016,10 @@
       {
         "Level": 50,
         "Move": "MOVE_SLAM"
+      },
+      {
+        "Level": 60,
+        "Move": "MOVE_TRICK_ROOM"
       }
     ],
     "PreEvoMoves": [

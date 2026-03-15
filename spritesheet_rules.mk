@@ -3,6 +3,109 @@ OBJEVENTGFXDIR := graphics/object_events/pics
 FLDEFFGFXDIR := graphics/field_effects/pics
 MISCGFXDIR := graphics/misc
 
+# Mega battle assets (custom imports)
+$(POKEMONGFXDIR)/raichu/mega/X/front.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/raichu/mega/X/back.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/raichu/mega/X/icon.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/raichu/mega/X/normal.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/raichu/mega/X/shiny.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/raichu/mega/Y/front.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/raichu/mega/Y/back.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/raichu/mega/Y/icon.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/raichu/mega/Y/normal.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/raichu/mega/Y/shiny.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/dragonite/mega/front.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/dragonite/mega/megadragonite.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/dragonite/mega/megadragoniteshiny2.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/meganium/mega/front.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/meganium/mega/back.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/meganium/mega/icon.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/meganium/mega/megameganiumza.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/meganium/mega/megameganiumzashiny.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/feraligatr/mega/front.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/feraligatr/mega/back.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/feraligatr/mega/icon.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/feraligatr/mega/normal.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/feraligatr/mega/shiny.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/feraligatr/mega/MegaFeraligatrGBAPack/normal.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/chesnaught/mega/front.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/chesnaught/mega/back.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/chesnaught/mega/icon.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/chesnaught/mega/megachesnaught.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/chesnaught/mega/megachesnaughtshiny.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/delphox/mega/front.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/delphox/mega/back.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/delphox/mega/icon.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/delphox/mega/megadelphox.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
+$(POKEMONGFXDIR)/delphox/mega/megadelphoxshiny.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@
+
 $(OBJEVENTGFXDIR)/people/andry_ow.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 

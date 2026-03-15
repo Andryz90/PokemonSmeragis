@@ -1223,13 +1223,41 @@ Music: Female
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Shroomish
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Luvdisc (F) @ Damp Rock  
+Ability: Swift Swim  
+Level: 1   
+Timid Nature  
+- Rain Dance  
+- Wish  
+- Flip Turn  
+- Draining Kiss  
 
-Roselia
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Toedscruel (F) @ Leftovers  
+Ability: Mycelium Might  
+Level: 1  
+Timid Nature  
+- Spore  
+- Giga Drain  
+- Earth Power  
+- Knock Off  
+
+Parasect (F) @ Occa Berry  
+Ability: Damp  
+Level: 1  
+- Leech Life  
+- Spore  
+- Bullet Seed  
+- Pursuit  
+
+Golduck (F)  
+Ability: Swift Swim  
+Level: 1  
+IVs: 0 Atk  
+- Psyshock  
+- Hydro Pump  
+- Nasty Plot  
+
+
 
 === TRAINER_ROSE_1 ===
 Name: ROSE
@@ -7410,9 +7438,45 @@ Music: Twins
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Skitty @ Oran Berry
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Delcatty @ Silk Scarf  
+Ability: Cute Charm  
+Level: 1  
+Adamant Nature  
+- Fake Out  
+- Sing  
+- Attract  
+- Double-Edge  
+
+Clefable @ Life Orb  
+Ability: Magic Guard  
+Level: 1  
+IVs: 0 Atk  
+- Calm Mind  
+- Thunderbolt  
+- Ice Beam  
+- Moonblast  
+
+Togekiss @ Leftovers  
+Ability: Serene Grace  
+Level: 1   
+Gentle Nature  
+IVs: 0 Atk  
+- Tailwind  
+- Roost  
+- Air Slash  
+- Dazzling Gleam  
+
+Gothitelle @ Leftovers  
+Ability: Shadow Tag  
+Level: 1  
+Modest Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Dark Pulse  
+- Psychic  
+- Energy Ball  
+
+
 
 === TRAINER_COLTON ===
 Name: COLTON
@@ -8474,17 +8538,45 @@ Music: Hiker
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Magikarp
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Gastrodon-East @ Rindo Berry  
+Ability: Storm Drain  
+Level: 1  
+Calm Nature  
+IVs: 0 Atk  
+- Rain Dance  
+- Recover  
+- Stealth Rock  
+- Muddy Water  
 
-Tentacool
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Octillery @ Bright Powder  
+Ability: Moody  
+Level: 1  
+IVs: 0 Atk  
+- Protect  
+- Substitute  
+- Octazooka  
+- Sludge Wave  
 
-Magikarp
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wishiwashi @ Sitrus Berry  
+Ability: Schooling  
+Level: 1  
+Tera Type: Water  
+- Flip Turn  
+- Liquidation  
+- Earthquake  
+- Scale Shot  
+
+Mantine  
+Ability: Swift Swim  
+Level: 1  
+Modest Nature  
+IVs: 0 Atk  
+- Rain Dance  
+- Hurricane  
+- Hydro Pump  
+- Haze  
+
+
 
 === TRAINER_IVAN ===
 Name: IVAN
@@ -11597,13 +11689,45 @@ Music: Twins
 Double Battle: Yes
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Plusle
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Volbeat @ Focus Sash  
+Ability: Prankster  
+Level: 1  
+Impish Nature  
+- Tail Glow  
+- Tailwind  
+- Helping Hand  
+- U-turn  
 
-Minun
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Illumise @ Life Orb  
+Ability: Tinted Lens  
+Level: 1  
+Timid Nature  
+IVs: 0 Atk  
+- Psych Up  
+- Bug Buzz  
+- Draining Kiss  
+- Protect  
+
+Plusle @ Shuca Berry  
+Ability: Plus  
+Level: 1  
+Modest Nature  
+IVs: 0 Atk  
+- Encore  
+- Thunder Wave  
+- Volt Switch  
+- Grass Knot  
+
+Minun @ Life Orb  
+Ability: Minus  
+Level: 1  
+IVs: 0 Atk  
+- Encore  
+- Thunderbolt  
+- Grass Knot  
+- Alluring Voice  
+
+
 
 === TRAINER_AMY_AND_LIV_2 ===
 Name: AMY & LIV
@@ -12264,13 +12388,32 @@ Music: Suspicious
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Zangoose
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Zangoose @ Flame Orb  
+Ability: Guts  
+Level: 1  
+Jolly Nature  
+- Close Combat  
+- Facade  
+- Protect  
+- Fling  
 
-Seviper
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Seviper @ Muscle Band  
+Ability: Shed Skin  
+Level: 1  
+Jolly Nature  
+- Swords Dance  
+- Rest  
+- Trailblaze  
+- Gunk Shot  
+
+Watchog @ Psychic Seed  
+Ability: Bad Dreams  
+Level: 1   
+Adamant Nature  
+- Hypnosis  
+- Dream Eater  
+- Zen Headbutt  
+- Return  
 
 === TRAINER_TABITHA_MOSSDEEP ===
 Name: TABITHA
@@ -17314,9 +17457,41 @@ Music: Intense
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Voltorb
-Level: 15
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Electrode @ Magnet  
+Ability: Soundproof  
+Level: 1  
+Modest Nature  
+- Explosion  
+- Volt Switch  
+- Steel Beam  
+
+Electrode-Hisui @ Magnet  
+Ability: Aftermath  
+Level: 1  
+Modest Nature  
+- Explosion  
+- Volt Switch  
+- Chloroblast  
+
+Meltan @ Custap Berry  
+Ability: Magnet Pull  
+Level: 1  
+Serious Nature  
+- Endeavor  
+- Endure  
+- Steel Beam  
+- Facade  
+
+Escavalier @ Leftovers  
+Ability: Shell Armor  
+Level: 1  
+Adamant Nature  
+- Megahorn  
+- Iron Head  
+- Drill Run  
+- Counter  
+
+
 
 === TRAINER_RHETT ===
 Name: RHETT
@@ -17327,9 +17502,39 @@ Music: Intense
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Makuhita
-Level: 15
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Tauros @ Life Orb  
+Ability: Sheer Force  
+Level: 1  
+Adamant Nature  
+- Double-Edge  
+- Zen Headbutt  
+- Earthquake  
+- Iron Head  
+
+Tauros-Paldea-Combat @ Sitrus Berry  
+Ability: Cud Chew  
+Level: 1  
+Impish Nature  
+- Substitute  
+- Protect  
+- Bulk Up  
+- Raging Bull  
+
+Tauros-Paldea-Aqua @ Choice Band  
+Ability: Intimidate  
+Level: 1  
+Adamant Nature  
+- Raging Bull  
+- Close Combat  
+
+Tauros-Paldea-Blaze @ Choice Scarf  
+Ability: Intimidate  
+Level: 1  
+Jolly Nature  
+- Raging Bull  
+- Close Combat  
+
+
 
 === TRAINER_TYRON ===
 Name: TYRON
@@ -18335,13 +18540,33 @@ Music: Intense
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Meditite
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Medicham  
+Ability: Pure Power  
+Level: 1  
+Brave Nature  
+- Fake Out  
+- Drain Punch  
+- Zen Headbutt  
+- Helping Hand  
 
-Spoink
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Grumpig @ Light Clay  
+Ability: Thick Fat  
+Level: 1  
+IVs: 0 Atk  
+- Light Screen  
+- Reflect  
+- Psychic Noise  
+- Psychic Terrain  
+
+Hypno @ Big Root  
+Ability: Bad Dreams  
+Level: 1  
+IVs: 0 Atk  
+- Hypnosis  
+- Dream Eater  
+- Calm Mind  
+- Dark Pulse  
+
 
 === TRAINER_DEVAN ===
 Name: DEVAN

@@ -65872,6 +65872,8 @@
       "MOVE_WORK_UP"
     ],
     "TMMoves": [
+      "MOVE_PSYCHIC",
+      "MOVE_TRICK_ROOM",
       "MOVE_WORK_UP",
       "MOVE_TOXIC",
       "MOVE_HIDDEN_POWER",

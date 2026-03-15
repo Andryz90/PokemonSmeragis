@@ -1684,7 +1684,13 @@
 
 //  Custom: Pokemon Legends Z-A
 #define SPECIES_FERALIGATR_MEGA                         (SPECIES_MIMIKYU_TOTEM_BUSTED + 1)
-#define NUMBER_OF_SPECIES_NO_EGG                        (SPECIES_FERALIGATR_MEGA)
+#define SPECIES_MEGANIUM_MEGA                           (SPECIES_FERALIGATR_MEGA + 1)
+#define SPECIES_RAICHU_MEGA_X                           (SPECIES_MEGANIUM_MEGA + 1)
+#define SPECIES_RAICHU_MEGA_Y                           (SPECIES_RAICHU_MEGA_X + 1)
+#define SPECIES_DRAGONITE_MEGA                          (SPECIES_RAICHU_MEGA_Y + 1)
+#define SPECIES_CHESNAUGHT_MEGA                         (SPECIES_DRAGONITE_MEGA + 1)
+#define SPECIES_DELPHOX_MEGA                            (SPECIES_CHESNAUGHT_MEGA + 1)
+#define NUMBER_OF_SPECIES_NO_EGG                        (SPECIES_DELPHOX_MEGA)
 
 #define SPECIES_EGG (NUMBER_OF_SPECIES_NO_EGG + 1)
 
