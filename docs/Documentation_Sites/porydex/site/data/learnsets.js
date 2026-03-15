@@ -11276,9 +11276,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -11334,6 +11331,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -11397,7 +11397,7 @@ exports.BattleLearnsets = {
             ],
             "metronome": [
                 "L20",
-                "M"
+                "T"
             ],
             "moonlight": [
                 "L24"
@@ -11678,7 +11678,7 @@ exports.BattleLearnsets = {
             ],
             "metronome": [
                 "L1",
-                "M"
+                "T"
             ],
             "meteormash": [
                 "L1"
@@ -12908,9 +12908,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -12999,6 +12996,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -13193,9 +13193,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -13290,6 +13287,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -16487,9 +16487,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -16566,6 +16563,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -16700,9 +16700,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -16785,6 +16782,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -17096,9 +17096,6 @@ exports.BattleLearnsets = {
             "waterfall": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "confuseray": [
                 "T"
             ],
@@ -17172,6 +17169,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -17320,9 +17320,6 @@ exports.BattleLearnsets = {
             "waterfall": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "confuseray": [
                 "T"
             ],
@@ -17402,6 +17399,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -17529,9 +17529,6 @@ exports.BattleLearnsets = {
             "thunderbolt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -17605,6 +17602,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -17748,9 +17748,6 @@ exports.BattleLearnsets = {
             "thunderbolt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -17833,6 +17830,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -17988,9 +17988,6 @@ exports.BattleLearnsets = {
             "thunderbolt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -18079,6 +18076,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -19005,9 +19005,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -19057,6 +19054,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -19210,9 +19210,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -19289,6 +19286,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -19425,9 +19425,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -19486,6 +19483,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -19553,9 +19553,6 @@ exports.BattleLearnsets = {
                 "M"
             ],
             "zenheadbutt": [
-                "M"
-            ],
-            "metronome": [
                 "M"
             ],
             "allyswitch": [
@@ -19637,6 +19634,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -19743,9 +19743,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "attract": [
                 "T"
             ],
@@ -19825,6 +19822,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -19937,9 +19937,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "attract": [
                 "T"
             ],
@@ -20031,6 +20028,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -20143,9 +20143,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "attract": [
                 "T"
             ],
@@ -20237,6 +20234,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -20794,7 +20794,7 @@ exports.BattleLearnsets = {
         "learnset": {
             "poisondrain": [
                 "L0",
-                "T"
+                "M"
             ],
             "gigadrain": [
                 "L1",
@@ -21362,9 +21362,6 @@ exports.BattleLearnsets = {
             "rocktomb": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "curse": [
                 "T"
             ],
@@ -21408,6 +21405,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -21514,9 +21514,6 @@ exports.BattleLearnsets = {
             "rocktomb": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -21566,6 +21563,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -21682,9 +21682,6 @@ exports.BattleLearnsets = {
             "rocktomb": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -21734,6 +21731,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -22031,9 +22031,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -22086,6 +22083,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -22226,9 +22226,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -22290,6 +22287,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -23047,9 +23047,6 @@ exports.BattleLearnsets = {
             "waterfall": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -23138,6 +23135,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -23307,9 +23307,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -23395,6 +23392,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -23554,9 +23554,6 @@ exports.BattleLearnsets = {
             "waterfall": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -23645,6 +23642,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -24001,9 +24001,6 @@ exports.BattleLearnsets = {
             "waterfall": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -24116,6 +24113,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -24305,9 +24305,6 @@ exports.BattleLearnsets = {
             "waterfall": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -24405,6 +24402,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -25874,9 +25874,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -25941,6 +25938,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -26083,9 +26083,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -26165,6 +26162,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -26305,9 +26305,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "curse": [
                 "T"
             ],
@@ -26366,6 +26363,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -26519,9 +26519,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "curse": [
                 "T"
             ],
@@ -26586,6 +26583,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -27171,9 +27171,6 @@ exports.BattleLearnsets = {
             "venoshock": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -27244,6 +27241,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -27389,9 +27389,6 @@ exports.BattleLearnsets = {
             "venoshock": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -27474,6 +27471,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -27622,9 +27622,6 @@ exports.BattleLearnsets = {
             "venoshock": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -27707,6 +27704,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -27855,9 +27855,6 @@ exports.BattleLearnsets = {
             "venoshock": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -27940,6 +27937,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -28283,9 +28283,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "curse": [
                 "T"
             ],
@@ -28365,6 +28362,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -28495,9 +28495,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -28595,6 +28592,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -30512,9 +30512,6 @@ exports.BattleLearnsets = {
             "tripleaxel": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -30564,6 +30561,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "doubleedge": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -30710,9 +30710,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -30771,6 +30768,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -32634,9 +32634,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "fling": [
                 "T"
             ],
@@ -32671,6 +32668,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -32831,9 +32831,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "drainpunch": [
                 "T"
             ],
@@ -32892,6 +32889,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -33067,9 +33067,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -33134,6 +33131,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -34911,9 +34911,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "allyswitch": [
                 "T"
             ],
@@ -35008,6 +35005,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -35178,9 +35178,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "attract": [
                 "T"
             ],
@@ -35281,6 +35278,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -35461,9 +35461,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "attract": [
                 "T"
             ],
@@ -35564,6 +35561,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -36376,9 +36376,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "attract": [
                 "T"
             ],
@@ -36443,6 +36440,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -36564,9 +36564,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "allyswitch": [
                 "T"
             ],
@@ -36661,6 +36658,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -36933,9 +36933,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -36997,6 +36994,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -37135,9 +37135,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -37202,6 +37199,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -37446,9 +37446,6 @@ exports.BattleLearnsets = {
             "thief": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -37504,6 +37501,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -37644,9 +37644,6 @@ exports.BattleLearnsets = {
             "thunderbolt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -37717,6 +37714,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -42083,6 +42083,9 @@ exports.BattleLearnsets = {
     },
     "kabuto": {
         "learnset": {
+            "aquacutter": [
+                "L0"
+            ],
             "absorb": [
                 "L1"
             ],
@@ -42339,6 +42342,9 @@ exports.BattleLearnsets = {
             "attract": [
                 "T"
             ],
+            "ceaselessedge": [
+                "T"
+            ],
             "crosspoison": [
                 "T"
             ],
@@ -42385,6 +42391,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "stealthrock": [
+                "T"
+            ],
+            "stoneaxe": [
                 "T"
             ],
             "superpower": [
@@ -42824,7 +42833,7 @@ exports.BattleLearnsets = {
             ],
             "metronome": [
                 "L40",
-                "M"
+                "T"
             ],
             "flail": [
                 "L44"
@@ -42994,7 +43003,7 @@ exports.BattleLearnsets = {
             ],
             "metronome": [
                 "L1",
-                "M"
+                "T"
             ],
             "lick": [
                 "L1"
@@ -43251,7 +43260,7 @@ exports.BattleLearnsets = {
             ],
             "metronome": [
                 "L1",
-                "M"
+                "T"
             ],
             "lick": [
                 "L1"
@@ -44891,9 +44900,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "aircutter": [
                 "T"
             ],
@@ -44982,6 +44988,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -45152,9 +45161,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -45288,6 +45294,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -45464,9 +45473,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -45600,6 +45606,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -45776,9 +45785,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -45912,6 +45918,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -47640,8 +47649,12 @@ exports.BattleLearnsets = {
             "slash": [
                 "L37"
             ],
+            "icepunch": [
+                "L40",
+                "T"
+            ],
             "throatchop": [
-                "L44",
+                "L48",
                 "M"
             ],
             "thrash": [
@@ -47832,9 +47845,6 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
-                "T"
-            ],
-            "icepunch": [
                 "T"
             ],
             "icywind": [
@@ -47892,8 +47902,12 @@ exports.BattleLearnsets = {
             "slash": [
                 "L37"
             ],
+            "icepunch": [
+                "L40",
+                "T"
+            ],
             "throatchop": [
-                "L44",
+                "L48",
                 "M"
             ],
             "thrash": [
@@ -48084,9 +48098,6 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
-                "T"
-            ],
-            "icepunch": [
                 "T"
             ],
             "icywind": [
@@ -49728,7 +49739,7 @@ exports.BattleLearnsets = {
             ],
             "metronome": [
                 "L24",
-                "M"
+                "T"
             ],
             "afteryou": [
                 "L28"
@@ -49907,7 +49918,7 @@ exports.BattleLearnsets = {
             ],
             "metronome": [
                 "L24",
-                "M"
+                "T"
             ],
             "afteryou": [
                 "L28"
@@ -50128,7 +50139,7 @@ exports.BattleLearnsets = {
             ],
             "metronome": [
                 "L1",
-                "M"
+                "T"
             ],
             "afteryou": [
                 "L1"
@@ -51305,9 +51316,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -51360,6 +51368,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -51501,9 +51512,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -51559,6 +51567,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -51744,7 +51755,7 @@ exports.BattleLearnsets = {
     },
     "sudowoodo": {
         "learnset": {
-            "slam": [
+            "hornleech": [
                 "L0"
             ],
             "bulletseed": [
@@ -51796,9 +51807,6 @@ exports.BattleLearnsets = {
             "lowkick": [
                 "L36",
                 "T"
-            ],
-            "hornleech": [
-                "L40"
             ],
             "doubleedge": [
                 "L44",
@@ -52618,9 +52626,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -52682,6 +52687,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -52816,9 +52824,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -52883,6 +52888,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -53496,14 +53504,15 @@ exports.BattleLearnsets = {
             "slam": [
                 "L16"
             ],
+            "waterpulse": [
+                "L18",
+                "M"
+            ],
             "yawn": [
                 "L21"
             ],
-            "aquatail": [
-                "L24"
-            ],
             "muddywater": [
-                "L28",
+                "L30",
                 "T"
             ],
             "amnesia": [
@@ -53567,9 +53576,6 @@ exports.BattleLearnsets = {
                 "M"
             ],
             "waterfall": [
-                "M"
-            ],
-            "waterpulse": [
                 "M"
             ],
             "acidspray": [
@@ -53642,6 +53648,9 @@ exports.BattleLearnsets = {
     },
     "quagsire": {
         "learnset": {
+            "recover": [
+                "L0"
+            ],
             "tailwhip": [
                 "L1"
             ],
@@ -53666,15 +53675,19 @@ exports.BattleLearnsets = {
             "slam": [
                 "L16"
             ],
+            "waterpulse": [
+                "L18",
+                "M"
+            ],
             "yawn": [
                 "L23"
             ],
-            "aquatail": [
+            "scald": [
                 "L28"
             ],
-            "muddywater": [
+            "earthpower": [
                 "L34",
-                "T"
+                "M"
             ],
             "amnesia": [
                 "L40",
@@ -53701,9 +53714,6 @@ exports.BattleLearnsets = {
                 "M"
             ],
             "dig": [
-                "M"
-            ],
-            "earthpower": [
                 "M"
             ],
             "facade": [
@@ -53754,9 +53764,6 @@ exports.BattleLearnsets = {
             "waterfall": [
                 "M"
             ],
-            "waterpulse": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -53788,6 +53795,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "hydropump": [
+                "T"
+            ],
+            "muddywater": [
                 "T"
             ],
             "protect": [
@@ -54009,8 +54019,11 @@ exports.BattleLearnsets = {
     },
     "clodsire": {
         "learnset": {
+            "recover": [
+                "L0"
+            ],
             "amnesia": [
-                "L0",
+                "L1",
                 "T"
             ],
             "tailwhip": [
@@ -57193,9 +57206,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -57272,6 +57282,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -57444,9 +57457,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -57535,6 +57545,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -59018,9 +59031,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -59097,6 +59107,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -59595,9 +59608,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -59653,6 +59663,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -59790,9 +59803,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -59854,6 +59864,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -60003,9 +60016,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "avalanche": [
                 "T"
             ],
@@ -60082,6 +60092,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -63704,9 +63717,6 @@ exports.BattleLearnsets = {
             "workup": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "attract": [
                 "T"
             ],
@@ -63777,6 +63787,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "megapunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -66878,9 +66891,8 @@ exports.BattleLearnsets = {
                 "L45",
                 "M"
             ],
-            "reversal": [
-                "L49",
-                "T"
+            "jumpkick": [
+                "L49"
             ],
             "firepunch": [
                 "L52",
@@ -66890,8 +66902,9 @@ exports.BattleLearnsets = {
                 "L56",
                 "T"
             ],
-            "jumpkick": [
-                "L59"
+            "reversal": [
+                "L59",
+                "T"
             ],
             "bravebird": [
                 "L63",
@@ -67132,9 +67145,8 @@ exports.BattleLearnsets = {
                 "L45",
                 "M"
             ],
-            "reversal": [
-                "L49",
-                "T"
+            "jumpkick": [
+                "L49"
             ],
             "firepunch": [
                 "L52",
@@ -67144,8 +67156,9 @@ exports.BattleLearnsets = {
                 "L56",
                 "T"
             ],
-            "jumpkick": [
-                "L59"
+            "reversal": [
+                "L59",
+                "T"
             ],
             "bravebird": [
                 "L63",
@@ -69648,9 +69661,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "drainpunch": [
                 "T"
             ],
@@ -69715,6 +69725,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -69853,9 +69866,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -69929,6 +69939,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -71248,9 +71261,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -71324,6 +71334,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -71448,9 +71461,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -71524,6 +71534,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -71677,9 +71690,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -71765,6 +71775,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -71918,9 +71931,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -72006,6 +72016,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -72233,9 +72246,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "airslash": [
                 "T"
             ],
@@ -72348,6 +72358,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -72578,9 +72591,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "airslash": [
                 "T"
             ],
@@ -72693,6 +72703,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -73493,9 +73506,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -73548,6 +73558,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -73689,9 +73702,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -73777,6 +73787,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -73937,9 +73950,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -74049,6 +74059,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -75038,9 +75051,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -75096,6 +75106,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -75247,9 +75260,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -75317,6 +75327,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -76201,9 +76214,6 @@ exports.BattleLearnsets = {
             "throatchop": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -76307,6 +76317,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -76455,9 +76468,6 @@ exports.BattleLearnsets = {
             "throatchop": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -76561,6 +76571,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -77177,10 +77190,10 @@ exports.BattleLearnsets = {
                 "L28",
                 "M"
             ],
-            "metalsound": [
+            "takedown": [
                 "L35"
             ],
-            "takedown": [
+            "metalsound": [
                 "L40"
             ],
             "autotomize": [
@@ -77932,9 +77945,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -78002,6 +78012,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -78157,9 +78170,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -78236,6 +78246,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "bodyslam": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -78388,9 +78401,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -78467,6 +78477,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "bodyslam": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -79332,9 +79345,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -79390,6 +79400,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -79520,9 +79533,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -79584,6 +79594,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -80055,7 +80068,8 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "poisondrain": [
-                "L22"
+                "L22",
+                "M"
             ],
             "toxic": [
                 "L25",
@@ -80189,7 +80203,8 @@ exports.BattleLearnsets = {
     "swalot": {
         "learnset": {
             "poisondrain": [
-                "L0"
+                "L0",
+                "M"
             ],
             "pound": [
                 "L1"
@@ -80304,9 +80319,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -80356,6 +80368,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -82249,9 +82264,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -82355,6 +82367,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -87878,9 +87893,6 @@ exports.BattleLearnsets = {
             "thunderbolt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -87936,6 +87948,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -88059,9 +88074,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -88126,6 +88138,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -88252,9 +88267,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -88319,6 +88331,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -88599,9 +88614,6 @@ exports.BattleLearnsets = {
             "thief": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -88654,6 +88666,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -88794,9 +88809,6 @@ exports.BattleLearnsets = {
             "thief": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -88852,6 +88864,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -95214,9 +95229,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -95305,6 +95317,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -96863,9 +96878,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -96939,6 +96951,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -97082,9 +97097,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -97170,6 +97182,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -97353,9 +97368,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "blastburn": [
                 "T"
             ],
@@ -97453,6 +97465,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -101468,9 +101483,6 @@ exports.BattleLearnsets = {
             "waterpulse": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -101523,6 +101535,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -105591,9 +105606,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -105646,6 +105658,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -105837,9 +105852,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bulkup": [
                 "T"
             ],
@@ -105892,6 +105904,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -108840,9 +108855,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -108916,6 +108928,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -109078,9 +109093,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -109154,6 +109166,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -109322,9 +109337,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -109395,6 +109407,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -127486,9 +127501,6 @@ exports.BattleLearnsets = {
             "tripleaxel": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -127538,6 +127550,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -130796,9 +130811,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -130902,6 +130914,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -134065,9 +134080,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "energyball": [
                 "T"
             ],
@@ -134111,6 +134123,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -134235,9 +134250,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "energyball": [
                 "T"
             ],
@@ -134290,6 +134302,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -137019,6 +137034,9 @@ exports.BattleLearnsets = {
             "astonish": [
                 "L1"
             ],
+            "clearsmog": [
+                "L1"
+            ],
             "growth": [
                 "L4"
             ],
@@ -137031,25 +137049,32 @@ exports.BattleLearnsets = {
             "synthesis": [
                 "L16"
             ],
-            "clearsmog": [
+            "sludge": [
                 "L20"
             ],
             "sweetscent": [
-                "L24"
+                "L22"
+            ],
+            "poisondrain": [
+                "L25"
             ],
             "gigadrain": [
                 "L28",
                 "M"
             ],
-            "ingrain": [
+            "ragepowder": [
                 "L32"
+            ],
+            "ingrain": [
+                "L34"
             ],
             "toxic": [
                 "L36",
                 "M"
             ],
-            "ragepowder": [
-                "L40"
+            "sludgebomb": [
+                "L38",
+                "M"
             ],
             "solarbeam": [
                 "L44",
@@ -137074,9 +137099,6 @@ exports.BattleLearnsets = {
                 "M"
             ],
             "seedbomb": [
-                "M"
-            ],
-            "sludgebomb": [
                 "M"
             ],
             "venoshock": [
@@ -137125,6 +137147,9 @@ exports.BattleLearnsets = {
             "absorb": [
                 "L1"
             ],
+            "poisondrain": [
+                "L1"
+            ],
             "growth": [
                 "L1"
             ],
@@ -137150,22 +137175,26 @@ exports.BattleLearnsets = {
                 "L28",
                 "M"
             ],
-            "ingrain": [
+            "ragepowder": [
                 "L32"
+            ],
+            "ingrain": [
+                "L34"
             ],
             "toxic": [
                 "L36",
                 "M"
             ],
-            "ragepowder": [
-                "L42"
+            "sludgebomb": [
+                "L38",
+                "M"
             ],
             "solarbeam": [
-                "L48",
+                "L40",
                 "M"
             ],
             "spore": [
-                "L54"
+                "L50"
             ],
             "bulletseed": [
                 "M"
@@ -137186,9 +137215,6 @@ exports.BattleLearnsets = {
                 "M"
             ],
             "seedbomb": [
-                "M"
-            ],
-            "sludgebomb": [
                 "M"
             ],
             "venoshock": [
@@ -145641,9 +145667,6 @@ exports.BattleLearnsets = {
             "thief": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -145708,6 +145731,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -145821,9 +145847,6 @@ exports.BattleLearnsets = {
             "thief": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -145888,6 +145911,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -148156,9 +148182,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -148220,6 +148243,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -148367,9 +148393,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -148431,6 +148454,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -150392,9 +150418,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "blastburn": [
                 "T"
             ],
@@ -150474,6 +150497,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -152699,9 +152725,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -152730,6 +152753,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -152852,9 +152878,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -152889,6 +152912,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -154716,9 +154742,6 @@ exports.BattleLearnsets = {
             "thunderbolt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "allyswitch": [
                 "T"
             ],
@@ -154762,6 +154785,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -154995,9 +155021,6 @@ exports.BattleLearnsets = {
             "thunderbolt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -155026,6 +155049,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -162546,9 +162572,6 @@ exports.BattleLearnsets = {
             "scorchingsands": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -162616,6 +162639,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -162740,9 +162766,6 @@ exports.BattleLearnsets = {
             "scorchingsands": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -162810,6 +162833,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -186478,9 +186504,6 @@ exports.BattleLearnsets = {
             "waterfall": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "aircutter": [
                 "T"
             ],
@@ -186548,6 +186571,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -186665,9 +186691,6 @@ exports.BattleLearnsets = {
             "waterfall": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "aircutter": [
                 "T"
             ],
@@ -186735,6 +186758,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -192372,9 +192398,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -192448,6 +192471,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -192601,9 +192627,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -192677,6 +192700,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -192830,9 +192856,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -192906,6 +192929,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -193059,9 +193085,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -193135,6 +193158,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "firepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -193722,9 +193748,6 @@ exports.BattleLearnsets = {
             "skillswap": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -193774,6 +193797,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -193846,9 +193872,6 @@ exports.BattleLearnsets = {
             "skillswap": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -193898,6 +193921,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -193993,9 +194019,6 @@ exports.BattleLearnsets = {
             "skillswap": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -194045,6 +194068,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -194140,9 +194166,6 @@ exports.BattleLearnsets = {
             "skillswap": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -194192,6 +194215,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -194275,9 +194301,6 @@ exports.BattleLearnsets = {
             "skillswap": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -194315,6 +194338,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -194410,9 +194436,6 @@ exports.BattleLearnsets = {
             "skillswap": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -194450,6 +194473,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -194569,9 +194595,6 @@ exports.BattleLearnsets = {
             "skillswap": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -194621,6 +194644,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -194743,9 +194769,6 @@ exports.BattleLearnsets = {
             "skillswap": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -194795,6 +194818,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -194902,9 +194928,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "drainpunch": [
                 "T"
             ],
@@ -194933,6 +194956,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -195034,9 +195060,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "drainpunch": [
                 "T"
             ],
@@ -195071,6 +195094,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -195200,9 +195226,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -195258,6 +195281,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -195390,9 +195416,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -195448,6 +195471,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -195619,9 +195645,6 @@ exports.BattleLearnsets = {
             "solarbeam": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "drainpunch": [
                 "T"
             ],
@@ -195662,6 +195685,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -196701,9 +196727,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "drainpunch": [
                 "T"
             ],
@@ -196741,6 +196764,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -196842,9 +196868,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "drainpunch": [
                 "T"
             ],
@@ -196876,6 +196899,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -202244,9 +202270,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -202305,6 +202328,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -202503,9 +202529,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -202591,6 +202614,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -202773,9 +202799,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -202855,6 +202878,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -206038,9 +206064,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "batonpass": [
                 "T"
             ],
@@ -206117,6 +206140,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "sleeptalk": [
@@ -207184,9 +207210,6 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "encore": [
                 "T"
             ],
@@ -207218,6 +207241,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -209590,9 +209616,6 @@ exports.BattleLearnsets = {
             "venoshock": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -209645,6 +209668,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -209745,9 +209771,6 @@ exports.BattleLearnsets = {
             "venoshock": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acrobatics": [
                 "T"
             ],
@@ -209821,6 +209844,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [
@@ -211578,9 +211604,6 @@ exports.BattleLearnsets = {
             "thief": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "encore": [
                 "T"
             ],
@@ -211612,6 +211635,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -211718,9 +211744,6 @@ exports.BattleLearnsets = {
             "thief": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "encore": [
                 "T"
             ],
@@ -211752,6 +211775,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -211868,9 +211894,6 @@ exports.BattleLearnsets = {
             "thief": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "encore": [
                 "T"
             ],
@@ -211908,6 +211931,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -215213,9 +215239,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "amnesia": [
                 "T"
             ],
@@ -215313,6 +215336,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -216420,9 +216446,6 @@ exports.BattleLearnsets = {
             "voltswitch": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "bodypress": [
                 "T"
             ],
@@ -216475,6 +216498,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icepunch": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "rockslide": [
@@ -218682,9 +218708,6 @@ exports.BattleLearnsets = {
             "zenheadbutt": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "chargebeam": [
                 "T"
             ],
@@ -218773,6 +218796,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "icywind": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "psychup": [
@@ -220363,9 +220389,6 @@ exports.BattleLearnsets = {
             "venoshock": [
                 "M"
             ],
-            "metronome": [
-                "M"
-            ],
             "acidspray": [
                 "T"
             ],
@@ -220418,6 +220441,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "endure": [
+                "T"
+            ],
+            "metronome": [
                 "T"
             ],
             "mudslap": [

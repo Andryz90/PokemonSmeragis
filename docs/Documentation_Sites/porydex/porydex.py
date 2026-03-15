@@ -106,12 +106,13 @@ def config_show(_):
     print(f'custom abilities:  {str(porydex.config.custom_ability_defs)}')
 
 def config_set(args):
+    porydex.config.load()
+    update = False
+
     if args.expansion:
         assert args.expansion.resolve().exists(), f'specified expansion directory {args.expansion} does not exist'
         porydex.config.expansion = args.expansion.resolve()
-
-    porydex.config.load()
-    update = False
+        update = True
 
     if args.compiler:
         porydex.config.compiler = args.compiler
