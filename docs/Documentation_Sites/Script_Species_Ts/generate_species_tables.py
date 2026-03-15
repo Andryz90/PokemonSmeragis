@@ -3,6 +3,7 @@ import re, glob, os, pathlib
 from collections import OrderedDict
 
 BASE_DIR = os.path.dirname(__file__) or "."
+DEBUG_SPECIES_TABLES = os.environ.get("SPECIES_TABLES_DEBUG", "").strip() == "1"
 
 def read(path):
     return pathlib.Path(path).read_text(encoding="utf-8", errors="ignore")
@@ -219,7 +220,7 @@ def parse_species(text):
         elif 'ARCEUS_SPECIES_INFO' in mname and len(args) >= 1:
             t1 = tok_to_type(args[0])
             types = [t1] if t1 else []
-        if name.startswith('Ogerpon') or name.startswith('Silvally') or name.startswith('Arceus'):
+        if DEBUG_SPECIES_TABLES and (name.startswith('Ogerpon') or name.startswith('Silvally') or name.startswith('Arceus')):
             print('DBG', name, 'mname', mname, 'args', args[:3], 'types', types)
         # Alcremie family: force Fairy typing if unresolved/empty
         if name.startswith('Alcremie') and (not types):

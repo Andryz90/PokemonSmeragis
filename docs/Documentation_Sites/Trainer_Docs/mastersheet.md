@@ -1,12 +1,87 @@
 ## Pkmn Trainer 1
 
-## Leader BUGSY
+## Aroma Lady DAISY
+Luvdisc (F) @Damp Rock: Rain Dance, Wish, Flip Turn, Draining Kiss [Lv.1 | Swift Swim]  
+Toedscruel (F) @Leftovers: Spore, Giga Drain, Earth Power, Knock Off [Lv.1 | Mycelium Might]  
+Parasect (F) @Occa Berry: Leech Life, Spore, Bullet Seed, Pursuit [Lv.1 | Damp]  
+Golduck (F): Psyshock, Hydro Pump, Nasty Plot [Lv.1 | Swift Swim]  
+
+## Cooltrainer VINCENT
+Sableye @Covert Cloak: Will-O-Wisp, Recover, Knock Off, Taunt [Lv.1 | Prankster]  
+Medicham @Life Orb: High Jump Kick, Zen Headbutt, Ice Punch, Fake Out [Lv.1 | Pure Power]  
+Sharpedo @White Herb: Protect, Crunch, Liquidation, Psychic Fangs [Lv.1 | Speed Boost]  
+Greninja @Expert Belt: Hydro Pump, Dark Pulse, Ice Beam, U-turn [Lv.1 | Protean]  
+Meowscarada @Choice Band: Flower Trick, Knock Off, U-turn, Play Rough [Lv.1 | Protean]  
+Gyarados @Lum Berry: Dragon Dance, Waterfall, Crunch, Earthquake [Lv.1 | Intimidate]  
+
+## Cooltrainer LEROY
+Mawile @Life Orb: Play Rough, Iron Head, Sucker Punch, Swords Dance [Lv.1 | Intimidate]  
+Rotom-Wash @Sitrus Berry: Hydro Pump, Volt Switch, Thunderbolt, Will-O-Wisp [Lv.1 | Levitate]  
+Kingdra @Mystic Water: Hydro Pump, Dragon Pulse, Ice Beam, Rain Dance [Lv.1 | Swift Swim]  
+Azumarill @Sitrus Berry: Belly Drum, Aqua Jet, Play Rough, Liquidation [Lv.1 | Huge Power]  
+Scizor @Choice Band: Bullet Punch, U-turn, Superpower, Knock Off [Lv.1 | Technician]  
+Ceruledge @Spell Tag: Bitter Blade, Shadow Sneak, Shadow Claw, Close Combat [Lv.1 | Flash Fire]  
+
+## Cooltrainer KEIRA
+Aggron @Assault Vest: Heavy Slam, Rock Slide, Earthquake, Fire Punch [Lv.1 | Sturdy]  
+Manectric @Choice Specs: Thunderbolt, Volt Switch, Flamethrower, Overheat [Lv.1 | Lightning Rod]  
+Magnezone @Air Balloon: Thunderbolt, Flash Cannon, Volt Switch, Tri Attack [Lv.1 | Analytic]  
+Tinkaton @Shuca Berry: Gigaton Hammer, Play Rough, Knock Off, Stealth Rock [Lv.1 | Mold Breaker]  
+Rotom-Heat @Charcoal: Overheat, Thunderbolt, Volt Switch, Will-O-Wisp [Lv.1 | Levitate]  
+Glimmora @Focus Sash: Sludge Wave, Power Gem, Earth Power, Mortal Spin [Lv.1 | Toxic Debris]  
+
+## Hex Maniac PATRICIA
+Banette @Scope Lens: Shadow Claw, Shadow Sneak, Taunt, Will-O-Wisp [Lv.1 | Cursed Body]  
+Mismagius @Wise Glasses: Shadow Ball, Dazzling Gleam, Mystical Fire, Nasty Plot [Lv.1 | Levitate]  
+Dusclops @Eviolite: Will-O-Wisp, Night Shade, Pain Split, Protect [Lv.1 | Pressure]  
+Cofagrigus @Colbur Berry: Shadow Ball, Will-O-Wisp, Pain Split, Destiny Bond [Lv.1 | Mummy]  
+Froslass @Choice Scarf: Ice Beam, Shadow Ball, Thunderbolt, Trick [Lv.1 | Cursed Body]  
+Houndstone @Leftovers: Shadow Sneak, Crunch, Play Rough, Will-O-Wisp [Lv.1 | Fluffy]  
+
+## Black Belt YUJI
+Toxicroak @Punching Glove: Drain Punch, Gunk Shot, Sucker Punch, Ice Punch [Lv.1 | Dry Skin]  
+Annihilape @Leftovers: Rage Fist, Drain Punch, Bulk Up, Ice Punch [Lv.1 | Defiant]  
+Poliwrath @Mystic Water: Liquidation, Close Combat, Ice Punch, Bulk Up [Lv.1 | Water Absorb]  
+Pangoro @Assault Vest: Knock Off, Drain Punch, Ice Punch, Bullet Punch [Lv.1 | Iron Fist]  
+Machamp @Flame Orb: Facade, Close Combat, Bullet Punch, Ice Punch [Lv.1 | Guts]  
+
+## Camper JUSTIN
+Smeargle @Focus Sash: Spore, Sticky Web, Stealth Rock, Baton Pass [Lv.1 | Own Tempo]  
+Kecleon @Expert Belt: Fake Out, Drain Punch, Shadow Sneak, Sucker Punch [Lv.1 | Protean]  
+Ditto: Transform [Lv.1 | Imposter]  
+Porygon2: Tri Attack, Recover, Ice Beam, Thunderbolt [Lv.1 | Download]  
+Raticate @Flame Orb: Hyper Fang, Quick Attack, Pursuit, Crunch [Lv.1 | Guts]  
+
+## Psychic JOSHUA
+Alakazam @Life Orb: Psychic, Focus Blast, Shadow Ball, Nasty Plot [Lv.1 | Magic Guard]  
+Solrock @Heat Rock: Stealth Rock, Rock Slide, Earthquake, Zen Headbutt [Lv.1 | Levitate]  
+Reuniclus @Leftovers: Psychic, Focus Blast, Recover, Trick Room [Lv.1 | Magic Guard]  
+Bronzong @Colbur Berry: Psychic, Flash Cannon, Earthquake, Stealth Rock [Lv.1 | Levitate]  
+Slowking-Galar @Assault Vest: Future Sight, Sludge Wave, Flamethrower, Chilly Reception [Lv.1 | Regenerator]  
+Gallade @Choice Scarf: Close Combat, Psycho Cut, Knock Off, Leaf Blade [Lv.1 | Justified]  
+
+## Psychic ALEXIS
+Gardevoir @Choice Scarf: Moonblast, Psychic, Thunderbolt, Trick [Lv.1 | Trace]  
+Xatu @Rocky Helmet: Psychic, Heat Wave, Roost, U-turn [Lv.1 | Magic Bounce]  
+Farigiraf @Throat Spray: Hyper Voice, Psychic, Dazzling Gleam, Trick Room [Lv.1 | Armor Tail]  
+Mr. Rime @Never-Melt Ice: Ice Beam, Psychic Noise, Focus Blast, Rapid Spin [Lv.1 | Tangled Feet]  
+Indeedee-F @Choice Specs: Psychic, Alluring Voice, Dazzling Gleam, Healing Wish [Lv.1 | Psychic Surge]  
+Slowbro @Colbur Berry: Scald, Psychic, Ice Beam, Slack Off [Lv.1 | Regenerator]  
+
+## Leader Johto BUGSY
+Ariados @Scope Lens: Sticky Web, Cut, Shadow Sneak, Cross Poison [Lv.1 | Sniper]  
+Ledian: Mach Punch, Thunder Punch, Ice Punch [Lv.1 | Iron Fist]  
+Scyther: Wing Attack, U-turn, Cut [Lv.1 | Technician]  
+Beautifly: Giga Drain, Draining Kiss, Air Cutter, U-turn [Lv.1 | Lifedrainer]  
+Dustox: Toxic, Protect, U-turn, Moonlight [Lv.1 | Shield Dust]  
+
+## Leader Johto BUGSY
 Araquanid @Focus Sash: Sticky Web, Liquidation, Leech Life, Mirror Coat [Lv.1 | Water Bubble]  
 Ledian @Punching Glove: Ice Punch, U-turn, Combo Punch, Thunder Punch [Lv.1 | Iron Fist]  
 Ariados @Life Orb: Cross Poison, Leech Life, Trailblaze, Swords Dance [Lv.1 | Adaptability]  
 Scyther @Eviolite: Cut, Dual Wingbeat, U-turn, Roost [Lv.1 | Technician]  
 Beautifly (F) @Big Root: Giga Drain, Draining Kiss, Air Slash, Bug Buzz [Lv.1 | Lifedrainer]  
-Dustox @Black Sludge: Toxic, Protect, Bug Bite, Venoshock [Lv.1 | Shield Dust]  
+Dustox @Silver Powder: Toxic, Protect, Bug Bite, Venoshock [Lv.1 | Shield Dust]  
 
 ## School Kid JERRY
 Kirlia: Psybeam, Draining Kiss, Future Sight, Light Screen [Lv.1 | Trace]  
@@ -18,10 +93,34 @@ Gardevoir: Psychic, Draining Kiss, Moonblast, Light Screen [Lv.1 | Trace]
 Darmanitan-Galar: Ice Punch, Brick Break, Rock Slide, Power-Up Punch [Lv.1 | Gorilla Tactics]  
 Hatterene: Reflect, Psychic, Draining Kiss, Moonblast [Lv.1 | Magic Bounce]  
 
+## School Kid TED
+Mr. Mime @Light Clay: Psychic, Dazzling Gleam, Reflect, Light Screen [Lv.1 | Filter]  
+Kirlia @Eviolite: Psychic, Dazzling Gleam, Calm Mind, Draining Kiss [Lv.1 | Trace]  
+Kadabra @Twisted Spoon: Psychic, Focus Blast, Shadow Ball, Recover [Lv.1 | Synchronize]  
+Swoobat @Wise Glasses: Air Slash, Psychic, Calm Mind [Lv.1 | Simple]  
+
+## School Kid PAUL
+Ninetales @Charcoal: Temper Flare, Solar Beam, Dazzling Gleam [Lv.1 | Drought]  
+Camerupt @Soft Sand: Earth Power, Lava Plume, Rock Slide, Yawn [Lv.1 | Magma Armor]  
+Gloom @Miracle Seed: Sleep Powder, Poison Drain, Giga Drain, Synthesis [Lv.1 | Chlorophyll]  
+Roselia @Poison Barb: Giga Drain, Sludge Bomb, Leech Seed, Toxic Spikes [Lv.1 | Natural Cure]  
+
+## School Kid GEORGIA
+Leavanny @Occa Berry: Leaf Blade, X-Scissor, Knock Off, Sticky Web [Lv.1 | Overcoat]  
+Beautifly @Silver Powder: Quiver Dance, Bug Buzz, Air Slash, Giga Drain [Lv.1 | Lifedrainer]  
+Dustox @Black Sludge: Toxic, Venoshock, Moonlight, Protect [Lv.1 | Shield Dust]  
+Charjabug @Magnet: Discharge, Bug Buzz, Thunder Wave, Volt Switch [Lv.1 | Battery]  
+
 ## Winstrate VICTOR
 Swellow @Flame Orb: Protect, Facade, Brave Bird, Quick Attack [Lv.1 | Guts]  
 Obstagoon @Flame Orb: Obstruct, Facade, Knock Off, Fire Punch [Lv.1 | Guts]  
 Pinsir @Coba Berry: Drain Punch, Flying Press, Bulk Up, Earthquake [Lv.1 | Moxie]  
+
+## Pokefan MIGUEL
+Delcatty @Silk Scarf: Fake Out, Sing, Attract, Double-Edge [Lv.1 | Cute Charm]  
+Clefable @Life Orb: Calm Mind, Thunderbolt, Ice Beam, Moonblast [Lv.1 | Magic Guard]  
+Togekiss @Leftovers: Tailwind, Roost, Air Slash, Dazzling Gleam [Lv.1 | Serene Grace]  
+Gothitelle @Leftovers: Calm Mind, Dark Pulse, Psychic, Energy Ball [Lv.1 | Shadow Tag]  
 
 ## Winstrate VICTORIA
 Arboliva @Grassy Seed: Hyper Voice, Leech Seed, Giga Drain, Strength Sap [Lv.1 | Seed Sower]  
@@ -33,14 +132,81 @@ Medicham @Choice Scarf: High Jump Kick, Zen Headbutt, Ice Punch, Thunder Punch [
 Hawlucha @White Herb: Acrobatics, Close Combat, Swords Dance, Steel Wing [Lv.1 | Unburden]  
 Scizor @Life Orb: Bullet Punch, U-turn, Knock Off, Swords Dance [Lv.1 | Technician]  
 
+## Youngster EDDIE
+Linoone @Silk Scarf: Belly Drum, Extreme Speed, Seed Bomb, Shadow Claw [Lv.1 | Gluttony]  
+Furret @King's Rock: Double-Edge, U-turn, Knock Off, Quick Attack [Lv.1 | Frisk]  
+Watchog @Expert Belt: Hyper Fang, Crunch, Hypnosis, Super Fang [Lv.1 | Bad Dreams]  
+Bibarel @Mystic Water: Waterfall, Aqua Jet, Swords Dance, Double-Edge [Lv.1 | Simple]  
+
+## Fisherman ANDREW
+Gastrodon-East @Rindo Berry: Rain Dance, Recover, Stealth Rock, Muddy Water [Lv.1 | Storm Drain]  
+Octillery @Bright Powder: Protect, Substitute, Octazooka, Sludge Wave [Lv.1 | Moody]  
+Wishiwashi @Sitrus Berry: Flip Turn, Liquidation, Earthquake, Scale Shot [Lv.1 | Schooling | Tera: Water]  
+Mantine: Rain Dance, Hurricane, Hydro Pump, Haze [Lv.1 | Swift Swim]  
+
+## Bird Keeper BENNY
+Swellow @Flame Orb: Facade, Brave Bird, U-turn, Quick Attack [Lv.1 | Guts]  
+Mandibuzz @Rocky Helmet: Foul Play, Roost, U-turn, Knock Off [Lv.1 | Overcoat]  
+Kilowattrel @Magnet: Thunderbolt, Hurricane, Volt Switch, Tailwind [Lv.1 | Wind Power]  
+Talonflame @Heavy-Duty Boots: Brave Bird, Flare Blitz, U-turn, Roost [Lv.1 | Gale Wings]  
+Corviknight @Sharp Beak: Brave Bird, Iron Defense, Body Press, Roost [Lv.1 | Mirror Armor]  
+Noivern @Throat Spray: Boomburst, Draco Meteor, Flamethrower, U-turn [Lv.1 | Infiltrator]  
+
 ## Ninja Boy LUNG
 Weezing @Black Sludge: Gunk Shot, Destiny Bond, Explosion, Will-O-Wisp [Lv.1 | Levitate]  
 Muk-Alola @Assault Vest: Knock Off, Poison Jab, Ice Punch, Thunder Punch [Lv.1 | Corrosion]  
 
+## Battle Girl CORA
+Emboar @Choice Band: Flare Blitz, Close Combat, Wild Charge, Sucker Punch [Lv.1 | Reckless]  
+Hitmonlee @White Herb: High Jump Kick, Knock Off, Blaze Kick, Sucker Punch [Lv.1 | Iron Kick]  
+Hitmonchan @Assault Vest: Drain Punch, Thunder Punch, Combo Punch, Mach Punch [Lv.1 | Iron Fist]  
+Bewear @Expert Belt: Drain Punch, Double-Edge, Darkest Lariat, Earthquake [Lv.1 | Fluffy]  
+Mienshao @Life Orb: Close Combat, U-turn, Knock Off, Stone Edge [Lv.1 | Regenerator]  
+
+## Battle Girl PAULA
+Leafeon @Miracle Seed: Leaf Blade, Knock Off, Synthesis, Body Slam [Lv.1 | Chlorophyll]  
+Heracross @Flame Orb: Megahorn, Close Combat, Knock Off, Rock Slide [Lv.1 | Guts]  
+Sceptile @Life Orb: Leaf Blade, Dragon Claw, Earthquake, Swords Dance [Lv.1 | Overgrow]  
+Tsareena @Assault Vest: Power Whip, Triple Axel, High Jump Kick, Knock Off [Lv.1 | Queenly Majesty]  
+Ludicolo @Damp Rock: Scald, Giga Drain, Ice Beam, Rain Dance [Lv.1 | Swift Swim]  
+
+## Picnicker MARTHA
+Comfey @Big Root: Leech Seed, Draining Kiss, Giga Drain, Dazzling Gleam [Lv.1 | Triage]  
+Wigglytuff @Throat Spray: Hyper Voice, Alluring Voice, Thunderbolt, Protect [Lv.1 | Cute Charm]  
+Togetic @Eviolite: Air Slash, Dazzling Gleam, Thunder Wave, Roost [Lv.1 | Serene Grace]  
+Sylveon @Leftovers: Moonblast, Hyper Voice, Calm Mind, Wish [Lv.1 | Pixilate]  
+
+## Twins AMY & LIV [Double Battle]
+Volbeat @Focus Sash: Tail Glow, Tailwind, Helping Hand, U-turn [Lv.1 | Prankster]  
+Illumise @Life Orb: Psych Up, Bug Buzz, Draining Kiss, Protect [Lv.1 | Tinted Lens]  
+Plusle @Shuca Berry: Encore, Thunder Wave, Volt Switch, Grass Knot [Lv.1 | Plus]  
+Minun @Life Orb: Encore, Thunderbolt, Grass Knot, Alluring Voice [Lv.1 | Minus]  
+
 ## Collector EDWIN
 Porygon-Z: Tri Attack, Dark Pulse, Signal Beam [Lv.1 | Adaptability]  
 Xatu @Leftovers: Psychic, Air Slash, Wish, Protect [Lv.1 | Magic Bounce]  
-Chimecho @Leftovers: Psychic, Heal Bell, Dazzling Gleam, Shadow Ball [Lv.1 | Levitate]  
+Chimecho @Twisted Spoon: Psychic, Heal Bell, Dazzling Gleam, Shadow Ball [Lv.1 | Levitate]  
+
+## Collector HECTOR
+Zangoose @Flame Orb: Close Combat, Facade, Protect, Fling [Lv.1 | Guts]  
+Seviper @Muscle Band: Swords Dance, Rest, Trailblaze, Gunk Shot [Lv.1 | Shed Skin]  
+Watchog @Psychic Seed: Hypnosis, Dream Eater, Zen Headbutt, Return [Lv.1 | Bad Dreams]  
+
+## Pkmn Ranger SEBASTIAN
+Cacturne @Bright Powder: Sucker Punch, Seed Bomb, Knock Off, Spikes [Lv.1 | Water Absorb]  
+Shiftry @Life Orb: Knock Off, Leaf Blade, Sucker Punch, Low Kick [Lv.1 | Chlorophyll]  
+Absol @Scope Lens: Night Slash, Sucker Punch, Swords Dance, Play Rough [Lv.1 | Super Luck]  
+Crawdaunt @Choice Band: Crabhammer, Knock Off, Aqua Jet, Superpower [Lv.1 | Adaptability]  
+Drapion @Scope Lens: Cross Poison, Knock Off, Earthquake, Swords Dance [Lv.1 | Battle Armor]  
+Lokix @Heavy-Duty Boots: First Impression, Sucker Punch, U-turn, Low Kick [Lv.1 | Tinted Lens]  
+
+## Pkmn Ranger SOPHIA
+Trevenant @Sitrus Berry: Horn Leech, Poltergeist, Will-O-Wisp, Leech Seed [Lv.1 | Harvest]  
+Roserade @Poison Barb: Poison Drain, Giga Drain, Dazzling Gleam, Sleep Powder [Lv.1 | Natural Cure]  
+Jumpluff @Wide Lens: Leech Seed, Acrobatics, Sleep Powder, U-turn [Lv.1 | Infiltrator]  
+Vileplume @Big Root: Giga Drain, Sludge Bomb, Moonlight, Synthesis [Lv.1 | Effect Spore]  
+Brambleghast @Occa Berry: Spikes, Poltergeist, Power Whip, Strength Sap [Lv.1 | Wind Rider]  
+Cradily @Leftovers: Giga Drain, Recover, Ancient Power, Toxic [Lv.1 | Storm Drain]  
 
 ## Team Magma GUARDIAN GRUNT
 Pangoro @Punching Glove: Knock Off, Drain Punch, Poison Jab, Bullet Punch [Lv.1 | Iron Fist]  
@@ -61,6 +227,25 @@ Darmanitan (F): Fire Punch, Brick Break, Power-Up Punch, Rock Slide [Lv.1 | Shee
 Lopunny @Choice Band: Return, High Jump Kick, Drain Punch, Play Rough [Lv.1 | Scrappy]  
 Azumarill @Sitrus Berry: Play Rough, Liquidation, Aqua Jet, Ice Punch [Lv.1 | Huge Power]  
 Breloom @Focus Band: Mach Punch, Rock Tomb, Bullet Seed, Spore [Lv.1 | Technician]  
+
+## Lass SALLY
+Gloom @Big Root: Sleep Powder, Poison Drain, Giga Drain, Synthesis [Lv.1 | Chlorophyll]  
+Weepinbell @Black Sludge: Sleep Powder, Razor Leaf, Sludge Bomb, Acid [Lv.1 | Chlorophyll]  
+Roselia @Poison Barb: Giga Drain, Sludge Bomb, Leech Seed, Toxic Spikes [Lv.1 | Natural Cure]  
+Ivysaur @Eviolite: Giga Drain, Sludge Bomb, Sleep Powder, Leech Seed [Lv.1 | Overgrow]  
+
+## Lass ROBIN
+Purugly @Silk Scarf: Fake Out, Double-Edge, Knock Off, Play Rough [Lv.1 | Defiant]  
+Togedemaru @Focus Sash: Zing Zap, Iron Head, Spiky Shield, Supercell Slam [Lv.1 | Iron Barbs]  
+Pachirisu @Magnet: Nuzzle, Super Fang, U-turn, Charm [Lv.1 | Volt Absorb]  
+
+## Hiker ALAN
+Golem @Custap Berry: Stealth Rock, Earthquake, Rock Blast, Explosion [Lv.1 | Sturdy]  
+Probopass @Air Balloon: Power Gem, Flash Cannon, Earth Power, Thunder Wave [Lv.1 | Sturdy]  
+Rhydon @Eviolite: Earthquake, Rock Blast, Megahorn, Swords Dance [Lv.1 | Lightning Rod]  
+Boldore @Hard Stone: Rock Blast, Earthquake, Iron Defense, Heavy Slam [Lv.1 | Sturdy]  
+Pupitar @Soft Sand: Rock Slide, Crunch, Earthquake, Dragon Dance [Lv.1 | Shed Skin]  
+Garganacl @Rocky Helmet: Salt Cure, Recover, Body Press, Iron Defense [Lv.1 | Purifying Salt]  
 
 ## Rich Boy DAWSON
 Aipom (M): Fake Out, Return, Seed Bomb, Acrobatics [Lv.1 | Skill Link]  
@@ -87,6 +272,18 @@ Magnezone @Leftovers: Thunder Wave, Thunderbolt, Volt Switch, Flash Cannon [Lv.1
 Bellibolt @Leftovers: Parabolic Charge, Scald, Thunder Wave, Sucker Punch [Lv.1 | Electromorphosis]  
 Toxtricity @Throat Spray: Overdrive, Sludge Bomb, Boomburst, Volt Switch [Lv.1 | Punk Rock]  
 
+## Guitarist MARCOS
+Electrode @Magnet: Explosion, Volt Switch, Steel Beam [Lv.1 | Soundproof]  
+Electrode-Hisui @Magnet: Explosion, Volt Switch, Chloroblast [Lv.1 | Aftermath]  
+Meltan @Custap Berry: Endeavor, Endure, Steel Beam, Facade [Lv.1 | Magnet Pull]  
+Escavalier @Leftovers: Megahorn, Iron Head, Drill Run, Counter [Lv.1 | Shell Armor]  
+
+## Black Belt RHETT
+Tauros @Life Orb: Double-Edge, Zen Headbutt, Earthquake, Iron Head [Lv.1 | Sheer Force]  
+Tauros-Paldea-Combat @Sitrus Berry: Substitute, Protect, Bulk Up, Raging Bull [Lv.1 | Cud Chew]  
+Tauros-Paldea-Aqua @Choice Band: Raging Bull, Close Combat [Lv.1 | Intimidate]  
+Tauros-Paldea-Blaze @Choice Scarf: Raging Bull, Close Combat [Lv.1 | Intimidate]  
+
 ## Camper LAWRENCE
 Weezing-Galar @Black Sludge: Strange Steam, Protect, Explosion, Dark Pulse [Lv.1 | Levitate]  
 Thievul @Black Glasses: Parting Shot, Dark Pulse, Knock Off, Play Rough [Lv.1 | Stakeout]  
@@ -106,6 +303,35 @@ Pincurchin (M) @Cell Battery: Sucker Punch, Surf, Recover, Thunder [Lv.1 | Light
 Heliolisk @Absorb Bulb: Discharge, Thunder, Hyper Voice, Focus Blast [Lv.1 | Dry Skin]  
 Masquerain @Sharp Beak: Surf, Hurricane, Bug Buzz, Energy Ball [Lv.1 | Swift Swim]  
 Kilowattrel @Heavy-Duty Boots: Discharge, Hurricane, U-turn, Weather Ball [Lv.1 | Volt Absorb]  
+
+## Psychic MARLENE
+Medicham: Fake Out, Drain Punch, Zen Headbutt, Helping Hand [Lv.1 | Pure Power]  
+Grumpig @Light Clay: Light Screen, Reflect, Psychic Noise, Psychic Terrain [Lv.1 | Thick Fat]  
+Hypno @Big Root: Hypnosis, Dream Eater, Calm Mind, Dark Pulse [Lv.1 | Bad Dreams]  
+
+## Psychic MARIELA
+Chimecho @Twisted Spoon: Calm Mind, Psychic, Shadow Ball, Recover [Lv.1 | Levitate]  
+Hatterene @Sitrus Berry: Psychic, Dazzling Gleam, Mystical Fire, Calm Mind [Lv.1 | Magic Bounce]  
+Rabsca @Colbur Berry: Psychic, Bug Buzz, Recover, Trick Room [Lv.1 | Synchronize]  
+Orbeetle @Light Clay: Psychic, Bug Buzz, Reflect, Light Screen [Lv.1 | Frisk]  
+Slowbro-Galar @Quick Claw: Shell Side Arm, Expanding Force, Trick Room, Ice Beam [Lv.1 | Quick Draw]  
+Delphox @Wise Glasses: Psychic, Flamethrower, Shadow Ball, Nasty Plot [Lv.1 | Blaze]  
+
+## Psychic ALVARO
+Armarouge @Weakness Policy: Armor Cannon, Psychic, Aura Sphere, Calm Mind [Lv.1 | Flash Fire]  
+Sigilyph @Flame Orb: Psychic, Air Slash, Cosmic Power, Stored Power [Lv.1 | Magic Guard]  
+Gengar @Life Orb: Shadow Ball, Sludge Bomb, Focus Blast, Destiny Bond [Lv.1 | Cursed Body]  
+Meowstic @Light Clay: Psychic, Reflect, Light Screen, Thunder Wave [Lv.1 | Prankster]  
+Oranguru @Sitrus Berry: Psychic, Foul Play, Calm Mind, Recover [Lv.1 | Inner Focus]  
+Slowking @Assault Vest: Scald, Psychic, Ice Beam, Flamethrower [Lv.1 | Regenerator]  
+
+## Gentleman EVERETT
+Wobbuffet @Sitrus Berry: Counter, Mirror Coat, Encore, Safeguard [Lv.1 | Shadow Tag]  
+Toxapex @Rocky Helmet: Scald, Haze, Recover, Toxic Spikes [Lv.1 | Regenerator]  
+Umbreon @Leftovers: Foul Play, Wish, Protect, Toxic [Lv.1 | Synchronize]  
+Blissey @Heavy-Duty Boots: Seismic Toss, Soft-Boiled, Thunder Wave, Aromatherapy [Lv.1 | Natural Cure]  
+Skarmory @Rocky Helmet: Spikes, Roost, Whirlwind, Brave Bird [Lv.1 | Sturdy]  
+Milotic @Mystic Water: Scald, Ice Beam, Recover, Haze [Lv.1 | Marvel Scale]  
 
 ## Rival BRENDAN
 Treecko: Pound, Leer [Lv.5]  
@@ -240,10 +466,6 @@ Goldeen:  [Lv.13]
 ## Tuber F HAILEY
 Marill:  [Lv.13]  
 
-## Aroma Lady DAISY
-Shroomish:  [Lv.14]  
-Roselia:  [Lv.14]  
-
 ## Aroma Lady ROSE
 Roselia:  [Lv.14]  
 Shroomish:  [Lv.14]  
@@ -255,29 +477,10 @@ Wailmer:  [Lv.14]
 Tentacool:  [Lv.11]  
 Wailmer:  [Lv.14]  
 
-## Triathlete JACOB
-Voltorb:  [Lv.6]  
-Voltorb:  [Lv.6]  
-Magnemite:  [Lv.14]  
-
-## Triathlete ANTHONY
-Magnemite:  [Lv.14]  
-Magnemite:  [Lv.14]  
-
-## Triathlete JASMINE
-Magnemite:  [Lv.14]  
-Magnemite:  [Lv.14]  
-Voltorb:  [Lv.6]  
-
 ## Lass HALEY
 Tangela (F): Mega Drain, Growth, Bind [Lv.14 | Thick Fat]  
 Flaaffy (F): Thunder Shock, Thunder Wave, Charge, Tackle [Lv.14 | Transistor]  
 Eevee (F): Fake Out, Baby-Doll Eyes, Covet, Quick Attack [Lv.14 | Adaptability]  
-
-## Lass ROBIN
-Skitty:  [Lv.14]  
-Shroomish:  [Lv.14]  
-Marill:  [Lv.14]  
 
 ## Bug Catcher JOSE
 Surskit: Rain Dance, Water Gun, Quick Attack, Struggle Bug [Lv.14 | Swift Swim]  
@@ -298,28 +501,11 @@ Chewtle: Bite, Water Pulse, Headbutt, Rock Throw [Lv.15 | Strong Jaw]
 Magnemite:  [Lv.15]  
 Whismur:  [Lv.15]  
 
-## School Kid PAUL
-Numel:  [Lv.15]  
-Oddish:  [Lv.15]  
-Wingull:  [Lv.15]  
-
-## Pokefan MIGUEL
-Skitty @Oran Berry:  [Lv.15]  
-
 ## Youngster JOEY
 Munchlax @Sitrus Berry: Curse, Bulldoze, Recycle, Tackle [Lv.15 | Gluttony]  
 Litleo @Metronome: Echoed Voice [Lv.15 | Rivalry]  
 Bibarel: Aqua Jet, Bite, Defense Curl, Rollout [Lv.15 | Moody]  
 Roselia: Mega Drain, Sludge Bomb, Leech Seed, Grass Whistle [Lv.15 | Poison Point]  
-
-## Fisherman ANDREW
-Magikarp:  [Lv.5]  
-Tentacool:  [Lv.10]  
-Magikarp:  [Lv.15]  
-
-## Twins AMY & LIV [Double Battle]
-Plusle:  [Lv.15]  
-Minun:  [Lv.15]  
 
 ## Twins GINA & MIA [Double Battle]
 Riolu: Coaching, Force Palm, Helping Hand, Follow Me [Lv.15 | Prankster]  
@@ -337,12 +523,6 @@ Sandygast @Absorb Bulb: Sandstorm, Mega Drain, Sand Tomb, Hex [Lv.15 | Water Com
 Sandshrew: Bulldoze, Rapid Spin, Rock Throw, Poison Jab [Lv.15 | Sand Force]  
 Wooper-Paldea: Poison Tail, Bulldoze, Toxic, Tail Whip [Lv.15 | Water Absorb]  
 
-## Guitarist MARCOS
-Voltorb:  [Lv.15]  
-
-## Black Belt RHETT
-Makuhita:  [Lv.15]  
-
 ## Swimmer M PETE
 Tentacool:  [Lv.15]  
 
@@ -357,10 +537,6 @@ Marill @Oran Berry: Aqua Jet, Aqua Tail, Bounce, Charm [Lv.15 | Huge Power]
 Shroomish @Toxic Orb: Mega Drain, Leech Seed, Headbutt, Stun Spore [Lv.14 | Poison Heal]  
 Vulpix: Incinerate, Draining Kiss, Quick Attack, Disable [Lv.16 | Flash Fire]  
 
-## School Kid GEORGIA
-Shroomish:  [Lv.16]  
-Beautifly:  [Lv.16]  
-
 ## Youngster JOSH
 Dwebble: Bug Bite, Smack Down, Fury Cutter, Sand Attack [Lv.15 | Shell Armor]  
 Rockruff @Oran Berry: Howl, Bite, Rock Throw, Sand Attack [Lv.16 | Steadfast]  
@@ -370,15 +546,8 @@ Onix: Bulldoze, Smack Down, Curse, Bind [Lv.16 | Sturdy]
 Rhyhorn @Rindo Berry: Take Down, Smack Down, Horn Attack, Sandstorm [Lv.16 | Reckless]  
 Cranidos: Headbutt, Rock Smash, Rock Tomb [Lv.16 | Sheer Force]  
 
-## Youngster EDDIE
-Zigzagoon:  [Lv.14]  
-Zigzagoon:  [Lv.16]  
-
 ## Fisherman WADE
 Tentacool:  [Lv.16]  
-
-## Triathlete BENJAMIN
-Magnemite:  [Lv.16]  
 
 ## Triathlete ABIGAIL
 Magnemite:  [Lv.16]  
@@ -386,9 +555,6 @@ Magnemite:  [Lv.16]
 ## Hiker MARC
 Geodude-Alola: Self-Destruct [Lv.16 | Galvanize]  
 Larvitar: Rock Slide, Bite, Stomping Tantrum, Protect [Lv.16 | Sand Veil]  
-
-## Lass SALLY
-Oddish:  [Lv.16]  
 
 ## Hiker MIKE
 Geodude:  [Lv.16]  
@@ -404,9 +570,6 @@ Toedscool: Stun Spore, Mega Drain, Mud Shot, Hex [Lv.16 | Mycelium Might]
 Shellos: Recover, Water Pulse, Mud Bomb, Ancient Power [Lv.15 | Storm Drain]  
 Tentacool @Black Sludge: Water Pulse, Acid, Supersonic [Lv.16 | Liquid Ooze]  
 Panpour @Petaya Berry: Water Pulse, Work Up, Hidden Power, Lick [Lv.15 | Gluttony | IVs 0/0/31/31/31/31]  
-
-## School Kid TED
-Ralts:  [Lv.17]  
 
 ## Ninja Boy LAO
 Koffing: Poison Gas, Tackle, Smog, Self Destruct [Lv.17]  
@@ -440,19 +603,11 @@ Carkol (M) @Passho Berry: Rock Tomb, Heavy Slam, Temper Flare, Will-O-Wisp [Lv.1
 Meditite:  [Lv.18]  
 Makuhita:  [Lv.18]  
 
-## Collector HECTOR
-Zangoose:  [Lv.18]  
-Seviper:  [Lv.18]  
-
 ## Aroma Lady CELINA
 Roselia:  [Lv.18]  
 
 ## Picnicker BIANCA
 Shroomish:  [Lv.18]  
-
-## Psychic MARLENE
-Meditite:  [Lv.18]  
-Spoink:  [Lv.18]  
 
 ## Black Belt NOB
 Machop:  [Lv.19]  
@@ -491,11 +646,6 @@ Shroomish:  [Lv.21]
 
 ## Beauty SHIRLEY
 Numel:  [Lv.21]  
-
-## Camper BEAU
-Baltoy: Rapid Spin, Mud Slap, Psybeam, Rock Tomb [Lv.21]  
-Sandshrew: Poison Sting, Sand Attack, Scratch, Dig [Lv.21]  
-Baltoy: Rapid Spin, Mud Slap, Psybeam, Rock Tomb [Lv.21]  
 
 ## Expert SHELBY
 Meditite:  [Lv.21]  
@@ -540,14 +690,6 @@ Azurill: Aqua Jet, Charm, Covet [Lv.20 | Huge Power]
 Marill: Aqua Jet, Charm, Covet [Lv.21 | Huge Power]  
 Azumarill: Aqua Jet, Charm, Covet [Lv.22 | Huge Power]  
 
-## Picnicker HEIDI
-Sandshrew: Dig, Sand Attack, Poison Sting, Slash [Lv.22]  
-Baltoy: Rapid Spin, Mud Slap, Psybeam, Rock Tomb [Lv.22]  
-
-## Picnicker BECKY
-Sandshrew: Sand Attack, Poison Sting, Slash, Dig [Lv.22]  
-Marill: Rollout, Bubble Beam, Tail Whip, Defense Curl [Lv.22]  
-
 ## Sailor HUEY
 Pelipper: Water Gun, Gust, Icy Wind [Lv.20 | Drizzle]  
 Palpitoad @Soft Sand: Mud Shot, Bubble Beam [Lv.22 | Swift Swim]  
@@ -574,26 +716,9 @@ Kubfu @Black Belt: Brick Break, Aerial Ace, Rock Smash, Endure [Lv.22 | Inner Fo
 Croagunk: Low Kick, Sucker Punch, Poison Jab, Venoshock [Lv.22 | Poison Touch]  
 Mankey @Scope Lens: Cross Chop, Covet, Assurance, Swagger [Lv.22 | Vital Spirit]  
 
-## Hiker ALAN
-Geodude:  [Lv.22]  
-Nosepass:  [Lv.22]  
-Graveler:  [Lv.22]  
-
 ## Tuber M CHANDLER
 Corsola-Galar: Hex, Curse, Destiny Bond, Will-O-Wisp [Lv.22 | Cursed Body]  
 Corsola: Rock Slide, Icy Wind, Life Dew, Protect [Lv.22 | Rough Skin]  
-
-## Picnicker CELIA
-Marill:  [Lv.22]  
-Lombre:  [Lv.22]  
-
-## Ruin Maniac BRYAN
-Sandshrew:  [Lv.22]  
-Sandslash:  [Lv.22]  
-
-## Camper BRANDEN
-Taillow:  [Lv.22]  
-Nuzleaf:  [Lv.22]  
 
 ## Team Aqua GRUNT
 Arbok: Poison Fang, Knock Off, Toxic Spikes, Trailblaze [Lv.23 | Intimidate]  
@@ -603,20 +728,10 @@ Mareanie: Brine, Venoshock, Bite [Lv.23 | Merciless]
 Seviper: Rest, Poison Tail, Trailblaze, Dig [Lv.23 | Shed Skin]  
 Zangoose: Quick Attack, Ice Punch, Thunder Punch, Body Slam [Lv.23 | Guts]  
 
-## Ruin Maniac DUSTY
-Sandslash: Dig, Slash, Sand Attack, Poison Sting [Lv.23]  
-
 ## Black Belt TAKAO
 Hitmonchan: Mega Punch, Thunder Punch, Ice Punch [Lv.23 | Iron Fist]  
 Timburr (M): Ice Punch, Fire Punch, Dynamic Punch [Lv.23 | Iron Fist]  
 Pawmo (M): Thunder Punch, Dig, Fire Punch, Mach Punch [Lv.23 | Iron Fist]  
-
-## Camper DREW
-Sandshrew: Dig, Sand Attack, Poison Sting, Slash [Lv.23]  
-
-## Picnicker MARTHA
-Skitty:  [Lv.23]  
-Swablu:  [Lv.23]  
 
 ## Sailor EDMOND
 Drednaw: Ice Fang, Liquidation, Rock Slide [Lv.22 | Swift Swim]  
@@ -682,9 +797,6 @@ Tentacool:  [Lv.24]
 Tentacool:  [Lv.24]  
 Wingull:  [Lv.24]  
 Tentacool:  [Lv.24]  
-
-## Camper JUSTIN
-Kecleon:  [Lv.24]  
 
 ## Bug Maniac DONALD
 Wurmple:  [Lv.24]  
@@ -932,10 +1044,6 @@ Tentacruel:  [Lv.26]
 ## Swimmer M MATTHEW
 Carvanha:  [Lv.26]  
 
-## Black Belt YUJI
-Makuhita:  [Lv.26]  
-Machoke:  [Lv.26]  
-
 ## Kindler BERNIE
 Slugma:  [Lv.26]  
 Wingull:  [Lv.26]  
@@ -1111,12 +1219,6 @@ Gyarados:  [Lv.27]
 Doduo:  [Lv.27]  
 Skarmory:  [Lv.27]  
 Tropius:  [Lv.27]  
-
-## Battle Girl CORA
-Meditite:  [Lv.27]  
-
-## Battle Girl PAULA
-Breloom:  [Lv.27]  
 
 ## Twins AMY & LIV [Double Battle]
 Plusle:  [Lv.27]  
@@ -1651,12 +1753,6 @@ Surskit:  [Lv.31]
 ## Psychic CAMERON
 Solrock:  [Lv.31]  
 
-## Leader NORMAN
-Spinda: Teeter Dance, Psybeam, Facade, Encore [Lv.27]  
-Vigoroth: Slash, Facade, Encore, Feint Attack [Lv.27]  
-Linoone: Slash, Belly Drum, Facade, Headbutt [Lv.29]  
-Slaking @Sitrus Berry: Counter, Yawn, Facade, Feint Attack [Lv.31]  
-
 ## Sr And Jr ANNA & MEG [Double Battle]
 Arboliva @Grassy Seed: Leech Seed, Hyper Voice, Giga Drain, Earth Power [Lv.30 | Seed Sower]  
 Leavanny @Occa Berry: Grassy Glide, X-Scissor, Knock Off [Lv.30 | Overcoat]  
@@ -1668,9 +1764,6 @@ Gyarados:  [Lv.31]
 Carvanha:  [Lv.30]  
 Tentacruel:  [Lv.30]  
 Gyarados:  [Lv.31]  
-
-## Triathlete ABIGAIL
-Magnemite:  [Lv.31]  
 
 ## Triathlete DYLAN
 Doduo:  [Lv.31]  
@@ -1823,7 +1916,7 @@ Machoke:  [Lv.32]
 Hariyama:  [Lv.32]  
 
 ## Guitarist KIRK
-Eelektross @Leftovers: Grass Knot, Discharge, Fire Punch, Flash [Lv.32 | Levitate]  
+Eelektross @Leftovers: Discharge, Fire Punch, Flash [Lv.32 | Levitate]  
 Raichu @Air Balloon: Fake Out, Thunder Punch, Surf, Knock Off [Lv.32 | Lightning Rod]  
 Electrode @Air Balloon: Electroweb, Hyper Voice, Flash Cannon, Hidden Power [Lv.32 | Galvanize | IVs 0/30/31/31/31/31]  
 
@@ -2255,7 +2348,7 @@ Manectric @Manectite: Thunderbolt, Volt Switch, Flamethrower, Hidden Power [Lv.3
 Rotom-Mow @Miracle Seed: Leaf Storm, Volt Switch, Dark Pulse, Will-O-Wisp [Lv.33 | Levitate]  
 Boltund @Electric Seed: Supercell Slam, Play Rough, Facade, Crunch [Lv.33 | Electric Pelt]  
 Raichu-Alola @Focus Sash: Psyshock, Surf, Nasty Plot, Volt Switch [Lv.33 | Surge Surfer]  
-Electivire @Expert Belt: Plasma Fists, Drain Punch, Mach Punch, Ice Punch [Lv.33 | Iron Fist]  
+Electivire @Expert Belt: Thunder Punch, Drain Punch, Mach Punch, Ice Punch [Lv.33 | Iron Fist]  
 
 ## School Kid JERRY
 Kirlia:  [Lv.34]  
@@ -2664,11 +2757,6 @@ Mightyena:  [Lv.36]
 ## Triathlete BENJAMIN
 Magneton:  [Lv.36]  
 
-## Bird Keeper BENNY
-Swellow:  [Lv.36]  
-Pelipper:  [Lv.36]  
-Xatu:  [Lv.36]  
-
 ## Twins AMY & LIV [Double Battle]
 Plusle: Thunder, Charge, Fake Tears, Helping Hand [Lv.36]  
 Minun: Thunder, Charge, Charm, Helping Hand [Lv.36]  
@@ -2883,10 +2971,6 @@ Florges @Misty Seed: Moonblast, Calm Mind, Leech Seed, Giga Drain [Lv.38 | Misty
 Carbink @Misty Seed: Body Press, Moonblast, Terrain Pulse, Calm Mind [Lv.38 | Clear Body]  
 Gardevoir (F) @Leftovers: Moonblast, Mystical Fire, Calm Mind, Draining Kiss [Lv.38 | Trace]  
 
-## Pkmn Ranger SOPHIA
-Swablu:  [Lv.38]  
-Roselia:  [Lv.38]  
-
 ## Team Magma GRUNT
 Donphan (M) @Hard Stone: Stealth Rock, Earthquake, Ice Spinner, Head Smash [Lv.38 | Rock Head]  
 Victreebel (M) @Heat Rock: Sunny Day, Weather Ball, Poison Drain, Giga Drain [Lv.38 | Lifedrainer]  
@@ -2981,9 +3065,6 @@ Machoke:  [Lv.39]
 ## Pokefan ANNIKA
 Feebas @Oran Berry: Flail, Water Pulse, Return, Attract [Lv.39]  
 Feebas @Oran Berry: Flail, Water Pulse, Return, Attract [Lv.39]  
-
-## Pkmn Ranger SEBASTIAN
-Cacturne:  [Lv.39]  
 
 ## Pkmn Ranger JACKSON
 Kecleon:  [Lv.39]  
@@ -3110,25 +3191,13 @@ Luvdisc:  [Lv.40]
 Wailord:  [Lv.40]  
 Kingdra:  [Lv.40]  
 
-## Hex Maniac PATRICIA
-Banette:  [Lv.41]  
-Lunatone:  [Lv.41]  
-
 ## Beauty JESSICA
 Kecleon: Bind, Lick, Fury Swipes, Feint Attack [Lv.41]  
 Seviper: Poison Tail, Screech, Glare, Crunch [Lv.41]  
 
-## Psychic JOSHUA
-Kadabra:  [Lv.41]  
-Solrock:  [Lv.41]  
-
 ## Psychic CAMERON
 Kadabra:  [Lv.41]  
 Solrock:  [Lv.41]  
-
-## Psychic ALEXIS
-Kirlia:  [Lv.41]  
-Xatu:  [Lv.41]  
 
 ## Gentleman WALTER
 Linoone: Headbutt, Sand Attack, Odor Sleuth, Fury Swipes [Lv.41]  
@@ -3165,16 +3234,6 @@ Slaking:  [Lv.41]
 Manectric:  [Lv.41]  
 Manectric:  [Lv.41]  
 Exploud:  [Lv.41]  
-
-## Psychic MARIELA
-Chimecho:  [Lv.41]  
-
-## Psychic ALVARO
-Banette:  [Lv.41]  
-Kadabra:  [Lv.41]  
-
-## Gentleman EVERETT
-Wobbuffet:  [Lv.41]  
 
 ## Cooltrainer SAMUEL
 Swellow:  [Lv.42]  
@@ -3336,11 +3395,6 @@ Hariyama:  [Lv.43]
 Machamp:  [Lv.43]  
 Machamp:  [Lv.43]  
 
-## Cooltrainer VINCENT
-Sableye:  [Lv.44]  
-Medicham:  [Lv.44]  
-Sharpedo:  [Lv.44]  
-
 ## Beauty JESSICA
 Kecleon: Bind, Lick, Fury Swipes, Feint Attack [Lv.44]  
 Seviper: Poison Tail, Screech, Glare, Crunch [Lv.44]  
@@ -3385,10 +3439,6 @@ Steelix @Rocky Helmet: Head Smash, Double-Edge, Heavy Slam, Curse [Lv.45 | Rock 
 Gliscor @Toxic Orb: Protect, High Horsepower, Knock Off, Dual Wingbeat [Lv.45 | Poison Heal]  
 Nidoqueen @Life Orb: Sludge Wave, Thunderbolt, Ice Beam, Tectonic Power [Lv.45 | Sheer Force]  
 Gastrodon @Leftovers: Scald, Earth Power, Ice Beam, Recover [Lv.45 | Storm Drain]  
-
-## Cooltrainer KEIRA
-Lairon:  [Lv.45]  
-Manectric:  [Lv.45]  
 
 ## Cooltrainer HOPE
 Roselia:  [Lv.45]  
@@ -3498,10 +3548,6 @@ Lunatone @Chople Berry: Dark Pulse, Nasty Plot, Power Gem, Meteor Beam [Lv.46 | 
 Solrock @Passho Berry: Zen Headbutt, Flare Blitz, Stone Edge, Earthquake [Lv.46 | Levitate]  
 Heliolisk @Expert Belt: Hyper Voice, Hidden Power, Thunderbolt, Grass Knot [Lv.46 | Sand Veil | IVs 1/30/30/31/31/31]  
 
-## Cooltrainer LEROY
-Mawile:  [Lv.46]  
-Starmie:  [Lv.46]  
-
 ## Leader JUAN
 Luvdisc: Water Pulse, Attract, Sweet Kiss, Flail [Lv.41]  
 Whiscash: Rain Dance, Water Pulse, Amnesia, Earthquake [Lv.41]  
@@ -3607,13 +3653,82 @@ Rhyperior @White Herb: Double Iron Bash, Head Smash, Wild Charge, Headlong Rush 
 Medicham: Psychic, Fire Punch, Psych Up, Protect [Lv.49]  
 Hariyama: Focus Punch, Rock Tomb, Rest, Belly Drum [Lv.49]  
 
+## Camper DREW
+Runerigus @Leftovers: Pain Split, Will-O-Wisp, Shadow Ball, Destiny Bond [Lv.50 | Wandering Spirit]  
+Absol @Scope Lens: Night Slash, Sucker Punch, Facade [Lv.50 | Super Luck]  
+Sigilyph @Life Orb: Psychic, Air Slash, Ancient Power, Calm Mind [Lv.50 | Magic Guard]  
+
+## Camper BEAU
+Cofagrigus @Leftovers: Pain Split, Will-O-Wisp, Shadow Ball, Destiny Bond [Lv.50 | Mummy]  
+Claydol @Leftovers: Earth Power, Psychic, Ancient Power, Explosion [Lv.50 | Levitate]  
+Golurk @Punching Glove: Shadow Punch, Drain Punch, Ice Punch, Thunder Punch [Lv.50 | Iron Fist]  
+
+## Triathlete JACOB
+Skarmory @Leftovers: Iron Defense, Body Press, Steel Wing, Roost [Lv.49 | Weak Armor]  
+Jolteon @Magnet: Thunderbolt, Volt Switch, Alluring Voice [Lv.49 | Lightning Rod]  
+Noivern @Throat Spray: Boomburst, Dragon Pulse, Hurricane, U-turn [Lv.49 | Infiltrator]  
+Accelgor @Life Orb: Bug Buzz, Pursuit, Dark Pulse, Giga Drain [Lv.49 | Sheer Force]  
+Rapidash @Choice Band: Double-Edge, Flare Blitz [Lv.50 | Reckless]  
+
+## Triathlete ANTHONY
+Dodrio @Life Orb: Brave Bird, Body Slam, Drill Run, Jump Kick [Lv.48 | Adaptability]  
+Fearow @Scope Lens: Drill Peck, Drill Run, Roost, Pursuit [Lv.48 | Sniper]  
+Swellow @Flame Orb: Facade, Brave Bird, Protect, U-turn [Lv.50 | Guts]  
+Staraptor @Silk Scarf: Double-Edge, Brave Bird, Close Combat, Roost [Lv.48 | Reckless]  
+Unfezant @Choice Specs: Air Slash, Hidden Power, Hyper Voice, U-turn [Lv.49 | Super Luck | IVs 30/31/31/31/31/31]  
+
+## Triathlete BENJAMIN
+Cyclizar @Sitrus Berry: Dragon Claw, Giga Impact, U-turn, Quick Attack [Lv.50 | Shed Skin]  
+Talonflame @Sharp Beak: Brave Bird, Flame Charge, Roost, Steel Wing [Lv.49 | Gale Wings]  
+Toxtricity @Throat Spray: Overdrive, Sludge Bomb, Boomburst, Shift Gear [Lv.49 | Punk Rock]  
+Garbodor @King's Rock: Gunk Shot, Stockpile, Swallow, Deterio [Lv.50 | Stench]  
+Crobat @Black Sludge: Brave Bird, Cross Poison, U-turn, Roost [Lv.49 | Inner Focus]  
+Revavroom @Air Balloon: Iron Head, Poison Jab, Shift Gear, High Horsepower [Lv.48 | Overcoat]  
+
+## Triathlete JASMINE
+Purugly @Hard Stone: Defense Curl, Rollout, Fake Out, Return [Lv.50 | Defiant]  
+Golem @Focus Band: Defense Curl, Rollout [Lv.50 | Sturdy]  
+Donphan @Quick Claw: Defense Curl, Rollout [Lv.50 | Sturdy]  
+Shuckle @Sitrus Berry: Power Trick, Rollout [Lv.50 | Gluttony]  
+Miltank @Muscle Band: Defense Curl, Rollout [Lv.50 | Scrappy]  
+
+## Triathlete ABIGAIL
+Magnezone @Custap Berry: Explosion, Discharge, Flash Cannon, Body Press [Lv.48 | Sturdy]  
+Electrode @Air Balloon: Explosion, Thunderbolt, Flash Cannon, Hidden Power [Lv.48 | Aftermath | IVs 31/31/31/31/31/31]  
+Zebstrika @Choice Band: High Horsepower, Thunderous Kick, Stomp, Supercell Slam [Lv.49 | Iron Kick]  
+Manectric @Magnet: Electric Terrain, Rising Voltage, Discharge, Hidden Power [Lv.50 | Lightning Rod | IVs 0/30/31/31/31/31]  
+Pachirisu @Sitrus Berry: U-turn, Super Fang, Thunder Wave, Encore [Volt Absorb]  
+
+## Picnicker HEIDI
+Gogoat @Safety Goggles: Bulk Up, Horn Leech, Milk Drink, Earthquake [Lv.50 | Sap Sipper]  
+Arcanine @Muscle Band: Flare Blitz, Extreme Speed, Facade, Close Combat [Lv.50 | Flash Fire]  
+
+## Picnicker BECKY
+Sudowoodo: Wood Hammer, Head Smash, Horn Leech [Lv.50 | Water Absorb]  
+Sandslash @Muscle Band: Earthquake, Stone Edge, Leech Life, Knock Off [Lv.50 | Sand Rush]  
+Sandaconda @Loaded Dice: Rest, Earthquake, Scale Shot, Coil [Lv.50 | Shed Skin]  
+Krookodile @Choice Band: Earthquake, Knock Off, Darkest Lariat, Brick Break [Lv.50 | Moxie]  
+
 ## Magma Leader MAXIE
 Hippowdon @Leftovers: Stealth Rock, Roar, Stone Edge, Earthquake [Lv.48 | Sand Stream]  
 Maractus @Absorb Bulb: Shore Up, Earth Power, Giga Drain, Weather Ball [Lv.48 | Sand Force]  
 Camerupt @Cameruptite: Earth Power, Heat Wave, Hidden Power, Eruption [Lv.49 | Magma Armor | IVs 0/31/31/31/31/31]  
 Volcarona @Safety Goggles: Quiver Dance, Fiery Dance, Bug Buzz, Giga Drain [Lv.48 | Flame Body]  
-Garchomp @Bright Powder: Dragon Dance, Stone Edge, Earthquake, Brick Break [Lv.49 | Sand Veil]  
+Garchomp: Scale Shot, Stone Edge, Earthquake, Brick Break [Lv.49 | Sand Veil]  
 Regirock @Leftovers: Stone Edge, Body Press, Earthquake, Iron Defense [Lv.50 | Clear Body]  
+
+## Picnicker CELIA
+Skarmory @Sharp Beak: Brave Bird, Iron Head, Body Press, Protect [Lv.50 | Weak Armor]  
+Kilowattrel @Safety Goggles: Air Slash, Discharge, U-turn, Protect [Lv.50 | Volt Absorb]  
+
+## Ruin Maniac BRYAN
+Lycanroc: Protect, Accelerock, Stone Edge, Drill Run [Lv.50 | Sand Rush]  
+Stunfisk @Air Balloon: Discharge, Earth Power, Scald, Protect [Lv.50 | Sand Veil]  
+Stunfisk-Galar @Air Balloon: Snap Trap, Earthquake, Protect, Pain Split [Lv.50 | Sand Veil]  
+
+## Camper BRANDEN
+Donphan: Rapid Spin, Ice Spinner, High Horsepower, Head Smash [Lv.50 | Sturdy]  
+Marowak @Thick Club: Poltergeist, Bonemerang, Brick Break, Protect [Lv.50 | Battle Armor]  
 
 ## Leader WATTSON [Double Battle]
 Raichu: Thunder, Slam, Rain Dance, Protect [Lv.44]  
@@ -3677,6 +3792,10 @@ Walrein: Water Pulse, Body Slam, Protect, Ice Beam [Lv.48]
 Crawdaunt @Chesto Berry: Rest, Crabhammer, Taunt, Double Team [Lv.48]  
 Kingdra @Chesto Berry: Water Pulse, Double Team, Ice Beam, Rest [Lv.51]  
 
+## Ruin Maniac DUSTY [Double Battle]
+Kabutops @Expert Belt: Aqua Cutter, Ceaseless Edge, Stone Axe [Lv.52 | Sharpness]  
+Omastar @Rindo Berry: Meteor Beam, Muddy Water, Earth Power, Protect [Lv.52 | Solid Rock]  
+
 ## Old Couple JOHN & JAY [Double Battle]
 Medicham: Psychic, Fire Punch, Psych Up, Protect [Lv.52]  
 Hariyama: Focus Punch, Rock Tomb, Rest, Belly Drum [Lv.52]  
@@ -3717,6 +3836,14 @@ Altaria: Double Edge, Dragon Breath, Dragon Dance, Aerial Ace [Lv.54]
 Kingdra: Smokescreen, Dragon Dance, Surf, Body Slam [Lv.53]  
 Flygon: Flamethrower, Crunch, Dragon Breath, Earthquake [Lv.53]  
 Salamence @Sitrus Berry: Flamethrower, Dragon Claw, Rock Slide, Crunch [Lv.55]  
+
+## Leader NORMAN
+Cyclizar @Sitrus Berry: Shed Tail, Draco Meteor, Hyper Voice, Knock Off [Lv.53 | Regenerator]  
+Zoroark-Hisui @Choice Specs: Hyper Voice, Bitter Malice, U-turn, Extrasensory [Lv.54 | Illusion]  
+Lopunny (M) @Lopunnite: High Jump Kick, Return, Facade, Triple Axel [Lv.55 | Scrappy]  
+Slaking @Figy Berry: Facade, High Horsepower, Drain Punch, Slack Off [Lv.54 | Gluttony]  
+Farigiraf @Colbur Berry: Psychic Noise, Hyper Voice, Dazzling Gleam, Psyshock [Lv.54 | Armor Tail]  
+Obstagoon (M) @Flame Orb: Obstruct, Facade, Knock Off, Sucker Punch [Lv.54 | Guts]  
 
 ## Leader WATTSON [Double Battle]
 Electabuzz: Swift, Focus Punch, Thunder Punch, Light Screen [Lv.50]  

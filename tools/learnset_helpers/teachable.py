@@ -17,6 +17,14 @@ def parse_mon_name(name):
 tm_moves = []
 tutor_moves = []
 level_for_moves = {}
+trace_mons = set(
+    x.strip().upper()
+    for x in re.split(r"[,\s]+", os.environ.get("LEARNSET_TRACE_MON", ""))
+    if x.strip()
+)
+
+def is_traced_mon(mon_name, mon_parsed):
+    return mon_name.upper() in trace_mons or mon_parsed in trace_mons
 # scan incs
 incs_to_check =  glob.glob('./data/scripts/*.inc') # all .incs in the script folder
 incs_to_check += glob.glob('./data/maps/*/scripts.inc') # all map scripts
@@ -175,6 +183,8 @@ for mon in list_of_mons:
         continue
     if not mon_parsed in compatibility_dict:
         print("Unable to find %s in json" % mon)
+        if is_traced_mon(mon, mon_parsed):
+            print("[TRACE] %s: missing from teachable compatibility dict" % mon)
         continue
     
     for move in compatibility_dict[mon_parsed]:
@@ -214,6 +224,8 @@ for mon in list_of_mons:
     if newout != out:
         out = newout
         print("Updated %s" % mon)
+    elif is_traced_mon(mon, mon_parsed):
+        print("[TRACE] %s: no teachable changes" % mon)
 
 # add/update header
 header = "//\n// DO NOT MODIFY THIS FILE! It is auto-generated from tools/learnset_helpers/teachable.py\n//\n\n"
@@ -269,41 +281,45 @@ with open("./src/data/pokemon/teachable_learnsets.h", 'w') as file:
 
 def construct_compatibility_levelset(force_custom_check):
     dict_out = {}
-    json_gen_string = ''
-    done = False
     move_level_begin = False
-    for pth in glob.glob('./tools/learnset_helpers/porymoves_files/Gen9/*.json'):
-        f = open(pth, 'r')
-        data = json.load(f)
-        if pth != './tools/learnset_helpers/porymoves_files/Gen9\\zcustom.json':
+    
+    def add_level_moves(mon, moves):
+        for move in moves:
+            if not move['Move'] in dict_out[mon]:
+                dict_out[mon].append(move['Move'])
+                level_for_moves[mon].append(move['Level'])
+
+    def fill_from_fallback(mon):
+        # Prefer manually curated root files first, then fallback to per-gen archives.
+        fallback_paths = [
+            './tools/learnset_helpers/porymoves_files/usum.json',
+            './tools/learnset_helpers/porymoves_files/swsh.json',
+            './tools/learnset_helpers/porymoves_files/sv.json',
+        ]
+        for i in reversed(range(1, 9)):
+            fallback_paths += sorted(glob.glob('./tools/learnset_helpers/porymoves_files/Gen' + str(i) + '/*.json'))
+
+        for pth in fallback_paths:
+            if not os.path.exists(pth):
+                continue
+            with open(pth, 'r') as f:
+                data_new = json.load(f)
+            if mon in data_new.keys() and len(data_new[mon]['LevelMoves']) != 0:
+                add_level_moves(mon, data_new[mon]['LevelMoves'])
+                return
+
+    for pth in sorted(glob.glob('./tools/learnset_helpers/porymoves_files/Gen9/*.json')):
+        with open(pth, 'r') as f:
+            data = json.load(f)
+        if os.path.basename(pth).lower() != 'zcustom.json':
             for mon in data.keys():
                 if not mon in dict_out:
                     dict_out[mon] = []
                     level_for_moves[mon] = []
                 if len(data[mon]['LevelMoves']) != 0:
-                    for move in data[mon]['LevelMoves']:
-                        if not move['Move'] in dict_out[mon]:
-                            dict_out[mon].append(move['Move'])
-                            level_for_moves[mon].append(move['Level'])
-                else:
-                    
-                    for i in reversed(range(1,9)):
-                        if done:
-                            done = False
-                            break
-                        json_gen_string = './tools/learnset_helpers/porymoves_files/Gen' + str(i)+'/*.json'
-                        for pth in  glob.glob(json_gen_string):
-                            f = open(pth, 'r')
-                            data_new = json.load(f)
-                            if mon in data_new.keys() and len(data_new[mon]['LevelMoves']) != 0 :
-                                for move in data_new[mon]['LevelMoves']:
-                                    if not move['Move'] in dict_out[mon]:
-                                        dict_out[mon].append(move['Move'])
-                                        level_for_moves[mon].append(move['Level'])
-                                        done = True
-                            else:
-                                continue             
-                        
+                    add_level_moves(mon, data[mon]['LevelMoves'])
+                elif len(dict_out[mon]) == 0:
+                    fill_from_fallback(mon)
         else:
             for mon in data.keys():
                 if not mon in dict_out:
@@ -400,6 +416,8 @@ for mon in list_of_mons:
         continue
     if not mon_parsed in compatibility_dict:
         print("Unable to find %s in json" % mon)
+        if is_traced_mon(mon, mon_parsed):
+            print("[TRACE] %s: missing from level-up compatibility dict" % mon)
         continue
     
     for move in compatibility_dict[mon_parsed]:
@@ -419,6 +437,8 @@ for mon in list_of_mons:
     if newout != out:
         out = newout
         print("Updated %s" % mon)
+    elif is_traced_mon(mon, mon_parsed):
+        print("[TRACE] %s: no level-up changes" % mon)
         
 # add/update header
 header = "//\n// DO NOT MODIFY THIS FILE! It is auto-generated from tools/learnset_helpers/teachable.py\n//\n\n"

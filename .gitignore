@@ -22,6 +22,7 @@ sound/songs/midi/*.s
 tools/agbcc
 *.map
 *.bat
+!docs/Documentation_Sites/update_all_docs.bat
 *.dump
 *.sa*
 Thumbs.db
