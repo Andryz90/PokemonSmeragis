@@ -7083,9 +7083,9 @@ exports.BattleMovedex = {
         "name": "Dragon Rush",
         "shortDesc": "20% chance to make the target flinch.",
         "desc": "Has a 20% chance to make the target flinch. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
-        "basePower": 100,
+        "basePower": 120,
         "type": "Dragon",
-        "accuracy": 75,
+        "accuracy": 90,
         "pp": 10,
         "priority": 0,
         "category": "Physical",
@@ -15500,8 +15500,8 @@ exports.BattleMovedex = {
             "mirror": 1
         },
         "name": "Wildfire",
-        "shortDesc": "Uses its fury to deal damage Foes side take damage overtime.",
-        "desc": "Uses its fury to deal damage Foes side take damage overtime.",
+        "shortDesc": "Uses its fury to deal damage. Foes side take damage overtime.",
+        "desc": "Uses its fury to deal damage. Foes side take damage overtime.",
         "basePower": 65,
         "type": "Fire",
         "accuracy": 100,
@@ -16072,8 +16072,8 @@ exports.BattleMovedex = {
             "mirror": 1
         },
         "name": "Poison Drain",
-        "shortDesc": "An attack that absorbs half the damage inflicted.",
-        "desc": "An attack that absorbs half the damage inflicted.",
+        "shortDesc": "Recovers half the HP of the damage done. May Poison.",
+        "desc": "Recovers half the HP of the damage done. May Poison.",
         "basePower": 75,
         "pp": 10,
         "type": "Poison",
@@ -16325,23 +16325,6 @@ exports.BattleMovedex = {
         "category": "Physical",
         "contestType": "Cool"
     },
-    "befuddle": {
-        "num": 867,
-        "flags": {
-            "protect": 1,
-            "mirror": 1
-        },
-        "name": "Befuddle",
-        "shortDesc": "Damage and apply a random status except freeze.",
-        "desc": "Damage and apply a random status except freeze.",
-        "basePower": 65,
-        "type": "Bug",
-        "accuracy": 100,
-        "pp": 5,
-        "priority": 0,
-        "category": "Special",
-        "_isMaxMove": true
-    },
     "cannonade": {
         "num": 866,
         "flags": {
@@ -16358,42 +16341,6 @@ exports.BattleMovedex = {
         "pp": 5,
         "priority": 0,
         "category": "Special",
-        "_isMaxMove": true
-    },
-    "centiferno": {
-        "num": 889,
-        "flags": {
-            "protect": 1,
-            "mirror": 1
-        },
-        "name": "Centiferno",
-        "shortDesc": "Strong eruption that deals damage and bind the foes.",
-        "desc": "Strong eruption that deals damage and bind the foes.",
-        "basePower": 70,
-        "type": "Fire",
-        "accuracy": 100,
-        "pp": 5,
-        "priority": 0,
-        "category": "Physical",
-        "_isMaxMove": true
-    },
-    "chistrike": {
-        "num": 870,
-        "flags": {
-            "protect": 1,
-            "mirror": 1,
-            "contact": 1,
-            "punch": 1
-        },
-        "name": "Chi Strike",
-        "shortDesc": "Strike a succession of .punches, raising crit ratio.",
-        "desc": "Strike a succession of .punches, raising crit ratio.",
-        "basePower": 65,
-        "type": "Fighting",
-        "accuracy": 100,
-        "pp": 5,
-        "priority": 0,
-        "category": "Physical",
         "_isMaxMove": true
     },
     "depletion": {
@@ -16431,24 +16378,6 @@ exports.BattleMovedex = {
         "category": "Physical",
         "_isMaxMove": true
     },
-    "foamburst": {
-        "num": 872,
-        "flags": {
-            "protect": 1,
-            "mirror": 1,
-            "contact": 1
-        },
-        "name": "Foam Burst",
-        "shortDesc": "Create an immense foam .that slow down the enemies.",
-        "desc": "Create an immense foam .that slow down the enemies.",
-        "basePower": 65,
-        "type": "Water",
-        "accuracy": 100,
-        "pp": 5,
-        "priority": 0,
-        "category": "Physical",
-        "_isMaxMove": true
-    },
     "goldrush": {
         "num": 869,
         "flags": {
@@ -16466,23 +16395,6 @@ exports.BattleMovedex = {
         "category": "Physical",
         "_isMaxMove": true
     },
-    "gravitas": {
-        "num": 882,
-        "flags": {
-            "protect": 1,
-            "mirror": 1
-        },
-        "name": "Gravitas",
-        "shortDesc": "Psychic force that deals damage and set gravity.",
-        "desc": "Psychic force that deals damage and set gravity.",
-        "basePower": 70,
-        "type": "Psychic",
-        "accuracy": 100,
-        "pp": 5,
-        "priority": 0,
-        "category": "Special",
-        "_isMaxMove": true
-    },
     "hydrosnipe": {
         "num": 880,
         "flags": {
@@ -16494,23 +16406,6 @@ exports.BattleMovedex = {
         "desc": "A perfect shot that that lands critical hit.",
         "basePower": 65,
         "type": "Water",
-        "accuracy": 100,
-        "pp": 5,
-        "priority": 0,
-        "category": "Special",
-        "_isMaxMove": true
-    },
-    "malodor": {
-        "num": 876,
-        "flags": {
-            "protect": 1,
-            "mirror": 1
-        },
-        "name": "Malodor",
-        "shortDesc": "Deals damage and poison the enemies with its smell.",
-        "desc": "Deals damage and poison the enemies with its smell.",
-        "basePower": 65,
-        "type": "Poison",
         "accuracy": 100,
         "pp": 5,
         "priority": 0,
@@ -16750,8 +16645,8 @@ exports.BattleMovedex = {
             "mirror": 1
         },
         "name": "Wildfire",
-        "shortDesc": "Uses its fury to deal damage Foes side take damage overtime.",
-        "desc": "Uses its fury to deal damage Foes side take damage overtime.",
+        "shortDesc": "Uses its fury to deal damage. Foes side take damage overtime.",
+        "desc": "Uses its fury to deal damage. Foes side take damage overtime.",
         "basePower": 65,
         "type": "Fire",
         "accuracy": 100,

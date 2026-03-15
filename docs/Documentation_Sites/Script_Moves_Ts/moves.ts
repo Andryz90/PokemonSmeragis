@@ -2188,7 +2188,7 @@ const SS_PATCH: {
   'Dragon Hammer': { bp: 90, type: 'Dragon', category: 'Physical', makesContact: true, priority: 0 },
   'Dragon Pulse': { bp: 0, type: 'Dragon', category: 'Special', isPulse: true, priority: 0 },
   'Dragon Rage': { bp: 1, type: 'Dragon', category: 'Special', priority: 0 },
-  'Dragon Rush': { bp: 100, type: 'Dragon', category: 'Physical', makesContact: true, priority: 0, secondaries: true },
+  'Dragon Rush': { bp: 120, type: 'Dragon', category: 'Physical', makesContact: true, priority: 0 },
   'Dragon Tail': { bp: 60, type: 'Dragon', category: 'Physical', makesContact: true, priority: -6 },
   'Drain Punch': { bp: 0, type: 'Fighting', category: 'Physical', priority: 0 },
   'Draining Kiss': { bp: 50, type: 'Fairy', category: 'Special', priority: 0 },

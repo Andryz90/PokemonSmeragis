@@ -1800,7 +1800,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .criticalHitStage = 1,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
@@ -10621,22 +10620,18 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Dragon Rush"),
         .description = COMPOUND_STRING(
-            "Tackles the foe with menace.\n"
-            "May cause flinching."),
-        .effect = EFFECT_HIT,
-        .power = 100,
+            "Tackles the foe with menace,\n"
+            "that also hurts the user."),
+        .effect = EFFECT_RECOIL,
+        .power = 120,
         .type = TYPE_DRAGON,
-        .accuracy = 75,
+        .accuracy = 90,
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .minimizeDoubleDamage = B_UPDATED_MOVE_FLAGS >= GEN_6,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_FLINCH,
-            .chance = 20,
-        }),
         .contestEffect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = COMBO_STARTER_DRAGON_RUSH,
@@ -22202,7 +22197,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Wildfire"),
         .description = COMPOUND_STRING(
-            "Uses its fury to deal damage\n"
+            "Uses its fury to deal damage.\n"
             "Foes side take damage overtime."
         ),
         .effect = EFFECT_MAX_MOVE,
@@ -22992,7 +22987,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_POISON_DRAIN] =
     {
         .name = COMPOUND_STRING("Poison Drain"),
-        .description = sMegaDrainDescription,
+        .description = COMPOUND_STRING("Recovers half the HP\n"
+                                        "of the damage done.\n"
+                                        "May Poison."),
         .power = 75,
         .pp = 10,
         .effect = EFFECT_ABSORB,
@@ -23285,6 +23282,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
+        .argument = { .nonVolatileStatus = MOVE_EFFECT_FREEZE_OR_FROSTBITE },
         .zMove = { .effect = Z_EFFECT_ATK_UP_1 },
         .magicCoatAffected = TRUE,
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
