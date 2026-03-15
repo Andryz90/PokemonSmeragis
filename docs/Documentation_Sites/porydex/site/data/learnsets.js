@@ -120773,6 +120773,9 @@ exports.BattleLearnsets = {
             "lightscreen": [
                 "M"
             ],
+            "psychic": [
+                "M"
+            ],
             "rest": [
                 "M"
             ],
@@ -120855,6 +120858,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "sunnyday": [
+                "T"
+            ],
+            "trickroom": [
                 "T"
             ],
             "dreameater": [
@@ -132680,7 +132686,8 @@ exports.BattleLearnsets = {
                 "L1"
             ],
             "toxicspikes": [
-                "L1"
+                "L1",
+                "T"
             ],
             "acidspray": [
                 "L12"
@@ -132698,10 +132705,12 @@ exports.BattleLearnsets = {
                 "L23"
             ],
             "bodyslam": [
-                "L25"
+                "L25",
+                "T"
             ],
             "sludgebomb": [
-                "L29"
+                "L29",
+                "M"
             ],
             "clearsmog": [
                 "L34"
@@ -132710,18 +132719,125 @@ exports.BattleLearnsets = {
                 "L39"
             ],
             "amnesia": [
-                "L46"
+                "L46",
+                "T"
             ],
             "belch": [
                 "L49"
             ],
             "gunkshot": [
-                "L54"
+                "L54",
+                "M"
             ],
             "explosion": [
                 "L59"
             ],
+            "darkpulse": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "focusblast": [
+                "M"
+            ],
+            "gigadrain": [
+                "M"
+            ],
+            "hyperbeam": [
+                "M"
+            ],
+            "psychic": [
+                "M"
+            ],
+            "rest": [
+                "M"
+            ],
+            "seedbomb": [
+                "M"
+            ],
+            "sludgewave": [
+                "M"
+            ],
+            "solarbeam": [
+                "M"
+            ],
+            "thief": [
+                "M"
+            ],
+            "thunderbolt": [
+                "M"
+            ],
+            "venoshock": [
+                "M"
+            ],
+            "attract": [
+                "T"
+            ],
+            "bodypress": [
+                "T"
+            ],
+            "corrosivegas": [
+                "T"
+            ],
+            "crosspoison": [
+                "T"
+            ],
             "deterio": [
+                "T"
+            ],
+            "drainpunch": [
+                "T"
+            ],
+            "fling": [
+                "T"
+            ],
+            "gigaimpact": [
+                "T"
+            ],
+            "payback": [
+                "T"
+            ],
+            "protect": [
+                "T"
+            ],
+            "raindance": [
+                "T"
+            ],
+            "rockblast": [
+                "T"
+            ],
+            "round": [
+                "T"
+            ],
+            "screech": [
+                "T"
+            ],
+            "selfdestruct": [
+                "T"
+            ],
+            "spikes": [
+                "T"
+            ],
+            "stompingtantrum": [
+                "T"
+            ],
+            "sunnyday": [
+                "T"
+            ],
+            "venomdrench": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "snore": [
+                "T"
+            ],
+            "substitute": [
                 "T"
             ]
         }
@@ -132738,7 +132854,8 @@ exports.BattleLearnsets = {
                 "L1"
             ],
             "toxicspikes": [
-                "L1"
+                "L1",
+                "T"
             ],
             "acidspray": [
                 "L12"
@@ -132756,10 +132873,12 @@ exports.BattleLearnsets = {
                 "L23"
             ],
             "bodyslam": [
-                "L25"
+                "L25",
+                "T"
             ],
             "sludgebomb": [
-                "L29"
+                "L29",
+                "M"
             ],
             "clearsmog": [
                 "L34"
@@ -132768,18 +132887,125 @@ exports.BattleLearnsets = {
                 "L39"
             ],
             "amnesia": [
-                "L46"
+                "L46",
+                "T"
             ],
             "belch": [
                 "L49"
             ],
             "gunkshot": [
-                "L54"
+                "L54",
+                "M"
             ],
             "explosion": [
                 "L59"
             ],
+            "darkpulse": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "focusblast": [
+                "M"
+            ],
+            "gigadrain": [
+                "M"
+            ],
+            "hyperbeam": [
+                "M"
+            ],
+            "psychic": [
+                "M"
+            ],
+            "rest": [
+                "M"
+            ],
+            "seedbomb": [
+                "M"
+            ],
+            "sludgewave": [
+                "M"
+            ],
+            "solarbeam": [
+                "M"
+            ],
+            "thief": [
+                "M"
+            ],
+            "thunderbolt": [
+                "M"
+            ],
+            "venoshock": [
+                "M"
+            ],
+            "attract": [
+                "T"
+            ],
+            "bodypress": [
+                "T"
+            ],
+            "corrosivegas": [
+                "T"
+            ],
+            "crosspoison": [
+                "T"
+            ],
             "deterio": [
+                "T"
+            ],
+            "drainpunch": [
+                "T"
+            ],
+            "fling": [
+                "T"
+            ],
+            "gigaimpact": [
+                "T"
+            ],
+            "payback": [
+                "T"
+            ],
+            "protect": [
+                "T"
+            ],
+            "raindance": [
+                "T"
+            ],
+            "rockblast": [
+                "T"
+            ],
+            "round": [
+                "T"
+            ],
+            "screech": [
+                "T"
+            ],
+            "selfdestruct": [
+                "T"
+            ],
+            "spikes": [
+                "T"
+            ],
+            "stompingtantrum": [
+                "T"
+            ],
+            "sunnyday": [
+                "T"
+            ],
+            "venomdrench": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "snore": [
+                "T"
+            ],
+            "substitute": [
                 "T"
             ]
         }

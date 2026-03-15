@@ -74,9 +74,49 @@ function porydexImgWithFallback(primarySrc, fallbackSrc, style, width, height, a
 	' />';
 }
 
+// Optional manual overlay for non-wild encounters (gifts/static/overworld).
+// Add entries by showdown id, for example:
+// window.BattleStaticEncounters.watchog = [
+//   {name: 'Slateport Sewers - Overworld', level: 35, rate: 'Static'}
+// ];
+window.BattleStaticEncounters = window.BattleStaticEncounters || {};
 
 // --- Porydex: reverse lookup (pokemon -> locations) ---
 var PorydexEncounterIndex = null;
+var PorydexStaticEncounterIndex = null;
+
+function porydexNormalizeRateArray(arr) {
+	if (!Array.isArray(arr) || !arr.length) return arr;
+	var out = [];
+	var hasNumeric = false;
+	var total = 0;
+	for (var i = 0; i < arr.length; i++) {
+		var n = Number(arr[i]);
+		if (!isFinite(n) || n < 0) {
+			out.push(arr[i]);
+			continue;
+		}
+		hasNumeric = true;
+		out.push(n);
+		total += n;
+	}
+	if (!hasNumeric || total <= 0 || Math.abs(total - 100) < 0.0001) return out;
+	return out.map(function (v) {
+		var n = Number(v);
+		if (!isFinite(n) || n < 0) return v;
+		return (n * 100) / total;
+	});
+}
+
+function porydexNewEncounterBucket() {
+	return {
+		land: Object.create(null),
+		surf: Object.create(null),
+		rock: Object.create(null),
+		fish: Object.create(null),
+		static: Object.create(null),
+	};
+}
 
 /**
  * Builds a reverse index from BattleLocationdex.
@@ -98,19 +138,39 @@ function buildPorydexEncounterIndex() {
 
 	var rates = BattleLocationdex.rates || BattleLocationdex['rates'] || null;
 	var modes = ['land', 'surf', 'rock', 'fish'];
+	var normalizedRateCache = Object.create(null);
+
+	function getRateArray(mode, subKey) {
+		if (!rates) return null;
+		var cacheKey = mode + '::' + (subKey || '');
+		if (Object.prototype.hasOwnProperty.call(normalizedRateCache, cacheKey)) {
+			return normalizedRateCache[cacheKey];
+		}
+
+		var arr = null;
+		if (mode !== 'fish') {
+			if (Array.isArray(rates[mode])) arr = rates[mode];
+		} else {
+			var rf = rates.fish || rates['fish'];
+			if (Array.isArray(rf)) {
+				arr = rf;
+			} else if (rf && !subKey && Array.isArray(rf.old)) {
+				arr = rf.old;
+			} else if (rf && subKey && Array.isArray(rf[subKey])) {
+				arr = rf[subKey];
+			}
+		}
+
+		arr = porydexNormalizeRateArray(arr);
+		normalizedRateCache[cacheKey] = arr;
+		return arr;
+	}
 
 	function getSlotRate(mode, subKey, area, slotIndex) {
-		// Prefer explicit per-slot rates if available
-		if (rates) {
-			if (mode !== 'fish') {
-				if (rates[mode] && typeof rates[mode][slotIndex] === 'number') return rates[mode][slotIndex];
-			} else {
-				var rf = rates.fish || rates['fish'];
-				if (rf) {
-					if (typeof rf[slotIndex] === 'number') return rf[slotIndex]; // flat array
-					if (subKey && rf[subKey] && typeof rf[subKey][slotIndex] === 'number') return rf[subKey][slotIndex];
-				}
-			}
+		// Prefer explicit per-slot rates if available (normalized for display)
+		var arr = getRateArray(mode, subKey);
+		if (arr && typeof arr[slotIndex] === 'number') {
+			return arr[slotIndex];
 		}
 		// Fallback: approximate using baseRate if present, otherwise distribute 100 across slots
 		if (area && area.baseRate) return Math.round(area.baseRate / area.encs.length);
@@ -120,12 +180,7 @@ function buildPorydexEncounterIndex() {
 	function ensureBucket(speciesId) {
 		var bucket = idx[speciesId];
 		if (!bucket) {
-			bucket = idx[speciesId] = {
-				land: Object.create(null),
-				surf: Object.create(null),
-				rock: Object.create(null),
-				fish: Object.create(null),
-			};
+			bucket = idx[speciesId] = porydexNewEncounterBucket();
 		}
 		return bucket;
 	}
@@ -191,6 +246,133 @@ function buildPorydexEncounterIndex() {
 	return idx;
 }
 
+function buildPorydexStaticEncounterIndex() {
+	if (PorydexStaticEncounterIndex) return PorydexStaticEncounterIndex;
+	var idx = Object.create(null);
+	var raw = window.BattleStaticEncounters || window.PorydexStaticEncounters;
+	if (!raw) {
+		PorydexStaticEncounterIndex = idx;
+		return idx;
+	}
+
+	function ensureBucket(speciesId) {
+		if (!idx[speciesId]) idx[speciesId] = porydexNewEncounterBucket();
+		return idx[speciesId];
+	}
+
+	function addStaticEntry(fallbackSpeciesId, entry, fallbackIdx) {
+		if (!entry || typeof entry !== 'object') return;
+		var speciesId = toID(fallbackSpeciesId || entry.species || entry.speciesId || entry.id);
+		if (!speciesId) return;
+
+		var mode = toID(entry.mode || entry.method || 'static');
+		if (mode !== 'land' && mode !== 'surf' && mode !== 'rock' && mode !== 'fish') {
+			mode = 'static';
+		}
+
+		var zoneName = entry.name || entry.location || entry.zone || entry.label || '';
+		var zoneid = toID(entry.zoneid || entry.locationId || zoneName);
+		if (!zoneid) zoneid = 'static' + String(fallbackIdx || 0);
+
+		var rate = (entry.rate != null) ? entry.rate : 'Static';
+		var level = Number(entry.level);
+		var minLvl = Number(entry.minLvl);
+		var maxLvl = Number(entry.maxLvl);
+		if (!isFinite(minLvl) && isFinite(level)) minLvl = level;
+		if (!isFinite(maxLvl) && isFinite(level)) maxLvl = level;
+		if (!isFinite(minLvl)) minLvl = 0;
+		if (!isFinite(maxLvl)) maxLvl = minLvl;
+
+		var bucket = ensureBucket(speciesId);
+		var byZone = bucket[mode];
+		var ent = byZone[zoneid];
+		if (!ent) {
+			byZone[zoneid] = {
+				zoneid: zoneid,
+				name: zoneName || null,
+				rate: rate,
+				minLvl: minLvl,
+				maxLvl: maxLvl,
+			};
+			return;
+		}
+
+		var prevRate = Number(ent.rate);
+		var nextRate = Number(rate);
+		if (isFinite(prevRate) && isFinite(nextRate)) ent.rate = prevRate + nextRate;
+		if (minLvl && (!ent.minLvl || minLvl < ent.minLvl)) ent.minLvl = minLvl;
+		if (maxLvl && (!ent.maxLvl || maxLvl > ent.maxLvl)) ent.maxLvl = maxLvl;
+		if (!ent.name && zoneName) ent.name = zoneName;
+	}
+
+	if (Array.isArray(raw)) {
+		for (var i = 0; i < raw.length; i++) addStaticEntry(null, raw[i], i);
+	} else {
+		for (var speciesKey in raw) {
+			if (!Object.prototype.hasOwnProperty.call(raw, speciesKey)) continue;
+			var val = raw[speciesKey];
+			if (Array.isArray(val)) {
+				for (var j = 0; j < val.length; j++) addStaticEntry(speciesKey, val[j], j);
+			} else if (val && Array.isArray(val.encounters)) {
+				for (var k = 0; k < val.encounters.length; k++) addStaticEntry(speciesKey, val.encounters[k], k);
+			} else {
+				addStaticEntry(speciesKey, val, 0);
+			}
+		}
+	}
+
+	PorydexStaticEncounterIndex = idx;
+	return idx;
+}
+
+function getPorydexEncounterInfo(speciesId) {
+	var sid = toID(speciesId || '');
+	if (!sid) return null;
+
+	var wild = buildPorydexEncounterIndex()[sid];
+	var stat = buildPorydexStaticEncounterIndex()[sid];
+	if (!wild && !stat) return null;
+
+	var out = porydexNewEncounterBucket();
+	function mergeMode(fromMode, toMode) {
+		if (!fromMode) return;
+		for (var zoneid in fromMode) {
+			if (!Object.prototype.hasOwnProperty.call(fromMode, zoneid)) continue;
+			var src = fromMode[zoneid];
+			if (!src) continue;
+			var dst = toMode[zoneid];
+			if (!dst) {
+				toMode[zoneid] = {
+					zoneid: src.zoneid || zoneid,
+					name: src.name || null,
+					rate: src.rate,
+					minLvl: src.minLvl || 0,
+					maxLvl: src.maxLvl || 0,
+				};
+				continue;
+			}
+			var a = Number(dst.rate);
+			var b = Number(src.rate);
+			if (isFinite(a) && isFinite(b)) dst.rate = a + b;
+			if ((src.minLvl || 0) && (!dst.minLvl || src.minLvl < dst.minLvl)) dst.minLvl = src.minLvl;
+			if ((src.maxLvl || 0) && (!dst.maxLvl || src.maxLvl > dst.maxLvl)) dst.maxLvl = src.maxLvl;
+			if (!dst.name && src.name) dst.name = src.name;
+		}
+	}
+
+	var modes = ['land', 'surf', 'rock', 'fish', 'static'];
+	for (var i = 0; i < modes.length; i++) {
+		var m = modes[i];
+		mergeMode(wild && wild[m], out[m]);
+		mergeMode(stat && stat[m], out[m]);
+	}
+
+	for (var j = 0; j < modes.length; j++) {
+		if (Object.keys(out[modes[j]]).length) return out;
+	}
+	return null;
+}
+
 function porydexCleanLocationName(name) {
 	name = String(name || '').trim();
 	if (!name) return name;
@@ -213,8 +395,10 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 		this.id = id;
 		this.shortTitle = pokemon.baseSpecies;
 
-        // Treat everything except explicit "unobtainable" as obtainable
-        let obtainable = pokemon.tier !== "unobtainable";
+        // Treat everything except explicit "unobtainable" as obtainable.
+        // Static encounter overlays can make a mon obtainable even when tier data is stale.
+        var encounterInfo = getPorydexEncounterInfo(id);
+        let obtainable = pokemon.tier !== "unobtainable" || !!encounterInfo;
 		var buf = '<div class="pfx-body dexentry">';
 
 		buf += '<a href="/" class="pfx-backbutton" data-target="back"><i class="fa fa-chevron-left"></i> Pok&eacute;dex</a>';
@@ -410,7 +594,7 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 		}
 
 		// learnset
-        if (pokemon.tier !== 'unobtainable') {
+        if (pokemon.tier !== 'unobtainable' || getPorydexEncounterInfo(this.id)) {
 			buf += '<ul class="tabbar"><li><button class="button nav-first cur" value="move">Moves</button></li><li><button class="button" value="details">Flavor</button></li><li><button class="button" value="encounters">Encounters</button></li></ul>';
 		} else {
 			buf += '<ul class="tabbar"><li><button class="button nav-first cur" value="move">Moves</button></li><li><button class="button" value="details">Flavor</button></li></ul>';
@@ -780,8 +964,7 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 		this.$('.utilichart').html(buf);
 	},
 	renderEncounters: function () {
-		var idx = buildPorydexEncounterIndex();
-		var info = idx && idx[this.id];
+		var info = getPorydexEncounterInfo(this.id);
 		var buf = '';
 		if (!info) {
 			buf += '<li class="resultheader"><h3>Encounters</h3></li>';
@@ -795,6 +978,7 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 			{key: 'surf', label: 'Surfing'},
 			{key: 'rock', label: 'Rock Smash'},
 			{key: 'fish', label: 'Fishing'},
+			{key: 'static', label: 'Static / Overworld'},
 		];
 
 		for (var mi = 0; mi < modes.length; mi++) {
@@ -810,7 +994,13 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 			if (!zones.length) continue;
 
 			zones.sort(function (a, b) {
-				if (b.rate !== a.rate) return b.rate - a.rate;
+				var ar = Number(a.rate);
+				var br = Number(b.rate);
+				var aNum = isFinite(ar);
+				var bNum = isFinite(br);
+				if (aNum && bNum && br !== ar) return br - ar;
+				if (aNum && !bNum) return -1;
+				if (!aNum && bNum) return 1;
 				var an = (BattleLocationdex[a.zoneid] && BattleLocationdex[a.zoneid].name) || a.zoneid;
 				var bn = (BattleLocationdex[b.zoneid] && BattleLocationdex[b.zoneid].name) || b.zoneid;
 				return an.localeCompare(bn);
@@ -822,14 +1012,20 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 			for (var i = 0; i < zones.length; i++) {
 				var z = zones[i];
 				var zone = BattleLocationdex[z.zoneid];
-				if (!zone) continue;
-
-				// 1) crea una copia SOLO per display (name pulito)
-				var zoneDisplay = $.extend({}, zone);
-				zoneDisplay.name = porydexCleanLocationName(zone.name);
+				var zoneDisplay;
+				if (zone) {
+					zoneDisplay = $.extend({}, zone);
+					zoneDisplay.name = porydexCleanLocationName(zone.name);
+				} else {
+					zoneDisplay = {name: porydexCleanLocationName(z.name || z.zoneid)};
+				}
 
 				var row = BattleSearch.renderTaggedEncounterRow(zoneDisplay, '' + z.rate);
-				row = row.replace(/href="\/encounters\/[^"]+"/, 'href="/encounters/' + z.zoneid + '"');
+				if (zone) {
+					row = row.replace(/href="\/encounters\/[^"]+"/, 'href="/encounters/' + z.zoneid + '"');
+				} else {
+					row = row.replace(/href="\/encounters\/[^"]+"/, 'href="#"');
+				}
 
 				buf += row;
 			}

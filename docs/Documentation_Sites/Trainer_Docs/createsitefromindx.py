@@ -52,7 +52,9 @@ def build_paths(args):
     return site_dir, in_file, out_main, splits_file, sprites_dir, sprites_map
 
 # ===== Utilities =====
-CALC_URL = "https://andryz90.github.io/HackRomProject/Documentation_Sites/Calculator/dist/index.html"
+CALC_URL = "https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Calculator/dist/index.html"
+POKEDEX_URL = "https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/porydex/site/index.html"
+DOCS_URL = "https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Site/site.html"
 MERGE_SIDE_LIMIT = 3
 MERGE_PICK = "first"
 
@@ -721,9 +723,10 @@ def main(argv=None):
 <body>
   <nav class="topbar">
     <span class="brand">Hack Rom</span>
+    <a class="toplink" href="{POKEDEX_URL}" target="_blank" rel="noopener">Pokedex</a>
     <a class="toplink" href="{CALC_URL}" target="_blank" rel="noopener">Calculator</a>
     <a class="toplink" href="{out_main.name}" aria-current="page">Trainer Sheet</a>
-    <a class="toplink" href="#" title="Dex coming soon">Dex (soon)</a>
+    <a class="toplink" href="{DOCS_URL}" target="_blank" rel="noopener">Docs</a>
     <span class="fx1"></span>
   </nav>
   <nav class="splitbar" id="splitbar">

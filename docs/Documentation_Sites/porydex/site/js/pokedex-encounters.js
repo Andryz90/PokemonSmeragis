@@ -244,12 +244,39 @@ function buildEncounterRows(locationKey) {
         return null;
     }
 
+    function normalizeRateArrayForDisplay(arr) {
+        if (!Array.isArray(arr) || !arr.length) return arr;
+
+        var numeric = [];
+        var hasNumeric = false;
+        var total = 0;
+        for (var i = 0; i < arr.length; i++) {
+            var n = Number(arr[i]);
+            if (!isFinite(n) || n < 0) {
+                numeric.push(arr[i]);
+                continue;
+            }
+            hasNumeric = true;
+            numeric.push(n);
+            total += n;
+        }
+
+        if (!hasNumeric || total <= 0 || Math.abs(total - 100) < 0.0001) return numeric;
+        return numeric.map(function (n) {
+            if (!isFinite(Number(n)) || Number(n) < 0) return n;
+            return (Number(n) * 100) / total;
+        });
+    }
+
     // --- format rate as "NN%" ---
     function formatRate(v) {
         if (v == null || v === '') return '';
         // if already contains %, keep it
         if (typeof v === 'string' && v.indexOf('%') >= 0) return v;
-        return String(v) + '%';
+        var n = Number(v);
+        if (!isFinite(n)) return String(v) + '%';
+        var rounded = Math.round(n * 10) / 10;
+        return (Math.abs(rounded - Math.round(rounded)) < 0.0001 ? String(Math.round(rounded)) : rounded.toFixed(1)) + '%';
     }
 
     // --- select rates array for a section label ---
@@ -275,6 +302,7 @@ function buildEncounterRows(locationKey) {
         if (arr && encLen && arr.length !== encLen) arr = null;
 
         if (!arr) arr = defaultRatesForLen(encLen);
+        arr = normalizeRateArrayForDisplay(arr);
         return arr;
     }
 

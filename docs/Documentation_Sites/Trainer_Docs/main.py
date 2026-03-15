@@ -26,6 +26,7 @@ class Pokemon:
 class Trainer:
     def __init__(self):
         self.name: str = ""
+        self.trainer_id: Optional[str] = None
         self.double_battle: str = "No"
         self.party: List[Pokemon] = []
 
@@ -93,6 +94,7 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
     mon_index = 0
     trainer_name = None
     trainer_class = None
+    trainer_id = None
 
     def close_mon():
         nonlocal parsing_mon, pokemon, mon_index, trainer
@@ -128,17 +130,21 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
             left = (trainer_class or "").strip()
             right = (trainer_name or "").strip()
             trainer.name = (left + " " + right).strip() or (trainer_name or "Unknown")
+            trainer.trainer_id = trainer_id
             mon_index = 0
         elif line.startswith("Double Battle:"):
             if trainer:
                 trainer.double_battle = line.split(":", 1)[1].strip()
 
-        elif line.startswith("=== TRAINER_") and (prev_line == "\n" or prev_line is None):
-            close_mon()
-            close_trainer()
-            trainer = None
-            trainer_name = None
-            trainer_class = None
+        elif line.startswith("=== TRAINER_"):
+            m = re.match(r"===\s*(TRAINER_[A-Z0-9_]+)\s*===", line.strip())
+            trainer_id = m.group(1) if m else None
+            if (prev_line == "\n" or prev_line is None):
+                close_mon()
+                close_trainer()
+                trainer = None
+                trainer_name = None
+                trainer_class = None
 
         elif (prev_line == "\n") and not any(line.startswith(p) for p in ("Name:", "Class:", "Double Battle:") + IGNORED_PREFIXES) and line.strip():
             parsing_mon = True
@@ -232,13 +238,38 @@ def generate_mastersheet(trainers: List[Trainer]) -> str:
 # =============================
 # Output: JS (per calculator)
 # =============================
+def build_calc_trainer_labels(trainers: List[Trainer]) -> List[str]:
+    total = {}
+    for tr in trainers:
+        base = (tr.name or "Unknown").strip() or "Unknown"
+        total[base] = total.get(base, 0) + 1
+
+    seen = {}
+    labels: List[str] = []
+    for tr in trainers:
+        base = (tr.name or "Unknown").strip() or "Unknown"
+        if total.get(base, 0) <= 1:
+            labels.append(base)
+            continue
+
+        seen[base] = seen.get(base, 0) + 1
+        tid = (tr.trainer_id or "").strip()
+        if tid:
+            suffix = tid.replace("TRAINER_", "", 1)
+        else:
+            suffix = str(seen[base])
+        labels.append(f"{base} [{suffix}]")
+
+    return labels
+
 def generate_cals_sets(trainers: List[Trainer]) -> str:
     data = {}
-    for tr in trainers:
+    labels = build_calc_trainer_labels(trainers)
+    for tr, tr_label in zip(trainers, labels):
         for mon in tr.party:
             species = mon.species or "Unknown"
             data.setdefault(species, {})
-            data[species][tr.name] = {
+            data[species][tr_label] = {
                 "level": mon.level,
                 "ivs": mon.ivs if mon.ivs else {"hp":31,"at":31,"df":31,"sa":31,"sd":31,"sp":31},
                 "ivsSpecified": mon.ivs_specified,

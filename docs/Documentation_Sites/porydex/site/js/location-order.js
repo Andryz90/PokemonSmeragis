@@ -23,6 +23,7 @@ window.PorydexLocationOrder = [
   'Granite Cave',
   'Route 109',
   'Slateport City',
+  'Slateport Sewers',
   'Route 110',
   'Mauville City',
   'Route 118',
