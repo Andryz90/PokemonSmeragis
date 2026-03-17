@@ -56,7 +56,8 @@ function patchNavbar(file) {
 
   html = html.replace(
     /<ul class="nav">[\s\S]*?<\/ul>/,
-    `<ul class="nav">
+    `<a class="calc-brand" href="https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/porydex/site/index.html"><img src="./img/pokemonshowdownbeta.png" alt="Pok&eacute;mon Showdown! (beta)" /></a>
+    <ul class="nav">
       <li><a class="button nav-first" href="https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/porydex/site/index.html">Pok&eacute;dex</a></li>
       <li><a class="button button cur" href="https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Calculator/dist/index.html">Calculator</a></li>
       <li><a class="button" href="https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Trainer_Docs/site/trainer_sheet.html">Trainer Sheet</a></li>

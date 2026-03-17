@@ -2447,15 +2447,97 @@ exports.BattlePokedex = {
         "_formTableId": "sRaichuFormSpeciesIdTable",
         "formeOrder": [
             "Raichu",
-            "Raichu-Alola"
+            "Raichu-Alola",
+            "Raichu-Mega-X",
+            "Raichu-Mega-Y"
         ],
         "otherFormes": [
-            "Raichu-Alola"
+            "Raichu-Alola",
+            "Raichu-Mega-X",
+            "Raichu-Mega-Y"
         ],
         "prevo": "Pikachu",
         "evoItem": "Thunder Stone",
         "evoType": "useItem",
         "evoCondition": ""
+    },
+    "raichumegax": {
+        "num": 26,
+        "baseStats": {
+            "hp": 60,
+            "atk": 110,
+            "def": 55,
+            "spe": 110,
+            "spa": 90,
+            "spd": 80
+        },
+        "types": [
+            "Electric"
+        ],
+        "evYields": {
+            "spe": 3
+        },
+        "items": {},
+        "eggGroups": [
+            "Field",
+            "Fairy"
+        ],
+        "catchRate": 75,
+        "expYield": 243,
+        "genderRatio": {
+            "M": 0.5,
+            "F": 0.5
+        },
+        "abilities": {
+            "0": "Static",
+            "H": "Lightning Rod"
+        },
+        "color": "Yellow",
+        "name": "Raichu-Mega-X",
+        "heightm": 0.8,
+        "weightkg": 30.0,
+        "_formTableId": "sRaichuFormSpeciesIdTable",
+        "baseSpecies": "Raichu",
+        "forme": "Mega-X"
+    },
+    "raichumegay": {
+        "num": 26,
+        "baseStats": {
+            "hp": 60,
+            "atk": 110,
+            "def": 55,
+            "spe": 110,
+            "spa": 90,
+            "spd": 80
+        },
+        "types": [
+            "Electric"
+        ],
+        "evYields": {
+            "spe": 3
+        },
+        "items": {},
+        "eggGroups": [
+            "Field",
+            "Fairy"
+        ],
+        "catchRate": 75,
+        "expYield": 243,
+        "genderRatio": {
+            "M": 0.5,
+            "F": 0.5
+        },
+        "abilities": {
+            "0": "Static",
+            "H": "Lightning Rod"
+        },
+        "color": "Yellow",
+        "name": "Raichu-Mega-Y",
+        "heightm": 0.8,
+        "weightkg": 30.0,
+        "_formTableId": "sRaichuFormSpeciesIdTable",
+        "baseSpecies": "Raichu",
+        "forme": "Mega-Y"
     },
     "raichualola": {
         "num": 26,
@@ -2958,9 +3040,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spd": 1
         },
-        "items": {
-            "R": "Moon Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Undiscovered"
         ],
@@ -3042,9 +3122,7 @@ exports.BattlePokedex = {
         "evYields": {
             "hp": 3
         },
-        "items": {
-            "R": "Moon Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Fairy"
         ],
@@ -3357,9 +3435,7 @@ exports.BattlePokedex = {
         "evYields": {
             "hp": 3
         },
-        "items": {
-            "R": "Moon Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Fairy"
         ],
@@ -3522,9 +3598,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spa": 1
         },
-        "items": {
-            "R": "Dawn Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Grass"
         ],
@@ -6612,7 +6686,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Run Away",
             "1": "Early Bird",
-            "H": "-------"
+            "H": "Adaptability"
         },
         "color": "Brown",
         "name": "Dodrio",
@@ -10932,7 +11006,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Swift Swim",
             "1": "Shell Armor",
-            "H": "Weak Armor"
+            "H": "Solid Rock"
         },
         "color": "Blue",
         "name": "Omastar",
@@ -11015,7 +11089,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Swift Swim",
             "1": "Battle Armor",
-            "H": "Weak Armor"
+            "H": "Sharpness"
         },
         "color": "Brown",
         "name": "Kabutops",
@@ -11598,6 +11672,47 @@ exports.BattlePokedex = {
         "evoType": "level",
         "evoCondition": ""
     },
+    "dragonitemega": {
+        "num": 149,
+        "baseStats": {
+            "hp": 91,
+            "atk": 134,
+            "def": 95,
+            "spe": 80,
+            "spa": 100,
+            "spd": 100
+        },
+        "types": [
+            "Dragon",
+            "Flying"
+        ],
+        "evYields": {
+            "atk": 3
+        },
+        "items": {
+            "R": "Dragon Scale"
+        },
+        "eggGroups": [
+            "Water 1",
+            "Dragon"
+        ],
+        "catchRate": 45,
+        "expYield": 300,
+        "genderRatio": {
+            "M": 0.5,
+            "F": 0.5
+        },
+        "abilities": {
+            "0": "Inner Focus",
+            "H": "Multiscale"
+        },
+        "color": "Brown",
+        "name": "Dragonite-Mega",
+        "heightm": 2.2,
+        "weightkg": 210.0,
+        "baseSpecies": "Dragonite",
+        "forme": "Mega"
+    },
     "mewtwo": {
         "num": 150,
         "baseStats": {
@@ -11867,6 +11982,45 @@ exports.BattlePokedex = {
         "evoLevel": 32,
         "evoType": "level",
         "evoCondition": ""
+    },
+    "meganiummega": {
+        "num": 154,
+        "baseStats": {
+            "hp": 80,
+            "atk": 82,
+            "def": 110,
+            "spe": 80,
+            "spa": 153,
+            "spd": 110
+        },
+        "types": [
+            "Grass",
+            "Fairy"
+        ],
+        "evYields": {
+            "def": 1,
+            "spd": 2
+        },
+        "items": {},
+        "eggGroups": [
+            "Monster",
+            "Grass"
+        ],
+        "catchRate": 45,
+        "expYield": 263,
+        "genderRatio": {
+            "M": 0.875,
+            "F": 0.125
+        },
+        "abilities": {
+            "0": "Triage"
+        },
+        "color": "Green",
+        "name": "Meganium-Mega",
+        "heightm": 1.8,
+        "weightkg": 100.5,
+        "baseSpecies": "Meganium",
+        "forme": "Mega"
     },
     "cyndaquil": {
         "num": 155,
@@ -12172,17 +12326,17 @@ exports.BattlePokedex = {
         "_formTableId": "sFeraligatrFormSpeciesIdTable",
         "formeOrder": [
             "Feraligatr",
-            "Feraligatr-Base"
+            "Feraligatr-Mega"
         ],
         "otherFormes": [
-            "Feraligatr-Base"
+            "Feraligatr-Mega"
         ],
         "prevo": "Croconaw",
         "evoLevel": 30,
         "evoType": "level",
         "evoCondition": ""
     },
-    "feraligatrbase": {
+    "feraligatrmega": {
         "num": 160,
         "baseStats": {
             "hp": 85,
@@ -12215,12 +12369,12 @@ exports.BattlePokedex = {
             "0": "Swift Swim"
         },
         "color": "Blue",
-        "name": "Feraligatr-Base",
+        "name": "Feraligatr-Mega",
         "heightm": 2.3,
         "weightkg": 88.8,
         "_formTableId": "sFeraligatrFormSpeciesIdTable",
         "baseSpecies": "Feraligatr",
-        "forme": "Base"
+        "forme": "Mega"
     },
     "sentret": {
         "num": 161,
@@ -12645,9 +12799,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spd": 1
         },
-        "items": {
-            "R": "Shiny Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Undiscovered"
         ],
@@ -13644,12 +13796,12 @@ exports.BattlePokedex = {
     "quagsire": {
         "num": 195,
         "baseStats": {
-            "hp": 95,
-            "atk": 85,
-            "def": 85,
-            "spe": 35,
-            "spa": 65,
-            "spd": 65
+            "hp": 130,
+            "atk": 45,
+            "def": 100,
+            "spe": 20,
+            "spa": 75,
+            "spd": 60
         },
         "types": [
             "Water",
@@ -13868,9 +14020,7 @@ exports.BattlePokedex = {
             "spa": 0,
             "spd": 1
         },
-        "items": {
-            "R": "Dusk Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Amorphous"
         ],
@@ -18842,9 +18992,7 @@ exports.BattlePokedex = {
         "evYields": {
             "def": 1
         },
-        "items": {
-            "R": "Thunder Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Mineral"
         ],
@@ -19221,7 +19369,7 @@ exports.BattlePokedex = {
             "def": 140,
             "spe": 40,
             "spa": 50,
-            "spd": 50
+            "spd": 65
         },
         "types": [
             "Steel",
@@ -19262,12 +19410,12 @@ exports.BattlePokedex = {
     "aggron": {
         "num": 306,
         "baseStats": {
-            "hp": 80,
+            "hp": 100,
             "atk": 110,
             "def": 180,
             "spe": 50,
             "spa": 60,
-            "spd": 60
+            "spd": 70
         },
         "types": [
             "Steel",
@@ -19306,19 +19454,19 @@ exports.BattlePokedex = {
             "Aggron-Mega"
         ],
         "prevo": "Lairon",
-        "evoLevel": 40,
+        "evoLevel": 38,
         "evoType": "level",
         "evoCondition": ""
     },
     "aggronmega": {
         "num": 306,
         "baseStats": {
-            "hp": 80,
+            "hp": 100,
             "atk": 140,
             "def": 230,
             "spe": 50,
             "spa": 60,
-            "spd": 80
+            "spd": 90
         },
         "types": [
             "Steel"
@@ -19811,9 +19959,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spa": 2
         },
-        "items": {
-            "R": "Shiny Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Fairy",
             "Grass"
@@ -20902,9 +21048,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spa": 2
         },
-        "items": {
-            "R": "Moon Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Mineral"
         ],
@@ -24454,12 +24598,13 @@ exports.BattlePokedex = {
             "hp": 97,
             "atk": 165,
             "def": 60,
-            "spe": 58,
+            "spe": 85,
             "spa": 65,
             "spd": 50
         },
         "types": [
-            "Rock"
+            "Rock",
+            "Dragon"
         ],
         "evYields": {
             "atk": 2
@@ -30291,9 +30436,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spe": 1
         },
-        "items": {
-            "R": "Sun Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Grass",
             "Fairy"
@@ -30951,12 +31094,12 @@ exports.BattlePokedex = {
         "baseForme": "Standard-Mode",
         "formeOrder": [
             "Darmanitan",
-            "Darmanitan-Darmanitan-Galarian-Standard-Mode",
+            "Darmanitan-Galar",
             "Darmanitan-Zen-Mode",
             "Darmanitan-Galar-Zen-Mode"
         ],
         "otherFormes": [
-            "Darmanitan-Darmanitan-Galarian-Standard-Mode",
+            "Darmanitan-Galar",
             "Darmanitan-Zen-Mode",
             "Darmanitan-Galar-Zen-Mode"
         ],
@@ -31042,10 +31185,10 @@ exports.BattlePokedex = {
         "baseSpecies": "Darumaka",
         "forme": "Galar",
         "evos": [
-            "Darmanitan-Darmanitan-Galarian-Standard-Mode"
+            "Darmanitan-Galar"
         ]
     },
-    "darmanitandarmanitangalarianstandardmode": {
+    "darmanitangalar": {
         "num": 555,
         "baseStats": {
             "hp": 105,
@@ -31076,12 +31219,12 @@ exports.BattlePokedex = {
             "H": "Zen Mode"
         },
         "color": "White",
-        "name": "Darmanitan-Darmanitan-Galarian-Standard-Mode",
+        "name": "Darmanitan-Galar",
         "heightm": 1.7,
         "weightkg": 120.0,
         "_formTableId": "sDarmanitanFormSpeciesIdTable",
         "baseSpecies": "Darmanitan",
-        "forme": "Darmanitan-Galarian-Standard-Mode",
+        "forme": "Galar",
         "prevo": "Darumaka-Galar",
         "evoItem": "Ice Stone",
         "evoType": "useItem",
@@ -32034,9 +32177,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spe": 1
         },
-        "items": {
-            "R": "Shiny Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Field"
         ],
@@ -33569,9 +33710,7 @@ exports.BattlePokedex = {
         "evYields": {
             "atk": 2
         },
-        "items": {
-            "R": "Thunder Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Amorphous"
         ],
@@ -33730,9 +33869,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spa": 1
         },
-        "items": {
-            "R": "Dusk Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Amorphous"
         ],
@@ -34234,7 +34371,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Mimicry"
+            "0": "Mimicry",
+            "1": "Sand Veil",
+            "H": "Sand Veil"
         },
         "color": "Green",
         "name": "Stunfisk-Galar",
@@ -36095,6 +36234,45 @@ exports.BattlePokedex = {
         "evoType": "level",
         "evoCondition": ""
     },
+    "chesnaughtmega": {
+        "num": 652,
+        "baseStats": {
+            "hp": 88,
+            "atk": 107,
+            "def": 122,
+            "spe": 64,
+            "spa": 74,
+            "spd": 75
+        },
+        "types": [
+            "Grass",
+            "Fighting"
+        ],
+        "evYields": {
+            "def": 3
+        },
+        "items": {},
+        "eggGroups": [
+            "Field"
+        ],
+        "catchRate": 45,
+        "expYield": 265,
+        "genderRatio": {
+            "M": 0.875,
+            "F": 0.125
+        },
+        "abilities": {
+            "0": "Overgrow",
+            "1": "Bulletproof",
+            "H": "Rough Skin"
+        },
+        "color": "Green",
+        "name": "Chesnaught-Mega",
+        "heightm": 1.6,
+        "weightkg": 90.0,
+        "baseSpecies": "Chesnaught",
+        "forme": "Mega"
+    },
     "fennekin": {
         "num": 653,
         "baseStats": {
@@ -36217,6 +36395,45 @@ exports.BattlePokedex = {
         "evoLevel": 36,
         "evoType": "level",
         "evoCondition": ""
+    },
+    "delphoxmega": {
+        "num": 655,
+        "baseStats": {
+            "hp": 75,
+            "atk": 69,
+            "def": 72,
+            "spe": 104,
+            "spa": 114,
+            "spd": 100
+        },
+        "types": [
+            "Fire",
+            "Psychic"
+        ],
+        "evYields": {
+            "spa": 3
+        },
+        "items": {},
+        "eggGroups": [
+            "Field"
+        ],
+        "catchRate": 45,
+        "expYield": 267,
+        "genderRatio": {
+            "M": 0.875,
+            "F": 0.125
+        },
+        "abilities": {
+            "0": "Blaze",
+            "1": "Magician",
+            "H": "Magic Guard"
+        },
+        "color": "Red",
+        "name": "Delphox-Mega",
+        "heightm": 1.5,
+        "weightkg": 39.0,
+        "baseSpecies": "Delphox",
+        "forme": "Mega"
     },
     "froakie": {
         "num": 656,
@@ -38085,9 +38302,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spe": 1
         },
-        "items": {
-            "R": "Sun Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Monster",
             "Dragon"
@@ -38303,7 +38518,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Refrigerate",
-            "H": "Snow Warning"
+            "H": "Ice Scales"
         },
         "color": "Blue",
         "name": "Aurorus",
@@ -47185,20 +47400,20 @@ exports.BattlePokedex = {
         "formeOrder": [
             "Toxtricity",
             "Toxtricity-Low-Key",
-            "Toxtricity-Gigantamax",
-            "Toxtricity-Toxtricity-Low-Key-Gigantamax"
+            "Toxtricity-Amped-Gigantamax",
+            "Toxtricity-Low-Key-Gigantamax"
         ],
         "otherFormes": [
             "Toxtricity-Low-Key",
-            "Toxtricity-Gigantamax",
-            "Toxtricity-Toxtricity-Low-Key-Gigantamax"
+            "Toxtricity-Amped-Gigantamax",
+            "Toxtricity-Low-Key-Gigantamax"
         ],
         "prevo": "Toxel",
         "evoLevel": 30,
         "evoType": "level",
         "evoCondition": ""
     },
-    "toxtricitygigantamax": {
+    "toxtricityampedgigantamax": {
         "num": 849,
         "baseStats": {
             "hp": 75,
@@ -47231,12 +47446,12 @@ exports.BattlePokedex = {
             "H": "Technician"
         },
         "color": "Purple",
-        "name": "Toxtricity-Gigantamax",
+        "name": "Toxtricity-Amped-Gigantamax",
         "heightm": 24.0,
         "weightkg": 0.0,
         "_formTableId": "sToxtricityFormSpeciesIdTable",
         "baseSpecies": "Toxtricity",
-        "forme": "Gigantamax"
+        "forme": "Amped-Gigantamax"
     },
     "toxtricitylowkey": {
         "num": 849,
@@ -47282,7 +47497,7 @@ exports.BattlePokedex = {
         "evoType": "level",
         "evoCondition": ""
     },
-    "toxtricitytoxtricitylowkeygigantamax": {
+    "toxtricitylowkeygigantamax": {
         "num": 849,
         "baseStats": {
             "hp": 75,
@@ -47315,12 +47530,12 @@ exports.BattlePokedex = {
             "H": "Technician"
         },
         "color": "Purple",
-        "name": "Toxtricity-Toxtricity-Low-Key-Gigantamax",
+        "name": "Toxtricity-Low-Key-Gigantamax",
         "heightm": 24.0,
         "weightkg": 0.0,
         "_formTableId": "sToxtricityFormSpeciesIdTable",
         "baseSpecies": "Toxtricity",
-        "forme": "Toxtricity-Low-Key-Gigantamax"
+        "forme": "Low-Key-Gigantamax"
     },
     "sizzlipede": {
         "num": 850,
@@ -48190,7 +48405,7 @@ exports.BattlePokedex = {
             "Alcremie-Ribbon-Ruby-Swirl",
             "Alcremie-Ribbon-Caramel-Swirl",
             "Alcremie-Ribbon-Rainbow-Swirl",
-            "Alcremie-Alcremie-Gigantamax"
+            "Alcremie-Gigantamax"
         ],
         "cosmeticFormes": [
             "Alcremie-Strawberry-Vanilla-Cream",
@@ -48256,7 +48471,7 @@ exports.BattlePokedex = {
             "Alcremie-Ribbon-Ruby-Swirl",
             "Alcremie-Ribbon-Caramel-Swirl",
             "Alcremie-Ribbon-Rainbow-Swirl",
-            "Alcremie-Alcremie-Gigantamax"
+            "Alcremie-Gigantamax"
         ],
         "otherFormes": [
             "Alcremie-Gmax"
@@ -49538,19 +49753,19 @@ exports.BattlePokedex = {
         "formeOrder": [
             "Urshifu",
             "Urshifu-Rapid-Strike",
-            "Urshifu-Gigantamax",
+            "Urshifu-Single-Strike-Gigantamax",
             "Urshifu-Rapid-Strike-Gigantamax"
         ],
         "otherFormes": [
             "Urshifu-Rapid-Strike",
-            "Urshifu-Gigantamax",
+            "Urshifu-Single-Strike-Gigantamax",
             "Urshifu-Rapid-Strike-Gigantamax"
         ],
         "prevo": "Kubfu",
         "evoType": "other",
         "evoCondition": "use Scroll of Darkness"
     },
-    "urshifugigantamax": {
+    "urshifusinglestrikegigantamax": {
         "num": 892,
         "baseStats": {
             "hp": 100,
@@ -49581,12 +49796,12 @@ exports.BattlePokedex = {
             "0": "Unseen Fist"
         },
         "color": "Gray",
-        "name": "Urshifu-Gigantamax",
+        "name": "Urshifu-Single-Strike-Gigantamax",
         "heightm": 29.0,
         "weightkg": 0.0,
         "_formTableId": "sUrshifuFormSpeciesIdTable",
         "baseSpecies": "Urshifu",
-        "forme": "Gigantamax"
+        "forme": "Single-Strike-Gigantamax"
     },
     "urshifurapidstrike": {
         "num": 892,
@@ -53058,9 +53273,7 @@ exports.BattlePokedex = {
         "evYields": {
             "hp": 1
         },
-        "items": {
-            "R": "Ice Stone"
-        },
+        "items": {},
         "eggGroups": [
             "Field"
         ],
@@ -54997,11 +55210,11 @@ exports.BattlePokedex = {
         "formeOrder": [
             "Terapagos",
             "Terapagos-Terastal",
-            "Terapagos-Terapagos-Stellar"
+            "Terapagos-Stellar"
         ],
         "otherFormes": [
             "Terapagos-Terastal",
-            "Terapagos-Terapagos-Stellar"
+            "Terapagos-Stellar"
         ]
     },
     "terapagosterastal": {
@@ -55042,7 +55255,7 @@ exports.BattlePokedex = {
         "baseSpecies": "Terapagos",
         "forme": "Terastal"
     },
-    "terapagosterapagosstellar": {
+    "terapagosstellar": {
         "num": 1024,
         "baseStats": {
             "hp": 160,
@@ -55072,12 +55285,12 @@ exports.BattlePokedex = {
             "0": "Teraform Zero"
         },
         "color": "Blue",
-        "name": "Terapagos-Terapagos-Stellar",
+        "name": "Terapagos-Stellar",
         "heightm": 1.7,
         "weightkg": 77.0,
         "_formTableId": "sTerapagosFormSpeciesIdTable",
         "baseSpecies": "Terapagos",
-        "forme": "Terapagos-Stellar"
+        "forme": "Stellar"
     },
     "pecharunt": {
         "num": 1025,

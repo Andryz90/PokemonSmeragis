@@ -166,6 +166,10 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
                 pokemon.status = line.split(":", 1)[1].strip()
             elif line.startswith("Nature:"):
                 pokemon.nature = line.split(":", 1)[1].strip()
+            elif line.strip().endswith("Nature"):
+                m = re.match(r"^\s*([A-Za-z]+)\s+Nature\s*$", line.strip())
+                if m:
+                    pokemon.nature = m.group(1).strip()
             elif line.startswith("IVs:"):
                 ival = line.split(":", 1)[1].strip()
                 chunks = [seg.split(" ")[0].strip() for seg in ival.split(" / ")]
@@ -238,39 +242,47 @@ def generate_mastersheet(trainers: List[Trainer]) -> str:
 # =============================
 # Output: JS (per calculator)
 # =============================
-def build_calc_trainer_labels(trainers: List[Trainer]) -> List[str]:
-    total = {}
-    for tr in trainers:
-        base = (tr.name or "Unknown").strip() or "Unknown"
-        total[base] = total.get(base, 0) + 1
+def _trainer_id_suffix_num(trainer_id: Optional[str]) -> Optional[int]:
+    if not trainer_id:
+        return None
+    m = re.search(r"_(\d+)$", trainer_id.strip())
+    return int(m.group(1)) if m else None
 
-    seen = {}
-    labels: List[str] = []
+def pick_primary_calc_trainers(trainers: List[Trainer]) -> List[tuple[str, Trainer]]:
+    chosen: dict[str, Trainer] = {}
+    order: List[str] = []
+
     for tr in trainers:
         base = (tr.name or "Unknown").strip() or "Unknown"
-        if total.get(base, 0) <= 1:
-            labels.append(base)
+        if base not in chosen:
+            chosen[base] = tr
+            order.append(base)
             continue
 
-        seen[base] = seen.get(base, 0) + 1
-        tid = (tr.trainer_id or "").strip()
-        if tid:
-            suffix = tid.replace("TRAINER_", "", 1)
-        else:
-            suffix = str(seen[base])
-        labels.append(f"{base} [{suffix}]")
+        cur = chosen[base]
+        cur_n = _trainer_id_suffix_num(cur.trainer_id)
+        new_n = _trainer_id_suffix_num(tr.trainer_id)
 
-    return labels
+        # Prefer the primary roster (_1), otherwise keep the earliest seen.
+        if new_n is not None and (cur_n is None or new_n < cur_n):
+            chosen[base] = tr
+
+    return [(name, chosen[name]) for name in order]
 
 def generate_cals_sets(trainers: List[Trainer]) -> str:
     data = {}
-    labels = build_calc_trainer_labels(trainers)
-    for tr, tr_label in zip(trainers, labels):
-        for mon in tr.party:
-            species = mon.species or "Unknown"
+    for trainer_index, (tr_label, tr) in enumerate(pick_primary_calc_trainers(trainers), start=1):
+        fallback_level = next((m.level for m in tr.party if m.level), "1")
+        for slot_fallback, mon in enumerate(tr.party):
+            species = (mon.species or "").strip()
+            if not species:
+                continue
             data.setdefault(species, {})
+            slot_index = mon.index if mon.index is not None else slot_fallback
             data[species][tr_label] = {
-                "level": mon.level,
+                "index": trainer_index,
+                "slot": slot_index,
+                "level": mon.level if mon.level else fallback_level,
                 "ivs": mon.ivs if mon.ivs else {"hp":31,"at":31,"df":31,"sa":31,"sd":31,"sp":31},
                 "ivsSpecified": mon.ivs_specified,
                 "item": mon.item,

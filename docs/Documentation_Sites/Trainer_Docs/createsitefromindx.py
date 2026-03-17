@@ -8,7 +8,7 @@ createsitefromindx.py (clean, path-agnostic)
 """
 
 from __future__ import annotations
-import os, re, sys, unicodedata, argparse
+import os, re, sys, unicodedata, argparse, html
 from pathlib import Path
 from collections import defaultdict
 
@@ -579,6 +579,23 @@ def parse_splits(splits_file: Path):
         occ = int(m.group(2)) if (m and m.group(2)) else None
         return canonicalize(raw), occ
 
+    def _parse_tokens(rhs: str):
+        tokens = []
+        for tok in rhs.split("|"):
+            tok = tok.strip()
+            if not tok:
+                continue
+            if "&&" in tok:
+                left, right = tok.split("&&", 1)
+                s1, o1 = _parse_sub_occ(left); s2, o2 = _parse_sub_occ(right)
+                if s1 and s2:
+                    tokens.append(("merge", s1, o1, s2, o2))
+            else:
+                s, o = _parse_sub_occ(tok)
+                if s:
+                    tokens.append(("single", s, o))
+        return tokens
+
     mapping = []
     if not splits_file.exists():
         print(f"[error] Missing {splits_file}", file=sys.stderr); sys.exit(2)
@@ -586,21 +603,21 @@ def parse_splits(splits_file: Path):
         line = raw.strip()
         if not line or line.startswith("#"): continue
         if "@" not in line:
-            mapping.append((line.strip(), [])); continue
+            mapping.append((line.strip(), [("", [])])); continue
         name, rhs = line.split("@", 1)
         name = name.strip()
-        tokens = []
-        for tok in rhs.split("|"):
-            tok = tok.strip()
-            if not tok: continue
-            if "&&" in tok:
-                left, right = tok.split("&&", 1)
-                s1, o1 = _parse_sub_occ(left); s2, o2 = _parse_sub_occ(right)
-                if s1 and s2: tokens.append(("merge", s1, o1, s2, o2))
-            else:
-                s, o = _parse_sub_occ(tok)
-                if s: tokens.append(("single", s, o))
-        mapping.append((name, tokens))
+        sections = []
+        raw_sections = [seg.strip() for seg in rhs.split("||") if seg.strip()]
+        if not raw_sections:
+            raw_sections = [rhs.strip()]
+        for seg in raw_sections:
+            sec_name = ""
+            sec_rhs = seg
+            if "::" in seg:
+                sec_name, sec_rhs = seg.split("::", 1)
+                sec_name = sec_name.strip()
+            sections.append((sec_name, _parse_tokens(sec_rhs)))
+        mapping.append((name, sections))
     return mapping
 
 # ===== main =====
@@ -643,10 +660,13 @@ def main(argv=None):
         return title
 
     needed = set()
-    for _, toks in splits_cfg:
-        for tk in toks:
-            if tk[0] == "single": needed.add(tk[1])
-            else: needed.add(tk[1]); needed.add(tk[3])
+    for _, sections in splits_cfg:
+        for _, toks in sections:
+            for tk in toks:
+                if tk[0] == "single":
+                    needed.add(tk[1])
+                else:
+                    needed.add(tk[1]); needed.add(tk[3])
     matchers = {s: make_inorder_regex(s) for s in needed}
 
     seen = defaultdict(int)
@@ -668,42 +688,57 @@ def main(argv=None):
     buttons, panels = [], []
     default_active = splits_cfg[0][0]
 
-    for idx, (name, toks) in enumerate(splits_cfg):
+    for idx, (name, sections) in enumerate(splits_cfg):
         buttons.append(f'<button type="button" data-target="{name}">{name}</button>')
-        items = []
+        groups_html = []
 
-        for tk in toks:
-            if tk[0] == "single":
-                _, sub, occ = tk
-                occ = occ if occ is not None else 1
-                key = (sub, occ)
-                if key not in found:
-                    print(f'[warn] token not matched: {name}: "{sub}" #{occ}', file=sys.stderr)
-                    continue
-                title, raw_tag = found[key]
-                pic_candidates = detect_trainer_sprite(title, custom_rules, sprites_dir, out_main.parent)
-                cols = parse_table_columns(raw_tag)
-                rebuilt = build_table_from_columns(title, cols, [pic_candidates], themed="single")
-                rebuilt["id"] = slugify(title)
-                rebuilt["class"] = (rebuilt.get("class", []) + ["trainer-block"])
-                items.append(str(rebuilt))
+        for sec_idx, (sec_name, toks) in enumerate(sections):
+            items = []
 
+            for tk in toks:
+                if tk[0] == "single":
+                    _, sub, occ = tk
+                    occ = occ if occ is not None else 1
+                    key = (sub, occ)
+                    if key not in found:
+                        print(f'[warn] token not matched: {name}: "{sub}" #{occ}', file=sys.stderr)
+                        continue
+                    title, raw_tag = found[key]
+                    pic_candidates = detect_trainer_sprite(title, custom_rules, sprites_dir, out_main.parent)
+                    cols = parse_table_columns(raw_tag)
+                    rebuilt = build_table_from_columns(title, cols, [pic_candidates], themed="single")
+                    rebuilt["id"] = slugify(title)
+                    rebuilt["class"] = (rebuilt.get("class", []) + ["trainer-block"])
+                    items.append(str(rebuilt))
+
+                else:
+                    _, s1, o1, s2, o2 = tk
+                    occ1 = (o1 if o1 is not None else totals.get(s1, 1))
+                    occ2 = (o2 if o2 is not None else totals.get(s2, 1))
+                    k1 = (s1, occ1); k2 = (s2, occ2)
+                    if k1 not in found or k2 not in found:
+                        print(f'[warn] incomplete merge in "{name}": "{s1}" #{occ1} && "{s2}" #{occ2}', file=sys.stderr)
+                        continue
+                    title1, tag1 = found[k1]
+                    title2, tag2 = found[k2]
+                    merged_tbl = merge_two_tables(title1, tag1, title2, tag2, custom_rules, sprites_dir, out_main.parent)
+                    merged_tbl["id"] = slugify(f"{title1} & {title2} [Double Battle]")
+                    merged_tbl["class"] = (merged_tbl.get("class", []) + ["trainer-block"])
+                    items.append(str(merged_tbl))
+
+            sec_items_html = "".join(items) if items else '<p class="split-empty">Nessun trainer assegnato.</p>'
+            if sec_name:
+                open_attr = " open" if sec_idx == 0 else ""
+                groups_html.append(
+                    f'<details class="split-group"{open_attr}>'
+                    f'<summary>{html.escape(sec_name)}</summary>'
+                    f'<div class="split-group-body">{sec_items_html}</div>'
+                    f'</details>'
+                )
             else:
-                _, s1, o1, s2, o2 = tk
-                occ1 = (o1 if o1 is not None else totals.get(s1, 1))
-                occ2 = (o2 if o2 is not None else totals.get(s2, 1))
-                k1 = (s1, occ1); k2 = (s2, occ2)
-                if k1 not in found or k2 not in found:
-                    print(f'[warn] incomplete merge in "{name}": "{s1}" #{occ1} && "{s2}" #{occ2}', file=sys.stderr)
-                    continue
-                title1, tag1 = found[k1]
-                title2, tag2 = found[k2]
-                merged_tbl = merge_two_tables(title1, tag1, title2, tag2, custom_rules, sprites_dir, out_main.parent)
-                merged_tbl["id"] = slugify(f"{title1} & {title2} [Double Battle]")
-                merged_tbl["class"] = (merged_tbl.get("class", []) + ["trainer-block"])
-                items.append(str(merged_tbl))
+                groups_html.append(sec_items_html)
 
-        items_html = "".join(items) if items else '<p class="split-empty">Nessun trainer assegnato.</p>'
+        items_html = "".join(groups_html) if groups_html else '<p class="split-empty">Nessun trainer assegnato.</p>'
         active_cls = " active" if idx == 0 else ""
         panels.append(
             f'<div class="split-panel{active_cls}" data-split="{name}">\n'
@@ -716,7 +751,7 @@ def main(argv=None):
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Trainer Sheet – Hack Rom</title>
+  <title>Trainer Sheet - Hack Rom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="sheet_style.css" />
 </head>

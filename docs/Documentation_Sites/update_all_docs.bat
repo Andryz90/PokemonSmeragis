@@ -26,10 +26,26 @@ if /I "%~1"=="--update-smogon-sets" (
     shift
     goto :parse_args
 )
-if /I "%~1"=="--help" goto :help
+if /I "%~1"=="--help" (
+    echo.
+    echo Uso:
+    echo   update_all_docs.bat [--update-smogon-sets] [--skip-porydex]
+    echo.
+    echo Opzioni:
+    echo   --update-smogon-sets  Esegue anche npm update @smogon/sets prima del build EKalc
+    echo   --skip-porydex        Salta lo step porydex ^(utile se WSL non disponibile^)
+    echo.
+    echo Esempi:
+    echo   update_all_docs.bat
+    echo   update_all_docs.bat --update-smogon-sets
+    echo   update_all_docs.bat --skip-porydex
+    exit /b 0
+)
 
 echo [ERROR] Opzione non riconosciuta: %~1
-goto :help_error
+echo.
+echo Usa --help per vedere le opzioni disponibili.
+exit /b 1
 
 :args_done
 echo.
@@ -37,9 +53,22 @@ echo === HackROM Documentation: Full Update ===
 echo Root repo: %REPO_ROOT%
 echo.
 
+set "PY_CMD="
 where py >nul 2>&1
-if errorlevel 1 (
-    echo [ERROR] Comando "py" non trovato. Installa Python Launcher per Windows.
+if not errorlevel 1 (
+    py -3 --version >nul 2>&1
+    if not errorlevel 1 set "PY_CMD=py -3"
+    if not defined PY_CMD (
+        py --version >nul 2>&1
+        if not errorlevel 1 set "PY_CMD=py"
+    )
+)
+if not defined PY_CMD (
+    where python >nul 2>&1
+    if not errorlevel 1 set "PY_CMD=python"
+)
+if not defined PY_CMD (
+    echo [ERROR] Python non trovato. Installa Python 3 o il launcher "py".
     exit /b 1
 )
 
@@ -60,16 +89,25 @@ pushd "%SCRIPT_DIR%" || (
     exit /b 1
 )
 
-echo [1/7] Sync learnset helpers (porymoves_files ^> src headers)
+echo [1/9] Sync learnset helpers (porymoves_files ^> src headers)
 pushd "%REPO_ROOT%" || goto :fail
-call py tools\learnset_helpers\teachable.py
+call %PY_CMD% tools\learnset_helpers\teachable.py
 if errorlevel 1 (
     popd
     goto :fail
 )
 popd
 
-echo [2/7] Trainer Docs + EKalc sets sync
+echo [2/9] Sync wild encounters header (wild_encounters.json ^> wild_encounters.h)
+pushd "%REPO_ROOT%" || goto :fail
+call %PY_CMD% tools\wild_encounters\wild_encounters_to_header.py
+if errorlevel 1 (
+    popd
+    goto :fail
+)
+popd
+
+echo [3/9] Trainer Docs + EKalc sets sync
 pushd "Calculator\bat" || goto :fail
 call "calc_sets_update.bat"
 if errorlevel 1 (
@@ -78,7 +116,7 @@ if errorlevel 1 (
 )
 popd
 
-echo [3/7] Rigenerazione moves.ts helper
+echo [4/9] Rigenerazione moves.ts helper
 pushd "Script_Moves_Ts" || goto :fail
 call "build.bat"
 if errorlevel 1 (
@@ -87,7 +125,7 @@ if errorlevel 1 (
 )
 popd
 
-echo [4/7] Rigenerazione species tables helper
+echo [5/9] Rigenerazione species tables helper
 pushd "Script_Species_Ts" || goto :fail
 call "species_table_generator.bat"
 if errorlevel 1 (
@@ -96,10 +134,10 @@ if errorlevel 1 (
 )
 popd
 
-echo [5/7] Build EKalc dist
+echo [6/9] Build EKalc dist
 pushd "Calculator" || goto :fail
 if "%UPDATE_SMOGON_SETS%"=="1" (
-    echo [4a] npm update @smogon/sets
+    echo [6a] npm update @smogon/sets
     call npm update @smogon/sets
     if errorlevel 1 (
         popd
@@ -115,7 +153,7 @@ popd
 
 if "%SKIP_PORYDEX%"=="1" goto :skip_porydex
 
-echo [6/7] Porydex extract via WSL
+echo [7/9] Porydex extract via WSL
 where wsl >nul 2>&1
 if errorlevel 1 (
     echo [ERROR] WSL non trovato. Installa/configura WSL oppure usa --skip-porydex.
@@ -151,7 +189,7 @@ if /I not "%WSL_REPO_ROOT%"=="%WSL_EXPECTED_REPO_ROOT%" (
 
 echo [INFO] WSL porydex path: %WSL_PORYDEX_DIR%
 echo [INFO] WSL repo path: %WSL_REPO_ROOT%
-wsl bash -lc "cd '%WSL_PORYDEX_DIR%' && test -x './.venv/bin/python' && ./.venv/bin/python porydex.py config set -e '%WSL_REPO_ROOT%' -o '%WSL_PORYDEX_DIR%/site/data' -f showdown && ./.venv/bin/python porydex.py extract"
+wsl bash -lc "cd '%WSL_PORYDEX_DIR%' && test -x './.venv/bin/python' && ./.venv/bin/python porydex.py config set -e '%WSL_REPO_ROOT%' -o '%WSL_PORYDEX_DIR%/site/data' -f showdown && ./.venv/bin/python porydex.py extract --reload"
 if errorlevel 1 (
     echo [ERROR] Step porydex fallito.
     echo [HINT] Verifica che la virtualenv esista in %WSL_PORYDEX_DIR%/.venv
@@ -160,10 +198,19 @@ if errorlevel 1 (
 goto :after_porydex
 
 :skip_porydex
-echo [6/7] Porydex extract saltato (--skip-porydex)
+echo [7/9] Porydex extract saltato (--skip-porydex)
 
 :after_porydex
-echo [7/7] ItemsDoc
+echo [8/9] Build static encounters overlay
+pushd "%REPO_ROOT%" || goto :fail
+call %PY_CMD% docs\Documentation_Sites\porydex\build_static_encounters.py
+if errorlevel 1 (
+    popd
+    goto :fail
+)
+popd
+
+echo [9/9] ItemsDoc
 echo [INFO] ItemsDoc e statico: aggiorna manualmente ItemsDoc/index.html e obtainable_items.md quando necessario.
 
 popd
@@ -176,24 +223,4 @@ exit /b 0
 popd
 echo.
 echo [ERROR] Aggiornamento interrotto. Controlla il log sopra.
-exit /b 1
-
-:help
-echo.
-echo Uso:
-echo   update_all_docs.bat [--update-smogon-sets] [--skip-porydex]
-echo.
-echo Opzioni:
-echo   --update-smogon-sets  Esegue anche npm update @smogon/sets prima del build EKalc
-echo   --skip-porydex        Salta lo step porydex (utile se WSL non disponibile)
-echo.
-echo Esempi:
-echo   update_all_docs.bat
-echo   update_all_docs.bat --update-smogon-sets
-echo   update_all_docs.bat --skip-porydex
-exit /b 0
-
-:help_error
-echo.
-echo Usa --help per vedere le opzioni disponibili.
 exit /b 1

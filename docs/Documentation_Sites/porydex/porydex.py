@@ -89,8 +89,6 @@ from porydex.parse.moves import parse_moves
 from porydex.parse.national_dex import parse_national_dex_enum
 from porydex.parse.species import parse_species
 
-MAX_SPECIES_EXPANSION = 1524 + 1
-
 def prepend_file(f, s: str):
     f_data = f.read()
     f.seek(0, 0)
@@ -190,7 +188,8 @@ def extract(args):
     )
     _fixup_moves_missing_from_learnsets(moves, learnsets)
 
-    species_names = ['????????????'] * (MAX_SPECIES_EXPANSION + 1)
+    max_species_num = max((int(mon.get('num', 0)) for mon in species.values()), default=0)
+    species_names = ['????????????'] * (max_species_num + 1)
     for mon in species.values():
         if mon.get('cosmetic', False):
             species_names[mon['num']] = mon['name'].split('-')[0]
@@ -276,4 +275,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

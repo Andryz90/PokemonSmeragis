@@ -279,6 +279,31 @@ function buildEncounterRows(locationKey) {
         return (Math.abs(rounded - Math.round(rounded)) < 0.0001 ? String(Math.round(rounded)) : rounded.toFixed(1)) + '%';
     }
 
+    function parseRateNumber(v) {
+        if (v == null || v === '') return null;
+        if (typeof v === 'string') {
+            var cleaned = v.replace('%', '').trim();
+            if (!cleaned) return null;
+            var parsedString = Number(cleaned);
+            return isFinite(parsedString) ? parsedString : null;
+        }
+        var parsed = Number(v);
+        return isFinite(parsed) ? parsed : null;
+    }
+
+    function sortEncounterEntries(entries) {
+        entries.sort(function (a, b) {
+            var ar = a.hasRate ? Number(a.rate) : NaN;
+            var br = b.hasRate ? Number(b.rate) : NaN;
+            var aNum = isFinite(ar);
+            var bNum = isFinite(br);
+            if (aNum && bNum && br !== ar) return br - ar;
+            if (aNum && !bNum) return -1;
+            if (!aNum && bNum) return 1;
+            return String(a.species || '').localeCompare(String(b.species || ''));
+        });
+    }
+
     // --- select rates array for a section label ---
     function getRateArrayFor(label, encLen) {
         var ratesRoot = (BattleLocationdex && BattleLocationdex.rates) || (loc && loc.rates) || {};
@@ -312,23 +337,56 @@ function buildEncounterRows(locationKey) {
         if (!encArr || !encArr.length) return;
 
         var rateArr = getRateArrayFor(label, encArr.length);
-
-        pushSection(label);
+        var order = [];
+        var bySpecies = Object.create(null);
 
         for (var i = 0; i < encArr.length; i++) {
             var enc = encArr[i] || {};
+            var sid = toID(enc.species || '');
+            if (!sid) continue;
 
-            var rate = '';
+            if (!bySpecies[sid]) {
+                bySpecies[sid] = {
+                    species: enc.species,
+                    rate: 0,
+                    hasRate: false,
+                    min: null,
+                    max: null,
+                };
+                order.push(sid);
+            }
+            var aggregate = bySpecies[sid];
+
+            var rawRate = '';
             if (rateArr && rateArr[i] != null && rateArr[i] !== 0) {
-                rate = formatRate(rateArr[i]);
+                rawRate = rateArr[i];
             } else if (enc.rate != null) {
-                rate = formatRate(enc.rate);
+                rawRate = enc.rate;
+            }
+            var numericRate = parseRateNumber(rawRate);
+            if (numericRate != null) {
+                aggregate.rate += numericRate;
+                aggregate.hasRate = true;
             }
 
             var minLvl = enc.minLvl || enc.min || enc.level || enc.minLevel;
             var maxLvl = enc.maxLvl || enc.max || enc.maxLevel;
+            if (minLvl != null && (aggregate.min == null || Number(minLvl) < Number(aggregate.min))) aggregate.min = minLvl;
+            if (maxLvl != null && (aggregate.max == null || Number(maxLvl) > Number(aggregate.max))) aggregate.max = maxLvl;
+            if (maxLvl == null && minLvl != null && aggregate.max == null) aggregate.max = minLvl;
+        }
 
-            pushMon(rate, minLvl, maxLvl, enc.species);
+        var entries = [];
+        for (var oi = 0; oi < order.length; oi++) {
+            entries.push(bySpecies[order[oi]]);
+        }
+        sortEncounterEntries(entries);
+
+        pushSection(label);
+        for (var ei = 0; ei < entries.length; ei++) {
+            var entry = entries[ei];
+            var displayRate = entry.hasRate ? formatRate(entry.rate) : '';
+            pushMon(displayRate, entry.min, entry.max, entry.species);
         }
     }
 
@@ -343,11 +401,46 @@ function buildEncounterRows(locationKey) {
             byType[t].push(e);
         }
         for (var t2 in byType) {
-            pushSection(t2);
             var arr = byType[t2];
+            var orderByType = [];
+            var bySpeciesType = Object.create(null);
             for (var j = 0; j < arr.length; j++) {
                 var e2 = arr[j];
-                pushMon(formatRate(e2.rate), e2.minLvl, e2.maxLvl, e2.species);
+                var sid2 = toID((e2 && e2.species) || '');
+                if (!sid2) continue;
+
+                if (!bySpeciesType[sid2]) {
+                    bySpeciesType[sid2] = {
+                        species: e2.species,
+                        rate: 0,
+                        hasRate: false,
+                        min: null,
+                        max: null,
+                    };
+                    orderByType.push(sid2);
+                }
+
+                var ent2 = bySpeciesType[sid2];
+                var r2 = parseRateNumber(e2.rate);
+                if (r2 != null) {
+                    ent2.rate += r2;
+                    ent2.hasRate = true;
+                }
+                if (e2.minLvl != null && (ent2.min == null || Number(e2.minLvl) < Number(ent2.min))) ent2.min = e2.minLvl;
+                if (e2.maxLvl != null && (ent2.max == null || Number(e2.maxLvl) > Number(ent2.max))) ent2.max = e2.maxLvl;
+                if (e2.maxLvl == null && e2.minLvl != null && ent2.max == null) ent2.max = e2.minLvl;
+            }
+
+            var typeEntries = [];
+            for (var ok = 0; ok < orderByType.length; ok++) {
+                typeEntries.push(bySpeciesType[orderByType[ok]]);
+            }
+            sortEncounterEntries(typeEntries);
+
+            pushSection(t2);
+            for (var te = 0; te < typeEntries.length; te++) {
+                var ent = typeEntries[te];
+                pushMon(ent.hasRate ? formatRate(ent.rate) : '', ent.min, ent.max, ent.species);
             }
         }
         return rows;
@@ -378,7 +471,6 @@ function renderEncounterTable(rows) {
         buf += '<table class="enc-table"><thead><tr>';
         buf += '<th class="enc-mon-col">Pokémon</th>';
         buf += '<th class="enc-rate-col">Rate</th>';
-        buf += '<th class="enc-lvl-col">Level</th>';
         buf += '</tr></thead><tbody>';
     }
 
@@ -410,7 +502,6 @@ function renderEncounterTable(rows) {
         var rateTxt = (row.rate != null && row.rate !== '')
             ? (String(row.rate).indexOf('%') >= 0 ? String(row.rate) : String(row.rate) + '%')
             : '';
-        var lvlTxt = formatLevelRange(row.min, row.max);
 
         buf += '<tr>';
         buf += '<td class="enc-mon">';
@@ -423,7 +514,6 @@ function renderEncounterTable(rows) {
 
         buf += '</td>';
         buf += '<td class="enc-rate-col">' + escape(rateTxt) + '</td>';
-        buf += '<td class="enc-lvl-col">' + escape(lvlTxt) + '</td>';
         buf += '</tr>';
     }
 
@@ -875,6 +965,7 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
         var rows = key ? buildEncounterRows(key) : [];
         var html = '';
         html += '<div class="pfx-body pfx-encounters-detail">';
+        html += '<a href="/encounters/" class="pfx-backbutton" data-target="back"><i class="fa fa-chevron-left"></i> Encounters</a>';
         html += '<h1>' + escape(title) + '</h1>';
         html += '<div class="enc-detail-content">' + renderEncounterTable(rows) + '</div>';
         html += '</div>';

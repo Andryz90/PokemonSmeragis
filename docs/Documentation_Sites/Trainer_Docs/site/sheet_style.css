@@ -42,6 +42,30 @@ main#sheet { max-width: 1200px; margin: 22px auto 40px; padding: 0 18px; }
 .split-panel { display: none; overflow-x: auto; padding-bottom: 8px; }
 .split-panel.active { display: block; }
 .split-title { margin: 10px 0 10px; font-size: 1.06rem; color: #333; }
+.split-group {
+  margin: 12px 0 16px;
+  border: 1px solid #d8dee8;
+  border-radius: 12px;
+  background: #f8fafc;
+  overflow: hidden;
+}
+.split-group summary {
+  cursor: pointer;
+  padding: 10px 14px;
+  font-weight: 700;
+  color: #1f2937;
+  background: #eef2f7;
+  border-bottom: 1px solid #d8dee8;
+  list-style: none;
+}
+.split-group summary::-webkit-details-marker { display: none; }
+.split-group summary::after {
+  content: "+";
+  float: right;
+  color: #475569;
+}
+.split-group[open] summary::after { content: "-"; }
+.split-group-body { padding: 8px 12px 2px; }
 
 /* ===== Tabelle ===== */
 .content-table {

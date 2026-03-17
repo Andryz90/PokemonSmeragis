@@ -39,6 +39,8 @@ prefabs.json
 *.diff
 *.sym
 *.js
+!docs/Documentation_Sites/porydex/site/js/static-encounters.js
+!docs/Documentation_Sites/porydex/site/js/encounter-overrides.js
 /pokeemerald-*.png
 src/data/map_group_count.h
 tools/trainerproc/trainerproc

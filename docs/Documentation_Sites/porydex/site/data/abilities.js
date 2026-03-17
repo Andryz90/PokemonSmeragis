@@ -2927,8 +2927,8 @@ exports.BattleAbilities = {
         "name": "Water Compaction",
         "rating": 1.5,
         "num": 195,
-        "desc": "This Pokemon's Defense is raised 2 stages after it is damaged by a Water-type move.",
-        "shortDesc": "This Pokemon's Defense is raised 2 stages after it is damaged by a Water-type move."
+        "desc": "Absorbs Water type moves, raise Defense x2 when hit.",
+        "shortDesc": "Absorbs Water type moves, raise Defense x2 when hit."
     },
     "waterveil": {
         "flags": {

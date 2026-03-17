@@ -74,11 +74,7 @@ function porydexImgWithFallback(primarySrc, fallbackSrc, style, width, height, a
 	' />';
 }
 
-// Optional manual overlay for non-wild encounters (gifts/static/overworld).
-// Add entries by showdown id, for example:
-// window.BattleStaticEncounters.watchog = [
-//   {name: 'Slateport Sewers - Overworld', level: 35, rate: 'Static'}
-// ];
+// Generated overlay for non-wild encounters (gifts/static/overworld).
 window.BattleStaticEncounters = window.BattleStaticEncounters || {};
 
 // --- Porydex: reverse lookup (pokemon -> locations) ---
@@ -386,6 +382,24 @@ function porydexCleanLocationName(name) {
 	}
 
 	return name.trim();
+}
+
+function renderPorydexEncounterZoneRow(zoneName, tag, href) {
+	var safeName = _.escape(String(zoneName || ''));
+	var safeTag = _.escape(String(tag || ''));
+	var tagClass = /^-?\d+(\.\d+)?%?$/.test(String(tag || '').trim())
+		? ' porydex-encounter-zone-tag-rate'
+		: ' porydex-encounter-zone-tag-static';
+	if (href) {
+		return '<li class="result"><a href="' + _.escape(href) + '" data-target="push" class="porydex-encounter-zone-row">' +
+			'<span class="porydex-encounter-zone-tag' + tagClass + '">' + safeTag + '</span>' +
+			'<span class="porydex-encounter-zone-name">' + safeName + '</span>' +
+		'</a></li>';
+	}
+	return '<li class="result"><div class="porydex-encounter-zone-row porydex-encounter-zone-row-static">' +
+		'<span class="porydex-encounter-zone-tag' + tagClass + '">' + safeTag + '</span>' +
+		'<span class="porydex-encounter-zone-name">' + safeName + '</span>' +
+		'</div></li>';
 }
 
 var PokedexPokemonPanel = PokedexResultPanel.extend({
@@ -1006,8 +1020,9 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 				return an.localeCompare(bn);
 			});
 
-			buf += '<li class="resultheader"><h3>' + mode.label + ' <small>(Rate %)</small></h3></li>';
-			buf += '<ul>';
+			var headerSuffix = mode.key === 'static' ? '' : ' <small>(Rate %)</small>';
+			buf += '<li class="resultheader"><h3>' + mode.label + headerSuffix + '</h3></li>';
+			buf += '<ul class="porydex-encounter-list">';
 
 			for (var i = 0; i < zones.length; i++) {
 				var z = zones[i];
@@ -1020,14 +1035,11 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 					zoneDisplay = {name: porydexCleanLocationName(z.name || z.zoneid)};
 				}
 
-				var row = BattleSearch.renderTaggedEncounterRow(zoneDisplay, '' + z.rate);
-				if (zone) {
-					row = row.replace(/href="\/encounters\/[^"]+"/, 'href="/encounters/' + z.zoneid + '"');
-				} else {
-					row = row.replace(/href="\/encounters\/[^"]+"/, 'href="#"');
-				}
-
-				buf += row;
+				buf += renderPorydexEncounterZoneRow(
+					zoneDisplay.name,
+					'' + z.rate,
+					zone ? ('/encounters/' + z.zoneid) : ''
+				);
 			}
 
 			buf += '</ul>';

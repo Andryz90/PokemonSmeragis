@@ -389,6 +389,46 @@
 	    }
 	  }
 
+	  // Also seed from static/gift/overworld overlays.
+	  // Supports both:
+	  // - { speciesId: [ { ... } ] }
+	  // - [ { species/speciesId/id: '...' } ]
+	  var staticRaw = window.BattleStaticEncounters || window.PorydexStaticEncounters;
+	  if (staticRaw) {
+	    function addStaticId(v, fallbackSpeciesKey) {
+	      if (!v) return;
+	      var sid = toID(
+	        (v && (v.species || v.speciesId || v.id)) ||
+	        fallbackSpeciesKey ||
+	        ''
+	      );
+	      if (!sid) return;
+	      wild[sid] = true;
+	    }
+
+	    if (Array.isArray(staticRaw)) {
+	      for (var si = 0; si < staticRaw.length; si++) {
+	        addStaticId(staticRaw[si], null);
+	      }
+	    } else {
+	      for (var speciesKey in staticRaw) {
+	        if (!Object.prototype.hasOwnProperty.call(staticRaw, speciesKey)) continue;
+	        var val = staticRaw[speciesKey];
+	        if (Array.isArray(val)) {
+	          for (var vi = 0; vi < val.length; vi++) {
+	            addStaticId(val[vi], speciesKey);
+	          }
+	        } else if (val && Array.isArray(val.encounters)) {
+	          for (var ei = 0; ei < val.encounters.length; ei++) {
+	            addStaticId(val.encounters[ei], speciesKey);
+	          }
+	        } else {
+	          addStaticId(val, speciesKey);
+	        }
+	      }
+	    }
+	  }
+
 	  return wild;
 	}
 
@@ -487,6 +527,13 @@
 	    }
 	  }
 
+	  function rank(s) {
+	    if (s === 2) return 3;
+	    if (s === 1) return 2;
+	    if (s === -1) return 1;
+	    return 0;
+	  }
+
 	  // BFS propagate to evolutions
 	  while (queue.length) {
 	    var curId = queue.shift();
@@ -516,17 +563,25 @@
 	      // Otherwise upgrade if we are improving its status.
 	      var prev = cache[childId] ? cache[childId].status : 0;
 
-	      // Order of preference: 2 (wild) > 1 (certain evo) > -1 (uncertain evo) > 0
-	      function rank(s) {
-	        if (s === 2) return 3;
-	        if (s === 1) return 2;
-	        if (s === -1) return 1;
-	        return 0;
-	      }
-
 	      if (rank(newStatus) > rank(prev)) {
 	        cache[childId] = { status: newStatus };
 	        queue.push(childId);
+	      }
+	    }
+
+	    // Breeding back-propagation: if a species is obtainable and breedable,
+	    // consider its pre-evolution obtainable as well.
+	    var prevoId = toID(curSp.prevo || '');
+	    if (prevoId) {
+	      var eggGroups = curSp.eggGroups || [];
+	      var canBreed = eggGroups.length && eggGroups.indexOf('Undiscovered') < 0;
+	      if (canBreed) {
+	        var prevoPrev = cache[prevoId] ? cache[prevoId].status : 0;
+	        var prevoStatus = 1;
+	        if (rank(prevoStatus) > rank(prevoPrev)) {
+	          cache[prevoId] = { status: prevoStatus };
+	          queue.push(prevoId);
+	        }
 	      }
 	    }
 	  }
@@ -1268,4 +1323,3 @@
 	exports.BattleSearch = Search;
 
 })(window, jQuery);
-

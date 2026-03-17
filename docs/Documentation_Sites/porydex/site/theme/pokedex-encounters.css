@@ -100,3 +100,48 @@
 .pfx-encounters .enc-loc-subitem a:hover {
   background: #f7f7f7;
 }
+
+.porydex-encounter-zone-row,
+.porydex-encounter-zone-row-static {
+  display: grid !important;
+  grid-template-columns: 8.5em minmax(0, 1fr);
+  align-items: center;
+  column-gap: 14px;
+  white-space: normal;
+}
+
+.utilichart a.porydex-encounter-zone-row {
+  display: grid !important;
+  overflow: visible;
+}
+
+.porydex-encounter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.utilichart .porydex-encounter-zone-row-static {
+  margin: 0 5px 1px 5px;
+  padding: 1px 1px 1px 5px;
+  border-radius: 4px;
+}
+
+.porydex-encounter-zone-tag {
+  display: block;
+  font-weight: 600;
+  color: #666;
+}
+
+.porydex-encounter-zone-tag-rate {
+  width: 4.5em;
+}
+
+.porydex-encounter-zone-tag-static {
+  width: 8.5em;
+}
+
+.porydex-encounter-zone-name {
+  display: block;
+  min-width: 0;
+}

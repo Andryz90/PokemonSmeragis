@@ -1,6 +1,8 @@
 var SETDEX_SV = {
   "Luvdisc": {
     "Aroma Lady DAISY": {
+      "index": 2,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13,7 +15,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Damp Rock",
       "ability": "Swift Swim",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Rain Dance",
         "Wish",
@@ -24,6 +26,8 @@ var SETDEX_SV = {
   },
   "Toedscruel": {
     "Aroma Lady DAISY": {
+      "index": 2,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -36,7 +40,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Mycelium Might",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Spore",
         "Giga Drain",
@@ -47,6 +51,8 @@ var SETDEX_SV = {
   },
   "Parasect": {
     "Aroma Lady DAISY": {
+      "index": 2,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -70,6 +76,8 @@ var SETDEX_SV = {
   },
   "Golduck": {
     "Aroma Lady DAISY": {
+      "index": 2,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -92,6 +100,8 @@ var SETDEX_SV = {
   },
   "Sableye": {
     "Cooltrainer VINCENT": {
+      "index": 3,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -104,7 +114,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Covert Cloak",
       "ability": "Prankster",
-      "nature": null,
+      "nature": "Careful",
       "moves": [
         "Will-O-Wisp",
         "Recover",
@@ -112,7 +122,9 @@ var SETDEX_SV = {
         "Taunt"
       ]
     },
-    "Rich Boy DAWSON [DAWSON]": {
+    "Rich Boy DAWSON": {
+      "index": 38,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -125,28 +137,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Sitrus Berry",
       "ability": "Prankster",
-      "nature": null,
-      "moves": [
-        "Night Shade",
-        "Thunder Wave",
-        "Will-O-Wisp",
-        "Pain Split"
-      ]
-    },
-    "Rich Boy DAWSON [DAWSON_2]": {
-      "level": "1",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": "Prankster",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Night Shade",
         "Thunder Wave",
@@ -155,6 +146,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer JENNIFER": {
+      "index": 257,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 24,
@@ -170,23 +163,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Hex Maniac VALERIE [VALERIE_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac VALERIE [VALERIE_1]": {
+    "Hex Maniac VALERIE": {
+      "index": 270,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -202,55 +181,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Hex Maniac VALERIE [VALERIE_3]": {
-      "level": "35",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac VALERIE [VALERIE_4]": {
-      "level": "40",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac VALERIE [VALERIE_5]": {
-      "level": "42",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer CAROLINE": {
+      "index": 435,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 12,
@@ -267,6 +200,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer HALLE": {
+      "index": 442,
+      "slot": 0,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -283,6 +218,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Elite Four PHOEBE": {
+      "index": 466,
+      "slot": 2,
       "level": "50",
       "ivs": {
         "hp": 30,
@@ -306,6 +243,8 @@ var SETDEX_SV = {
   },
   "Medicham": {
     "Cooltrainer VINCENT": {
+      "index": 3,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -318,7 +257,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Pure Power",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "High Jump Kick",
         "Zen Headbutt",
@@ -327,6 +266,8 @@ var SETDEX_SV = {
       ]
     },
     "Winstrate VICKY": {
+      "index": 19,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -339,7 +280,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Scarf",
       "ability": "Pure Power",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "High Jump Kick",
         "Zen Headbutt",
@@ -348,6 +289,8 @@ var SETDEX_SV = {
       ]
     },
     "Psychic MARLENE": {
+      "index": 47,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -360,7 +303,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Pure Power",
-      "nature": null,
+      "nature": "Brave",
       "moves": [
         "Fake Out",
         "Drain Punch",
@@ -368,55 +311,9 @@ var SETDEX_SV = {
         "Helping Hand"
       ]
     },
-    "School Kid JERRY [JERRY_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl CYNDY [CYNDY_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert SHELBY [SHELBY_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 26,
-        "at": 26,
-        "df": 26,
-        "sa": 26,
-        "sd": 26,
-        "sp": 26
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Expert MAKAYLA": {
+      "index": 321,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -432,71 +329,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "School Kid JERRY [JERRY_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl CYNDY [CYNDY_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert SHELBY [SHELBY_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 27,
-        "at": 27,
-        "df": 27,
-        "sa": 27,
-        "sd": 27,
-        "sp": 27
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert SHELBY [SHELBY_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 29,
-        "at": 29,
-        "df": 29,
-        "sa": 29,
-        "sd": 29,
-        "sp": 29
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_1]": {
+    "Old Couple JOHN & JAY": {
+      "index": 412,
+      "slot": 0,
       "level": "39",
       "ivs": {
         "hp": 24,
@@ -518,6 +353,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer MICHELLE": {
+      "index": 425,
+      "slot": 1,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -533,28 +370,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Leader BRAWLY [BRAWLY_3]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Light Screen",
-        "Reflect",
-        "Focus Punch"
-      ]
-    },
     "Cooltrainer FELIX": {
+      "index": 432,
+      "slot": 0,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -572,28 +390,9 @@ var SETDEX_SV = {
         "Psychic"
       ]
     },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_2]": {
-      "level": "43",
-      "ivs": {
-        "hp": 25,
-        "at": 25,
-        "df": 25,
-        "sa": 25,
-        "sd": 25,
-        "sp": 25
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Fire Punch",
-        "Psych Up",
-        "Protect"
-      ]
-    },
     "Battle Girl DANIELLE": {
+      "index": 446,
+      "slot": 2,
       "level": "44",
       "ivs": {
         "hp": 31,
@@ -606,122 +405,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Muscle Band",
       "ability": "Pure Power",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Fake Out",
         "Fire Punch",
         "High Jump Kick",
         "Zen Headbutt"
       ]
-    },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_3]": {
-      "level": "46",
-      "ivs": {
-        "hp": 26,
-        "at": 26,
-        "df": 26,
-        "sa": 26,
-        "sd": 26,
-        "sp": 26
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Fire Punch",
-        "Psych Up",
-        "Protect"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_4]": {
-      "level": "43",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Focus Punch",
-        "Light Screen",
-        "Reflect",
-        "Psychic"
-      ]
-    },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_4]": {
-      "level": "49",
-      "ivs": {
-        "hp": 27,
-        "at": 27,
-        "df": 27,
-        "sa": 27,
-        "sd": 27,
-        "sp": 27
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Fire Punch",
-        "Psych Up",
-        "Protect"
-      ]
-    },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_5]": {
-      "level": "52",
-      "ivs": {
-        "hp": 29,
-        "at": 29,
-        "df": 29,
-        "sa": 29,
-        "sd": 29,
-        "sp": 29
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Fire Punch",
-        "Psych Up",
-        "Protect"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_5]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Focus Punch",
-        "Light Screen",
-        "Reflect",
-        "Psychic"
-      ]
     }
   },
   "Sharpedo": {
     "Cooltrainer VINCENT": {
+      "index": 3,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -734,7 +430,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "White Herb",
       "ability": "Speed Boost",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Protect",
         "Crunch",
@@ -742,23 +438,9 @@ var SETDEX_SV = {
         "Psychic Fangs"
       ]
     },
-    "Swimmer M TONY [TONY_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Fisherman JONAH": {
+      "index": 286,
+      "slot": 2,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -774,23 +456,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Swimmer M TONY [TONY_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer M REED": {
+      "index": 318,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -807,6 +475,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M GILBERT": {
+      "index": 331,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -823,6 +493,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M CLARENCE": {
+      "index": 356,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -838,55 +510,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Fisherman ELLIOT [ELLIOT_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M TONY [TONY_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aqua Admin SHELLY [SHELLY_SEAFLOOR_CAVERN]": {
-      "level": "37",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Beauty TIFFANY": {
+      "index": 406,
+      "slot": 1,
       "level": "39",
       "ivs": {
         "hp": 12,
@@ -895,22 +521,6 @@ var SETDEX_SV = {
         "sa": 12,
         "sd": 12,
         "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M TONY [TONY_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
       },
       "ivsSpecified": true,
       "item": null,
@@ -919,6 +529,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Aqua Leader ARCHIE": {
+      "index": 431,
+      "slot": 2,
       "level": "43",
       "ivs": {
         "hp": 18,
@@ -933,42 +545,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_5]": {
-      "level": "49",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Greninja": {
     "Cooltrainer VINCENT": {
+      "index": 3,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -981,7 +563,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Protean",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Hydro Pump",
         "Dark Pulse",
@@ -992,6 +574,8 @@ var SETDEX_SV = {
   },
   "Meowscarada": {
     "Cooltrainer VINCENT": {
+      "index": 3,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1004,7 +588,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Band",
       "ability": "Protean",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Flower Trick",
         "Knock Off",
@@ -1015,6 +599,8 @@ var SETDEX_SV = {
   },
   "Gyarados": {
     "Cooltrainer VINCENT": {
+      "index": 3,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1027,7 +613,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Lum Berry",
       "ability": "Intimidate",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Dragon Dance",
         "Waterfall",
@@ -1035,7 +621,9 @@ var SETDEX_SV = {
         "Earthquake"
       ]
     },
-    "Fisherman ELLIOT [ELLIOT_1]": {
+    "Fisherman ELLIOT": {
+      "index": 126,
+      "slot": 0,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -1055,55 +643,9 @@ var SETDEX_SV = {
         "Tackle"
       ]
     },
-    "Fisherman ELLIOT [ELLIOT_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman ELLIOT [ELLIOT_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman ELLIOT [ELLIOT_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer M DECLAN": {
+      "index": 323,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -1120,6 +662,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M BARRY": {
+      "index": 328,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -1136,6 +680,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M RODNEY": {
+      "index": 329,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -1152,6 +698,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M JACK": {
+      "index": 334,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -1167,23 +715,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Fisherman ELLIOT [ELLIOT_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Fisherman RONALD": {
+      "index": 369,
+      "slot": 5,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -1200,6 +734,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman ROGER": {
+      "index": 375,
+      "slot": 2,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -1216,6 +752,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman CLAUDE": {
+      "index": 398,
+      "slot": 0,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -1228,7 +766,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Mystic Water",
       "ability": "Moxie",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Dragon Dance",
         "Dual Chop",
@@ -1237,6 +775,8 @@ var SETDEX_SV = {
       ]
     },
     "Champion WALLACE": {
+      "index": 469,
+      "slot": 4,
       "level": "56",
       "ivs": {
         "hp": 31,
@@ -1260,6 +800,8 @@ var SETDEX_SV = {
   },
   "Mawile": {
     "Cooltrainer LEROY": {
+      "index": 4,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1272,7 +814,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Intimidate",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Play Rough",
         "Iron Head",
@@ -1281,6 +823,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer WENDY": {
+      "index": 243,
+      "slot": 0,
       "level": "29",
       "ivs": {
         "hp": 12,
@@ -1302,6 +846,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer SAMUEL": {
+      "index": 422,
+      "slot": 1,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -1320,6 +866,8 @@ var SETDEX_SV = {
   },
   "Rotom-Wash": {
     "Cooltrainer LEROY": {
+      "index": 4,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1332,7 +880,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Hydro Pump",
         "Volt Switch",
@@ -1343,6 +891,8 @@ var SETDEX_SV = {
   },
   "Kingdra": {
     "Cooltrainer LEROY": {
+      "index": 4,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1355,7 +905,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Mystic Water",
       "ability": "Swift Swim",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Hydro Pump",
         "Dragon Pulse",
@@ -1363,23 +913,9 @@ var SETDEX_SV = {
         "Rain Dance"
       ]
     },
-    "Beauty THALIA [THALIA_5]": {
-      "level": "40",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader JUAN [JUAN_1]": {
+    "Leader JUAN": {
+      "index": 454,
+      "slot": 4,
       "level": "46",
       "ivs": {
         "hp": 30,
@@ -1400,28 +936,9 @@ var SETDEX_SV = {
         "Rest"
       ]
     },
-    "Leader JUAN [JUAN_2]": {
-      "level": "51",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Water Pulse",
-        "Double Team",
-        "Ice Beam",
-        "Rest"
-      ]
-    },
     "Elite Four DRAKE": {
+      "index": 468,
+      "slot": 2,
       "level": "53",
       "ivs": {
         "hp": 30,
@@ -1441,73 +958,12 @@ var SETDEX_SV = {
         "Surf",
         "Body Slam"
       ]
-    },
-    "Leader JUAN [JUAN_3]": {
-      "level": "56",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Water Pulse",
-        "Double Team",
-        "Ice Beam",
-        "Rest"
-      ]
-    },
-    "Leader JUAN [JUAN_4]": {
-      "level": "61",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Water Pulse",
-        "Double Team",
-        "Ice Beam",
-        "Rest"
-      ]
-    },
-    "Leader JUAN [JUAN_5]": {
-      "level": "66",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Water Pulse",
-        "Double Team",
-        "Ice Beam",
-        "Rest"
-      ]
     }
   },
   "Azumarill": {
     "Cooltrainer LEROY": {
+      "index": 4,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1520,7 +976,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Huge Power",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Belly Drum",
         "Aqua Jet",
@@ -1529,6 +985,8 @@ var SETDEX_SV = {
       ]
     },
     "Winstrate VIVI": {
+      "index": 34,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1541,7 +999,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Huge Power",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Play Rough",
         "Liquidation",
@@ -1550,6 +1008,8 @@ var SETDEX_SV = {
       ]
     },
     "Swimmer F ALICE": {
+      "index": 129,
+      "slot": 3,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -1569,23 +1029,32 @@ var SETDEX_SV = {
         "Covet"
       ]
     },
-    "Pkmn Breeder LYDIA [LYDIA_5]": {
-      "level": "31",
+    "Parasol Lady MADELINE": {
+      "index": 249,
+      "slot": 0,
+      "level": "38",
       "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
+      "ivsSpecified": false,
+      "item": "Sitrus Berry",
+      "ability": "Huge Power",
+      "nature": "Adamant",
+      "moves": [
+        "Aqua Jet",
+        "Liquidation",
+        "Play Rough",
+        "Knock Off"
+      ]
     },
     "Swimmer F DANA": {
+      "index": 350,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -1602,6 +1071,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer ALEXA": {
+      "index": 359,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 12,
@@ -1617,23 +1088,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Tuber F LOLA [LOLA_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Sis And Bro RELI & IAN": {
+      "index": 377,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -1649,28 +1106,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Parasol Lady MADELINE [MADELINE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Sitrus Berry",
-      "ability": "Huge Power",
-      "nature": null,
-      "moves": [
-        "Aqua Jet",
-        "Liquidation",
-        "Play Rough",
-        "Knock Off"
-      ]
-    },
     "Pokefan BETHANY": {
+      "index": 407,
+      "slot": 2,
       "level": "39",
       "ivs": {
         "hp": 12,
@@ -1687,6 +1125,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Beauty BRIDGET": {
+      "index": 415,
+      "slot": 0,
       "level": "40",
       "ivs": {
         "hp": 18,
@@ -1703,6 +1143,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Rich Boy GARRET": {
+      "index": 450,
+      "slot": 0,
       "level": "45",
       "ivs": {
         "hp": 0,
@@ -1721,6 +1163,8 @@ var SETDEX_SV = {
   },
   "Scizor": {
     "Cooltrainer LEROY": {
+      "index": 4,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1733,7 +1177,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Band",
       "ability": "Technician",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Bullet Punch",
         "U-turn",
@@ -1742,6 +1186,8 @@ var SETDEX_SV = {
       ]
     },
     "Winstrate VICKY": {
+      "index": 19,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1754,7 +1200,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Technician",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Bullet Punch",
         "U-turn",
@@ -1765,6 +1211,8 @@ var SETDEX_SV = {
   },
   "Ceruledge": {
     "Cooltrainer LEROY": {
+      "index": 4,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1777,7 +1225,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Spell Tag",
       "ability": "Flash Fire",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Bitter Blade",
         "Shadow Sneak",
@@ -1786,6 +1234,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker AUTUMN": {
+      "index": 417,
+      "slot": 0,
       "level": "40",
       "ivs": {
         "hp": 31,
@@ -1798,7 +1248,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Sharpness",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Bitter Blade",
         "Poltergeist",
@@ -1806,7 +1256,9 @@ var SETDEX_SV = {
         "Brick Break"
       ]
     },
-    "Leader FLANNERY [FLANNERY_1]": {
+    "Leader FLANNERY": {
+      "index": 421,
+      "slot": 3,
       "level": "43",
       "ivs": {
         "hp": 31,
@@ -1830,6 +1282,8 @@ var SETDEX_SV = {
   },
   "Aggron": {
     "Cooltrainer KEIRA": {
+      "index": 5,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1842,7 +1296,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Assault Vest",
       "ability": "Sturdy",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Heavy Slam",
         "Rock Slide",
@@ -1850,23 +1304,9 @@ var SETDEX_SV = {
         "Fire Punch"
       ]
     },
-    "Pokemaniac STEVE [STEVE_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokemaniac STEVE [STEVE_1]": {
+    "Pokemaniac STEVE": {
+      "index": 216,
+      "slot": 5,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -1888,6 +1328,8 @@ var SETDEX_SV = {
       ]
     },
     "Rival STEVEN": {
+      "index": 470,
+      "slot": 2,
       "level": "76",
       "ivs": {
         "hp": 31,
@@ -1909,6 +1351,8 @@ var SETDEX_SV = {
       ]
     },
     "Partner Rival STEVEN": {
+      "index": 473,
+      "slot": 2,
       "level": "44",
       "ivs": {
         "hp": 31,
@@ -1921,7 +1365,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": null,
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Thunder",
         "Protect",
@@ -1932,6 +1376,8 @@ var SETDEX_SV = {
   },
   "Manectric": {
     "Cooltrainer KEIRA": {
+      "index": 5,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -1944,7 +1390,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Specs",
       "ability": "Lightning Rod",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Thunderbolt",
         "Volt Switch",
@@ -1953,6 +1399,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer CAROLINA": {
+      "index": 144,
+      "slot": 2,
       "level": "24",
       "ivs": {
         "hp": 6,
@@ -1969,6 +1417,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Guitarist FABIAN": {
+      "index": 211,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -1985,6 +1435,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer MARCEL": {
+      "index": 242,
+      "slot": 0,
       "level": "29",
       "ivs": {
         "hp": 12,
@@ -2000,23 +1452,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Cooltrainer WILTON [WILTON_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Gentleman WALTER [WALTER_1]": {
+    "Gentleman WALTER": {
+      "index": 246,
+      "slot": 0,
       "level": "29",
       "ivs": {
         "hp": 0,
@@ -2033,6 +1471,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer LEONEL": {
+      "index": 266,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 12,
@@ -2053,6 +1493,8 @@ var SETDEX_SV = {
       ]
     },
     "Young Couple DEZ & LUKE": {
+      "index": 276,
+      "slot": 1,
       "level": "31",
       "ivs": {
         "hp": 0,
@@ -2068,23 +1510,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Cooltrainer WILTON [WILTON_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer ATHENA": {
+      "index": 284,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 12,
@@ -2105,6 +1533,8 @@ var SETDEX_SV = {
       ]
     },
     "Guitarist SHAWN": {
+      "index": 297,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -2125,6 +1555,8 @@ var SETDEX_SV = {
       ]
     },
     "Expert AURON": {
+      "index": 312,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -2140,23 +1572,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Gentleman WALTER [WALTER_2]": {
-      "level": "34",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader WATTSON [WATTSON_1]": {
+    "Leader WATTSON": {
+      "index": 336,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -2169,7 +1587,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Manectite",
       "ability": "Intimidate",
-      "nature": null,
+      "nature": "Mild",
       "moves": [
         "Thunderbolt",
         "Volt Switch",
@@ -2178,6 +1596,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer MARLEY": {
+      "index": 353,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 31,
@@ -2198,60 +1618,9 @@ var SETDEX_SV = {
         "Thunderbolt"
       ]
     },
-    "Cooltrainer WILTON [WILTON_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Gentleman WALTER [WALTER_3]": {
-      "level": "36",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Quick Attack",
-        "Spark",
-        "Odor Sleuth",
-        "Roar"
-      ]
-    },
-    "Guitarist FERNANDO [FERNANDO_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Camper SHANE": {
+      "index": 397,
+      "slot": 2,
       "level": "38",
       "ivs": {
         "hp": 30,
@@ -2272,101 +1641,9 @@ var SETDEX_SV = {
         "Hidden Power"
       ]
     },
-    "Gentleman WALTER [WALTER_4]": {
-      "level": "39",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Quick Attack",
-        "Spark",
-        "Odor Sleuth"
-      ]
-    },
-    "Guitarist FERNANDO [FERNANDO_4]": {
-      "level": "39",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader WATTSON [WATTSON_2]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Bite",
-        "Thunder Wave",
-        "Thunder",
-        "Protect"
-      ]
-    },
-    "Gentleman WALTER [WALTER_5]": {
-      "level": "41",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Quick Attack",
-        "Spark",
-        "Odor Sleuth",
-        "Roar"
-      ]
-    },
-    "Guitarist FERNANDO [FERNANDO_5]": {
-      "level": "41",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Gentleman MICAH": {
+      "index": 444,
+      "slot": 1,
       "level": "44",
       "ivs": {
         "hp": 0,
@@ -2381,94 +1658,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Leader WATTSON [WATTSON_3]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Bite",
-        "Thunder Wave",
-        "Thunder",
-        "Protect"
-      ]
-    },
-    "Triathlete ABIGAIL [ABIGAIL_3]": {
-      "level": "50",
-      "ivs": {
-        "hp": 0,
-        "at": 30,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Magnet",
-      "ability": "Lightning Rod",
-      "nature": null,
-      "moves": [
-        "Electric Terrain",
-        "Rising Voltage",
-        "Discharge",
-        "Hidden Power"
-      ]
-    },
-    "Leader WATTSON [WATTSON_4]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Bite",
-        "Thunder Wave",
-        "Thunder",
-        "Protect"
-      ]
-    },
-    "Leader WATTSON [WATTSON_5]": {
-      "level": "55",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Bite",
-        "Thunder Wave",
-        "Thunder",
-        "Protect"
-      ]
     }
   },
   "Magnezone": {
     "Cooltrainer KEIRA": {
+      "index": 5,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2481,7 +1676,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Air Balloon",
       "ability": "Analytic",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Thunderbolt",
         "Flash Cannon",
@@ -2490,6 +1685,8 @@ var SETDEX_SV = {
       ]
     },
     "Guitarist JOSEPH": {
+      "index": 40,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -2502,7 +1699,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Leftovers",
       "ability": "Analytic",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Thunder Wave",
         "Thunderbolt",
@@ -2511,6 +1708,8 @@ var SETDEX_SV = {
       ]
     },
     "Pokemaniac WYATT": {
+      "index": 44,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -2523,7 +1722,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Occa Berry",
       "ability": "Magnet Pull",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Thunderbolt",
         "Mirror Coat",
@@ -2531,7 +1730,9 @@ var SETDEX_SV = {
         "Flash Cannon"
       ]
     },
-    "Interviewer GABBY & TY [GABBY_AND_TY_1]": {
+    "Interviewer GABBY & TY": {
+      "index": 215,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 31,
@@ -2544,35 +1745,16 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Band",
       "ability": "Magnet Pull",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Explosion"
-      ]
-    },
-    "Triathlete ABIGAIL [ABIGAIL_3]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Custap Berry",
-      "ability": "Sturdy",
-      "nature": null,
-      "moves": [
-        "Explosion",
-        "Discharge",
-        "Flash Cannon",
-        "Body Press"
       ]
     }
   },
   "Tinkaton": {
     "Cooltrainer KEIRA": {
+      "index": 5,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2585,59 +1767,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Shuca Berry",
       "ability": "Mold Breaker",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Gigaton Hammer",
         "Play Rough",
         "Knock Off",
         "Stealth Rock"
       ]
-    },
-    "Rival WALLY [WALLY_MAUVILLE]": {
-      "level": "34",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Own Tempo",
-      "nature": null,
-      "moves": [
-        "Gigaton Hammer",
-        "Sweet Kiss",
-        "Play Rough",
-        "Slam"
-      ]
-    },
-    "Partner Rival WALLY [2]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Air Balloon",
-      "ability": "Mold Breaker",
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Fake Out",
-        "Gigaton Hammer",
-        "Play Rough"
-      ]
     }
   },
   "Rotom-Heat": {
     "Cooltrainer KEIRA": {
+      "index": 5,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2650,7 +1792,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Charcoal",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Overheat",
         "Thunderbolt",
@@ -2659,6 +1801,8 @@ var SETDEX_SV = {
       ]
     },
     "Kindler AXLE": {
+      "index": 436,
+      "slot": 2,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -2671,7 +1815,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Choice Specs",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Volt Switch",
         "Overheat"
@@ -2680,6 +1824,8 @@ var SETDEX_SV = {
   },
   "Glimmora": {
     "Cooltrainer KEIRA": {
+      "index": 5,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2692,38 +1838,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Focus Sash",
       "ability": "Toxic Debris",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Sludge Wave",
         "Power Gem",
         "Earth Power",
         "Mortal Spin"
       ]
-    },
-    "Magma Admin TABITHA [TABITHA_DESERT]": {
-      "level": "47",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Shuca Berry",
-      "ability": "Toxic Debris",
-      "nature": null,
-      "moves": [
-        "Stealth Rock",
-        "Meteor Beam",
-        "Sludge Wave",
-        "Energy Ball"
-      ]
     }
   },
   "Banette": {
     "Hex Maniac PATRICIA": {
+      "index": 6,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2736,7 +1863,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Scope Lens",
       "ability": "Cursed Body",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Shadow Claw",
         "Shadow Sneak",
@@ -2744,23 +1871,9 @@ var SETDEX_SV = {
         "Will-O-Wisp"
       ]
     },
-    "School Kid JERRY [JERRY_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Elite Four PHOEBE": {
+      "index": 466,
+      "slot": 3,
       "level": "49",
       "ivs": {
         "hp": 30,
@@ -2784,6 +1897,8 @@ var SETDEX_SV = {
   },
   "Mismagius": {
     "Hex Maniac PATRICIA": {
+      "index": 6,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2796,7 +1911,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Wise Glasses",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Shadow Ball",
         "Dazzling Gleam",
@@ -2807,6 +1922,8 @@ var SETDEX_SV = {
   },
   "Dusclops": {
     "Hex Maniac PATRICIA": {
+      "index": 6,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2819,7 +1936,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Eviolite",
       "ability": "Pressure",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Will-O-Wisp",
         "Night Shade",
@@ -2828,6 +1945,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer QUINCY": {
+      "index": 437,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 12,
@@ -2849,6 +1968,8 @@ var SETDEX_SV = {
       ]
     },
     "Elite Four PHOEBE": {
+      "index": 466,
+      "slot": 4,
       "level": "51",
       "ivs": {
         "hp": 31,
@@ -2872,6 +1993,8 @@ var SETDEX_SV = {
   },
   "Cofagrigus": {
     "Hex Maniac PATRICIA": {
+      "index": 6,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2884,7 +2007,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Colbur Berry",
       "ability": "Mummy",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Shadow Ball",
         "Will-O-Wisp",
@@ -2893,6 +2016,8 @@ var SETDEX_SV = {
       ]
     },
     "Camper BEAU": {
+      "index": 457,
+      "slot": 0,
       "level": "50",
       "ivs": {
         "hp": 0,
@@ -2916,6 +2041,8 @@ var SETDEX_SV = {
   },
   "Froslass": {
     "Hex Maniac PATRICIA": {
+      "index": 6,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2928,7 +2055,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Scarf",
       "ability": "Cursed Body",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Ice Beam",
         "Shadow Ball",
@@ -2939,6 +2066,8 @@ var SETDEX_SV = {
   },
   "Houndstone": {
     "Hex Maniac PATRICIA": {
+      "index": 6,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2951,7 +2080,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Fluffy",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Shadow Sneak",
         "Crunch",
@@ -2962,6 +2091,8 @@ var SETDEX_SV = {
   },
   "Toxicroak": {
     "Black Belt YUJI": {
+      "index": 7,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2974,7 +2105,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Punching Glove",
       "ability": "Dry Skin",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Drain Punch",
         "Gunk Shot",
@@ -2985,6 +2116,8 @@ var SETDEX_SV = {
   },
   "Annihilape": {
     "Black Belt YUJI": {
+      "index": 7,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -2997,7 +2130,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Defiant",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Rage Fist",
         "Drain Punch",
@@ -3008,6 +2141,8 @@ var SETDEX_SV = {
   },
   "Poliwrath": {
     "Black Belt YUJI": {
+      "index": 7,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3020,7 +2155,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Mystic Water",
       "ability": "Water Absorb",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Liquidation",
         "Close Combat",
@@ -3029,6 +2164,8 @@ var SETDEX_SV = {
       ]
     },
     "Fisherman CLAUDE": {
+      "index": 398,
+      "slot": 2,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -3041,7 +2178,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Punching Glove",
       "ability": "Damp",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Drain Punch",
         "Ice Punch",
@@ -3052,6 +2189,8 @@ var SETDEX_SV = {
   },
   "Pangoro": {
     "Black Belt YUJI": {
+      "index": 7,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3064,7 +2203,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Assault Vest",
       "ability": "Iron Fist",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Knock Off",
         "Drain Punch",
@@ -3073,6 +2212,8 @@ var SETDEX_SV = {
       ]
     },
     "Team Magma GUARDIAN GRUNT": {
+      "index": 32,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3085,7 +2226,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Punching Glove",
       "ability": "Iron Fist",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Knock Off",
         "Drain Punch",
@@ -3096,6 +2237,8 @@ var SETDEX_SV = {
   },
   "Machamp": {
     "Black Belt YUJI": {
+      "index": 7,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3108,7 +2251,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Facade",
         "Close Combat",
@@ -3116,23 +2259,9 @@ var SETDEX_SV = {
         "Ice Punch"
       ]
     },
-    "Black Belt NOB [NOB_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": "Black Belt",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Expert AURON": {
+      "index": 312,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -3149,6 +2278,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Black Belt DAISUKE": {
+      "index": 367,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 31,
@@ -3161,117 +2292,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Close Combat",
         "Bullet Punch",
         "Detect",
         "Darkest Lariat"
       ]
-    },
-    "Leader BRAWLY [BRAWLY_2]": {
-      "level": "33",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Karate Chop",
-        "Rock Slide",
-        "Focus Punch",
-        "Bulk Up"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_3]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Karate Chop",
-        "Rock Slide",
-        "Focus Punch",
-        "Bulk Up"
-      ]
-    },
-    "Black Belt KOJI [KOJI_5]": {
-      "level": "43",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader BRAWLY [BRAWLY_4]": {
-      "level": "43",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Karate Chop",
-        "Rock Slide",
-        "Focus Punch",
-        "Bulk Up"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_5]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Cross Chop",
-        "Rock Slide",
-        "Focus Punch",
-        "Bulk Up"
-      ]
     }
   },
   "Smeargle": {
     "Camper JUSTIN": {
+      "index": 8,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3284,7 +2317,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Focus Sash",
       "ability": "Own Tempo",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Spore",
         "Sticky Web",
@@ -3295,6 +2328,8 @@ var SETDEX_SV = {
   },
   "Kecleon": {
     "Camper JUSTIN": {
+      "index": 8,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3307,7 +2342,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Protean",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Fake Out",
         "Drain Punch",
@@ -3315,7 +2350,9 @@ var SETDEX_SV = {
         "Sucker Punch"
       ]
     },
-    "Beauty JESSICA [JESSICA_1]": {
+    "Beauty JESSICA": {
+      "index": 245,
+      "slot": 0,
       "level": "29",
       "ivs": {
         "hp": 0,
@@ -3337,6 +2374,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer JONATHAN": {
+      "index": 317,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -3352,86 +2391,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Beauty JESSICA [JESSICA_2]": {
-      "level": "35",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Bind",
-        "Lick",
-        "Fury Swipes",
-        "Feint Attack"
-      ]
-    },
-    "Beauty JESSICA [JESSICA_3]": {
-      "level": "38",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Bind",
-        "Lick",
-        "Fury Swipes",
-        "Feint Attack"
-      ]
-    },
-    "Pkmn Ranger JACKSON [JACKSON_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 10,
-        "at": 10,
-        "df": 10,
-        "sa": 10,
-        "sd": 10,
-        "sp": 10
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Beauty JESSICA [JESSICA_4]": {
-      "level": "41",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Bind",
-        "Lick",
-        "Fury Swipes",
-        "Feint Attack"
-      ]
-    },
     "Cooltrainer OWEN": {
+      "index": 424,
+      "slot": 0,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -3446,31 +2408,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Beauty JESSICA [JESSICA_5]": {
-      "level": "44",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Bind",
-        "Lick",
-        "Fury Swipes",
-        "Feint Attack"
-      ]
     }
   },
   "Ditto": {
     "Camper JUSTIN": {
+      "index": 8,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3483,7 +2426,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Imposter",
-      "nature": null,
+      "nature": "Serious",
       "moves": [
         "Transform"
       ]
@@ -3491,6 +2434,8 @@ var SETDEX_SV = {
   },
   "Porygon2": {
     "Camper JUSTIN": {
+      "index": 8,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3503,7 +2448,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Download",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Tri Attack",
         "Recover",
@@ -3514,6 +2459,8 @@ var SETDEX_SV = {
   },
   "Raticate": {
     "Camper JUSTIN": {
+      "index": 8,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3526,7 +2473,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Hyper Fang",
         "Quick Attack",
@@ -3537,6 +2484,8 @@ var SETDEX_SV = {
   },
   "Alakazam": {
     "Psychic JOSHUA": {
+      "index": 9,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3549,49 +2498,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Magic Guard",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Psychic",
         "Focus Blast",
         "Shadow Ball",
         "Nasty Plot"
       ]
-    },
-    "Psychic JACKI [JACKI_5]": {
-      "level": "43",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Psychic CAMERON [CAMERON_5]": {
-      "level": "45",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Solrock": {
     "Psychic JOSHUA": {
+      "index": 9,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3604,7 +2523,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Heat Rock",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Stealth Rock",
         "Rock Slide",
@@ -3612,7 +2531,9 @@ var SETDEX_SV = {
         "Zen Headbutt"
       ]
     },
-    "Psychic CAMERON [CAMERON_1]": {
+    "Psychic CAMERON": {
+      "index": 273,
+      "slot": 0,
       "level": "31",
       "ivs": {
         "hp": 0,
@@ -3628,23 +2549,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Psychic CAMERON [CAMERON_2]": {
-      "level": "33",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Camper LARRY": {
+      "index": 368,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 31,
@@ -3665,23 +2572,9 @@ var SETDEX_SV = {
         "Psycho Cut"
       ]
     },
-    "Psychic CAMERON [CAMERON_3]": {
-      "level": "38",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Hiker ELI": {
+      "index": 418,
+      "slot": 0,
       "level": "40",
       "ivs": {
         "hp": 31,
@@ -3703,6 +2596,8 @@ var SETDEX_SV = {
       ]
     },
     "Triathlete JULIO": {
+      "index": 419,
+      "slot": 2,
       "level": "40",
       "ivs": {
         "hp": 31,
@@ -3723,23 +2618,9 @@ var SETDEX_SV = {
         "Protect"
       ]
     },
-    "Psychic CAMERON [CAMERON_4]": {
-      "level": "41",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_1]": {
+    "Leader TATE&LIZA": {
+      "index": 428,
+      "slot": 3,
       "level": "42",
       "ivs": {
         "hp": 30,
@@ -3761,6 +2642,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer MITCHELL": {
+      "index": 441,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -3780,131 +2663,12 @@ var SETDEX_SV = {
         "Light Screen",
         "Shadow Ball"
       ]
-    },
-    "Psychic CAMERON [CAMERON_5]": {
-      "level": "45",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER1]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Passho Berry",
-      "ability": "Levitate",
-      "nature": null,
-      "moves": [
-        "Zen Headbutt",
-        "Flare Blitz",
-        "Stone Edge",
-        "Earthquake"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_2]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sunny Day",
-        "Solar Beam",
-        "Psychic",
-        "Flamethrower"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_3]": {
-      "level": "55",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sunny Day",
-        "Solar Beam",
-        "Psychic",
-        "Flamethrower"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_4]": {
-      "level": "60",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sunny Day",
-        "Solar Beam",
-        "Psychic",
-        "Flamethrower"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_5]": {
-      "level": "65",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sunny Day",
-        "Solar Beam",
-        "Psychic",
-        "Flamethrower"
-      ]
     }
   },
   "Reuniclus": {
     "Psychic JOSHUA": {
+      "index": 9,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3917,7 +2681,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Magic Guard",
-      "nature": null,
+      "nature": "Quiet",
       "moves": [
         "Psychic",
         "Focus Blast",
@@ -3928,6 +2692,8 @@ var SETDEX_SV = {
   },
   "Bronzong": {
     "Psychic JOSHUA": {
+      "index": 9,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3940,7 +2706,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Colbur Berry",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Sassy",
       "moves": [
         "Psychic",
         "Flash Cannon",
@@ -3948,7 +2714,9 @@ var SETDEX_SV = {
         "Stealth Rock"
       ]
     },
-    "Pkmn Breeder ISAAC [ISAAC_1]": {
+    "Pkmn Breeder ISAAC": {
+      "index": 131,
+      "slot": 3,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -3961,7 +2729,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Brave",
       "moves": [
         "Gyro Ball",
         "Psychic Noise",
@@ -3972,6 +2740,8 @@ var SETDEX_SV = {
   },
   "Slowking-Galar": {
     "Psychic JOSHUA": {
+      "index": 9,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -3984,7 +2754,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Assault Vest",
       "ability": "Regenerator",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Future Sight",
         "Sludge Wave",
@@ -3995,6 +2765,8 @@ var SETDEX_SV = {
   },
   "Gallade": {
     "Psychic JOSHUA": {
+      "index": 9,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4007,59 +2779,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Scarf",
       "ability": "Justified",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Close Combat",
         "Psycho Cut",
         "Knock Off",
         "Leaf Blade"
       ]
-    },
-    "Rival WALLY [WALLY_MAUVILLE]": {
-      "level": "36",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Sharpness",
-      "nature": null,
-      "moves": [
-        "Swords Dance",
-        "Leaf Blade",
-        "Slash",
-        "Sacred Sword"
-      ]
-    },
-    "Partner Rival WALLY [2]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Sharpness",
-      "nature": null,
-      "moves": [
-        "Psycho Cut",
-        "Night Slash",
-        "Drain Punch",
-        "Ice Punch"
-      ]
     }
   },
   "Gardevoir": {
     "Psychic ALEXIS": {
+      "index": 10,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4072,7 +2804,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Scarf",
       "ability": "Trace",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Moonblast",
         "Psychic",
@@ -4080,28 +2812,32 @@ var SETDEX_SV = {
         "Trick"
       ]
     },
-    "School Kid JERRY [JERRY_6]": {
-      "level": "1",
+    "Rival WALLY": {
+      "index": 392,
+      "slot": 4,
+      "level": "45",
       "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
+        "hp": 30,
+        "at": 30,
+        "df": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 30
       },
       "ivsSpecified": true,
       "item": null,
-      "ability": "Trace",
+      "ability": null,
       "nature": null,
       "moves": [
+        "Double Team",
+        "Calm Mind",
         "Psychic",
-        "Draining Kiss",
-        "Moonblast",
-        "Light Screen"
+        "Future Sight"
       ]
     },
     "Cooltrainer KATELYNN": {
+      "index": 438,
+      "slot": 0,
       "level": "43",
       "ivs": {
         "hp": 12,
@@ -4121,136 +2857,12 @@ var SETDEX_SV = {
         "Thunderbolt",
         "Calm Mind"
       ]
-    },
-    "Rival WALLY [WALLY_VR_1]": {
-      "level": "45",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Double Team",
-        "Calm Mind",
-        "Psychic",
-        "Future Sight"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_2]": {
-      "level": "48",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Double Team",
-        "Calm Mind",
-        "Psychic",
-        "Future Sight"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_3]": {
-      "level": "51",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Double Team",
-        "Calm Mind",
-        "Psychic",
-        "Future Sight"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_4]": {
-      "level": "54",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Double Team",
-        "Calm Mind",
-        "Psychic",
-        "Future Sight"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_5]": {
-      "level": "57",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Double Team",
-        "Calm Mind",
-        "Psychic",
-        "Future Sight"
-      ]
-    },
-    "Partner Rival WALLY [2]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Life Orb",
-      "ability": "Trace",
-      "nature": null,
-      "moves": [
-        "Moonblast",
-        "Psychic Noise",
-        "Energy Ball",
-        "Calm Mind"
-      ]
     }
   },
   "Xatu": {
     "Psychic ALEXIS": {
+      "index": 10,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4263,7 +2875,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Rocky Helmet",
       "ability": "Magic Bounce",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Psychic",
         "Heat Wave",
@@ -4271,7 +2883,9 @@ var SETDEX_SV = {
         "U-turn"
       ]
     },
-    "Collector EDWIN [EDWIN_1]": {
+    "Collector EDWIN": {
+      "index": 28,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4284,7 +2898,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Magic Bounce",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Psychic",
         "Air Slash",
@@ -4293,6 +2907,8 @@ var SETDEX_SV = {
       ]
     },
     "Camper FLINT": {
+      "index": 250,
+      "slot": 1,
       "level": "29",
       "ivs": {
         "hp": 18,
@@ -4309,6 +2925,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper ALBERTO": {
+      "index": 254,
+      "slot": 1,
       "level": "30",
       "ivs": {
         "hp": 0,
@@ -4325,6 +2943,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper PRESLEY": {
+      "index": 304,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -4341,6 +2961,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Psychic SAMANTHA": {
+      "index": 384,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 12,
@@ -4356,23 +2978,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Bird Keeper ROBERT [ROBERT_5]": {
-      "level": "41",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_1]": {
+    "Leader TATE&LIZA": {
+      "index": 428,
+      "slot": 1,
       "level": "41",
       "ivs": {
         "hp": 30,
@@ -4392,94 +3000,12 @@ var SETDEX_SV = {
         "Confuse Ray",
         "Calm Mind"
       ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_2]": {
-      "level": "49",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Rest",
-        "Confuse Ray",
-        "Calm Mind"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_3]": {
-      "level": "54",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Rest",
-        "Confuse Ray",
-        "Calm Mind"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_4]": {
-      "level": "59",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Rest",
-        "Confuse Ray",
-        "Calm Mind"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_5]": {
-      "level": "64",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Rest",
-        "Confuse Ray",
-        "Calm Mind"
-      ]
     }
   },
   "Farigiraf": {
     "Psychic ALEXIS": {
+      "index": 10,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4492,7 +3018,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Throat Spray",
       "ability": "Armor Tail",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Hyper Voice",
         "Psychic",
@@ -4500,7 +3026,9 @@ var SETDEX_SV = {
         "Trick Room"
       ]
     },
-    "Leader NORMAN [NORMAN_1]": {
+    "Leader NORMAN": {
+      "index": 453,
+      "slot": 4,
       "level": "54",
       "ivs": {
         "hp": 0,
@@ -4513,7 +3041,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Colbur Berry",
       "ability": "Armor Tail",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Psychic Noise",
         "Hyper Voice",
@@ -4524,6 +3052,8 @@ var SETDEX_SV = {
   },
   "Mr. Rime": {
     "Psychic ALEXIS": {
+      "index": 10,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4536,7 +3066,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Never-Melt Ice",
       "ability": "Tangled Feet",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Ice Beam",
         "Psychic Noise",
@@ -4547,6 +3077,8 @@ var SETDEX_SV = {
   },
   "Indeedee-F": {
     "Psychic ALEXIS": {
+      "index": 10,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4559,7 +3091,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Specs",
       "ability": "Psychic Surge",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Psychic",
         "Alluring Voice",
@@ -4570,6 +3102,8 @@ var SETDEX_SV = {
   },
   "Slowbro": {
     "Psychic ALEXIS": {
+      "index": 10,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4582,7 +3116,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Colbur Berry",
       "ability": "Regenerator",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Scald",
         "Psychic",
@@ -4592,7 +3126,9 @@ var SETDEX_SV = {
     }
   },
   "Ariados": {
-    "Leader Johto BUGSY [BUGSY_2]": {
+    "Leader Johto BUGSY": {
+      "index": 11,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4605,7 +3141,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Scope Lens",
       "ability": "Sniper",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Sticky Web",
         "Cut",
@@ -4613,28 +3149,9 @@ var SETDEX_SV = {
         "Cross Poison"
       ]
     },
-    "Leader Johto BUGSY [BUGSY]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Life Orb",
-      "ability": "Adaptability",
-      "nature": null,
-      "moves": [
-        "Cross Poison",
-        "Leech Life",
-        "Trailblaze",
-        "Swords Dance"
-      ]
-    },
     "Bug Maniac DEREK": {
+      "index": 298,
+      "slot": 2,
       "level": "33",
       "ivs": {
         "hp": 31,
@@ -4657,7 +3174,9 @@ var SETDEX_SV = {
     }
   },
   "Ledian": {
-    "Leader Johto BUGSY [BUGSY_2]": {
+    "Leader Johto BUGSY": {
+      "index": 11,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4670,35 +3189,16 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Iron Fist",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Mach Punch",
         "Thunder Punch",
         "Ice Punch"
       ]
     },
-    "Leader Johto BUGSY [BUGSY]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Punching Glove",
-      "ability": "Iron Fist",
-      "nature": null,
-      "moves": [
-        "Ice Punch",
-        "U-turn",
-        "Combo Punch",
-        "Thunder Punch"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_1]": {
+    "Leader BRAWLY": {
+      "index": 149,
+      "slot": 4,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -4721,7 +3221,9 @@ var SETDEX_SV = {
     }
   },
   "Scyther": {
-    "Leader Johto BUGSY [BUGSY_2]": {
+    "Leader Johto BUGSY": {
+      "index": 11,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4740,31 +3242,12 @@ var SETDEX_SV = {
         "U-turn",
         "Cut"
       ]
-    },
-    "Leader Johto BUGSY [BUGSY]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Eviolite",
-      "ability": "Technician",
-      "nature": null,
-      "moves": [
-        "Cut",
-        "Dual Wingbeat",
-        "U-turn",
-        "Roost"
-      ]
     }
   },
   "Beautifly": {
-    "Leader Johto BUGSY [BUGSY_2]": {
+    "Leader Johto BUGSY": {
+      "index": 11,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4786,6 +3269,8 @@ var SETDEX_SV = {
       ]
     },
     "School Kid GEORGIA": {
+      "index": 15,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4798,7 +3283,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Silver Powder",
       "ability": "Lifedrainer",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Quiver Dance",
         "Bug Buzz",
@@ -4807,6 +3292,8 @@ var SETDEX_SV = {
       ]
     },
     "Bug Maniac DONALD": {
+      "index": 141,
+      "slot": 2,
       "level": "24",
       "ivs": {
         "hp": 12,
@@ -4822,7 +3309,32 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
+    "Pokefan ISABEL": {
+      "index": 194,
+      "slot": 1,
+      "level": "28",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Big Root",
+      "ability": "Lifedrainer",
+      "nature": "Hasty",
+      "moves": [
+        "Draining Kiss",
+        "Giga Drain",
+        "Leech Life",
+        "Air Cutter"
+      ]
+    },
     "Twins MIU & YUKI": {
+      "index": 203,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -4839,6 +3351,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Young Couple MEL & PAUL": {
+      "index": 225,
+      "slot": 1,
       "level": "27",
       "ivs": {
         "hp": 0,
@@ -4859,28 +3373,9 @@ var SETDEX_SV = {
         "Stun Spore"
       ]
     },
-    "Pokefan ISABEL [ISABEL_1]": {
-      "level": "28",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Big Root",
-      "ability": "Lifedrainer",
-      "nature": null,
-      "moves": [
-        "Draining Kiss",
-        "Giga Drain",
-        "Leech Life",
-        "Air Cutter"
-      ]
-    },
     "Bug Maniac CALE": {
+      "index": 252,
+      "slot": 1,
       "level": "29",
       "ivs": {
         "hp": 0,
@@ -4895,26 +3390,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Bug Maniac JEFFREY [JEFFREY_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Dustox": {
-    "Leader Johto BUGSY [BUGSY_2]": {
+    "Leader Johto BUGSY": {
+      "index": 11,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4935,28 +3416,9 @@ var SETDEX_SV = {
         "Moonlight"
       ]
     },
-    "Leader Johto BUGSY [BUGSY]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Silver Powder",
-      "ability": "Shield Dust",
-      "nature": null,
-      "moves": [
-        "Toxic",
-        "Protect",
-        "Bug Bite",
-        "Venoshock"
-      ]
-    },
     "School Kid GEORGIA": {
+      "index": 15,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -4969,7 +3431,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Black Sludge",
       "ability": "Shield Dust",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Toxic",
         "Venoshock",
@@ -4978,6 +3440,8 @@ var SETDEX_SV = {
       ]
     },
     "Twins MIU & YUKI": {
+      "index": 203,
+      "slot": 1,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -4994,6 +3458,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bug Maniac TAYLOR": {
+      "index": 217,
+      "slot": 2,
       "level": "27",
       "ivs": {
         "hp": 12,
@@ -5010,6 +3476,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Young Couple MEL & PAUL": {
+      "index": 225,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 0,
@@ -5031,6 +3499,8 @@ var SETDEX_SV = {
       ]
     },
     "Pokefan KALEB": {
+      "index": 240,
+      "slot": 1,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -5043,7 +3513,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Black Sludge",
       "ability": "Friend Guard",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Rage Powder",
         "Toxic",
@@ -5051,23 +3521,9 @@ var SETDEX_SV = {
         "Moonlight"
       ]
     },
-    "Bug Catcher JAMES [JAMES_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Bug Maniac CALE": {
+      "index": 252,
+      "slot": 0,
       "level": "29",
       "ivs": {
         "hp": 0,
@@ -5082,104 +3538,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Bug Catcher JAMES [JAMES_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Catcher JAMES [JAMES_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Maniac JEFFREY [JEFFREY_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Araquanid": {
-    "Leader Johto BUGSY [BUGSY]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Focus Sash",
-      "ability": "Water Bubble",
-      "nature": null,
-      "moves": [
-        "Sticky Web",
-        "Liquidation",
-        "Leech Life",
-        "Mirror Coat"
-      ]
-    }
-  },
-  "Beautifly": {
-    "Leader Johto BUGSY [BUGSY]": {
-      "level": "1",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Big Root",
-      "ability": "Lifedrainer",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Draining Kiss",
-        "Air Slash",
-        "Bug Buzz"
-      ]
     }
   },
   "Kirlia": {
-    "School Kid JERRY [JERRY_1]": {
+    "School Kid JERRY": {
+      "index": 12,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -5201,6 +3565,8 @@ var SETDEX_SV = {
       ]
     },
     "School Kid TED": {
+      "index": 13,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -5213,7 +3579,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Eviolite",
       "ability": "Trace",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Psychic",
         "Dazzling Gleam",
@@ -5222,6 +3588,8 @@ var SETDEX_SV = {
       ]
     },
     "Psychic WILLIAM": {
+      "index": 192,
+      "slot": 2,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -5238,6 +3606,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Psychic ALIX": {
+      "index": 209,
+      "slot": 1,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -5253,55 +3623,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "School Kid JERRY [JERRY_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid JERRY [JERRY_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid JERRY [JERRY_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Psychic PRESTON": {
+      "index": 380,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 12,
@@ -5318,6 +3642,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Psychic HANNAH": {
+      "index": 383,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 12,
@@ -5333,7 +3659,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Partner Rival WALLY [1]": {
+    "Partner Rival WALLY": {
+      "index": 472,
+      "slot": 0,
       "level": "22",
       "ivs": {
         "hp": 0,
@@ -5346,7 +3674,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Sitrus Berry",
       "ability": "Trace",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Psybeam",
         "Life Dew",
@@ -5355,7 +3683,9 @@ var SETDEX_SV = {
     }
   },
   "Darumaka-Galar": {
-    "School Kid JERRY [JERRY_1]": {
+    "School Kid JERRY": {
+      "index": 12,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -5378,7 +3708,9 @@ var SETDEX_SV = {
     }
   },
   "Hattrem": {
-    "School Kid JERRY [JERRY_1]": {
+    "School Kid JERRY": {
+      "index": 12,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -5391,7 +3723,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": "Magic Bounce",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Reflect",
         "Psybeam",
@@ -5400,75 +3732,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Darmanitan-Galar": {
-    "School Kid JERRY [JERRY_6]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Gorilla Tactics",
-      "nature": null,
-      "moves": [
-        "Ice Punch",
-        "Brick Break",
-        "Rock Slide",
-        "Power-Up Punch"
-      ]
-    }
-  },
-  "Hatterene": {
-    "School Kid JERRY [JERRY_6]": {
-      "level": "1",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Magic Bounce",
-      "nature": null,
-      "moves": [
-        "Reflect",
-        "Psychic",
-        "Draining Kiss",
-        "Moonblast"
-      ]
-    },
-    "Psychic MARIELA": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Sitrus Berry",
-      "ability": "Magic Bounce",
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Dazzling Gleam",
-        "Mystical Fire",
-        "Calm Mind"
-      ]
-    }
-  },
   "Mr. Mime": {
     "School Kid TED": {
+      "index": 13,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -5481,7 +3748,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Light Clay",
       "ability": "Filter",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Psychic",
         "Dazzling Gleam",
@@ -5492,6 +3759,8 @@ var SETDEX_SV = {
   },
   "Kadabra": {
     "School Kid TED": {
+      "index": 13,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -5504,7 +3773,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Twisted Spoon",
       "ability": "Synchronize",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Psychic",
         "Focus Blast",
@@ -5513,6 +3782,8 @@ var SETDEX_SV = {
       ]
     },
     "Psychic KAYLA": {
+      "index": 193,
+      "slot": 2,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -5529,6 +3800,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Psychic ALIX": {
+      "index": 209,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -5544,7 +3817,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Psychic JACKI [JACKI_1]": {
+    "Psychic JACKI": {
+      "index": 260,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 0,
@@ -5561,6 +3836,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Psychic EDWARD": {
+      "index": 281,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -5579,39 +3856,9 @@ var SETDEX_SV = {
         "Hidden Power"
       ]
     },
-    "Psychic CAMERON [CAMERON_2]": {
-      "level": "33",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Psychic JACKI [JACKI_2]": {
-      "level": "34",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Psychic MAURA": {
+      "index": 385,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 12,
@@ -5628,6 +3875,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Hex Maniac KATHLEEN": {
+      "index": 388,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 12,
@@ -5643,71 +3892,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Psychic JACKI [JACKI_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Psychic CAMERON [CAMERON_3]": {
-      "level": "38",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Psychic JACKI [JACKI_4]": {
-      "level": "40",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Psychic CAMERON [CAMERON_4]": {
-      "level": "41",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer SAMUEL": {
+      "index": 422,
+      "slot": 2,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -5724,6 +3911,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer VITO": {
+      "index": 423,
+      "slot": 1,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -5742,6 +3931,8 @@ var SETDEX_SV = {
   },
   "Swoobat": {
     "School Kid TED": {
+      "index": 13,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -5754,7 +3945,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Wise Glasses",
       "ability": "Simple",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Air Slash",
         "Psychic",
@@ -5764,6 +3955,8 @@ var SETDEX_SV = {
   },
   "Ninetales": {
     "School Kid PAUL": {
+      "index": 14,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -5776,7 +3969,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Charcoal",
       "ability": "Drought",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Temper Flare",
         "Solar Beam",
@@ -5784,6 +3977,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer JULIE": {
+      "index": 426,
+      "slot": 1,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -5800,6 +3995,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Kindler KEEGAN": {
+      "index": 443,
+      "slot": 0,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -5812,7 +4009,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Fairy Feather",
       "ability": "Drought",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Flamethrower",
         "Solar Beam",
@@ -5823,6 +4020,8 @@ var SETDEX_SV = {
   },
   "Camerupt": {
     "School Kid PAUL": {
+      "index": 14,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -5835,7 +4034,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Soft Sand",
       "ability": "Magma Armor",
-      "nature": null,
+      "nature": "Quiet",
       "moves": [
         "Earth Power",
         "Lava Plume",
@@ -5843,7 +4042,32 @@ var SETDEX_SV = {
         "Yawn"
       ]
     },
-    "Magma Admin TABITHA [TABITHA_MAGMA_HIDEOUT]": {
+    "Parasol Lady MADELINE": {
+      "index": 249,
+      "slot": 2,
+      "level": "38",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Chesto Berry",
+      "ability": "Magma Armor",
+      "nature": "Modest",
+      "moves": [
+        "Curse",
+        "Amnesia",
+        "Rest",
+        "Flamethrower"
+      ]
+    },
+    "Magma Admin TABITHA": {
+      "index": 319,
+      "slot": 3,
       "level": "33",
       "ivs": {
         "hp": 9,
@@ -5860,6 +4084,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer DARCY": {
+      "index": 320,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -5875,81 +4101,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Hiker SAWYER [SAWYER_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer BROOKE [BROOKE_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Parasol Lady MADELINE [MADELINE_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Flamethrower",
-        "Take Down",
-        "Earthquake",
-        "Sunny Day"
-      ]
-    },
-    "Parasol Lady MADELINE [MADELINE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": "Magma Armor",
-      "nature": null,
-      "moves": [
-        "Curse",
-        "Amnesia",
-        "Rest",
-        "Flamethrower"
-      ]
-    },
-    "Magma Leader MAXIE [MAXIE_MAGMA_HIDEOUT]": {
+    "Magma Leader MAXIE": {
+      "index": 409,
+      "slot": 2,
       "level": "39",
       "ivs": {
         "hp": 18,
@@ -5965,44 +4119,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Magma Admin TABITHA [TABITHA_MOSSDEEP]": {
-      "level": "36",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader FLANNERY [FLANNERY_2]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Sunny Day",
-        "Earthquake",
-        "Attract"
-      ]
-    },
     "Kindler AXLE": {
+      "index": 436,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -6015,159 +4134,19 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Passho Berry",
       "ability": "Solid Rock",
-      "nature": null,
+      "nature": "Quiet",
       "moves": [
         "Solar Beam",
         "Flamethrower",
         "Earth Power",
         "Ancient Power"
       ]
-    },
-    "Magma Leader MAXIE [MAXIE_MOSSDEEP]": {
-      "level": "44",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader FLANNERY [FLANNERY_3]": {
-      "level": "43",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Sunny Day",
-        "Earthquake",
-        "Attract"
-      ]
-    },
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER3]": {
-      "level": "48",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Soft Sand",
-      "ability": "Solid Rock",
-      "nature": null,
-      "moves": [
-        "Earth Power",
-        "Flamethrower",
-        "Ancient Power",
-        "Overheat"
-      ]
-    },
-    "Magma Admin TABITHA [TABITHA_DESERT]": {
-      "level": "49",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Passho Berry",
-      "ability": "Solid Rock",
-      "nature": null,
-      "moves": [
-        "Eruption",
-        "Earth Power",
-        "Flamethrower",
-        "Will-O-Wisp"
-      ]
-    },
-    "Magma Leader MAXIE [MAXIE_DESERT]": {
-      "level": "49",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Cameruptite",
-      "ability": "Magma Armor",
-      "nature": null,
-      "moves": [
-        "Earth Power",
-        "Heat Wave",
-        "Hidden Power",
-        "Eruption"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_4]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Sunny Day",
-        "Earthquake",
-        "Attract"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_5]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Sunny Day",
-        "Earthquake",
-        "Attract"
-      ]
     }
   },
   "Gloom": {
     "School Kid PAUL": {
+      "index": 14,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -6180,7 +4159,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Miracle Seed",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Sleep Powder",
         "Poison Drain",
@@ -6189,6 +4168,8 @@ var SETDEX_SV = {
       ]
     },
     "Lass SALLY": {
+      "index": 35,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -6201,7 +4182,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Big Root",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Sleep Powder",
         "Poison Drain",
@@ -6209,23 +4190,9 @@ var SETDEX_SV = {
         "Synthesis"
       ]
     },
-    "Picnicker DIANA [DIANA_2]": {
-      "level": "25",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Aroma Lady VIOLET": {
+      "index": 172,
+      "slot": 1,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -6241,7 +4208,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Ranger CATHERINE [CATHERINE_1]": {
+    "Pkmn Ranger CATHERINE": {
+      "index": 205,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 6,
@@ -6257,119 +4226,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Aroma Lady ROSE [ROSE_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger CATHERINE [CATHERINE_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 7,
-        "at": 7,
-        "df": 7,
-        "sa": 7,
-        "sd": 7,
-        "sp": 7
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aroma Lady ROSE [ROSE_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger CATHERINE [CATHERINE_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 8,
-        "at": 8,
-        "df": 8,
-        "sa": 8,
-        "sd": 8,
-        "sp": 8
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aroma Lady ROSE [ROSE_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer ALEXA": {
+      "index": 359,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 12,
@@ -6384,26 +4243,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Pkmn Ranger CATHERINE [CATHERINE_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 9,
-        "at": 9,
-        "df": 9,
-        "sa": 9,
-        "sd": 9,
-        "sp": 9
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Roselia": {
     "School Kid PAUL": {
+      "index": 14,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -6416,7 +4261,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Poison Barb",
       "ability": "Natural Cure",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Giga Drain",
         "Sludge Bomb",
@@ -6425,6 +4270,8 @@ var SETDEX_SV = {
       ]
     },
     "Lass SALLY": {
+      "index": 35,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -6437,7 +4284,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Poison Barb",
       "ability": "Natural Cure",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Giga Drain",
         "Sludge Bomb",
@@ -6445,7 +4292,9 @@ var SETDEX_SV = {
         "Toxic Spikes"
       ]
     },
-    "Aroma Lady ROSE [ROSE_1]": {
+    "Aroma Lady ROSE": {
+      "index": 81,
+      "slot": 2,
       "level": "14",
       "ivs": {
         "hp": 0,
@@ -6462,6 +4311,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Youngster JOEY": {
+      "index": 88,
+      "slot": 3,
       "level": "15",
       "ivs": {
         "hp": 0,
@@ -6474,7 +4325,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": "Poison Point",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Mega Drain",
         "Sludge Bomb",
@@ -6483,6 +4334,8 @@ var SETDEX_SV = {
       ]
     },
     "Aroma Lady CELINA": {
+      "index": 109,
+      "slot": 0,
       "level": "18",
       "ivs": {
         "hp": 0,
@@ -6499,6 +4352,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Sr And Jr TYRA & IVY": {
+      "index": 117,
+      "slot": 0,
       "level": "18",
       "ivs": {
         "hp": 0,
@@ -6519,39 +4374,9 @@ var SETDEX_SV = {
         "Leech Seed"
       ]
     },
-    "Pkmn Breeder LYDIA [LYDIA_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Aroma Lady VIOLET": {
+      "index": 172,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -6567,39 +4392,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Aroma Lady ROSE [ROSE_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer BROOKE [BROOKE_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger CATHERINE [CATHERINE_1]": {
+    "Pkmn Ranger CATHERINE": {
+      "index": 205,
+      "slot": 1,
       "level": "26",
       "ivs": {
         "hp": 6,
@@ -6615,23 +4410,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Aroma Lady ROSE [ROSE_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Parasol Lady CLARISSA": {
+      "index": 234,
+      "slot": 0,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -6647,23 +4428,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder LYDIA [LYDIA_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer WENDY": {
+      "index": 243,
+      "slot": 1,
       "level": "29",
       "ivs": {
         "hp": 12,
@@ -6684,103 +4451,9 @@ var SETDEX_SV = {
         "Leech Seed"
       ]
     },
-    "Cooltrainer BROOKE [BROOKE_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger CATHERINE [CATHERINE_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 7,
-        "at": 7,
-        "df": 7,
-        "sa": 7,
-        "sd": 7,
-        "sp": 7
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aroma Lady ROSE [ROSE_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer BROOKE [BROOKE_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger CATHERINE [CATHERINE_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 8,
-        "at": 8,
-        "df": 8,
-        "sa": 8,
-        "sd": 8,
-        "sp": 8
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Expert MAKAYLA": {
+      "index": 321,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -6796,145 +4469,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Aroma Lady ROSE [ROSE_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer BROOKE [BROOKE_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Parasol Lady MADELINE [MADELINE_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Leech Seed",
-        "Mega Drain",
-        "Grass Whistle",
-        "Sunny Day"
-      ]
-    },
-    "Pkmn Ranger CATHERINE [CATHERINE_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 9,
-        "at": 9,
-        "df": 9,
-        "sa": 9,
-        "sd": 9,
-        "sp": 9
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Parasol Lady MADELINE [MADELINE_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Leech Seed",
-        "Giga Drain",
-        "Solar Beam",
-        "Sunny Day"
-      ]
-    },
-    "Pkmn Ranger CATHERINE [CATHERINE_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 10,
-        "at": 10,
-        "df": 10,
-        "sa": 10,
-        "sd": 10,
-        "sp": 10
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer HOPE": {
-      "level": "45",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lady NAOMI": {
-      "level": "45",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival WALLY [WALLY_VR_1]": {
+    "Rival WALLY": {
+      "index": 392,
+      "slot": 2,
       "level": "44",
       "ivs": {
         "hp": 18,
@@ -6955,93 +4492,47 @@ var SETDEX_SV = {
         "Toxic"
       ]
     },
-    "Rival WALLY [WALLY_VR_2]": {
-      "level": "47",
+    "Cooltrainer HOPE": {
+      "index": 447,
+      "slot": 0,
+      "level": "45",
       "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
       },
       "ivsSpecified": true,
       "item": null,
       "ability": null,
       "nature": null,
-      "moves": [
-        "Magical Leaf",
-        "Leech Seed",
-        "Giga Drain",
-        "Toxic"
-      ]
+      "moves": []
     },
-    "Rival WALLY [WALLY_VR_3]": {
-      "level": "50",
+    "Lady NAOMI": {
+      "index": 449,
+      "slot": 0,
+      "level": "45",
       "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
       },
       "ivsSpecified": true,
-      "item": null,
+      "item": "Nugget",
       "ability": null,
       "nature": null,
-      "moves": [
-        "Magical Leaf",
-        "Leech Seed",
-        "Giga Drain",
-        "Toxic"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_4]": {
-      "level": "53",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Magical Leaf",
-        "Leech Seed",
-        "Giga Drain",
-        "Toxic"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_5]": {
-      "level": "56",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Magical Leaf",
-        "Leech Seed",
-        "Giga Drain",
-        "Toxic"
-      ]
+      "moves": []
     }
   },
   "Leavanny": {
     "School Kid GEORGIA": {
+      "index": 15,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -7054,7 +4545,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Occa Berry",
       "ability": "Overcoat",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Leaf Blade",
         "X-Scissor",
@@ -7062,7 +4553,9 @@ var SETDEX_SV = {
         "Sticky Web"
       ]
     },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_1]": {
+    "Sr And Jr ANNA & MEG": {
+      "index": 261,
+      "slot": 1,
       "level": "30",
       "ivs": {
         "hp": 31,
@@ -7085,6 +4578,8 @@ var SETDEX_SV = {
   },
   "Charjabug": {
     "School Kid GEORGIA": {
+      "index": 15,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -7097,7 +4592,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Magnet",
       "ability": "Battery",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Discharge",
         "Bug Buzz",
@@ -7108,6 +4603,8 @@ var SETDEX_SV = {
   },
   "Swellow": {
     "Winstrate VICTOR": {
+      "index": 16,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -7120,7 +4617,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Protect",
         "Facade",
@@ -7129,6 +4626,8 @@ var SETDEX_SV = {
       ]
     },
     "Bird Keeper BENNY": {
+      "index": 22,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -7141,7 +4640,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Facade",
         "Brave Bird",
@@ -7149,23 +4648,9 @@ var SETDEX_SV = {
         "Quick Attack"
       ]
     },
-    "Pkmn Breeder ISAAC [ISAAC_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer CAROLINA": {
+      "index": 144,
+      "slot": 1,
       "level": "24",
       "ivs": {
         "hp": 6,
@@ -7182,6 +4667,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper CHESTER": {
+      "index": 154,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -7197,23 +4684,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder ISAAC [ISAAC_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer RANDALL": {
+      "index": 176,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 31,
@@ -7234,6 +4707,8 @@ var SETDEX_SV = {
       ]
     },
     "Bird Keeper PHIL": {
+      "index": 196,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -7250,6 +4725,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer BRAXTON": {
+      "index": 228,
+      "slot": 0,
       "level": "28",
       "ivs": {
         "hp": 12,
@@ -7270,39 +4747,9 @@ var SETDEX_SV = {
         "Endeavor"
       ]
     },
-    "Pkmn Breeder ISAAC [ISAAC_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Camper ETHAN [ETHAN_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Camper FLINT": {
+      "index": 250,
+      "slot": 0,
       "level": "29",
       "ivs": {
         "hp": 18,
@@ -7318,55 +4765,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Youngster CALVIN [CALVIN_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Camper ETHAN [ETHAN_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Bird Keeper AIDAN": {
+      "index": 287,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -7382,23 +4783,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Youngster CALVIN [CALVIN_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Bird Keeper ALEX": {
+      "index": 305,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 18,
@@ -7415,6 +4802,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Expert PAXTON": {
+      "index": 316,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -7430,87 +4819,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Camper ETHAN [ETHAN_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lass HALEY [HALEY_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_4]": {
-      "level": "35",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Youngster CALVIN [CALVIN_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer SAMUEL": {
+      "index": 422,
+      "slot": 0,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -7527,6 +4838,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete ANTHONY": {
+      "index": 459,
+      "slot": 2,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -7539,7 +4852,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Facade",
         "Brave Bird",
@@ -7550,6 +4863,8 @@ var SETDEX_SV = {
   },
   "Obstagoon": {
     "Winstrate VICTOR": {
+      "index": 16,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -7562,7 +4877,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Obstruct",
         "Facade",
@@ -7570,7 +4885,9 @@ var SETDEX_SV = {
         "Fire Punch"
       ]
     },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_1]": {
+    "Sr And Jr ANNA & MEG": {
+      "index": 261,
+      "slot": 3,
       "level": "31",
       "ivs": {
         "hp": 31,
@@ -7593,6 +4910,8 @@ var SETDEX_SV = {
   },
   "Pinsir": {
     "Winstrate VICTOR": {
+      "index": 16,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -7614,6 +4933,8 @@ var SETDEX_SV = {
       ]
     },
     "Bug Catcher DAVIS": {
+      "index": 222,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 0,
@@ -7631,7 +4952,9 @@ var SETDEX_SV = {
     }
   },
   "Delcatty": {
-    "Pokefan MIGUEL [MIGUEL_1]": {
+    "Pokefan MIGUEL": {
+      "index": 17,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -7644,7 +4967,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Silk Scarf",
       "ability": "Cute Charm",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Fake Out",
         "Sing",
@@ -7652,90 +4975,9 @@ var SETDEX_SV = {
         "Double-Edge"
       ]
     },
-    "Pkmn Breeder LYDIA [LYDIA_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer MARY": {
-      "level": "26",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Feint Attack",
-        "Shock Wave"
-      ]
-    },
-    "Pkmn Breeder LYDIA [LYDIA_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Young Couple DEZ & LUKE": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_1]": {
+    "Pkmn Breeder LYDIA": {
+      "index": 132,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 31,
@@ -7748,78 +4990,16 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Silk Scarf",
       "ability": "Cute Charm",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Fake Out",
         "Sing",
         "Last Resort"
       ]
     },
-    "Pokefan MIGUEL [MIGUEL_4]": {
-      "level": "35",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_4]": {
-      "level": "35",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan MIGUEL [MIGUEL_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_1]": {
+    "Picnicker DIANA": {
+      "index": 159,
+      "slot": 3,
       "level": "40",
       "ivs": {
         "hp": 31,
@@ -7840,8 +5020,31 @@ var SETDEX_SV = {
         "Thunder Wave"
       ]
     },
-    "Pokefan COLTON": {
-      "level": "42",
+    "Cooltrainer MARY": {
+      "index": 181,
+      "slot": 0,
+      "level": "26",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Feint Attack",
+        "Shock Wave"
+      ]
+    },
+    "Young Couple DEZ & LUKE": {
+      "index": 276,
+      "slot": 0,
+      "level": "31",
       "ivs": {
         "hp": 0,
         "at": 0,
@@ -7851,17 +5054,14 @@ var SETDEX_SV = {
         "sp": 0
       },
       "ivsSpecified": true,
-      "item": "Oran Berry",
+      "item": null,
       "ability": null,
       "nature": null,
-      "moves": [
-        "Assist",
-        "Charm",
-        "Feint Attack",
-        "Heal Bell"
-      ]
+      "moves": []
     },
-    "Rival WALLY [WALLY_VR_1]": {
+    "Rival WALLY": {
+      "index": 392,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 18,
@@ -7882,93 +5082,34 @@ var SETDEX_SV = {
         "Feint Attack"
       ]
     },
-    "Rival WALLY [WALLY_VR_2]": {
-      "level": "46",
+    "Pokefan COLTON": {
+      "index": 429,
+      "slot": 5,
+      "level": "42",
       "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
       },
       "ivsSpecified": true,
-      "item": null,
+      "item": "Oran Berry",
       "ability": null,
       "nature": null,
       "moves": [
-        "Sing",
         "Assist",
         "Charm",
-        "Feint Attack"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_3]": {
-      "level": "49",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sing",
-        "Assist",
-        "Charm",
-        "Feint Attack"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_4]": {
-      "level": "52",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sing",
-        "Assist",
-        "Charm",
-        "Feint Attack"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_5]": {
-      "level": "55",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sing",
-        "Assist",
-        "Charm",
-        "Feint Attack"
+        "Feint Attack",
+        "Heal Bell"
       ]
     }
   },
   "Clefable": {
-    "Pokefan MIGUEL [MIGUEL_1]": {
+    "Pokefan MIGUEL": {
+      "index": 17,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -7991,7 +5132,9 @@ var SETDEX_SV = {
     }
   },
   "Togekiss": {
-    "Pokefan MIGUEL [MIGUEL_1]": {
+    "Pokefan MIGUEL": {
+      "index": 17,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -8004,7 +5147,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Leftovers",
       "ability": "Serene Grace",
-      "nature": null,
+      "nature": "Gentle",
       "moves": [
         "Tailwind",
         "Roost",
@@ -8013,6 +5156,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker ANGELINA": {
+      "index": 403,
+      "slot": 1,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -8025,7 +5170,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Leftovers",
       "ability": "Pixilate",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Follow Me",
         "Hyper Voice",
@@ -8035,7 +5180,9 @@ var SETDEX_SV = {
     }
   },
   "Gothitelle": {
-    "Pokefan MIGUEL [MIGUEL_1]": {
+    "Pokefan MIGUEL": {
+      "index": 17,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -8048,7 +5195,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Leftovers",
       "ability": "Shadow Tag",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Calm Mind",
         "Dark Pulse",
@@ -8059,6 +5206,8 @@ var SETDEX_SV = {
   },
   "Arboliva": {
     "Winstrate VICTORIA": {
+      "index": 18,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -8071,7 +5220,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Grassy Seed",
       "ability": "Seed Sower",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Hyper Voice",
         "Leech Seed",
@@ -8079,7 +5228,9 @@ var SETDEX_SV = {
         "Strength Sap"
       ]
     },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_1]": {
+    "Sr And Jr ANNA & MEG": {
+      "index": 261,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 0,
@@ -8103,6 +5254,8 @@ var SETDEX_SV = {
   },
   "Trevenant": {
     "Winstrate VICTORIA": {
+      "index": 18,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8124,6 +5277,8 @@ var SETDEX_SV = {
       ]
     },
     "Pkmn Ranger SOPHIA": {
+      "index": 31,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8136,7 +5291,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Harvest",
-      "nature": null,
+      "nature": "Careful",
       "moves": [
         "Horn Leech",
         "Poltergeist",
@@ -8147,6 +5302,8 @@ var SETDEX_SV = {
   },
   "Sceptile": {
     "Winstrate VICTORIA": {
+      "index": 18,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8159,7 +5316,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Band",
       "ability": "Technician",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Dual Chop",
         "Bullet Seed",
@@ -8168,6 +5325,8 @@ var SETDEX_SV = {
       ]
     },
     "Battle Girl PAULA": {
+      "index": 25,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8180,7 +5339,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Overgrow",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Leaf Blade",
         "Dragon Claw",
@@ -8191,6 +5350,8 @@ var SETDEX_SV = {
   },
   "Hawlucha": {
     "Winstrate VICKY": {
+      "index": 19,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8203,7 +5364,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "White Herb",
       "ability": "Unburden",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Acrobatics",
         "Close Combat",
@@ -8214,6 +5375,8 @@ var SETDEX_SV = {
   },
   "Linoone": {
     "Youngster EDDIE": {
+      "index": 20,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8226,7 +5389,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Silk Scarf",
       "ability": "Gluttony",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Belly Drum",
         "Extreme Speed",
@@ -8234,209 +5397,9 @@ var SETDEX_SV = {
         "Shadow Claw"
       ]
     },
-    "Pkmn Breeder ISAAC [ISAAC_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Tuber M RICKY [RICKY_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sand Attack",
-        "Pin Missile",
-        "Tail Whip",
-        "Surf"
-      ]
-    },
-    "Lady CINDY [CINDY_3]": {
-      "level": "27",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rich Boy WINSTON [WINSTON_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Camper ETHAN [ETHAN_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Tuber M RICKY [RICKY_3]": {
-      "level": "30",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sand Attack",
-        "Pin Missile",
-        "Tail Whip",
-        "Surf"
-      ]
-    },
-    "Lady CINDY [CINDY_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rich Boy WINSTON [WINSTON_3]": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Camper ETHAN [ETHAN_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer ATHENA": {
+      "index": 284,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 12,
@@ -8454,327 +5417,12 @@ var SETDEX_SV = {
         "Surf",
         "Thief"
       ]
-    },
-    "Tuber M RICKY [RICKY_4]": {
-      "level": "33",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sand Attack",
-        "Pin Missile",
-        "Tail Whip",
-        "Surf"
-      ]
-    },
-    "Lady CINDY [CINDY_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rich Boy WINSTON [WINSTON_4]": {
-      "level": "33",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Youngster CALVIN [CALVIN_4]": {
-      "level": "29",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Camper ETHAN [ETHAN_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_4]": {
-      "level": "35",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Tuber M RICKY [RICKY_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sand Attack",
-        "Pin Missile",
-        "Tail Whip",
-        "Surf"
-      ]
-    },
-    "Lady CINDY [CINDY_6]": {
-      "level": "36",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Fury Swipes",
-        "Mud Sport",
-        "Odor Sleuth",
-        "Sand Attack"
-      ]
-    },
-    "Rich Boy WINSTON [WINSTON_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Fury Swipes",
-        "Mud Sport",
-        "Odor Sleuth",
-        "Sand Attack"
-      ]
-    },
-    "Gentleman WALTER [WALTER_3]": {
-      "level": "36",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Headbutt",
-        "Sand Attack",
-        "Odor Sleuth",
-        "Fury Swipes"
-      ]
-    },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Growl",
-        "Tail Whip",
-        "Headbutt",
-        "Odor Sleuth"
-      ]
-    },
-    "Youngster CALVIN [CALVIN_5]": {
-      "level": "32",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Growl",
-        "Tail Whip",
-        "Headbutt",
-        "Odor Sleuth"
-      ]
-    },
-    "Gentleman WALTER [WALTER_4]": {
-      "level": "39",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Headbutt",
-        "Sand Attack",
-        "Odor Sleuth",
-        "Fury Swipes"
-      ]
-    },
-    "Gentleman WALTER [WALTER_5]": {
-      "level": "41",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Headbutt",
-        "Sand Attack",
-        "Odor Sleuth",
-        "Fury Swipes"
-      ]
     }
   },
   "Furret": {
     "Youngster EDDIE": {
+      "index": 20,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8787,7 +5435,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "King's Rock",
       "ability": "Frisk",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Double-Edge",
         "U-turn",
@@ -8798,6 +5446,8 @@ var SETDEX_SV = {
   },
   "Watchog": {
     "Youngster EDDIE": {
+      "index": 20,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8810,7 +5460,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Bad Dreams",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Hyper Fang",
         "Crunch",
@@ -8819,6 +5469,8 @@ var SETDEX_SV = {
       ]
     },
     "Collector HECTOR": {
+      "index": 29,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8831,7 +5483,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Psychic Seed",
       "ability": "Bad Dreams",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Hypnosis",
         "Dream Eater",
@@ -8842,6 +5494,8 @@ var SETDEX_SV = {
   },
   "Bibarel": {
     "Youngster EDDIE": {
+      "index": 20,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8854,7 +5508,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Mystic Water",
       "ability": "Simple",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Waterfall",
         "Aqua Jet",
@@ -8863,6 +5517,8 @@ var SETDEX_SV = {
       ]
     },
     "Youngster JOEY": {
+      "index": 88,
+      "slot": 2,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -8886,6 +5542,8 @@ var SETDEX_SV = {
   },
   "Gastrodon-East": {
     "Fisherman ANDREW": {
+      "index": 21,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -8898,7 +5556,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Rindo Berry",
       "ability": "Storm Drain",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Rain Dance",
         "Recover",
@@ -8909,6 +5567,8 @@ var SETDEX_SV = {
   },
   "Octillery": {
     "Fisherman ANDREW": {
+      "index": 21,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -8932,6 +5592,8 @@ var SETDEX_SV = {
   },
   "Wishiwashi": {
     "Fisherman ANDREW": {
+      "index": 21,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -8953,6 +5615,8 @@ var SETDEX_SV = {
       ]
     },
     "Fisherman DARIAN": {
+      "index": 77,
+      "slot": 2,
       "level": "12",
       "ivs": {
         "hp": 31,
@@ -8974,6 +5638,8 @@ var SETDEX_SV = {
   },
   "Mantine": {
     "Fisherman ANDREW": {
+      "index": 21,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -8986,7 +5652,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": "Swift Swim",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Rain Dance",
         "Hurricane",
@@ -8997,6 +5663,8 @@ var SETDEX_SV = {
   },
   "Mandibuzz": {
     "Bird Keeper BENNY": {
+      "index": 22,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9009,7 +5677,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Rocky Helmet",
       "ability": "Overcoat",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Foul Play",
         "Roost",
@@ -9018,6 +5686,8 @@ var SETDEX_SV = {
       ]
     },
     "Bird Keeper COBY": {
+      "index": 402,
+      "slot": 1,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -9030,7 +5700,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Rocky Helmet",
       "ability": "Overcoat",
-      "nature": null,
+      "nature": "Brave",
       "moves": [
         "Foul Play",
         "Roost",
@@ -9041,6 +5711,8 @@ var SETDEX_SV = {
   },
   "Kilowattrel": {
     "Bird Keeper BENNY": {
+      "index": 22,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9053,7 +5725,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Magnet",
       "ability": "Wind Power",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Thunderbolt",
         "Hurricane",
@@ -9062,6 +5734,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker CHARLOTTE": {
+      "index": 46,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9074,7 +5748,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Heavy-Duty Boots",
       "ability": "Volt Absorb",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Discharge",
         "Hurricane",
@@ -9083,6 +5757,8 @@ var SETDEX_SV = {
       ]
     },
     "Youngster TIMMY": {
+      "index": 230,
+      "slot": 1,
       "level": "28",
       "ivs": {
         "hp": 31,
@@ -9095,7 +5771,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Volt Absorb",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Discharge",
         "Air Slash",
@@ -9104,6 +5780,8 @@ var SETDEX_SV = {
       ]
     },
     "Bug Maniac ANGELO": {
+      "index": 322,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 31,
@@ -9125,6 +5803,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker CELIA": {
+      "index": 463,
+      "slot": 1,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -9137,7 +5817,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Safety Goggles",
       "ability": "Volt Absorb",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Air Slash",
         "Discharge",
@@ -9148,6 +5828,8 @@ var SETDEX_SV = {
   },
   "Talonflame": {
     "Bird Keeper BENNY": {
+      "index": 22,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9160,7 +5842,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Heavy-Duty Boots",
       "ability": "Gale Wings",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Brave Bird",
         "Flare Blitz",
@@ -9168,7 +5850,9 @@ var SETDEX_SV = {
         "Roost"
       ]
     },
-    "Kindler BERNIE [BERNIE_1]": {
+    "Kindler BERNIE": {
+      "index": 190,
+      "slot": 4,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -9181,7 +5865,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sharp Beak",
       "ability": "Flame Body",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Flare Blitz",
         "Dual Wingbeat",
@@ -9189,28 +5873,9 @@ var SETDEX_SV = {
         "U-turn"
       ]
     },
-    "Kindler BERNIE [BERNIE_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Sharp Beak",
-      "ability": "Flame Body",
-      "nature": null,
-      "moves": [
-        "Flare Blitz",
-        "Dual Wingbeat",
-        "Roost",
-        "U-turn"
-      ]
-    },
-    "Triathlete BENJAMIN [BENJAMIN_1]": {
+    "Triathlete BENJAMIN": {
+      "index": 263,
+      "slot": 1,
       "level": "49",
       "ivs": {
         "hp": 31,
@@ -9223,7 +5888,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sharp Beak",
       "ability": "Gale Wings",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Brave Bird",
         "Flame Charge",
@@ -9234,6 +5899,8 @@ var SETDEX_SV = {
   },
   "Corviknight": {
     "Bird Keeper BENNY": {
+      "index": 22,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9246,38 +5913,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sharp Beak",
       "ability": "Mirror Armor",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Brave Bird",
         "Iron Defense",
         "Body Press",
         "Roost"
       ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT1]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Mirror Armor",
-      "nature": null,
-      "moves": [
-        "Iron Defense",
-        "Body Press",
-        "Brave Bird",
-        "U-turn"
-      ]
     }
   },
   "Noivern": {
     "Bird Keeper BENNY": {
+      "index": 22,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9290,7 +5938,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Throat Spray",
       "ability": "Infiltrator",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Boomburst",
         "Draco Meteor",
@@ -9299,6 +5947,8 @@ var SETDEX_SV = {
       ]
     },
     "Triathlete JACOB": {
+      "index": 458,
+      "slot": 2,
       "level": "49",
       "ivs": {
         "hp": 31,
@@ -9311,7 +5961,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Throat Spray",
       "ability": "Infiltrator",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Boomburst",
         "Dragon Pulse",
@@ -9322,6 +5972,8 @@ var SETDEX_SV = {
   },
   "Weezing": {
     "Ninja Boy LUNG": {
+      "index": 23,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9334,36 +5986,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Black Sludge",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Gunk Shot",
         "Destiny Bond",
         "Explosion",
         "Will-O-Wisp"
       ]
-    },
-    "Ninja Boy LAO [LAO_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": "Smoke Ball",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Sludge"
-      ]
     }
   },
   "Muk-Alola": {
     "Ninja Boy LUNG": {
+      "index": 23,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9376,7 +6011,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Assault Vest",
       "ability": "Corrosion",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Knock Off",
         "Poison Jab",
@@ -9387,6 +6022,8 @@ var SETDEX_SV = {
   },
   "Emboar": {
     "Battle Girl CORA": {
+      "index": 24,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9399,7 +6036,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Band",
       "ability": "Reckless",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Flare Blitz",
         "Close Combat",
@@ -9408,6 +6045,8 @@ var SETDEX_SV = {
       ]
     },
     "Kindler BRYANT": {
+      "index": 378,
+      "slot": 1,
       "level": "35",
       "ivs": {
         "hp": 31,
@@ -9431,6 +6070,8 @@ var SETDEX_SV = {
   },
   "Hitmonlee": {
     "Battle Girl CORA": {
+      "index": 24,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9443,7 +6084,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "White Herb",
       "ability": "Iron Kick",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "High Jump Kick",
         "Knock Off",
@@ -9452,6 +6093,8 @@ var SETDEX_SV = {
       ]
     },
     "Battle Girl JOCELYN": {
+      "index": 142,
+      "slot": 0,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -9470,31 +6113,12 @@ var SETDEX_SV = {
         "Blaze Kick",
         "Mega Kick"
       ]
-    },
-    "Leader BRAWLY [BRAWLY_5]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Mega Kick",
-        "Focus Punch",
-        "Earthquake",
-        "Bulk Up"
-      ]
     }
   },
   "Hitmonchan": {
     "Battle Girl CORA": {
+      "index": 24,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9507,7 +6131,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Assault Vest",
       "ability": "Iron Fist",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Drain Punch",
         "Thunder Punch",
@@ -9516,6 +6140,8 @@ var SETDEX_SV = {
       ]
     },
     "Black Belt TAKAO": {
+      "index": 135,
+      "slot": 0,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -9534,52 +6160,12 @@ var SETDEX_SV = {
         "Thunder Punch",
         "Ice Punch"
       ]
-    },
-    "Leader BRAWLY [BRAWLY_4]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sky Uppercut",
-        "Protect",
-        "Fire Punch",
-        "Ice Punch"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_5]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sky Uppercut",
-        "Protect",
-        "Fire Punch",
-        "Ice Punch"
-      ]
     }
   },
   "Bewear": {
     "Battle Girl CORA": {
+      "index": 24,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9592,7 +6178,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Fluffy",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Drain Punch",
         "Double-Edge",
@@ -9600,7 +6186,9 @@ var SETDEX_SV = {
         "Earthquake"
       ]
     },
-    "Cooltrainer WILTON [WILTON_1]": {
+    "Cooltrainer WILTON": {
+      "index": 180,
+      "slot": 2,
       "level": "35",
       "ivs": {
         "hp": 31,
@@ -9624,6 +6212,8 @@ var SETDEX_SV = {
   },
   "Mienshao": {
     "Battle Girl CORA": {
+      "index": 24,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9636,7 +6226,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Regenerator",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Close Combat",
         "U-turn",
@@ -9647,6 +6237,8 @@ var SETDEX_SV = {
   },
   "Leafeon": {
     "Battle Girl PAULA": {
+      "index": 25,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9659,7 +6251,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Miracle Seed",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Leaf Blade",
         "Knock Off",
@@ -9668,6 +6260,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker AUTUMN": {
+      "index": 417,
+      "slot": 1,
       "level": "40",
       "ivs": {
         "hp": 31,
@@ -9680,7 +6274,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Miracle Seed",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Synthesis",
         "Leaf Blade",
@@ -9691,6 +6285,8 @@ var SETDEX_SV = {
   },
   "Heracross": {
     "Battle Girl PAULA": {
+      "index": 25,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9703,7 +6299,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Megahorn",
         "Close Combat",
@@ -9712,6 +6308,8 @@ var SETDEX_SV = {
       ]
     },
     "Pokemaniac WYATT": {
+      "index": 44,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9724,7 +6322,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Muscle Band",
       "ability": "Moxie",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Trailblaze",
         "Megahorn",
@@ -9735,6 +6333,8 @@ var SETDEX_SV = {
   },
   "Tsareena": {
     "Battle Girl PAULA": {
+      "index": 25,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9747,7 +6347,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Assault Vest",
       "ability": "Queenly Majesty",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Power Whip",
         "Triple Axel",
@@ -9758,6 +6358,8 @@ var SETDEX_SV = {
   },
   "Ludicolo": {
     "Battle Girl PAULA": {
+      "index": 25,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9770,7 +6372,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Damp Rock",
       "ability": "Swift Swim",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Scald",
         "Giga Drain",
@@ -9779,6 +6381,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer WARREN": {
+      "index": 290,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 12,
@@ -9794,103 +6398,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_TREECKO]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_TORCHIC]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_TREECKO]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_TORCHIC]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Collector EDWIN [EDWIN_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Camper SHANE": {
+      "index": 397,
+      "slot": 4,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -9912,6 +6422,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer MICHELLE": {
+      "index": 425,
+      "slot": 2,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -9928,6 +6440,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Champion WALLACE": {
+      "index": 469,
+      "slot": 2,
       "level": "56",
       "ivs": {
         "hp": 31,
@@ -9951,6 +6465,8 @@ var SETDEX_SV = {
   },
   "Comfey": {
     "Picnicker MARTHA": {
+      "index": 26,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9963,7 +6479,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Big Root",
       "ability": "Triage",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Leech Seed",
         "Draining Kiss",
@@ -9974,6 +6490,8 @@ var SETDEX_SV = {
   },
   "Wigglytuff": {
     "Picnicker MARTHA": {
+      "index": 26,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -9986,7 +6504,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Throat Spray",
       "ability": "Cute Charm",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Hyper Voice",
         "Alluring Voice",
@@ -9995,6 +6513,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer ALEXIA": {
+      "index": 182,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 31,
@@ -10014,7 +6534,9 @@ var SETDEX_SV = {
         "Shadow Ball"
       ]
     },
-    "Parasol Lady MADELINE [MADELINE_1]": {
+    "Parasol Lady MADELINE": {
+      "index": 249,
+      "slot": 1,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -10038,6 +6560,8 @@ var SETDEX_SV = {
   },
   "Togetic": {
     "Picnicker MARTHA": {
+      "index": 26,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -10050,7 +6574,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Eviolite",
       "ability": "Serene Grace",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Air Slash",
         "Dazzling Gleam",
@@ -10061,6 +6585,8 @@ var SETDEX_SV = {
   },
   "Sylveon": {
     "Picnicker MARTHA": {
+      "index": 26,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -10073,7 +6599,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Pixilate",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Moonblast",
         "Hyper Voice",
@@ -10083,7 +6609,9 @@ var SETDEX_SV = {
     }
   },
   "Volbeat": {
-    "Twins AMY & LIV [AMY_AND_LIV_1]": {
+    "Twins AMY & LIV": {
+      "index": 27,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -10096,7 +6624,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Focus Sash",
       "ability": "Prankster",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Tail Glow",
         "Tailwind",
@@ -10105,6 +6633,8 @@ var SETDEX_SV = {
       ]
     },
     "Bug Catcher GREG": {
+      "index": 161,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -10120,7 +6650,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_1]": {
+    "Young Couple KIRA & DAN": {
+      "index": 163,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -10137,6 +6669,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pokefan KALEB": {
+      "index": 240,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 31,
@@ -10149,81 +6683,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Focus Band",
       "ability": "Prankster",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "U-turn",
         "Thunder Wave",
         "Roost",
         "Covet"
       ]
-    },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Illumise": {
-    "Twins AMY & LIV [AMY_AND_LIV_1]": {
+    "Twins AMY & LIV": {
+      "index": 27,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -10236,7 +6708,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Life Orb",
       "ability": "Tinted Lens",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Psych Up",
         "Bug Buzz",
@@ -10245,6 +6717,8 @@ var SETDEX_SV = {
       ]
     },
     "Bug Catcher GREG": {
+      "index": 161,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -10260,7 +6734,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_1]": {
+    "Young Couple KIRA & DAN": {
+      "index": 163,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -10276,7 +6752,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pokefan ISABEL [ISABEL_1]": {
+    "Pokefan ISABEL": {
+      "index": 194,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 0,
@@ -10289,81 +6767,19 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Silver Powder",
       "ability": "Tinted Lens",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Dazzling Gleam",
         "Silver Wind",
         "Giga Drain",
         "Roost"
       ]
-    },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Young Couple KIRA & DAN [KIRA_AND_DAN_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Plusle": {
-    "Twins AMY & LIV [AMY_AND_LIV_1]": {
+    "Twins AMY & LIV": {
+      "index": 27,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -10376,7 +6792,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Shuca Berry",
       "ability": "Plus",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Encore",
         "Thunder Wave",
@@ -10384,161 +6800,9 @@ var SETDEX_SV = {
         "Grass Knot"
       ]
     },
-    "Twins AMY & LIV [AMY_AND_LIV_3]": {
-      "level": "9",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan ISABEL [ISABEL_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Twins AMY & LIV [AMY_AND_LIV_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan ISABEL [ISABEL_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Twins AMY & LIV [AMY_AND_LIV_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan ISABEL [ISABEL_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Twins AMY & LIV [AMY_AND_LIV_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Spark",
-        "Charge",
-        "Fake Tears",
-        "Helping Hand"
-      ]
-    },
-    "Pokefan ISABEL [ISABEL_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Twins AMY & LIV [AMY_AND_LIV_6]": {
-      "level": "36",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder",
-        "Charge",
-        "Fake Tears",
-        "Helping Hand"
-      ]
-    },
-    "Picnicker DIANA [DIANA_1]": {
+    "Picnicker DIANA": {
+      "index": 159,
+      "slot": 0,
       "level": "40",
       "ivs": {
         "hp": 31,
@@ -10561,7 +6825,9 @@ var SETDEX_SV = {
     }
   },
   "Minun": {
-    "Twins AMY & LIV [AMY_AND_LIV_1]": {
+    "Twins AMY & LIV": {
+      "index": 27,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -10582,161 +6848,9 @@ var SETDEX_SV = {
         "Alluring Voice"
       ]
     },
-    "Twins AMY & LIV [AMY_AND_LIV_3]": {
-      "level": "9",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan ISABEL [ISABEL_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Twins AMY & LIV [AMY_AND_LIV_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan ISABEL [ISABEL_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Twins AMY & LIV [AMY_AND_LIV_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan ISABEL [ISABEL_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Twins AMY & LIV [AMY_AND_LIV_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Spark",
-        "Charge",
-        "Charm",
-        "Helping Hand"
-      ]
-    },
-    "Pokefan ISABEL [ISABEL_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Twins AMY & LIV [AMY_AND_LIV_6]": {
-      "level": "36",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder",
-        "Charge",
-        "Charm",
-        "Helping Hand"
-      ]
-    },
-    "Picnicker DIANA [DIANA_1]": {
+    "Picnicker DIANA": {
+      "index": 159,
+      "slot": 1,
       "level": "40",
       "ivs": {
         "hp": 31,
@@ -10759,7 +6873,9 @@ var SETDEX_SV = {
     }
   },
   "Porygon-Z": {
-    "Collector EDWIN [EDWIN_1]": {
+    "Collector EDWIN": {
+      "index": 28,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -10772,14 +6888,16 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": "Adaptability",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Tri Attack",
         "Dark Pulse",
         "Signal Beam"
       ]
     },
-    "Pkmn Breeder ISAAC [ISAAC_1]": {
+    "Pkmn Breeder ISAAC": {
+      "index": 131,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -10802,7 +6920,9 @@ var SETDEX_SV = {
     }
   },
   "Chimecho": {
-    "Collector EDWIN [EDWIN_1]": {
+    "Collector EDWIN": {
+      "index": 28,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -10815,7 +6935,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Twisted Spoon",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Psychic",
         "Heal Bell",
@@ -10824,6 +6944,8 @@ var SETDEX_SV = {
       ]
     },
     "Psychic MARIELA": {
+      "index": 48,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -10836,7 +6958,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Twisted Spoon",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Calm Mind",
         "Psychic",
@@ -10847,6 +6969,8 @@ var SETDEX_SV = {
   },
   "Zangoose": {
     "Collector HECTOR": {
+      "index": 29,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -10859,7 +6983,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Close Combat",
         "Facade",
@@ -10867,28 +6991,9 @@ var SETDEX_SV = {
         "Fling"
       ]
     },
-    "Team Aqua GRUNT [GRUNT_MUSEUM_2]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Guts",
-      "nature": null,
-      "moves": [
-        "Quick Attack",
-        "Ice Punch",
-        "Thunder Punch",
-        "Body Slam"
-      ]
-    },
     "Cooltrainer JODY": {
+      "index": 183,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 31,
@@ -10908,6 +7013,8 @@ var SETDEX_SV = {
       ]
     },
     "Collector ED": {
+      "index": 255,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 0,
@@ -10924,6 +7031,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Gentleman THOMAS": {
+      "index": 451,
+      "slot": 0,
       "level": "45",
       "ivs": {
         "hp": 0,
@@ -10942,6 +7051,8 @@ var SETDEX_SV = {
   },
   "Seviper": {
     "Collector HECTOR": {
+      "index": 29,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -10954,7 +7065,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Muscle Band",
       "ability": "Shed Skin",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Swords Dance",
         "Rest",
@@ -10962,28 +7073,9 @@ var SETDEX_SV = {
         "Gunk Shot"
       ]
     },
-    "Team Aqua GRUNT [GRUNT_MUSEUM_2]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Shed Skin",
-      "nature": null,
-      "moves": [
-        "Rest",
-        "Poison Tail",
-        "Trailblaze",
-        "Dig"
-      ]
-    },
-    "Beauty JESSICA [JESSICA_1]": {
+    "Beauty JESSICA": {
+      "index": 245,
+      "slot": 1,
       "level": "29",
       "ivs": {
         "hp": 0,
@@ -11005,6 +7097,8 @@ var SETDEX_SV = {
       ]
     },
     "Collector ED": {
+      "index": 255,
+      "slot": 1,
       "level": "30",
       "ivs": {
         "hp": 0,
@@ -11019,94 +7113,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Beauty JESSICA [JESSICA_2]": {
-      "level": "35",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Poison Tail",
-        "Screech",
-        "Glare",
-        "Crunch"
-      ]
-    },
-    "Beauty JESSICA [JESSICA_3]": {
-      "level": "38",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Poison Tail",
-        "Screech",
-        "Glare",
-        "Crunch"
-      ]
-    },
-    "Beauty JESSICA [JESSICA_4]": {
-      "level": "41",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Poison Tail",
-        "Screech",
-        "Glare",
-        "Crunch"
-      ]
-    },
-    "Beauty JESSICA [JESSICA_5]": {
-      "level": "44",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Poison Tail",
-        "Screech",
-        "Glare",
-        "Crunch"
-      ]
     }
   },
   "Cacturne": {
     "Pkmn Ranger SEBASTIAN": {
+      "index": 30,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11119,7 +7131,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Bright Powder",
       "ability": "Water Absorb",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Sucker Punch",
         "Seed Bomb",
@@ -11128,6 +7140,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer EDGAR": {
+      "index": 433,
+      "slot": 0,
       "level": "43",
       "ivs": {
         "hp": 12,
@@ -11143,28 +7157,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Team Magma GRUNT [GRUNT_DESERT3]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Bright Powder",
-      "ability": "Sand Veil",
-      "nature": null,
-      "moves": [
-        "Spiky Shield",
-        "Stomping Tantrum",
-        "Needle Arm",
-        "Sucker Punch"
-      ]
-    },
     "Elite Four SIDNEY": {
+      "index": 455,
+      "slot": 2,
       "level": "46",
       "ivs": {
         "hp": 30,
@@ -11184,31 +7179,12 @@ var SETDEX_SV = {
         "Needle Arm",
         "Cotton Spore"
       ]
-    },
-    "Magma Admin TABITHA [TABITHA_DESERT]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Rocky Helmet",
-      "ability": "Rough Skin",
-      "nature": null,
-      "moves": [
-        "Spiky Shield",
-        "Sucker Punch",
-        "Seed Bomb",
-        "Shore Up"
-      ]
     }
   },
   "Shiftry": {
     "Pkmn Ranger SEBASTIAN": {
+      "index": 30,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11221,7 +7197,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Knock Off",
         "Leaf Blade",
@@ -11230,6 +7206,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer BRAXTON": {
+      "index": 228,
+      "slot": 4,
       "level": "28",
       "ivs": {
         "hp": 12,
@@ -11251,6 +7229,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer MARCEL": {
+      "index": 242,
+      "slot": 1,
       "level": "29",
       "ivs": {
         "hp": 12,
@@ -11267,6 +7247,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer RUBEN": {
+      "index": 360,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 12,
@@ -11282,39 +7264,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Collector EDWIN [EDWIN_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer VITO": {
+      "index": 423,
+      "slot": 3,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -11331,6 +7283,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Elite Four SIDNEY": {
+      "index": 455,
+      "slot": 1,
       "level": "48",
       "ivs": {
         "hp": 30,
@@ -11354,6 +7308,8 @@ var SETDEX_SV = {
   },
   "Absol": {
     "Pkmn Ranger SEBASTIAN": {
+      "index": 30,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11366,7 +7322,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Scope Lens",
       "ability": "Super Luck",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Night Slash",
         "Sucker Punch",
@@ -11375,6 +7331,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer 2 JAZMYN": {
+      "index": 221,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 0,
@@ -11391,6 +7349,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer HALLE": {
+      "index": 442,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -11407,6 +7367,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Elite Four SIDNEY": {
+      "index": 455,
+      "slot": 4,
       "level": "49",
       "ivs": {
         "hp": 31,
@@ -11428,6 +7390,8 @@ var SETDEX_SV = {
       ]
     },
     "Camper DREW": {
+      "index": 456,
+      "slot": 1,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -11450,6 +7414,8 @@ var SETDEX_SV = {
   },
   "Crawdaunt": {
     "Pkmn Ranger SEBASTIAN": {
+      "index": 30,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11462,7 +7428,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Band",
       "ability": "Adaptability",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Crabhammer",
         "Knock Off",
@@ -11470,7 +7436,9 @@ var SETDEX_SV = {
         "Superpower"
       ]
     },
-    "Leader JUAN [JUAN_1]": {
+    "Leader JUAN": {
+      "index": 454,
+      "slot": 3,
       "level": "43",
       "ivs": {
         "hp": 24,
@@ -11492,6 +7460,8 @@ var SETDEX_SV = {
       ]
     },
     "Elite Four SIDNEY": {
+      "index": 455,
+      "slot": 3,
       "level": "48",
       "ivs": {
         "hp": 30,
@@ -11511,94 +7481,12 @@ var SETDEX_SV = {
         "Strength",
         "Facade"
       ]
-    },
-    "Leader JUAN [JUAN_2]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rest",
-        "Crabhammer",
-        "Taunt",
-        "Double Team"
-      ]
-    },
-    "Leader JUAN [JUAN_3]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rest",
-        "Guillotine",
-        "Taunt",
-        "Double Team"
-      ]
-    },
-    "Leader JUAN [JUAN_4]": {
-      "level": "58",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rest",
-        "Guillotine",
-        "Taunt",
-        "Double Team"
-      ]
-    },
-    "Leader JUAN [JUAN_5]": {
-      "level": "63",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rest",
-        "Guillotine",
-        "Taunt",
-        "Double Team"
-      ]
     }
   },
   "Drapion": {
     "Pkmn Ranger SEBASTIAN": {
+      "index": 30,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11611,38 +7499,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Scope Lens",
       "ability": "Battle Armor",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Cross Poison",
         "Knock Off",
         "Earthquake",
         "Swords Dance"
       ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Scope Lens",
-      "ability": "Sniper",
-      "nature": null,
-      "moves": [
-        "Night Slash",
-        "X-Scissor",
-        "Knock Off",
-        "Earthquake"
-      ]
     }
   },
   "Lokix": {
     "Pkmn Ranger SEBASTIAN": {
+      "index": 30,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11655,7 +7524,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Heavy-Duty Boots",
       "ability": "Tinted Lens",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "First Impression",
         "Sucker Punch",
@@ -11666,6 +7535,8 @@ var SETDEX_SV = {
   },
   "Roserade": {
     "Pkmn Ranger SOPHIA": {
+      "index": 31,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11678,7 +7549,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Poison Barb",
       "ability": "Natural Cure",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Poison Drain",
         "Giga Drain",
@@ -11686,7 +7557,32 @@ var SETDEX_SV = {
         "Sleep Powder"
       ]
     },
-    "Triathlete MARIA [MARIA_1]": {
+    "Cooltrainer BROOKE": {
+      "index": 184,
+      "slot": 2,
+      "level": "36",
+      "ivs": {
+        "hp": 0,
+        "at": 30,
+        "df": 30,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Wide Lens",
+      "ability": "Technician",
+      "nature": "Timid",
+      "moves": [
+        "Giga Drain",
+        "Hidden Power",
+        "Sludge Bomb",
+        "Sleep Powder"
+      ]
+    },
+    "Triathlete MARIA": {
+      "index": 232,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -11706,31 +7602,12 @@ var SETDEX_SV = {
         "Protect",
         "Synthesis"
       ]
-    },
-    "Cooltrainer BROOKE [BROOKE_1]": {
-      "level": "36",
-      "ivs": {
-        "hp": 0,
-        "at": 30,
-        "df": 30,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Wide Lens",
-      "ability": "Technician",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Hidden Power",
-        "Sludge Bomb",
-        "Sleep Powder"
-      ]
     }
   },
   "Jumpluff": {
     "Pkmn Ranger SOPHIA": {
+      "index": 31,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11743,7 +7620,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Wide Lens",
       "ability": "Infiltrator",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Leech Seed",
         "Acrobatics",
@@ -11754,6 +7631,8 @@ var SETDEX_SV = {
   },
   "Vileplume": {
     "Pkmn Ranger SOPHIA": {
+      "index": 31,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11766,33 +7645,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Big Root",
       "ability": "Effect Spore",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Giga Drain",
         "Sludge Bomb",
         "Moonlight",
         "Synthesis"
       ]
-    },
-    "Picnicker DIANA [DIANA_5]": {
-      "level": "40",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Brambleghast": {
     "Pkmn Ranger SOPHIA": {
+      "index": 31,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11805,28 +7670,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Occa Berry",
       "ability": "Wind Rider",
-      "nature": null,
-      "moves": [
-        "Spikes",
-        "Poltergeist",
-        "Power Whip",
-        "Strength Sap"
-      ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Occa Berry",
-      "ability": "Wind Rider",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Spikes",
         "Poltergeist",
@@ -11837,6 +7681,8 @@ var SETDEX_SV = {
   },
   "Cradily": {
     "Pkmn Ranger SOPHIA": {
+      "index": 31,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11849,7 +7695,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Storm Drain",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Giga Drain",
         "Recover",
@@ -11858,6 +7704,8 @@ var SETDEX_SV = {
       ]
     },
     "Fisherman KAI": {
+      "index": 45,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11870,7 +7718,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Absorb Bulb",
       "ability": "Storm Drain",
-      "nature": null,
+      "nature": "Quiet",
       "moves": [
         "Giga Drain",
         "Ancient Power",
@@ -11878,28 +7726,9 @@ var SETDEX_SV = {
         "Sludge Bomb"
       ]
     },
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER2]": {
-      "level": "47",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Leftovers",
-      "ability": "Storm Drain",
-      "nature": null,
-      "moves": [
-        "Meteor Beam",
-        "Giga Drain",
-        "Sludge Wave",
-        "Recover"
-      ]
-    },
     "Rival STEVEN": {
+      "index": 470,
+      "slot": 3,
       "level": "76",
       "ivs": {
         "hp": 31,
@@ -11923,6 +7752,8 @@ var SETDEX_SV = {
   },
   "Marowak-Alola": {
     "Team Magma GUARDIAN GRUNT": {
+      "index": 32,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11935,7 +7766,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Cursed Body",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Flare Blitz",
         "Poltergeist",
@@ -11944,6 +7775,8 @@ var SETDEX_SV = {
       ]
     },
     "Kindler KEEGAN": {
+      "index": 443,
+      "slot": 2,
       "level": "44",
       "ivs": {
         "hp": 31,
@@ -11956,7 +7789,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Thick Club",
       "ability": "Cursed Body",
-      "nature": null,
+      "nature": "Brave",
       "moves": [
         "Flare Blitz",
         "Poltergeist",
@@ -11967,6 +7800,8 @@ var SETDEX_SV = {
   },
   "Skuntank": {
     "Team Magma GUARDIAN GRUNT": {
+      "index": 32,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -11979,7 +7814,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Rocky Helmet",
       "ability": "Aftermath",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Gunk Shot",
         "Sucker Punch",
@@ -11988,77 +7823,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Marill": {
-    "Lass JANICE [JANICE]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Huge Power",
-      "nature": null,
-      "moves": [
-        "Aqua Jet",
-        "Play Rough",
-        "Trailblaze",
-        "Protect"
-      ]
-    }
-  },
-  "Skiploom": {
-    "Lass JANICE [JANICE]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Infiltrator",
-      "nature": null,
-      "moves": [
-        "Acrobatics",
-        "Substitute",
-        "Leech Seed",
-        "Protect"
-      ]
-    }
-  },
-  "Darumaka": {
-    "Lass JANICE [JANICE]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Hustle",
-      "nature": null,
-      "moves": [
-        "Fire Punch",
-        "Brick Break",
-        "Power-Up Punch",
-        "Rock Slide"
-      ]
-    }
-  },
   "Azumarill": {
-    "Lass JANICE [JANICE_2]": {
+    "Lass JANICE": {
+      "index": 33,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12081,7 +7849,9 @@ var SETDEX_SV = {
     }
   },
   "Jumpluff": {
-    "Lass JANICE [JANICE_2]": {
+    "Lass JANICE": {
+      "index": 33,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12104,7 +7874,9 @@ var SETDEX_SV = {
     }
   },
   "Darmanitan": {
-    "Lass JANICE [JANICE_2]": {
+    "Lass JANICE": {
+      "index": 33,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12128,6 +7900,8 @@ var SETDEX_SV = {
   },
   "Lopunny": {
     "Winstrate VIVI": {
+      "index": 34,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12151,6 +7925,8 @@ var SETDEX_SV = {
   },
   "Breloom": {
     "Winstrate VIVI": {
+      "index": 34,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12163,7 +7939,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Focus Band",
       "ability": "Technician",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Mach Punch",
         "Rock Tomb",
@@ -12171,199 +7947,9 @@ var SETDEX_SV = {
         "Spore"
       ]
     },
-    "Pkmn Breeder LYDIA [LYDIA_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger JACKSON [JACKSON_1]": {
-      "level": "27",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lass HALEY [HALEY_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger JACKSON [JACKSON_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 7,
-        "at": 7,
-        "df": 7,
-        "sa": 7,
-        "sd": 7,
-        "sp": 7
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid KAREN [KAREN_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lass HALEY [HALEY_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert PAXTON": {
-      "level": "33",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aroma Lady ROSE [ROSE_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_1]": {
+    "Pkmn Breeder LYDIA": {
+      "index": 132,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 31,
@@ -12384,40 +7970,33 @@ var SETDEX_SV = {
         "Rock Tomb"
       ]
     },
-    "Pkmn Ranger JACKSON [JACKSON_3]": {
-      "level": "34",
+    "Picnicker DIANA": {
+      "index": 159,
+      "slot": 2,
+      "level": "40",
       "ivs": {
-        "hp": 8,
-        "at": 8,
-        "df": 8,
-        "sa": 8,
-        "sd": 8,
-        "sp": 8
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
+      "ivsSpecified": false,
+      "item": "Focus Sash",
+      "ability": "Technician",
       "nature": null,
-      "moves": []
+      "moves": [
+        "Spore",
+        "Mach Punch",
+        "Bullet Seed",
+        "Rock Tomb"
+      ]
     },
-    "Lass HALEY [HALEY_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid KAREN [KAREN_5]": {
-      "level": "35",
+    "Pkmn Ranger JACKSON": {
+      "index": 223,
+      "slot": 0,
+      "level": "27",
       "ivs": {
         "hp": 6,
         "at": 6,
@@ -12432,15 +8011,17 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Ranger JACKSON [JACKSON_4]": {
-      "level": "37",
+    "Expert PAXTON": {
+      "index": 316,
+      "slot": 1,
+      "level": "33",
       "ivs": {
-        "hp": 9,
-        "at": 9,
-        "df": 9,
-        "sa": 9,
-        "sd": 9,
-        "sp": 9
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
       },
       "ivsSpecified": true,
       "item": null,
@@ -12449,6 +8030,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Camper SHANE": {
+      "index": 397,
+      "slot": 1,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -12468,63 +8051,12 @@ var SETDEX_SV = {
         "Spore",
         "Rock Tomb"
       ]
-    },
-    "Pkmn Ranger JACKSON [JACKSON_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 10,
-        "at": 10,
-        "df": 10,
-        "sa": 10,
-        "sd": 10,
-        "sp": 10
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_1]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Focus Sash",
-      "ability": "Technician",
-      "nature": null,
-      "moves": [
-        "Spore",
-        "Mach Punch",
-        "Bullet Seed",
-        "Rock Tomb"
-      ]
-    },
-    "Picnicker DIANA [DIANA_5]": {
-      "level": "40",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Weepinbell": {
     "Lass SALLY": {
+      "index": 35,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12537,7 +8069,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Black Sludge",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Sleep Powder",
         "Razor Leaf",
@@ -12548,6 +8080,8 @@ var SETDEX_SV = {
   },
   "Ivysaur": {
     "Lass SALLY": {
+      "index": 35,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12560,7 +8094,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Eviolite",
       "ability": "Overgrow",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Giga Drain",
         "Sludge Bomb",
@@ -12571,6 +8105,8 @@ var SETDEX_SV = {
   },
   "Purugly": {
     "Lass ROBIN": {
+      "index": 36,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12583,7 +8119,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Silk Scarf",
       "ability": "Defiant",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Fake Out",
         "Double-Edge",
@@ -12592,6 +8128,8 @@ var SETDEX_SV = {
       ]
     },
     "Triathlete JASMINE": {
+      "index": 460,
+      "slot": 0,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -12604,7 +8142,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Hard Stone",
       "ability": "Defiant",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Defense Curl",
         "Rollout",
@@ -12615,6 +8153,8 @@ var SETDEX_SV = {
   },
   "Togedemaru": {
     "Lass ROBIN": {
+      "index": 36,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12627,7 +8167,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Focus Sash",
       "ability": "Iron Barbs",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Zing Zap",
         "Iron Head",
@@ -12636,6 +8176,8 @@ var SETDEX_SV = {
       ]
     },
     "Battle Girl VIVIAN": {
+      "index": 285,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -12659,6 +8201,8 @@ var SETDEX_SV = {
   },
   "Pachirisu": {
     "Lass ROBIN": {
+      "index": 36,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12671,38 +8215,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Magnet",
       "ability": "Volt Absorb",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Nuzzle",
         "Super Fang",
         "U-turn",
         "Charm"
       ]
-    },
-    "Triathlete ABIGAIL [ABIGAIL_3]": {
-      "level": null,
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Sitrus Berry",
-      "ability": "Volt Absorb",
-      "nature": null,
-      "moves": [
-        "U-turn",
-        "Super Fang",
-        "Thunder Wave",
-        "Encore"
-      ]
     }
   },
   "Golem": {
     "Hiker ALAN": {
+      "index": 37,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12715,7 +8240,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Custap Berry",
       "ability": "Sturdy",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Stealth Rock",
         "Earthquake",
@@ -12723,60 +8248,9 @@ var SETDEX_SV = {
         "Explosion"
       ]
     },
-    "Hiker TRENT [TRENT_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker SAWYER [SAWYER_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader ROXANNE [ROXANNE_2]": {
-      "level": "32",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Rollout",
-        "Magnitude",
-        "Explosion"
-      ]
-    },
     "Camper SHANE": {
+      "index": 397,
+      "slot": 0,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -12797,70 +8271,9 @@ var SETDEX_SV = {
         "Explosion"
       ]
     },
-    "Leader ROXANNE [ROXANNE_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Rollout",
-        "Magnitude",
-        "Explosion"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_4]": {
-      "level": "42",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Rollout",
-        "Earthquake",
-        "Explosion"
-      ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT5]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Muscle Band",
-      "ability": "Rock Head",
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Head Smash",
-        "Double-Edge",
-        "Explosion"
-      ]
-    },
     "Triathlete JASMINE": {
+      "index": 460,
+      "slot": 1,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -12873,36 +8286,17 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Focus Band",
       "ability": "Sturdy",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Defense Curl",
         "Rollout"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_5]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Focus Punch",
-        "Rollout",
-        "Earthquake",
-        "Explosion"
       ]
     }
   },
   "Probopass": {
     "Hiker ALAN": {
+      "index": 37,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12915,7 +8309,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Air Balloon",
       "ability": "Sturdy",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Power Gem",
         "Flash Cannon",
@@ -12926,6 +8320,8 @@ var SETDEX_SV = {
   },
   "Rhydon": {
     "Hiker ALAN": {
+      "index": 37,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12938,33 +8334,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Eviolite",
       "ability": "Lightning Rod",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Earthquake",
         "Rock Blast",
         "Megahorn",
         "Swords Dance"
       ]
-    },
-    "Pokemaniac STEVE [STEVE_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Boldore": {
     "Hiker ALAN": {
+      "index": 37,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -12977,7 +8359,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Hard Stone",
       "ability": "Sturdy",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Rock Blast",
         "Earthquake",
@@ -12988,6 +8370,8 @@ var SETDEX_SV = {
   },
   "Pupitar": {
     "Hiker ALAN": {
+      "index": 37,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13000,7 +8384,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Soft Sand",
       "ability": "Shed Skin",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Rock Slide",
         "Crunch",
@@ -13011,6 +8395,8 @@ var SETDEX_SV = {
   },
   "Garganacl": {
     "Hiker ALAN": {
+      "index": 37,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13023,7 +8409,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Rocky Helmet",
       "ability": "Purifying Salt",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Salt Cure",
         "Recover",
@@ -13032,8 +8418,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Aipom": {
-    "Rich Boy DAWSON [DAWSON]": {
+  "Ambipom": {
+    "Rich Boy DAWSON": {
+      "index": 38,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13056,28 +8444,9 @@ var SETDEX_SV = {
     }
   },
   "Clamperl": {
-    "Rich Boy DAWSON [DAWSON]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Shell Armor",
-      "nature": null,
-      "moves": [
-        "Barrier",
-        "Protect",
-        "Water Pulse",
-        "Secret Power"
-      ]
-    },
-    "Rich Boy DAWSON [DAWSON_2]": {
+    "Rich Boy DAWSON": {
+      "index": 38,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13099,6 +8468,8 @@ var SETDEX_SV = {
       ]
     },
     "Beauty OLIVIA": {
+      "index": 405,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 12,
@@ -13120,100 +8491,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Zigzagoon": {
-    "Lady SARAH [SARAH]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Liechi Berry",
-      "ability": "Gluttony",
-      "nature": null,
-      "moves": [
-        "Covet",
-        "Return",
-        "Pursuit",
-        "Protect"
-      ]
-    }
-  },
-  "Lotad": {
-    "Lady SARAH [SARAH]": {
-      "level": "1",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": "Swift Swim",
-      "nature": null,
-      "moves": [
-        "Mega Drain",
-        "Bubble Beam",
-        "Protect",
-        "Leech Seed"
-      ]
-    }
-  },
-  "Sandshrew": {
-    "Lady SARAH [SARAH]": {
-      "level": "1",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Sand Veil",
-      "nature": null,
-      "moves": [
-        "Gyro Ball",
-        "Dig",
-        "Detect",
-        "Knock Off"
-      ]
-    }
-  },
-  "Ambipom": {
-    "Rich Boy DAWSON [DAWSON_2]": {
-      "level": "1",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Skill Link",
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Return",
-        "Seed Bomb",
-        "Acrobatics"
-      ]
-    }
-  },
   "Linoone": {
-    "Lady SARAH [SARAH_2]": {
+    "Lady SARAH": {
+      "index": 39,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13226,7 +8507,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Gluttony",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Belly Drum",
         "Return",
@@ -13236,7 +8517,9 @@ var SETDEX_SV = {
     }
   },
   "Ludicolo": {
-    "Lady SARAH [SARAH_2]": {
+    "Lady SARAH": {
+      "index": 39,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -13259,7 +8542,9 @@ var SETDEX_SV = {
     }
   },
   "Sandslash": {
-    "Lady SARAH [SARAH_2]": {
+    "Lady SARAH": {
+      "index": 39,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -13272,7 +8557,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Muscle Band",
       "ability": "Sand Veil",
-      "nature": null,
+      "nature": "Brave",
       "moves": [
         "Gyro Ball",
         "Dig",
@@ -13283,6 +8568,8 @@ var SETDEX_SV = {
   },
   "Bellibolt": {
     "Guitarist JOSEPH": {
+      "index": 40,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13306,6 +8593,8 @@ var SETDEX_SV = {
   },
   "Toxtricity": {
     "Guitarist JOSEPH": {
+      "index": 40,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13326,7 +8615,32 @@ var SETDEX_SV = {
         "Volt Switch"
       ]
     },
+    "Triathlete BENJAMIN": {
+      "index": 263,
+      "slot": 2,
+      "level": "49",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Throat Spray",
+      "ability": "Punk Rock",
+      "nature": "Timid",
+      "moves": [
+        "Overdrive",
+        "Sludge Bomb",
+        "Boomburst",
+        "Shift Gear"
+      ]
+    },
     "Battle Girl VIVIAN": {
+      "index": 285,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -13346,31 +8660,12 @@ var SETDEX_SV = {
         "Nuzzle",
         "Sludge Bomb"
       ]
-    },
-    "Triathlete BENJAMIN [BENJAMIN_1]": {
-      "level": "49",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Throat Spray",
-      "ability": "Punk Rock",
-      "nature": null,
-      "moves": [
-        "Overdrive",
-        "Sludge Bomb",
-        "Boomburst",
-        "Shift Gear"
-      ]
     }
   },
   "Electrode": {
     "Guitarist MARCOS": {
+      "index": 41,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13383,7 +8678,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Magnet",
       "ability": "Soundproof",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Explosion",
         "Volt Switch",
@@ -13391,6 +8686,8 @@ var SETDEX_SV = {
       ]
     },
     "Guitarist KIRK": {
+      "index": 280,
+      "slot": 2,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -13403,7 +8700,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Air Balloon",
       "ability": "Galvanize",
-      "nature": null,
+      "nature": "Serious",
       "moves": [
         "Electroweb",
         "Hyper Voice",
@@ -13412,6 +8709,8 @@ var SETDEX_SV = {
       ]
     },
     "Triathlete ALYSSA": {
+      "index": 288,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -13431,28 +8730,9 @@ var SETDEX_SV = {
         "Electroweb"
       ]
     },
-    "Leader WATTSON [WATTSON_2]": {
-      "level": "36",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rollout",
-        "Thunder",
-        "Explosion",
-        "Rain Dance"
-      ]
-    },
     "Cooltrainer VITO": {
+      "index": 423,
+      "slot": 2,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -13467,94 +8747,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Leader WATTSON [WATTSON_3]": {
-      "level": "41",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rollout",
-        "Thunder",
-        "Explosion",
-        "Rain Dance"
-      ]
-    },
-    "Triathlete ABIGAIL [ABIGAIL_3]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Air Balloon",
-      "ability": "Aftermath",
-      "nature": null,
-      "moves": [
-        "Explosion",
-        "Thunderbolt",
-        "Flash Cannon",
-        "Hidden Power"
-      ]
-    },
-    "Leader WATTSON [WATTSON_4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rollout",
-        "Thunder",
-        "Explosion",
-        "Rain Dance"
-      ]
-    },
-    "Leader WATTSON [WATTSON_5]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rollout",
-        "Thunder",
-        "Explosion",
-        "Rain Dance"
-      ]
     }
   },
   "Electrode-Hisui": {
     "Guitarist MARCOS": {
+      "index": 41,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13567,96 +8765,18 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Magnet",
       "ability": "Aftermath",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Explosion",
         "Volt Switch",
         "Chloroblast"
       ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TREECKO]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Air Balloon",
-      "ability": "Static",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Thunderbolt",
-        "Volt Switch"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TORCHIC]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Air Balloon",
-      "ability": "Static",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Thunderbolt",
-        "Volt Switch"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TREECKO]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Air Balloon",
-      "ability": "Static",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Thunderbolt",
-        "Volt Switch"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TORCHIC]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Air Balloon",
-      "ability": "Static",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Thunderbolt",
-        "Volt Switch"
-      ]
     }
   },
   "Meltan": {
     "Guitarist MARCOS": {
+      "index": 41,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13669,7 +8789,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Custap Berry",
       "ability": "Magnet Pull",
-      "nature": null,
+      "nature": "Serious",
       "moves": [
         "Endeavor",
         "Endure",
@@ -13680,6 +8800,8 @@ var SETDEX_SV = {
   },
   "Escavalier": {
     "Guitarist MARCOS": {
+      "index": 41,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13692,7 +8814,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Shell Armor",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Megahorn",
         "Iron Head",
@@ -13703,6 +8825,8 @@ var SETDEX_SV = {
   },
   "Tauros": {
     "Black Belt RHETT": {
+      "index": 42,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13715,38 +8839,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Sheer Force",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Double-Edge",
         "Zen Headbutt",
         "Earthquake",
         "Iron Head"
       ]
-    },
-    "Leader NORMAN [NORMAN_5]": {
-      "level": "57",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Take Down",
-        "Protect",
-        "Fire Blast",
-        "Earthquake"
-      ]
     }
   },
   "Tauros-Paldea-Combat": {
     "Black Belt RHETT": {
+      "index": 42,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13759,7 +8864,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Cud Chew",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Substitute",
         "Protect",
@@ -13770,6 +8875,8 @@ var SETDEX_SV = {
   },
   "Tauros-Paldea-Aqua": {
     "Black Belt RHETT": {
+      "index": 42,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13782,7 +8889,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Band",
       "ability": "Intimidate",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Raging Bull",
         "Close Combat"
@@ -13791,6 +8898,8 @@ var SETDEX_SV = {
   },
   "Tauros-Paldea-Blaze": {
     "Black Belt RHETT": {
+      "index": 42,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13803,13 +8912,15 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Scarf",
       "ability": "Intimidate",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Raging Bull",
         "Close Combat"
       ]
     },
-    "Kindler BERNIE [BERNIE_1]": {
+    "Kindler BERNIE": {
+      "index": 190,
+      "slot": 0,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -13822,28 +8933,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Cud Chew",
-      "nature": null,
-      "moves": [
-        "Raging Bull",
-        "Body Press",
-        "Substitute",
-        "Bulk Up"
-      ]
-    },
-    "Kindler BERNIE [BERNIE_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Sitrus Berry",
-      "ability": "Cud Chew",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Raging Bull",
         "Body Press",
@@ -13854,6 +8944,8 @@ var SETDEX_SV = {
   },
   "Weezing-Galar": {
     "Camper LAWRENCE": {
+      "index": 43,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13866,7 +8958,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Black Sludge",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Strange Steam",
         "Protect",
@@ -13877,6 +8969,8 @@ var SETDEX_SV = {
   },
   "Thievul": {
     "Camper LAWRENCE": {
+      "index": 43,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13889,7 +8983,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Black Glasses",
       "ability": "Stakeout",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Parting Shot",
         "Dark Pulse",
@@ -13900,6 +8994,8 @@ var SETDEX_SV = {
   },
   "Ninjask": {
     "Pokemaniac WYATT": {
+      "index": 44,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -13912,7 +9008,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Technician",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Feint Attack",
         "Bug Bite",
@@ -13921,6 +9017,8 @@ var SETDEX_SV = {
       ]
     },
     "Ninja Boy TAKASHI": {
+      "index": 155,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -13937,6 +9035,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bug Catcher KENT": {
+      "index": 162,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -13953,6 +9053,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Ninja Boy YASU": {
+      "index": 197,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -13969,6 +9071,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Ninja Boy JAIDEN": {
+      "index": 208,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -13984,23 +9088,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Bug Catcher JAMES [JAMES_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Bug Catcher DOUG": {
+      "index": 237,
+      "slot": 1,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -14017,6 +9107,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Ninja Boy KEIGO": {
+      "index": 238,
+      "slot": 1,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -14036,58 +9128,12 @@ var SETDEX_SV = {
         "Fury Cutter",
         "Swords Dance"
       ]
-    },
-    "Bug Catcher JAMES [JAMES_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Catcher JAMES [JAMES_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Catcher JAMES [JAMES_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Politoed": {
     "Fisherman KAI": {
+      "index": 45,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14100,7 +9146,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Drizzle",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Flip Turn",
         "Giga Drain",
@@ -14109,6 +9155,8 @@ var SETDEX_SV = {
       ]
     },
     "Psychic BRANDI": {
+      "index": 365,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 31,
@@ -14128,31 +9176,12 @@ var SETDEX_SV = {
         "Flip Turn",
         "Icy Wind"
       ]
-    },
-    "Leader JUAN [JUAN_5]": {
-      "level": "61",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hypnosis",
-        "Rain Dance",
-        "Hydro Pump",
-        "Perish Song"
-      ]
     }
   },
   "Clodsire": {
     "Fisherman KAI": {
+      "index": 45,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14165,38 +9194,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Black Sludge",
       "ability": "Water Absorb",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "High Horsepower",
         "Body Press",
         "Gunk Shot",
         "Curse"
       ]
-    },
-    "Magma Admin TABITHA [TABITHA_DESERT]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Black Sludge",
-      "ability": "Water Absorb",
-      "nature": null,
-      "moves": [
-        "Spikes",
-        "Recover",
-        "Earthquake",
-        "Poison Jab"
-      ]
     }
   },
   "Pincurchin": {
     "Fisherman KAI": {
+      "index": 45,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14209,7 +9219,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Cell Battery",
       "ability": "Lightning Rod",
-      "nature": null,
+      "nature": "Quiet",
       "moves": [
         "Sucker Punch",
         "Surf",
@@ -14220,6 +9230,8 @@ var SETDEX_SV = {
   },
   "Heliolisk": {
     "Picnicker CHARLOTTE": {
+      "index": 46,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -14239,31 +9251,12 @@ var SETDEX_SV = {
         "Hyper Voice",
         "Focus Blast"
       ]
-    },
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER1]": {
-      "level": "46",
-      "ivs": {
-        "hp": 1,
-        "at": 30,
-        "df": 30,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Expert Belt",
-      "ability": "Sand Veil",
-      "nature": null,
-      "moves": [
-        "Hyper Voice",
-        "Hidden Power",
-        "Thunderbolt",
-        "Grass Knot"
-      ]
     }
   },
   "Masquerain": {
     "Picnicker CHARLOTTE": {
+      "index": 46,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -14276,7 +9269,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Sharp Beak",
       "ability": "Swift Swim",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Surf",
         "Hurricane",
@@ -14285,6 +9278,8 @@ var SETDEX_SV = {
       ]
     },
     "Bug Maniac DEREK": {
+      "index": 298,
+      "slot": 4,
       "level": "33",
       "ivs": {
         "hp": 31,
@@ -14304,58 +9299,12 @@ var SETDEX_SV = {
         "Scald",
         "Giga Drain"
       ]
-    },
-    "Bug Maniac JEFFREY [JEFFREY_3]": {
-      "level": "34",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Maniac JEFFREY [JEFFREY_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Maniac JEFFREY [JEFFREY_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": "Silver Powder",
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Grumpig": {
     "Psychic MARLENE": {
+      "index": 47,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -14375,26 +9324,12 @@ var SETDEX_SV = {
         "Psychic Noise",
         "Psychic Terrain"
       ]
-    },
-    "Hex Maniac VALERIE [VALERIE_5]": {
-      "level": "42",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Hypno": {
     "Psychic MARLENE": {
+      "index": 47,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 0,
@@ -14414,9 +9349,13 @@ var SETDEX_SV = {
         "Calm Mind",
         "Dark Pulse"
       ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_4]": {
-      "level": "58",
+    }
+  },
+  "Hatterene": {
+    "Psychic MARIELA": {
+      "index": 48,
+      "slot": 1,
+      "level": "1",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -14425,41 +9364,22 @@ var SETDEX_SV = {
         "sd": 31,
         "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
+      "ivsSpecified": false,
+      "item": "Sitrus Berry",
+      "ability": "Magic Bounce",
+      "nature": "Modest",
       "moves": [
-        "Hypnosis",
-        "Dream Eater",
-        "Headbutt",
-        "Protect"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_5]": {
-      "level": "63",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hypnosis",
-        "Dream Eater",
-        "Headbutt",
-        "Protect"
+        "Psychic",
+        "Dazzling Gleam",
+        "Mystical Fire",
+        "Calm Mind"
       ]
     }
   },
   "Rabsca": {
     "Psychic MARIELA": {
+      "index": 48,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14472,7 +9392,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Colbur Berry",
       "ability": "Synchronize",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Psychic",
         "Bug Buzz",
@@ -14483,6 +9403,8 @@ var SETDEX_SV = {
   },
   "Orbeetle": {
     "Psychic MARIELA": {
+      "index": 48,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14495,7 +9417,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Light Clay",
       "ability": "Frisk",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Psychic",
         "Bug Buzz",
@@ -14506,6 +9428,8 @@ var SETDEX_SV = {
   },
   "Slowbro-Galar": {
     "Psychic MARIELA": {
+      "index": 48,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14518,7 +9442,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Quick Claw",
       "ability": "Quick Draw",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Shell Side Arm",
         "Expanding Force",
@@ -14529,6 +9453,8 @@ var SETDEX_SV = {
   },
   "Delphox": {
     "Psychic MARIELA": {
+      "index": 48,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14541,7 +9467,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Wise Glasses",
       "ability": "Blaze",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Psychic",
         "Flamethrower",
@@ -14550,6 +9476,8 @@ var SETDEX_SV = {
       ]
     },
     "Kindler COLE": {
+      "index": 427,
+      "slot": 1,
       "level": "42",
       "ivs": {
         "hp": 0,
@@ -14562,7 +9490,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Life Orb",
       "ability": "Magic Guard",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Heat Wave",
         "Mystical Fire",
@@ -14573,6 +9501,8 @@ var SETDEX_SV = {
   },
   "Armarouge": {
     "Psychic ALVARO": {
+      "index": 49,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14585,7 +9515,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Weakness Policy",
       "ability": "Flash Fire",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Armor Cannon",
         "Psychic",
@@ -14594,6 +9524,8 @@ var SETDEX_SV = {
       ]
     },
     "Triathlete JULIO": {
+      "index": 419,
+      "slot": 0,
       "level": "40",
       "ivs": {
         "hp": 0,
@@ -14606,7 +9538,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": "Mega Launcher",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Armor Cannon",
         "Psyshock",
@@ -14614,7 +9546,9 @@ var SETDEX_SV = {
         "Aura Sphere"
       ]
     },
-    "Leader FLANNERY [FLANNERY_1]": {
+    "Leader FLANNERY": {
+      "index": 421,
+      "slot": 2,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -14638,6 +9572,8 @@ var SETDEX_SV = {
   },
   "Sigilyph": {
     "Psychic ALVARO": {
+      "index": 49,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14650,7 +9586,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Flame Orb",
       "ability": "Magic Guard",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Psychic",
         "Air Slash",
@@ -14659,6 +9595,8 @@ var SETDEX_SV = {
       ]
     },
     "Camper DREW": {
+      "index": 456,
+      "slot": 2,
       "level": "50",
       "ivs": {
         "hp": 0,
@@ -14682,6 +9620,8 @@ var SETDEX_SV = {
   },
   "Gengar": {
     "Psychic ALVARO": {
+      "index": 49,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14694,7 +9634,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Cursed Body",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Shadow Ball",
         "Sludge Bomb",
@@ -14705,6 +9645,8 @@ var SETDEX_SV = {
   },
   "Meowstic": {
     "Psychic ALVARO": {
+      "index": 49,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14717,7 +9659,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Light Clay",
       "ability": "Prankster",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Psychic",
         "Reflect",
@@ -14728,6 +9670,8 @@ var SETDEX_SV = {
   },
   "Oranguru": {
     "Psychic ALVARO": {
+      "index": 49,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14740,7 +9684,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Inner Focus",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Psychic",
         "Foul Play",
@@ -14751,6 +9695,8 @@ var SETDEX_SV = {
   },
   "Slowking": {
     "Psychic ALVARO": {
+      "index": 49,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14763,38 +9709,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Assault Vest",
       "ability": "Regenerator",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Scald",
         "Psychic",
         "Ice Beam",
         "Flamethrower"
       ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_5]": {
-      "level": "63",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Yawn",
-        "Psychic",
-        "Calm Mind",
-        "Protect"
-      ]
     }
   },
   "Wobbuffet": {
     "Gentleman EVERETT": {
+      "index": 50,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14807,7 +9734,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Shadow Tag",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Counter",
         "Mirror Coat",
@@ -14816,6 +9743,8 @@ var SETDEX_SV = {
       ]
     },
     "Psychic KAYLA": {
+      "index": 193,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -14832,6 +9761,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Psychic CEDRIC": {
+      "index": 283,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -14853,6 +9784,8 @@ var SETDEX_SV = {
       ]
     },
     "Psychic NICHOLAS": {
+      "index": 390,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 0,
@@ -14871,6 +9804,8 @@ var SETDEX_SV = {
   },
   "Toxapex": {
     "Gentleman EVERETT": {
+      "index": 50,
+      "slot": 1,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14883,7 +9818,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Rocky Helmet",
       "ability": "Regenerator",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Scald",
         "Haze",
@@ -14894,6 +9829,8 @@ var SETDEX_SV = {
   },
   "Umbreon": {
     "Gentleman EVERETT": {
+      "index": 50,
+      "slot": 2,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14906,7 +9843,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Synchronize",
-      "nature": null,
+      "nature": "Careful",
       "moves": [
         "Foul Play",
         "Wish",
@@ -14917,6 +9854,8 @@ var SETDEX_SV = {
   },
   "Blissey": {
     "Gentleman EVERETT": {
+      "index": 50,
+      "slot": 3,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14929,59 +9868,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Heavy-Duty Boots",
       "ability": "Natural Cure",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Seismic Toss",
         "Soft-Boiled",
         "Thunder Wave",
         "Aromatherapy"
       ]
-    },
-    "Leader NORMAN [NORMAN_4]": {
-      "level": "52",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Light Screen",
-        "Sing",
-        "Skill Swap",
-        "Focus Punch"
-      ]
-    },
-    "Leader NORMAN [NORMAN_5]": {
-      "level": "57",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Sing",
-        "Skill Swap",
-        "Focus Punch"
-      ]
     }
   },
   "Skarmory": {
     "Gentleman EVERETT": {
+      "index": 50,
+      "slot": 4,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -14994,7 +9893,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Rocky Helmet",
       "ability": "Sturdy",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Spikes",
         "Roost",
@@ -15003,6 +9902,8 @@ var SETDEX_SV = {
       ]
     },
     "Bird Keeper ELIJAH": {
+      "index": 167,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -15019,6 +9920,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper JARED": {
+      "index": 220,
+      "slot": 1,
       "level": "27",
       "ivs": {
         "hp": 12,
@@ -15035,6 +9938,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper HUMBERTO": {
+      "index": 264,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 30,
@@ -15051,6 +9956,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper AIDAN": {
+      "index": 287,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -15066,7 +9973,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Leader WINONA [WINONA_1]": {
+    "Leader WINONA": {
+      "index": 299,
+      "slot": 3,
       "level": "31",
       "ivs": {
         "hp": 26,
@@ -15088,6 +9997,8 @@ var SETDEX_SV = {
       ]
     },
     "Bird Keeper COBY": {
+      "index": 402,
+      "slot": 0,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -15109,6 +10020,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer CAROLINE": {
+      "index": 435,
+      "slot": 0,
       "level": "43",
       "ivs": {
         "hp": 12,
@@ -15124,28 +10037,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Leader WINONA [WINONA_2]": {
-      "level": "43",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Whirlwind",
-        "Spikes",
-        "Steel Wing",
-        "Aerial Ace"
-      ]
-    },
     "Triathlete JACOB": {
+      "index": 458,
+      "slot": 0,
       "level": "49",
       "ivs": {
         "hp": 31,
@@ -15158,7 +10052,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Weak Armor",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Iron Defense",
         "Body Press",
@@ -15167,6 +10061,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker CELIA": {
+      "index": 463,
+      "slot": 0,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -15179,7 +10075,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sharp Beak",
       "ability": "Weak Armor",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Brave Bird",
         "Iron Head",
@@ -15187,70 +10083,9 @@ var SETDEX_SV = {
         "Protect"
       ]
     },
-    "Leader WINONA [WINONA_3]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Whirlwind",
-        "Spikes",
-        "Steel Wing",
-        "Aerial Ace"
-      ]
-    },
-    "Leader WINONA [WINONA_4]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Whirlwind",
-        "Spikes",
-        "Steel Wing",
-        "Aerial Ace"
-      ]
-    },
-    "Leader WINONA [WINONA_5]": {
-      "level": "58",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Whirlwind",
-        "Spikes",
-        "Steel Wing",
-        "Aerial Ace"
-      ]
-    },
     "Rival STEVEN": {
+      "index": 470,
+      "slot": 0,
       "level": "77",
       "ivs": {
         "hp": 31,
@@ -15272,6 +10107,8 @@ var SETDEX_SV = {
       ]
     },
     "Partner Rival STEVEN": {
+      "index": 473,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 31,
@@ -15284,7 +10121,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": null,
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Toxic",
         "Aerial Ace",
@@ -15295,6 +10132,8 @@ var SETDEX_SV = {
   },
   "Milotic": {
     "Gentleman EVERETT": {
+      "index": 50,
+      "slot": 5,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -15307,7 +10146,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Mystic Water",
       "ability": "Marvel Scale",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Scald",
         "Ice Beam",
@@ -15316,6 +10155,8 @@ var SETDEX_SV = {
       ]
     },
     "Champion WALLACE": {
+      "index": 469,
+      "slot": 5,
       "level": "58",
       "ivs": {
         "hp": 31,
@@ -15338,7 +10179,9 @@ var SETDEX_SV = {
     }
   },
   "Treecko": {
-    "Rival BRENDAN [BRENDAN_ROUTE_103_MUDKIP]": {
+    "Rival BRENDAN": {
+      "index": 51,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15357,7 +10200,9 @@ var SETDEX_SV = {
         "Leer"
       ]
     },
-    "Rival MAY [MAY_ROUTE_103_MUDKIP]": {
+    "Rival MAY": {
+      "index": 52,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15374,91 +10219,13 @@ var SETDEX_SV = {
       "moves": [
         "Pound",
         "Leer"
-      ]
-    }
-  },
-  "Torchic": {
-    "Rival BRENDAN [BRENDAN_ROUTE_103_TREECKO]": {
-      "level": "5",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Scratch",
-        "Growl"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_103_TREECKO]": {
-      "level": "5",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Scratch",
-        "Leer"
-      ]
-    }
-  },
-  "Mudkip": {
-    "Rival BRENDAN [BRENDAN_ROUTE_103_TORCHIC]": {
-      "level": "5",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Growl"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_103_TORCHIC]": {
-      "level": "5",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Growl"
       ]
     }
   },
   "Beldum": {
     "Salon Maiden ANABEL": {
+      "index": 53,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15475,6 +10242,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Dome Ace TUCKER": {
+      "index": 54,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15491,6 +10260,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Palace Maven SPENSER": {
+      "index": 55,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15507,6 +10278,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Arena Tycoon GRETA": {
+      "index": 56,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15523,6 +10296,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Factory Head NOLAND": {
+      "index": 57,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15539,6 +10314,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pike Queen LUCY": {
+      "index": 58,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15555,6 +10332,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pyramid King BRANDON": {
+      "index": 59,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15573,6 +10352,8 @@ var SETDEX_SV = {
   },
   "Charmander": {
     "Rival RED": {
+      "index": 60,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15591,6 +10372,8 @@ var SETDEX_SV = {
   },
   "Bulbasaur": {
     "Rival LEAF": {
+      "index": 61,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15609,6 +10392,8 @@ var SETDEX_SV = {
   },
   "Groudon": {
     "RS Protag BRENDAN": {
+      "index": 62,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15627,6 +10412,8 @@ var SETDEX_SV = {
   },
   "Kyogre": {
     "RS Protag MAY": {
+      "index": 63,
+      "slot": 0,
       "level": "5",
       "ivs": {
         "hp": 0,
@@ -15645,6 +10432,8 @@ var SETDEX_SV = {
   },
   "Magikarp": {
     "Fisherman IVAN": {
+      "index": 64,
+      "slot": 2,
       "level": "7",
       "ivs": {
         "hp": 0,
@@ -15661,6 +10450,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman DARIAN": {
+      "index": 77,
+      "slot": 0,
       "level": "12",
       "ivs": {
         "hp": 31,
@@ -15680,6 +10471,8 @@ var SETDEX_SV = {
       ]
     },
     "Fisherman CHRIS": {
+      "index": 251,
+      "slot": 0,
       "level": "29",
       "ivs": {
         "hp": 0,
@@ -15696,6 +10489,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman RONALD": {
+      "index": 369,
+      "slot": 0,
       "level": "19",
       "ivs": {
         "hp": 0,
@@ -15712,6 +10507,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman ROGER": {
+      "index": 375,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -15729,7 +10526,9 @@ var SETDEX_SV = {
     }
   },
   "Zigzagoon": {
-    "Youngster CALVIN [CALVIN_1]": {
+    "Youngster CALVIN": {
+      "index": 65,
+      "slot": 0,
       "level": "7",
       "ivs": {
         "hp": 31,
@@ -15750,26 +10549,9 @@ var SETDEX_SV = {
         "Baby-Doll Eyes"
       ]
     },
-    "Lady CINDY [CINDY_2]": {
-      "level": "11",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Nugget",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Tail Whip"
-      ]
-    },
     "Youngster DEANDRE": {
+      "index": 85,
+      "slot": 0,
       "level": "14",
       "ivs": {
         "hp": 0,
@@ -15785,7 +10567,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Camper ETHAN [ETHAN_1]": {
+    "Camper ETHAN": {
+      "index": 116,
+      "slot": 0,
       "level": "20",
       "ivs": {
         "hp": 0,
@@ -15802,6 +10586,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Youngster DEMETRIUS": {
+      "index": 152,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -15818,6 +10604,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pkmn Breeder MYLES": {
+      "index": 169,
+      "slot": 3,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -15833,7 +10621,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_1]": {
+    "Pkmn Breeder GABRIELLE": {
+      "index": 171,
+      "slot": 2,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -15848,84 +10638,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Camper ETHAN [ETHAN_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_2]": {
-      "level": "28",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Growl",
-        "Tail Whip",
-        "Headbutt",
-        "Odor Sleuth"
-      ]
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_3]": {
-      "level": "31",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Growl",
-        "Tail Whip",
-        "Headbutt",
-        "Odor Sleuth"
-      ]
     }
   },
   "Yamper": {
-    "Youngster CALVIN [CALVIN_1]": {
+    "Youngster CALVIN": {
+      "index": 65,
+      "slot": 1,
       "level": "7",
       "ivs": {
         "hp": 31,
@@ -15938,7 +10656,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Rattled",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Nuzzle",
         "Tackle",
@@ -15948,7 +10666,9 @@ var SETDEX_SV = {
     }
   },
   "Zigzagoon-Galar": {
-    "Youngster CALVIN [CALVIN_1]": {
+    "Youngster CALVIN": {
+      "index": 65,
+      "slot": 2,
       "level": "8",
       "ivs": {
         "hp": 31,
@@ -15961,7 +10681,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Oran Berry",
       "ability": "Gluttony",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Lick",
         "Pursuit",
@@ -15972,6 +10692,8 @@ var SETDEX_SV = {
   },
   "Ledyba": {
     "Bug Catcher RICK": {
+      "index": 66,
+      "slot": 0,
       "level": "8",
       "ivs": {
         "hp": 31,
@@ -15984,7 +10706,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Swarm",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Tackle",
         "Supersonic",
@@ -15995,6 +10717,8 @@ var SETDEX_SV = {
   },
   "Venipede": {
     "Bug Catcher RICK": {
+      "index": 66,
+      "slot": 1,
       "level": "8",
       "ivs": {
         "hp": 31,
@@ -16007,7 +10731,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Speed Boost",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Defense Curl",
         "Rollout",
@@ -16018,6 +10742,8 @@ var SETDEX_SV = {
   },
   "Tarountula": {
     "Bug Catcher RICK": {
+      "index": 66,
+      "slot": 2,
       "level": "9",
       "ivs": {
         "hp": 31,
@@ -16039,44 +10765,108 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Wailmer": {
-    "Hiker LUCAS [LUCAS_2]": {
-      "level": "9",
+  "Lycanroc-Dusk": {
+    "Hiker LUCAS": {
+      "index": 67,
+      "slot": 0,
+      "level": "38",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
+      "ivsSpecified": false,
+      "item": "Muscle Band",
+      "ability": "Tough Claws",
+      "nature": "Adamant",
       "moves": [
-        "Splash",
-        "Water Gun"
+        "Swords Dance",
+        "Accelerock",
+        "Rock Slide",
+        "Brick Break"
+      ]
+    }
+  },
+  "Mudsdale": {
+    "Hiker LUCAS": {
+      "index": 67,
+      "slot": 1,
+      "level": "38",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Leftovers",
+      "ability": "Stamina",
+      "nature": "Impish",
+      "moves": [
+        "Body Press",
+        "Earthquake",
+        "Double-Edge",
+        "Heavy Slam"
+      ]
+    }
+  },
+  "Barbaracle": {
+    "Hiker LUCAS": {
+      "index": 67,
+      "slot": 2,
+      "level": "38",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Expert Belt",
+      "ability": "Tough Claws",
+      "nature": "Adamant",
+      "moves": [
+        "Shell Smash",
+        "Razor Shell",
+        "Stone Edge",
+        "Cross Chop"
       ]
     },
-    "Fisherman DALE": {
-      "level": "14",
+    "Battle Girl AISHA": {
+      "index": 366,
+      "slot": 1,
+      "level": "34",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
+      "ivsSpecified": false,
+      "item": "Rindo Berry",
+      "ability": "Tough Claws",
       "nature": null,
-      "moves": []
-    },
-    "Fisherman NED": {
-      "level": "21",
+      "moves": [
+        "Shell Smash",
+        "Rock Tomb",
+        "Razor Shell"
+      ]
+    }
+  },
+  "Riolu": {
+    "Twins GINA & MIA": {
+      "index": 68,
+      "slot": 0,
+      "level": "15",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -16087,96 +10877,42 @@ var SETDEX_SV = {
       },
       "ivsSpecified": false,
       "item": null,
-      "ability": "Water Veil",
-      "nature": null,
+      "ability": "Prankster",
+      "nature": "Adamant",
       "moves": [
-        "Brine",
-        "Heavy Slam",
-        "Water Pulse",
-        "Rain Dance"
+        "Coaching",
+        "Force Palm",
+        "Helping Hand",
+        "Follow Me"
+      ]
+    }
+  },
+  "Trapinch": {
+    "Twins GINA & MIA": {
+      "index": 68,
+      "slot": 1,
+      "level": "15",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": null,
+      "ability": "Sheer Force",
+      "nature": "Adamant",
+      "moves": [
+        "Rock Throw",
+        "Bite",
+        "Bulldoze"
       ]
     },
-    "Beauty THALIA [THALIA_1]": {
-      "level": "25",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman CARTER": {
-      "level": "25",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer F BEVERLY": {
-      "level": "25",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer WILTON [WILTON_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer F KYLA": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer BRAXTON": {
+      "index": 228,
+      "slot": 1,
       "level": "28",
       "ivs": {
         "hp": 12,
@@ -16191,190 +10927,83 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": [
-        "Rollout",
-        "Whirlpool",
-        "Astonish",
-        "Water Pulse"
+        "Bite",
+        "Dig",
+        "Feint Attack",
+        "Sand Tomb"
+      ]
+    }
+  },
+  "Zubat": {
+    "Twins GINA & MIA": {
+      "index": 68,
+      "slot": 2,
+      "level": "15",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": null,
+      "ability": "Inner Focus",
+      "nature": null,
+      "moves": [
+        "Bite",
+        "Absorb",
+        "Poison Fang"
       ]
     },
-    "Parasol Lady CLARISSA": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer WILTON [WILTON_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_MT_PYRE_4]": {
+    "Magma Admin TABITHA": {
+      "index": 319,
+      "slot": 2,
       "level": "30",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 9,
+        "at": 9,
+        "df": 9,
+        "sa": 9,
+        "sd": 9,
+        "sp": 9
       },
       "ivsSpecified": true,
       "item": null,
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_UNUSED]": {
-      "level": "31",
+    }
+  },
+  "Lombre": {
+    "Twins GINA & MIA": {
+      "index": 68,
+      "slot": 3,
+      "level": "15",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
+      "ivsSpecified": false,
       "item": null,
-      "ability": null,
+      "ability": "Rain Dish",
       "nature": null,
-      "moves": []
+      "moves": [
+        "Fake Out",
+        "Mega Drain",
+        "Bubble Beam",
+        "Rain Dance"
+      ]
     },
-    "Cooltrainer WILTON [WILTON_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman JONAH": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M SANTIAGO": {
-      "level": "33",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M CHAD": {
-      "level": "33",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer F JENNY [JENNY_1]": {
-      "level": "34",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor HUDSON": {
-      "level": "34",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Beauty THALIA [THALIA_2]": {
-      "level": "34",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer WILTON [WILTON_1]": {
-      "level": "35",
+    "Sailor HUEY": {
+      "index": 130,
+      "slot": 2,
+      "level": "22",
       "ivs": {
         "hp": 0,
         "at": 31,
@@ -16384,25 +11013,25 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": true,
-      "item": null,
-      "ability": "Water Veil",
+      "item": "Oran Berry",
+      "ability": "Rain Dish",
       "nature": null,
       "moves": [
-        "Water Spout",
-        "Icy Wind",
-        "Scald",
-        "Protect"
+        "Giga Drain",
+        "Bubble Beam"
       ]
     },
-    "Cooltrainer WILTON [WILTON_5]": {
-      "level": "35",
+    "Pkmn Ranger LORENZO": {
+      "index": 235,
+      "slot": 2,
+      "level": "28",
       "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
+        "hp": 6,
+        "at": 6,
+        "df": 6,
+        "sa": 6,
+        "sd": 6,
+        "sp": 6
       },
       "ivsSpecified": true,
       "item": null,
@@ -16410,15 +11039,17 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Fisherman WAYNE": {
-      "level": "36",
+    "Pkmn Ranger JENNA": {
+      "index": 236,
+      "slot": 1,
+      "level": "28",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 6,
+        "at": 6,
+        "df": 6,
+        "sa": 6,
+        "sd": 6,
+        "sp": 6
       },
       "ivsSpecified": true,
       "item": null,
@@ -16426,55 +11057,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Beauty THALIA [THALIA_3]": {
-      "level": "36",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer F JENNY [JENNY_2]": {
-      "level": "38",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Beauty THALIA [THALIA_4]": {
-      "level": "38",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lass CRISSY": {
+    "Beauty OLIVIA": {
+      "index": 405,
+      "slot": 2,
       "level": "39",
       "ivs": {
         "hp": 12,
@@ -16488,378 +11073,18 @@ var SETDEX_SV = {
       "item": null,
       "ability": null,
       "nature": null,
-      "moves": []
-    },
-    "Swimmer F JENNY [JENNY_3]": {
-      "level": "41",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer F JENNY [JENNY_4]": {
-      "level": "43",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer F JENNY [JENNY_5]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Duskull": {
-    "Twins GINA & MIA [GINA_AND_MIA_2]": {
-      "level": "10",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
       "moves": [
-        "Night Shade",
-        "Disable"
+        "Uproar",
+        "Fury Swipes",
+        "Fake Out",
+        "Water Pulse"
       ]
-    },
-    "Hex Maniac TAMMY": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac KINDRA": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac VALERIE [VALERIE_5]": {
-      "level": "42",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Shroomish": {
-    "Twins GINA & MIA [GINA_AND_MIA_2]": {
-      "level": "10",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Absorb",
-        "Leech Seed"
-      ]
-    },
-    "Aroma Lady ROSE [ROSE_1]": {
-      "level": "14",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid KAREN [KAREN_1]": {
-      "level": "14",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Toxic Orb",
-      "ability": "Poison Heal",
-      "nature": null,
-      "moves": [
-        "Mega Drain",
-        "Leech Seed",
-        "Headbutt",
-        "Stun Spore"
-      ]
-    },
-    "Picnicker IRENE": {
-      "level": "17",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker BIANCA": {
-      "level": "18",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Beauty SHEILA": {
-      "level": "21",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_2]": {
-      "level": "25",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder PAT": {
-      "level": "25",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aroma Lady ROSE [ROSE_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid KAREN [KAREN_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lass HALEY [HALEY_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aroma Lady ROSE [ROSE_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid KAREN [KAREN_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aroma Lady ROSE [ROSE_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Pelipper": {
-    "Hiker MIKE [MIKE_1]": {
+    "Hiker MIKE": {
+      "index": 69,
+      "slot": 0,
       "level": "10",
       "ivs": {
         "hp": 0,
@@ -16879,6 +11104,8 @@ var SETDEX_SV = {
       ]
     },
     "Sailor HUEY": {
+      "index": 130,
+      "slot": 0,
       "level": "20",
       "ivs": {
         "hp": 0,
@@ -16898,39 +11125,9 @@ var SETDEX_SV = {
         "Icy Wind"
       ]
     },
-    "Pkmn Breeder LYDIA [LYDIA_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer WENDY": {
+      "index": 243,
+      "slot": 2,
       "level": "29",
       "ivs": {
         "hp": 12,
@@ -16951,39 +11148,9 @@ var SETDEX_SV = {
         "Protect"
       ]
     },
-    "Cooltrainer BROOKE [BROOKE_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Kindler BERNIE [BERNIE_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Bird Keeper EDWARDO": {
+      "index": 247,
+      "slot": 1,
       "level": "29",
       "ivs": {
         "hp": 18,
@@ -17000,6 +11167,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper ALBERTO": {
+      "index": 254,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 0,
@@ -17015,119 +11184,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Rival BRENDAN [BRENDAN_ROUTE_119_MUDKIP]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_119_TREECKO]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_ROUTE_119_TREECKO]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder LYDIA [LYDIA_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer BROOKE [BROOKE_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Kindler BERNIE [BERNIE_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor CORY [CORY_3]": {
-      "level": "32",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader WINONA [WINONA_1]": {
+    "Leader WINONA": {
+      "index": 299,
+      "slot": 2,
       "level": "30",
       "ivs": {
         "hp": 25,
@@ -17149,6 +11208,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer DARCY": {
+      "index": 320,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -17164,23 +11225,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Cooltrainer BROOKE [BROOKE_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer M RICHARD": {
+      "index": 330,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -17197,6 +11244,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F KAYLEE": {
+      "index": 352,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -17212,151 +11261,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_MUDKIP]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_TREECKO]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_MUDKIP]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_TREECKO]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor CORY [CORY_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor CORY [CORY_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor ERNEST [ERNEST_3]": {
-      "level": "39",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete PABLO [PABLO_4]": {
-      "level": "41",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor ERNEST [ERNEST_4]": {
-      "level": "42",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer EDGAR": {
+      "index": 433,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 12,
@@ -17373,6 +11280,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Sailor LEONARD": {
+      "index": 440,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -17387,126 +11296,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Triathlete PABLO [PABLO_5]": {
-      "level": "43",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor ERNEST [ERNEST_5]": {
-      "level": "45",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader WINONA [WINONA_2]": {
-      "level": "41",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Surf",
-        "Supersonic",
-        "Protect",
-        "Aerial Ace"
-      ]
-    },
-    "Leader WINONA [WINONA_3]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Surf",
-        "Supersonic",
-        "Protect",
-        "Aerial Ace"
-      ]
-    },
-    "Leader WINONA [WINONA_4]": {
-      "level": "51",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Surf",
-        "Supersonic",
-        "Protect",
-        "Aerial Ace"
-      ]
-    },
-    "Leader WINONA [WINONA_5]": {
-      "level": "55",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Surf",
-        "Supersonic",
-        "Protect",
-        "Aerial Ace"
-      ]
     }
   },
   "Poochyena": {
-    "Hiker MIKE [MIKE_1]": {
+    "Hiker MIKE": {
+      "index": 69,
+      "slot": 1,
       "level": "10",
       "ivs": {
         "hp": 0,
@@ -17526,6 +11321,8 @@ var SETDEX_SV = {
       ]
     },
     "Pkmn Breeder PAT": {
+      "index": 170,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -17541,184 +11338,10 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_1]": {
+    "Pkmn Breeder GABRIELLE": {
+      "index": 171,
+      "slot": 1,
       "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_3]": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_1]": {
-      "level": "27",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_5]": {
-      "level": "27",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_2]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_8]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_MT_PYRE_3]": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_7]": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_SPACE_CENTER_3]": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_1]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_SEAFLOOR_CAVERN_1]": {
-      "level": "36",
       "ivs": {
         "hp": 0,
         "at": 0,
@@ -17734,8 +11357,85 @@ var SETDEX_SV = {
       "moves": []
     }
   },
+  "Skitty": {
+    "Lady CINDY": {
+      "index": 70,
+      "slot": 0,
+      "level": "11",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Oran Berry",
+      "ability": "Cute Charm",
+      "nature": "Adamant",
+      "moves": [
+        "Attract",
+        "Fake Out",
+        "Covet",
+        "Last Resort"
+      ]
+    }
+  },
+  "Jigglypuff": {
+    "Lady CINDY": {
+      "index": 70,
+      "slot": 1,
+      "level": "12",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Oran Berry",
+      "ability": "Cute Charm",
+      "nature": "Relaxed",
+      "moves": [
+        "Attract",
+        "Sing",
+        "Disarming Voice",
+        "Pound"
+      ]
+    }
+  },
+  "Togepi": {
+    "Lady CINDY": {
+      "index": 70,
+      "slot": 2,
+      "level": "13",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Oran Berry",
+      "ability": "Serene Grace",
+      "nature": null,
+      "moves": [
+        "Attract",
+        "Life Dew",
+        "Metronome",
+        "Fairy Wind"
+      ]
+    }
+  },
   "Rattata-Alola": {
     "Youngster BILLY": {
+      "index": 71,
+      "slot": 0,
       "level": "11",
       "ivs": {
         "hp": 31,
@@ -17759,6 +11459,8 @@ var SETDEX_SV = {
   },
   "Lillipup": {
     "Youngster BILLY": {
+      "index": 71,
+      "slot": 1,
       "level": "11",
       "ivs": {
         "hp": 31,
@@ -17782,6 +11484,8 @@ var SETDEX_SV = {
   },
   "Smoliv": {
     "Youngster BILLY": {
+      "index": 71,
+      "slot": 2,
       "level": "11",
       "ivs": {
         "hp": 31,
@@ -17794,7 +11498,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Oran Berry",
       "ability": "Harvest",
-      "nature": null,
+      "nature": "Serious",
       "moves": [
         "Absorb",
         "Growth",
@@ -17804,6 +11508,8 @@ var SETDEX_SV = {
   },
   "Rookidee": {
     "Youngster ALLEN": {
+      "index": 72,
+      "slot": 0,
       "level": "9",
       "ivs": {
         "hp": 31,
@@ -17827,6 +11533,8 @@ var SETDEX_SV = {
   },
   "Taillow": {
     "Youngster ALLEN": {
+      "index": 72,
+      "slot": 1,
       "level": "9",
       "ivs": {
         "hp": 31,
@@ -17839,7 +11547,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Guts",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Quick Attack",
         "Roost",
@@ -17847,7 +11555,9 @@ var SETDEX_SV = {
         "Growl"
       ]
     },
-    "Camper ETHAN [ETHAN_1]": {
+    "Camper ETHAN": {
+      "index": 116,
+      "slot": 1,
       "level": "20",
       "ivs": {
         "hp": 0,
@@ -17864,6 +11574,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper CHESTER": {
+      "index": 154,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -17880,6 +11592,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper JOSUE": {
+      "index": 166,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 6,
@@ -17895,7 +11609,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_1]": {
+    "Pkmn Breeder GABRIELLE": {
+      "index": 171,
+      "slot": 5,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -17910,58 +11626,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Camper ETHAN [ETHAN_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Pidgey": {
     "Youngster ALLEN": {
+      "index": 72,
+      "slot": 2,
       "level": "11",
       "ivs": {
         "hp": 31,
@@ -17974,7 +11644,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Big Pecks",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Gust",
         "Round",
@@ -17985,6 +11655,8 @@ var SETDEX_SV = {
   },
   "Wingull": {
     "Sailor DWAYNE": {
+      "index": 73,
+      "slot": 0,
       "level": "11",
       "ivs": {
         "hp": 0,
@@ -18000,23 +11672,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder LYDIA [LYDIA_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer M DARRIN": {
+      "index": 140,
+      "slot": 1,
       "level": "24",
       "ivs": {
         "hp": 1,
@@ -18032,7 +11690,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor CORY [CORY_1]": {
+    "Sailor CORY": {
+      "index": 143,
+      "slot": 0,
       "level": "24",
       "ivs": {
         "hp": 0,
@@ -18049,6 +11709,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper HUGH": {
+      "index": 153,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -18065,6 +11727,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F BEVERLY": {
+      "index": 156,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -18081,6 +11745,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F DENISE": {
+      "index": 157,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -18097,6 +11763,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper JOSUE": {
+      "index": 166,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 6,
@@ -18113,6 +11781,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pkmn Breeder MYLES": {
+      "index": 169,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -18128,39 +11798,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Cooltrainer BROOKE [BROOKE_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Kindler BERNIE [BERNIE_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Bird Keeper PERRY": {
+      "index": 195,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -18177,6 +11817,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper COLIN": {
+      "index": 233,
+      "slot": 0,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -18192,23 +11834,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor CORY [CORY_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer M DEAN": {
+      "index": 272,
+      "slot": 1,
       "level": "31",
       "ivs": {
         "hp": 0,
@@ -18225,6 +11853,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M SPENCER": {
+      "index": 292,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -18241,6 +11871,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M HERMAN": {
+      "index": 293,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -18257,6 +11889,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M DUDLEY": {
+      "index": 295,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -18273,6 +11907,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete ALLISON": {
+      "index": 303,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 0,
@@ -18288,7 +11924,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor ERNEST [ERNEST_1]": {
+    "Sailor ERNEST": {
+      "index": 311,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -18305,6 +11943,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete CHASE": {
+      "index": 337,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -18321,6 +11961,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete DONNY": {
+      "index": 339,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -18337,6 +11979,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Sis And Bro RELI & IAN": {
+      "index": 377,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -18351,42 +11995,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Sailor ERNEST [ERNEST_2]": {
-      "level": "36",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete PABLO [PABLO_3]": {
-      "level": "39",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Machop": {
     "Sailor DWAYNE": {
+      "index": 73,
+      "slot": 1,
       "level": "11",
       "ivs": {
         "hp": 0,
@@ -18402,23 +12016,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Hiker MIKE [MIKE_2]": {
-      "level": "16",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Hiker BRICE": {
+      "index": 104,
+      "slot": 1,
       "level": "17",
       "ivs": {
         "hp": 0,
@@ -18434,7 +12034,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Black Belt NOB [NOB_1]": {
+    "Black Belt NOB": {
+      "index": 111,
+      "slot": 0,
       "level": "19",
       "ivs": {
         "hp": 12,
@@ -18450,7 +12052,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor CORY [CORY_1]": {
+    "Sailor CORY": {
+      "index": 143,
+      "slot": 1,
       "level": "24",
       "ivs": {
         "hp": 0,
@@ -18467,6 +12071,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Black Belt KOICHI": {
+      "index": 229,
+      "slot": 0,
       "level": "24",
       "ivs": {
         "hp": 12,
@@ -18482,87 +12088,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Hiker SAWYER [SAWYER_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt NOB [NOB_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor CORY [CORY_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker SAWYER [SAWYER_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt NOB [NOB_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Black Belt HITOSHI": {
+      "index": 278,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 6,
@@ -18578,55 +12106,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor CORY [CORY_3]": {
-      "level": "32",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt NOB [NOB_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor CORY [CORY_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Sailor LEONARD": {
+      "index": 440,
+      "slot": 0,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -18645,6 +12127,8 @@ var SETDEX_SV = {
   },
   "Tentacool": {
     "Sailor DWAYNE": {
+      "index": 73,
+      "slot": 2,
       "level": "11",
       "ivs": {
         "hp": 0,
@@ -18661,6 +12145,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman DALE": {
+      "index": 82,
+      "slot": 2,
       "level": "11",
       "ivs": {
         "hp": 0,
@@ -18677,6 +12163,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M PETE": {
+      "index": 91,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 0,
@@ -18693,6 +12181,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman WADE": {
+      "index": 97,
+      "slot": 0,
       "level": "16",
       "ivs": {
         "hp": 0,
@@ -18709,6 +12199,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Youngster JOHNSON": {
+      "index": 101,
+      "slot": 1,
       "level": "16",
       "ivs": {
         "hp": 0,
@@ -18728,7 +12220,9 @@ var SETDEX_SV = {
         "Supersonic"
       ]
     },
-    "Fisherman ELLIOT [ELLIOT_1]": {
+    "Fisherman ELLIOT": {
+      "index": 126,
+      "slot": 1,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -18750,6 +12244,8 @@ var SETDEX_SV = {
       ]
     },
     "Swimmer M DOUGLAS": {
+      "index": 139,
+      "slot": 1,
       "level": "24",
       "ivs": {
         "hp": 1,
@@ -18766,6 +12262,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M DARRIN": {
+      "index": 140,
+      "slot": 2,
       "level": "24",
       "ivs": {
         "hp": 1,
@@ -18781,7 +12279,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor CORY [CORY_1]": {
+    "Sailor CORY": {
+      "index": 143,
+      "slot": 2,
       "level": "24",
       "ivs": {
         "hp": 0,
@@ -18798,6 +12298,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M DAVID": {
+      "index": 148,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -18814,6 +12316,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman BARNY": {
+      "index": 150,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -18830,6 +12334,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M DOMINIK": {
+      "index": 186,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -18845,23 +12351,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Fisherman ELLIOT [ELLIOT_2]": {
-      "level": "24",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Sis And Bro LISA & RAY": {
+      "index": 226,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -18877,23 +12369,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Fisherman ELLIOT [ELLIOT_3]": {
-      "level": "26",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Fisherman CHRIS": {
+      "index": 251,
+      "slot": 1,
       "level": "20",
       "ivs": {
         "hp": 0,
@@ -18909,23 +12387,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor CORY [CORY_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Fisherman JONAH": {
+      "index": 286,
+      "slot": 1,
       "level": "31",
       "ivs": {
         "hp": 0,
@@ -18941,23 +12405,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor CORY [CORY_3]": {
-      "level": "32",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer M SPENCER": {
+      "index": 292,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -18974,6 +12424,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M DUDLEY": {
+      "index": 295,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -18990,6 +12442,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M CHAD": {
+      "index": 296,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -19005,23 +12459,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor ERNEST [ERNEST_2]": {
-      "level": "36",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Fisherman WAYNE": {
+      "index": 393,
+      "slot": 1,
       "level": "31",
       "ivs": {
         "hp": 0,
@@ -19036,42 +12476,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Sailor ERNEST [ERNEST_3]": {
-      "level": "39",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor ERNEST [ERNEST_4]": {
-      "level": "42",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Cottonee": {
     "Lass TIANA": {
+      "index": 74,
+      "slot": 0,
       "level": "1",
       "ivs": {
         "hp": 31,
@@ -19095,6 +12505,8 @@ var SETDEX_SV = {
   },
   "Swirlix": {
     "Lass TIANA": {
+      "index": 74,
+      "slot": 1,
       "level": "11",
       "ivs": {
         "hp": 31,
@@ -19118,6 +12530,8 @@ var SETDEX_SV = {
   },
   "Morelull": {
     "Lass TIANA": {
+      "index": 74,
+      "slot": 2,
       "level": "11",
       "ivs": {
         "hp": 31,
@@ -19140,6 +12554,8 @@ var SETDEX_SV = {
   },
   "Azurill": {
     "Tuber M SIMON": {
+      "index": 75,
+      "slot": 0,
       "level": "12",
       "ivs": {
         "hp": 0,
@@ -19156,6 +12572,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F ALICE": {
+      "index": 129,
+      "slot": 1,
       "level": "20",
       "ivs": {
         "hp": 31,
@@ -19176,6 +12594,8 @@ var SETDEX_SV = {
       ]
     },
     "Pokefan BETHANY": {
+      "index": 407,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 12,
@@ -19194,6 +12614,8 @@ var SETDEX_SV = {
   },
   "Marill": {
     "Tuber M SIMON": {
+      "index": 75,
+      "slot": 1,
       "level": "12",
       "ivs": {
         "hp": 0,
@@ -19210,6 +12632,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Tuber F HAILEY": {
+      "index": 80,
+      "slot": 0,
       "level": "13",
       "ivs": {
         "hp": 0,
@@ -19226,6 +12650,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F ISABELLE": {
+      "index": 92,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 0,
@@ -19241,7 +12667,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "School Kid KAREN [KAREN_1]": {
+    "School Kid KAREN": {
+      "index": 94,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -19254,7 +12682,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Oran Berry",
       "ability": "Huge Power",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Aqua Jet",
         "Aqua Tail",
@@ -19263,6 +12691,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker IRENE": {
+      "index": 103,
+      "slot": 1,
       "level": "17",
       "ivs": {
         "hp": 0,
@@ -19279,6 +12709,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Beauty MELISSA": {
+      "index": 119,
+      "slot": 0,
       "level": "21",
       "ivs": {
         "hp": 0,
@@ -19295,6 +12727,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F ALICE": {
+      "index": 129,
+      "slot": 2,
       "level": "21",
       "ivs": {
         "hp": 31,
@@ -19314,23 +12748,9 @@ var SETDEX_SV = {
         "Covet"
       ]
     },
-    "Pkmn Breeder LYDIA [LYDIA_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer F TARA": {
+      "index": 158,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -19346,23 +12766,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder LYDIA [LYDIA_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Pkmn Breeder PAT": {
+      "index": 170,
+      "slot": 3,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -19379,6 +12785,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Tuber F AUSTINA": {
+      "index": 173,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -19395,6 +12803,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Tuber F GWEN": {
+      "index": 174,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -19410,23 +12820,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Tuber F LOLA [LOLA_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Tuber M CHARLIE": {
+      "index": 175,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -19443,6 +12839,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Tuber F JANI": {
+      "index": 198,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -19459,6 +12857,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F IMANI": {
+      "index": 199,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -19474,55 +12874,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder LYDIA [LYDIA_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Tuber F LOLA [LOLA_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Tuber F LOLA [LOLA_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer F NIKKI": {
+      "index": 306,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -19539,6 +12893,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F GRACE": {
+      "index": 344,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -19555,6 +12911,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pokefan BETHANY": {
+      "index": 407,
+      "slot": 1,
       "level": "37",
       "ivs": {
         "hp": 12,
@@ -19573,6 +12931,8 @@ var SETDEX_SV = {
   },
   "Nymble": {
     "Bug Catcher LYLE": {
+      "index": 76,
+      "slot": 0,
       "level": "12",
       "ivs": {
         "hp": 31,
@@ -19595,6 +12955,8 @@ var SETDEX_SV = {
   },
   "Yanma": {
     "Bug Catcher LYLE": {
+      "index": 76,
+      "slot": 1,
       "level": "12",
       "ivs": {
         "hp": 31,
@@ -19617,6 +12979,8 @@ var SETDEX_SV = {
   },
   "Feebas": {
     "Fisherman DARIAN": {
+      "index": 77,
+      "slot": 1,
       "level": "12",
       "ivs": {
         "hp": 31,
@@ -19636,6 +13000,8 @@ var SETDEX_SV = {
       ]
     },
     "Fisherman CHRIS": {
+      "index": 251,
+      "slot": 2,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -19652,6 +13018,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pokefan ANNIKA": {
+      "index": 408,
+      "slot": 1,
       "level": "39",
       "ivs": {
         "hp": 12,
@@ -19675,6 +13043,8 @@ var SETDEX_SV = {
   },
   "Luvdisc": {
     "Fisherman DARIAN": {
+      "index": 77,
+      "slot": 3,
       "level": "12",
       "ivs": {
         "hp": 31,
@@ -19694,6 +13064,8 @@ var SETDEX_SV = {
       ]
     },
     "Swimmer F SIENNA": {
+      "index": 308,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -19710,6 +13082,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F LAUREL": {
+      "index": 310,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -19726,6 +13100,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F TANYA": {
+      "index": 345,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -19742,6 +13118,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F SUSIE": {
+      "index": 348,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -19757,39 +13135,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Beauty THALIA [THALIA_3]": {
-      "level": "36",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Beauty THALIA [THALIA_4]": {
-      "level": "38",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Lady DAPHNE": {
+      "index": 404,
+      "slot": 1,
       "level": "39",
       "ivs": {
         "hp": 12,
@@ -19811,6 +13159,8 @@ var SETDEX_SV = {
       ]
     },
     "Lass ANDREA": {
+      "index": 420,
+      "slot": 0,
       "level": "40",
       "ivs": {
         "hp": 12,
@@ -19826,39 +13176,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Beauty THALIA [THALIA_5]": {
-      "level": "40",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer F JENNY [JENNY_5]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Young Couple LEA & JED": {
+      "index": 452,
+      "slot": 1,
       "level": "45",
       "ivs": {
         "hp": 0,
@@ -19874,7 +13194,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Leader JUAN [JUAN_1]": {
+    "Leader JUAN": {
+      "index": 454,
+      "slot": 0,
       "level": "41",
       "ivs": {
         "hp": 24,
@@ -19896,77 +13218,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Skitty": {
-    "Lady CINDY [CINDY_1]": {
-      "level": "11",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Oran Berry",
-      "ability": "Cute Charm",
-      "nature": null,
-      "moves": [
-        "Attract",
-        "Fake Out",
-        "Covet",
-        "Last Resort"
-      ]
-    }
-  },
-  "Jigglypuff": {
-    "Lady CINDY [CINDY_1]": {
-      "level": "12",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Oran Berry",
-      "ability": "Cute Charm",
-      "nature": null,
-      "moves": [
-        "Attract",
-        "Sing",
-        "Disarming Voice",
-        "Pound"
-      ]
-    }
-  },
-  "Togepi": {
-    "Lady CINDY [CINDY_1]": {
-      "level": "13",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Oran Berry",
-      "ability": "Serene Grace",
-      "nature": null,
-      "moves": [
-        "Attract",
-        "Life Dew",
-        "Metronome",
-        "Fairy Wind"
-      ]
-    }
-  },
   "Furfrou-Diamond-Trim": {
-    "Rich Boy WINSTON [WINSTON_1]": {
+    "Rich Boy WINSTON": {
+      "index": 78,
+      "slot": 0,
       "level": "13",
       "ivs": {
         "hp": 31,
@@ -19988,7 +13243,9 @@ var SETDEX_SV = {
     }
   },
   "Carbink": {
-    "Rich Boy WINSTON [WINSTON_1]": {
+    "Rich Boy WINSTON": {
+      "index": 78,
+      "slot": 1,
       "level": "13",
       "ivs": {
         "hp": 31,
@@ -20009,6 +13266,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker NANCY": {
+      "index": 399,
+      "slot": 2,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -20032,6 +13291,8 @@ var SETDEX_SV = {
   },
   "Goldeen": {
     "Beauty JOHANNA": {
+      "index": 79,
+      "slot": 0,
       "level": "13",
       "ivs": {
         "hp": 0,
@@ -20047,23 +13308,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder LYDIA [LYDIA_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer F DENISE": {
+      "index": 157,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -20079,23 +13326,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder LYDIA [LYDIA_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer F BETH": {
+      "index": 201,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -20112,6 +13345,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F MISSY": {
+      "index": 202,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -20128,6 +13363,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Parasol Lady RACHEL": {
+      "index": 212,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -20144,6 +13381,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Sis And Bro LISA & RAY": {
+      "index": 226,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 0,
@@ -20159,23 +13398,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder LYDIA [LYDIA_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer F KATIE": {
+      "index": 307,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -20192,6 +13417,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F BRENDA": {
+      "index": 347,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -20208,6 +13435,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Lass CRISSY": {
+      "index": 410,
+      "slot": 0,
       "level": "39",
       "ivs": {
         "hp": 12,
@@ -20224,6 +13453,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Beauty CONNIE": {
+      "index": 414,
+      "slot": 0,
       "level": "40",
       "ivs": {
         "hp": 12,
@@ -20240,8 +13471,430 @@ var SETDEX_SV = {
       "moves": []
     }
   },
+  "Shroomish": {
+    "Aroma Lady ROSE": {
+      "index": 81,
+      "slot": 1,
+      "level": "14",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "School Kid KAREN": {
+      "index": 94,
+      "slot": 1,
+      "level": "14",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Toxic Orb",
+      "ability": "Poison Heal",
+      "nature": "Serious",
+      "moves": [
+        "Mega Drain",
+        "Leech Seed",
+        "Headbutt",
+        "Stun Spore"
+      ]
+    },
+    "Picnicker IRENE": {
+      "index": 103,
+      "slot": 0,
+      "level": "17",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Picnicker BIANCA": {
+      "index": 110,
+      "slot": 0,
+      "level": "18",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Beauty SHEILA": {
+      "index": 120,
+      "slot": 0,
+      "level": "21",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Pkmn Breeder PAT": {
+      "index": 170,
+      "slot": 1,
+      "level": "25",
+      "ivs": {
+        "hp": 1,
+        "at": 1,
+        "df": 1,
+        "sa": 1,
+        "sd": 1,
+        "sp": 1
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
+  "Wailmer": {
+    "Fisherman DALE": {
+      "index": 82,
+      "slot": 3,
+      "level": "14",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Fisherman NED": {
+      "index": 127,
+      "slot": 0,
+      "level": "21",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": null,
+      "ability": "Water Veil",
+      "nature": null,
+      "moves": [
+        "Brine",
+        "Heavy Slam",
+        "Water Pulse",
+        "Rain Dance"
+      ]
+    },
+    "Beauty THALIA": {
+      "index": 147,
+      "slot": 0,
+      "level": "25",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Fisherman CARTER": {
+      "index": 151,
+      "slot": 0,
+      "level": "25",
+      "ivs": {
+        "hp": 1,
+        "at": 1,
+        "df": 1,
+        "sa": 1,
+        "sd": 1,
+        "sp": 1
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Swimmer F BEVERLY": {
+      "index": 156,
+      "slot": 1,
+      "level": "25",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Cooltrainer WILTON": {
+      "index": 180,
+      "slot": 0,
+      "level": "35",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": "Water Veil",
+      "nature": null,
+      "moves": [
+        "Water Spout",
+        "Icy Wind",
+        "Scald",
+        "Protect"
+      ]
+    },
+    "Swimmer F KYLA": {
+      "index": 200,
+      "slot": 0,
+      "level": "26",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Cooltrainer BRAXTON": {
+      "index": 228,
+      "slot": 2,
+      "level": "28",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Rollout",
+        "Whirlpool",
+        "Astonish",
+        "Water Pulse"
+      ]
+    },
+    "Parasol Lady CLARISSA": {
+      "index": 234,
+      "slot": 1,
+      "level": "28",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Fisherman JONAH": {
+      "index": 286,
+      "slot": 0,
+      "level": "30",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Swimmer M SANTIAGO": {
+      "index": 294,
+      "slot": 1,
+      "level": "33",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Swimmer M CHAD": {
+      "index": 296,
+      "slot": 1,
+      "level": "33",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Swimmer F JENNY": {
+      "index": 343,
+      "slot": 0,
+      "level": "34",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Sailor HUDSON": {
+      "index": 354,
+      "slot": 0,
+      "level": "34",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Fisherman WAYNE": {
+      "index": 393,
+      "slot": 2,
+      "level": "36",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Lass CRISSY": {
+      "index": 410,
+      "slot": 1,
+      "level": "39",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
   "Tangela": {
-    "Lass HALEY [HALEY_1]": {
+    "Lass HALEY": {
+      "index": 83,
+      "slot": 0,
       "level": "14",
       "ivs": {
         "hp": 31,
@@ -20263,7 +13916,9 @@ var SETDEX_SV = {
     }
   },
   "Flaaffy": {
-    "Lass HALEY [HALEY_1]": {
+    "Lass HALEY": {
+      "index": 83,
+      "slot": 1,
       "level": "14",
       "ivs": {
         "hp": 31,
@@ -20286,7 +13941,9 @@ var SETDEX_SV = {
     }
   },
   "Eevee": {
-    "Lass HALEY [HALEY_1]": {
+    "Lass HALEY": {
+      "index": 83,
+      "slot": 2,
       "level": "14",
       "ivs": {
         "hp": 31,
@@ -20310,6 +13967,8 @@ var SETDEX_SV = {
   },
   "Surskit": {
     "Bug Catcher JOSE": {
+      "index": 84,
+      "slot": 0,
       "level": "14",
       "ivs": {
         "hp": 31,
@@ -20331,6 +13990,8 @@ var SETDEX_SV = {
       ]
     },
     "Bug Maniac BRENT": {
+      "index": 191,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 12,
@@ -20346,7 +14007,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Bug Maniac JEFFREY [JEFFREY_1]": {
+    "Bug Maniac JEFFREY": {
+      "index": 218,
+      "slot": 2,
       "level": "27",
       "ivs": {
         "hp": 0,
@@ -20361,106 +14024,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Bug Maniac JEFFREY [JEFFREY_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Catcher JAMES [JAMES_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Catcher JAMES [JAMES_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Maniac JEFFREY [JEFFREY_3]": {
-      "level": "34",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Maniac JEFFREY [JEFFREY_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bug Maniac JEFFREY [JEFFREY_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Dewpider": {
     "Bug Catcher JOSE": {
+      "index": 84,
+      "slot": 1,
       "level": "14",
       "ivs": {
         "hp": 31,
@@ -20484,6 +14053,8 @@ var SETDEX_SV = {
   },
   "Paras": {
     "Bug Catcher JOSE": {
+      "index": 84,
+      "slot": 2,
       "level": "14",
       "ivs": {
         "hp": 31,
@@ -20507,6 +14078,8 @@ var SETDEX_SV = {
   },
   "Aron": {
     "Youngster DEANDRE": {
+      "index": 85,
+      "slot": 1,
       "level": "14",
       "ivs": {
         "hp": 0,
@@ -20523,6 +14096,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Youngster DILLON": {
+      "index": 112,
+      "slot": 0,
       "level": "19",
       "ivs": {
         "hp": 0,
@@ -20537,58 +14112,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Electrike": {
     "Youngster DEANDRE": {
+      "index": 85,
+      "slot": 2,
       "level": "14",
       "ivs": {
         "hp": 0,
@@ -20605,6 +14134,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Youngster DEMETRIUS": {
+      "index": 152,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -20621,6 +14152,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pkmn Breeder MYLES": {
+      "index": 169,
+      "slot": 4,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -20637,6 +14170,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pkmn Breeder PAT": {
+      "index": 170,
+      "slot": 2,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -20652,23 +14187,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Cooltrainer WILTON [WILTON_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist FERNANDO [FERNANDO_1]": {
+    "Guitarist FERNANDO": {
+      "index": 259,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 0,
@@ -20683,535 +14204,38 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Guitarist FERNANDO [FERNANDO_2]": {
-      "level": "35",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist FERNANDO [FERNANDO_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
-  "Skrelp": {
-    "Team Aqua GRUNT [GRUNT_PETALBURG_WOODS]": {
-      "level": "13",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Poison Touch",
-      "nature": null,
-      "moves": [
-        "Water Gun",
-        "Acid",
-        "Acid Armor"
-      ]
-    }
-  },
-  "Carvanha": {
-    "Team Aqua GRUNT [GRUNT_PETALBURG_WOODS]": {
-      "level": "14",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Rough Skin",
-      "nature": null,
-      "moves": [
-        "Aqua Jet",
-        "Assurance",
-        "Leer"
-      ]
-    },
-    "Swimmer M DAVID": {
-      "level": "25",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman BARNY": {
-      "level": "25",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_3]": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M LUIS": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M TONY [TONY_1]": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M MATTHEW": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aqua Admin SHELLY [SHELLY_WEATHER_INSTITUTE]": {
-      "level": "28",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman ELLIOT [ELLIOT_3]": {
-      "level": "26",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman CHRIS": {
+  "Arbok": {
+    "Team Aqua GRUNT": {
+      "index": 86,
+      "slot": 0,
       "level": "23",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
+      "ivsSpecified": false,
       "item": null,
-      "ability": null,
+      "ability": "Intimidate",
       "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_MT_PYRE_3]": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M DEAN": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman ELLIOT [ELLIOT_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_MT_PYRE_2]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_5]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_8]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M ROLAND": {
-      "level": "34",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M LEONARDO": {
-      "level": "34",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman HENRY": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_1]": {
-      "level": "33",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_SEAFLOOR_CAVERN_2]": {
-      "level": "36",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_SEAFLOOR_CAVERN_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Beauty TIFFANY": {
-      "level": "39",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_2]": {
-      "level": "40",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_3]": {
-      "level": "43",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
+      "moves": [
+        "Poison Fang",
+        "Knock Off",
+        "Toxic Spikes",
+        "Trailblaze"
+      ]
     }
   },
-  "Chewtle": {
-    "Team Aqua GRUNT [GRUNT_PETALBURG_WOODS]": {
-      "level": "15",
+  "Mareanie": {
+    "Team Aqua GRUNT": {
+      "index": 86,
+      "slot": 1,
+      "level": "23",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -21222,18 +14246,19 @@ var SETDEX_SV = {
       },
       "ivsSpecified": false,
       "item": null,
-      "ability": "Strong Jaw",
+      "ability": "Merciless",
       "nature": null,
       "moves": [
-        "Bite",
-        "Water Pulse",
-        "Headbutt",
-        "Rock Throw"
+        "Brine",
+        "Venoshock",
+        "Bite"
       ]
     }
   },
   "Magnemite": {
-    "Guitarist DALTON [DALTON_1]": {
+    "Guitarist DALTON": {
+      "index": 87,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 0,
@@ -21249,7 +14274,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Triathlete ABIGAIL [ABIGAIL_1]": {
+    "Triathlete ABIGAIL": {
+      "index": 98,
+      "slot": 0,
       "level": "16",
       "ivs": {
         "hp": 0,
@@ -21264,106 +14291,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Guitarist DALTON [DALTON_2]": {
-      "level": "25",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Interviewer GABBY & TY [GABBY_AND_TY_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist DALTON [DALTON_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete ABIGAIL [ABIGAIL_2]": {
-      "level": "28",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete BENJAMIN [BENJAMIN_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete BENJAMIN [BENJAMIN_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Whismur": {
-    "Guitarist DALTON [DALTON_1]": {
+    "Guitarist DALTON": {
+      "index": 87,
+      "slot": 1,
       "level": "15",
       "ivs": {
         "hp": 0,
@@ -21378,42 +14311,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Guitarist DALTON [DALTON_2]": {
-      "level": "25",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid KAREN [KAREN_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Munchlax": {
     "Youngster JOEY": {
+      "index": 88,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -21426,7 +14329,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Gluttony",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Curse",
         "Bulldoze",
@@ -21437,6 +14340,8 @@ var SETDEX_SV = {
   },
   "Litleo": {
     "Youngster JOEY": {
+      "index": 88,
+      "slot": 1,
       "level": "15",
       "ivs": {
         "hp": 0,
@@ -21449,741 +14354,16 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Metronome",
       "ability": "Rivalry",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Echoed Voice"
       ]
     }
   },
-  "Riolu": {
-    "Twins GINA & MIA [GINA_AND_MIA_1]": {
-      "level": "15",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Prankster",
-      "nature": null,
-      "moves": [
-        "Coaching",
-        "Force Palm",
-        "Helping Hand",
-        "Follow Me"
-      ]
-    }
-  },
-  "Trapinch": {
-    "Twins GINA & MIA [GINA_AND_MIA_1]": {
-      "level": "15",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Sheer Force",
-      "nature": null,
-      "moves": [
-        "Rock Throw",
-        "Bite",
-        "Bulldoze"
-      ]
-    },
-    "Cooltrainer BRAXTON": {
-      "level": "28",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Bite",
-        "Dig",
-        "Feint Attack",
-        "Sand Tomb"
-      ]
-    }
-  },
-  "Zubat": {
-    "Twins GINA & MIA [GINA_AND_MIA_1]": {
-      "level": "15",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Inner Focus",
-      "nature": null,
-      "moves": [
-        "Bite",
-        "Absorb",
-        "Poison Fang"
-      ]
-    },
-    "Team Magma GRUNT [GRUNT_MT_CHIMNEY_2]": {
-      "level": "20",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_3]": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_1]": {
-      "level": "27",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_WEATHER_INST_5]": {
-      "level": "27",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_1]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_7]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_9]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_13]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_MT_PYRE_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_7]": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_UNUSED]": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_SPACE_CENTER_3]": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_3]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_MT_PYRE_1]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_AQUA_HIDEOUT_6]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_SPACE_CENTER_5]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Magma Admin TABITHA [TABITHA_MAGMA_HIDEOUT]": {
-      "level": "30",
-      "ivs": {
-        "hp": 9,
-        "at": 9,
-        "df": 9,
-        "sa": 9,
-        "sd": 9,
-        "sp": 9
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_SEAFLOOR_CAVERN_3]": {
-      "level": "36",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Lombre": {
-    "Twins GINA & MIA [GINA_AND_MIA_1]": {
-      "level": "15",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Rain Dish",
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Mega Drain",
-        "Bubble Beam",
-        "Rain Dance"
-      ]
-    },
-    "Sailor HUEY": {
-      "level": "22",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": "Rain Dish",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Bubble Beam"
-      ]
-    },
-    "Collector EDWIN [EDWIN_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lass HALEY [HALEY_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger LORENZO": {
-      "level": "28",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger JENNA": {
-      "level": "28",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Collector EDWIN [EDWIN_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lass HALEY [HALEY_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_119_TREECKO]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_119_TORCHIC]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_ROUTE_119_MUDKIP]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_ROUTE_119_TREECKO]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_ROUTE_119_TORCHIC]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Collector EDWIN [EDWIN_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lass HALEY [HALEY_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Lass HALEY [HALEY_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_4]": {
-      "level": "35",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Beauty OLIVIA": {
-      "level": "39",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Uproar",
-        "Fury Swipes",
-        "Fake Out",
-        "Water Pulse"
-      ]
-    }
-  },
   "Vivillon-Pokeball": {
-    "Bug Catcher JAMES [JAMES_1]": {
+    "Bug Catcher JAMES": {
+      "index": 89,
+      "slot": 0,
       "level": "14",
       "ivs": {
         "hp": 0,
@@ -22205,7 +14385,9 @@ var SETDEX_SV = {
     }
   },
   "Beedrill": {
-    "Bug Catcher JAMES [JAMES_1]": {
+    "Bug Catcher JAMES": {
+      "index": 89,
+      "slot": 1,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -22227,7 +14409,9 @@ var SETDEX_SV = {
     }
   },
   "Poltchageist": {
-    "Bug Catcher JAMES [JAMES_1]": {
+    "Bug Catcher JAMES": {
+      "index": 89,
+      "slot": 2,
       "level": "14",
       "ivs": {
         "hp": 0,
@@ -22250,6 +14434,8 @@ var SETDEX_SV = {
   },
   "Sandygast": {
     "Hiker CLARK": {
+      "index": 90,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -22262,7 +14448,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Absorb Bulb",
       "ability": "Water Compaction",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Sandstorm",
         "Mega Drain",
@@ -22273,6 +14459,8 @@ var SETDEX_SV = {
   },
   "Sandshrew": {
     "Hiker CLARK": {
+      "index": 90,
+      "slot": 1,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -22285,7 +14473,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Sand Force",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Bulldoze",
         "Rapid Spin",
@@ -22294,6 +14482,8 @@ var SETDEX_SV = {
       ]
     },
     "Camper TRAVIS": {
+      "index": 106,
+      "slot": 0,
       "level": "18",
       "ivs": {
         "hp": 0,
@@ -22310,6 +14500,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Camper TYRON": {
+      "index": 114,
+      "slot": 0,
       "level": "19",
       "ivs": {
         "hp": 0,
@@ -22326,6 +14518,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Ruin Maniac FOSTER": {
+      "index": 146,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 12,
@@ -22346,7 +14540,9 @@ var SETDEX_SV = {
         "Poison Sting"
       ]
     },
-    "Ruin Maniac ANDRES [ANDRES_1]": {
+    "Ruin Maniac ANDRES": {
+      "index": 165,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 6,
@@ -22363,6 +14559,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pkmn Breeder PAT": {
+      "index": 170,
+      "slot": 4,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -22379,6 +14577,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Ruin Maniac CHIP": {
+      "index": 213,
+      "slot": 1,
       "level": "27",
       "ivs": {
         "hp": 6,
@@ -22398,74 +14598,12 @@ var SETDEX_SV = {
         "Sand Attack",
         "Poison Sting"
       ]
-    },
-    "Camper ETHAN [ETHAN_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Ruin Maniac ANDRES [ANDRES_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Ruin Maniac ANDRES [ANDRES_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Ruin Maniac ANDRES [ANDRES_4]": {
-      "level": "35",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Wooper-Paldea": {
     "Hiker CLARK": {
+      "index": 90,
+      "slot": 2,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -22478,7 +14616,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Water Absorb",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Poison Tail",
         "Bulldoze",
@@ -22489,6 +14627,8 @@ var SETDEX_SV = {
   },
   "Abra": {
     "Psychic JACLYN": {
+      "index": 93,
+      "slot": 0,
       "level": "16",
       "ivs": {
         "hp": 0,
@@ -22508,7 +14648,9 @@ var SETDEX_SV = {
     }
   },
   "Vulpix": {
-    "School Kid KAREN [KAREN_1]": {
+    "School Kid KAREN": {
+      "index": 94,
+      "slot": 2,
       "level": "16",
       "ivs": {
         "hp": 31,
@@ -22532,6 +14674,8 @@ var SETDEX_SV = {
   },
   "Dwebble": {
     "Youngster JOSH": {
+      "index": 95,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -22544,7 +14688,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Shell Armor",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Bug Bite",
         "Smack Down",
@@ -22555,6 +14699,8 @@ var SETDEX_SV = {
   },
   "Rockruff": {
     "Youngster JOSH": {
+      "index": 95,
+      "slot": 1,
       "level": "16",
       "ivs": {
         "hp": 31,
@@ -22567,7 +14713,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Oran Berry",
       "ability": "Steadfast",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Howl",
         "Bite",
@@ -22578,6 +14724,8 @@ var SETDEX_SV = {
   },
   "Onix": {
     "Youngster JOSH": {
+      "index": 95,
+      "slot": 2,
       "level": "16",
       "ivs": {
         "hp": 31,
@@ -22590,80 +14738,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Sturdy",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Bulldoze",
         "Smack Down",
         "Curse",
         "Bind"
       ]
-    },
-    "Leader ROXANNE [ROXANNE_2]": {
-      "level": "35",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Iron Tail",
-        "Explosion",
-        "Roar",
-        "Rock Slide"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_3]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Iron Tail",
-        "Explosion",
-        "Roar",
-        "Rock Slide"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_4]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Iron Tail",
-        "Explosion",
-        "Roar",
-        "Rock Slide"
-      ]
     }
   },
   "Rhyhorn": {
     "Youngster TOMMY": {
+      "index": 96,
+      "slot": 0,
       "level": "16",
       "ivs": {
         "hp": 31,
@@ -22684,23 +14771,9 @@ var SETDEX_SV = {
         "Sandstorm"
       ]
     },
-    "Pokemaniac STEVE [STEVE_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Pokemaniac MARK": {
+      "index": 271,
+      "slot": 0,
       "level": "31",
       "ivs": {
         "hp": 0,
@@ -22715,26 +14788,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Pokemaniac STEVE [STEVE_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Cranidos": {
     "Youngster TOMMY": {
+      "index": 96,
+      "slot": 1,
       "level": "16",
       "ivs": {
         "hp": 31,
@@ -22757,6 +14816,8 @@ var SETDEX_SV = {
   },
   "Geodude-Alola": {
     "Hiker MARC": {
+      "index": 99,
+      "slot": 0,
       "level": "16",
       "ivs": {
         "hp": 31,
@@ -22769,7 +14830,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Galvanize",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Self-Destruct"
       ]
@@ -22777,6 +14838,8 @@ var SETDEX_SV = {
   },
   "Larvitar": {
     "Hiker MARC": {
+      "index": 99,
+      "slot": 1,
       "level": "16",
       "ivs": {
         "hp": 31,
@@ -22789,7 +14852,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Sand Veil",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Rock Slide",
         "Bite",
@@ -22798,122 +14861,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Geodude": {
-    "Hiker MIKE [MIKE_2]": {
-      "level": "16",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker TRENT [TRENT_1]": {
-      "level": "16",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker SAWYER [SAWYER_1]": {
-      "level": "21",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker TRENT [TRENT_2]": {
-      "level": "24",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker SAWYER [SAWYER_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker TRENT [TRENT_3]": {
-      "level": "27",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker TRENT [TRENT_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
   "Salandit": {
     "Hiker DEVAN": {
+      "index": 100,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -22926,7 +14877,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Oran Berry",
       "ability": "Corrosion",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Poison Fang",
         "Will-O-Wisp",
@@ -22937,6 +14888,8 @@ var SETDEX_SV = {
   },
   "Ponyta": {
     "Hiker DEVAN": {
+      "index": 100,
+      "slot": 1,
       "level": "15",
       "ivs": {
         "hp": 31,
@@ -22949,59 +14902,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Flash Fire",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Flame Charge",
         "Flame Wheel",
         "Stomp",
         "Tail Whip"
       ]
-    },
-    "Leader FLANNERY [FLANNERY_2]": {
-      "level": "36",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Flamethrower",
-        "Attract",
-        "Solar Beam",
-        "Bounce"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_3]": {
-      "level": "41",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Flamethrower",
-        "Attract",
-        "Solar Beam",
-        "Bounce"
-      ]
     }
   },
   "Toedscool": {
     "Hiker DEVAN": {
+      "index": 100,
+      "slot": 2,
       "level": "16",
       "ivs": {
         "hp": 0,
@@ -23014,7 +14927,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": "Mycelium Might",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Stun Spore",
         "Mega Drain",
@@ -23025,6 +14938,8 @@ var SETDEX_SV = {
   },
   "Shellos": {
     "Youngster JOHNSON": {
+      "index": 101,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 0,
@@ -23048,6 +14963,8 @@ var SETDEX_SV = {
   },
   "Panpour": {
     "Youngster JOHNSON": {
+      "index": 101,
+      "slot": 2,
       "level": "15",
       "ivs": {
         "hp": 0,
@@ -23060,7 +14977,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Petaya Berry",
       "ability": "Gluttony",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Water Pulse",
         "Work Up",
@@ -23070,7 +14987,9 @@ var SETDEX_SV = {
     }
   },
   "Koffing": {
-    "Ninja Boy LAO [LAO_1]": {
+    "Ninja Boy LAO": {
+      "index": 102,
+      "slot": 2,
       "level": "17",
       "ivs": {
         "hp": 0,
@@ -23092,6 +15011,8 @@ var SETDEX_SV = {
       ]
     },
     "Ninja Boy TAKASHI": {
+      "index": 155,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -23108,6 +15029,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Ninja Boy HIDEO": {
+      "index": 164,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -23128,26 +15051,9 @@ var SETDEX_SV = {
         "Smokescreen"
       ]
     },
-    "Ninja Boy LAO [LAO_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Sludge"
-      ]
-    },
     "Ninja Boy KEIGO": {
+      "index": 238,
+      "slot": 0,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -23169,6 +15075,8 @@ var SETDEX_SV = {
       ]
     },
     "Ninja Boy RILEY": {
+      "index": 239,
+      "slot": 1,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -23189,26 +15097,9 @@ var SETDEX_SV = {
         "Smokescreen"
       ]
     },
-    "Ninja Boy LAO [LAO_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Sludge"
-      ]
-    },
     "Ninja Boy JONAS": {
+      "index": 274,
+      "slot": 0,
       "level": "31",
       "ivs": {
         "hp": 0,
@@ -23228,50 +15119,12 @@ var SETDEX_SV = {
         "Self Destruct",
         "Sludge Bomb"
       ]
-    },
-    "Ninja Boy LAO [LAO_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Sludge"
-      ]
-    },
-    "Ninja Boy LAO [LAO_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Poison Gas",
-        "Tackle",
-        "Sludge",
-        "Self Destruct"
-      ]
     }
   },
   "Numel": {
     "Hiker BRICE": {
+      "index": 104,
+      "slot": 0,
       "level": "17",
       "ivs": {
         "hp": 0,
@@ -23287,7 +15140,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Team Magma GRUNT [GRUNT_MT_CHIMNEY_1]": {
+    "Team Magma GRUNT": {
+      "index": 115,
+      "slot": 0,
       "level": "20",
       "ivs": {
         "hp": 0,
@@ -23304,6 +15159,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Beauty SHIRLEY": {
+      "index": 121,
+      "slot": 0,
       "level": "21",
       "ivs": {
         "hp": 0,
@@ -23320,6 +15177,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Kindler DAYTON": {
+      "index": 168,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -23336,6 +15195,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pkmn Breeder MYLES": {
+      "index": 169,
+      "slot": 5,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -23351,241 +15212,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Cooltrainer BROOKE [BROOKE_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker SAWYER [SAWYER_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_5]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker SAWYER [SAWYER_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer BROOKE [BROOKE_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Parasol Lady MADELINE [MADELINE_2]": {
-      "level": "29",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Ember",
-        "Tackle",
-        "Magnitude",
-        "Sunny Day"
-      ]
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_12]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_15]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_SPACE_CENTER_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker SAWYER [SAWYER_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_SPACE_CENTER_1]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer BROOKE [BROOKE_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Parasol Lady MADELINE [MADELINE_3]": {
-      "level": "32",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Ember",
-        "Take Down",
-        "Magnitude",
-        "Sunny Day"
-      ]
-    },
-    "Magma Admin TABITHA [TABITHA_MAGMA_HIDEOUT]": {
+    "Magma Admin TABITHA": {
+      "index": 319,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 9,
@@ -23601,28 +15230,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Parasol Lady MADELINE [MADELINE_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Flamethrower",
-        "Take Down",
-        "Magnitude",
-        "Sunny Day"
-      ]
-    },
     "Sr And Jr KIM & IRIS": {
+      "index": 376,
+      "slot": 1,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -23644,8 +15254,48 @@ var SETDEX_SV = {
       ]
     }
   },
+  "Geodude": {
+    "Hiker TRENT": {
+      "index": 105,
+      "slot": 2,
+      "level": "16",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Hiker SAWYER": {
+      "index": 118,
+      "slot": 0,
+      "level": "21",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
   "Glimmet": {
-    "Leader ROXANNE [ROXANNE_1]": {
+    "Leader ROXANNE": {
+      "index": 107,
+      "slot": 0,
       "level": "15",
       "ivs": {
         "hp": 0,
@@ -23658,7 +15308,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Focus Sash",
       "ability": "Toxic Debris",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Stealth Rock",
         "Hidden Power",
@@ -23668,7 +15318,9 @@ var SETDEX_SV = {
     }
   },
   "Archen": {
-    "Leader ROXANNE [ROXANNE_1]": {
+    "Leader ROXANNE": {
+      "index": 107,
+      "slot": 1,
       "level": "16",
       "ivs": {
         "hp": 31,
@@ -23681,7 +15333,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Defeatist",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Pluck",
         "Rock Tomb",
@@ -23691,7 +15343,9 @@ var SETDEX_SV = {
     }
   },
   "Lileep": {
-    "Leader ROXANNE [ROXANNE_1]": {
+    "Leader ROXANNE": {
+      "index": 107,
+      "slot": 2,
       "level": "16",
       "ivs": {
         "hp": 0,
@@ -23704,7 +15358,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Oran Berry",
       "ability": "Storm Drain",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Mega Drain",
         "Acid",
@@ -23714,7 +15368,9 @@ var SETDEX_SV = {
     }
   },
   "Nosepass": {
-    "Leader ROXANNE [ROXANNE_1]": {
+    "Leader ROXANNE": {
+      "index": 107,
+      "slot": 3,
       "level": "17",
       "ivs": {
         "hp": 31,
@@ -23737,7 +15393,9 @@ var SETDEX_SV = {
     }
   },
   "Carkol": {
-    "Leader ROXANNE [ROXANNE_1]": {
+    "Leader ROXANNE": {
+      "index": 107,
+      "slot": 4,
       "level": "18",
       "ivs": {
         "hp": 31,
@@ -23750,7 +15408,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Passho Berry",
       "ability": "Steam Engine",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Rock Tomb",
         "Heavy Slam",
@@ -23760,7 +15418,9 @@ var SETDEX_SV = {
     }
   },
   "Meditite": {
-    "Battle Girl CYNDY [CYNDY_1]": {
+    "Battle Girl CYNDY": {
+      "index": 108,
+      "slot": 0,
       "level": "18",
       "ivs": {
         "hp": 12,
@@ -23776,7 +15436,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Expert SHELBY [SHELBY_1]": {
+    "Expert SHELBY": {
+      "index": 122,
+      "slot": 0,
       "level": "21",
       "ivs": {
         "hp": 24,
@@ -23793,6 +15455,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Battle Girl LAURA": {
+      "index": 128,
+      "slot": 1,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -23813,39 +15477,9 @@ var SETDEX_SV = {
         "Ice Punch"
       ]
     },
-    "School Kid JERRY [JERRY_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl CYNDY [CYNDY_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Battle Girl HELENE": {
+      "index": 210,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -23862,6 +15496,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Battle Girl CALLIE": {
+      "index": 241,
+      "slot": 0,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -23877,55 +15513,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "School Kid JERRY [JERRY_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl CYNDY [CYNDY_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert SHELBY [SHELBY_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 25,
-        "at": 25,
-        "df": 25,
-        "sa": 25,
-        "sd": 25,
-        "sp": 25
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Expert MOLLIE": {
+      "index": 291,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 24,
@@ -23942,6 +15532,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Battle Girl REYNA": {
+      "index": 314,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 6,
@@ -23958,6 +15550,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Hex Maniac SYLVIA": {
+      "index": 386,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 12,
@@ -23972,31 +15566,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Leader BRAWLY [BRAWLY_2]": {
-      "level": "33",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Psychic",
-        "Light Screen",
-        "Reflect",
-        "Focus Punch"
-      ]
     }
   },
   "Makuhita": {
-    "Battle Girl CYNDY [CYNDY_1]": {
+    "Battle Girl CYNDY": {
+      "index": 108,
+      "slot": 1,
       "level": "18",
       "ivs": {
         "hp": 12,
@@ -24012,7 +15587,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Expert SHELBY [SHELBY_1]": {
+    "Expert SHELBY": {
+      "index": 122,
+      "slot": 1,
       "level": "21",
       "ivs": {
         "hp": 24,
@@ -24028,23 +15605,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Pkmn Breeder ISAAC [ISAAC_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Battle Girl LILITH": {
+      "index": 137,
+      "slot": 0,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -24057,7 +15620,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Guts",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Fake Out",
         "Force Palm",
@@ -24066,6 +15629,8 @@ var SETDEX_SV = {
       ]
     },
     "Pkmn Breeder MYLES": {
+      "index": 169,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -24081,39 +15646,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Cooltrainer WILTON [WILTON_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl CYNDY [CYNDY_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Battle Girl HELENE": {
+      "index": 210,
+      "slot": 1,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -24130,6 +15665,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Battle Girl CALLIE": {
+      "index": 241,
+      "slot": 1,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -24145,39 +15682,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Cooltrainer WILTON [WILTON_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl CYNDY [CYNDY_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Expert FREDRICK": {
+      "index": 256,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 12,
@@ -24192,118 +15699,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Focus Energy",
-        "Arm Thrust"
-      ]
-    },
-    "Expert SHELBY [SHELBY_2]": {
-      "level": "30",
-      "ivs": {
-        "hp": 25,
-        "at": 25,
-        "df": 25,
-        "sa": 25,
-        "sd": 25,
-        "sp": 25
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer WILTON [WILTON_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Focus Energy",
-        "Arm Thrust"
-      ]
-    },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Focus Energy",
-        "Arm Thrust"
-      ]
-    },
-    "Black Belt KOJI [KOJI_3]": {
-      "level": "39",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Barboach": {
     "Fisherman NOLAN": {
+      "index": 113,
+      "slot": 0,
       "level": "19",
       "ivs": {
         "hp": 0,
@@ -24322,6 +15723,8 @@ var SETDEX_SV = {
   },
   "Graveler": {
     "Sr And Jr TYRA & IVY": {
+      "index": 117,
+      "slot": 1,
       "level": "20",
       "ivs": {
         "hp": 0,
@@ -24342,87 +15745,9 @@ var SETDEX_SV = {
         "Rock Throw"
       ]
     },
-    "Hiker TRENT [TRENT_2]": {
-      "level": "24",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker TRENT [TRENT_3]": {
-      "level": "27",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker SAWYER [SAWYER_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker TRENT [TRENT_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker SAWYER [SAWYER_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer WARREN": {
+      "index": 290,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 12,
@@ -24431,22 +15756,6 @@ var SETDEX_SV = {
         "sa": 12,
         "sd": 12,
         "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hiker TRENT [TRENT_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
       },
       "ivsSpecified": true,
       "item": null,
@@ -24455,6 +15764,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer OWEN": {
+      "index": 424,
+      "slot": 1,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -24469,621 +15780,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    }
-  },
-  "Lycanroc-Midnight": {
-    "Team Aqua GRUNT [GRUNT_RUSTURF_TUNNEL]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Vital Spirit",
-      "nature": null,
-      "moves": [
-        "Rock Tomb",
-        "Counter",
-        "Crunch",
-        "Howl"
-      ]
-    }
-  },
-  "Noctowl": {
-    "Team Aqua GRUNT [GRUNT_RUSTURF_TUNNEL]": {
-      "level": "20",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Wise Glasses",
-      "ability": "Mind Power",
-      "nature": null,
-      "moves": [
-        "Snarl",
-        "Confusion",
-        "Air Cutter"
-      ]
-    },
-    "Leader WINONA [WINONA_4]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hypnosis",
-        "Psychic",
-        "Reflect",
-        "Dream Eater"
-      ]
-    },
-    "Leader WINONA [WINONA_5]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hypnosis",
-        "Psychic",
-        "Reflect",
-        "Dream Eater"
-      ]
-    }
-  },
-  "Cramorant": {
-    "Team Aqua GRUNT [GRUNT_RUSTURF_TUNNEL]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Gulp Missile",
-      "nature": null,
-      "moves": [
-        "Dive",
-        "Pluck",
-        "Air Slash"
-      ]
-    }
-  },
-  "Mightyena": {
-    "Team Aqua GRUNT [GRUNT_RUSTURF_TUNNEL]": {
-      "level": "22",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Intimidate",
-      "nature": null,
-      "moves": [
-        "Crunch",
-        "Fire Fang",
-        "Poison Fang",
-        "Thunder Fang"
-      ]
-    },
-    "Pkmn Breeder ISAAC [ISAAC_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Youngster CALVIN [CALVIN_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aqua Admin SHELLY [SHELLY_WEATHER_INSTITUTE]": {
-      "level": "28",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_6]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_10]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_14]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_SPACE_CENTER_2]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Youngster CALVIN [CALVIN_3]": {
-      "level": "30",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [GRUNT_SPACE_CENTER_6]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Youngster CALVIN [CALVIN_4]": {
-      "level": "33",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Magma Admin TABITHA [TABITHA_MAGMA_HIDEOUT]": {
-      "level": "28",
-      "ivs": {
-        "hp": 9,
-        "at": 9,
-        "df": 9,
-        "sa": 9,
-        "sd": 9,
-        "sp": 9
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aqua Admin MATT": {
-      "level": "34",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_SEAFLOOR_CAVERN_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_4]": {
-      "level": "35",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Youngster CALVIN [CALVIN_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aqua Admin SHELLY [SHELLY_SEAFLOOR_CAVERN]": {
-      "level": "37",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokemaniac STEVE [STEVE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Strong Jaw",
-      "nature": null,
-      "moves": [
-        "Crunch",
-        "Play Rough",
-        "Thunder Fang",
-        "Ice Fang"
-      ]
-    },
-    "Magma Leader MAXIE [MAXIE_MAGMA_HIDEOUT]": {
-      "level": "37",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Magma Admin TABITHA [TABITHA_MOSSDEEP]": {
-      "level": "38",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aqua Leader ARCHIE": {
-      "level": "41",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Magma Leader MAXIE [MAXIE_MOSSDEEP]": {
-      "level": "42",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER3]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Strong Jaw",
-      "nature": null,
-      "moves": [
-        "Poison Fang",
-        "Crunch",
-        "Ice Fang",
-        "Thunder Fang"
-      ]
-    },
-    "Elite Four SIDNEY": {
-      "level": "46",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Roar",
-        "Double Edge",
-        "Sand Attack",
-        "Crunch"
-      ]
     }
   },
   "Corsola-Galar": {
-    "Tuber F LOLA [LOLA_1]": {
+    "Tuber F LOLA": {
+      "index": 123,
+      "slot": 0,
       "level": "22",
       "ivs": {
         "hp": 0,
@@ -25105,6 +15807,8 @@ var SETDEX_SV = {
       ]
     },
     "Tuber M CHANDLER": {
+      "index": 134,
+      "slot": 0,
       "level": "22",
       "ivs": {
         "hp": 0,
@@ -25127,7 +15831,9 @@ var SETDEX_SV = {
     }
   },
   "Corsola": {
-    "Tuber F LOLA [LOLA_1]": {
+    "Tuber F LOLA": {
+      "index": 123,
+      "slot": 1,
       "level": "22",
       "ivs": {
         "hp": 0,
@@ -25149,6 +15855,8 @@ var SETDEX_SV = {
       ]
     },
     "Tuber M CHANDLER": {
+      "index": 134,
+      "slot": 1,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -25171,7 +15879,9 @@ var SETDEX_SV = {
     }
   },
   "Alomomola": {
-    "Tuber M RICKY [RICKY_1]": {
+    "Tuber M RICKY": {
+      "index": 124,
+      "slot": 0,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -25193,7 +15903,9 @@ var SETDEX_SV = {
     }
   },
   "Shiinotic": {
-    "Tuber M RICKY [RICKY_1]": {
+    "Tuber M RICKY": {
+      "index": 124,
+      "slot": 1,
       "level": "22",
       "ivs": {
         "hp": 0,
@@ -25216,6 +15928,8 @@ var SETDEX_SV = {
   },
   "Slugma": {
     "Kindler JEFF": {
+      "index": 125,
+      "slot": 1,
       "level": "22",
       "ivs": {
         "hp": 12,
@@ -25232,6 +15946,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Kindler DAYTON": {
+      "index": 168,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -25246,186 +15962,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Kindler BERNIE [BERNIE_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Kindler BERNIE [BERNIE_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_119_MUDKIP]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_119_TORCHIC]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_ROUTE_119_MUDKIP]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_ROUTE_119_TORCHIC]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Kindler BERNIE [BERNIE_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_MUDKIP]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_TORCHIC]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_MUDKIP]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_TORCHIC]": {
-      "level": "32",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Seaking": {
-    "Fisherman ELLIOT [ELLIOT_1]": {
+    "Fisherman ELLIOT": {
+      "index": 126,
+      "slot": 2,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -25446,23 +15988,9 @@ var SETDEX_SV = {
         "Tail Whip"
       ]
     },
-    "Pkmn Breeder LYDIA [LYDIA_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer F SHARON": {
+      "index": 346,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -25479,6 +16007,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F KARA": {
+      "index": 349,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -25495,6 +16025,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F DEBRA": {
+      "index": 351,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -25511,6 +16043,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F CARLEE": {
+      "index": 372,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -25527,6 +16061,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Lady BRIANNA": {
+      "index": 413,
+      "slot": 0,
       "level": "40",
       "ivs": {
         "hp": 18,
@@ -25545,6 +16081,8 @@ var SETDEX_SV = {
   },
   "Palpitoad": {
     "Fisherman NED": {
+      "index": 127,
+      "slot": 1,
       "level": "21",
       "ivs": {
         "hp": 0,
@@ -25565,6 +16103,8 @@ var SETDEX_SV = {
       ]
     },
     "Sailor HUEY": {
+      "index": 130,
+      "slot": 1,
       "level": "22",
       "ivs": {
         "hp": 0,
@@ -25586,6 +16126,8 @@ var SETDEX_SV = {
   },
   "Arrokuda": {
     "Fisherman NED": {
+      "index": 127,
+      "slot": 2,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -25609,6 +16151,8 @@ var SETDEX_SV = {
   },
   "Scraggy": {
     "Battle Girl LAURA": {
+      "index": 128,
+      "slot": 0,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -25632,6 +16176,8 @@ var SETDEX_SV = {
   },
   "Stufful": {
     "Battle Girl LAURA": {
+      "index": 128,
+      "slot": 2,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -25655,6 +16201,8 @@ var SETDEX_SV = {
   },
   "Tadbulb": {
     "Swimmer F ALICE": {
+      "index": 129,
+      "slot": 0,
       "level": "21",
       "ivs": {
         "hp": 0,
@@ -25676,465 +16224,132 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Loudred": {
-    "Pkmn Breeder ISAAC [ISAAC_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Interviewer GABBY & TY [GABBY_AND_TY_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist DALTON [DALTON_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid KAREN [KAREN_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer CRISTIN [CRISTIN_1]": {
-      "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Interviewer GABBY & TY [GABBY_AND_TY_3]": {
-      "level": "30",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist FERNANDO [FERNANDO_1]": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist DALTON [DALTON_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "School Kid KAREN [KAREN_4]": {
+  "Dipplin": {
+    "Pkmn Breeder ISAAC": {
+      "index": 131,
+      "slot": 0,
       "level": "32",
       "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Interviewer GABBY & TY [GABBY_AND_TY_4]": {
-      "level": "33",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer JONATHAN": {
-      "level": "33",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer CRISTIN [CRISTIN_2]": {
-      "level": "35",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist FERNANDO [FERNANDO_2]": {
-      "level": "35",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Interviewer GABBY & TY [GABBY_AND_TY_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer CRISTIN [CRISTIN_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist FERNANDO [FERNANDO_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer CRISTIN [CRISTIN_4]": {
-      "level": "39",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist FERNANDO [FERNANDO_4]": {
-      "level": "39",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Skitty": {
-    "Pkmn Breeder LYDIA [LYDIA_2]": {
-      "level": "22",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_1]": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan MIGUEL [MIGUEL_2]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan MIGUEL [MIGUEL_3]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokefan COLTON": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
+      "ivsSpecified": false,
+      "item": "Sitrus Berry",
+      "ability": "Gluttony",
       "nature": null,
       "moves": [
-        "Assist",
-        "Charm",
-        "Feint Attack",
-        "Heal Bell"
+        "Recycle",
+        "Giga Drain",
+        "Dragon Pulse",
+        "Sucker Punch"
+      ]
+    }
+  },
+  "Klinklang": {
+    "Pkmn Breeder ISAAC": {
+      "index": 131,
+      "slot": 2,
+      "level": "32",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Metal Coat",
+      "ability": "Clear Body",
+      "nature": null,
+      "moves": [
+        "Volt Switch",
+        "Wild Charge",
+        "Gear Grind"
+      ]
+    }
+  },
+  "Comfey": {
+    "Pkmn Breeder LYDIA": {
+      "index": 132,
+      "slot": 2,
+      "level": "34",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Big Root",
+      "ability": "Triage",
+      "nature": null,
+      "moves": [
+        "Leech Seed",
+        "Draining Kiss",
+        "Giga Drain",
+        "Dazzling Gleam"
+      ]
+    }
+  },
+  "Lilligant-Hisui": {
+    "Pkmn Breeder LYDIA": {
+      "index": 132,
+      "slot": 3,
+      "level": "34",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": null,
+      "ability": "Chlorophyll",
+      "nature": null,
+      "moves": [
+        "Victory Dance",
+        "Leaf Blade",
+        "Axe Kick",
+        "Ice Spinner"
+      ]
+    },
+    "Battle Girl DANIELLE": {
+      "index": 446,
+      "slot": 4,
+      "level": "44",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Occa Berry",
+      "ability": "Chlorophyll",
+      "nature": "Adamant",
+      "moves": [
+        "Victory Dance",
+        "Solar Blade",
+        "Close Combat",
+        "Triple Axel"
       ]
     }
   },
   "Kubfu": {
     "Sailor BRENDEN": {
+      "index": 133,
+      "slot": 0,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -26158,6 +16373,8 @@ var SETDEX_SV = {
   },
   "Croagunk": {
     "Sailor BRENDEN": {
+      "index": 133,
+      "slot": 1,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -26181,6 +16398,8 @@ var SETDEX_SV = {
   },
   "Mankey": {
     "Sailor BRENDEN": {
+      "index": 133,
+      "slot": 2,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -26202,53 +16421,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Arbok": {
-    "Team Aqua GRUNT [GRUNT_MUSEUM_1]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Intimidate",
-      "nature": null,
-      "moves": [
-        "Poison Fang",
-        "Knock Off",
-        "Toxic Spikes",
-        "Trailblaze"
-      ]
-    }
-  },
-  "Mareanie": {
-    "Team Aqua GRUNT [GRUNT_MUSEUM_1]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Merciless",
-      "nature": null,
-      "moves": [
-        "Brine",
-        "Venoshock",
-        "Bite"
-      ]
-    }
-  },
   "Timburr": {
     "Black Belt TAKAO": {
+      "index": 135,
+      "slot": 1,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -26271,6 +16447,8 @@ var SETDEX_SV = {
   },
   "Pawmo": {
     "Black Belt TAKAO": {
+      "index": 135,
+      "slot": 2,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -26294,6 +16472,8 @@ var SETDEX_SV = {
   },
   "Drednaw": {
     "Sailor EDMOND": {
+      "index": 136,
+      "slot": 0,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -26314,6 +16494,8 @@ var SETDEX_SV = {
       ]
     },
     "Fisherman CLAUDE": {
+      "index": 398,
+      "slot": 1,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -26337,6 +16519,8 @@ var SETDEX_SV = {
   },
   "Carracosta": {
     "Sailor EDMOND": {
+      "index": 136,
+      "slot": 1,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -26359,6 +16543,8 @@ var SETDEX_SV = {
   },
   "Mienfoo": {
     "Battle Girl LILITH": {
+      "index": 137,
+      "slot": 1,
       "level": "22",
       "ivs": {
         "hp": 31,
@@ -26382,6 +16568,8 @@ var SETDEX_SV = {
   },
   "Monferno": {
     "Battle Girl LILITH": {
+      "index": 137,
+      "slot": 2,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -26405,6 +16593,8 @@ var SETDEX_SV = {
   },
   "Lopunny": {
     "Black Belt CRISTIAN": {
+      "index": 138,
+      "slot": 0,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -26425,7 +16615,9 @@ var SETDEX_SV = {
         "Work Up"
       ]
     },
-    "Leader NORMAN [NORMAN_1]": {
+    "Leader NORMAN": {
+      "index": 453,
+      "slot": 2,
       "level": "55",
       "ivs": {
         "hp": 31,
@@ -26438,7 +16630,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Lopunnite",
       "ability": "Scrappy",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "High Jump Kick",
         "Return",
@@ -26449,6 +16641,8 @@ var SETDEX_SV = {
   },
   "Hitmontop": {
     "Black Belt CRISTIAN": {
+      "index": 138,
+      "slot": 1,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -26472,6 +16666,8 @@ var SETDEX_SV = {
   },
   "Pinsir": {
     "Black Belt CRISTIAN": {
+      "index": 138,
+      "slot": 2,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -26493,1190 +16689,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Farfetchd-Galar": {
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TREECKO]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Rock Smash",
-        "Brutal Swing",
-        "Peck",
-        "Fury Cutter"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_RUSTBORO_MUDKIP]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Rock Smash",
-        "Brutal Swing",
-        "Peck",
-        "Fury Cutter"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TORCHIC]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Rock Smash",
-        "Brutal Swing",
-        "Peck",
-        "Fury Cutter"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_MUDKIP]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Rock Smash",
-        "Brutal Swing",
-        "Peck",
-        "Fury Cutter"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TREECKO]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Rock Smash",
-        "Brutal Swing",
-        "Peck",
-        "Fury Cutter"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TORCHIC]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Rock Smash",
-        "Brutal Swing",
-        "Peck",
-        "Fury Cutter"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_MUDKIP]": {
-      "level": "27",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leek",
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Dual Wingbeat",
-        "Night Slash",
-        "Facade",
-        "Brick Break"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TORCHIC]": {
-      "level": "27",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leek",
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Dual Wingbeat",
-        "Night Slash",
-        "Facade",
-        "Brick Break"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_MUDKIP]": {
-      "level": "27",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leek",
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Dual Wingbeat",
-        "Night Slash",
-        "Facade",
-        "Brick Break"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TORCHIC]": {
-      "level": "27",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leek",
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Dual Wingbeat",
-        "Night Slash",
-        "Facade",
-        "Brick Break"
-      ]
-    }
-  },
-  "Seadra": {
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TREECKO]": {
-      "level": "21",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Scope Lens",
-      "ability": "Sniper",
-      "nature": null,
-      "moves": [
-        "Focus Energy",
-        "Dragon Breath",
-        "Bubble Beam",
-        "Icy Wind"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_RUSTBORO_MUDKIP]": {
-      "level": "21",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Scope Lens",
-      "ability": "Sniper",
-      "nature": null,
-      "moves": [
-        "Focus Energy",
-        "Dragon Breath",
-        "Bubble Beam",
-        "Icy Wind"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_MUDKIP]": {
-      "level": "21",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Scope Lens",
-      "ability": "Sniper",
-      "nature": null,
-      "moves": [
-        "Focus Energy",
-        "Dragon Breath",
-        "Bubble Beam",
-        "Icy Wind"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TREECKO]": {
-      "level": "21",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Scope Lens",
-      "ability": "Sniper",
-      "nature": null,
-      "moves": [
-        "Focus Energy",
-        "Dragon Breath",
-        "Bubble Beam",
-        "Icy Wind"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_MUDKIP]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Scope Lens",
-      "ability": "Sniper",
-      "nature": null,
-      "moves": [
-        "Focus Energy",
-        "Snipe Shot",
-        "Dragon Pulse",
-        "Icy Wind"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TREECKO]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Scope Lens",
-      "ability": "Sniper",
-      "nature": null,
-      "moves": [
-        "Focus Energy",
-        "Snipe Shot",
-        "Dragon Pulse",
-        "Icy Wind"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_MUDKIP]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Scope Lens",
-      "ability": "Sniper",
-      "nature": null,
-      "moves": [
-        "Focus Energy",
-        "Snipe Shot",
-        "Dragon Pulse",
-        "Icy Wind"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TREECKO]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Scope Lens",
-      "ability": "Sniper",
-      "nature": null,
-      "moves": [
-        "Focus Energy",
-        "Snipe Shot",
-        "Dragon Pulse",
-        "Icy Wind"
-      ]
-    },
-    "Swimmer F LINDA": {
-      "level": "33",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Beauty THALIA [THALIA_3]": {
-      "level": "36",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Beauty THALIA [THALIA_4]": {
-      "level": "38",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Snubbull": {
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TREECKO]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Strong Jaw",
-      "nature": null,
-      "moves": [
-        "Jaw Lock",
-        "Power-up-Punch",
-        "Ice Fang",
-        "Covet"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_RUSTBORO_MUDKIP]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Strong Jaw",
-      "nature": null,
-      "moves": [
-        "Jaw Lock",
-        "Power-up-Punch",
-        "Ice Fang",
-        "Covet"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TORCHIC]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Strong Jaw",
-      "nature": null,
-      "moves": [
-        "Jaw Lock",
-        "Power-up-Punch",
-        "Thunder Fang",
-        "Covet"
-      ]
-    }
-  },
-  "Combusken": {
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TREECKO]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Speed Boost",
-      "nature": null,
-      "moves": [
-        "Bulk Up",
-        "Double Kick",
-        "Aerial Ace",
-        "Fire Punch"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TREECKO]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Speed Boost",
-      "nature": null,
-      "moves": [
-        "Bulk Up",
-        "Double Kick",
-        "Aerial Ace",
-        "Fire Punch"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TREECKO]": {
-      "level": "30",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Speed Boost",
-      "nature": null,
-      "moves": [
-        "Bulk Up",
-        "Brick Break",
-        "Aerial Ace",
-        "Fire Punch"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TREECKO]": {
-      "level": "30",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Speed Boost",
-      "nature": null,
-      "moves": [
-        "Bulk Up",
-        "Brick Break",
-        "Aerial Ace",
-        "Fire Punch"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_119_TREECKO]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_ROUTE_119_TREECKO]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_TREECKO]": {
-      "level": "34",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_TREECKO]": {
-      "level": "34",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Voltorb-Hisui": {
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TREECKO]": {
-      "level": "22",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": "Static",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Charge Beam",
-        "Thunder Wave",
-        "Leech Seed"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TORCHIC]": {
-      "level": "22",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": "Static",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Charge Beam",
-        "Thunder Wave",
-        "Leech Seed"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TREECKO]": {
-      "level": "22",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": "Static",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Charge Beam",
-        "Thunder Wave",
-        "Leech Seed"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TORCHIC]": {
-      "level": "22",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": "Static",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Charge Beam",
-        "Thunder Wave",
-        "Leech Seed"
-      ]
-    }
-  },
-  "Grovyle": {
-    "Rival BRENDAN [BRENDAN_RUSTBORO_MUDKIP]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Miracle Seed",
-      "ability": "Technician",
-      "nature": null,
-      "moves": [
-        "X-Scissor",
-        "Giga Drain",
-        "Assurance",
-        "Quick Attack"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_MUDKIP]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Miracle Seed",
-      "ability": "Technician",
-      "nature": null,
-      "moves": [
-        "X-Scissor",
-        "Giga Drain",
-        "Assurance",
-        "Quick Attack"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_MUDKIP]": {
-      "level": "30",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Miracle Seed",
-      "ability": "Technician",
-      "nature": null,
-      "moves": [
-        "Cut",
-        "Bullet Seed",
-        "Rock Slide",
-        "Quick Attack"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_MUDKIP]": {
-      "level": "30",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Miracle Seed",
-      "ability": "Technician",
-      "nature": null,
-      "moves": [
-        "Cut",
-        "Bullet Seed",
-        "Rock Slide",
-        "Quick Attack"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_119_MUDKIP]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_ROUTE_119_MUDKIP]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_MUDKIP]": {
-      "level": "34",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_MUDKIP]": {
-      "level": "34",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Growlithe-Hisui": {
-    "Rival BRENDAN [BRENDAN_RUSTBORO_MUDKIP]": {
-      "level": "22",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Intimidate",
-      "nature": null,
-      "moves": [
-        "Fire Fang",
-        "Bite",
-        "Rock Tomb",
-        "Retaliate"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TORCHIC]": {
-      "level": "22",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Intimidate",
-      "nature": null,
-      "moves": [
-        "Fire Fang",
-        "Bite",
-        "Rock Tomb",
-        "Retaliate"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_MUDKIP]": {
-      "level": "22",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Intimidate",
-      "nature": null,
-      "moves": [
-        "Fire Fang",
-        "Bite",
-        "Rock Tomb",
-        "Retaliate"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TORCHIC]": {
-      "level": "22",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Intimidate",
-      "nature": null,
-      "moves": [
-        "Fire Fang",
-        "Bite",
-        "Rock Tomb",
-        "Retaliate"
-      ]
-    }
-  },
-  "Marshtomp": {
-    "Rival BRENDAN [BRENDAN_RUSTBORO_TORCHIC]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Immunity",
-      "nature": null,
-      "moves": [
-        "Rock Slide",
-        "Water Pulse",
-        "Rock Smash",
-        "Mud Shot"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TORCHIC]": {
-      "level": "23",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Immunity",
-      "nature": null,
-      "moves": [
-        "Rock Slide",
-        "Water Pulse",
-        "Rock Smash",
-        "Mud Shot"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TORCHIC]": {
-      "level": "30",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Soft Sand",
-      "ability": "Immunity",
-      "nature": null,
-      "moves": [
-        "Rock Slide",
-        "Liquidation",
-        "Rock Smash",
-        "Bulldoze"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TORCHIC]": {
-      "level": "30",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Soft Sand",
-      "ability": "Immunity",
-      "nature": null,
-      "moves": [
-        "Rock Slide",
-        "Liquidation",
-        "Rock Smash",
-        "Bulldoze"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_119_TORCHIC]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_ROUTE_119_TORCHIC]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_TORCHIC]": {
-      "level": "34",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_TORCHIC]": {
-      "level": "34",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Ponyta-Galar": {
-    "Rival MAY [MAY_RUSTBORO_MUDKIP]": {
-      "level": "21",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Adaptability",
-      "nature": null,
-      "moves": [
-        "Confusion",
-        "Draining Kiss",
-        "Hidden Power",
-        "Calm Mind"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TREECKO]": {
-      "level": "21",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Adaptability",
-      "nature": null,
-      "moves": [
-        "Confusion",
-        "Draining Kiss",
-        "Mystical Fire",
-        "Calm Mind"
-      ]
-    },
-    "Rival MAY [MAY_RUSTBORO_TORCHIC]": {
-      "level": "21",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Adaptability",
-      "nature": null,
-      "moves": [
-        "Confusion",
-        "Draining Kiss",
-        "Earth Power",
-        "Calm Mind"
-      ]
-    }
-  },
   "Wurmple": {
     "Bug Maniac DONALD": {
+      "index": 141,
+      "slot": 0,
       "level": "24",
       "ivs": {
         "hp": 12,
@@ -27693,6 +16709,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bug Maniac TAYLOR": {
+      "index": 217,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 12,
@@ -27707,26 +16725,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Bug Maniac JEFFREY [JEFFREY_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Silcoon": {
     "Bug Maniac DONALD": {
+      "index": 141,
+      "slot": 1,
       "level": "24",
       "ivs": {
         "hp": 12,
@@ -27745,6 +16749,8 @@ var SETDEX_SV = {
   },
   "Steenee": {
     "Battle Girl JOCELYN": {
+      "index": 142,
+      "slot": 1,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -27767,6 +16773,8 @@ var SETDEX_SV = {
   },
   "Blitzle": {
     "Battle Girl JOCELYN": {
+      "index": 142,
+      "slot": 2,
       "level": "24",
       "ivs": {
         "hp": 31,
@@ -27789,6 +16797,8 @@ var SETDEX_SV = {
   },
   "Snover": {
     "Developer Splitface": {
+      "index": 145,
+      "slot": 0,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -27801,7 +16811,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Occa Berry",
       "ability": "Snow Warning",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Giga Drain",
         "Ice Shard",
@@ -27812,6 +16822,8 @@ var SETDEX_SV = {
   },
   "Snorunt": {
     "Developer Splitface": {
+      "index": 145,
+      "slot": 1,
       "level": "23",
       "ivs": {
         "hp": 0,
@@ -27834,6 +16846,8 @@ var SETDEX_SV = {
   },
   "Delibird": {
     "Developer Splitface": {
+      "index": 145,
+      "slot": 2,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -27857,6 +16871,8 @@ var SETDEX_SV = {
   },
   "Naclstack": {
     "Developer Splitface": {
+      "index": 145,
+      "slot": 3,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -27879,6 +16895,8 @@ var SETDEX_SV = {
   },
   "Spheal :3 (Spheal)": {
     "Developer Splitface": {
+      "index": 145,
+      "slot": 4,
       "level": "24",
       "ivs": {
         "hp": 0,
@@ -27891,7 +16909,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Leftovers",
       "ability": "Ice Body",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Blizzard",
         "Scald",
@@ -27902,6 +16920,8 @@ var SETDEX_SV = {
   },
   "Swinub": {
     "Developer Splitface": {
+      "index": 145,
+      "slot": 5,
       "level": "24",
       "ivs": {
         "hp": 31,
@@ -27925,6 +16945,8 @@ var SETDEX_SV = {
   },
   "Sandslash": {
     "Ruin Maniac FOSTER": {
+      "index": 146,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 12,
@@ -27946,6 +16968,8 @@ var SETDEX_SV = {
       ]
     },
     "Ruin Maniac GARRISON": {
+      "index": 204,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -27962,6 +16986,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Ruin Maniac CHIP": {
+      "index": 213,
+      "slot": 2,
       "level": "27",
       "ivs": {
         "hp": 6,
@@ -27982,123 +17008,9 @@ var SETDEX_SV = {
         "Poison Sting"
       ]
     },
-    "Ruin Maniac DUSTY [DUSTY_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 7,
-        "at": 7,
-        "df": 7,
-        "sa": 7,
-        "sd": 7,
-        "sp": 7
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Dig",
-        "Slash",
-        "Sand Attack",
-        "Poison Sting"
-      ]
-    },
-    "Ruin Maniac DUSTY [DUSTY_3]": {
-      "level": "30",
-      "ivs": {
-        "hp": 8,
-        "at": 8,
-        "df": 8,
-        "sa": 8,
-        "sd": 8,
-        "sp": 8
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Dig",
-        "Slash",
-        "Sand Attack",
-        "Poison Sting"
-      ]
-    },
-    "Ruin Maniac DUSTY [DUSTY_4]": {
-      "level": "33",
-      "ivs": {
-        "hp": 9,
-        "at": 9,
-        "df": 9,
-        "sa": 9,
-        "sd": 9,
-        "sp": 9
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Dig",
-        "Slash",
-        "Sand Attack",
-        "Poison Sting"
-      ]
-    },
-    "Camper ETHAN [ETHAN_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Ruin Maniac DUSTY [DUSTY_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 10,
-        "at": 10,
-        "df": 10,
-        "sa": 10,
-        "sd": 10,
-        "sp": 10
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Dig",
-        "Slash",
-        "Sand Attack",
-        "Poison Sting"
-      ]
-    },
-    "Ruin Maniac ANDRES [ANDRES_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer JULIE": {
+      "index": 426,
+      "slot": 0,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -28114,49 +17026,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Team Magma GRUNT [GRUNT_DESERT1]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Life Orb",
-      "ability": "Sand Rush",
-      "nature": null,
-      "moves": [
-        "Swords Dance",
-        "Earthquake",
-        "Stone Edge",
-        "Brick Break"
-      ]
-    },
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER3]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Bright Powder",
-      "ability": "Sand Veil",
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Stone Edge",
-        "Focus Punch",
-        "Substitute"
-      ]
-    },
     "Picnicker BECKY": {
+      "index": 462,
+      "slot": 1,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -28169,7 +17041,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Muscle Band",
       "ability": "Sand Rush",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Earthquake",
         "Stone Edge",
@@ -28179,7 +17051,9 @@ var SETDEX_SV = {
     }
   },
   "Horsea": {
-    "Beauty THALIA [THALIA_1]": {
+    "Beauty THALIA": {
+      "index": 147,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -28196,6 +17070,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F TARA": {
+      "index": 158,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -28212,6 +17088,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F LINDA": {
+      "index": 309,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -28228,6 +17106,172 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M STAN": {
+      "index": 327,
+      "slot": 0,
+      "level": "34",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
+  "Carvanha": {
+    "Swimmer M DAVID": {
+      "index": 148,
+      "slot": 1,
+      "level": "25",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Fisherman BARNY": {
+      "index": 150,
+      "slot": 1,
+      "level": "25",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Swimmer M LUIS": {
+      "index": 185,
+      "slot": 0,
+      "level": "26",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Swimmer M TONY": {
+      "index": 187,
+      "slot": 0,
+      "level": "26",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Swimmer M MATTHEW": {
+      "index": 189,
+      "slot": 0,
+      "level": "26",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Aqua Admin SHELLY": {
+      "index": 227,
+      "slot": 0,
+      "level": "28",
+      "ivs": {
+        "hp": 6,
+        "at": 6,
+        "df": 6,
+        "sa": 6,
+        "sd": 6,
+        "sp": 6
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Fisherman CHRIS": {
+      "index": 251,
+      "slot": 3,
+      "level": "23",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Swimmer M DEAN": {
+      "index": 272,
+      "slot": 2,
+      "level": "31",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Swimmer M ROLAND": {
+      "index": 325,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -28243,15 +17287,71 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Beauty THALIA [THALIA_2]": {
+    "Swimmer M LEONARDO": {
+      "index": 355,
+      "slot": 0,
       "level": "34",
       "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Fisherman HENRY": {
+      "index": 358,
+      "slot": 0,
+      "level": "31",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Sis And Bro LILA & ROY": {
+      "index": 363,
+      "slot": 1,
+      "level": "33",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Beauty TIFFANY": {
+      "index": 406,
+      "slot": 0,
+      "level": "39",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
       },
       "ivsSpecified": true,
       "item": null,
@@ -28261,7 +17361,9 @@ var SETDEX_SV = {
     }
   },
   "Sneasel-Hisui": {
-    "Leader BRAWLY [BRAWLY_1]": {
+    "Leader BRAWLY": {
+      "index": 149,
+      "slot": 0,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -28284,7 +17386,9 @@ var SETDEX_SV = {
     }
   },
   "Clobbopus": {
-    "Leader BRAWLY [BRAWLY_1]": {
+    "Leader BRAWLY": {
+      "index": 149,
+      "slot": 1,
       "level": "24",
       "ivs": {
         "hp": 31,
@@ -28307,7 +17411,9 @@ var SETDEX_SV = {
     }
   },
   "Farfetchd": {
-    "Leader BRAWLY [BRAWLY_1]": {
+    "Leader BRAWLY": {
+      "index": 149,
+      "slot": 2,
       "level": "23",
       "ivs": {
         "hp": 31,
@@ -28329,7 +17435,9 @@ var SETDEX_SV = {
     }
   },
   "Falinks": {
-    "Leader BRAWLY [BRAWLY_1]": {
+    "Leader BRAWLY": {
+      "index": 149,
+      "slot": 3,
       "level": "25",
       "ivs": {
         "hp": 31,
@@ -28353,6 +17461,8 @@ var SETDEX_SV = {
   },
   "Tentacruel": {
     "Fisherman CARTER": {
+      "index": 151,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -28369,6 +17479,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M JEROME": {
+      "index": 188,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -28384,23 +17496,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Fisherman ELLIOT [ELLIOT_4]": {
-      "level": "30",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Swimmer M HERMAN": {
+      "index": 293,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -28417,6 +17515,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M SANTIAGO": {
+      "index": 294,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -28433,6 +17533,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M DUDLEY": {
+      "index": 295,
+      "slot": 2,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -28449,6 +17551,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M NOLEN": {
+      "index": 326,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -28465,6 +17569,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman HENRY": {
+      "index": 358,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -28473,38 +17579,6 @@ var SETDEX_SV = {
         "sa": 0,
         "sd": 0,
         "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor CORY [CORY_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Fisherman ELLIOT [ELLIOT_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
       },
       "ivsSpecified": true,
       "item": null,
@@ -28513,6 +17587,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M HARRISON": {
+      "index": 374,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -28528,23 +17604,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor CORY [CORY_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Sailor PHILLIP": {
+      "index": 445,
+      "slot": 0,
       "level": "44",
       "ivs": {
         "hp": 0,
@@ -28560,23 +17622,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor ERNEST [ERNEST_5]": {
-      "level": "45",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Champion WALLACE": {
+      "index": 469,
+      "slot": 1,
       "level": "55",
       "ivs": {
         "hp": 31,
@@ -28600,6 +17648,8 @@ var SETDEX_SV = {
   },
   "Tropius": {
     "Bird Keeper HUGH": {
+      "index": 153,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -28616,6 +17666,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pkmn Breeder MYLES": {
+      "index": 169,
+      "slot": 2,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -28632,6 +17684,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper JARED": {
+      "index": 220,
+      "slot": 2,
       "level": "27",
       "ivs": {
         "hp": 12,
@@ -28648,6 +17702,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper DARIUS": {
+      "index": 267,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 24,
@@ -28663,7 +17719,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Leader WINONA [WINONA_1]": {
+    "Leader WINONA": {
+      "index": 299,
+      "slot": 1,
       "level": "29",
       "ivs": {
         "hp": 25,
@@ -28685,6 +17743,8 @@ var SETDEX_SV = {
       ]
     },
     "Bird Keeper PRESLEY": {
+      "index": 304,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -28701,6 +17761,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper BECK": {
+      "index": 342,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -28716,103 +17778,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_MUDKIP]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_TREECKO]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival BRENDAN [BRENDAN_LILYCOVE_TORCHIC]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_MUDKIP]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_TREECKO]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival MAY [MAY_LILYCOVE_TORCHIC]": {
-      "level": "31",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Kindler JACE": {
+      "index": 416,
+      "slot": 0,
       "level": "40",
       "ivs": {
         "hp": 0,
@@ -28825,7 +17793,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Life Orb",
       "ability": "Solar Power",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Solar Beam",
         "Synthesis",
@@ -28833,6 +17801,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer JULIE": {
+      "index": 426,
+      "slot": 2,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -28847,9 +17817,13 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Leader WINONA [WINONA_2]": {
-      "level": "38",
+    }
+  },
+  "Ribombee": {
+    "Picnicker DIANA": {
+      "index": 159,
+      "slot": 4,
+      "level": "40",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -28858,21 +17832,23 @@ var SETDEX_SV = {
         "sd": 31,
         "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
+      "ivsSpecified": false,
+      "item": "Leftovers",
+      "ability": "Shield Dust",
       "nature": null,
       "moves": [
-        "Sunny Day",
-        "Aerial Ace",
-        "Solar Beam",
-        "Earthquake"
+        "Moonblast",
+        "Bug Buzz",
+        "Stun Spore",
+        "Quiver Dance"
       ]
     },
-    "Leader WINONA [WINONA_3]": {
-      "level": "43",
+    "Bug Maniac DEREK": {
+      "index": 298,
+      "slot": 1,
+      "level": "32",
       "ivs": {
-        "hp": 31,
+        "hp": 0,
         "at": 31,
         "df": 31,
         "sa": 31,
@@ -28881,200 +17857,45 @@ var SETDEX_SV = {
       },
       "ivsSpecified": true,
       "item": null,
-      "ability": null,
+      "ability": "Sweet Veil",
       "nature": null,
       "moves": [
-        "Sunny Day",
-        "Aerial Ace",
-        "Solar Beam",
-        "Earthquake"
-      ]
-    },
-    "Leader WINONA [WINONA_4]": {
-      "level": "49",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sunny Day",
-        "Aerial Ace",
-        "Solar Beam",
-        "Earthquake"
-      ]
-    },
-    "Leader WINONA [WINONA_5]": {
-      "level": "54",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sunny Day",
-        "Aerial Ace",
-        "Solar Beam",
-        "Earthquake"
+        "Moonblast",
+        "Bug Buzz",
+        "U-turn",
+        "Psychic"
       ]
     }
   },
-  "Swablu": {
-    "Picnicker DIANA [DIANA_2]": {
-      "level": "25",
+  "Slurpuff": {
+    "Picnicker DIANA": {
+      "index": 159,
+      "slot": 5,
+      "level": "40",
       "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker ASHLEY": {
-      "level": "27",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_3]": {
-      "level": "28",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bird Keeper ROBERT [ROBERT_1]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bird Keeper ROBERT [ROBERT_2]": {
-      "level": "32",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader WINONA [WINONA_1]": {
-      "level": "29",
-      "ivs": {
-        "hp": 25,
-        "at": 25,
-        "df": 25,
-        "sa": 25,
-        "sd": 25,
-        "sp": 25
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
+      "ivsSpecified": false,
+      "item": "Sitrus Berry",
+      "ability": "Sweet Veil",
       "nature": null,
       "moves": [
-        "Perish Song",
-        "Mirror Move",
-        "Safeguard",
-        "Aerial Ace"
-      ]
-    },
-    "Sr And Jr KIM & IRIS": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sing",
-        "Fury Attack",
-        "Safeguard",
-        "Aerial Ace"
+        "Play Rough",
+        "Belly Drum",
+        "Body Slam",
+        "Encore"
       ]
     }
   },
   "Spheal": {
     "Sailor DUNCAN": {
+      "index": 160,
+      "slot": 0,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -29091,6 +17912,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F NIKKI": {
+      "index": 306,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -29107,6 +17930,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F KATIE": {
+      "index": 307,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -29123,6 +17948,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Sailor KELVIN": {
+      "index": 313,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 18,
@@ -29139,6 +17966,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M REED": {
+      "index": 318,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -29155,6 +17984,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer M KEVIN": {
+      "index": 333,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -29173,6 +18004,8 @@ var SETDEX_SV = {
   },
   "Machoke": {
     "Sailor DUNCAN": {
+      "index": 160,
+      "slot": 1,
       "level": "25",
       "ivs": {
         "hp": 0,
@@ -29188,23 +18021,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Black Belt NOB [NOB_2]": {
-      "level": "27",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Black Belt KOICHI": {
+      "index": 229,
+      "slot": 1,
       "level": "28",
       "ivs": {
         "hp": 18,
@@ -29220,23 +18039,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Black Belt NOB [NOB_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Expert FREDRICK": {
+      "index": 256,
+      "slot": 1,
       "level": "30",
       "ivs": {
         "hp": 12,
@@ -29252,23 +18057,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Black Belt NOB [NOB_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Black Belt HITOSHI": {
+      "index": 278,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 24,
@@ -29284,23 +18075,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Black Belt NOB [NOB_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor ERNEST [ERNEST_1]": {
+    "Sailor ERNEST": {
+      "index": 311,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -29317,6 +18094,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Sailor KELVIN": {
+      "index": 313,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 18,
@@ -29332,23 +18111,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Hiker SAWYER [SAWYER_5]": {
-      "level": "33",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt KOJI [KOJI_1]": {
+    "Black Belt KOJI": {
+      "index": 361,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -29364,119 +18129,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sailor ERNEST [ERNEST_2]": {
-      "level": "36",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor CORY [CORY_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt KOJI [KOJI_2]": {
-      "level": "37",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor ERNEST [ERNEST_3]": {
-      "level": "39",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt KOJI [KOJI_3]": {
-      "level": "39",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt KOJI [KOJI_4]": {
-      "level": "41",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sailor ERNEST [ERNEST_4]": {
-      "level": "42",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Sailor LEONARD": {
+      "index": 440,
+      "slot": 2,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -29493,6 +18148,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Sailor PHILLIP": {
+      "index": 445,
+      "slot": 1,
       "level": "44",
       "ivs": {
         "hp": 0,
@@ -29507,614 +18164,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Sailor ERNEST [ERNEST_5]": {
-      "level": "45",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Hariyama": {
-    "Pkmn Breeder ISAAC [ISAAC_3]": {
-      "level": "25",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert TIMOTHY [TIMOTHY_1]": {
-      "level": "27",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder ISAAC [ISAAC_4]": {
-      "level": "28",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt ZANDER": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_1]": {
-      "level": "31",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Flame Orb",
-      "ability": "Guts",
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Bulk Up",
-        "Bullet Punch",
-        "Drain Punch"
-      ]
-    },
-    "Pkmn Breeder ISAAC [ISAAC_5]": {
-      "level": "31",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt ATSUSHI": {
-      "level": "32",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl CYNDY [CYNDY_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert TIMOTHY [TIMOTHY_2]": {
-      "level": "33",
-      "ivs": {
-        "hp": 25,
-        "at": 25,
-        "df": 25,
-        "sa": 25,
-        "sd": 25,
-        "sp": 25
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Arm Thrust",
-        "Knock Off",
-        "Sand Attack",
-        "Dig"
-      ]
-    },
-    "Expert SHELBY [SHELBY_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 26,
-        "at": 26,
-        "df": 26,
-        "sa": 26,
-        "sd": 26,
-        "sp": 26
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl REYNA": {
-      "level": "33",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert CONOR": {
-      "level": "33",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Black Belt KIYO": {
-      "level": "34",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer WILTON [WILTON_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl CYNDY [CYNDY_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert TIMOTHY [TIMOTHY_3]": {
-      "level": "36",
-      "ivs": {
-        "hp": 26,
-        "at": 26,
-        "df": 26,
-        "sa": 26,
-        "sd": 26,
-        "sp": 26
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Arm Thrust",
-        "Knock Off",
-        "Sand Attack",
-        "Dig"
-      ]
-    },
-    "Expert SHELBY [SHELBY_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 27,
-        "at": 27,
-        "df": 27,
-        "sa": 27,
-        "sd": 27,
-        "sp": 27
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader BRAWLY [BRAWLY_2]": {
-      "level": "37",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Focus Punch",
-        "Belly Drum",
-        "Earthquake"
-      ]
-    },
-    "Sr And Jr ANNA & MEG [ANNA_AND_MEG_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Tackle",
-        "Focus Energy",
-        "Arm Thrust"
-      ]
-    },
-    "Expert TIMOTHY [TIMOTHY_4]": {
-      "level": "39",
-      "ivs": {
-        "hp": 27,
-        "at": 27,
-        "df": 27,
-        "sa": 27,
-        "sd": 27,
-        "sp": 27
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Arm Thrust",
-        "Belly Drum",
-        "Sand Attack",
-        "Dig"
-      ]
-    },
-    "Expert SHELBY [SHELBY_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 29,
-        "at": 29,
-        "df": 29,
-        "sa": 29,
-        "sd": 29,
-        "sp": 29
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_1]": {
-      "level": "39",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Focus Punch",
-        "Rock Tomb",
-        "Rest",
-        "Belly Drum"
-      ]
-    },
-    "Black Belt KOJI [KOJI_4]": {
-      "level": "41",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Expert TIMOTHY [TIMOTHY_5]": {
-      "level": "42",
-      "ivs": {
-        "hp": 29,
-        "at": 29,
-        "df": 29,
-        "sa": 29,
-        "sd": 29,
-        "sp": 29
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Arm Thrust",
-        "Belly Drum",
-        "Sand Attack",
-        "Dig"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_3]": {
-      "level": "42",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Focus Punch",
-        "Belly Drum",
-        "Earthquake"
-      ]
-    },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_2]": {
-      "level": "43",
-      "ivs": {
-        "hp": 25,
-        "at": 25,
-        "df": 25,
-        "sa": 25,
-        "sd": 25,
-        "sp": 25
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Focus Punch",
-        "Rock Tomb",
-        "Rest",
-        "Belly Drum"
-      ]
-    },
-    "Black Belt KOJI [KOJI_5]": {
-      "level": "43",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_3]": {
-      "level": "46",
-      "ivs": {
-        "hp": 26,
-        "at": 26,
-        "df": 26,
-        "sa": 26,
-        "sd": 26,
-        "sp": 26
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Focus Punch",
-        "Rock Tomb",
-        "Rest",
-        "Belly Drum"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_4]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Focus Punch",
-        "Belly Drum",
-        "Earthquake"
-      ]
-    },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_4]": {
-      "level": "49",
-      "ivs": {
-        "hp": 27,
-        "at": 27,
-        "df": 27,
-        "sa": 27,
-        "sd": 27,
-        "sp": 27
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Focus Punch",
-        "Rock Tomb",
-        "Rest",
-        "Belly Drum"
-      ]
-    },
-    "Old Couple JOHN & JAY [JOHN_AND_JAY_5]": {
-      "level": "52",
-      "ivs": {
-        "hp": 29,
-        "at": 29,
-        "df": 29,
-        "sa": 29,
-        "sd": 29,
-        "sp": 29
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Focus Punch",
-        "Rock Tomb",
-        "Rest",
-        "Belly Drum"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_5]": {
-      "level": "52",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Focus Punch",
-        "Belly Drum",
-        "Earthquake"
-      ]
     }
   },
   "Gulpin": {
     "Pkmn Breeder PAT": {
+      "index": 170,
+      "slot": 5,
       "level": "25",
       "ivs": {
         "hp": 1,
@@ -30131,6 +18186,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Ninja Boy JAIDEN": {
+      "index": 208,
+      "slot": 1,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -30147,8 +18204,53 @@ var SETDEX_SV = {
       "moves": []
     }
   },
+  "Skitty": {
+    "Pkmn Breeder GABRIELLE": {
+      "index": 171,
+      "slot": 0,
+      "level": "26",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Pokefan COLTON": {
+      "index": 429,
+      "slot": 4,
+      "level": "30",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": "Oran Berry",
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Assist",
+        "Charm",
+        "Feint Attack",
+        "Heal Bell"
+      ]
+    }
+  },
   "Lotad": {
-    "Pkmn Breeder GABRIELLE [GABRIELLE_1]": {
+    "Pkmn Breeder GABRIELLE": {
+      "index": 171,
+      "slot": 3,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -30165,6 +18267,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pkmn Ranger JENNA": {
+      "index": 236,
+      "slot": 0,
       "level": "28",
       "ivs": {
         "hp": 6,
@@ -30179,26 +18283,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Seedot": {
-    "Pkmn Breeder GABRIELLE [GABRIELLE_1]": {
+    "Pkmn Breeder GABRIELLE": {
+      "index": 171,
+      "slot": 4,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -30215,6 +18305,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Pkmn Ranger LORENZO": {
+      "index": 235,
+      "slot": 0,
       "level": "28",
       "ivs": {
         "hp": 6,
@@ -30229,26 +18321,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Spinda": {
     "Cooltrainer PARKER": {
+      "index": 177,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 31,
@@ -30269,6 +18347,8 @@ var SETDEX_SV = {
       ]
     },
     "Sr And Jr KATE & JOY": {
+      "index": 282,
+      "slot": 0,
       "level": "30",
       "ivs": {
         "hp": 0,
@@ -30288,142 +18368,12 @@ var SETDEX_SV = {
         "Dizzy Punch",
         "Teeter Dance"
       ]
-    },
-    "Cooltrainer CRISTIN [CRISTIN_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer CRISTIN [CRISTIN_4]": {
-      "level": "39",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer CRISTIN [CRISTIN_5]": {
-      "level": "41",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader NORMAN [NORMAN_2]": {
-      "level": "43",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Teeter Dance",
-        "Skill Swap",
-        "Facade",
-        "Hypnosis"
-      ]
-    },
-    "Leader NORMAN [NORMAN_3]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Teeter Dance",
-        "Skill Swap",
-        "Facade",
-        "Hypnosis"
-      ]
-    },
-    "Leader NORMAN [NORMAN_4]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Teeter Dance",
-        "Skill Swap",
-        "Facade",
-        "Hypnosis"
-      ]
-    },
-    "Leader NORMAN [NORMAN_5]": {
-      "level": "58",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Teeter Dance",
-        "Skill Swap",
-        "Facade",
-        "Hypnosis"
-      ]
     }
   },
   "Slakoth": {
     "Cooltrainer GEORGE": {
+      "index": 178,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 31,
@@ -30446,6 +18396,8 @@ var SETDEX_SV = {
   },
   "Vigoroth": {
     "Cooltrainer BERKE": {
+      "index": 179,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 31,
@@ -30464,56 +18416,10 @@ var SETDEX_SV = {
         "Slash"
       ]
     },
-    "Cooltrainer CRISTIN [CRISTIN_1]": {
+    "Cooltrainer CRISTIN": {
+      "index": 253,
+      "slot": 1,
       "level": "29",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer CRISTIN [CRISTIN_2]": {
-      "level": "35",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer CRISTIN [CRISTIN_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer CRISTIN [CRISTIN_4]": {
-      "level": "39",
       "ivs": {
         "hp": 12,
         "at": 12,
@@ -30529,8 +18435,226 @@ var SETDEX_SV = {
       "moves": []
     }
   },
+  "Scolipede": {
+    "Cooltrainer WILTON": {
+      "index": 180,
+      "slot": 1,
+      "level": "35",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Bright Powder",
+      "ability": "Poison Point",
+      "nature": null,
+      "moves": [
+        "Leech Life",
+        "Poison Jab",
+        "Earthquake",
+        "Aqua Tail"
+      ]
+    }
+  },
+  "Pelipper": {
+    "Cooltrainer BROOKE": {
+      "index": 184,
+      "slot": 0,
+      "level": "36",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Life Orb",
+      "ability": "Drizzle",
+      "nature": "Modest",
+      "moves": [
+        "Hurricane",
+        "Hydro Pump",
+        "U-turn",
+        "Roost"
+      ]
+    }
+  },
+  "Camerupt": {
+    "Cooltrainer BROOKE": {
+      "index": 184,
+      "slot": 1,
+      "level": "36",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Passho Berry",
+      "ability": "Solid Rock",
+      "nature": "Modest",
+      "moves": [
+        "Sunny Day",
+        "Solar Beam",
+        "Flamethrower",
+        "Earth Power"
+      ]
+    }
+  },
+  "Flareon": {
+    "Kindler BERNIE": {
+      "index": 190,
+      "slot": 1,
+      "level": "38",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Charcoal",
+      "ability": "ignite",
+      "nature": "Adamant",
+      "moves": [
+        "Double-Edge",
+        "Superpower",
+        "Will-O-Wisp",
+        "Covet"
+      ]
+    },
+    "Hiker ELI": {
+      "index": 418,
+      "slot": 1,
+      "level": "40",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Toxic Orb",
+      "ability": "Toxic Boost",
+      "nature": "Jolly",
+      "moves": [
+        "Protect",
+        "Flare Blitz",
+        "Facade",
+        "Double Kick"
+      ]
+    }
+  },
+  "Rapidash": {
+    "Kindler BERNIE": {
+      "index": 190,
+      "slot": 2,
+      "level": "38",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Silk Scarf",
+      "ability": "Reckless",
+      "nature": "Adamant",
+      "moves": [
+        "Double-Edge",
+        "Flare Blitz",
+        "High Horsepower"
+      ]
+    },
+    "Triathlete JACOB": {
+      "index": 458,
+      "slot": 4,
+      "level": "50",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Choice Band",
+      "ability": "Reckless",
+      "nature": "Jolly",
+      "moves": [
+        "Double-Edge",
+        "Flare Blitz"
+      ]
+    }
+  },
+  "Houndoom": {
+    "Kindler BERNIE": {
+      "index": 190,
+      "slot": 3,
+      "level": "38",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Chesto Berry",
+      "ability": "Berserk",
+      "nature": "Modest",
+      "moves": [
+        "Rest",
+        "Dark Pulse",
+        "Fire Blast",
+        "Sludge Bomb"
+      ]
+    },
+    "Hiker ERIC": {
+      "index": 411,
+      "slot": 1,
+      "level": "39",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Expert Belt",
+      "ability": "Flash Fire",
+      "nature": null,
+      "moves": [
+        "Dark Pulse",
+        "Flamethrower",
+        "Sludge Bomb",
+        "Pursuit"
+      ]
+    }
+  },
   "Ralts": {
     "Psychic WILLIAM": {
+      "index": 192,
+      "slot": 1,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -30546,23 +18670,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "School Kid JERRY [JERRY_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Psychic VIRGIL": {
+      "index": 381,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 12,
@@ -30581,6 +18691,8 @@ var SETDEX_SV = {
   },
   "Natu": {
     "Psychic KAYLA": {
+      "index": 193,
+      "slot": 1,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -30597,6 +18709,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper COLIN": {
+      "index": 233,
+      "slot": 1,
       "level": "28",
       "ivs": {
         "hp": 0,
@@ -30612,23 +18726,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Bird Keeper ROBERT [ROBERT_2]": {
-      "level": "32",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Bird Keeper ALEX": {
+      "index": 305,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 18,
@@ -30644,23 +18744,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Bird Keeper ROBERT [ROBERT_3]": {
-      "level": "35",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Psychic MACEY": {
+      "index": 391,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 0,
@@ -30675,140 +18761,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Bird Keeper ROBERT [ROBERT_4]": {
-      "level": "38",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Nuzleaf": {
-    "Collector EDWIN [EDWIN_2]": {
-      "level": "26",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger LORENZO": {
-      "level": "28",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Ranger JENNA": {
-      "level": "28",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Collector EDWIN [EDWIN_3]": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Collector EDWIN [EDWIN_4]": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pkmn Breeder GABRIELLE [GABRIELLE_4]": {
-      "level": "35",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Staryu": {
     "Triathlete CAMRON": {
+      "index": 206,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -30825,6 +18783,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete CAMDEN": {
+      "index": 301,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -30840,7 +18800,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Triathlete PABLO [PABLO_1]": {
+    "Triathlete PABLO": {
+      "index": 302,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -30857,6 +18819,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete ALLISON": {
+      "index": 303,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 29,
@@ -30873,6 +18837,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete CHASE": {
+      "index": 337,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 9,
@@ -30889,6 +18855,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete ISOBEL": {
+      "index": 338,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -30905,6 +18873,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete DONNY": {
+      "index": 339,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 19,
@@ -30921,6 +18891,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete TALIA": {
+      "index": 340,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -30937,6 +18909,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete ISABELLA": {
+      "index": 357,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -30952,7 +18926,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Triathlete ISAIAH [ISAIAH_1]": {
+    "Triathlete ISAIAH": {
+      "index": 370,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -30968,152 +18944,10 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Triathlete KATELYN [KATELYN_1]": {
+    "Triathlete KATELYN": {
+      "index": 371,
+      "slot": 0,
       "level": "35",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer M TONY [TONY_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete PABLO [PABLO_2]": {
-      "level": "37",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete ISAIAH [ISAIAH_2]": {
-      "level": "39",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete KATELYN [KATELYN_2]": {
-      "level": "39",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete PABLO [PABLO_3]": {
-      "level": "39",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete PABLO [PABLO_4]": {
-      "level": "41",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete ISAIAH [ISAIAH_3]": {
-      "level": "42",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete KATELYN [KATELYN_3]": {
-      "level": "42",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer F JENNY [JENNY_4]": {
-      "level": "43",
       "ivs": {
         "hp": 0,
         "at": 0,
@@ -31131,6 +18965,8 @@ var SETDEX_SV = {
   },
   "Doduo": {
     "Triathlete KYRA": {
+      "index": 207,
+      "slot": 0,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -31147,6 +18983,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Bird Keeper JARED": {
+      "index": 220,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 12,
@@ -31162,39 +19000,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Triathlete DYLAN [DYLAN_2]": {
-      "level": "28",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete MARIA [MARIA_2]": {
-      "level": "28",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Bird Keeper EDWARDO": {
+      "index": 247,
+      "slot": 0,
       "level": "29",
       "ivs": {
         "hp": 18,
@@ -31209,42 +19017,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Triathlete DYLAN [DYLAN_3]": {
-      "level": "31",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete MARIA [MARIA_3]": {
-      "level": "31",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Dodrio": {
     "Triathlete KYRA": {
+      "index": 207,
+      "slot": 1,
       "level": "26",
       "ivs": {
         "hp": 0,
@@ -31260,7 +19038,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Triathlete DYLAN [DYLAN_1]": {
+    "Triathlete DYLAN": {
+      "index": 231,
+      "slot": 4,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -31281,71 +19061,9 @@ var SETDEX_SV = {
         "Jump Kick"
       ]
     },
-    "Triathlete DYLAN [DYLAN_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete MARIA [MARIA_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete DYLAN [DYLAN_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete MARIA [MARIA_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer VITO": {
+      "index": 423,
+      "slot": 0,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -31362,6 +19080,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Triathlete ANTHONY": {
+      "index": 459,
+      "slot": 0,
       "level": "48",
       "ivs": {
         "hp": 31,
@@ -31374,7 +19094,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Adaptability",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Brave Bird",
         "Body Slam",
@@ -31385,6 +19105,8 @@ var SETDEX_SV = {
   },
   "Baltoy": {
     "Ruin Maniac CHIP": {
+      "index": 213,
+      "slot": 0,
       "level": "27",
       "ivs": {
         "hp": 6,
@@ -31404,16 +19126,137 @@ var SETDEX_SV = {
         "Sandstorm",
         "Ancient Power"
       ]
+    }
+  },
+  "Kabutops": {
+    "Ruin Maniac DUSTY": {
+      "index": 214,
+      "slot": 0,
+      "level": "52",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Expert Belt",
+      "ability": "Sharpness",
+      "nature": null,
+      "moves": [
+        "Aqua Cutter",
+        "Ceaseless Edge",
+        "Stone Axe"
+      ]
+    }
+  },
+  "Omastar": {
+    "Ruin Maniac DUSTY": {
+      "index": 214,
+      "slot": 1,
+      "level": "52",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Rindo Berry",
+      "ability": "Solid Rock",
+      "nature": "Modest",
+      "moves": [
+        "Meteor Beam",
+        "Muddy Water",
+        "Earth Power",
+        "Protect"
+      ]
+    }
+  },
+  "Exploud": {
+    "Interviewer GABBY & TY": {
+      "index": 215,
+      "slot": 1,
+      "level": "36",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Choice Band",
+      "ability": "Scrappy",
+      "nature": "Adamant",
+      "moves": [
+        "Explosion"
+      ]
     },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_4]": {
+    "Kindler HAYDEN": {
+      "index": 364,
+      "slot": 2,
+      "level": "34",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Silk Scarf",
+      "ability": "Punk Rock",
+      "nature": "Modest",
+      "moves": [
+        "Shock Wave",
+        "Hyper Voice",
+        "Surf",
+        "Incinerate"
+      ]
+    }
+  },
+  "Mightyena": {
+    "Pokemaniac STEVE": {
+      "index": 216,
+      "slot": 0,
+      "level": "38",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Leftovers",
+      "ability": "Strong Jaw",
+      "nature": null,
+      "moves": [
+        "Crunch",
+        "Play Rough",
+        "Thunder Fang",
+        "Ice Fang"
+      ]
+    },
+    "Aqua Admin SHELLY": {
+      "index": 227,
+      "slot": 1,
       "level": "28",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 6,
+        "at": 6,
+        "df": 6,
+        "sa": 6,
+        "sd": 6,
+        "sp": 6
       },
       "ivsSpecified": true,
       "item": null,
@@ -31421,15 +19264,17 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_5]": {
+    "Magma Admin TABITHA": {
+      "index": 319,
+      "slot": 1,
       "level": "28",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 9,
+        "at": 9,
+        "df": 9,
+        "sa": 9,
+        "sd": 9,
+        "sp": 9
       },
       "ivsSpecified": true,
       "item": null,
@@ -31437,15 +19282,17 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_11]": {
-      "level": "29",
+    "Aqua Admin MATT": {
+      "index": 324,
+      "slot": 0,
+      "level": "34",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 6,
+        "at": 6,
+        "df": 6,
+        "sa": 6,
+        "sd": 6,
+        "sp": 6
       },
       "ivsSpecified": true,
       "item": null,
@@ -31453,15 +19300,17 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Team Magma GRUNT [GRUNT_MAGMA_HIDEOUT_16]": {
-      "level": "29",
+    "Magma Leader MAXIE": {
+      "index": 409,
+      "slot": 0,
+      "level": "37",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 18,
+        "at": 18,
+        "df": 18,
+        "sa": 18,
+        "sd": 18,
+        "sp": 18
       },
       "ivsSpecified": true,
       "item": null,
@@ -31469,15 +19318,17 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Team Magma GRUNT [GRUNT_SPACE_CENTER_4]": {
-      "level": "32",
+    "Aqua Leader ARCHIE": {
+      "index": 431,
+      "slot": 0,
+      "level": "41",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 18,
+        "at": 18,
+        "df": 18,
+        "sa": 18,
+        "sd": 18,
+        "sp": 18
       },
       "ivsSpecified": true,
       "item": null,
@@ -31485,15 +19336,129 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Team Magma GRUNT [GRUNT_SPACE_CENTER_7]": {
-      "level": "32",
+    "Elite Four SIDNEY": {
+      "index": 455,
+      "slot": 0,
+      "level": "46",
       "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
+        "hp": 30,
+        "at": 30,
+        "df": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 30
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Roar",
+        "Double Edge",
+        "Sand Attack",
+        "Crunch"
+      ]
+    }
+  },
+  "Crobat": {
+    "Pokemaniac STEVE": {
+      "index": 216,
+      "slot": 1,
+      "level": "38",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Leftovers",
+      "ability": "Inner Focus",
+      "nature": null,
+      "moves": [
+        "Brave Bird",
+        "Cross Poison",
+        "Roost",
+        "U-Turn"
+      ]
+    },
+    "Triathlete BENJAMIN": {
+      "index": 263,
+      "slot": 4,
+      "level": "49",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Black Sludge",
+      "ability": "Inner Focus",
+      "nature": "Jolly",
+      "moves": [
+        "Brave Bird",
+        "Cross Poison",
+        "U-turn",
+        "Roost"
+      ]
+    },
+    "Camper SHANE": {
+      "index": 397,
+      "slot": 3,
+      "level": "38",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Leftovers",
+      "ability": "Inner Focus",
+      "nature": null,
+      "moves": [
+        "Brave Bird",
+        "Cross Poison",
+        "Roost",
+        "U-Turn"
+      ]
+    },
+    "Magma Leader MAXIE": {
+      "index": 409,
+      "slot": 1,
+      "level": "38",
+      "ivs": {
+        "hp": 18,
+        "at": 18,
+        "df": 18,
+        "sa": 18,
+        "sd": 18,
+        "sp": 18
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Aqua Leader ARCHIE": {
+      "index": 431,
+      "slot": 1,
+      "level": "41",
+      "ivs": {
+        "hp": 18,
+        "at": 18,
+        "df": 18,
+        "sa": 18,
+        "sd": 18,
+        "sp": 18
       },
       "ivsSpecified": true,
       "item": null,
@@ -31502,74 +19467,131 @@ var SETDEX_SV = {
       "moves": []
     }
   },
-  "Lairon": {
-    "Pokemaniac STEVE [STEVE_2]": {
-      "level": "27",
+  "Electivire": {
+    "Pokemaniac STEVE": {
+      "index": 216,
+      "slot": 2,
+      "level": "38",
       "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
+      "ivsSpecified": false,
+      "item": "Punching Glove",
+      "ability": "Motor Drive",
       "nature": null,
-      "moves": []
+      "moves": [
+        "Thunder Punch",
+        "Ice Punch",
+        "Cross Chop",
+        "Bulk Up"
+      ]
     },
-    "Pokemaniac STEVE [STEVE_3]": {
-      "level": "29",
+    "Leader WATTSON": {
+      "index": 336,
+      "slot": 5,
+      "level": "33",
       "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
+      "ivsSpecified": false,
+      "item": "Expert Belt",
+      "ability": "Iron Fist",
+      "nature": "Adamant",
+      "moves": [
+        "Thunder Punch",
+        "Drain Punch",
+        "Mach Punch",
+        "Ice Punch"
+      ]
+    }
+  },
+  "Gliscor": {
+    "Pokemaniac STEVE": {
+      "index": 216,
+      "slot": 3,
+      "level": "38",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Toxic Orb",
+      "ability": "Poison Heal",
       "nature": null,
-      "moves": []
+      "moves": [
+        "Earthquake",
+        "Roost",
+        "Toxic",
+        "Protect"
+      ]
     },
-    "Pkmn Breeder ISAAC [ISAAC_5]": {
-      "level": "31",
+    "Bird Keeper COBY": {
+      "index": 402,
+      "slot": 2,
+      "level": "38",
       "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Pokemaniac STEVE [STEVE_4]": {
-      "level": "32",
+      "ivsSpecified": false,
+      "item": "Life Orb",
+      "ability": "Sand Veil",
+      "nature": "Impish",
+      "moves": [
+        "Protect",
+        "Knock Off",
+        "High Horsepower",
+        "Crabhammer"
+      ]
+    }
+  },
+  "Floatzel": {
+    "Pokemaniac STEVE": {
+      "index": 216,
+      "slot": 4,
+      "level": "38",
       "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
+      "ivsSpecified": false,
+      "item": "Choice Band",
+      "ability": "Swift Swim",
       "nature": null,
-      "moves": []
+      "moves": [
+        "Aqua Jet",
+        "Waterfall",
+        "Ice Punch",
+        "Crunch"
+      ]
     }
   },
   "Cascoon": {
     "Bug Maniac TAYLOR": {
+      "index": 217,
+      "slot": 1,
       "level": "27",
       "ivs": {
         "hp": 12,
@@ -31586,8 +19608,250 @@ var SETDEX_SV = {
       "moves": []
     }
   },
+  "Hariyama": {
+    "Expert TIMOTHY": {
+      "index": 219,
+      "slot": 0,
+      "level": "27",
+      "ivs": {
+        "hp": 24,
+        "at": 24,
+        "df": 24,
+        "sa": 24,
+        "sd": 24,
+        "sp": 24
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Sr And Jr ANNA & MEG": {
+      "index": 261,
+      "slot": 2,
+      "level": "31",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Flame Orb",
+      "ability": "Guts",
+      "nature": null,
+      "moves": [
+        "Fake Out",
+        "Bulk Up",
+        "Bullet Punch",
+        "Drain Punch"
+      ]
+    },
+    "Black Belt ZANDER": {
+      "index": 268,
+      "slot": 0,
+      "level": "31",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Black Belt ATSUSHI": {
+      "index": 279,
+      "slot": 0,
+      "level": "32",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Battle Girl REYNA": {
+      "index": 314,
+      "slot": 1,
+      "level": "33",
+      "ivs": {
+        "hp": 24,
+        "at": 24,
+        "df": 24,
+        "sa": 24,
+        "sd": 24,
+        "sp": 24
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Expert CONOR": {
+      "index": 315,
+      "slot": 1,
+      "level": "33",
+      "ivs": {
+        "hp": 24,
+        "at": 24,
+        "df": 24,
+        "sa": 24,
+        "sd": 24,
+        "sp": 24
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Black Belt KIYO": {
+      "index": 335,
+      "slot": 0,
+      "level": "34",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Old Couple JOHN & JAY": {
+      "index": 412,
+      "slot": 1,
+      "level": "39",
+      "ivs": {
+        "hp": 24,
+        "at": 24,
+        "df": 24,
+        "sa": 24,
+        "sd": 24,
+        "sp": 24
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Focus Punch",
+        "Rock Tomb",
+        "Rest",
+        "Belly Drum"
+      ]
+    }
+  },
+  "Swablu": {
+    "Picnicker ASHLEY": {
+      "index": 224,
+      "slot": 2,
+      "level": "27",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Bird Keeper ROBERT": {
+      "index": 248,
+      "slot": 0,
+      "level": "29",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Leader WINONA": {
+      "index": 299,
+      "slot": 0,
+      "level": "29",
+      "ivs": {
+        "hp": 25,
+        "at": 25,
+        "df": 25,
+        "sa": 25,
+        "sd": 25,
+        "sp": 25
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Perish Song",
+        "Mirror Move",
+        "Safeguard",
+        "Aerial Ace"
+      ]
+    },
+    "Sr And Jr KIM & IRIS": {
+      "index": 376,
+      "slot": 0,
+      "level": "32",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Sing",
+        "Fury Attack",
+        "Safeguard",
+        "Aerial Ace"
+      ]
+    }
+  },
   "Magneton": {
     "Cooltrainer BRAXTON": {
+      "index": 228,
+      "slot": 3,
       "level": "28",
       "ivs": {
         "hp": 12,
@@ -31608,39 +19872,9 @@ var SETDEX_SV = {
         "Sonic Boom"
       ]
     },
-    "Interviewer GABBY & TY [GABBY_AND_TY_3]": {
-      "level": "30",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist DALTON [DALTON_4]": {
-      "level": "31",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Triathlete ALYSSA": {
+      "index": 288,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 1,
@@ -31661,177 +19895,9 @@ var SETDEX_SV = {
         "Hidden Power"
       ]
     },
-    "Interviewer GABBY & TY [GABBY_AND_TY_4]": {
-      "level": "33",
-      "ivs": {
-        "hp": 24,
-        "at": 24,
-        "df": 24,
-        "sa": 24,
-        "sd": 24,
-        "sp": 24
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist DALTON [DALTON_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete ABIGAIL [ABIGAIL_4]": {
-      "level": "34",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Interviewer GABBY & TY [GABBY_AND_TY_5]": {
-      "level": "36",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete BENJAMIN [BENJAMIN_4]": {
-      "level": "36",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete ABIGAIL [ABIGAIL_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Interviewer GABBY & TY [GABBY_AND_TY_6]": {
-      "level": "39",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sonic Boom",
-        "Thunder Wave",
-        "Metal Sound",
-        "Thunderbolt"
-      ]
-    },
-    "Triathlete BENJAMIN [BENJAMIN_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader WATTSON [WATTSON_2]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Supersonic",
-        "Protect",
-        "Thunder",
-        "Rain Dance"
-      ]
-    },
-    "Cooltrainer ALBERT": {
-      "level": "43",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival WALLY [WALLY_VR_1]": {
+    "Rival WALLY": {
+      "index": 392,
+      "slot": 3,
       "level": "41",
       "ivs": {
         "hp": 18,
@@ -31852,156 +19918,29 @@ var SETDEX_SV = {
         "Screech"
       ]
     },
-    "Leader WATTSON [WATTSON_3]": {
+    "Cooltrainer ALBERT": {
+      "index": 434,
+      "slot": 0,
       "level": "43",
       "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Supersonic",
-        "Protect",
-        "Thunder",
-        "Rain Dance"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_2]": {
-      "level": "44",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
       },
       "ivsSpecified": true,
       "item": null,
       "ability": null,
       "nature": null,
-      "moves": [
-        "Supersonic",
-        "Thunderbolt",
-        "Tri Attack",
-        "Screech"
-      ]
-    },
-    "Leader WATTSON [WATTSON_4]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Supersonic",
-        "Protect",
-        "Thunder",
-        "Rain Dance"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_3]": {
-      "level": "47",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Supersonic",
-        "Thunderbolt",
-        "Tri Attack",
-        "Screech"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_4]": {
-      "level": "50",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Supersonic",
-        "Thunderbolt",
-        "Tri Attack",
-        "Screech"
-      ]
-    },
-    "Leader WATTSON [WATTSON_5]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Supersonic",
-        "Protect",
-        "Thunder",
-        "Rain Dance"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_5]": {
-      "level": "53",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Supersonic",
-        "Thunderbolt",
-        "Tri Attack",
-        "Screech"
-      ]
+      "moves": []
     }
   },
   "Golbat": {
     "Youngster TIMMY": {
+      "index": 230,
+      "slot": 0,
       "level": "28",
       "ivs": {
         "hp": 31,
@@ -32023,6 +19962,8 @@ var SETDEX_SV = {
       ]
     },
     "Aqua Admin MATT": {
+      "index": 324,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 6,
@@ -32037,42 +19978,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": []
-    },
-    "Team Aqua GRUNT [GRUNT_SEAFLOOR_CAVERN_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Magma Admin TABITHA [TABITHA_MOSSDEEP]": {
-      "level": "40",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Pidgeotto": {
     "Youngster TIMMY": {
+      "index": 230,
+      "slot": 2,
       "level": "28",
       "ivs": {
         "hp": 31,
@@ -32085,7 +19996,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Power Herb",
       "ability": "Tangled Feet",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Hurricane",
         "Razor Wind",
@@ -32094,1103 +20005,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Nincada": {
-    "Bug Catcher DOUG": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Ninja Boy RILEY": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Leech Life",
-        "Fury Swipes",
-        "Mind Reader",
-        "Dig"
-      ]
-    }
-  },
-  "Shuppet": {
-    "Hex Maniac TAMMY": {
-      "level": "29",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac KINDRA": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac TASHA": {
-      "level": "32",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Lunatone": {
-    "Psychic JACKI [JACKI_1]": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Psychic JACKI [JACKI_2]": {
-      "level": "34",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Psychic JACKI [JACKI_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Psychic JACKI [JACKI_4]": {
-      "level": "40",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_1]": {
-      "level": "42",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Light Screen",
-        "Psychic",
-        "Hypnosis",
-        "Calm Mind"
-      ]
-    },
-    "Psychic JACKI [JACKI_5]": {
-      "level": "43",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer MITCHELL": {
-      "level": "43",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Explosion",
-        "Reflect",
-        "Light Screen",
-        "Psychic"
-      ]
-    },
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER1]": {
-      "level": "46",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chople Berry",
-      "ability": "Levitate",
-      "nature": null,
-      "moves": [
-        "Dark Pulse",
-        "Nasty Plot",
-        "Power Gem",
-        "Meteor Beam"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_2]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Psychic",
-        "Rest",
-        "Calm Mind"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_3]": {
-      "level": "55",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Psychic",
-        "Rest",
-        "Calm Mind"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_4]": {
-      "level": "60",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Psychic",
-        "Rest",
-        "Calm Mind"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_5]": {
-      "level": "65",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Psychic",
-        "Rest",
-        "Calm Mind"
-      ]
-    }
-  },
-  "Pikachu": {
-    "Pokefan VANESSA": {
-      "level": "30",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": "Oran Berry",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader WATTSON [WATTSON_3]": {
-      "level": "39",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder",
-        "Slam",
-        "Rain Dance",
-        "Shock Wave"
-      ]
-    }
-  },
-  "Castform": {
-    "Parasol Lady ANGELICA": {
-      "level": "30",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rain Dance",
-        "Weather Ball",
-        "Thunder",
-        "Water Pulse"
-      ]
-    },
-    "Parasol Lady KAYLEY": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sunny Day",
-        "Weather Ball",
-        "Flamethrower",
-        "Solar Beam"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_1]": {
-      "level": "43",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Charcoal",
-      "ability": "Forecast",
-      "nature": null,
-      "moves": [
-        "Solar Beam",
-        "Protect",
-        "Will-O-Wisp",
-        "Weather Ball"
-      ]
-    }
-  },
-  "Arcanine-Hisui": {
-    "Rival BRENDAN [BRENDAN_ROUTE_110_MUDKIP]": {
-      "level": "28",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Rock Head",
-      "nature": null,
-      "moves": [
-        "Will-O-Wisp",
-        "Heat Crash",
-        "Rock Tomb",
-        "Extreme Speed"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TORCHIC]": {
-      "level": "28",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Rock Head",
-      "nature": null,
-      "moves": [
-        "Will-O-Wisp",
-        "Heat Crash",
-        "Rock Tomb",
-        "Extreme Speed"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_MUDKIP]": {
-      "level": "28",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Rock Head",
-      "nature": null,
-      "moves": [
-        "Will-O-Wisp",
-        "Heat Crash",
-        "Rock Tomb",
-        "Extreme Speed"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TORCHIC]": {
-      "level": "28",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Rock Head",
-      "nature": null,
-      "moves": [
-        "Will-O-Wisp",
-        "Heat Crash",
-        "Rock Tomb",
-        "Extreme Speed"
-      ]
-    },
-    "Battle Girl DANIELLE": {
-      "level": "44",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Choice Band",
-      "ability": "Rock Head",
-      "nature": null,
-      "moves": [
-        "Flare Blitz",
-        "Head Smash"
-      ]
-    }
-  },
-  "Granbull": {
-    "Rival BRENDAN [BRENDAN_ROUTE_110_MUDKIP]": {
-      "level": "29",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Strong Jaw",
-      "nature": null,
-      "moves": [
-        "Jaw Lock",
-        "Drain Punch",
-        "Ice Fang",
-        "Pixie Fangs"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TREECKO]": {
-      "level": "29",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Strong Jaw",
-      "nature": null,
-      "moves": [
-        "Jaw Lock",
-        "Drain Punch",
-        "Ice Fang",
-        "Pixie Fangs"
-      ]
-    },
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TORCHIC]": {
-      "level": "29",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Strong Jaw",
-      "nature": null,
-      "moves": [
-        "Jaw Lock",
-        "Drain Punch",
-        "Ice Fang",
-        "Pixie Fangs"
-      ]
-    }
-  },
-  "Bisharp": {
-    "Rival BRENDAN [BRENDAN_ROUTE_110_TREECKO]": {
-      "level": "28",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Defiant",
-      "nature": null,
-      "moves": [
-        "Iron Head",
-        "Sucker Punch",
-        "Knock Off",
-        "Psycho Cut"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TREECKO]": {
-      "level": "28",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Defiant",
-      "nature": null,
-      "moves": [
-        "Iron Head",
-        "Sucker Punch",
-        "Knock Off",
-        "Psycho Cut"
-      ]
-    },
-    "Youngster JAYLEN": {
-      "level": "37",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Black Glasses",
-      "ability": "Defiant",
-      "nature": null,
-      "moves": [
-        "Swords Dance",
-        "Sucker Punch",
-        "Iron Head",
-        "Night Slash"
-      ]
-    }
-  },
-  "Rapidash-Galar": {
-    "Rival MAY [MAY_ROUTE_110_MUDKIP]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 30,
-        "df": 30,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Expert Belt",
-      "ability": "Adaptability",
-      "nature": null,
-      "moves": [
-        "Psybeam",
-        "Draining Kiss",
-        "Hidden Power"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TREECKO]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 30,
-        "df": 30,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Expert Belt",
-      "ability": "Adaptability",
-      "nature": null,
-      "moves": [
-        "Psybeam",
-        "Draining Kiss",
-        "Hidden Power"
-      ]
-    },
-    "Rival MAY [MAY_ROUTE_110_TORCHIC]": {
-      "level": "28",
-      "ivs": {
-        "hp": 0,
-        "at": 30,
-        "df": 30,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Expert Belt",
-      "ability": "Adaptability",
-      "nature": null,
-      "moves": [
-        "Psybeam",
-        "Draining Kiss",
-        "Hidden Power"
-      ]
-    }
-  },
-  "Spoink": {
-    "Hex Maniac LEAH": {
-      "level": "31",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac VALERIE [VALERIE_2]": {
-      "level": "31",
-      "ivs": {
-        "hp": 1,
-        "at": 1,
-        "df": 1,
-        "sa": 1,
-        "sd": 1,
-        "sp": 1
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac VALERIE [VALERIE_3]": {
-      "level": "35",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Gentleman NATE": {
-      "level": "36",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Hex Maniac VALERIE [VALERIE_4]": {
-      "level": "40",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Eelektross": {
-    "Guitarist KIRK": {
-      "level": "32",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Levitate",
-      "nature": null,
-      "moves": [
-        "Discharge",
-        "Fire Punch",
-        "Flash"
-      ]
-    }
-  },
-  "Raichu": {
-    "Guitarist KIRK": {
-      "level": "32",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Air Balloon",
-      "ability": "Lightning Rod",
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Thunder Punch",
-        "Surf",
-        "Knock Off"
-      ]
-    },
-    "Leader WATTSON [WATTSON_4]": {
-      "level": "44",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder",
-        "Slam",
-        "Rain Dance",
-        "Protect"
-      ]
-    },
-    "Leader WATTSON [WATTSON_5]": {
-      "level": "51",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder",
-        "Slam",
-        "Rain Dance",
-        "Protect"
-      ]
-    }
-  },
-  "Indeedee": {
-    "Psychic EDWARD": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Synchronize",
-      "nature": null,
-      "moves": [
-        "Psyshock",
-        "Hyper Voice"
-      ]
-    }
-  },
-  "Slaking": {
-    "Sr And Jr KATE & JOY": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Focus Punch",
-        "Yawn",
-        "Slack Off",
-        "Feint Attack"
-      ]
-    },
-    "Cooltrainer CRISTIN [CRISTIN_5]": {
-      "level": "41",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer QUINCY": {
-      "level": "43",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Attract",
-        "Ice Beam",
-        "Thunderbolt",
-        "Flamethrower"
-      ]
-    },
-    "Cooltrainer KATELYNN": {
-      "level": "43",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Shadow Ball",
-        "Aerial Ace",
-        "Brick Break"
-      ]
-    },
-    "Leader NORMAN [NORMAN_2]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hyper Beam",
-        "Flamethrower",
-        "Thunderbolt",
-        "Shadow Ball"
-      ]
-    },
-    "Leader NORMAN [NORMAN_3]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hyper Beam",
-        "Flamethrower",
-        "Thunderbolt",
-        "Shadow Ball"
-      ]
-    },
-    "Leader NORMAN [NORMAN_1]": {
-      "level": "54",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Figy Berry",
-      "ability": "Gluttony",
-      "nature": null,
-      "moves": [
-        "Facade",
-        "High Horsepower",
-        "Drain Punch",
-        "Slack Off"
-      ]
-    },
-    "Leader NORMAN [NORMAN_4]": {
-      "level": "55",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hyper Beam",
-        "Flamethrower",
-        "Thunderbolt",
-        "Shadow Ball"
-      ]
-    },
-    "Leader NORMAN [NORMAN_5]": {
-      "level": "60",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hyper Beam",
-        "Flamethrower",
-        "Thunderbolt",
-        "Shadow Ball"
-      ]
-    }
-  },
   "Squawkabilly-Blue": {
-    "Triathlete DYLAN [DYLAN_1]": {
+    "Triathlete DYLAN": {
+      "index": 231,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -33203,7 +20021,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Intimidate",
-      "nature": null,
+      "nature": "Impish",
       "moves": [
         "Facade",
         "Quick Attack",
@@ -33213,7 +20031,9 @@ var SETDEX_SV = {
     }
   },
   "Squawkabilly-White": {
-    "Triathlete DYLAN [DYLAN_1]": {
+    "Triathlete DYLAN": {
+      "index": 231,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -33226,7 +20046,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Wide Lens",
       "ability": "Hustle",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Facade",
         "Quick Attack",
@@ -33236,7 +20056,9 @@ var SETDEX_SV = {
     }
   },
   "Squawkabilly-Yellow": {
-    "Triathlete DYLAN [DYLAN_1]": {
+    "Triathlete DYLAN": {
+      "index": 231,
+      "slot": 2,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -33259,7 +20081,9 @@ var SETDEX_SV = {
     }
   },
   "Squawkabilly": {
-    "Triathlete DYLAN [DYLAN_1]": {
+    "Triathlete DYLAN": {
+      "index": 231,
+      "slot": 3,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -33282,7 +20106,9 @@ var SETDEX_SV = {
     }
   },
   "Scovillain": {
-    "Triathlete MARIA [MARIA_1]": {
+    "Triathlete MARIA": {
+      "index": 232,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -33295,7 +20121,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "White Herb",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Temper Flare",
         "Bullet Seed",
@@ -33303,7 +20129,9 @@ var SETDEX_SV = {
         "Spicy Extract"
       ]
     },
-    "Leader FLANNERY [FLANNERY_1]": {
+    "Leader FLANNERY": {
+      "index": 421,
+      "slot": 4,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -33323,9 +20151,328 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Dipplin": {
-    "Pkmn Breeder ISAAC [ISAAC_1]": {
+  "Nuzleaf": {
+    "Pkmn Ranger LORENZO": {
+      "index": 235,
+      "slot": 1,
+      "level": "28",
+      "ivs": {
+        "hp": 6,
+        "at": 6,
+        "df": 6,
+        "sa": 6,
+        "sd": 6,
+        "sp": 6
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Pkmn Ranger JENNA": {
+      "index": 236,
+      "slot": 2,
+      "level": "28",
+      "ivs": {
+        "hp": 6,
+        "at": 6,
+        "df": 6,
+        "sa": 6,
+        "sd": 6,
+        "sp": 6
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
+  "Nincada": {
+    "Bug Catcher DOUG": {
+      "index": 237,
+      "slot": 0,
+      "level": "28",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Ninja Boy RILEY": {
+      "index": 239,
+      "slot": 0,
+      "level": "28",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Leech Life",
+        "Fury Swipes",
+        "Mind Reader",
+        "Dig"
+      ]
+    }
+  },
+  "Duskull": {
+    "Hex Maniac TAMMY": {
+      "index": 244,
+      "slot": 0,
+      "level": "29",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Hex Maniac KINDRA": {
+      "index": 258,
+      "slot": 0,
+      "level": "30",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
+  "Shuppet": {
+    "Hex Maniac TAMMY": {
+      "index": 244,
+      "slot": 1,
+      "level": "29",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Hex Maniac KINDRA": {
+      "index": 258,
+      "slot": 1,
+      "level": "30",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Hex Maniac TASHA": {
+      "index": 277,
+      "slot": 0,
       "level": "32",
+      "ivs": {
+        "hp": 6,
+        "at": 6,
+        "df": 6,
+        "sa": 6,
+        "sd": 6,
+        "sp": 6
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
+  "Loudred": {
+    "Cooltrainer CRISTIN": {
+      "index": 253,
+      "slot": 0,
+      "level": "29",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Guitarist FERNANDO": {
+      "index": 259,
+      "slot": 1,
+      "level": "30",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Cooltrainer JONATHAN": {
+      "index": 317,
+      "slot": 1,
+      "level": "33",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
+  "Lunatone": {
+    "Psychic JACKI": {
+      "index": 260,
+      "slot": 1,
+      "level": "30",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Leader TATE&LIZA": {
+      "index": 428,
+      "slot": 2,
+      "level": "42",
+      "ivs": {
+        "hp": 30,
+        "at": 30,
+        "df": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 30
+      },
+      "ivsSpecified": true,
+      "item": "Sitrus Berry",
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Light Screen",
+        "Psychic",
+        "Hypnosis",
+        "Calm Mind"
+      ]
+    },
+    "Cooltrainer MITCHELL": {
+      "index": 441,
+      "slot": 0,
+      "level": "43",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Explosion",
+        "Reflect",
+        "Light Screen",
+        "Psychic"
+      ]
+    }
+  },
+  "Pikachu": {
+    "Pokefan VANESSA": {
+      "index": 262,
+      "slot": 0,
+      "level": "30",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": "Oran Berry",
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
+  "Cyclizar": {
+    "Triathlete BENJAMIN": {
+      "index": 263,
+      "slot": 0,
+      "level": "50",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -33336,18 +20483,202 @@ var SETDEX_SV = {
       },
       "ivsSpecified": false,
       "item": "Sitrus Berry",
-      "ability": "Gluttony",
-      "nature": null,
+      "ability": "Shed Skin",
+      "nature": "Jolly",
       "moves": [
-        "Recycle",
-        "Giga Drain",
-        "Dragon Pulse",
-        "Sucker Punch"
+        "Dragon Claw",
+        "Giga Impact",
+        "U-turn",
+        "Quick Attack"
+      ]
+    },
+    "Leader NORMAN": {
+      "index": 453,
+      "slot": 0,
+      "level": "53",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Sitrus Berry",
+      "ability": "Regenerator",
+      "nature": "Timid",
+      "moves": [
+        "Shed Tail",
+        "Draco Meteor",
+        "Hyper Voice",
+        "Knock Off"
       ]
     }
   },
-  "Klinklang": {
-    "Pkmn Breeder ISAAC [ISAAC_1]": {
+  "Garbodor": {
+    "Triathlete BENJAMIN": {
+      "index": 263,
+      "slot": 3,
+      "level": "50",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "King's Rock",
+      "ability": "Stench",
+      "nature": null,
+      "moves": [
+        "Gunk Shot",
+        "Stockpile",
+        "Swallow",
+        "Deterio"
+      ]
+    }
+  },
+  "Revavroom": {
+    "Triathlete BENJAMIN": {
+      "index": 263,
+      "slot": 5,
+      "level": "48",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Air Balloon",
+      "ability": "Overcoat",
+      "nature": "Jolly",
+      "moves": [
+        "Iron Head",
+        "Poison Jab",
+        "Shift Gear",
+        "High Horsepower"
+      ]
+    }
+  },
+  "Castform": {
+    "Parasol Lady ANGELICA": {
+      "index": 265,
+      "slot": 0,
+      "level": "30",
+      "ivs": {
+        "hp": 6,
+        "at": 6,
+        "df": 6,
+        "sa": 6,
+        "sd": 6,
+        "sp": 6
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Rain Dance",
+        "Weather Ball",
+        "Thunder",
+        "Water Pulse"
+      ]
+    },
+    "Parasol Lady KAYLEY": {
+      "index": 275,
+      "slot": 0,
+      "level": "31",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Sunny Day",
+        "Weather Ball",
+        "Flamethrower",
+        "Solar Beam"
+      ]
+    },
+    "Leader FLANNERY": {
+      "index": 421,
+      "slot": 0,
+      "level": "43",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Charcoal",
+      "ability": "Forecast",
+      "nature": null,
+      "moves": [
+        "Solar Beam",
+        "Protect",
+        "Will-O-Wisp",
+        "Weather Ball"
+      ]
+    }
+  },
+  "Spoink": {
+    "Hex Maniac LEAH": {
+      "index": 269,
+      "slot": 0,
+      "level": "31",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Gentleman NATE": {
+      "index": 387,
+      "slot": 0,
+      "level": "36",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
+  "Eelektross": {
+    "Guitarist KIRK": {
+      "index": 280,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -33358,18 +20689,162 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": false,
-      "item": "Metal Coat",
-      "ability": "Clear Body",
+      "item": "Leftovers",
+      "ability": "Levitate",
       "nature": null,
       "moves": [
-        "Volt Switch",
-        "Wild Charge",
-        "Gear Grind"
+        "Discharge",
+        "Fire Punch",
+        "Flash"
+      ]
+    }
+  },
+  "Raichu": {
+    "Guitarist KIRK": {
+      "index": 280,
+      "slot": 1,
+      "level": "32",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Air Balloon",
+      "ability": "Lightning Rod",
+      "nature": "Adamant",
+      "moves": [
+        "Fake Out",
+        "Thunder Punch",
+        "Surf",
+        "Knock Off"
+      ]
+    }
+  },
+  "Indeedee": {
+    "Psychic EDWARD": {
+      "index": 281,
+      "slot": 0,
+      "level": "32",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": "Synchronize",
+      "nature": null,
+      "moves": [
+        "Psyshock",
+        "Hyper Voice"
+      ]
+    }
+  },
+  "Slaking": {
+    "Sr And Jr KATE & JOY": {
+      "index": 282,
+      "slot": 1,
+      "level": "32",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Focus Punch",
+        "Yawn",
+        "Slack Off",
+        "Feint Attack"
+      ]
+    },
+    "Cooltrainer QUINCY": {
+      "index": 437,
+      "slot": 0,
+      "level": "43",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Attract",
+        "Ice Beam",
+        "Thunderbolt",
+        "Flamethrower"
+      ]
+    },
+    "Cooltrainer KATELYNN": {
+      "index": 438,
+      "slot": 1,
+      "level": "43",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Earthquake",
+        "Shadow Ball",
+        "Aerial Ace",
+        "Brick Break"
+      ]
+    },
+    "Leader NORMAN": {
+      "index": 453,
+      "slot": 3,
+      "level": "54",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Figy Berry",
+      "ability": "Gluttony",
+      "nature": "Jolly",
+      "moves": [
+        "Facade",
+        "High Horsepower",
+        "Drain Punch",
+        "Slack Off"
       ]
     }
   },
   "Emolga": {
     "Battle Girl VIVIAN": {
+      "index": 285,
+      "slot": 2,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -33393,6 +20868,8 @@ var SETDEX_SV = {
   },
   "Whimsicott": {
     "Triathlete MELINA": {
+      "index": 289,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -33414,6 +20891,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker ANGELINA": {
+      "index": 403,
+      "slot": 2,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -33426,7 +20905,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Leftovers",
       "ability": "Prankster",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Tailwind",
         "Taunt",
@@ -33435,6 +20914,8 @@ var SETDEX_SV = {
       ]
     },
     "Kindler AXLE": {
+      "index": 436,
+      "slot": 0,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -33447,7 +20928,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Heat Rock",
       "ability": "Prankster",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Sunny Day",
         "Tailwind",
@@ -33458,6 +20939,8 @@ var SETDEX_SV = {
   },
   "Florges": {
     "Triathlete MELINA": {
+      "index": 289,
+      "slot": 1,
       "level": "32",
       "ivs": {
         "hp": 0,
@@ -33479,6 +20962,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker NANCY": {
+      "index": 399,
+      "slot": 1,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -33491,7 +20976,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Misty Seed",
       "ability": "Misty Pelt",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Moonblast",
         "Calm Mind",
@@ -33502,6 +20987,8 @@ var SETDEX_SV = {
   },
   "Whiscash": {
     "Expert MOLLIE": {
+      "index": 291,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -33518,6 +21005,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Fisherman CLAUDE": {
+      "index": 398,
+      "slot": 3,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -33530,7 +21019,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Rindo Berry",
       "ability": "Unaware",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Dragon Dance",
         "Liquidation",
@@ -33538,7 +21027,9 @@ var SETDEX_SV = {
         "Outrage"
       ]
     },
-    "Leader JUAN [JUAN_1]": {
+    "Leader JUAN": {
+      "index": 454,
+      "slot": 1,
       "level": "41",
       "ivs": {
         "hp": 24,
@@ -33559,49 +21050,9 @@ var SETDEX_SV = {
         "Earthquake"
       ]
     },
-    "Leader JUAN [JUAN_2]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rain Dance",
-        "Water Pulse",
-        "Double Team",
-        "Fissure"
-      ]
-    },
-    "Leader JUAN [JUAN_3]": {
-      "level": "51",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rain Dance",
-        "Water Pulse",
-        "Double Team",
-        "Fissure"
-      ]
-    },
     "Champion WALLACE": {
+      "index": 469,
+      "slot": 3,
       "level": "56",
       "ivs": {
         "hp": 31,
@@ -33621,52 +21072,12 @@ var SETDEX_SV = {
         "Amnesia",
         "Hyper Beam"
       ]
-    },
-    "Leader JUAN [JUAN_4]": {
-      "level": "58",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rain Dance",
-        "Water Pulse",
-        "Double Team",
-        "Fissure"
-      ]
-    },
-    "Leader JUAN [JUAN_5]": {
-      "level": "63",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rain Dance",
-        "Water Pulse",
-        "Double Team",
-        "Fissure"
-      ]
     }
   },
   "Lanturn": {
     "Guitarist SHAWN": {
+      "index": 297,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 31,
@@ -33688,6 +21099,8 @@ var SETDEX_SV = {
       ]
     },
     "Swimmer F KAYLEE": {
+      "index": 352,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -33704,6 +21117,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Cooltrainer DIANNE": {
+      "index": 439,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -33721,58 +21136,12 @@ var SETDEX_SV = {
         "Thunderbolt",
         "Earthquake"
       ]
-    },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_3]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_4]": {
-      "level": "48",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_5]": {
-      "level": "51",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
     }
   },
   "Golisopod": {
     "Bug Maniac DEREK": {
+      "index": 298,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -33794,52 +21163,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Ribombee": {
-    "Bug Maniac DEREK": {
-      "level": "32",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Sweet Veil",
-      "nature": null,
-      "moves": [
-        "Moonblast",
-        "Bug Buzz",
-        "U-turn",
-        "Psychic"
-      ]
-    },
-    "Picnicker DIANA [DIANA_1]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Shield Dust",
-      "nature": null,
-      "moves": [
-        "Moonblast",
-        "Bug Buzz",
-        "Stun Spore",
-        "Quiver Dance"
-      ]
-    }
-  },
   "Durant": {
     "Bug Maniac DEREK": {
+      "index": 298,
+      "slot": 3,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -33862,7 +21189,9 @@ var SETDEX_SV = {
     }
   },
   "Altaria": {
-    "Leader WINONA [WINONA_1]": {
+    "Leader WINONA": {
+      "index": 299,
+      "slot": 4,
       "level": "33",
       "ivs": {
         "hp": 31,
@@ -33883,23 +21212,32 @@ var SETDEX_SV = {
         "Aerial Ace"
       ]
     },
-    "Bird Keeper ROBERT [ROBERT_3]": {
-      "level": "35",
+    "Rival WALLY": {
+      "index": 392,
+      "slot": 0,
+      "level": "44",
       "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
+        "hp": 18,
+        "at": 18,
+        "df": 18,
+        "sa": 18,
+        "sd": 18,
+        "sp": 18
       },
       "ivsSpecified": true,
       "item": null,
       "ability": null,
       "nature": null,
-      "moves": []
+      "moves": [
+        "Aerial Ace",
+        "Safeguard",
+        "Dragon Breath",
+        "Dragon Dance"
+      ]
     },
-    "Dragon Tamer NICOLAS [NICOLAS_1]": {
+    "Dragon Tamer NICOLAS": {
+      "index": 395,
+      "slot": 1,
       "level": "37",
       "ivs": {
         "hp": 12,
@@ -33915,245 +21253,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Bird Keeper ROBERT [ROBERT_4]": {
-      "level": "38",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Picnicker DIANA [DIANA_5]": {
-      "level": "40",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Dragon Tamer NICOLAS [NICOLAS_2]": {
-      "level": "41",
-      "ivs": {
-        "hp": 13,
-        "at": 13,
-        "df": 13,
-        "sa": 13,
-        "sd": 13,
-        "sp": 13
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Bird Keeper ROBERT [ROBERT_5]": {
-      "level": "41",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Dragon Tamer NICOLAS [NICOLAS_3]": {
-      "level": "44",
-      "ivs": {
-        "hp": 14,
-        "at": 14,
-        "df": 14,
-        "sa": 14,
-        "sd": 14,
-        "sp": 14
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival WALLY [WALLY_VR_1]": {
-      "level": "44",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Aerial Ace",
-        "Safeguard",
-        "Dragon Breath",
-        "Dragon Dance"
-      ]
-    },
-    "Leader WINONA [WINONA_2]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Aerial Ace",
-        "Rest",
-        "Dragon Dance",
-        "Earthquake"
-      ]
-    },
-    "Dragon Tamer NICOLAS [NICOLAS_4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Rival WALLY [WALLY_VR_2]": {
-      "level": "47",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Aerial Ace",
-        "Safeguard",
-        "Dragon Breath",
-        "Dragon Dance"
-      ]
-    },
-    "Dragon Tamer NICOLAS [NICOLAS_5]": {
-      "level": "49",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader WINONA [WINONA_3]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Aerial Ace",
-        "Rest",
-        "Dragon Dance",
-        "Earthquake"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_3]": {
-      "level": "50",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Aerial Ace",
-        "Safeguard",
-        "Dragon Breath",
-        "Dragon Dance"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_4]": {
-      "level": "53",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Aerial Ace",
-        "Safeguard",
-        "Dragon Breath",
-        "Dragon Dance"
-      ]
-    },
     "Elite Four DRAKE": {
+      "index": 468,
+      "slot": 1,
       "level": "54",
       "ivs": {
         "hp": 30,
@@ -34173,73 +21275,12 @@ var SETDEX_SV = {
         "Dragon Dance",
         "Aerial Ace"
       ]
-    },
-    "Leader WINONA [WINONA_4]": {
-      "level": "55",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Aerial Ace",
-        "Rest",
-        "Dragon Dance",
-        "Earthquake"
-      ]
-    },
-    "Rival WALLY [WALLY_VR_5]": {
-      "level": "56",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Aerial Ace",
-        "Safeguard",
-        "Dragon Breath",
-        "Dragon Dance"
-      ]
-    },
-    "Leader WINONA [WINONA_5]": {
-      "level": "60",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Sky Attack",
-        "Rest",
-        "Dragon Dance",
-        "Earthquake"
-      ]
     }
   },
   "Golem-Alola": {
     "Youngster BEN": {
+      "index": 300,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -34259,31 +21300,12 @@ var SETDEX_SV = {
         "Power Gem",
         "Stealth Rock"
       ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT6]": {
-      "level": "47",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Air Balloon",
-      "ability": "Galvanize",
-      "nature": null,
-      "moves": [
-        "Meteor Beam",
-        "Echoed Voice",
-        "Earth Power",
-        "Thunderbolt"
-      ]
     }
   },
   "Oricorio-Pom-Pom": {
     "Youngster BEN": {
+      "index": 300,
+      "slot": 1,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -34307,6 +21329,8 @@ var SETDEX_SV = {
   },
   "Morpeko": {
     "Youngster BEN": {
+      "index": 300,
+      "slot": 2,
       "level": "33",
       "ivs": {
         "hp": 31,
@@ -34328,8 +21352,30 @@ var SETDEX_SV = {
       ]
     }
   },
+  "Seadra": {
+    "Swimmer F LINDA": {
+      "index": 309,
+      "slot": 1,
+      "level": "33",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    }
+  },
   "Chinchou": {
     "Expert CONOR": {
+      "index": 315,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -34346,6 +21392,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Swimmer F TISHA": {
+      "index": 362,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -34361,24 +21409,10 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_1]": {
+    "Sis And Bro LILA & ROY": {
+      "index": 363,
+      "slot": 0,
       "level": "34",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Sis And Bro LILA & ROY [LILA_AND_ROY_2]": {
-      "level": "42",
       "ivs": {
         "hp": 0,
         "at": 0,
@@ -34396,6 +21430,8 @@ var SETDEX_SV = {
   },
   "Jolteon": {
     "Bug Maniac ANGELO": {
+      "index": 322,
+      "slot": 0,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -34415,6 +21451,8 @@ var SETDEX_SV = {
       ]
     },
     "Triathlete JACOB": {
+      "index": 458,
+      "slot": 1,
       "level": "49",
       "ivs": {
         "hp": 0,
@@ -34427,7 +21465,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Magnet",
       "ability": "Lightning Rod",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Thunderbolt",
         "Volt Switch",
@@ -34435,158 +21473,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Nosepass": {
-    "Ruin Maniac ANDRES [ANDRES_3]": {
-      "level": "33",
-      "ivs": {
-        "hp": 2,
-        "at": 2,
-        "df": 2,
-        "sa": 2,
-        "sd": 2,
-        "sp": 2
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Cooltrainer RUBEN": {
-      "level": "34",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Ruin Maniac ANDRES [ANDRES_4]": {
-      "level": "35",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader ROXANNE [ROXANNE_2]": {
-      "level": "37",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Double Team",
-        "Explosion",
-        "Protect",
-        "Rock Slide"
-      ]
-    },
-    "Ruin Maniac ANDRES [ANDRES_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Leader ROXANNE [ROXANNE_3]": {
-      "level": "42",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Double Team",
-        "Explosion",
-        "Protect",
-        "Rock Slide"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_4]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Double Team",
-        "Explosion",
-        "Protect",
-        "Rock Slide"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_5]": {
-      "level": "52",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Double Team",
-        "Explosion",
-        "Protect",
-        "Rock Slide"
-      ]
-    }
-  },
   "Sealeo": {
     "Swimmer M FRANKLIN": {
+      "index": 332,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -34602,7 +21492,9 @@ var SETDEX_SV = {
       "nature": null,
       "moves": []
     },
-    "Leader JUAN [JUAN_1]": {
+    "Leader JUAN": {
+      "index": 454,
+      "slot": 2,
       "level": "43",
       "ivs": {
         "hp": 24,
@@ -34624,6 +21516,8 @@ var SETDEX_SV = {
       ]
     },
     "Elite Four GLACIA": {
+      "index": 467,
+      "slot": 2,
       "level": "52",
       "ivs": {
         "hp": 30,
@@ -34645,134 +21539,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Exploud": {
-    "Guitarist DALTON [DALTON_5]": {
-      "level": "34",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Kindler HAYDEN": {
-      "level": "34",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Silk Scarf",
-      "ability": "Punk Rock",
-      "nature": null,
-      "moves": [
-        "Shock Wave",
-        "Hyper Voice",
-        "Surf",
-        "Incinerate"
-      ]
-    },
-    "School Kid KAREN [KAREN_5]": {
-      "level": "35",
-      "ivs": {
-        "hp": 6,
-        "at": 6,
-        "df": 6,
-        "sa": 6,
-        "sd": 6,
-        "sp": 6
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Interviewer GABBY & TY [GABBY_AND_TY_1]": {
-      "level": "36",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Choice Band",
-      "ability": "Scrappy",
-      "nature": null,
-      "moves": [
-        "Explosion"
-      ]
-    },
-    "Interviewer GABBY & TY [GABBY_AND_TY_6]": {
-      "level": "39",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Astonish",
-        "Stomp",
-        "Supersonic",
-        "Hyper Voice"
-      ]
-    },
-    "Cooltrainer CRISTIN [CRISTIN_5]": {
-      "level": "41",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Guitarist FERNANDO [FERNANDO_5]": {
-      "level": "41",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
   "Pincurchin": {
-    "Leader WATTSON [WATTSON_1]": {
+    "Leader WATTSON": {
+      "index": 336,
+      "slot": 0,
       "level": "32",
       "ivs": {
         "hp": 31,
@@ -34785,7 +21555,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Terrain Extender",
       "ability": "Electric Surge",
-      "nature": null,
+      "nature": "Brave",
       "moves": [
         "Zing Zap",
         "Soak",
@@ -34795,7 +21565,9 @@ var SETDEX_SV = {
     }
   },
   "Rotom-Mow": {
-    "Leader WATTSON [WATTSON_1]": {
+    "Leader WATTSON": {
+      "index": 336,
+      "slot": 2,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -34808,7 +21580,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Miracle Seed",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Leaf Storm",
         "Volt Switch",
@@ -34818,7 +21590,9 @@ var SETDEX_SV = {
     }
   },
   "Boltund": {
-    "Leader WATTSON [WATTSON_1]": {
+    "Leader WATTSON": {
+      "index": 336,
+      "slot": 3,
       "level": "33",
       "ivs": {
         "hp": 31,
@@ -34831,7 +21605,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Electric Seed",
       "ability": "Electric Pelt",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Supercell Slam",
         "Play Rough",
@@ -34840,6 +21614,8 @@ var SETDEX_SV = {
       ]
     },
     "Kindler HAYDEN": {
+      "index": 364,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 31,
@@ -34852,7 +21628,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Strong Jaw",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Thunder Fang",
         "Psychic Fangs",
@@ -34862,7 +21638,9 @@ var SETDEX_SV = {
     }
   },
   "Raichu-Alola": {
-    "Leader WATTSON [WATTSON_1]": {
+    "Leader WATTSON": {
+      "index": 336,
+      "slot": 4,
       "level": "33",
       "ivs": {
         "hp": 0,
@@ -34875,7 +21653,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Focus Sash",
       "ability": "Surge Surfer",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Psyshock",
         "Surf",
@@ -34884,52 +21662,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Electivire": {
-    "Leader WATTSON [WATTSON_1]": {
-      "level": "33",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Iron Fist",
-      "nature": null,
-      "moves": [
-        "Thunder Punch",
-        "Drain Punch",
-        "Mach Punch",
-        "Ice Punch"
-      ]
-    },
-    "Pokemaniac STEVE [STEVE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Punching Glove",
-      "ability": "Motor Drive",
-      "nature": null,
-      "moves": [
-        "Thunder Punch",
-        "Ice Punch",
-        "Cross Chop",
-        "Bulk Up"
-      ]
-    }
-  },
   "Bagon": {
     "Dragon Tamer AARON": {
+      "index": 341,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 31,
@@ -34949,16 +21685,20 @@ var SETDEX_SV = {
         "Focus Energy",
         "Ember"
       ]
-    },
-    "Dragon Tamer NICOLAS [NICOLAS_4]": {
-      "level": "46",
+    }
+  },
+  "Nosepass": {
+    "Cooltrainer RUBEN": {
+      "index": 360,
+      "slot": 1,
+      "level": "34",
       "ivs": {
-        "hp": 15,
-        "at": 15,
-        "df": 15,
-        "sa": 15,
-        "sd": 15,
-        "sp": 15
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
       },
       "ivsSpecified": true,
       "item": null,
@@ -34967,75 +21707,10 @@ var SETDEX_SV = {
       "moves": []
     }
   },
-  "Comfey": {
-    "Pkmn Breeder LYDIA [LYDIA_1]": {
-      "level": "34",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Big Root",
-      "ability": "Triage",
-      "nature": null,
-      "moves": [
-        "Leech Seed",
-        "Draining Kiss",
-        "Giga Drain",
-        "Dazzling Gleam"
-      ]
-    }
-  },
-  "Lilligant-Hisui": {
-    "Pkmn Breeder LYDIA [LYDIA_1]": {
-      "level": "34",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Chlorophyll",
-      "nature": null,
-      "moves": [
-        "Victory Dance",
-        "Leaf Blade",
-        "Axe Kick",
-        "Ice Spinner"
-      ]
-    },
-    "Battle Girl DANIELLE": {
-      "level": "44",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Occa Berry",
-      "ability": "Chlorophyll",
-      "nature": null,
-      "moves": [
-        "Victory Dance",
-        "Solar Blade",
-        "Close Combat",
-        "Triple Axel"
-      ]
-    }
-  },
   "Dunsparce": {
     "Kindler HAYDEN": {
+      "index": 364,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 31,
@@ -35048,7 +21723,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Eviolite",
       "ability": "Serene Grace",
-      "nature": null,
+      "nature": "Quiet",
       "moves": [
         "Shock Wave",
         "Ancient Power",
@@ -35058,6 +21733,8 @@ var SETDEX_SV = {
   },
   "Swanna": {
     "Psychic BRANDI": {
+      "index": 365,
+      "slot": 1,
       "level": "34",
       "ivs": {
         "hp": 0,
@@ -35080,6 +21757,8 @@ var SETDEX_SV = {
   },
   "Quagsire": {
     "Psychic BRANDI": {
+      "index": 365,
+      "slot": 2,
       "level": "34",
       "ivs": {
         "hp": 31,
@@ -35101,6 +21780,8 @@ var SETDEX_SV = {
       ]
     },
     "Twins TORI & TIA": {
+      "index": 400,
+      "slot": 0,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -35113,7 +21794,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Unaware",
-      "nature": null,
+      "nature": "Relaxed",
       "moves": [
         "Spikes",
         "Recover",
@@ -35124,6 +21805,8 @@ var SETDEX_SV = {
   },
   "Parasect": {
     "Battle Girl AISHA": {
+      "index": 366,
+      "slot": 0,
       "level": "34",
       "ivs": {
         "hp": 31,
@@ -35145,74 +21828,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Barbaracle": {
-    "Battle Girl AISHA": {
-      "level": "34",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Rindo Berry",
-      "ability": "Tough Claws",
-      "nature": null,
-      "moves": [
-        "Shell Smash",
-        "Rock Tomb",
-        "Razor Shell"
-      ]
-    },
-    "Hiker LUCAS [LUCAS_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Tough Claws",
-      "nature": null,
-      "moves": [
-        "Shell Smash",
-        "Razor Shell",
-        "Stone Edge",
-        "Cross Chop"
-      ]
-    }
-  },
-  "Scolipede": {
-    "Cooltrainer WILTON [WILTON_1]": {
-      "level": "35",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Bright Powder",
-      "ability": "Poison Point",
-      "nature": null,
-      "moves": [
-        "Leech Life",
-        "Poison Jab",
-        "Earthquake",
-        "Aqua Tail"
-      ]
-    }
-  },
   "Crabominable": {
     "Black Belt DAISUKE": {
+      "index": 367,
+      "slot": 1,
       "level": "35",
       "ivs": {
         "hp": 31,
@@ -35236,6 +21855,8 @@ var SETDEX_SV = {
   },
   "Centiskorch": {
     "Camper LARRY": {
+      "index": 368,
+      "slot": 1,
       "level": "35",
       "ivs": {
         "hp": 31,
@@ -35255,31 +21876,12 @@ var SETDEX_SV = {
         "Coil",
         "Leech Life"
       ]
-    },
-    "Team Magma GRUNT [MAGMA_GRUNT_ROUTE114]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Flash Fire",
-      "nature": null,
-      "moves": [
-        "Fire Lash",
-        "Knock Off",
-        "Coil",
-        "Leech Life"
-      ]
     }
   },
   "Sawsbuck-Summer": {
     "Picnicker CAROL": {
+      "index": 373,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 31,
@@ -35292,7 +21894,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Charcoal",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Season Power",
         "Horn Leech",
@@ -35301,6 +21903,8 @@ var SETDEX_SV = {
       ]
     },
     "Kindler COLE": {
+      "index": 427,
+      "slot": 0,
       "level": "42",
       "ivs": {
         "hp": 31,
@@ -35313,7 +21917,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Charcoal",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Horn Leech",
         "Season Power",
@@ -35324,6 +21928,8 @@ var SETDEX_SV = {
   },
   "Magcargo": {
     "Picnicker CAROL": {
+      "index": 373,
+      "slot": 1,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -35336,122 +21942,19 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Absorb Bulb",
       "ability": "Weak Armor",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Shell Trap",
         "Eruption",
         "Body Press",
         "Will-O-Wisp"
       ]
-    },
-    "Leader FLANNERY [FLANNERY_2]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Attract",
-        "Light Screen",
-        "Rock Slide"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_3]": {
-      "level": "43",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Attract",
-        "Light Screen",
-        "Rock Slide"
-      ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT3]": {
-      "level": "46",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Air Balloon",
-      "ability": "Magma Armor",
-      "nature": null,
-      "moves": [
-        "Meteor Beam",
-        "Heat Wave",
-        "Earth Power",
-        "Shell Trap"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_4]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Attract",
-        "Light Screen",
-        "Rock Slide"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_5]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Attract",
-        "Light Screen",
-        "Rock Slide"
-      ]
     }
   },
   "Simisear": {
     "Kindler BRYANT": {
+      "index": 378,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -35464,7 +21967,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Starf Berry",
       "ability": "Gluttony",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Heat Wave",
         "Grass Knot",
@@ -35475,6 +21978,8 @@ var SETDEX_SV = {
   },
   "Mothim": {
     "Aroma Lady SHAYLA": {
+      "index": 379,
+      "slot": 0,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -35498,6 +22003,8 @@ var SETDEX_SV = {
   },
   "Eldegoss": {
     "Aroma Lady SHAYLA": {
+      "index": 379,
+      "slot": 1,
       "level": "35",
       "ivs": {
         "hp": 0,
@@ -35510,7 +22017,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Sitrus Berry",
       "ability": "Regenerator",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Giga Drain",
         "Stun Spore",
@@ -35519,54 +22026,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Pelipper": {
-    "Cooltrainer BROOKE [BROOKE_1]": {
-      "level": "36",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Life Orb",
-      "ability": "Drizzle",
-      "nature": null,
-      "moves": [
-        "Hurricane",
-        "Hydro Pump",
-        "U-turn",
-        "Roost"
-      ]
-    }
-  },
-  "Camerupt": {
-    "Cooltrainer BROOKE [BROOKE_1]": {
-      "level": "36",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Passho Berry",
-      "ability": "Solid Rock",
-      "nature": null,
-      "moves": [
-        "Sunny Day",
-        "Solar Beam",
-        "Flamethrower",
-        "Earth Power"
-      ]
-    }
-  },
   "Girafarig": {
     "Psychic BLAKE": {
+      "index": 382,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 12,
@@ -35583,6 +22046,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Gentleman CLIFFORD": {
+      "index": 389,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 0,
@@ -35599,6 +22064,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Psychic TERRY": {
+      "index": 396,
+      "slot": 0,
       "level": "37",
       "ivs": {
         "hp": 0,
@@ -35615,120 +22082,10 @@ var SETDEX_SV = {
       "moves": []
     }
   },
-  "Gardevoir": {
-    "Rival WALLY [WALLY_MAUVILLE]": {
-      "level": "36",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Synchronize",
-      "nature": null,
-      "moves": [
-        "Calm Mind",
-        "Psychic",
-        "Draining Kiss",
-        "Shadow Ball"
-      ]
-    }
-  },
-  "Azumarill": {
-    "Rival WALLY [WALLY_MAUVILLE]": {
-      "level": "35",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Huge Power",
-      "nature": null,
-      "moves": [
-        "Liquidation",
-        "Aqua Jet",
-        "Play Rough"
-      ]
-    },
-    "Partner Rival WALLY [1]": {
-      "level": "21",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Huge Power",
-      "nature": null,
-      "moves": [
-        "Helping Hand",
-        "Aqua Tail",
-        "Bounce",
-        "Charm"
-      ]
-    }
-  },
-  "Ninetales": {
-    "Rival WALLY [WALLY_MAUVILLE]": {
-      "level": "35",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Flash Fire",
-      "nature": null,
-      "moves": [
-        "Dazzling Gleam",
-        "Incinerate",
-        "Will-O-Wisp",
-        "Extrasensory"
-      ]
-    }
-  },
-  "Bellossom": {
-    "Rival WALLY [WALLY_MAUVILLE]": {
-      "level": "35",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": "Healer",
-      "nature": null,
-      "moves": [
-        "Sleep Powder",
-        "Moonblast",
-        "Giga Drain",
-        "Moonlight"
-      ]
-    }
-  },
   "Salazzle": {
     "Youngster JAYLEN": {
+      "index": 394,
+      "slot": 0,
       "level": "36",
       "ivs": {
         "hp": 0,
@@ -35752,6 +22109,8 @@ var SETDEX_SV = {
   },
   "Flygon": {
     "Youngster JAYLEN": {
+      "index": 394,
+      "slot": 1,
       "level": "36",
       "ivs": {
         "hp": 31,
@@ -35764,7 +22123,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Expert Belt",
       "ability": "Levitate",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Earthquake",
         "Dragon Claw",
@@ -35775,6 +22134,8 @@ var SETDEX_SV = {
   },
   "Mr. Rime": {
     "Youngster JAYLEN": {
+      "index": 394,
+      "slot": 2,
       "level": "36",
       "ivs": {
         "hp": 31,
@@ -35787,7 +22148,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Never-Melt Ice",
       "ability": "Tangled Feet",
-      "nature": null,
+      "nature": "Serious",
       "moves": [
         "Ice Beam",
         "Ice Shard",
@@ -35796,9 +22157,11 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Kabuto": {
-    "Leader ROXANNE [ROXANNE_2]": {
-      "level": "35",
+  "Bisharp": {
+    "Youngster JAYLEN": {
+      "index": 394,
+      "slot": 3,
+      "level": "37",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -35807,582 +22170,22 @@ var SETDEX_SV = {
         "sd": 31,
         "sp": 31
       },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
+      "ivsSpecified": false,
+      "item": "Black Glasses",
+      "ability": "Defiant",
+      "nature": "Adamant",
       "moves": [
         "Swords Dance",
-        "Ice Beam",
-        "Surf",
-        "Rock Slide"
-      ]
-    }
-  },
-  "Hitmontop": {
-    "Leader BRAWLY [BRAWLY_2]": {
-      "level": "35",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Pursuit",
-        "Counter",
-        "Protect",
-        "Triple Kick"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_3]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Pursuit",
-        "Counter",
-        "Protect",
-        "Triple Kick"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_4]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Pursuit",
-        "Counter",
-        "Protect",
-        "Triple Kick"
-      ]
-    },
-    "Leader BRAWLY [BRAWLY_5]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Pursuit",
-        "Counter",
-        "Protect",
-        "Triple Kick"
-      ]
-    }
-  },
-  "Crobat": {
-    "Pokemaniac STEVE [STEVE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Inner Focus",
-      "nature": null,
-      "moves": [
-        "Brave Bird",
-        "Cross Poison",
-        "Roost",
-        "U-Turn"
-      ]
-    },
-    "Camper SHANE": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Inner Focus",
-      "nature": null,
-      "moves": [
-        "Brave Bird",
-        "Cross Poison",
-        "Roost",
-        "U-Turn"
-      ]
-    },
-    "Magma Leader MAXIE [MAXIE_MAGMA_HIDEOUT]": {
-      "level": "38",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Aqua Leader ARCHIE": {
-      "level": "41",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Magma Leader MAXIE [MAXIE_MOSSDEEP]": {
-      "level": "43",
-      "ivs": {
-        "hp": 18,
-        "at": 18,
-        "df": 18,
-        "sa": 18,
-        "sd": 18,
-        "sp": 18
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER3]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Infiltrator",
-      "nature": null,
-      "moves": [
-        "Acrobatics",
-        "Cross Poison",
-        "U-turn",
-        "Roost"
-      ]
-    },
-    "Triathlete BENJAMIN [BENJAMIN_1]": {
-      "level": "49",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Black Sludge",
-      "ability": "Inner Focus",
-      "nature": null,
-      "moves": [
-        "Brave Bird",
-        "Cross Poison",
-        "U-turn",
-        "Roost"
-      ]
-    }
-  },
-  "Gliscor": {
-    "Pokemaniac STEVE [STEVE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Toxic Orb",
-      "ability": "Poison Heal",
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Roost",
-        "Toxic",
-        "Protect"
-      ]
-    },
-    "Bird Keeper COBY": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Life Orb",
-      "ability": "Sand Veil",
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Knock Off",
-        "High Horsepower",
-        "Crabhammer"
-      ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT_MULTI2]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Toxic Orb",
-      "ability": "Poison Heal",
-      "nature": null,
-      "moves": [
-        "Protect",
-        "High Horsepower",
-        "Knock Off",
-        "Dual Wingbeat"
-      ]
-    }
-  },
-  "Floatzel": {
-    "Pokemaniac STEVE [STEVE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Choice Band",
-      "ability": "Swift Swim",
-      "nature": null,
-      "moves": [
-        "Aqua Jet",
-        "Waterfall",
-        "Ice Punch",
-        "Crunch"
-      ]
-    }
-  },
-  "Flareon": {
-    "Kindler BERNIE [BERNIE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "ignite",
-      "nature": null,
-      "moves": [
-        "Double-Edge",
-        "Superpower",
-        "Will-O-Wisp",
-        "Covet"
-      ]
-    },
-    "Kindler BERNIE [BERNIE_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Charcoal",
-      "ability": "Ignite",
-      "nature": null,
-      "moves": [
-        "Double-Edge",
-        "Superpower",
-        "Will-O-Wisp",
-        "Covet"
-      ]
-    },
-    "Hiker ELI": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Toxic Orb",
-      "ability": "Toxic Boost",
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Flare Blitz",
-        "Facade",
-        "Double Kick"
-      ]
-    }
-  },
-  "Rapidash": {
-    "Kindler BERNIE [BERNIE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Silk Scarf",
-      "ability": "Reckless",
-      "nature": null,
-      "moves": [
-        "Double-Edge",
-        "Flare Blitz",
-        "High Horsepower"
-      ]
-    },
-    "Kindler BERNIE [BERNIE_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Silk Scarf",
-      "ability": "Reckless",
-      "nature": null,
-      "moves": [
-        "Double-Edge",
-        "Flare Blitz",
-        "High Horsepower"
-      ]
-    },
-    "Triathlete JACOB": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Choice Band",
-      "ability": "Reckless",
-      "nature": null,
-      "moves": [
-        "Double-Edge",
-        "Flare Blitz"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Flamethrower",
-        "Attract",
-        "Solar Beam",
-        "Bounce"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_5]": {
-      "level": "51",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Flamethrower",
-        "Attract",
-        "Solar Beam",
-        "Bounce"
-      ]
-    }
-  },
-  "Houndoom": {
-    "Kindler BERNIE [BERNIE_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": "Berserk",
-      "nature": null,
-      "moves": [
-        "Rest",
-        "Dark Pulse",
-        "Fire Blast",
-        "Sludge Bomb"
-      ]
-    },
-    "Kindler BERNIE [BERNIE_5]": {
-      "level": "38",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Chesto Berry",
-      "ability": "Berserk",
-      "nature": null,
-      "moves": [
-        "Rest",
-        "Dark Pulse",
-        "Fire Blast",
-        "Sludge Bomb"
-      ]
-    },
-    "Hiker ERIC": {
-      "level": "39",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Flash Fire",
-      "nature": null,
-      "moves": [
-        "Dark Pulse",
-        "Flamethrower",
-        "Sludge Bomb",
-        "Pursuit"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_5]": {
-      "level": "51",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Roar",
-        "Solar Beam",
-        "Taunt",
-        "Sunny Day"
+        "Sucker Punch",
+        "Iron Head",
+        "Night Slash"
       ]
     }
   },
   "Kingler": {
     "Fisherman CLAUDE": {
+      "index": 398,
+      "slot": 4,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -36395,7 +22198,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Metal Coat",
       "ability": "Sheer Force",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Crabhammer",
         "Hammer Arm",
@@ -36406,6 +22209,8 @@ var SETDEX_SV = {
   },
   "Aromatisse": {
     "Picnicker NANCY": {
+      "index": 399,
+      "slot": 0,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -36418,7 +22223,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Misty Seed",
       "ability": "Misty Surge",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Moonblast",
         "Draining Kiss",
@@ -36429,6 +22234,8 @@ var SETDEX_SV = {
   },
   "Gardevoir": {
     "Picnicker NANCY": {
+      "index": 399,
+      "slot": 3,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -36441,7 +22248,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Leftovers",
       "ability": "Trace",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Moonblast",
         "Mystical Fire",
@@ -36450,368 +22257,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Donphan": {
-    "Team Magma GRUNT [MAGMA_GRUNT_ROUTE114]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Hard Stone",
-      "ability": "Rock Head",
-      "nature": null,
-      "moves": [
-        "Stealth Rock",
-        "Earthquake",
-        "Ice Spinner",
-        "Head Smash"
-      ]
-    }
-  },
-  "Victreebel": {
-    "Team Magma GRUNT [MAGMA_GRUNT_ROUTE114]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Heat Rock",
-      "ability": "Lifedrainer",
-      "nature": null,
-      "moves": [
-        "Sunny Day",
-        "Weather Ball",
-        "Poison Drain",
-        "Giga Drain"
-      ]
-    }
-  },
-  "Volcarona": {
-    "Team Magma GRUNT [MAGMA_GRUNT_ROUTE114]": {
-      "level": "38",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Heavy-Duty Boots",
-      "ability": "Flame Body",
-      "nature": null,
-      "moves": [
-        "Quiver Dance",
-        "Flamethrower",
-        "Giga Drain",
-        "Bug Buzz"
-      ]
-    }
-  },
-  "Claydol": {
-    "Team Magma GRUNT [MAGMA_GRUNT_ROUTE114]": {
-      "level": "38",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Leftovers",
-      "ability": "Levitate",
-      "nature": null,
-      "moves": [
-        "Earth Power",
-        "Psychic",
-        "Future Sight",
-        "Body Press"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_1]": {
-      "level": "41",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Ancient Power",
-        "Psychic",
-        "Light Screen"
-      ]
-    },
-    "Cooltrainer FELIX": {
-      "level": "43",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Skill Swap",
-        "Earthquake"
-      ]
-    },
-    "Cooltrainer DIANNE": {
-      "level": "43",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Skill Swap",
-        "Earthquake"
-      ]
-    },
-    "Cooltrainer SHANNON": {
-      "level": "45",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER1]": {
-      "level": "46",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Light Clay",
-      "ability": "Levitate",
-      "nature": null,
-      "moves": [
-        "Stealth Rock",
-        "Psychic",
-        "Reflect",
-        "Light Screen"
-      ]
-    },
-    "Camper BEAU": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Levitate",
-      "nature": null,
-      "moves": [
-        "Earth Power",
-        "Psychic",
-        "Ancient Power",
-        "Explosion"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_2]": {
-      "level": "49",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Ancient Power",
-        "Psychic",
-        "Light Screen"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_3]": {
-      "level": "54",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Explosion",
-        "Psychic",
-        "Light Screen"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_4]": {
-      "level": "59",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Explosion",
-        "Psychic",
-        "Light Screen"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_5]": {
-      "level": "64",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Explosion",
-        "Psychic",
-        "Light Screen"
-      ]
-    },
-    "Rival STEVEN": {
-      "level": "75",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Reflect",
-        "Light Screen",
-        "Ancient Power",
-        "Earthquake"
-      ]
-    }
-  },
-  "Lycanroc-Dusk": {
-    "Hiker LUCAS [LUCAS_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Muscle Band",
-      "ability": "Tough Claws",
-      "nature": null,
-      "moves": [
-        "Swords Dance",
-        "Accelerock",
-        "Rock Slide",
-        "Brick Break"
-      ]
-    }
-  },
-  "Mudsdale": {
-    "Hiker LUCAS [LUCAS_1]": {
-      "level": "38",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Stamina",
-      "nature": null,
-      "moves": [
-        "Body Press",
-        "Earthquake",
-        "Double-Edge",
-        "Heavy Slam"
-      ]
-    }
-  },
   "Clodsire": {
     "Twins TORI & TIA": {
+      "index": 400,
+      "slot": 1,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -36835,6 +22284,8 @@ var SETDEX_SV = {
   },
   "Slowking": {
     "Twins TORI & TIA": {
+      "index": 400,
+      "slot": 2,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -36858,6 +22309,8 @@ var SETDEX_SV = {
   },
   "Slowking-Galar": {
     "Twins TORI & TIA": {
+      "index": 400,
+      "slot": 3,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -36870,7 +22323,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Black Sludge",
       "ability": "Regenerator",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Future Sight",
         "Chilly Reception",
@@ -36881,6 +22334,8 @@ var SETDEX_SV = {
   },
   "Slowbro": {
     "Twins TORI & TIA": {
+      "index": 400,
+      "slot": 4,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -36893,7 +22348,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Colbur Berry",
       "ability": "Oblivious",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Trick Room",
         "Body Press",
@@ -36904,6 +22359,8 @@ var SETDEX_SV = {
   },
   "Slowbro-Galar": {
     "Twins TORI & TIA": {
+      "index": 400,
+      "slot": 5,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -36916,7 +22373,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Quick Claw",
       "ability": "Quick Draw",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Shell Side Arm",
         "Expanding Force",
@@ -36927,6 +22384,8 @@ var SETDEX_SV = {
   },
   "Hippowdon": {
     "Picnicker SOPHIE": {
+      "index": 401,
+      "slot": 0,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -36939,7 +22398,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Sand Stream",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Earthquake",
         "Stone Edge",
@@ -36950,6 +22409,8 @@ var SETDEX_SV = {
   },
   "Krookodile": {
     "Picnicker SOPHIE": {
+      "index": 401,
+      "slot": 1,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -36962,7 +22423,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Moxie",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Earthquake",
         "Crunch",
@@ -36971,6 +22432,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker BECKY": {
+      "index": 462,
+      "slot": 3,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -36983,7 +22446,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Band",
       "ability": "Moxie",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Earthquake",
         "Knock Off",
@@ -36994,6 +22457,8 @@ var SETDEX_SV = {
   },
   "Stoutland": {
     "Picnicker SOPHIE": {
+      "index": 401,
+      "slot": 2,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -37006,7 +22471,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Silk Scarf",
       "ability": "Sand Rush",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Facade",
         "Retaliate",
@@ -37017,6 +22482,8 @@ var SETDEX_SV = {
   },
   "Clefairy": {
     "Picnicker ANGELINA": {
+      "index": 403,
+      "slot": 0,
       "level": "38",
       "ivs": {
         "hp": 0,
@@ -37029,7 +22496,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Eviolite",
       "ability": "Friend Guard",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Follow Me",
         "Life Dew",
@@ -37040,6 +22507,8 @@ var SETDEX_SV = {
   },
   "Corphish": {
     "Beauty OLIVIA": {
+      "index": 405,
+      "slot": 1,
       "level": "37",
       "ivs": {
         "hp": 12,
@@ -37060,161 +22529,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Starmie": {
-    "Swimmer M TONY [TONY_5]": {
-      "level": "37",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete PABLO [PABLO_5]": {
-      "level": "43",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete ISAIAH [ISAIAH_4]": {
-      "level": "45",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete KATELYN [KATELYN_4]": {
-      "level": "45",
-      "ivs": {
-        "hp": 3,
-        "at": 3,
-        "df": 3,
-        "sa": 3,
-        "sd": 3,
-        "sp": 3
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Swimmer F JENNY [JENNY_5]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 0,
-        "df": 0,
-        "sa": 0,
-        "sd": 0,
-        "sp": 0
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete ISAIAH [ISAIAH_5]": {
-      "level": "48",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Triathlete KATELYN [KATELYN_5]": {
-      "level": "48",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    }
-  },
-  "Bellossom": {
-    "Pkmn Ranger CATHERINE [CATHERINE_5]": {
-      "level": "39",
-      "ivs": {
-        "hp": 10,
-        "at": 10,
-        "df": 10,
-        "sa": 10,
-        "sd": 10,
-        "sp": 10
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Kindler JACE": {
-      "level": "40",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Occa Berry",
-      "ability": "Chlorophyll",
-      "nature": null,
-      "moves": [
-        "Moonblast",
-        "Solar Beam",
-        "Encore",
-        "Protect"
-      ]
-    }
-  },
   "Gigalith": {
     "Hiker ERIC": {
+      "index": 411,
+      "slot": 0,
       "level": "38",
       "ivs": {
         "hp": 31,
@@ -37227,7 +22545,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Leftovers",
       "ability": "Sturdy",
-      "nature": null,
+      "nature": "Lonely",
       "moves": [
         "Earthquake",
         "Stone Edge",
@@ -37238,6 +22556,8 @@ var SETDEX_SV = {
   },
   "Coalossal": {
     "Hiker ERIC": {
+      "index": 411,
+      "slot": 2,
       "level": "39",
       "ivs": {
         "hp": 31,
@@ -37250,38 +22570,19 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Air Balloon",
       "ability": "Steam Engine",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Heat Crash",
         "Earthquake",
         "Heavy Slam",
         "Body Press"
       ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Passho Berry",
-      "ability": "Flash Fire",
-      "nature": null,
-      "moves": [
-        "Heat Crash",
-        "Heavy Slam",
-        "Stone Edge",
-        "Body Press"
-      ]
     }
   },
   "Ursaring": {
     "Hiker ERIC": {
+      "index": 411,
+      "slot": 3,
       "level": "39",
       "ivs": {
         "hp": 31,
@@ -37294,7 +22595,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Eviolite",
       "ability": "Guts",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Rest",
         "Sleep Talk",
@@ -37305,6 +22606,8 @@ var SETDEX_SV = {
   },
   "Runerigus": {
     "Hiker ERIC": {
+      "index": 411,
+      "slot": 4,
       "level": "39",
       "ivs": {
         "hp": 31,
@@ -37325,49 +22628,9 @@ var SETDEX_SV = {
         "Destiny Bond"
       ]
     },
-    "Team Magma GRUNT [GRUNT_DESERT5]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Wandering Spirit",
-      "nature": null,
-      "moves": [
-        "Will-O-Wisp",
-        "Earthquake",
-        "Poltergeist",
-        "Destiny Bond"
-      ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT6]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Wandering Spirit",
-      "nature": null,
-      "moves": [
-        "Will-O-Wisp",
-        "Earthquake",
-        "Poltergeist",
-        "Destiny Bond"
-      ]
-    },
     "Camper DREW": {
+      "index": 456,
+      "slot": 0,
       "level": "50",
       "ivs": {
         "hp": 0,
@@ -37389,8 +22652,35 @@ var SETDEX_SV = {
       ]
     }
   },
+  "Bellossom": {
+    "Kindler JACE": {
+      "index": 416,
+      "slot": 1,
+      "level": "40",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Occa Berry",
+      "ability": "Chlorophyll",
+      "nature": "Modest",
+      "moves": [
+        "Moonblast",
+        "Solar Beam",
+        "Encore",
+        "Protect"
+      ]
+    }
+  },
   "Sunflora": {
     "Picnicker AUTUMN": {
+      "index": 417,
+      "slot": 2,
       "level": "40",
       "ivs": {
         "hp": 0,
@@ -37403,7 +22693,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Charcoal",
       "ability": "Solar Power",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Solar Beam",
         "Weather Ball",
@@ -37412,6 +22702,8 @@ var SETDEX_SV = {
       ]
     },
     "Cooltrainer GERALD": {
+      "index": 430,
+      "slot": 0,
       "level": "41",
       "ivs": {
         "hp": 0,
@@ -37424,7 +22716,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Leftovers",
       "ability": "Drought",
-      "nature": null,
+      "nature": "Calm",
       "moves": [
         "Weather Ball",
         "Solar Beam",
@@ -37433,31 +22725,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Slurpuff": {
-    "Picnicker DIANA [DIANA_1]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Sitrus Berry",
-      "ability": "Sweet Veil",
-      "nature": null,
-      "moves": [
-        "Play Rough",
-        "Belly Drum",
-        "Body Slam",
-        "Encore"
-      ]
-    }
-  },
   "Charizard": {
     "Triathlete JULIO": {
+      "index": 419,
+      "slot": 1,
       "level": "40",
       "ivs": {
         "hp": 0,
@@ -37478,28 +22749,9 @@ var SETDEX_SV = {
         "Air Slash"
       ]
     },
-    "Cooltrainer GERALD": {
-      "level": "42",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Heavy-Duty Boots",
-      "ability": "Solar Power",
-      "nature": null,
-      "moves": [
-        "Solar Beam",
-        "Heat Wave",
-        "Air Slash",
-        "Scorching Sands"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_1]": {
+    "Leader FLANNERY": {
+      "index": 421,
+      "slot": 1,
       "level": "45",
       "ivs": {
         "hp": 0,
@@ -37512,78 +22764,18 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Charizardite Y",
       "ability": "Solar Power",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Protect",
         "Solar Beam",
         "Heat Wave",
         "Air Slash"
       ]
-    }
-  },
-  "Mareep": {
-    "Leader WATTSON [WATTSON_2]": {
-      "level": "36",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder",
-        "Protect",
-        "Thunder Wave",
-        "Light Screen"
-      ]
-    }
-  },
-  "Torkoal": {
-    "Leader FLANNERY [FLANNERY_2]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Sunny Day",
-        "Explosion",
-        "Attract"
-      ]
     },
-    "Cooltrainer MICHELLE": {
+    "Cooltrainer GERALD": {
+      "index": 430,
+      "slot": 1,
       "level": "42",
-      "ivs": {
-        "hp": 12,
-        "at": 12,
-        "df": 12,
-        "sa": 12,
-        "sd": 12,
-        "sp": 12
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Battle Girl DANIELLE": {
-      "level": "44",
       "ivs": {
         "hp": 0,
         "at": 31,
@@ -37593,18 +22785,22 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": true,
-      "item": "Leftovers",
-      "ability": "Drought",
-      "nature": null,
+      "item": "Heavy-Duty Boots",
+      "ability": "Solar Power",
+      "nature": "Timid",
       "moves": [
-        "Stealth Rock",
         "Solar Beam",
-        "Body Press",
-        "Fire Blast"
+        "Heat Wave",
+        "Air Slash",
+        "Scorching Sands"
       ]
-    },
-    "Leader FLANNERY [FLANNERY_3]": {
-      "level": "45",
+    }
+  },
+  "Cherrim": {
+    "Leader FLANNERY": {
+      "index": 421,
+      "slot": 5,
+      "level": "44",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -37613,78 +22809,22 @@ var SETDEX_SV = {
         "sd": 31,
         "sp": 31
       },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
+      "ivsSpecified": false,
+      "item": "Life Orb",
+      "ability": "Flower Gift",
+      "nature": "Adamant",
       "moves": [
-        "Overheat",
-        "Sunny Day",
-        "Explosion",
-        "Attract"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_4]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Sunny Day",
-        "Explosion",
-        "Attract"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_5]": {
-      "level": "55",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "White Herb",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Overheat",
-        "Sunny Day",
-        "Explosion",
-        "Attract"
+        "Solar Blade",
+        "Temper Flare",
+        "Morning Sun",
+        "Protect"
       ]
     }
   },
   "Wailord": {
-    "Beauty THALIA [THALIA_5]": {
-      "level": "40",
-      "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
     "Cooltrainer OWEN": {
+      "index": 424,
+      "slot": 2,
       "level": "42",
       "ivs": {
         "hp": 12,
@@ -37701,6 +22841,8 @@ var SETDEX_SV = {
       "moves": []
     },
     "Champion WALLACE": {
+      "index": 469,
+      "slot": 0,
       "level": "57",
       "ivs": {
         "hp": 31,
@@ -37722,31 +22864,53 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Golduck": {
-    "Gentleman WALTER [WALTER_5]": {
-      "level": "41",
+  "Torkoal": {
+    "Cooltrainer MICHELLE": {
+      "index": 425,
+      "slot": 0,
+      "level": "42",
       "ivs": {
-        "hp": 4,
-        "at": 4,
-        "df": 4,
-        "sa": 4,
-        "sd": 4,
-        "sp": 4
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
       },
       "ivsSpecified": true,
       "item": null,
       "ability": null,
       "nature": null,
+      "moves": []
+    },
+    "Battle Girl DANIELLE": {
+      "index": 446,
+      "slot": 0,
+      "level": "44",
+      "ivs": {
+        "hp": 0,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Leftovers",
+      "ability": "Drought",
+      "nature": "Quiet",
       "moves": [
-        "Fury Swipes",
-        "Disable",
-        "Confusion",
-        "Psych Up"
+        "Stealth Rock",
+        "Solar Beam",
+        "Body Press",
+        "Fire Blast"
       ]
     }
   },
   "Arcanine": {
     "Kindler COLE": {
+      "index": 427,
+      "slot": 2,
       "level": "42",
       "ivs": {
         "hp": 31,
@@ -37759,7 +22923,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Choice Band",
       "ability": "Flash Fire",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Flare Blitz",
         "Extreme Speed",
@@ -37768,6 +22932,8 @@ var SETDEX_SV = {
       ]
     },
     "Picnicker HEIDI": {
+      "index": 461,
+      "slot": 1,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -37787,9 +22953,119 @@ var SETDEX_SV = {
         "Facade",
         "Close Combat"
       ]
+    }
+  },
+  "Claydol": {
+    "Leader TATE&LIZA": {
+      "index": 428,
+      "slot": 0,
+      "level": "41",
+      "ivs": {
+        "hp": 30,
+        "at": 30,
+        "df": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 30
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Earthquake",
+        "Ancient Power",
+        "Psychic",
+        "Light Screen"
+      ]
     },
-    "Leader FLANNERY [FLANNERY_5]": {
-      "level": "51",
+    "Cooltrainer FELIX": {
+      "index": 432,
+      "slot": 1,
+      "level": "43",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Skill Swap",
+        "Earthquake"
+      ]
+    },
+    "Cooltrainer DIANNE": {
+      "index": 439,
+      "slot": 0,
+      "level": "43",
+      "ivs": {
+        "hp": 0,
+        "at": 0,
+        "df": 0,
+        "sa": 0,
+        "sd": 0,
+        "sp": 0
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Skill Swap",
+        "Earthquake"
+      ]
+    },
+    "Cooltrainer SHANNON": {
+      "index": 448,
+      "slot": 0,
+      "level": "45",
+      "ivs": {
+        "hp": 12,
+        "at": 12,
+        "df": 12,
+        "sa": 12,
+        "sd": 12,
+        "sp": 12
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": []
+    },
+    "Camper BEAU": {
+      "index": 457,
+      "slot": 1,
+      "level": "50",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Leftovers",
+      "ability": "Levitate",
+      "nature": "Modest",
+      "moves": [
+        "Earth Power",
+        "Psychic",
+        "Ancient Power",
+        "Explosion"
+      ]
+    },
+    "Rival STEVEN": {
+      "index": 470,
+      "slot": 1,
+      "level": "75",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -37803,15 +23079,17 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": [
-        "Helping Hand",
-        "Flamethrower",
-        "Sunny Day",
-        "Roar"
+        "Reflect",
+        "Light Screen",
+        "Ancient Power",
+        "Earthquake"
       ]
     }
   },
   "Turtonator": {
     "Cooltrainer GERALD": {
+      "index": 430,
+      "slot": 2,
       "level": "42",
       "ivs": {
         "hp": 0,
@@ -37824,7 +23102,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Absorb Bulb",
       "ability": "Shell Armor",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Shell Trap",
         "Flamethrower",
@@ -37833,116 +23111,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Omanyte": {
-    "Leader ROXANNE [ROXANNE_3]": {
-      "level": "37",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Ice Beam",
-        "Rock Slide",
-        "Surf"
-      ]
-    }
-  },
-  "Kabutops": {
-    "Leader ROXANNE [ROXANNE_3]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Swords Dance",
-        "Ice Beam",
-        "Surf",
-        "Rock Slide"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_4]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Swords Dance",
-        "Ice Beam",
-        "Surf",
-        "Rock Slide"
-      ]
-    },
-    "Ruin Maniac DUSTY [DUSTY_1]": {
-      "level": "52",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Sharpness",
-      "nature": null,
-      "moves": [
-        "Aqua Cutter",
-        "Ceaseless Edge",
-        "Stone Axe"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_5]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Swords Dance",
-        "Ice Beam",
-        "Surf",
-        "Rock Slide"
-      ]
-    }
-  },
   "Muk": {
     "Cooltrainer ALBERT": {
+      "index": 434,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 12,
@@ -37961,6 +23133,8 @@ var SETDEX_SV = {
   },
   "Blaziken": {
     "Kindler AXLE": {
+      "index": 436,
+      "slot": 3,
       "level": "43",
       "ivs": {
         "hp": 31,
@@ -37973,7 +23147,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Speed Boost",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Swords Dance",
         "Close Combat",
@@ -37984,6 +23158,8 @@ var SETDEX_SV = {
   },
   "Volcarona": {
     "Kindler KEEGAN": {
+      "index": 443,
+      "slot": 1,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -37996,38 +23172,19 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Heavy-Duty Boots",
       "ability": "Flame Body",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Fiery Dance",
         "Giga Drain",
         "Bug Buzz",
         "Morning Sun"
       ]
-    },
-    "Magma Leader MAXIE [MAXIE_DESERT]": {
-      "level": "48",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Safety Goggles",
-      "ability": "Flame Body",
-      "nature": null,
-      "moves": [
-        "Quiver Dance",
-        "Fiery Dance",
-        "Bug Buzz",
-        "Giga Drain"
-      ]
     }
   },
   "Magmortar": {
     "Kindler KEEGAN": {
+      "index": 443,
+      "slot": 3,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -38040,38 +23197,19 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Life Orb",
       "ability": "Mega Launcher",
-      "nature": null,
+      "nature": "Modest",
       "moves": [
         "Flash Cannon",
         "Aura Sphere",
         "Earth Power",
         "Fire Blast"
       ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT3]": {
-      "level": "46",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Wise Glasses",
-      "ability": "Mega Launcher",
-      "nature": null,
-      "moves": [
-        "Aura Sphere",
-        "Armor Cannon",
-        "Dark Pulse",
-        "Earth Power"
-      ]
     }
   },
   "Venusaur": {
     "Kindler KEEGAN": {
+      "index": 443,
+      "slot": 4,
       "level": "43",
       "ivs": {
         "hp": 0,
@@ -38084,7 +23222,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Life Orb",
       "ability": "Chlorophyll",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Weather Ball",
         "Giga Drain",
@@ -38093,8 +23231,33 @@ var SETDEX_SV = {
       ]
     }
   },
+  "Arcanine-Hisui": {
+    "Battle Girl DANIELLE": {
+      "index": 446,
+      "slot": 1,
+      "level": "44",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": "Choice Band",
+      "ability": "Rock Head",
+      "nature": "Jolly",
+      "moves": [
+        "Flare Blitz",
+        "Head Smash"
+      ]
+    }
+  },
   "Darmanitan": {
     "Battle Girl DANIELLE": {
+      "index": 446,
+      "slot": 3,
       "level": "44",
       "ivs": {
         "hp": 31,
@@ -38107,7 +23270,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Sheer Force",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Flare Blitz",
         "Iron Head",
@@ -38116,32 +23279,11 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Typhlosion": {
-    "Team Magma GRUNT [GRUNT_DESERT_MULTI1]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Life Orb",
-      "ability": "Sand Rush",
-      "nature": null,
-      "moves": [
-        "Eruption",
-        "Burning Jealousy",
-        "Earth Power",
-        "Sisma"
-      ]
-    }
-  },
-  "Nidoking": {
-    "Team Magma GRUNT [GRUNT_DESERT_MULTI1]": {
-      "level": "45",
+  "Zoroark-Hisui": {
+    "Leader NORMAN": {
+      "index": 453,
+      "slot": 1,
+      "level": "54",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -38151,20 +23293,22 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": false,
-      "item": "Life Orb",
-      "ability": "Sheer Force",
-      "nature": null,
+      "item": "Choice Specs",
+      "ability": "Illusion",
+      "nature": "Timid",
       "moves": [
-        "Drill Run",
-        "Rock Slide",
-        "Thunder Punch",
-        "Poison Drill"
+        "Hyper Voice",
+        "Bitter Malice",
+        "U-turn",
+        "Extrasensory"
       ]
     }
   },
-  "Steelix": {
-    "Team Magma GRUNT [GRUNT_DESERT_MULTI1]": {
-      "level": "45",
+  "Obstagoon": {
+    "Leader NORMAN": {
+      "index": 453,
+      "slot": 5,
+      "level": "54",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -38174,775 +23318,21 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": false,
-      "item": "Rocky Helmet",
-      "ability": "Rock Head",
-      "nature": null,
+      "item": "Flame Orb",
+      "ability": "Guts",
+      "nature": "Jolly",
       "moves": [
-        "Head Smash",
-        "Double-Edge",
-        "Heavy Slam",
-        "Curse"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_5]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Iron Tail",
-        "Explosion",
-        "Roar",
-        "Rock Slide"
-      ]
-    }
-  },
-  "Nidoqueen": {
-    "Team Magma GRUNT [GRUNT_DESERT_MULTI2]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Life Orb",
-      "ability": "Sheer Force",
-      "nature": null,
-      "moves": [
-        "Sludge Wave",
-        "Thunderbolt",
-        "Ice Beam",
-        "Tectonic Power"
-      ]
-    }
-  },
-  "Gastrodon": {
-    "Team Magma GRUNT [GRUNT_DESERT_MULTI2]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Leftovers",
-      "ability": "Storm Drain",
-      "nature": null,
-      "moves": [
-        "Scald",
-        "Earth Power",
-        "Ice Beam",
-        "Recover"
-      ]
-    }
-  },
-  "Cherrim": {
-    "Leader FLANNERY [FLANNERY_1]": {
-      "level": "44",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Life Orb",
-      "ability": "Flower Gift",
-      "nature": null,
-      "moves": [
-        "Solar Blade",
-        "Temper Flare",
-        "Morning Sun",
-        "Protect"
-      ]
-    }
-  },
-  "Flaaffy": {
-    "Leader WATTSON [WATTSON_3]": {
-      "level": "41",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder",
-        "Protect",
-        "Thunder Wave",
-        "Light Screen"
-      ]
-    }
-  },
-  "Growlithe": {
-    "Leader FLANNERY [FLANNERY_3]": {
-      "level": "41",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Helping Hand",
-        "Flamethrower",
-        "Roar",
-        "Sunny Day"
-      ]
-    },
-    "Leader FLANNERY [FLANNERY_4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Helping Hand",
-        "Flamethrower",
-        "Sunny Day",
-        "Roar"
-      ]
-    }
-  },
-  "Chansey": {
-    "Leader NORMAN [NORMAN_2]": {
-      "level": "42",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Light Screen",
-        "Sing",
-        "Skill Swap",
-        "Focus Punch"
-      ]
-    },
-    "Leader NORMAN [NORMAN_3]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Light Screen",
-        "Sing",
-        "Skill Swap",
-        "Focus Punch"
-      ]
-    }
-  },
-  "Dratini": {
-    "Leader WINONA [WINONA_2]": {
-      "level": "40",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder Wave",
-        "Thunderbolt",
-        "Protect",
-        "Ice Beam"
-      ]
-    }
-  },
-  "Palossand": {
-    "Team Magma GRUNT [GRUNT_DESERT1]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Leftovers",
-      "ability": "Water Compaction",
-      "nature": null,
-      "moves": [
-        "Shore Up",
-        "Earth Power",
-        "Giga Drain",
-        "Shadow Ball"
-      ]
-    }
-  },
-  "Dugtrio": {
-    "Team Magma GRUNT [GRUNT_DESERT1]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Focus Sash",
-      "ability": "Arena Trap",
-      "nature": null,
-      "moves": [
-        "Earthquake",
+        "Obstruct",
         "Facade",
-        "Stone Edge",
-        "Throat Chop"
-      ]
-    }
-  },
-  "Seismitoad": {
-    "Team Magma GRUNT [GRUNT_DESERT1]": {
-      "level": "45",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Absorb Bulb",
-      "ability": "Water Absorb",
-      "nature": null,
-      "moves": [
-        "Muddy Water",
-        "Grass Knot",
-        "Earth Power",
-        "Icy Wind"
-      ]
-    }
-  },
-  "Maractus": {
-    "Team Magma GRUNT [GRUNT_DESERT2]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Absorb Bulb",
-      "ability": "Storm Drain",
-      "nature": null,
-      "moves": [
-        "Giga Drain",
-        "Earth Power",
-        "Spiky Shield",
-        "Knock Off"
-      ]
-    },
-    "Magma Leader MAXIE [MAXIE_DESERT]": {
-      "level": "48",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Absorb Bulb",
-      "ability": "Sand Force",
-      "nature": null,
-      "moves": [
-        "Shore Up",
-        "Earth Power",
-        "Giga Drain",
-        "Weather Ball"
-      ]
-    }
-  },
-  "Donphan": {
-    "Team Magma GRUNT [GRUNT_DESERT2]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Bright Powder",
-      "ability": "Sand Veil",
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Ice Spinner",
-        "Ice Shard",
-        "Body Press"
-      ]
-    },
-    "Triathlete JASMINE": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Quick Claw",
-      "ability": "Sturdy",
-      "nature": null,
-      "moves": [
-        "Defense Curl",
-        "Rollout"
-      ]
-    },
-    "Camper BRANDEN": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Sturdy",
-      "nature": null,
-      "moves": [
-        "Rapid Spin",
-        "Ice Spinner",
-        "High Horsepower",
-        "Head Smash"
-      ]
-    }
-  },
-  "Diggersby": {
-    "Team Magma GRUNT [GRUNT_DESERT2]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Soft Sand",
-      "ability": "Huge Power",
-      "nature": null,
-      "moves": [
-        "High Horsepower",
-        "Swords Dance",
-        "Quick Attack",
-        "Body Slam"
-      ]
-    }
-  },
-  "Excadrill": {
-    "Team Magma GRUNT [GRUNT_DESERT4]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Air Balloon",
-      "ability": "Sand Rush",
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Iron Head",
-        "Rock Slide",
-        "Strength"
-      ]
-    }
-  },
-  "Ferrothorn": {
-    "Team Magma GRUNT [GRUNT_DESERT4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Rocky Helmet",
-      "ability": "Iron Barbs",
-      "nature": null,
-      "moves": [
-        "Leech Seed",
-        "Protect",
-        "Gyro Ball",
-        "Body Press"
-      ]
-    }
-  },
-  "Armaldo": {
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER2]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Muscle Band",
-      "ability": "Battle Armor",
-      "nature": null,
-      "moves": [
-        "Swords Dance",
-        "X-Scissor",
-        "Stone Edge",
-        "Liquidation"
-      ]
-    },
-    "Rival STEVEN": {
-      "level": "76",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Water Pulse",
-        "Ancient Power",
-        "Aerial Ace",
-        "Slash"
-      ]
-    }
-  },
-  "Bastiodon": {
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER2]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Sturdy",
-      "nature": null,
-      "moves": [
-        "Metal Burst",
-        "Earthquake",
-        "Stone Edge",
-        "Heavy Slam"
-      ]
-    }
-  },
-  "Rampardos": {
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER2]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Life Orb",
-      "ability": "Sheer Force",
-      "nature": null,
-      "moves": [
-        "Head Smash",
-        "Fire Punch",
-        "Rock Slide",
-        "Earthquake"
-      ]
-    }
-  },
-  "Tyrantrum": {
-    "Team Magma GRUNT [MAGMA_GRUNT_DESERT_SPINNER2]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Expert Belt",
-      "ability": "Strong Jaw",
-      "nature": null,
-      "moves": [
-        "Dragon Dance",
-        "Thunder Fang",
-        "Fire Fang",
-        "Ice Fang"
-      ]
-    }
-  },
-  "Omastar": {
-    "Leader ROXANNE [ROXANNE_4]": {
-      "level": "42",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Ice Beam",
-        "Rock Slide",
-        "Surf"
-      ]
-    },
-    "Ruin Maniac DUSTY [DUSTY_1]": {
-      "level": "52",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Rindo Berry",
-      "ability": "Solid Rock",
-      "nature": null,
-      "moves": [
-        "Meteor Beam",
-        "Muddy Water",
-        "Earth Power",
-        "Protect"
-      ]
-    },
-    "Leader ROXANNE [ROXANNE_5]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Protect",
-        "Ice Beam",
-        "Rock Slide",
-        "Surf"
-      ]
-    }
-  },
-  "Tyranitar": {
-    "Team Magma GRUNT [GRUNT_DESERT5]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Chople Berry",
-      "ability": "Battle Armor",
-      "nature": null,
-      "moves": [
-        "Dragon Dance",
         "Knock Off",
-        "Stone Edge",
-        "Ice Punch"
-      ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT6]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Chople Berry",
-      "ability": "Battle Armor",
-      "nature": null,
-      "moves": [
-        "Dragon Dance",
-        "Knock Off",
-        "Stone Edge",
-        "Ice Punch"
-      ]
-    }
-  },
-  "Crustle": {
-    "Team Magma GRUNT [GRUNT_DESERT5]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "White Herb",
-      "ability": "Sturdy",
-      "nature": null,
-      "moves": [
-        "Shell Smash",
-        "X-Scissor",
-        "Earthquake",
-        "Stone Edge"
-      ]
-    },
-    "Team Magma GRUNT [GRUNT_DESERT6]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "White Herb",
-      "ability": "Sturdy",
-      "nature": null,
-      "moves": [
-        "Shell Smash",
-        "X-Scissor",
-        "Earthquake",
-        "Stone Edge"
+        "Sucker Punch"
       ]
     }
   },
   "Golurk": {
-    "Team Magma GRUNT [GRUNT_DESERT5]": {
-      "level": "47",
-      "ivs": {
-        "hp": 0,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Punching Glove",
-      "ability": "Iron Fist",
-      "nature": null,
-      "moves": [
-        "Fire Punch",
-        "Ice Punch",
-        "Thunder Punch",
-        "Poltergeist"
-      ]
-    },
     "Camper BEAU": {
+      "index": 457,
+      "slot": 2,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -38955,7 +23345,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Punching Glove",
       "ability": "Iron Fist",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Shadow Punch",
         "Drain Punch",
@@ -38964,158 +23354,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Marowak": {
-    "Team Magma GRUNT [GRUNT_DESERT6]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Thick Club",
-      "ability": "Rock Head",
-      "nature": null,
-      "moves": [
-        "Earthquake",
-        "Fire Punch",
-        "Frustration",
-        "Trailblaze"
-      ]
-    },
-    "Camper BRANDEN": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Thick Club",
-      "ability": "Battle Armor",
-      "nature": null,
-      "moves": [
-        "Poltergeist",
-        "Bonemerang",
-        "Brick Break",
-        "Protect"
-      ]
-    }
-  },
-  "Shelgon": {
-    "Dragon Tamer NICOLAS [NICOLAS_5]": {
-      "level": "49",
-      "ivs": {
-        "hp": 17,
-        "at": 17,
-        "df": 17,
-        "sa": 17,
-        "sd": 17,
-        "sp": 17
-      },
-      "ivsSpecified": true,
-      "item": "Dragon Fang",
-      "ability": null,
-      "nature": null,
-      "moves": []
-    },
-    "Elite Four DRAKE": {
-      "level": "52",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rock Tomb",
-        "Dragon Claw",
-        "Protect",
-        "Double Edge"
-      ]
-    }
-  },
-  "Flygon": {
-    "Magma Admin TABITHA [TABITHA_DESERT]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Life Orb",
-      "ability": "Sand Rush",
-      "nature": null,
-      "moves": [
-        "X-Scissor",
-        "Fell Stinger",
-        "Earthquake",
-        "Dragon Claw"
-      ]
-    },
-    "Elite Four DRAKE": {
-      "level": "53",
-      "ivs": {
-        "hp": 30,
-        "at": 30,
-        "df": 30,
-        "sa": 30,
-        "sd": 30,
-        "sp": 30
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Flamethrower",
-        "Crunch",
-        "Dragon Breath",
-        "Earthquake"
-      ]
-    }
-  },
-  "Rhyperior": {
-    "Magma Admin TABITHA [TABITHA_DESERT]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "White Herb",
-      "ability": "Reckless",
-      "nature": null,
-      "moves": [
-        "Double Iron Bash",
-        "Head Smash",
-        "Wild Charge",
-        "Headlong Rush"
-      ]
-    }
-  },
   "Accelgor": {
     "Triathlete JACOB": {
+      "index": 458,
+      "slot": 3,
       "level": "49",
       "ivs": {
         "hp": 31,
@@ -39128,7 +23370,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Life Orb",
       "ability": "Sheer Force",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Bug Buzz",
         "Pursuit",
@@ -39139,6 +23381,8 @@ var SETDEX_SV = {
   },
   "Fearow": {
     "Triathlete ANTHONY": {
+      "index": 459,
+      "slot": 1,
       "level": "48",
       "ivs": {
         "hp": 31,
@@ -39162,6 +23406,8 @@ var SETDEX_SV = {
   },
   "Staraptor": {
     "Triathlete ANTHONY": {
+      "index": 459,
+      "slot": 3,
       "level": "48",
       "ivs": {
         "hp": 31,
@@ -39185,6 +23431,8 @@ var SETDEX_SV = {
   },
   "Unfezant": {
     "Triathlete ANTHONY": {
+      "index": 459,
+      "slot": 4,
       "level": "49",
       "ivs": {
         "hp": 30,
@@ -39197,7 +23445,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Choice Specs",
       "ability": "Super Luck",
-      "nature": null,
+      "nature": "Timid",
       "moves": [
         "Air Slash",
         "Hidden Power",
@@ -39206,8 +23454,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Cyclizar": {
-    "Triathlete BENJAMIN [BENJAMIN_1]": {
+  "Donphan": {
+    "Triathlete JASMINE": {
+      "index": 460,
+      "slot": 2,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39218,40 +23468,17 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": false,
-      "item": "Sitrus Berry",
-      "ability": "Shed Skin",
-      "nature": null,
+      "item": "Quick Claw",
+      "ability": "Sturdy",
+      "nature": "Adamant",
       "moves": [
-        "Dragon Claw",
-        "Giga Impact",
-        "U-turn",
-        "Quick Attack"
+        "Defense Curl",
+        "Rollout"
       ]
     },
-    "Leader NORMAN [NORMAN_1]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Sitrus Berry",
-      "ability": "Regenerator",
-      "nature": null,
-      "moves": [
-        "Shed Tail",
-        "Draco Meteor",
-        "Hyper Voice",
-        "Knock Off"
-      ]
-    }
-  },
-  "Garbodor": {
-    "Triathlete BENJAMIN [BENJAMIN_1]": {
+    "Camper BRANDEN": {
+      "index": 465,
+      "slot": 0,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39262,42 +23489,21 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": false,
-      "item": "King's Rock",
-      "ability": "Stench",
-      "nature": null,
+      "item": null,
+      "ability": "Sturdy",
+      "nature": "Adamant",
       "moves": [
-        "Gunk Shot",
-        "Stockpile",
-        "Swallow",
-        "Deterio"
-      ]
-    }
-  },
-  "Revavroom": {
-    "Triathlete BENJAMIN [BENJAMIN_1]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Air Balloon",
-      "ability": "Overcoat",
-      "nature": null,
-      "moves": [
-        "Iron Head",
-        "Poison Jab",
-        "Shift Gear",
-        "High Horsepower"
+        "Rapid Spin",
+        "Ice Spinner",
+        "High Horsepower",
+        "Head Smash"
       ]
     }
   },
   "Shuckle": {
     "Triathlete JASMINE": {
+      "index": 460,
+      "slot": 3,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39310,7 +23516,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Sitrus Berry",
       "ability": "Gluttony",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Power Trick",
         "Rollout"
@@ -39319,6 +23525,8 @@ var SETDEX_SV = {
   },
   "Miltank": {
     "Triathlete JASMINE": {
+      "index": 460,
+      "slot": 4,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39331,38 +23539,17 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Muscle Band",
       "ability": "Scrappy",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Defense Curl",
         "Rollout"
       ]
     }
   },
-  "Zebstrika": {
-    "Triathlete ABIGAIL [ABIGAIL_3]": {
-      "level": "49",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Choice Band",
-      "ability": "Iron Kick",
-      "nature": null,
-      "moves": [
-        "High Horsepower",
-        "Thunderous Kick",
-        "Stomp",
-        "Supercell Slam"
-      ]
-    }
-  },
   "Gogoat": {
     "Picnicker HEIDI": {
+      "index": 461,
+      "slot": 0,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39375,7 +23562,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Safety Goggles",
       "ability": "Sap Sipper",
-      "nature": null,
+      "nature": "Jolly",
       "moves": [
         "Bulk Up",
         "Horn Leech",
@@ -39386,6 +23573,8 @@ var SETDEX_SV = {
   },
   "Sudowoodo": {
     "Picnicker BECKY": {
+      "index": 462,
+      "slot": 0,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39408,6 +23597,8 @@ var SETDEX_SV = {
   },
   "Sandaconda": {
     "Picnicker BECKY": {
+      "index": 462,
+      "slot": 2,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39420,7 +23611,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Loaded Dice",
       "ability": "Shed Skin",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Rest",
         "Earthquake",
@@ -39429,77 +23620,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Hippowdon": {
-    "Magma Leader MAXIE [MAXIE_DESERT]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Sand Stream",
-      "nature": null,
-      "moves": [
-        "Stealth Rock",
-        "Roar",
-        "Stone Edge",
-        "Earthquake"
-      ]
-    }
-  },
-  "Garchomp": {
-    "Magma Leader MAXIE [MAXIE_DESERT]": {
-      "level": "49",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": null,
-      "ability": "Sand Veil",
-      "nature": null,
-      "moves": [
-        "Scale Shot",
-        "Stone Edge",
-        "Earthquake",
-        "Brick Break"
-      ]
-    }
-  },
-  "Regirock": {
-    "Magma Leader MAXIE [MAXIE_DESERT]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Leftovers",
-      "ability": "Clear Body",
-      "nature": null,
-      "moves": [
-        "Stone Edge",
-        "Body Press",
-        "Earthquake",
-        "Iron Defense"
-      ]
-    }
-  },
   "Lycanroc": {
     "Ruin Maniac BRYAN": {
+      "index": 464,
+      "slot": 0,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39512,7 +23636,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": null,
       "ability": "Sand Rush",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Protect",
         "Accelerock",
@@ -39523,6 +23647,8 @@ var SETDEX_SV = {
   },
   "Stunfisk": {
     "Ruin Maniac BRYAN": {
+      "index": 464,
+      "slot": 1,
       "level": "50",
       "ivs": {
         "hp": 0,
@@ -39535,7 +23661,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": "Air Balloon",
       "ability": "Sand Veil",
-      "nature": null,
+      "nature": "Bold",
       "moves": [
         "Discharge",
         "Earth Power",
@@ -39546,6 +23672,8 @@ var SETDEX_SV = {
   },
   "Stunfisk-Galar": {
     "Ruin Maniac BRYAN": {
+      "index": 464,
+      "slot": 2,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39558,7 +23686,7 @@ var SETDEX_SV = {
       "ivsSpecified": false,
       "item": "Air Balloon",
       "ability": "Sand Veil",
-      "nature": null,
+      "nature": "Adamant",
       "moves": [
         "Snap Trap",
         "Earthquake",
@@ -39567,96 +23695,10 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Ampharos": {
-    "Leader WATTSON [WATTSON_4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder",
-        "Protect",
-        "Thunder Wave",
-        "Light Screen"
-      ]
-    },
-    "Leader WATTSON [WATTSON_5]": {
-      "level": "51",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder",
-        "Protect",
-        "Thunder Wave",
-        "Light Screen"
-      ]
-    }
-  },
-  "Houndour": {
-    "Leader FLANNERY [FLANNERY_4]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Roar",
-        "Solar Beam",
-        "Taunt",
-        "Sunny Day"
-      ]
-    }
-  },
-  "Kangaskhan": {
-    "Leader NORMAN [NORMAN_3]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Dizzy Punch",
-        "Endure",
-        "Reversal"
-      ]
-    },
-    "Leader NORMAN [NORMAN_4]": {
+  "Marowak": {
+    "Camper BRANDEN": {
+      "index": 465,
+      "slot": 1,
       "level": "50",
       "ivs": {
         "hp": 31,
@@ -39666,326 +23708,22 @@ var SETDEX_SV = {
         "sd": 31,
         "sp": 31
       },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
+      "ivsSpecified": false,
+      "item": "Thick Club",
+      "ability": "Battle Armor",
+      "nature": "Adamant",
       "moves": [
-        "Fake Out",
-        "Dizzy Punch",
-        "Endure",
-        "Reversal"
-      ]
-    },
-    "Leader NORMAN [NORMAN_5]": {
-      "level": "55",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Fake Out",
-        "Dizzy Punch",
-        "Endure",
-        "Reversal"
-      ]
-    }
-  },
-  "Hoothoot": {
-    "Leader WINONA [WINONA_3]": {
-      "level": "43",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hypnosis",
-        "Psychic",
-        "Reflect",
-        "Dream Eater"
-      ]
-    }
-  },
-  "Dragonair": {
-    "Leader WINONA [WINONA_3]": {
-      "level": "45",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder Wave",
-        "Thunderbolt",
-        "Protect",
-        "Ice Beam"
-      ]
-    },
-    "Leader WINONA [WINONA_4]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Thunder Wave",
-        "Thunderbolt",
-        "Protect",
-        "Ice Beam"
-      ]
-    }
-  },
-  "Slowpoke": {
-    "Leader TATE&LIZA [TATE_AND_LIZA_2]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Yawn",
-        "Psychic",
-        "Calm Mind",
-        "Protect"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_3]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Yawn",
-        "Psychic",
-        "Calm Mind",
-        "Protect"
-      ]
-    },
-    "Leader TATE&LIZA [TATE_AND_LIZA_4]": {
-      "level": "58",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Yawn",
-        "Psychic",
-        "Calm Mind",
-        "Protect"
-      ]
-    }
-  },
-  "Poliwag": {
-    "Leader JUAN [JUAN_2]": {
-      "level": "46",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hypnosis",
-        "Rain Dance",
-        "Protect",
-        "Hydro Pump"
-      ]
-    }
-  },
-  "Walrein": {
-    "Leader JUAN [JUAN_2]": {
-      "level": "48",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Water Pulse",
-        "Body Slam",
-        "Protect",
-        "Ice Beam"
-      ]
-    },
-    "Elite Four GLACIA": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Surf",
-        "Body Slam",
-        "Ice Beam",
-        "Sheer Cold"
-      ]
-    },
-    "Leader JUAN [JUAN_3]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Water Pulse",
-        "Body Slam",
-        "Protect",
-        "Ice Beam"
-      ]
-    },
-    "Leader JUAN [JUAN_4]": {
-      "level": "58",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Water Pulse",
-        "Body Slam",
-        "Protect",
-        "Ice Beam"
-      ]
-    },
-    "Leader JUAN [JUAN_5]": {
-      "level": "63",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Water Pulse",
-        "Body Slam",
-        "Protect",
-        "Sheer Cold"
-      ]
-    }
-  },
-  "Aerodactyl": {
-    "Leader ROXANNE [ROXANNE_5]": {
-      "level": "47",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Rock Slide",
-        "Hyper Beam",
-        "Supersonic",
+        "Poltergeist",
+        "Bonemerang",
+        "Brick Break",
         "Protect"
       ]
     }
   },
   "Glalie": {
     "Elite Four GLACIA": {
+      "index": 467,
+      "slot": 3,
       "level": "52",
       "ivs": {
         "hp": 30,
@@ -40007,8 +23745,85 @@ var SETDEX_SV = {
       ]
     }
   },
+  "Walrein": {
+    "Elite Four GLACIA": {
+      "index": 467,
+      "slot": 4,
+      "level": "53",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": true,
+      "item": "Sitrus Berry",
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Surf",
+        "Body Slam",
+        "Ice Beam",
+        "Sheer Cold"
+      ]
+    }
+  },
+  "Shelgon": {
+    "Elite Four DRAKE": {
+      "index": 468,
+      "slot": 0,
+      "level": "52",
+      "ivs": {
+        "hp": 30,
+        "at": 30,
+        "df": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 30
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Rock Tomb",
+        "Dragon Claw",
+        "Protect",
+        "Double Edge"
+      ]
+    }
+  },
+  "Flygon": {
+    "Elite Four DRAKE": {
+      "index": 468,
+      "slot": 3,
+      "level": "53",
+      "ivs": {
+        "hp": 30,
+        "at": 30,
+        "df": 30,
+        "sa": 30,
+        "sd": 30,
+        "sp": 30
+      },
+      "ivsSpecified": true,
+      "item": null,
+      "ability": null,
+      "nature": null,
+      "moves": [
+        "Flamethrower",
+        "Crunch",
+        "Dragon Breath",
+        "Earthquake"
+      ]
+    }
+  },
   "Salamence": {
     "Elite Four DRAKE": {
+      "index": 468,
+      "slot": 4,
       "level": "55",
       "ivs": {
         "hp": 31,
@@ -40030,55 +23845,11 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Zoroark-Hisui": {
-    "Leader NORMAN [NORMAN_1]": {
-      "level": "54",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Choice Specs",
-      "ability": "Illusion",
-      "nature": null,
-      "moves": [
-        "Hyper Voice",
-        "Bitter Malice",
-        "U-turn",
-        "Extrasensory"
-      ]
-    }
-  },
-  "Obstagoon": {
-    "Leader NORMAN [NORMAN_1]": {
-      "level": "54",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": false,
-      "item": "Flame Orb",
-      "ability": "Guts",
-      "nature": null,
-      "moves": [
-        "Obstruct",
-        "Facade",
-        "Knock Off",
-        "Sucker Punch"
-      ]
-    }
-  },
-  "Electabuzz": {
-    "Leader WATTSON [WATTSON_5]": {
-      "level": "50",
+  "Armaldo": {
+    "Rival STEVEN": {
+      "index": 470,
+      "slot": 4,
+      "level": "76",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -40092,149 +23863,17 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": [
-        "Swift",
-        "Focus Punch",
-        "Thunder Punch",
-        "Light Screen"
-      ]
-    }
-  },
-  "Drowzee": {
-    "Leader TATE&LIZA [TATE_AND_LIZA_3]": {
-      "level": "53",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hypnosis",
-        "Dream Eater",
-        "Headbutt",
-        "Protect"
-      ]
-    }
-  },
-  "Poliwhirl": {
-    "Leader JUAN [JUAN_3]": {
-      "level": "50",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hypnosis",
-        "Rain Dance",
-        "Protect",
-        "Hydro Pump"
-      ]
-    },
-    "Leader JUAN [JUAN_4]": {
-      "level": "56",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hypnosis",
-        "Rain Dance",
-        "Protect",
-        "Hydro Pump"
-      ]
-    }
-  },
-  "Dragonite": {
-    "Leader WINONA [WINONA_5]": {
-      "level": "55",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": "Sitrus Berry",
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hyper Beam",
-        "Thunderbolt",
-        "Earthquake",
-        "Ice Beam"
-      ]
-    }
-  },
-  "Lapras": {
-    "Leader JUAN [JUAN_4]": {
-      "level": "56",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hydro Pump",
-        "Perish Song",
-        "Ice Beam",
-        "Confuse Ray"
-      ]
-    },
-    "Leader JUAN [JUAN_5]": {
-      "level": "61",
-      "ivs": {
-        "hp": 31,
-        "at": 31,
-        "df": 31,
-        "sa": 31,
-        "sd": 31,
-        "sp": 31
-      },
-      "ivsSpecified": true,
-      "item": null,
-      "ability": null,
-      "nature": null,
-      "moves": [
-        "Hydro Pump",
-        "Perish Song",
-        "Ice Beam",
-        "Confuse Ray"
+        "Water Pulse",
+        "Ancient Power",
+        "Aerial Ace",
+        "Slash"
       ]
     }
   },
   "Metagross": {
     "Rival STEVEN": {
+      "index": 470,
+      "slot": 5,
       "level": "78",
       "ivs": {
         "hp": 31,
@@ -40256,8 +23895,35 @@ var SETDEX_SV = {
       ]
     }
   },
+  "Azumarill": {
+    "Partner Rival WALLY": {
+      "index": 472,
+      "slot": 1,
+      "level": "21",
+      "ivs": {
+        "hp": 31,
+        "at": 31,
+        "df": 31,
+        "sa": 31,
+        "sd": 31,
+        "sp": 31
+      },
+      "ivsSpecified": false,
+      "item": null,
+      "ability": "Huge Power",
+      "nature": "Adamant",
+      "moves": [
+        "Helping Hand",
+        "Aqua Tail",
+        "Bounce",
+        "Charm"
+      ]
+    }
+  },
   "Dedenne": {
-    "Partner Rival WALLY [1]": {
+    "Partner Rival WALLY": {
+      "index": 472,
+      "slot": 2,
       "level": "21",
       "ivs": {
         "hp": 31,
@@ -40280,6 +23946,8 @@ var SETDEX_SV = {
   },
   "Metang": {
     "Partner Rival STEVEN": {
+      "index": 473,
+      "slot": 0,
       "level": "42",
       "ivs": {
         "hp": 31,
@@ -40292,7 +23960,7 @@ var SETDEX_SV = {
       "ivsSpecified": true,
       "item": null,
       "ability": null,
-      "nature": null,
+      "nature": "Brave",
       "moves": [
         "Light Screen",
         "Psychic",

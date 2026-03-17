@@ -9350,6 +9350,404 @@ exports.BattleLearnsets = {
             ]
         }
     },
+    "raichumegax": {
+        "learnset": {
+            "thunderpunch": [
+                "L0",
+                "T"
+            ],
+            "electroball": [
+                "L1",
+                "T"
+            ],
+            "discharge": [
+                "L1"
+            ],
+            "nastyplot": [
+                "L1",
+                "T"
+            ],
+            "feint": [
+                "L1"
+            ],
+            "irontail": [
+                "L1"
+            ],
+            "spark": [
+                "L1"
+            ],
+            "charm": [
+                "L1",
+                "M"
+            ],
+            "sweetkiss": [
+                "L1"
+            ],
+            "playnice": [
+                "L1"
+            ],
+            "nuzzle": [
+                "L1"
+            ],
+            "quickattack": [
+                "L1"
+            ],
+            "agility": [
+                "L1",
+                "M"
+            ],
+            "thunder": [
+                "L1",
+                "M"
+            ],
+            "thunderwave": [
+                "L1",
+                "T"
+            ],
+            "thundershock": [
+                "L1"
+            ],
+            "growl": [
+                "L1"
+            ],
+            "tailwhip": [
+                "L1"
+            ],
+            "lightscreen": [
+                "L1",
+                "M"
+            ],
+            "thunderbolt": [
+                "L5",
+                "M"
+            ],
+            "alluringvoice": [
+                "M"
+            ],
+            "brickbreak": [
+                "M"
+            ],
+            "dig": [
+                "M"
+            ],
+            "disarmingvoice": [
+                "M"
+            ],
+            "drainingkiss": [
+                "M"
+            ],
+            "electroweb": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "focusblast": [
+                "M"
+            ],
+            "focuspunch": [
+                "M"
+            ],
+            "grassknot": [
+                "M"
+            ],
+            "hyperbeam": [
+                "M"
+            ],
+            "playrough": [
+                "M"
+            ],
+            "reflect": [
+                "M"
+            ],
+            "rest": [
+                "M"
+            ],
+            "surf": [
+                "M"
+            ],
+            "thief": [
+                "M"
+            ],
+            "trailblaze": [
+                "M"
+            ],
+            "voltswitch": [
+                "M"
+            ],
+            "charge": [
+                "T"
+            ],
+            "chargebeam": [
+                "T"
+            ],
+            "eerieimpulse": [
+                "T"
+            ],
+            "electricterrain": [
+                "T"
+            ],
+            "encore": [
+                "T"
+            ],
+            "endeavor": [
+                "T"
+            ],
+            "faketears": [
+                "T"
+            ],
+            "fling": [
+                "T"
+            ],
+            "gigaimpact": [
+                "T"
+            ],
+            "helpinghand": [
+                "T"
+            ],
+            "knockoff": [
+                "T"
+            ],
+            "protect": [
+                "T"
+            ],
+            "raindance": [
+                "T"
+            ],
+            "reversal": [
+                "T"
+            ],
+            "takedown": [
+                "T"
+            ],
+            "upperhand": [
+                "T"
+            ],
+            "volttackle": [
+                "T"
+            ],
+            "wildcharge": [
+                "T"
+            ],
+            "zingzap": [
+                "T"
+            ],
+            "bodyslam": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "substitute": [
+                "T"
+            ],
+            "swift": [
+                "T"
+            ]
+        }
+    },
+    "raichumegay": {
+        "learnset": {
+            "thunderpunch": [
+                "L0",
+                "T"
+            ],
+            "electroball": [
+                "L1",
+                "T"
+            ],
+            "discharge": [
+                "L1"
+            ],
+            "nastyplot": [
+                "L1",
+                "T"
+            ],
+            "feint": [
+                "L1"
+            ],
+            "irontail": [
+                "L1"
+            ],
+            "spark": [
+                "L1"
+            ],
+            "charm": [
+                "L1",
+                "M"
+            ],
+            "sweetkiss": [
+                "L1"
+            ],
+            "playnice": [
+                "L1"
+            ],
+            "nuzzle": [
+                "L1"
+            ],
+            "quickattack": [
+                "L1"
+            ],
+            "agility": [
+                "L1",
+                "M"
+            ],
+            "thunder": [
+                "L1",
+                "M"
+            ],
+            "thunderwave": [
+                "L1",
+                "T"
+            ],
+            "thundershock": [
+                "L1"
+            ],
+            "growl": [
+                "L1"
+            ],
+            "tailwhip": [
+                "L1"
+            ],
+            "lightscreen": [
+                "L1",
+                "M"
+            ],
+            "thunderbolt": [
+                "L5",
+                "M"
+            ],
+            "alluringvoice": [
+                "M"
+            ],
+            "brickbreak": [
+                "M"
+            ],
+            "dig": [
+                "M"
+            ],
+            "disarmingvoice": [
+                "M"
+            ],
+            "drainingkiss": [
+                "M"
+            ],
+            "electroweb": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "focusblast": [
+                "M"
+            ],
+            "focuspunch": [
+                "M"
+            ],
+            "grassknot": [
+                "M"
+            ],
+            "hyperbeam": [
+                "M"
+            ],
+            "playrough": [
+                "M"
+            ],
+            "reflect": [
+                "M"
+            ],
+            "rest": [
+                "M"
+            ],
+            "surf": [
+                "M"
+            ],
+            "thief": [
+                "M"
+            ],
+            "trailblaze": [
+                "M"
+            ],
+            "voltswitch": [
+                "M"
+            ],
+            "charge": [
+                "T"
+            ],
+            "chargebeam": [
+                "T"
+            ],
+            "eerieimpulse": [
+                "T"
+            ],
+            "electricterrain": [
+                "T"
+            ],
+            "encore": [
+                "T"
+            ],
+            "endeavor": [
+                "T"
+            ],
+            "faketears": [
+                "T"
+            ],
+            "fling": [
+                "T"
+            ],
+            "gigaimpact": [
+                "T"
+            ],
+            "helpinghand": [
+                "T"
+            ],
+            "knockoff": [
+                "T"
+            ],
+            "protect": [
+                "T"
+            ],
+            "raindance": [
+                "T"
+            ],
+            "reversal": [
+                "T"
+            ],
+            "takedown": [
+                "T"
+            ],
+            "upperhand": [
+                "T"
+            ],
+            "volttackle": [
+                "T"
+            ],
+            "wildcharge": [
+                "T"
+            ],
+            "zingzap": [
+                "T"
+            ],
+            "bodyslam": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "substitute": [
+                "T"
+            ],
+            "swift": [
+                "T"
+            ]
+        }
+    },
     "raichualola": {
         "learnset": {
             "psychic": [
@@ -45057,6 +45455,263 @@ exports.BattleLearnsets = {
             ]
         }
     },
+    "dragonitemega": {
+        "learnset": {
+            "hurricane": [
+                "L0",
+                "T"
+            ],
+            "roost": [
+                "L1"
+            ],
+            "extremespeed": [
+                "L1"
+            ],
+            "twister": [
+                "L1"
+            ],
+            "thunderwave": [
+                "L1",
+                "T"
+            ],
+            "firepunch": [
+                "L1",
+                "T"
+            ],
+            "wrap": [
+                "L1"
+            ],
+            "wingattack": [
+                "L1"
+            ],
+            "thunderpunch": [
+                "L1",
+                "T"
+            ],
+            "leer": [
+                "L1"
+            ],
+            "dragontail": [
+                "L15",
+                "T"
+            ],
+            "agility": [
+                "L20",
+                "M"
+            ],
+            "slam": [
+                "L25"
+            ],
+            "aquatail": [
+                "L33"
+            ],
+            "dragonrush": [
+                "L39"
+            ],
+            "outrage": [
+                "L41",
+                "T"
+            ],
+            "safeguard": [
+                "L46"
+            ],
+            "raindance": [
+                "L53",
+                "T"
+            ],
+            "dragondance": [
+                "L62",
+                "T"
+            ],
+            "hyperbeam": [
+                "L80",
+                "M"
+            ],
+            "aerialace": [
+                "M"
+            ],
+            "blizzard": [
+                "M"
+            ],
+            "brickbreak": [
+                "M"
+            ],
+            "bulldoze": [
+                "M"
+            ],
+            "chillingwater": [
+                "M"
+            ],
+            "dragoncheer": [
+                "M"
+            ],
+            "dragonclaw": [
+                "M"
+            ],
+            "earthquake": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "fireblast": [
+                "M"
+            ],
+            "flamethrower": [
+                "M"
+            ],
+            "fly": [
+                "M"
+            ],
+            "focusblast": [
+                "M"
+            ],
+            "focuspunch": [
+                "M"
+            ],
+            "icebeam": [
+                "M"
+            ],
+            "ironhead": [
+                "M"
+            ],
+            "lightscreen": [
+                "M"
+            ],
+            "rest": [
+                "M"
+            ],
+            "roar": [
+                "M"
+            ],
+            "rocktomb": [
+                "M"
+            ],
+            "stoneedge": [
+                "M"
+            ],
+            "surf": [
+                "M"
+            ],
+            "thunder": [
+                "M"
+            ],
+            "thunderbolt": [
+                "M"
+            ],
+            "waterfall": [
+                "M"
+            ],
+            "waterpulse": [
+                "M"
+            ],
+            "aircutter": [
+                "T"
+            ],
+            "airslash": [
+                "T"
+            ],
+            "bodypress": [
+                "T"
+            ],
+            "breakingswipe": [
+                "T"
+            ],
+            "dracometeor": [
+                "T"
+            ],
+            "dragonpulse": [
+                "T"
+            ],
+            "encore": [
+                "T"
+            ],
+            "firespin": [
+                "T"
+            ],
+            "fling": [
+                "T"
+            ],
+            "gigaimpact": [
+                "T"
+            ],
+            "haze": [
+                "T"
+            ],
+            "heatwave": [
+                "T"
+            ],
+            "helpinghand": [
+                "T"
+            ],
+            "hydropump": [
+                "T"
+            ],
+            "icespinner": [
+                "T"
+            ],
+            "lowkick": [
+                "T"
+            ],
+            "protect": [
+                "T"
+            ],
+            "sandstorm": [
+                "T"
+            ],
+            "scaleshot": [
+                "T"
+            ],
+            "scaryface": [
+                "T"
+            ],
+            "snowscape": [
+                "T"
+            ],
+            "stompingtantrum": [
+                "T"
+            ],
+            "sunnyday": [
+                "T"
+            ],
+            "tailwind": [
+                "T"
+            ],
+            "takedown": [
+                "T"
+            ],
+            "weatherball": [
+                "T"
+            ],
+            "bodyslam": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "icepunch": [
+                "T"
+            ],
+            "icywind": [
+                "T"
+            ],
+            "metronome": [
+                "T"
+            ],
+            "rockslide": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "substitute": [
+                "T"
+            ],
+            "swift": [
+                "T"
+            ]
+        }
+    },
     "mewtwo": {
         "learnset": {
             "disable": [
@@ -46344,6 +46999,203 @@ exports.BattleLearnsets = {
         }
     },
     "meganium": {
+        "learnset": {
+            "pixiedrain": [
+                "L0"
+            ],
+            "tackle": [
+                "L1"
+            ],
+            "growl": [
+                "L1"
+            ],
+            "razorleaf": [
+                "L1"
+            ],
+            "poisonpowder": [
+                "L1"
+            ],
+            "petalblizzard": [
+                "L1",
+                "T"
+            ],
+            "synthesis": [
+                "L12"
+            ],
+            "reflect": [
+                "L18",
+                "M"
+            ],
+            "magicalleaf": [
+                "L22",
+                "T"
+            ],
+            "leechseed": [
+                "L26"
+            ],
+            "petaldance": [
+                "L30"
+            ],
+            "sweetscent": [
+                "L34"
+            ],
+            "lightscreen": [
+                "L40",
+                "M"
+            ],
+            "moonblast": [
+                "L43",
+                "T"
+            ],
+            "bodyslam": [
+                "L46",
+                "T"
+            ],
+            "floralhealing": [
+                "L49",
+                "T"
+            ],
+            "safeguard": [
+                "L54"
+            ],
+            "gigadrain": [
+                "L58",
+                "M"
+            ],
+            "solarbeam": [
+                "L64",
+                "M"
+            ],
+            "fleurcannon": [
+                "L79",
+                "T"
+            ],
+            "alluringvoice": [
+                "M"
+            ],
+            "bulldoze": [
+                "M"
+            ],
+            "bulletseed": [
+                "M"
+            ],
+            "charm": [
+                "M"
+            ],
+            "earthquake": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "grassknot": [
+                "M"
+            ],
+            "hyperbeam": [
+                "M"
+            ],
+            "rest": [
+                "M"
+            ],
+            "seedbomb": [
+                "M"
+            ],
+            "trailblaze": [
+                "M"
+            ],
+            "zenheadbutt": [
+                "M"
+            ],
+            "bodypress": [
+                "T"
+            ],
+            "curse": [
+                "T"
+            ],
+            "dragontail": [
+                "T"
+            ],
+            "encore": [
+                "T"
+            ],
+            "endeavor": [
+                "T"
+            ],
+            "energyball": [
+                "T"
+            ],
+            "faketears": [
+                "T"
+            ],
+            "frenzyplant": [
+                "T"
+            ],
+            "gigaimpact": [
+                "T"
+            ],
+            "grassyglide": [
+                "T"
+            ],
+            "grassyterrain": [
+                "T"
+            ],
+            "grasspledge": [
+                "T"
+            ],
+            "helpinghand": [
+                "T"
+            ],
+            "knockoff": [
+                "T"
+            ],
+            "leafstorm": [
+                "T"
+            ],
+            "leaftornado": [
+                "T"
+            ],
+            "outrage": [
+                "T"
+            ],
+            "protect": [
+                "T"
+            ],
+            "solarblade": [
+                "T"
+            ],
+            "stompingtantrum": [
+                "T"
+            ],
+            "sunnyday": [
+                "T"
+            ],
+            "takedown": [
+                "T"
+            ],
+            "weatherball": [
+                "T"
+            ],
+            "doubleedge": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "mudslap": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "substitute": [
+                "T"
+            ],
+            "swordsdance": [
+                "T"
+            ]
+        }
+    },
+    "meganiummega": {
         "learnset": {
             "pixiedrain": [
                 "L0"
@@ -47917,7 +48769,7 @@ exports.BattleLearnsets = {
             ]
         }
     },
-    "feraligatrbase": {
+    "feraligatrmega": {
         "learnset": {
             "waterfangs": [
                 "L0"
@@ -129706,7 +130558,7 @@ exports.BattleLearnsets = {
             ]
         }
     },
-    "darmanitandarmanitangalarianstandardmode": {
+    "darmanitangalar": {
         "learnset": {
             "iciclecrash": [
                 "L0"
@@ -150359,6 +151211,278 @@ exports.BattleLearnsets = {
             ]
         }
     },
+    "chesnaughtmega": {
+        "learnset": {
+            "spikyshield": [
+                "L0"
+            ],
+            "feint": [
+                "L1"
+            ],
+            "hammerarm": [
+                "L1"
+            ],
+            "growl": [
+                "L1"
+            ],
+            "rollout": [
+                "L1"
+            ],
+            "tackle": [
+                "L1"
+            ],
+            "vinewhip": [
+                "L1"
+            ],
+            "bite": [
+                "L11"
+            ],
+            "leechseed": [
+                "L15"
+            ],
+            "pinmissile": [
+                "L19"
+            ],
+            "takedown": [
+                "L29",
+                "T"
+            ],
+            "seedbomb": [
+                "L35",
+                "M"
+            ],
+            "mudshot": [
+                "L41",
+                "T"
+            ],
+            "bulkup": [
+                "L48",
+                "T"
+            ],
+            "bodyslam": [
+                "L54",
+                "T"
+            ],
+            "painsplit": [
+                "L60",
+                "T"
+            ],
+            "woodhammer": [
+                "L66"
+            ],
+            "gigaimpact": [
+                "L78",
+                "T"
+            ],
+            "aerialace": [
+                "M"
+            ],
+            "brickbreak": [
+                "M"
+            ],
+            "bulldoze": [
+                "M"
+            ],
+            "bulletseed": [
+                "M"
+            ],
+            "closecombat": [
+                "M"
+            ],
+            "coaching": [
+                "M"
+            ],
+            "crunch": [
+                "M"
+            ],
+            "dig": [
+                "M"
+            ],
+            "dragonclaw": [
+                "M"
+            ],
+            "earthquake": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "focusblast": [
+                "M"
+            ],
+            "focuspunch": [
+                "M"
+            ],
+            "gigadrain": [
+                "M"
+            ],
+            "grassknot": [
+                "M"
+            ],
+            "highhorsepower": [
+                "M"
+            ],
+            "hyperbeam": [
+                "M"
+            ],
+            "ironhead": [
+                "M"
+            ],
+            "poisonjab": [
+                "M"
+            ],
+            "reflect": [
+                "M"
+            ],
+            "rest": [
+                "M"
+            ],
+            "roar": [
+                "M"
+            ],
+            "rocksmash": [
+                "M"
+            ],
+            "rocktomb": [
+                "M"
+            ],
+            "solarbeam": [
+                "M"
+            ],
+            "stoneedge": [
+                "M"
+            ],
+            "strength": [
+                "M"
+            ],
+            "taunt": [
+                "M"
+            ],
+            "trailblaze": [
+                "M"
+            ],
+            "zenheadbutt": [
+                "M"
+            ],
+            "bodypress": [
+                "T"
+            ],
+            "curse": [
+                "T"
+            ],
+            "drainpunch": [
+                "T"
+            ],
+            "endeavor": [
+                "T"
+            ],
+            "energyball": [
+                "T"
+            ],
+            "fling": [
+                "T"
+            ],
+            "frenzyplant": [
+                "T"
+            ],
+            "grassyglide": [
+                "T"
+            ],
+            "grassyterrain": [
+                "T"
+            ],
+            "grasspledge": [
+                "T"
+            ],
+            "gyroball": [
+                "T"
+            ],
+            "heavyslam": [
+                "T"
+            ],
+            "helpinghand": [
+                "T"
+            ],
+            "irondefense": [
+                "T"
+            ],
+            "knockoff": [
+                "T"
+            ],
+            "leafstorm": [
+                "T"
+            ],
+            "lowkick": [
+                "T"
+            ],
+            "lowsweep": [
+                "T"
+            ],
+            "magicalleaf": [
+                "T"
+            ],
+            "metalclaw": [
+                "T"
+            ],
+            "protect": [
+                "T"
+            ],
+            "raindance": [
+                "T"
+            ],
+            "reversal": [
+                "T"
+            ],
+            "scaryface": [
+                "T"
+            ],
+            "shadowclaw": [
+                "T"
+            ],
+            "smackdown": [
+                "T"
+            ],
+            "spikes": [
+                "T"
+            ],
+            "stompingtantrum": [
+                "T"
+            ],
+            "sunnyday": [
+                "T"
+            ],
+            "superfang": [
+                "T"
+            ],
+            "doubleedge": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "mudslap": [
+                "T"
+            ],
+            "rockslide": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "substitute": [
+                "T"
+            ],
+            "swift": [
+                "T"
+            ],
+            "swordsdance": [
+                "T"
+            ],
+            "thunderpunch": [
+                "T"
+            ]
+        }
+    },
     "fennekin": {
         "learnset": {
             "scratch": [
@@ -150673,6 +151797,238 @@ exports.BattleLearnsets = {
         }
     },
     "delphox": {
+        "learnset": {
+            "mysticalfire": [
+                "L0"
+            ],
+            "switcheroo": [
+                "L1"
+            ],
+            "howl": [
+                "L1"
+            ],
+            "roleplay": [
+                "L1"
+            ],
+            "futuresight": [
+                "L1",
+                "T"
+            ],
+            "shadowball": [
+                "L1",
+                "M"
+            ],
+            "scratch": [
+                "L1"
+            ],
+            "ember": [
+                "L1"
+            ],
+            "tailwhip": [
+                "L1"
+            ],
+            "flamecharge": [
+                "L14",
+                "T"
+            ],
+            "psybeam": [
+                "L18",
+                "T"
+            ],
+            "firespin": [
+                "L22",
+                "T"
+            ],
+            "lightscreen": [
+                "L28",
+                "M"
+            ],
+            "psyshock": [
+                "L38",
+                "M"
+            ],
+            "flamethrower": [
+                "L45",
+                "M"
+            ],
+            "willowisp": [
+                "L51",
+                "T"
+            ],
+            "psychic": [
+                "L57",
+                "M"
+            ],
+            "sunnyday": [
+                "L62",
+                "T"
+            ],
+            "magicroom": [
+                "L68"
+            ],
+            "fireblast": [
+                "L74",
+                "M"
+            ],
+            "agility": [
+                "M"
+            ],
+            "burningjealousy": [
+                "M"
+            ],
+            "calmmind": [
+                "M"
+            ],
+            "charm": [
+                "M"
+            ],
+            "dazzlinggleam": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "focusblast": [
+                "M"
+            ],
+            "grassknot": [
+                "M"
+            ],
+            "hyperbeam": [
+                "M"
+            ],
+            "overheat": [
+                "M"
+            ],
+            "psychicnoise": [
+                "M"
+            ],
+            "reflect": [
+                "M"
+            ],
+            "rest": [
+                "M"
+            ],
+            "scorchingsands": [
+                "M"
+            ],
+            "skillswap": [
+                "M"
+            ],
+            "solarbeam": [
+                "M"
+            ],
+            "thief": [
+                "M"
+            ],
+            "zenheadbutt": [
+                "M"
+            ],
+            "blastburn": [
+                "T"
+            ],
+            "confuseray": [
+                "T"
+            ],
+            "encore": [
+                "T"
+            ],
+            "expandingforce": [
+                "T"
+            ],
+            "firepledge": [
+                "T"
+            ],
+            "flareblitz": [
+                "T"
+            ],
+            "foulplay": [
+                "T"
+            ],
+            "gigaimpact": [
+                "T"
+            ],
+            "heatwave": [
+                "T"
+            ],
+            "helpinghand": [
+                "T"
+            ],
+            "hex": [
+                "T"
+            ],
+            "hypervoice": [
+                "T"
+            ],
+            "imprison": [
+                "T"
+            ],
+            "lowkick": [
+                "T"
+            ],
+            "moonblast": [
+                "T"
+            ],
+            "mudshot": [
+                "T"
+            ],
+            "nastyplot": [
+                "T"
+            ],
+            "nightshade": [
+                "T"
+            ],
+            "protect": [
+                "T"
+            ],
+            "psychicterrain": [
+                "T"
+            ],
+            "raindance": [
+                "T"
+            ],
+            "storedpower": [
+                "T"
+            ],
+            "takedown": [
+                "T"
+            ],
+            "trick": [
+                "T"
+            ],
+            "trickroom": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "firepunch": [
+                "T"
+            ],
+            "metronome": [
+                "T"
+            ],
+            "mudslap": [
+                "T"
+            ],
+            "psychup": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "substitute": [
+                "T"
+            ],
+            "swift": [
+                "T"
+            ],
+            "thunderpunch": [
+                "T"
+            ]
+        }
+    },
+    "delphoxmega": {
         "learnset": {
             "mysticalfire": [
                 "L0"
@@ -193160,7 +194516,7 @@ exports.BattleLearnsets = {
             ]
         }
     },
-    "toxtricitygigantamax": {
+    "toxtricityampedgigantamax": {
         "learnset": {
             "spark": [
                 "L0"
@@ -193618,7 +194974,7 @@ exports.BattleLearnsets = {
             ]
         }
     },
-    "toxtricitytoxtricitylowkeygigantamax": {
+    "toxtricitylowkeygigantamax": {
         "learnset": {
             "spark": [
                 "L0"
@@ -201262,7 +202618,7 @@ exports.BattleLearnsets = {
             ]
         }
     },
-    "urshifugigantamax": {
+    "urshifusinglestrikegigantamax": {
         "learnset": {
             "wickedblow": [
                 "L0"
@@ -223863,7 +225219,7 @@ exports.BattleLearnsets = {
             ]
         }
     },
-    "terapagosterapagosstellar": {
+    "terapagosstellar": {
         "learnset": {
             "withdraw": [
                 "L1"

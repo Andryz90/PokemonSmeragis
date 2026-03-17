@@ -7,6 +7,7 @@ from typing import Dict, List, Tuple, Optional
 
 
 _DEFINE_RE = re.compile(r'^\s*#\s*define\s+(SPECIES_[A-Z0-9_]+)\s+(.+?)\s*(?:/\*.*\*/)?$')
+_EXPR_TOKEN_RE = re.compile(r'\s*(SPECIES_[A-Z0-9_]+|0x[0-9A-Fa-f]+[uUlL]*|\d+[uUlL]*|[()+-])')
 
 
 def _strip_c_comments(s: str) -> str:
@@ -14,6 +15,87 @@ def _strip_c_comments(s: str) -> str:
     s = re.sub(r'/\*.*?\*/', '', s, flags=re.S)
     s = re.sub(r'//.*', '', s)
     return s
+
+
+def _strip_int_suffix(tok: str) -> str:
+    return re.sub(r'[uUlL]+$', '', tok)
+
+
+def _tokenize_species_expr(expr: str) -> list[str] | None:
+    expr = expr.strip()
+    if not expr:
+        return None
+    tokens: list[str] = []
+    pos = 0
+    while pos < len(expr):
+        m = _EXPR_TOKEN_RE.match(expr, pos)
+        if not m:
+            return None
+        tok = m.group(1)
+        tokens.append(tok)
+        pos = m.end()
+    return tokens
+
+
+def _eval_species_expr(expr: str, resolve_token) -> int | None:
+    tokens = _tokenize_species_expr(expr)
+    if not tokens:
+        return None
+
+    pos = 0
+
+    def parse_expr() -> int | None:
+        nonlocal pos
+        lhs = parse_term()
+        if lhs is None:
+            return None
+        while pos < len(tokens) and tokens[pos] in ('+', '-'):
+            op = tokens[pos]
+            pos += 1
+            rhs = parse_term()
+            if rhs is None:
+                return None
+            lhs = lhs + rhs if op == '+' else lhs - rhs
+        return lhs
+
+    def parse_term() -> int | None:
+        nonlocal pos
+        if pos >= len(tokens):
+            return None
+
+        tok = tokens[pos]
+        if tok in ('+', '-'):
+            pos += 1
+            inner = parse_term()
+            if inner is None:
+                return None
+            return inner if tok == '+' else -inner
+
+        if tok == '(':
+            pos += 1
+            val = parse_expr()
+            if val is None or pos >= len(tokens) or tokens[pos] != ')':
+                return None
+            pos += 1
+            return val
+
+        pos += 1
+        if tok.startswith('SPECIES_'):
+            return resolve_token(tok)
+        if tok.lower().startswith('0x'):
+            try:
+                return int(_strip_int_suffix(tok), 16)
+            except ValueError:
+                return None
+        try:
+            return int(_strip_int_suffix(tok), 10)
+        except ValueError:
+            return None
+
+    out = parse_expr()
+    if out is None or pos != len(tokens):
+        return None
+    return out
 
 
 def load_species_defines(species_h: str | Path) -> Tuple[Dict[str, int], Dict[int, List[str]]]:
@@ -34,8 +116,6 @@ def load_species_defines(species_h: str | Path) -> Tuple[Dict[str, int], Dict[in
         rhs = _strip_c_comments(rhs).strip()
         if not rhs:
             continue
-        # Only keep the first token/number on the rhs to avoid weird macro tails
-        rhs = rhs.split()[0]
         token_to_rhs[tok] = rhs
 
     resolving: Dict[str, int] = {}
@@ -52,28 +132,12 @@ def load_species_defines(species_h: str | Path) -> Tuple[Dict[str, int], Dict[in
         if rhs is None:
             stack.pop()
             return None
-        if rhs.isdigit():
-            val = int(rhs, 10)
+
+        val = _eval_species_expr(rhs, lambda sym: resolve(sym, stack))
+        if val is not None:
             resolving[tok] = val
-            stack.pop()
-            return val
-        if rhs.startswith('0x') or rhs.startswith('0X'):
-            try:
-                val = int(rhs, 16)
-            except ValueError:
-                stack.pop()
-                return None
-            resolving[tok] = val
-            stack.pop()
-            return val
-        if rhs.startswith('SPECIES_'):
-            val = resolve(rhs, stack)
-            if val is not None:
-                resolving[tok] = val
-            stack.pop()
-            return val
         stack.pop()
-        return None
+        return val
 
     token_to_id: Dict[str, int] = {}
     id_to_tokens: Dict[int, List[str]] = {}

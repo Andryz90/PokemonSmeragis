@@ -18,8 +18,9 @@ a img {
     margin: 0 auto;
 }
 .header-inner {
-    max-width: 565px;
+    max-width: 900px;
     margin: 0 auto;
+    position: relative;
 }
 .nav, .nav li, .nav-play, .nav-play li {
     display: block;
@@ -32,10 +33,41 @@ a img {
     padding: 15px 6px 15px 6px;
 }
 .header .nav {
-    padding: 15px 0 15px 155px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    float: none;
+}
+.calc-brand {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    line-height: 0;
+}
+.calc-brand img {
+    display: block;
+    height: 36px;
+    width: auto;
+}
+.calc-brand + .nav {
+    margin: 0 auto;
 }
 .header .nav-play {
     padding: 15px 0 15px 10px;
+}
+@media (max-width: 760px) {
+    .calc-brand {
+        position: static;
+        transform: none;
+        width: max-content;
+        margin: 12px auto 0;
+    }
+    .calc-brand + .nav {
+        padding-top: 10px;
+    }
 }
 .nav .button {
     position: relative;
@@ -164,6 +196,13 @@ html, body {
 .trainer-pok:hover {
     outline: 2px solid;
     outline-color: #1abc9c;
+}
+
+.trainer-pok-active {
+    outline: 2px solid #1abc9c;
+    outline-offset: 1px;
+    background: rgba(26, 188, 156, 0.12);
+    border-radius: 6px;
 }
 
 .wrapper {

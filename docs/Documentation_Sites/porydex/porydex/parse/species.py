@@ -10,6 +10,7 @@ from yaspin import yaspin
 from porydex.common import name_key
 from porydex.model import ExpansionEvoMethod, DAMAGE_TYPE, EGG_GROUP, BODY_COLOR, EVO_METHOD
 from porydex.parse import load_truncated, extract_id, extract_int, extract_u8_str
+from porydex.parse.form_tables import load_species_defines
 
 _RHH_EVO_METHOD_BY_NAME: dict[str, int] = {
     # constants/pokemon.h enum EvolutionMethods order in RHH 1.12
@@ -147,18 +148,17 @@ def _safe_read_text(path: pathlib.Path) -> str | None:
 def _load_species_id_to_symbol(species_header: pathlib.Path) -> dict[int, str]:
     """Parse include/constants/species.h (or equivalent) to build {id: SYMBOL}.
 
-    We only keep numeric definitions (aliases are skipped).
+    Supports arithmetic chains like `(SPECIES_X + 1)`.
+    Keeps the first symbol encountered for each resolved id.
     """
-    text = _safe_read_text(species_header)
-    if not text:
+    try:
+        token_to_id, _ = load_species_defines(species_header)
+    except Exception:
         return {}
 
     out: dict[int, str] = {}
-    # e.g. #define SPECIES_GRENINJA 658
-    for m in re.finditer(r'^\s*#define\s+(SPECIES_[A-Z0-9_]+)\s+([0-9]+)\s*$', text, flags=re.M):
-        sym = m.group(1)
-        sid = int(m.group(2))
-        out[sid] = sym.removeprefix('SPECIES_')
+    for sym, sid in token_to_id.items():
+        out.setdefault(sid, sym.removeprefix('SPECIES_'))
     return out
 
 
@@ -522,6 +522,11 @@ def parse_mon(struct_init: NamedInitializer,
                 # Defer: RHH 1.12 changed how form tables are represented.
                 # We'll resolve these tables after the first parsing pass.
                 mon['_formTableId'] = extract_id(field_expr)
+            case 'isMegaEvolution':
+                try:
+                    mon['_isMegaEvolution'] = bool(extract_int(field_expr))
+                except Exception:
+                    pass
             case 'evolutions':
 
                 # general schema from RHH 1.12: {method_id, method_param, target_species, optional CONDITIONS(...)}
@@ -1010,6 +1015,46 @@ def parse_species_data(species_data: ExprList,
 
         _apply_form_table_to_group(base_mon.get('name', ''), mons_sorted, labels)
 
+    # Some custom megas can be defined without form tables and reuse the base speciesName.
+    # Give them an explicit forme name so they don't overwrite the base entry later.
+    name_buckets: dict[str, list[dict]] = defaultdict(list)
+    for mon, _ in all_species_data.values():
+        nm = mon.get('name')
+        if nm:
+            name_buckets[nm].append(mon)
+
+    for base_name, mons in name_buckets.items():
+        if len(mons) < 2:
+            continue
+
+        base_sym = ''
+        for m in mons:
+            if not m.get('_isMegaEvolution'):
+                base_sym = species_id_to_symbol.get(m['num'], '')
+                if base_sym:
+                    break
+
+        for m in mons:
+            if not m.get('_isMegaEvolution'):
+                continue
+            if '-' in m.get('name', ''):
+                continue
+
+            sym = species_id_to_symbol.get(m['num'], '')
+            suffix = 'Mega'
+            if base_sym and sym.startswith(base_sym + '_'):
+                maybe = _pretty_forme_from_symbol_suffix(base_name, sym[len(base_sym) + 1:])
+                if maybe and maybe != 'Base':
+                    suffix = maybe
+            elif '_MEGA' in sym:
+                maybe = _pretty_forme_from_symbol_suffix(base_name, sym.split('_', 1)[1])
+                if maybe and maybe != 'Base':
+                    suffix = maybe
+
+            m['baseSpecies'] = base_name
+            m['forme'] = suffix
+            m['name'] = f'{base_name}-{suffix}'
+
     # Now that form names are stable, build learnsets and do cosmetic/special cleanup
     all_learnsets: dict[str, dict] = {}
     for num in list(all_species_data.keys()):
@@ -1089,6 +1134,7 @@ def parse_species_data(species_data: ExprList,
         if 'name' not in mon or not mon['name']: # egg has no name; don't try
             continue
 
+        mon.pop('_isMegaEvolution', None)
         if included_mons:
             mon['tier'] = 'obtainable' if mon['name'] in included_mons else 'unobtainable'
 
