@@ -522,7 +522,7 @@ exports.BattleMovedex = {
         "basePower": 0,
         "type": "Ground",
         "accuracy": 100,
-        "pp": 15,
+        "pp": 1,
         "priority": 0,
         "category": "Status",
         "contestType": "Cute"
@@ -1857,7 +1857,7 @@ exports.BattleMovedex = {
         "basePower": 0,
         "type": "Normal",
         "accuracy": true,
-        "pp": 15,
+        "pp": 1,
         "priority": 0,
         "category": "Status",
         "contestType": "Cool"
@@ -1905,7 +1905,7 @@ exports.BattleMovedex = {
         "basePower": 0,
         "type": "Normal",
         "accuracy": true,
-        "pp": 10,
+        "pp": 1,
         "priority": 0,
         "category": "Status",
         "contestType": "Cute"
@@ -1923,7 +1923,7 @@ exports.BattleMovedex = {
         "basePower": 0,
         "type": "Normal",
         "accuracy": 100,
-        "pp": 20,
+        "pp": 1,
         "priority": 0,
         "category": "Status",
         "contestType": "Smart"
@@ -2363,7 +2363,7 @@ exports.BattleMovedex = {
         "basePower": 0,
         "type": "Psychic",
         "accuracy": 80,
-        "pp": 15,
+        "pp": 1,
         "priority": 0,
         "category": "Status",
         "contestType": "Smart"
@@ -2610,7 +2610,7 @@ exports.BattleMovedex = {
         "basePower": 50,
         "type": "Electric",
         "accuracy": 100,
-        "pp": 20,
+        "pp": 5,
         "priority": 0,
         "category": "Special",
         "contestType": "Beauty"
@@ -3321,7 +3321,7 @@ exports.BattleMovedex = {
         "basePower": 20,
         "type": "Ground",
         "accuracy": 100,
-        "pp": 10,
+        "pp": 5,
         "priority": 0,
         "category": "Special",
         "contestType": "Cute"

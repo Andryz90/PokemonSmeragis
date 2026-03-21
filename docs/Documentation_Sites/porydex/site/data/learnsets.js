@@ -64398,6 +64398,9 @@ exports.BattleLearnsets = {
             "trailblaze": [
                 "M"
             ],
+            "bodypress": [
+                "T"
+            ],
             "chargebeam": [
                 "T"
             ],

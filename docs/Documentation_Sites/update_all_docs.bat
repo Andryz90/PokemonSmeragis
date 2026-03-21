@@ -100,8 +100,18 @@ popd
 
 echo [2/9] Sync wild encounters header (wild_encounters.json ^> wild_encounters.h)
 pushd "%REPO_ROOT%" || goto :fail
-call %PY_CMD% tools\wild_encounters\wild_encounters_to_header.py
+set "WILD_ENCOUNTERS_HEADER=%REPO_ROOT%\src\data\wild_encounters.h"
+set "WILD_ENCOUNTERS_TMP=%WILD_ENCOUNTERS_HEADER%.tmp"
+if exist "%WILD_ENCOUNTERS_TMP%" del /f /q "%WILD_ENCOUNTERS_TMP%" >nul 2>&1
+call %PY_CMD% tools\wild_encounters\wild_encounters_to_header.py > "%WILD_ENCOUNTERS_TMP%"
 if errorlevel 1 (
+    if exist "%WILD_ENCOUNTERS_TMP%" del /f /q "%WILD_ENCOUNTERS_TMP%" >nul 2>&1
+    popd
+    goto :fail
+)
+move /y "%WILD_ENCOUNTERS_TMP%" "%WILD_ENCOUNTERS_HEADER%" >nul
+if errorlevel 1 (
+    if exist "%WILD_ENCOUNTERS_TMP%" del /f /q "%WILD_ENCOUNTERS_TMP%" >nul 2>&1
     popd
     goto :fail
 )

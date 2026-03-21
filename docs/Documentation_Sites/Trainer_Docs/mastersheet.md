@@ -141,7 +141,7 @@ Bibarel @Mystic Water: Waterfall, Aqua Jet, Swords Dance, Double-Edge [Lv.1 | Si
 ## Fisherman ANDREW
 Gastrodon-East @Rindo Berry: Rain Dance, Recover, Stealth Rock, Muddy Water [Lv.1 | Storm Drain | Calm Nature]  
 Octillery @Bright Powder: Protect, Substitute, Octazooka, Sludge Wave [Lv.1 | Moody]  
-Wishiwashi @Sitrus Berry: Flip Turn, Liquidation, Earthquake, Scale Shot [Lv.1 | Schooling | Tera: Water]  
+Wishiwashi @Sitrus Berry: Flip Turn, Liquidation, Earthquake, Scale Shot [Lv.1 | Schooling]  
 Mantine: Rain Dance, Hurricane, Hydro Pump, Haze [Lv.1 | Swift Swim | Modest Nature]  
 
 ## Bird Keeper BENNY
@@ -998,31 +998,10 @@ Marill:  [Lv.26]
 ## Tuber M CHARLIE
 Marill:  [Lv.26]  
 
-## Cooltrainer RANDALL
-Swellow: Quick Attack, Agility, Wing Attack [Lv.26]  
-
-## Cooltrainer PARKER
-Spinda: Teeter Dance, Dizzy Punch, Focus Punch [Lv.26]  
-
-## Cooltrainer GEORGE
-Slakoth @Sitrus Berry: Slack Off, Counter, Shadow Ball [Lv.26]  
-
-## Cooltrainer BERKE
-Vigoroth: Focus Energy, Slash [Lv.26]  
-
 ## Cooltrainer WILTON
 Electrike:  [Lv.26]  
 Wailmer:  [Lv.26]  
 Makuhita:  [Lv.26]  
-
-## Cooltrainer MARY
-Delcatty: Feint Attack, Shock Wave [Lv.26]  
-
-## Cooltrainer ALEXIA
-Wigglytuff: Defense Curl, Double Edge, Shadow Ball [Lv.26]  
-
-## Cooltrainer JODY
-Zangoose: Swords Dance, Slash [Lv.26]  
 
 ## Cooltrainer BROOKE
 Wingull:  [Lv.26]  
@@ -3796,6 +3775,22 @@ Kingdra @Chesto Berry: Water Pulse, Double Team, Ice Beam, Rest [Lv.51]
 Kabutops @Expert Belt: Aqua Cutter, Ceaseless Edge, Stone Axe [Lv.52 | Sharpness]  
 Omastar @Rindo Berry: Meteor Beam, Muddy Water, Earth Power, Protect [Lv.52 | Solid Rock | Modest Nature]  
 
+## Cooltrainer RANDALL
+Dudunsparce @Rocky Helmet: Pursuit, Coil, Body Slam, Roost [Lv.51 | Serene Grace | Adamant Nature]  
+Raticate-Alola @Wide Lens: Pursuit, Return, U-turn, Sucker Punch [Lv.51 | Hustle | Brave Nature]  
+Fearow @Scope Lens: Pursuit, Drill Peck, Facade, Drill Run [Lv.51 | Sniper | Jolly Nature]  
+Gumshoos @Choice Band: Pursuit, Double-Edge [Lv.52 | Stakeout | Adamant Nature]  
+Gothitelle @Leftovers: Nasty Plot, Protect, Psychic Noise, Shadow Ball [Lv.51 | Shadow Tag | Modest Nature]  
+Azurill @Focus Sash: Perish Song, Whirlpool [Lv.1 | Sap Sipper]  
+
+## Cooltrainer MARY
+Bouffalant @Focus Sash: Double Team, Work Up, Smart Strike, Head Charge [Lv.51 | Reckless]  
+Clefable @Life Orb: Minimize, Moonblast, Moonlight, Mystical Fire [Lv.51 | Magic Guard | Modest Nature]  
+Wigglytuff @Focus Band: Minimize, Mud-Slap, Return, Play Rough [Lv.51 | Cute Charm | Jolly Nature]  
+Exploud @Bright Powder: Double Team, Smokescreen, Hyper Voice, Ice Beam [Lv.51 | Soundproof | Modest Nature]  
+Dodrio @Muscle Band: Acupressure, Substitute, Return, Brave Bird [Lv.51 | Tangled Feet]  
+Bibarel @Enigma Berry: Double Team, Swords Dance, Aqua Jet, Facade [Lv.52 | Simple]  
+
 ## Old Couple JOHN & JAY [Double Battle]
 Medicham: Psychic, Fire Punch, Psych Up, Protect [Lv.52]  
 Hariyama: Focus Punch, Rock Tomb, Rest, Belly Drum [Lv.52]  
@@ -3816,12 +3811,44 @@ Medicham: Focus Punch, Light Screen, Reflect, Psychic [Lv.48]
 Hitmontop: Pursuit, Counter, Protect, Triple Kick [Lv.50]  
 Hariyama @Sitrus Berry: Fake Out, Focus Punch, Belly Drum, Earthquake [Lv.52]  
 
+## Cooltrainer PARKER
+Blissey @Leftovers: Metronome [Lv.53 | Natural Cure | Calm Nature]  
+Grafaiai @Metronome: Metronome [Lv.52 | Prankster | Adamant Nature]  
+Slaking @Rocky Helmet: Metronome [Lv.53 | Truant | Adamant Nature]  
+Meloetta @Metronome: Metronome [Lv.52 | Serene Grace | Modest Nature]  
+Wigglytuff @Metronome: Metronome [Lv.52 | Cute Charm | Modest Nature]  
+Miltank @Metronome: Metronome [Lv.53 | Scrappy | Impish Nature]  
+
+## Cooltrainer GEORGE
+Braviary @Life Orb: Close Combat, Roost, Double-Edge, Brave Bird [Lv.52 | Sheer Force | Adamant Nature]  
+Blissey @Leftovers: Thunder Wave, Soft-Boiled, Seismic Toss, Hyper Voice [Lv.52 | Natural Cure | Calm Nature]  
+Drampa @Sitrus Berry: Hyper Voice, Dragon Pulse, Roost, Thunderbolt [Lv.52 | Berserk | Modest Nature]  
+Audino @Leftovers: Wish, Protect, Dazzling Gleam, Hyper Voice [Lv.52 | Regenerator | Bold Nature]  
+Dunsparce @Eviolite: Roost, Body Slam, Earthquake, Coil [Lv.52 | Serene Grace]  
+Arboliva @Sitrus Berry: Substitute, Protect, Leech Seed, Hyper Voice [Lv.53 | Harvest]  
+
+## Cooltrainer ALEXIA
+Dubwool @Leftovers: Body Press, Cotton Guard, Facade, Zen Headbutt [Lv.52 | Fluffy]  
+Type: Null @Eviolite: Return, Shadow Claw, Sleep Talk, Rest [Lv.52 | Battle Armor | Impish Nature]  
+Bewear @Leftovers: Swords Dance, Drain Punch, Facade, Shadow Claw [Lv.52 | Fluffy | Adamant Nature]  
+Furfrou @Leftovers: Return, Last Resort [Lv.52 | Fur Coat | Adamant Nature]  
+Wyrdeer @Leftovers: Psyshield Bash, Body Press, Body Slam, Earthquake [Lv.52 | Intimidate | Lax Nature]  
+Oinkologne-F @Kee Berry: Stuff Cheeks, Body Press, Facade, High Horsepower [Lv.53 | Thick Fat | Impish Nature]  
+
 ## Elite Four GLACIA
 Sealeo: Encore, Body Slam, Hail, Ice Ball [Lv.50]  
 Glalie: Light Screen, Crunch, Icy Wind, Ice Beam [Lv.50]  
 Sealeo: Attract, Double Edge, Hail, Blizzard [Lv.52]  
 Glalie: Shadow Ball, Explosion, Hail, Ice Beam [Lv.52]  
 Walrein @Sitrus Berry: Surf, Body Slam, Ice Beam, Sheer Cold [Lv.53]  
+
+## Cooltrainer JODY
+Ursaluna @Flame Orb: Protect, Facade, Headlong Rush, Thunder Punch [Lv.52 | Guts | Adamant Nature]  
+Maushold-Four @Wide Lens: Tidy Up, Population Bomb, Taunt [Lv.54 | Technician | Adamant Nature]  
+Staraptor @Choice Band: Brave Bird, Double-Edge, U-turn, Close Combat [Lv.54 | Reckless | Adamant Nature]  
+Porygon-Z @Expert Belt: Tri Attack, Ice Beam, Shadow Ball, Thunderbolt [Lv.54 | Adaptability | Modest Nature]  
+Kecleon @Life Orb: Facade, Seed Bomb, Shadow Ball, Sucker Punch [Lv.52 | Protean | Adamant Nature]  
+Chatot @Choice Specs: Boomburst, Chatter [Lv.52 | Punk Rock | Modest Nature]  
 
 ## Rival WALLY
 Altaria: Aerial Ace, Safeguard, Dragon Breath, Dragon Dance [Lv.53]  
@@ -3883,6 +3910,14 @@ Claydol: Earthquake, Explosion, Psychic, Light Screen [Lv.54]
 Xatu @Chesto Berry: Psychic, Rest, Confuse Ray, Calm Mind [Lv.54]  
 Lunatone @Chesto Berry: Earthquake, Psychic, Rest, Calm Mind [Lv.55]  
 Solrock @Sitrus Berry: Sunny Day, Solar Beam, Psychic, Flamethrower [Lv.55]  
+
+## Cooltrainer BERKE
+Smeargle @Focus Band: Fissure, Sheer Cold, Guillotine, Fake Out [Lv.56 | Moody]  
+Liepard @Focus Band: Assist [Lv.56 | Prankster | Gentle Nature]  
+Delcatty @Focus Band: Assist [Lv.56 | Cute Charm | Jolly Nature]  
+Meowstic @Focus Band: Assist [Lv.56 | Prankster | Calm Nature]  
+Persian-Alola @Leftovers: Assist [Lv.56 | Fur Coat | Bold Nature]  
+Purugly @Focus Band: Assist [Lv.56 | Thick Fat | Impish Nature]  
 
 ## Leader JUAN [Double Battle]
 Poliwhirl: Hypnosis, Rain Dance, Protect, Hydro Pump [Lv.50]  
