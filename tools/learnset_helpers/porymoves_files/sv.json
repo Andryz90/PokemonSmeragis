@@ -76205,6 +76205,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_BODY_PRESS",
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
       "MOVE_SCARY_FACE",

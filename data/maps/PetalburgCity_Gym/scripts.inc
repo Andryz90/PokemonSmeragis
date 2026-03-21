@@ -6,9 +6,16 @@ PetalburgCity_Gym_MapScripts::
 	.byte 0
 
 PetalburgCity_Gym_OnLoad:
+	call_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_ResetPathChoice
+	call_if_ge VAR_PETALBURG_GYM_STATE, 7, PetalburgCity_Gym_EventScript_ResetPathChoice
 	goto_if_eq VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_OpenUnlockedDoors
 	call_if_ge VAR_PETALBURG_GYM_STATE, 7, PetalburgCity_Gym_EventScript_UnlockAllDoors
 	end
+
+PetalburgCity_Gym_EventScript_ResetPathChoice::
+	clearflag FLAG_NORMAN_GYM_PATH
+	clearflag FLAG_NORMAN_GYM_PATH_LOCKED
+	return
 
 @ NOTE: Strength and OHKO rooms are misleading. Both are more accurately Critical-Hit
 PetalburgCity_Gym_EventScript_OpenUnlockedDoors::
@@ -21,6 +28,7 @@ PetalburgCity_Gym_EventScript_OpenUnlockedDoors::
 	call_if_defeated TRAINER_GEORGE, PetalburgCity_Gym_EventScript_OpenRecoveryRoomDoors
 	call_if_defeated TRAINER_JODY, PetalburgCity_Gym_EventScript_OpenStrengthRoomDoors
 	call_if_defeated TRAINER_BERKE, PetalburgCity_Gym_EventScript_OpenOHKORoomDoors
+	call PetalburgCity_Gym_EventScript_OpenRigidPathDoorMetatilesIfNeeded
 	end
 
 PetalburgCity_Gym_EventScript_UnlockAllDoors::
@@ -33,6 +41,7 @@ PetalburgCity_Gym_EventScript_UnlockAllDoors::
 	call PetalburgCity_Gym_EventScript_OpenRecoveryRoomDoors
 	call PetalburgCity_Gym_EventScript_OpenStrengthRoomDoors
 	call PetalburgCity_Gym_EventScript_OpenOHKORoomDoors
+	call PetalburgCity_Gym_EventScript_OpenRigidPathDoorMetatilesIfNeeded
 	return
 
 PetalburgCity_Gym_OnTransition:
@@ -376,6 +385,8 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	msgbox PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_PETALBURG_GYM
 	setvar VAR_PETALBURG_GYM_STATE, 7
+	clearflag FLAG_NORMAN_GYM_PATH
+	clearflag FLAG_NORMAN_GYM_PATH_LOCKED
 	setflag FLAG_BADGE05_GET
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
@@ -733,12 +744,31 @@ PetalburgCity_Gym_EventScript_NoAmountOfTrainingIsEnough::
 PetalburgCity_Gym_EventScript_SpeedRoomDoor::
 	lockall
 	goto_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_DoorLocked
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_ChooseSpeedPath
+	goto_if_set FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_EnterSpeedRoomDoor
+	goto PetalburgCity_Gym_EventScript_DoorLockedPath
+	end
+
+PetalburgCity_Gym_EventScript_ChooseSpeedPath::
+	setvar VAR_0x8008, 7
+	setvar VAR_0x8009, 85
+	msgbox PetalburgCity_Gym_Text_ChooseSpeedPath, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_SetSpeedPathAndEnterRoom
+	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
+	end
+
+PetalburgCity_Gym_EventScript_EnterSpeedRoomDoor::
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 85
 	msgbox PetalburgCity_Gym_Text_EnterSpeedRoom, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom
 	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
 	end
+
+PetalburgCity_Gym_EventScript_SetSpeedPathAndEnterRoom::
+	setflag FLAG_NORMAN_GYM_PATH
+	setflag FLAG_NORMAN_GYM_PATH_LOCKED
+	goto PetalburgCity_Gym_EventScript_EnterRoom
 
 PetalburgCity_Gym_EventScript_EnterRoom::
 	closemessage
@@ -757,10 +787,29 @@ PetalburgCity_Gym_EventScript_DoorLocked::
 	releaseall
 	end
 
+PetalburgCity_Gym_EventScript_DoorLockedPath::
+	msgbox PetalburgCity_Gym_Text_DoorLockedOtherPath, MSGBOX_DEFAULT
+	releaseall
+	end
+
 @ VAR_0x8008 and VAR_0x8009 below are the x and y coordinates of the warp
 PetalburgCity_Gym_EventScript_AccuracyRoomDoor::
 	lockall
 	goto_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_DoorLocked
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_ChooseAccuracyPath
+	goto_if_unset FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_EnterAccuracyRoomDoor
+	goto PetalburgCity_Gym_EventScript_DoorLockedPath
+	end
+
+PetalburgCity_Gym_EventScript_ChooseAccuracyPath::
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, 98
+	msgbox PetalburgCity_Gym_Text_ChooseAccuracyPath, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_SetAccuracyPathAndEnterRoom
+	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
+	end
+
+PetalburgCity_Gym_EventScript_EnterAccuracyRoomDoor::
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 98
 	msgbox PetalburgCity_Gym_Text_EnterAccuracyRoom, MSGBOX_YESNO
@@ -768,28 +817,32 @@ PetalburgCity_Gym_EventScript_AccuracyRoomDoor::
 	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
 	end
 
+PetalburgCity_Gym_EventScript_SetAccuracyPathAndEnterRoom::
+	clearflag FLAG_NORMAN_GYM_PATH
+	setflag FLAG_NORMAN_GYM_PATH_LOCKED
+	goto PetalburgCity_Gym_EventScript_EnterRoom
+
 PetalburgCity_Gym_EventScript_ConfusionRoomDoor::
 	lockall
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_DoorLocked
+	goto_if_unset FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_DoorLockedPath
 	goto_if_not_defeated TRAINER_RANDALL, PetalburgCity_Gym_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 46
-	msgbox PetalburgCity_Gym_Text_EnterConfusionRoom, MSGBOX_YESNO
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, 72
+	msgbox PetalburgCity_Gym_Text_EnterRecoveryRoom, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom
 	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
 	end
 
 PetalburgCity_Gym_EventScript_LeftDefenseRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_RANDALL, PetalburgCity_Gym_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 59
-	msgbox PetalburgCity_Gym_Text_EnterDefenseRoom, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom
-	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
+	goto PetalburgCity_Gym_EventScript_DoorLockedPath
 	end
 
 PetalburgCity_Gym_EventScript_RightDefenseRoomDoor::
 	lockall
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_DoorLocked
+	goto_if_set FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_DoorLockedPath
 	goto_if_not_defeated TRAINER_MARY, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 59
@@ -800,36 +853,39 @@ PetalburgCity_Gym_EventScript_RightDefenseRoomDoor::
 
 PetalburgCity_Gym_EventScript_RecoveryRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_MARY, PetalburgCity_Gym_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 72
-	msgbox PetalburgCity_Gym_Text_EnterRecoveryRoom, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom
-	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
+	goto PetalburgCity_Gym_EventScript_DoorLockedPath
 	end
 
 PetalburgCity_Gym_EventScript_LeftStrengthRoomDoor::
 	lockall
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_DoorLocked
 	goto_if_not_defeated TRAINER_PARKER, PetalburgCity_Gym_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 20
-	msgbox PetalburgCity_Gym_Text_EnterStrengthRoom, MSGBOX_YESNO
+	call_if_set FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_SetGymLeaderWarpLeft
+	call_if_unset FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_SetGymLeaderWarpRight
+	msgbox PetalburgCity_Gym_Text_EnterGymLeadersRoom, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom
 	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
 	end
 
+PetalburgCity_Gym_EventScript_SetGymLeaderWarpLeft::
+	setvar VAR_0x8008, 1
+	setvar VAR_0x8009, 7
+	return
+
+PetalburgCity_Gym_EventScript_SetGymLeaderWarpRight::
+	setvar VAR_0x8008, 7
+	setvar VAR_0x8009, 7
+	return
+
 PetalburgCity_Gym_EventScript_RightStrengthRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_ALEXIA, PetalburgCity_Gym_EventScript_DoorLocked
-	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 20
-	msgbox PetalburgCity_Gym_Text_EnterStrengthRoom, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom
-	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
+	goto PetalburgCity_Gym_EventScript_DoorLockedPath
 	end
 
 PetalburgCity_Gym_EventScript_LeftOHKORoomDoor::
 	lockall
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_DoorLocked
+	goto_if_set FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_DoorLockedPath
 	goto_if_not_defeated TRAINER_ALEXIA, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 33
@@ -840,33 +896,79 @@ PetalburgCity_Gym_EventScript_LeftOHKORoomDoor::
 
 PetalburgCity_Gym_EventScript_RightOHKORoomDoor::
 	lockall
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_DoorLocked
+	goto_if_unset FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_DoorLockedPath
 	goto_if_not_defeated TRAINER_GEORGE, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 33
-	msgbox PetalburgCity_Gym_Text_EnterOHKORoom, MSGBOX_YESNO
+	setvar VAR_0x8009, 20
+	msgbox PetalburgCity_Gym_Text_EnterStrengthRoom, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom
 	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
 	end
 
 PetalburgCity_Gym_EventScript_LeftGymLeadersRoomDoor::
 	lockall
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_DoorLocked
+	goto_if_unset FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_DoorLockedPath
 	goto_if_not_defeated TRAINER_JODY, PetalburgCity_Gym_EventScript_DoorLocked
-	setvar VAR_0x8008, 1
-	setvar VAR_0x8009, 7
-	msgbox PetalburgCity_Gym_Text_EnterGymLeadersRoom, MSGBOX_YESNO
+	setvar VAR_0x8008, 7
+	setvar VAR_0x8009, 46
+	msgbox PetalburgCity_Gym_Text_EnterMetronomeRoom, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom
 	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
 	end
 
 PetalburgCity_Gym_EventScript_RightGymLeadersRoomDoor::
 	lockall
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_DoorLocked
+	goto_if_set FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_DoorLockedPath
 	goto_if_not_defeated TRAINER_BERKE, PetalburgCity_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
-	setvar VAR_0x8009, 7
-	msgbox PetalburgCity_Gym_Text_EnterGymLeadersRoom, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom
+	setvar VAR_0x8009, 46
+	msgbox PetalburgCity_Gym_Text_EnterMetronomeRoom, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_OpenMetronomeReturnDoorAndEnterRoom
 	goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom
 	end
+
+PetalburgCity_Gym_EventScript_OpenMetronomeReturnDoorAndEnterRoom::
+	call PetalburgCity_Gym_EventScript_OpenMetronomeReturnDoor
+	goto PetalburgCity_Gym_EventScript_EnterRoom
+
+PetalburgCity_Gym_EventScript_OpenMetronomeReturnDoor::
+	setmetatile 6, 46, METATILE_PetalburgGym_RoomEntrance_Left, FALSE
+	setmetatile 7, 46, METATILE_PetalburgGym_RoomEntrance_Right, FALSE
+	return
+
+PetalburgCity_Gym_EventScript_OpenPath1RecoveryDoor::
+	setmetatile 1, 72, METATILE_PetalburgGym_RoomEntrance_Left, FALSE
+	setmetatile 2, 72, METATILE_PetalburgGym_RoomEntrance_Right, FALSE
+	return
+
+PetalburgCity_Gym_EventScript_OpenPath1StrengthDoor::
+	setmetatile 6, 20, METATILE_PetalburgGym_RoomEntrance_Left, FALSE
+	setmetatile 7, 20, METATILE_PetalburgGym_RoomEntrance_Right, FALSE
+	return
+
+PetalburgCity_Gym_EventScript_OpenRigidPathDoorMetatilesIfNeeded::
+	goto_if_unset FLAG_NORMAN_GYM_PATH_LOCKED, PetalburgCity_Gym_EventScript_EndOpenRigidPathDoorMetatiles
+	goto_if_set FLAG_NORMAN_GYM_PATH, PetalburgCity_Gym_EventScript_OpenPath1DoorMetatilesIfNeeded
+	goto PetalburgCity_Gym_EventScript_OpenPath2DoorMetatilesIfNeeded
+
+PetalburgCity_Gym_EventScript_OpenPath1DoorMetatilesIfNeeded::
+	goto_if_not_defeated TRAINER_RANDALL, PetalburgCity_Gym_EventScript_Path1SkipRecoveryDoor
+	call PetalburgCity_Gym_EventScript_OpenPath1RecoveryDoor
+
+PetalburgCity_Gym_EventScript_Path1SkipRecoveryDoor::
+	goto_if_not_defeated TRAINER_GEORGE, PetalburgCity_Gym_EventScript_EndOpenRigidPathDoorMetatiles
+	call PetalburgCity_Gym_EventScript_OpenPath1StrengthDoor
+	goto PetalburgCity_Gym_EventScript_EndOpenRigidPathDoorMetatiles
+
+PetalburgCity_Gym_EventScript_OpenPath2DoorMetatilesIfNeeded::
+	goto_if_not_defeated TRAINER_BERKE, PetalburgCity_Gym_EventScript_EndOpenRigidPathDoorMetatiles
+	call PetalburgCity_Gym_EventScript_OpenMetronomeReturnDoor
+
+PetalburgCity_Gym_EventScript_EndOpenRigidPathDoorMetatiles::
+	return
 
 PetalburgCity_Gym_EventScript_Randall::
 	trainerbattle_single TRAINER_RANDALL, PetalburgCity_Gym_Text_RandallIntro, PetalburgCity_Gym_Text_RandallDefeat, PetalburgCity_Gym_EventScript_SlideOpenSpeedRoomDoors
@@ -877,6 +979,7 @@ PetalburgCity_Gym_EventScript_Randall::
 PetalburgCity_Gym_EventScript_SlideOpenSpeedRoomDoors::
 	setvar VAR_0x8005, 0
 	call PetalburgCity_Gym_EventScript_OpenSpeedRoomDoors
+	call PetalburgCity_Gym_EventScript_OpenRigidPathDoorMetatilesIfNeeded
 	special DrawWholeMapView
 	release
 	end
@@ -911,6 +1014,7 @@ PetalburgCity_Gym_EventScript_George::
 PetalburgCity_Gym_EventScript_SlideOpenRecoveryRoomDoors::
 	setvar VAR_0x8005, 0
 	call PetalburgCity_Gym_EventScript_OpenRecoveryRoomDoors
+	call PetalburgCity_Gym_EventScript_OpenRigidPathDoorMetatilesIfNeeded
 	special DrawWholeMapView
 	release
 	end
@@ -928,6 +1032,7 @@ PetalburgCity_Gym_EventScript_Berke::
 PetalburgCity_Gym_EventScript_SlideOpenOHKORoomDoors::
 	setvar VAR_0x8005, 0
 	call PetalburgCity_Gym_EventScript_OpenOHKORoomDoors
+	call PetalburgCity_Gym_EventScript_OpenRigidPathDoorMetatilesIfNeeded
 	special DrawWholeMapView
 	release
 	end
@@ -1333,14 +1438,12 @@ PetalburgCity_Gym_Text_GymGuideAdvice:
 	.string "already open, so don't attack me!\p"
 	.string "The TRAINERS of PETALBURG GYM\n"
 	.string "use all kinds of items.\p"
-	.string "The door at the left leads to\n"
-	.string "the SPEED ROOM.\p"
-	.string "The door at the right leads to\n"
-	.string "the ACCURACY ROOM.\p"
+	.string "The two entrance doors lead to the\n"
+	.string "TRAP ROOM and the ACCURACY ROOM.\p"
 	.string "The room's name will be on\n"
 	.string "the door, so choose carefully.\p"
-	.string "Once you've chosen the door…\n"
-	.string "Well, hey, go for it! $"
+	.string "Once you choose your route,\n"
+	.string "the other branch stays locked! $"
 
 PetalburgCity_Gym_Text_GymGuidePostVictory:
 	.string "{PLAYER}! Whoa! You've overcome even\n"
@@ -1360,9 +1463,8 @@ PetalburgCity_Gym_Text_RandallDefeat:
 PetalburgCity_Gym_Text_RandallPostBattle:
 	.string "Go on to the next room where a new\n"
 	.string "challenge awaits you.\p"
-	.string "At the left is the CONFUSION ROOM.\p"
-	.string "The right door leads to the DEFENSE\n"
-	.string "ROOM. $"
+	.string "On this route, the next room is\n"
+	.string "the RECOVERY ROOM. $"
 
 PetalburgCity_Gym_Text_RandallPostBadge:
 	.string "Whomever you beat, and whomever you\n"
@@ -1372,7 +1474,7 @@ PetalburgCity_Gym_Text_RandallPostBadge:
 	.string "GYM LEADER is all about. $"
 
 PetalburgCity_Gym_Text_ParkerIntro:
-	.string "This is the CONFUSION ROOM.\p"
+	.string "This is the METRONOME ROOM.\p"
 	.string "Let me see how well bonded you are\n"
 	.string "with your POKéMON! $"
 
@@ -1381,8 +1483,8 @@ PetalburgCity_Gym_Text_ParkerDefeat:
 	.string "You share a strong bond together. $"
 
 PetalburgCity_Gym_Text_ParkerPostBattle:
-	.string "The next room is the STRENGTH ROOM.\n"
-	.string "Can you withstand brute force? $"
+	.string "You've made it through every room.\p"
+	.string "Go on! NORMAN is waiting ahead! $"
 
 PetalburgCity_Gym_Text_ParkerPostBadge:
 	.string "After you beat our LEADER, the\n"
@@ -1407,7 +1509,7 @@ PetalburgCity_Gym_Text_GeorgePostBattle:
 	.string "earned only through effort.\p"
 	.string "I lost because my own efforts\n"
 	.string "weren't enough.\p"
-	.string "Go on! The ONE-HIT KO ROOM is next. $"
+	.string "Go on! The STRENGTH ROOM is next. $"
 
 PetalburgCity_Gym_Text_GeorgePostBadge:
 	.string "I'm going to keep training at GYMS.\n"
@@ -1428,8 +1530,8 @@ PetalburgCity_Gym_Text_BerkePostBattle:
 	.string "He's a TRAINER worth my respect.\p"
 	.string "And, I sense the same glow coming\n"
 	.string "from you as your father.\p"
-	.string "I hope that you'll stage a terrific\n"
-	.string "battle with your father! $"
+	.string "The next room is the METRONOME ROOM.\p"
+	.string "NORMAN is almost in front of you. $"
 
 PetalburgCity_Gym_Text_BerkePostBadge:
 	.string "Since your dad became the LEADER,\n"
@@ -1448,10 +1550,10 @@ PetalburgCity_Gym_Text_MaryDefeat:
 PetalburgCity_Gym_Text_MaryPostBattle:
 	.string "There are some even stronger\n"
 	.string "TRAINERS waiting for you.\p"
-	.string "The left is the DEFENSE ROOM, and\n"
-	.string "the right is the RECOVERY ROOM.\p"
+	.string "On this route, the next room is\n"
+	.string "the DEFENSE ROOM.\p"
 	.string "Your POKéMON's ATTACK power will be\n"
-	.string "on trial either way. $"
+	.string "put to the test. $"
 
 PetalburgCity_Gym_Text_MaryPostBadge:
 	.string "Do you know what we're trying to\n"
@@ -1469,12 +1571,9 @@ PetalburgCity_Gym_Text_AlexiaDefeat:
 PetalburgCity_Gym_Text_AlexiaPostBattle:
 	.string "I think you've taught me a valuable\n"
 	.string "lesson here.\p"
-	.string "Now, go on! The left door goes to\n"
-	.string "the STRENGTH ROOM.\p"
-	.string "The right door opens to\n"
+	.string "Now, go on! The next room is\n"
 	.string "the ONE-HIT KO ROOM.\p"
-	.string "Both of them have TRAINERS who are\n"
-	.string "skilled at offense. $"
+	.string "Get ready for all-out offense! $"
 
 PetalburgCity_Gym_Text_AlexiaPostBadge:
 	.string "Hi! Have you tried using SURF? $"
@@ -1491,8 +1590,8 @@ PetalburgCity_Gym_Text_JodyDefeat:
 PetalburgCity_Gym_Text_JodyPostBattle:
 	.string "The way you use your POKéMON…\n"
 	.string "It's like your father's style.\p"
-	.string "Go on through! The GYM LEADER, your\n"
-	.string "father, is waiting! $"
+	.string "Go on through! The METRONOME ROOM\n"
+	.string "is your final test before NORMAN! $"
 
 PetalburgCity_Gym_Text_JodyPostBadge:
 	.string "Sure, it's fine to make your POKéMON\n"
@@ -1506,8 +1605,15 @@ PetalburgCity_Gym_Text_DoorAppearsLocked:
 	.string "right now… $"
 
 PetalburgCity_Gym_Text_EnterSpeedRoom:
-	.string "“SPEED ROOM,” the sign says.\p"
+	.string "“TRAP ROOM,” the sign says.\p"
 	.string "Do you want to go through? $"
+
+PetalburgCity_Gym_Text_ChooseSpeedPath:
+	.string "“TRAP ROOM,” the sign says.\p"
+	.string "Route: TRAP -> RECOVERY -> STRENGTH\n"
+	.string "-> METRONOME -> GYM LEADER.\p"
+	.string "Choose this route? You can't switch\n"
+	.string "to the other first room later. $"
 
 @ Unused
 PetalburgCity_Gym_Text_DoorAppearsLocked2:
@@ -1518,8 +1624,23 @@ PetalburgCity_Gym_Text_EnterAccuracyRoom:
 	.string "“ACCURACY ROOM,” the sign says.\p"
 	.string "Do you want to go through? $"
 
+PetalburgCity_Gym_Text_ChooseAccuracyPath:
+	.string "“ACCURACY ROOM,” the sign says.\p"
+	.string "Route: ACCURACY -> DEFENSE -> OHKO\n"
+	.string "-> METRONOME -> GYM LEADER.\p"
+	.string "Choose this route? You can't switch\n"
+	.string "to the other first room later. $"
+
+PetalburgCity_Gym_Text_DoorLockedOtherPath:
+	.string "This door is sealed on your current\n"
+	.string "route. $"
+
+PetalburgCity_Gym_Text_EnterMetronomeRoom:
+	.string "“METRONOME ROOM,” the sign says.\p"
+	.string "Do you want to go through? $"
+
 PetalburgCity_Gym_Text_EnterConfusionRoom:
-	.string "“CONFUSION ROOM,” the sign says.\p"
+	.string "“METRONOME ROOM,” the sign says.\p"
 	.string "Do you want to go through? $"
 
 PetalburgCity_Gym_Text_EnterDefenseRoom:
@@ -1539,9 +1660,7 @@ PetalburgCity_Gym_Text_EnterOHKORoom:
 	.string "Do you want to go through? $"
 
 PetalburgCity_Gym_Text_EnterGymLeadersRoom:
-	.string "“GYM LEADER'S ROOM\p"
-	.string "“See for yourself what POKéMON await\n"
-	.string "you!” the sign says.\p"
+	.string "“GYM LEADER'S ROOM,” the sign says.\p"
 	.string "Do you want to go through? $"
 
 PetalburgCity_Gym_Text_GymStatue:
@@ -1588,4 +1707,3 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons:
 	.string "capable of battle?\p"
 	.string "Sorry, but you'll have to come back\n"
 	.string "with at least two POKéMON. $"
-

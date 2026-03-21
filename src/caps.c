@@ -21,7 +21,7 @@ u32 GetCurrentLevelCap(void)
         {FLAG_HIDE_METEOR_FALLS_TEAM_AQUA, 38}, //Non Boss Level Cap Flag
         {FLAG_BADGE04_GET,      45},
         {FLAG_MAXIE_DESERT,     50},
-        {FLAG_BADGE05_GET,      60},
+        {FLAG_BADGE05_GET,      55},
         {FLAG_BADGE06_GET,      60},
         {FLAG_BADGE07_GET,      60},
         {FLAG_BADGE08_GET,      60},
@@ -43,6 +43,7 @@ u32 GetCurrentLevelCap(void)
 
     u32 i;
     u16* B_EXP_CAP_TYPE = GetVarPointer(VAR_GAME_MODE);
+    
         //Check the var for the game mode selection
     if (B_LEVEL_CAP_TYPE == LEVEL_CAP_FLAG_LIST)
     {

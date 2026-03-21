@@ -522,7 +522,8 @@
 #define FLAG_DEFEATED_ROTOM                  0x1E0
 #define FLAG_HS_R114                         0x1E1
 #define FLAG_R110_CYCLING_ROAD_TEMP          0x1E2
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_NORMAN_GYM_PATH                 0x1E3
+#define FLAG_NORMAN_GYM_PATH_LOCKED          FLAG_UNUSED_0x043
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4

@@ -1919,12 +1919,60 @@ Music: Cool
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Swellow
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Quick Attack
-- Agility
-- Wing Attack
+Dudunsparce @ Rocky Helmet  
+Ability: Serene Grace  
+Level: 51  
+Adamant Nature  
+- Pursuit  
+- Coil  
+- Body Slam  
+- Roost  
+
+Raticate-Alola @ Wide Lens  
+Ability: Hustle  
+Level: 51  
+Brave Nature  
+- Pursuit  
+- Return  
+- U-turn  
+- Sucker Punch  
+
+Fearow @ Scope Lens  
+Ability: Sniper  
+Level: 51  
+Jolly Nature  
+- Pursuit  
+- Drill Peck  
+- Facade  
+- Drill Run  
+
+Gumshoos @ Choice Band  
+Ability: Stakeout  
+Level: 52   
+Adamant Nature  
+- Pursuit  
+- Double-Edge  
+
+Gothitelle @ Leftovers  
+Ability: Shadow Tag  
+Level: 51  
+Modest Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Protect  
+- Psychic Noise  
+- Shadow Ball  
+
+Azurill @ Focus Sash  
+Ability: Sap Sipper  
+Level: 1  
+IVs: 0 Atk  
+- Perish Song  
+- Whirlpool  
+
+ 
+
+
 
 === TRAINER_PARKER ===
 Name: PARKER
@@ -1935,12 +1983,43 @@ Music: Cool
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Spinda
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Dizzy Punch
-- Focus Punch
+Blissey @ Leftovers  
+Ability: Natural Cure  
+Level: 53  
+Calm Nature  
+- Metronome  
+
+Grafaiai @ Metronome  
+Ability: Prankster  
+Level: 52   
+Adamant Nature  
+- Metronome  
+
+Slaking @ Rocky Helmet  
+Ability: Truant  
+Level: 53  
+Adamant Nature  
+- Metronome  
+
+Meloetta @ Metronome  
+Ability: Serene Grace  
+Level: 52  
+Modest Nature  
+- Metronome  
+
+Wigglytuff @ Metronome  
+Ability: Cute Charm  
+Level: 52  
+Modest Nature  
+- Metronome  
+
+Miltank @ Metronome  
+Ability: Scrappy  
+Level: 53  
+Impish Nature  
+- Metronome  
+
+
 
 === TRAINER_GEORGE ===
 Name: GEORGE
@@ -1951,12 +2030,63 @@ Music: Cool
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Slakoth @ Sitrus Berry
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Slack Off
-- Counter
-- Shadow Ball
+Braviary @ Life Orb  
+Ability: Sheer Force  
+Level: 52   
+Adamant Nature  
+- Close Combat  
+- Roost  
+- Double-Edge  
+- Brave Bird  
+
+Blissey @ Leftovers  
+Ability: Natural Cure  
+Level: 52   
+Calm Nature  
+IVs: 0 Atk  
+- Thunder Wave  
+- Soft-Boiled  
+- Seismic Toss  
+- Hyper Voice  
+
+Drampa @ Sitrus Berry  
+Ability: Berserk  
+Level: 52   
+Modest Nature  
+IVs: 0 Atk  
+- Hyper Voice  
+- Dragon Pulse  
+- Roost  
+- Thunderbolt  
+
+Audino @ Leftovers  
+Ability: Regenerator  
+Level: 52   
+Bold Nature  
+IVs: 0 Atk  
+- Wish  
+- Protect  
+- Dazzling Gleam  
+- Hyper Voice  
+
+Dunsparce @ Eviolite  
+Ability: Serene Grace  
+Level: 52  
+- Roost  
+- Body Slam  
+- Earthquake  
+- Coil  
+
+Arboliva @ Sitrus Berry  
+Ability: Harvest  
+Level: 53  
+IVs: 0 Atk  
+- Substitute  
+- Protect  
+- Leech Seed  
+- Hyper Voice  
+
+
 
 === TRAINER_BERKE ===
 Name: BERKE
@@ -1967,11 +2097,45 @@ Music: Cool
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Vigoroth
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Energy
-- Slash
+Smeargle @ Focus Band  
+Ability: Moody  
+Level: 56  
+- Fissure  
+- Sheer Cold  
+- Guillotine  
+- Fake Out  
+
+Liepard @ Focus Band  
+Ability: Prankster  
+Level: 56  
+Gentle Nature  
+- Assist  
+
+Delcatty @ Focus Band  
+Ability: Cute Charm  
+Level: 56  
+Jolly Nature  
+- Assist  
+
+Meowstic @ Focus Band  
+Ability: Prankster  
+Level: 56  
+Calm Nature  
+- Assist  
+
+Persian-Alola @ Leftovers  
+Ability: Fur Coat  
+Level: 56  
+Bold Nature  
+- Assist  
+
+Purugly @ Focus Band  
+Ability: Thick Fat  
+Level: 56  
+Impish Nature  
+- Assist  
+
+
 
 === TRAINER_BRAXTON ===
 Name: BRAXTON
@@ -2395,11 +2559,60 @@ Music: Cool
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Delcatty
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Feint Attack
-- Shock Wave
+Bouffalant @ Focus Sash  
+Ability: Reckless  
+Level: 51  
+- Double Team  
+- Work Up  
+- Smart Strike  
+- Head Charge  
+
+Clefable @ Life Orb  
+Ability: Magic Guard  
+Level: 51  
+Modest Nature  
+IVs: 0 Atk  
+- Minimize  
+- Moonblast  
+- Moonlight  
+- Mystical Fire  
+
+Wigglytuff @ Focus Band  
+Ability: Cute Charm  
+Level: 51  
+Jolly Nature  
+- Minimize  
+- Mud-Slap  
+- Return  
+- Play Rough  
+
+Exploud @ Bright Powder  
+Ability: Soundproof  
+Level: 51  
+Modest Nature  
+IVs: 0 Atk  
+- Double Team  
+- Smokescreen  
+- Hyper Voice  
+- Ice Beam  
+
+Dodrio @ Muscle Band  
+Ability: Tangled Feet  
+Level: 51  
+- Acupressure  
+- Substitute  
+- Return  
+- Brave Bird  
+
+Bibarel @ Enigma Berry  
+Ability: Simple  
+Level: 52  
+- Double Team  
+- Swords Dance  
+- Aqua Jet  
+- Facade  
+
+
 
 === TRAINER_ALEXIA ===
 Name: ALEXIA
@@ -2410,12 +2623,58 @@ Music: Cool
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Wigglytuff
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Defense Curl
-- Double Edge
-- Shadow Ball
+Dubwool @ Leftovers  
+Ability: Fluffy  
+Level: 52  
+- Body Press  
+- Cotton Guard  
+- Facade  
+- Zen Headbutt  
+
+Type: Null @ Eviolite  
+Ability: Battle Armor  
+Level: 52  
+Impish Nature  
+- Return  
+- Shadow Claw  
+- Sleep Talk  
+- Rest  
+
+Bewear @ Leftovers  
+Ability: Fluffy  
+Level: 52  
+Adamant Nature  
+- Swords Dance  
+- Drain Punch  
+- Facade  
+- Shadow Claw  
+
+Furfrou @ Leftovers  
+Ability: Fur Coat  
+Level: 52  
+Adamant Nature  
+- Return  
+- Last Resort  
+
+Wyrdeer @ Leftovers  
+Ability: Intimidate  
+Level: 52  
+Lax Nature  
+- Psyshield Bash  
+- Body Press  
+- Body Slam  
+- Earthquake  
+
+Oinkologne-F @ Kee Berry  
+Ability: Thick Fat  
+Level: 53  
+Impish Nature  
+- Stuff Cheeks  
+- Body Press  
+- Facade  
+- High Horsepower  
+
+
 
 === TRAINER_JODY ===
 Name: JODY
@@ -2426,11 +2685,60 @@ Music: Cool
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Zangoose
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Slash
+Ursaluna @ Flame Orb  
+Ability: Guts  
+Level: 52   
+Adamant Nature  
+- Protect  
+- Facade  
+- Headlong Rush  
+- Thunder Punch  
+
+Maushold-Four @ Wide Lens  
+Ability: Technician  
+Level: 54  
+Adamant Nature  
+- Tidy Up  
+- Population Bomb  
+- Taunt  
+
+Staraptor @ Choice Band  
+Ability: Reckless  
+Level: 54  
+Adamant Nature  
+- Brave Bird  
+- Double-Edge  
+- U-turn  
+- Close Combat  
+
+Porygon-Z @ Expert Belt  
+Ability: Adaptability  
+Level: 54  
+Modest Nature  
+IVs: 0 Atk  
+- Tri Attack  
+- Ice Beam  
+- Shadow Ball  
+- Thunderbolt  
+
+Kecleon @ Life Orb  
+Ability: Protean  
+Level: 52  
+Adamant Nature  
+- Facade  
+- Seed Bomb  
+- Shadow Ball  
+- Sucker Punch  
+
+Chatot @ Choice Specs  
+Ability: Punk Rock  
+Level: 52  
+Modest Nature  
+IVs: 0 Atk  
+- Boomburst  
+- Chatter  
+
+
 
 === TRAINER_WENDY ===
 Name: WENDY
@@ -8560,7 +8868,6 @@ IVs: 0 Atk
 Wishiwashi @ Sitrus Berry  
 Ability: Schooling  
 Level: 1  
-Tera Type: Water  
 - Flip Turn  
 - Liquidation  
 - Earthquake  

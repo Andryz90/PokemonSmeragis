@@ -7,9 +7,9 @@
 #define POCKET_POKE_BALLS  2
 #define POCKET_TERA_SHARDS 3
 #define POCKET_MEGASTONES  4
-#define POCKET_BERRIES     5
-#define POCKET_KEY_ITEMS   6
-#define POCKET_TM_HM       7
+#define POCKET_TM_HM       5
+#define POCKET_BERRIES     6
+#define POCKET_KEY_ITEMS   7
 
 #define ITEMS_POCKET       0
 #define BALLS_POCKET       1
