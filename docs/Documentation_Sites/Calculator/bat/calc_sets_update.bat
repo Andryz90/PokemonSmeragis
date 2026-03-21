@@ -6,10 +6,16 @@ rem .\ gen9.js @echo Removing old .js
 
 pushd ..\..\Trainer_Docs\
 
-call build.bat 2>&1 | powershell -NoProfile -Command ^
-  "$input | ForEach-Object { Write-Host $_ -ForegroundColor Magenta }"
+call build.bat
+if errorlevel 1 (
+  popd
+  exit /b 1
+)
 
 popd
 
 python .\calc_sets_modifier.py
-move gen9.js ..\src\js\data\sets\gen9.js
+if errorlevel 1 exit /b 1
+
+move /Y gen9.js ..\src\js\data\sets\gen9.js
+if errorlevel 1 exit /b 1

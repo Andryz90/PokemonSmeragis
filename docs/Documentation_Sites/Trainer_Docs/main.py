@@ -26,6 +26,7 @@ class Pokemon:
 class Trainer:
     def __init__(self):
         self.name: str = ""
+        self.trainer_id: Optional[str] = None
         self.double_battle: str = "No"
         self.party: List[Pokemon] = []
 
@@ -93,6 +94,7 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
     mon_index = 0
     trainer_name = None
     trainer_class = None
+    trainer_id = None
 
     def close_mon():
         nonlocal parsing_mon, pokemon, mon_index, trainer
@@ -128,17 +130,21 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
             left = (trainer_class or "").strip()
             right = (trainer_name or "").strip()
             trainer.name = (left + " " + right).strip() or (trainer_name or "Unknown")
+            trainer.trainer_id = trainer_id
             mon_index = 0
         elif line.startswith("Double Battle:"):
             if trainer:
                 trainer.double_battle = line.split(":", 1)[1].strip()
 
-        elif line.startswith("=== TRAINER_") and (prev_line == "\n" or prev_line is None):
-            close_mon()
-            close_trainer()
-            trainer = None
-            trainer_name = None
-            trainer_class = None
+        elif line.startswith("=== TRAINER_"):
+            m = re.match(r"===\s*(TRAINER_[A-Z0-9_]+)\s*===", line.strip())
+            trainer_id = m.group(1) if m else None
+            if (prev_line == "\n" or prev_line is None):
+                close_mon()
+                close_trainer()
+                trainer = None
+                trainer_name = None
+                trainer_class = None
 
         elif (prev_line == "\n") and not any(line.startswith(p) for p in ("Name:", "Class:", "Double Battle:") + IGNORED_PREFIXES) and line.strip():
             parsing_mon = True
@@ -160,6 +166,10 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
                 pokemon.status = line.split(":", 1)[1].strip()
             elif line.startswith("Nature:"):
                 pokemon.nature = line.split(":", 1)[1].strip()
+            elif line.strip().endswith("Nature"):
+                m = re.match(r"^\s*([A-Za-z]+)\s+Nature\s*$", line.strip())
+                if m:
+                    pokemon.nature = m.group(1).strip()
             elif line.startswith("IVs:"):
                 ival = line.split(":", 1)[1].strip()
                 chunks = [seg.split(" ")[0].strip() for seg in ival.split(" / ")]
@@ -232,14 +242,47 @@ def generate_mastersheet(trainers: List[Trainer]) -> str:
 # =============================
 # Output: JS (per calculator)
 # =============================
+def _trainer_id_suffix_num(trainer_id: Optional[str]) -> Optional[int]:
+    if not trainer_id:
+        return None
+    m = re.search(r"_(\d+)$", trainer_id.strip())
+    return int(m.group(1)) if m else None
+
+def pick_primary_calc_trainers(trainers: List[Trainer]) -> List[tuple[str, Trainer]]:
+    chosen: dict[str, Trainer] = {}
+    order: List[str] = []
+
+    for tr in trainers:
+        base = (tr.name or "Unknown").strip() or "Unknown"
+        if base not in chosen:
+            chosen[base] = tr
+            order.append(base)
+            continue
+
+        cur = chosen[base]
+        cur_n = _trainer_id_suffix_num(cur.trainer_id)
+        new_n = _trainer_id_suffix_num(tr.trainer_id)
+
+        # Prefer the primary roster (_1), otherwise keep the earliest seen.
+        if new_n is not None and (cur_n is None or new_n < cur_n):
+            chosen[base] = tr
+
+    return [(name, chosen[name]) for name in order]
+
 def generate_cals_sets(trainers: List[Trainer]) -> str:
     data = {}
-    for tr in trainers:
-        for mon in tr.party:
-            species = mon.species or "Unknown"
+    for trainer_index, (tr_label, tr) in enumerate(pick_primary_calc_trainers(trainers), start=1):
+        fallback_level = next((m.level for m in tr.party if m.level), "1")
+        for slot_fallback, mon in enumerate(tr.party):
+            species = (mon.species or "").strip()
+            if not species:
+                continue
             data.setdefault(species, {})
-            data[species][tr.name] = {
-                "level": mon.level,
+            slot_index = mon.index if mon.index is not None else slot_fallback
+            data[species][tr_label] = {
+                "index": trainer_index,
+                "slot": slot_index,
+                "level": mon.level if mon.level else fallback_level,
                 "ivs": mon.ivs if mon.ivs else {"hp":31,"at":31,"df":31,"sa":31,"sd":31,"sp":31},
                 "ivsSpecified": mon.ivs_specified,
                 "item": mon.item,

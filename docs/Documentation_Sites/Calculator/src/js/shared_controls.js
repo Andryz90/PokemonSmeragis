@@ -569,8 +569,101 @@ function smogonAnalysis(pokemonName) {
 	return "https://smogon.com/dex/" + generation + "/pokemon/" + pokemonName.toLowerCase() + "/";
 }
 
+function parseTrainerSortKey(entry) {
+	var match = String(entry || "").match(/^\[(\d+)(?:\|(\d+))?\]/);
+	var trainerIndex = match ? parseInt(match[1], 10) : Number.MAX_SAFE_INTEGER;
+	var slotIndex = (match && match[2] !== undefined) ? parseInt(match[2], 10) : Number.MAX_SAFE_INTEGER;
+	return { trainerIndex: trainerIndex, slotIndex: slotIndex };
+}
+
 function sortmons(a, b) {
-	return parseInt(a.split("[")[1].split("]")[0]) - parseInt(b.split("[")[1].split("]")[0])
+	var ak = parseTrainerSortKey(a);
+	var bk = parseTrainerSortKey(b);
+	if (ak.trainerIndex !== bk.trainerIndex) {
+		return ak.trainerIndex - bk.trainerIndex;
+	}
+	if (ak.slotIndex !== bk.slotIndex) {
+		return ak.slotIndex - bk.slotIndex;
+	}
+	return String(a).localeCompare(String(b));
+}
+
+var CURRENT_TRAINER_POKS = [];
+
+function extractSetIdFromTrainerEntry(entry) {
+	var match = String(entry || "").match(/^\[[^\]]+\](.+)$/);
+	return match ? match[1] : String(entry || "");
+}
+
+function extractTrainerNameFromSet(setName) {
+	var text = String(setName || "");
+	var openIndex = text.lastIndexOf(" (");
+	var closeIndex = text.lastIndexOf(")");
+	if (openIndex === -1 || closeIndex <= openIndex) {
+		return "";
+	}
+	return text.substring(openIndex + 2, closeIndex);
+}
+
+function getTrainerIndices() {
+	var seen = Object.create(null);
+	var indices = [];
+	for (var i = 0; i < TR_NAMES.length; i++) {
+		var trainerIndex = parseTrainerSortKey(TR_NAMES[i]).trainerIndex;
+		if (!isFinite(trainerIndex) || trainerIndex === Number.MAX_SAFE_INTEGER || seen[trainerIndex]) {
+			continue;
+		}
+		seen[trainerIndex] = true;
+		indices.push(trainerIndex);
+	}
+	return indices.sort(function (a, b) {
+		return a - b;
+	});
+}
+
+function getCurrentTrainerIndex() {
+	var selectedSet = String($('.opposing').val() || "");
+	var selectedKey = parseTrainerSortKey(selectedSet);
+	if (isFinite(selectedKey.trainerIndex) && selectedKey.trainerIndex !== Number.MAX_SAFE_INTEGER) {
+		return selectedKey.trainerIndex;
+	}
+	if (CURRENT_TRAINER_POKS && CURRENT_TRAINER_POKS.length) {
+		var fallbackKey = parseTrainerSortKey(CURRENT_TRAINER_POKS[0]);
+		if (isFinite(fallbackKey.trainerIndex) && fallbackKey.trainerIndex !== Number.MAX_SAFE_INTEGER) {
+			return fallbackKey.trainerIndex;
+		}
+	}
+	return null;
+}
+
+function renderTrainerTeamStrip(selectedSet) {
+	var entries = (CURRENT_TRAINER_POKS || []).slice().sort(sortmons);
+	var currentSet = String(selectedSet || "");
+	var trpok_html = "";
+
+	for (var i = 0; i < entries.length; i++) {
+		var setId = extractSetIdFromTrainerEntry(entries[i]);
+		var spriteSrc = getSrcImgPokemon({ name: setId.split(" (")[0] });
+		if (!spriteSrc) {
+			continue;
+		}
+		var classes = "trainer-pok right-side";
+		if (setId === currentSet) {
+			classes += " trainer-pok-active";
+		}
+		trpok_html += `<img class="${classes}" src="${spriteSrc}" data-id="${setId}" title="${setId}">`;
+	}
+
+	$('.trainer-pok-list-opposing').html(trpok_html);
+}
+
+function setOpposingSet(setName) {
+	if (!setName) {
+		return;
+	}
+	$('.opposing').val(setName);
+	$('.opposing').change();
+	$('.opposing .select2-chosen').text(setName);
 }
 
 // auto-update set details on select
@@ -580,47 +673,10 @@ $(".set-selector").change(function () {
 	if ($(this).hasClass('opposing')) {
 		topPokemonIcon(fullSetName, $("#p2mon")[0])
 		CURRENT_TRAINER_POKS = get_trainer_poks(fullSetName)
-		var next_poks = CURRENT_TRAINER_POKS.sort(sortmons)
-
-		var trpok_html = ""
-		for (i in next_poks) {
-			if (next_poks[i][0].includes($('input.opposing').val())) {
-				continue
-			}
-			var pok_name = next_poks[i].split("]")[1].split(" (")[0]
-			if (pok_name == "Zygarde-10%") {
-				pok_name = "Zygarde-10%25"
-			}
-			if (pok_name == "Tauros-Paldea-Water") {
-				pok_name = "Tauros-Paldea-Aqua"
-			}
-			if (pok_name == "Tauros-Paldea-Fire") {
-				pok_name = "Tauros-Paldea-Blaze"
-			}
-			if (pok_name == "Tauros-Paldea") {
-				pok_name = "Tauros-Paldea-Combat"
-			}
-			if (pok_name == "Wooper-Paldea") {
-				pok_name = "WooperPaldea"
-			}
-			if (pok_name == "Pumpkaboo-Super") {
-				pok_name = "Pumpkaboo"
-			}
-			if (pok_name == "Mime Jr.") {
-				pok_name = "Mime%20Jr"
-			}
-			if (pok_name == "Aegislash-Shield") {
-				pok_name = "Aegislash"
-			}
-			//this ruined my day
-			var pok = `<img class="trainer-pok right-side" src="http://raw.githubusercontent.com/May8th1995/sprites/master/${pok_name}.png" data-id="${CURRENT_TRAINER_POKS[i].split("]")[1]}" title="${next_poks[i]}, ${next_poks[i]} BP">`
-			trpok_html += pok
-		}
+		renderTrainerTeamStrip(fullSetName)
 	} else {
 		topPokemonIcon(fullSetName, $("#p1mon")[0])
 	}
-
-	$('.trainer-pok-list-opposing').html(trpok_html)
 	var pokemonName = fullSetName.substring(0, fullSetName.indexOf(" ("));
 	var setName = fullSetName.substring(fullSetName.indexOf("(") + 1, fullSetName.lastIndexOf(")"));
 	var pokemon = pokedex[pokemonName];
@@ -1558,9 +1614,17 @@ function get_trainer_names() {
 	for (const [pok_name, poks] of Object.entries(all_poks)) {
 		var pok_tr_names = Object.keys(poks)
 		for (i in pok_tr_names) {
-			var index = (poks[pok_tr_names[i]]["index"])
+			var setData = poks[pok_tr_names[i]] || {}
+			var index = Number(setData["index"])
+			var slot = Number(setData["slot"])
+			if (!isFinite(index)) {
+				index = 999999
+			}
+			if (!isFinite(slot)) {
+				slot = 999999
+			}
 			var trainer_name = pok_tr_names[i]
-			trainer_names.push(`[${index}]${pok_name} (${trainer_name})`)
+			trainer_names.push(`[${index}|${slot}]${pok_name} (${trainer_name})`)
 		}
 	}
 	return trainer_names
@@ -1584,23 +1648,44 @@ function getSrcImgPokemon(poke) {
 	if (!poke) {
 		return
 	}
-	if (poke.name == "Aegislash-Shield") {
-		return `https://raw.githubusercontent.com/May8th1995/sprites/master/Aegislash.png`
-	} else {
-		return `https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png`
+	var spriteName = poke.name;
+	if (spriteName == "Zygarde-10%") {
+		spriteName = "Zygarde-10%25"
 	}
+	if (spriteName == "Tauros-Paldea-Water") {
+		spriteName = "Tauros-Paldea-Aqua"
+	}
+	if (spriteName == "Tauros-Paldea-Fire") {
+		spriteName = "Tauros-Paldea-Blaze"
+	}
+	if (spriteName == "Tauros-Paldea") {
+		spriteName = "Tauros-Paldea-Combat"
+	}
+	if (spriteName == "Wooper-Paldea") {
+		spriteName = "WooperPaldea"
+	}
+	if (spriteName == "Pumpkaboo-Super") {
+		spriteName = "Pumpkaboo"
+	}
+	if (spriteName == "Mime Jr.") {
+		spriteName = "Mime%20Jr"
+	}
+	if (spriteName == "Aegislash-Shield") {
+		spriteName = "Aegislash"
+	}
+	return `https://raw.githubusercontent.com/May8th1995/sprites/master/${spriteName}.png`
 }
 
 function get_trainer_poks(trainer_name) {
-	var true_name = trainer_name.split("(")[1].split("\n")[0].trim()
-	window.CURRENT_TRAINER = true_name.substring(0, true_name.length -1);
+	window.CURRENT_TRAINER = extractTrainerNameFromSet(trainer_name);
 	var matches = []
+	var trainerToken = `(${window.CURRENT_TRAINER})`
 	for (i in TR_NAMES) {
-		if (TR_NAMES[i].includes(true_name)) {
+		if (TR_NAMES[i].endsWith(trainerToken)) {
 			matches.push(TR_NAMES[i])
 		}
 	}
-	return matches
+	return matches.sort(sortmons)
 }
 
 function topPokemonIcon(fullname, node) {
@@ -1629,7 +1714,10 @@ $(document).on('click', '.left-side', function () {
 //select first mon of the box when loading
 function selectFirstMon() {
 	var pMons = document.getElementsByClassName("trainer-pok left-side");
-	let set = pMons[i].getAttribute("data-id");
+	if (!pMons.length) {
+		return;
+	}
+	let set = pMons[0].getAttribute("data-id");
 	$('.player').val(set);
 	$('.player').change();
 	$('.player .select2-chosen').text(set);
@@ -1638,32 +1726,51 @@ function selectFirstMon() {
 function selectTrainer(value) {
 	localStorage.setItem("lasttimetrainer", value);
 	all_poks = SETDEX_SV
+	var bestSet = null
+	var bestSlot = Number.MAX_SAFE_INTEGER
 	for (const [pok_name, poks] of Object.entries(all_poks)) {
 		var pok_tr_names = Object.keys(poks)
 		for (i in pok_tr_names) {
-			var index = (poks[pok_tr_names[i]]["index"])
-			if (index == value) {
-				var set = `${pok_name} (${pok_tr_names[i]})`;
-				$('.opposing').val(set);
-				$('.opposing').change();
-				$('.opposing .select2-chosen').text(set);
+			var setData = poks[pok_tr_names[i]] || {}
+			var index = Number(setData["index"])
+			if (!isFinite(index) || index !== Number(value)) {
+				continue
 			}
-
+			var slot = Number(setData["slot"])
+			if (!isFinite(slot)) {
+				slot = Number.MAX_SAFE_INTEGER
+			}
+			if (slot < bestSlot) {
+				bestSlot = slot
+				bestSet = `${pok_name} (${pok_tr_names[i]})`
+			}
 		}
+	}
+	if (bestSet) {
+		setOpposingSet(bestSet);
 	}
 }
 
 function nextTrainer() {
-	string = ($(".trainer-pok-list-opposing")).html()
-	initialSplit = string.split("[")
-	value = parseInt(initialSplit[initialSplit.length - 2].split("]")[0]) + 1
-	selectTrainer(value)
+	var currentIndex = getCurrentTrainerIndex();
+	var trainerIndices = getTrainerIndices();
+	for (var i = 0; i < trainerIndices.length; i++) {
+		if (currentIndex === null || trainerIndices[i] > currentIndex) {
+			selectTrainer(trainerIndices[i])
+			return
+		}
+	}
 }
 
 function previousTrainer() {
-	string = ($(".trainer-pok-list-opposing")).html()
-	value = parseInt(string.split("]")[0].split("[")[1]) - 1
-	selectTrainer(value)
+	var currentIndex = getCurrentTrainerIndex();
+	var trainerIndices = getTrainerIndices();
+	for (var i = trainerIndices.length - 1; i >= 0; i--) {
+		if (currentIndex !== null && trainerIndices[i] < currentIndex) {
+			selectTrainer(trainerIndices[i])
+			return
+		}
+	}
 }
 
 function resetTrainer() {
