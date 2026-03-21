@@ -15415,6 +15415,7 @@ static const u16 sStantlerTeachableLearnset[] = {
 #if P_GEN_8_CROSS_EVOS
 static const u16 sWyrdeerTeachableLearnset[] = {
     MOVE_AGILITY,
+    MOVE_BODY_PRESS,
     MOVE_BULLDOZE,
     MOVE_CALM_MIND,
     MOVE_CHARGE_BEAM,
