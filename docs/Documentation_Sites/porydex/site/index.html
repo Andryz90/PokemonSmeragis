@@ -6,6 +6,19 @@
 	<title>Pok&eacute;dex - Pok&eacute;mon Showdown</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8" />
+	<script>
+	(function () {
+		var theme = '';
+		try {
+			theme = window.localStorage.getItem('porydex-theme') || '';
+		} catch (e) {}
+		if (!theme && window.matchMedia) {
+			theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		}
+		if (theme !== 'dark') theme = 'light';
+		document.documentElement.setAttribute('data-theme', theme);
+	})();
+	</script>
 	<link rel="stylesheet" href="https://play.pokemonshowdown.com/style/font-awesome.css" />
 	<link rel="stylesheet" href="theme/panels.css?b1" />
 	<link rel="stylesheet" href="theme/main.css?b1" />
@@ -13,6 +26,7 @@
 	<link rel="stylesheet" href="https://play.pokemonshowdown.com/style/utilichart.css?b359" />
 	<link rel="stylesheet" href="theme/pokedex.css?b359" />
 	<link rel="stylesheet" href="theme/pokedex-encounters.css">
+	<link rel="stylesheet" href="theme/dark-theme.css?v=20260321a">
 
 	<!-- Workarounds for IE bugs to display trees correctly. -->
 	<!--[if lte IE 6]><style> li.tree { height: 1px; } </style><![endif]-->
@@ -39,7 +53,8 @@
 				<li><a class="button cur" href="index.html">Pok&eacute;dex</a></li>
 				<li><a class="button" href="https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Calculator/dist/index.html">Calculator</a></li>
 				<li><a class="button" href="https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Trainer_Docs/site/trainer_sheet.html">Trainer Sheet</a></li>
-				<li><a class="button nav-last" href="https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Site/site.html">Docs</a></li>
+				<li><a class="button" href="https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Site/site.html">Docs</a></li>
+				<li><button type="button" class="button nav-last pfx-theme-toggle" aria-pressed="false">Dark</button></li>
 			</ul>
 			<div style="clear:both"></div>
 		</div>
@@ -84,6 +99,7 @@
 	<script src="js/location-order.js"></script>
     <script src="js/pokedex-encounters.js"></script>
 	<script src="js/pokedex-search.js"></script>
+	<script src="js/theme-toggle.js?v=20260321a"></script>
 	<script src="js/router.js"></script>
 
 </body></html>
