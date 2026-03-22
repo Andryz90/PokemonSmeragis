@@ -1,19 +1,31 @@
 .pfx-topbar .header {
-	max-width: 700px;
+	max-width: 760px;
 }
 
-.pfx-topbar .header .nav .pfx-theme-toggle {
+.pfx-topbar .header .nav .pfx-theme-switch {
 	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	gap: 6px;
-	min-width: 64px;
+	margin-left: 2px;
+}
+
+.pfx-topbar .header .nav .pfx-theme-switch .button {
+	min-width: 58px;
 	padding-left: 9px;
 	padding-right: 9px;
+	border-radius: 0;
 }
 
-.pfx-topbar .header .nav .pfx-theme-toggle .fa {
-	line-height: 1;
+.pfx-topbar .header .nav .pfx-theme-switch .button + .button {
+	margin-left: -1px;
+}
+
+.pfx-topbar .header .nav .pfx-theme-switch .button:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.pfx-topbar .header .nav .pfx-theme-switch .button:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 html[data-theme="dark"] {
