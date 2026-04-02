@@ -460,6 +460,30 @@ var DexSearch = /** @class */ (function () {
                         }
                     }
                     break;
+                case 'move':
+                    var move = Dex.moves.get(fId);
+                    if (!move || !move.exists)
+                        break;
+                    buf.push(['header', "Pok&eacute;mon that learn ".concat(move.name)]);
+                    var cacheKey = "".concat(this.dex.gen || '').concat(':').concat(fId);
+                    var cache = DexSearch.moveInstafilterCache || (DexSearch.moveInstafilterCache = Object.create(null));
+                    var learnerIds = cache[cacheKey];
+                    if (!learnerIds) {
+                        learnerIds = [];
+                        for (var id in BattlePokedex) {
+                            if (!BattlePokedex[id] || BattlePokedex[id].isNonstandard)
+                                continue;
+                            if (porydexCustomCanLearn(this.dex, id, fId)) {
+                                learnerIds.push(id);
+                            }
+                        }
+                        cache[cacheKey] = learnerIds;
+                    }
+                    for (var i = 0; i < learnerIds.length; i++) {
+                        var learnerId = learnerIds[i];
+                        (illegal && learnerId in illegal ? illegalBuf : buf).push(['pokemon', learnerId]);
+                    }
+                    break;
                 case 'ability':
                     var ability = Dex.abilities.get(fId).name;
                     buf.push(['header', "".concat(ability, " Pok&eacute;mon")]);
@@ -548,6 +572,68 @@ var DexSearch = /** @class */ (function () {
     };
     return DexSearch;
 }());
+function porydexFirstCustomLearnsetid(dex, speciesid) {
+    if (!window.BattleLearnsets)
+        return '';
+    if (speciesid in BattleLearnsets)
+        return speciesid;
+    var species = dex.species.get(speciesid);
+    if (!species.exists)
+        return '';
+    var baseLearnsetid = toID(species.baseSpecies);
+    if (typeof species.battleOnly === 'string' && species.battleOnly !== species.baseSpecies) {
+        baseLearnsetid = toID(species.battleOnly);
+    }
+    if (baseLearnsetid in BattleLearnsets)
+        return baseLearnsetid;
+    return '';
+}
+function porydexNextCustomLearnsetid(dex, learnsetid, speciesid) {
+    if (learnsetid === 'lycanrocdusk' || (speciesid === 'rockruff' && learnsetid === 'rockruff')) {
+        return 'rockruffdusk';
+    }
+    var lsetSpecies = dex.species.get(learnsetid);
+    if (!lsetSpecies.exists)
+        return '';
+    if (lsetSpecies.id === 'gastrodoneast')
+        return 'gastrodon';
+    if (lsetSpecies.id === 'pumpkaboosuper')
+        return 'pumpkaboo';
+    if (lsetSpecies.id === 'sinisteaantique')
+        return 'sinistea';
+    if (lsetSpecies.id === 'tatsugiristretchy')
+        return 'tatsugiri';
+    var next = lsetSpecies.battleOnly || lsetSpecies.changesFrom || lsetSpecies.prevo;
+    if (next)
+        return toID(next);
+    return '';
+}
+function porydexGetCustomMoveSources(dex, speciesid, moveid) {
+    if (!window.BattleLearnsets)
+        return [];
+    var found = [];
+    var seen = Object.create(null);
+    var learnsetid = porydexFirstCustomLearnsetid(dex, speciesid);
+    while (learnsetid && !seen[learnsetid]) {
+        seen[learnsetid] = true;
+        var learnsetData = BattleLearnsets[learnsetid];
+        var learnset = learnsetData && learnsetData.learnset;
+        if (learnset && (moveid in learnset)) {
+            var sources = learnset[moveid];
+            if (typeof sources === 'string')
+                sources = [sources];
+            found.push({
+                learnsetid: learnsetid,
+                sources: Array.isArray(sources) ? sources.slice() : [sources],
+            });
+        }
+        learnsetid = porydexNextCustomLearnsetid(dex, learnsetid, speciesid);
+    }
+    return found;
+}
+function porydexCustomCanLearn(dex, speciesid, moveid) {
+    return !!porydexGetCustomMoveSources(dex, speciesid, moveid).length;
+}
 var BattleTypedSearch = /** @class */ (function () {
     function BattleTypedSearch(searchType, format, speciesOrSet) {
         if (format === void 0) { format = ''; }

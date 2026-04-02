@@ -104,6 +104,17 @@ function porydexNormalizeRateArray(arr) {
 	});
 }
 
+function porydexFormatEncounterRate(v) {
+	if (v == null || v === '') return '';
+	if (typeof v === 'string' && v.indexOf('%') >= 0) return v;
+	var n = Number(v);
+	if (!isFinite(n)) return String(v);
+	var rounded = Math.round(n * 10) / 10;
+	return (Math.abs(rounded - Math.round(rounded)) < 0.0001
+		? String(Math.round(rounded))
+		: rounded.toFixed(1)) + '%';
+}
+
 function porydexNewEncounterBucket() {
 	return {
 		land: Object.create(null),
@@ -386,8 +397,11 @@ function porydexCleanLocationName(name) {
 
 function renderPorydexEncounterZoneRow(zoneName, tag, href) {
 	var safeName = _.escape(String(zoneName || ''));
-	var safeTag = _.escape(String(tag || ''));
-	var tagClass = /^-?\d+(\.\d+)?%?$/.test(String(tag || '').trim())
+	var rawTag = String(tag || '').trim();
+	var isRateTag = /^-?\d+(\.\d+)?%?$/.test(rawTag);
+	var displayTag = isRateTag ? porydexFormatEncounterRate(rawTag) : rawTag;
+	var safeTag = _.escape(displayTag);
+	var tagClass = isRateTag
 		? ' porydex-encounter-zone-tag-rate'
 		: ' porydex-encounter-zone-tag-static';
 	if (href) {

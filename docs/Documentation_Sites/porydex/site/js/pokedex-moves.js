@@ -398,41 +398,57 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 		var moveid = this.id;
 		if (this.results) return this.results;
 		var results = [];
-		for (var pokemonid in BattleLearnsets) {
-			if (!BattlePokedex[pokemonid] || !BattleLearnsets[pokemonid]) continue;
-			if (BattlePokedex[pokemonid].isNonstandard || !BattleLearnsets[pokemonid].learnset) continue;
-			var sources = BattleLearnsets[pokemonid].learnset[moveid];
-			if (!sources) continue;
-			if (typeof sources === 'string') sources = [sources];
+		for (var pokemonid in BattlePokedex) {
+			if (!BattlePokedex[pokemonid]) continue;
+			if (BattlePokedex[pokemonid].isNonstandard) continue;
+			var sourceEntries = (typeof porydexGetCustomMoveSources === 'function')
+				? porydexGetCustomMoveSources(Dex, pokemonid, moveid)
+				: [];
+			if (!sourceEntries.length) continue;
+			var directEntries = [];
+			var inheritedEntries = [];
+			for (var se = 0; se < sourceEntries.length; se++) {
+				if (sourceEntries[se].learnsetid === pokemonid) {
+					directEntries.push(sourceEntries[se]);
+				} else {
+					inheritedEntries.push(sourceEntries[se]);
+				}
+			}
+			var useInherited = !directEntries.length;
+			var entriesToUse = useInherited ? inheritedEntries : directEntries;
 			var atLeastOne = false;
-			for (var i=0, len=sources.length; i<len; i++) {
-				var source = sources[i];
-				var sourceType = source.charAt(0);
-                switch (sourceType) {
-                case 'L':
-                    results.push('a'+sourcePad(source)+pokemonid);
-                    atLeastOne = true;
-                    break;
-                case 'M':
-                    results.push('b000 '+pokemonid);
-                    atLeastOne = true;
-                    break;
-                case 'T':
-                    results.push('c000 '+pokemonid);
-                    atLeastOne = true;
-                    break;
-                case 'E':
-                    results.push('d000 '+pokemonid);
-                    atLeastOne = true;
-                    break;
-                }
-				if (sourceType === 'S' && atLeastOne !== 'S') {
-					results.push('e000 '+pokemonid);
-					atLeastOne = 'S';
+			for (var ei = 0; ei < entriesToUse.length; ei++) {
+				var sources = entriesToUse[ei].sources || [];
+				if (typeof sources === 'string') sources = [sources];
+				for (var i=0, len=sources.length; i<len; i++) {
+					var source = sources[i];
+					var sourceType = source.charAt(0);
+	                switch (sourceType) {
+	                case 'L':
+	                    results.push((useInherited ? 'g' : 'a')+sourcePad(source)+pokemonid);
+	                    atLeastOne = true;
+	                    break;
+	                case 'M':
+	                    results.push((useInherited ? 'h' : 'b')+'000 '+pokemonid);
+	                    atLeastOne = true;
+	                    break;
+	                case 'T':
+	                    results.push((useInherited ? 'i' : 'c')+'000 '+pokemonid);
+	                    atLeastOne = true;
+	                    break;
+	                case 'E':
+	                    results.push((useInherited ? 'j' : 'd')+'000 '+pokemonid);
+	                    atLeastOne = true;
+	                    break;
+	                }
+					if (sourceType === 'S' && atLeastOne !== 'S') {
+						results.push((useInherited ? 'k' : 'e')+'000 '+pokemonid);
+						atLeastOne = 'S';
+					}
 				}
 			}
 			if (!atLeastOne) {
-				results.push('f000 '+pokemonid);
+				results.push((useInherited ? 'l' : 'f')+'000 '+pokemonid);
 			}
 		}
 		results.sort();
@@ -497,6 +513,18 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 				return '<h3>Event</h3>';
 			case 'F': // past gen
 				return '<h3>Past generation only</h3>';
+			case 'G':
+				return '<h3>Inherited Level-up</h3>';
+			case 'H':
+				return '<h3>Inherited TM/HM</h3>';
+			case 'I':
+				return '<h3>Inherited Tutor</h3>';
+			case 'J':
+				return '<h3>Inherited Egg</h3>';
+			case 'K':
+				return '<h3>Inherited Event</h3>';
+			case 'L':
+				return '<h3>Inherited / other</h3>';
 			}
 			return '<pre>error: "'+results[i]+'"</pre>';
 		} else if (offscreen) {
@@ -524,6 +552,28 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 				desc = '!';
 				break;
 			case 'f': // past generation
+				desc = '...';
+				break;
+			case 'g': // inherited level-up move
+				desc = results[i].substr(1,3) === '001'
+                    ? '&ndash;'
+                    : results[i].substr(1,3) === '000'
+                    ? 'Evo.'
+                    : '<small>L</small>'+(parseInt(results[i].substr(1,3), 10) || '?');
+				break;
+			case 'h': // inherited tm/hm
+				desc = '<img src="//' + Config.routes.client + '/sprites/itemicons/tm-normal.png" style="margin-top:-3px;opacity:.7" width="24" height="24" alt="M" />';
+				break;
+			case 'i': // inherited tutor
+				desc = '<img src="//' + Config.routes.client + '/sprites/tutor.png" style="margin-top:-4px;opacity:.7" width="27" height="26" alt="T" />';
+				break;
+			case 'j': // inherited egg
+				desc = '<span class="picon" style="margin-top:-12px;'+Dex.getPokemonIcon('egg')+'"></span>';
+				break;
+			case 'k': // inherited event
+				desc = '!';
+				break;
+			case 'l': // inherited / other
 				desc = '...';
 				break;
 			}
