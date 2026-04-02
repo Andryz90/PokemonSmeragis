@@ -3725,17 +3725,9 @@ void ScriptHideItemDescription(struct ScriptContext *ctx)
 #endif // OW_SHOW_ITEM_DESCRIPTIONS
 
 
-// returns old sHoursOverride
-u16 SetTimeOfDay(u16 hours)
-{
-    u16 oldHours = sHoursOverride;
-    sHoursOverride = hours;
-    gTimeUpdateCounter = 0;
-    return oldHours;
-}
-
 bool8 ScrFunc_settimeofday(struct ScriptContext *ctx)
 {
-    SetTimeOfDay(ScriptReadByte(ctx));
+    Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
+    SetTimeOfDay((enum TimeOfDay)VarGet(ScriptReadHalfword(ctx)));
     return FALSE;
 }

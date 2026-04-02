@@ -1198,6 +1198,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     if (hasFixedPersonality)
         personality = fixedPersonality;
 
+        isShiny = TRUE;
     SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
     SetBoxMonData(boxMon, MON_DATA_OT_ID, &value);
 
@@ -4562,6 +4563,9 @@ bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct Evoluti
         enum EvolutionConditions condition = params[i].condition;
         u32 currentCondition = FALSE;
 
+        MgbaPrintf(MGBA_LOG_ERROR, "arg: %u", params[i].arg1);
+        MgbaPrintf(MGBA_LOG_ERROR, "cond: %u", condition);
+
         switch(condition)
         {
         // Gen 2
@@ -5468,6 +5472,7 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
         totalEVs += evIncrease;
         #if (P_FLAG_EV_DISABLED == TRUE)
         totalEVs = 0;
+        memset(evs, 0, sizeof(evs));
         #endif
         SetMonData(mon, MON_DATA_HP_EV + i, &evs[i]);
     }

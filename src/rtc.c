@@ -332,6 +332,36 @@ enum TimeOfDay GetTimeOfDay(void)
     return gTimeOfDay;
 }
 
+void SetTimeOfDay(enum TimeOfDay NewTime)
+{
+    s32 hours;
+
+    RtcCalcLocalTime();
+
+    switch (NewTime)
+    {
+        case TIME_MORNING:
+            hours = MORNING_HOUR_BEGIN;
+            break;
+        case TIME_DAY:
+            hours = DAY_HOUR_BEGIN;
+            break;
+        case TIME_EVENING:
+            hours = EVENING_HOUR_BEGIN;
+            break;
+        case TIME_NIGHT:
+            hours = NIGHT_HOUR_BEGIN;
+            break;
+        default:
+            return;
+    }
+
+    // Persist the change in the save's RTC offset so future
+    // UpdateTimeOfDay/RtcCalcLocalTime calls keep this new time.
+    RtcCalcLocalTimeOffset(gLocalTime.days, hours, 0, 0);
+    UpdateTimeOfDay();
+}
+
 enum TimeOfDay GetTimeOfDayForDex(void)
 {
     return OW_TIME_OF_DAY_ENCOUNTERS ? GetTimeOfDay() : TIME_OF_DAY_DEFAULT;

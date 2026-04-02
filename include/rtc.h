@@ -32,6 +32,7 @@ void RtcCalcTimeDifference(struct SiiRtcInfo *rtc, struct Time *result, struct T
 void RtcCalcLocalTime(void);
 bool8 IsBetweenHours(s32 hours, s32 begin, s32 end);
 enum TimeOfDay GetTimeOfDay(void);
+void SetTimeOfDay(enum TimeOfDay NewTime); //Custom
 enum TimeOfDay GetTimeOfDayForDex(void);
 void RtcInitLocalTimeOffset(s32 hour, s32 minute);
 void RtcCalcLocalTimeOffset(s32 days, s32 hours, s32 minutes, s32 seconds);

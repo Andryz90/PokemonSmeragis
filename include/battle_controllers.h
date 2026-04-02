@@ -413,6 +413,7 @@ void SetControllerToLinkOpponent(u32 battler);
 void SetControllerToLinkPartner(u32 battler);
 
 void TrySetBattlerShadowSpriteCallback(u32 battler);
+void TryFreeShinyStarsSpriteResources(void);
 
 bool32 TryShinyAnimAfterMonAnimUtil(u32 battler);
 bool32 SwitchIn_ShowSubstituteUtil(u32 battler);

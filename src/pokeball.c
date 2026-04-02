@@ -45,6 +45,8 @@ static void SpriteCB_HealthboxSlideInDelayed(struct Sprite *sprite);
 static void SpriteCB_HealthboxSlideIn(struct Sprite *sprite);
 static void SpriteCB_HitAnimHealthoxEffect(struct Sprite *sprite);
 static u16 GetBattlerPokeballItemId(u8 battler);
+static u8 GetReleaseMonCryCase(u8 battler);
+static void CreateReleaseMonCryTask(u8 battler, struct Pokemon *mon, u8 initialState, u8 waitMode);
 
 // rom const data
 
@@ -887,8 +889,15 @@ static void SpriteCB_BallThrow_Shake(struct Sprite *sprite)
 #define tCryTaskMonSpriteId     data[4]
 #define tCryTaskMonPtr1         data[5]
 #define tCryTaskMonPtr2         data[6]
+#define tCryTaskWaitMode        data[7]
 #define tCryTaskFrames          data[10]
 #define tCryTaskState           data[15]
+
+enum
+{
+    RELEASE_MON_CRY_WAIT_FOR_AFFINE,
+    RELEASE_MON_CRY_WAIT_FOR_MON_ANIM,
+};
 
 static void Task_PlayCryWhenReleasedFromBall(u8 taskId)
 {
@@ -903,7 +912,10 @@ static void Task_PlayCryWhenReleasedFromBall(u8 taskId)
     {
     case 0:
     default:
-        if (gSprites[monSpriteId].affineAnimEnded)
+        if ((gTasks[taskId].tCryTaskWaitMode == RELEASE_MON_CRY_WAIT_FOR_AFFINE
+             && gSprites[monSpriteId].affineAnimEnded)
+         || (gTasks[taskId].tCryTaskWaitMode == RELEASE_MON_CRY_WAIT_FOR_MON_ANIM
+             && gSprites[monSpriteId].callback == SpriteCallbackDummy))
             gTasks[taskId].tCryTaskState = wantedCry + 1;
         break;
     case 1:
@@ -975,6 +987,50 @@ static void Task_PlayCryWhenReleasedFromBall(u8 taskId)
     }
 }
 
+static u8 GetReleaseMonCryCase(u8 battler)
+{
+    if (!IsDoubleBattle() || !gBattleSpritesDataPtr->animationData->introAnimActive)
+        return 0;
+    else if (battler == GetBattlerAtPosition(B_POSITION_PLAYER_LEFT) || battler == GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
+        return 1;
+    else
+        return 2;
+}
+
+static void CreateReleaseMonCryTask(u8 battler, struct Pokemon *mon, u8 initialState, u8 waitMode)
+{
+    struct Pokemon *illusionMon;
+    s8 pan;
+    u8 taskId;
+
+    if (!IsOnPlayerSide(battler))
+        pan = 25;
+    else
+        pan = -25;
+
+    taskId = CreateTask(Task_PlayCryWhenReleasedFromBall, 3);
+
+    illusionMon = GetIllusionMonPtr(battler);
+    if (illusionMon != NULL)
+        gTasks[taskId].tCryTaskSpecies = GetMonData(illusionMon, MON_DATA_SPECIES);
+    else
+        gTasks[taskId].tCryTaskSpecies = GetMonData(mon, MON_DATA_SPECIES);
+
+    gTasks[taskId].tCryTaskPan = pan;
+    gTasks[taskId].tCryTaskWantedCry = GetReleaseMonCryCase(battler);
+    gTasks[taskId].tCryTaskBattler = battler;
+    gTasks[taskId].tCryTaskMonSpriteId = gBattlerSpriteIds[battler];
+    gTasks[taskId].tCryTaskMonPtr1 = (u32)(mon) >> 16;
+    gTasks[taskId].tCryTaskMonPtr2 = (u32)(mon);
+    gTasks[taskId].tCryTaskWaitMode = waitMode;
+    gTasks[taskId].tCryTaskState = initialState;
+}
+
+void StartMonReleaseCryAfterShiny(u8 battler)
+{
+    CreateReleaseMonCryTask(battler, GetBattlerMon(battler), GetReleaseMonCryCase(battler) + 1, RELEASE_MON_CRY_WAIT_FOR_MON_ANIM);
+}
+
 static void SpriteCB_ReleaseMonFromBall(struct Sprite *sprite)
 {
     u8 battler = sprite->sBattler;
@@ -988,16 +1044,11 @@ static void SpriteCB_ReleaseMonFromBall(struct Sprite *sprite)
 
     if (gMain.inBattle)
     {
-        struct Pokemon *mon, *illusionMon;
-        s8 pan;
-        u16 wantedCryCase;
-        u8 taskId;
+        struct Pokemon *mon;
+        bool32 isShiny;
 
         mon = GetBattlerMon(battler);
-        if (!IsOnPlayerSide(battler))
-            pan = 25;
-        else
-            pan = -25;
+        isShiny = GetMonData(mon, MON_DATA_IS_SHINY);
 
         if ((battler == GetBattlerAtPosition(B_POSITION_PLAYER_LEFT) || battler == GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
          && IsDoubleBattle() && gBattleSpritesDataPtr->animationData->introAnimActive)
@@ -1013,30 +1064,9 @@ static void SpriteCB_ReleaseMonFromBall(struct Sprite *sprite)
             }
         }
 
-        if (!IsDoubleBattle() || !gBattleSpritesDataPtr->animationData->introAnimActive)
-            wantedCryCase = 0;
-        else if (battler == GetBattlerAtPosition(B_POSITION_PLAYER_LEFT) || battler == GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
-            wantedCryCase = 1;
-        else
-            wantedCryCase = 2;
-
         gBattleSpritesDataPtr->healthBoxesData[battler].waitForCry = TRUE;
-
-        taskId = CreateTask(Task_PlayCryWhenReleasedFromBall, 3);
-
-        illusionMon = GetIllusionMonPtr(battler);
-        if (illusionMon != NULL)
-            gTasks[taskId].tCryTaskSpecies = GetMonData(illusionMon, MON_DATA_SPECIES);
-        else
-            gTasks[taskId].tCryTaskSpecies = GetMonData(mon, MON_DATA_SPECIES);
-
-        gTasks[taskId].tCryTaskPan = pan;
-        gTasks[taskId].tCryTaskWantedCry = wantedCryCase;
-        gTasks[taskId].tCryTaskBattler = battler;
-        gTasks[taskId].tCryTaskMonSpriteId = gBattlerSpriteIds[sprite->sBattler];
-        gTasks[taskId].tCryTaskMonPtr1 = (u32)(mon) >> 16;
-        gTasks[taskId].tCryTaskMonPtr2 = (u32)(mon);
-        gTasks[taskId].tCryTaskState = 0;
+        if (!isShiny)
+            CreateReleaseMonCryTask(battler, mon, 0, RELEASE_MON_CRY_WAIT_FOR_AFFINE);
     }
 
     StartSpriteAffineAnim(&gSprites[gBattlerSpriteIds[sprite->sBattler]], BATTLER_AFFINE_EMERGE);
@@ -1057,6 +1087,7 @@ static void SpriteCB_ReleaseMonFromBall(struct Sprite *sprite)
 #undef tCryTaskMonSpriteId
 #undef tCryTaskMonPtr1
 #undef tCryTaskMonPtr2
+#undef tCryTaskWaitMode
 #undef tCryTaskFrames
 #undef tCryTaskState
 

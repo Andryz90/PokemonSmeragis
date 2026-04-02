@@ -562,6 +562,7 @@ gSongTable::
 	song mus_rg_teachy_tv_menu, 0, 0
 	song mus_areazero, 0, 0
 	song mus_gymleader_johto, 0, 0
+	song se_shiny_crystal, 1, 1
 	song ph_trap_blend, 2, 2
 	song ph_trap_held, 2, 2
 	song ph_trap_solo, 2, 2

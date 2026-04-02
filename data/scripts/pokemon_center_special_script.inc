@@ -29,8 +29,9 @@ PKMN_Center_Move_Tutor::
 	dynmultipush PKMN_Center_ApplyStatus, 	2
 	dynmultipush PKMN_Center_SwapGender, 	3
 	dynmultipush PKMN_Center_DamagePokemon, 4
-	dynmultipush PKMN_Center_Cancel, 		5
-	dynmultistack 0, 0, FALSE, 6, FALSE, 0, NULL
+	dynmultipush PKMN_Center_ChangeTime,    5
+	dynmultipush PKMN_Center_Cancel, 		6	
+	dynmultistack 0, 0, FALSE, 7, FALSE, 0, NULL
 	compare VAR_RESULT, MULTI_B_PRESSED
 	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
 	switch VAR_RESULT
@@ -39,7 +40,8 @@ PKMN_Center_Move_Tutor::
 	case 2, Debug_EventScript_InflictStatus1
 	case 3, PKMN_Center_Swap_Pokemon_Gender
 	case 4, PKMN_Center_EventScript_DamageSet
-	case 5, PKMN_Center_Move_Tutor_General_Exit
+	case 5, PKMN_Center_EventScript_SetTime
+	case 6, PKMN_Center_Move_Tutor_General_Exit
 	releaseall
 	end
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Move Reminder @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -601,6 +603,25 @@ PKMN_Center_IVs_AlreadySet::
 	call PKMN_Center_Move_Tutor_General_Exit
 	releaseall
 	end
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Change Time of the Day @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+PKMN_Center_EventScript_SetTime::
+	lockall
+	message ChooseTime_EventScript_Text
+	waitmessage
+	dynmultipush TimeMorning_Text, 	0
+	dynmultipush TimeDay_Text, 	1
+	dynmultipush TimeEvening_Text, 	2
+	dynmultipush TimeNight_Text, 		3
+	dynmultistack 0, 0, FALSE, 4, FALSE, 0, NULL
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq Common_EventScript_ReleaseAllEnd
+	settimeofday VAR_RESULT
+	call PKMN_Center_Move_Tutor_General_Exit
+	releaseall
+	end
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Strings @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 PKMN_Center_NameRater::
@@ -615,6 +636,8 @@ PKMN_Center_SwapGender::
 	.string "Change Pkmn Gender $"
 PKMN_Center_DamagePokemon::
 	.string "Damage a Pokémon $"
+PKMN_Center_ChangeTime::
+	.string "Change Time of the Day $"
 PKMN_Center_ChangeNature::
 	.string "Change Nature $"
 PKMN_Center_MaxIVs::

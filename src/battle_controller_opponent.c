@@ -176,8 +176,7 @@ static void Intro_WaitForShinyAnimAndHealthbox(u32 battler)
                 gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = FALSE;
                 gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].triedShinyMonAnim = FALSE;
                 gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].finishedShinyMonAnim = FALSE;
-                FreeSpriteTilesByTag(ANIM_TAG_GOLD_STARS);
-                FreeSpritePaletteByTag(ANIM_TAG_GOLD_STARS);
+                TryFreeShinyStarsSpriteResources();
             }
             else
             {
@@ -191,8 +190,7 @@ static void Intro_WaitForShinyAnimAndHealthbox(u32 battler)
                 if (!gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].triedShinyMonAnim
                  && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].finishedShinyMonAnim)
                 {
-                    FreeSpriteTilesByTag(ANIM_TAG_GOLD_STARS);
-                    FreeSpritePaletteByTag(ANIM_TAG_GOLD_STARS);
+                    TryFreeShinyStarsSpriteResources();
                 }
                 else
                 {
@@ -322,8 +320,7 @@ static void TryShinyAnimAfterMonAnim(u32 battler)
     {
         gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = FALSE;
         gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = FALSE;
-        FreeSpriteTilesByTag(ANIM_TAG_GOLD_STARS);
-        FreeSpritePaletteByTag(ANIM_TAG_GOLD_STARS);
+        TryFreeShinyStarsSpriteResources();
         OpponentBufferExecCompleted(battler);
     }
 }

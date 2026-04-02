@@ -38,6 +38,7 @@
 #include "malloc.h"
 #include "m4a.h"
 #include "palette.h"
+#include "pokeball.h"
 #include "party_menu.h"
 #include "pokeball.h"
 #include "pokedex.h"
@@ -76,6 +77,9 @@
 #include "constants/trainers.h"
 #include "constants/weather.h"
 #include "cable_club.h"
+
+static void StartBattlerMonEntryAnimation(struct Sprite *sprite);
+static void SpriteCB_WaitShinyAndLoadMonSprite(struct Sprite *sprite);
 
 extern const struct BgTemplate gBattleBgTemplates[];
 extern const struct WindowTemplate *const gBattleWindowTemplates[];
@@ -2711,7 +2715,15 @@ static void SpriteCB_WildMonAnimate(struct Sprite *sprite)
 {
     if (!gPaletteFade.active)
     {
-        BattleAnimateFrontSprite(sprite, sprite->sSpeciesId, FALSE, 1);
+        if (GetMonData(GetBattlerMon(sprite->sBattler), MON_DATA_IS_SHINY))
+        {
+            gBattleSpritesDataPtr->healthBoxesData[sprite->sBattler].waitForCry = TRUE;
+            sprite->callback = SpriteCB_WaitShinyAndLoadMonSprite;
+        }
+        else
+        {
+            BattleAnimateFrontSprite(sprite, sprite->sSpeciesId, FALSE, 1);
+        }
     }
 }
 
@@ -2793,14 +2805,20 @@ void SpriteCB_HideAsMoveTarget(struct Sprite *sprite)
 
 void SpriteCB_OpponentMonFromBall(struct Sprite *sprite)
 {
-    if (sprite->affineAnimEnded)
+    if (sprite->affineAnimEnded
+     && !gBattleSpritesDataPtr->healthBoxesData[sprite->sBattler].ballAnimActive)
     {
-        if (!(gHitMarker & HITMARKER_NO_ANIMATIONS) || gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
+        if (GetMonData(GetBattlerMon(sprite->sBattler), MON_DATA_IS_SHINY))
+            sprite->callback = SpriteCB_WaitShinyAndLoadMonSprite;
+        else
         {
-            if (HasTwoFramesAnimation(sprite->sSpeciesId))
-                StartSpriteAnim(sprite, 1);
+            if (!(gHitMarker & HITMARKER_NO_ANIMATIONS) || gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
+            {
+                if (HasTwoFramesAnimation(sprite->sSpeciesId))
+                    StartSpriteAnim(sprite, 1);
+            }
+            BattleAnimateFrontSprite(sprite, sprite->sSpeciesId, TRUE, 1);
         }
-        BattleAnimateFrontSprite(sprite, sprite->sSpeciesId, TRUE, 1);
     }
 }
 
@@ -2938,10 +2956,59 @@ static void SpriteCB_BounceEffect(struct Sprite *sprite)
 #undef sBouncerSpriteId
 #undef sWhich
 
+static void StartBattlerMonEntryAnimation(struct Sprite *sprite)
+{
+    u8 battler = sprite->sBattler;
+
+    if (IsOnPlayerSide(battler))
+    {
+        BattleAnimateBackSprite(sprite, sprite->sSpeciesId);
+    }
+    else
+    {
+        if (!(gHitMarker & HITMARKER_NO_ANIMATIONS) || gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
+        {
+            if (HasTwoFramesAnimation(sprite->sSpeciesId))
+                StartSpriteAnim(sprite, 1);
+        }
+        BattleAnimateFrontSprite(sprite, sprite->sSpeciesId, TRUE, 1);
+    }
+
+    if (gBattleSpritesDataPtr->healthBoxesData[battler].waitForCry)
+        StartMonReleaseCryAfterShiny(battler);
+}
+
+static void SpriteCB_WaitShinyAndLoadMonSprite(struct Sprite *sprite)
+{
+    u8 battler = sprite->sBattler;
+
+    if (gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive)
+        return;
+    if (sprite->x2 != 0 || sprite->y2 != 0)
+        return;
+
+    if (!gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim)
+    {
+        TryShinyAnimation(battler, GetBattlerMon(battler));
+        return;
+    }
+
+    if (!gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim)
+        return;
+
+    StartBattlerMonEntryAnimation(sprite);
+}
+
 void SpriteCB_PlayerMonFromBall(struct Sprite *sprite)
 {
-    if (sprite->affineAnimEnded)
-        BattleAnimateBackSprite(sprite, sprite->sSpeciesId);
+    if (sprite->affineAnimEnded
+     && !gBattleSpritesDataPtr->healthBoxesData[sprite->sBattler].ballAnimActive)
+    {
+        if (GetMonData(GetBattlerMon(sprite->sBattler), MON_DATA_IS_SHINY))
+            sprite->callback = SpriteCB_WaitShinyAndLoadMonSprite;
+        else
+            BattleAnimateBackSprite(sprite, sprite->sSpeciesId);
+    }
 }
 
 void SpriteCB_PlayerMonSlideIn(struct Sprite *sprite)
@@ -2970,8 +3037,16 @@ void SpriteCB_PlayerMonSlideIn(struct Sprite *sprite)
         sprite->data[3] = 0;
         sprite->x = sprite->data[4];
         sprite->data[4] = 0;
-        sprite->callback = SpriteCB_PlayerMonFromBall;
-        PlayCry_ByMode(sprite->sSpeciesId, -25, CRY_MODE_NORMAL);
+        if (GetMonData(GetBattlerMon(sprite->sBattler), MON_DATA_IS_SHINY))
+        {
+            gBattleSpritesDataPtr->healthBoxesData[sprite->sBattler].waitForCry = TRUE;
+            sprite->callback = SpriteCB_WaitShinyAndLoadMonSprite;
+        }
+        else
+        {
+            sprite->callback = SpriteCB_PlayerMonFromBall;
+            PlayCry_ByMode(sprite->sSpeciesId, -25, CRY_MODE_NORMAL);
+        }
     }
 }
 

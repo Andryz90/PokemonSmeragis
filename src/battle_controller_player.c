@@ -1264,8 +1264,7 @@ static void Intro_WaitForShinyAnimAndHealthbox(u32 battler)
         gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = FALSE;
         gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].triedShinyMonAnim = FALSE;
         gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].finishedShinyMonAnim = FALSE;
-        FreeSpriteTilesByTag(ANIM_TAG_GOLD_STARS);
-        FreeSpritePaletteByTag(ANIM_TAG_GOLD_STARS);
+        TryFreeShinyStarsSpriteResources();
 
         HandleLowHpMusicChange(GetBattlerMon(battler), battler);
 
@@ -1284,12 +1283,14 @@ static void Intro_TryShinyAnimShowHealthbox(u32 battler)
 
     // Start shiny animation if applicable for 1st Pokémon
     if (!gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim
-     && !gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive)
+     && !gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive
+     && gSprites[gBattlerSpriteIds[battler]].callback != SpriteCB_PlayerMonSlideIn)
         TryShinyAnimation(battler, GetBattlerMon(battler));
 
     // Start shiny animation if applicable for 2nd Pokémon
     if (!gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].triedShinyMonAnim
-     && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].ballAnimActive)
+     && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].ballAnimActive
+     && gSprites[gBattlerSpriteIds[BATTLE_PARTNER(battler)]].callback != SpriteCB_PlayerMonSlideIn)
         TryShinyAnimation(BATTLE_PARTNER(battler), GetBattlerMon(BATTLE_PARTNER(battler)));
 
     // Show healthbox after ball anim
@@ -1374,8 +1375,7 @@ static void SwitchIn_CleanShinyAnimShowSubstitute(u32 battler)
         // Reset shiny anim (even if it didn't occur)
         gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = FALSE;
         gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = FALSE;
-        FreeSpriteTilesByTag(ANIM_TAG_GOLD_STARS);
-        FreeSpritePaletteByTag(ANIM_TAG_GOLD_STARS);
+        TryFreeShinyStarsSpriteResources();
 
         // Check if Substitute should be shown
         if (gBattleSpritesDataPtr->battlerData[battler].behindSubstitute)

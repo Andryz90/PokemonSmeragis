@@ -98608,6 +98608,10 @@
     "LevelMoves": [
       {
         "Level": 0,
+        "Move": "MOVE_LOW_KICK"
+      },
+      {
+        "Level": 1,
         "Move": "MOVE_CRUSH_CLAW"
       },
       {
@@ -98675,12 +98679,16 @@
         "Move": "MOVE_ROCK_TOMB"
       },
       {
-        "Level": 30,
-        "Move": "MOVE_ROAR"
+        "Level": 28,
+        "Move": "MOVE_DOUBLE_KICK"
+      },
+      {
+        "Level": 32,
+        "Move": "MOVE_ROCK_SLIDE"
       },
       {
         "Level": 36,
-        "Move": "MOVE_ROCK_SLIDE"
+        "Move": "MOVE_ROAR"
       },
       {
         "Level": 42,
@@ -98688,7 +98696,7 @@
       },
       {
         "Level": 48,
-        "Move": "MOVE_SCARY_FACE"
+        "Move": "MOVE_THUNDEROUS_KICK"
       },
       {
         "Level": 54,
@@ -98697,6 +98705,10 @@
       {
         "Level": 60,
         "Move": "MOVE_STONE_EDGE"
+      },
+      {
+        "Level": 62,
+        "Move": "MOVE_AXE_KICK"
       }
     ],
     "PreEvoMoves": [],

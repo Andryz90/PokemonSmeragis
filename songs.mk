@@ -1008,8 +1008,8 @@ $(MID_SUBDIR)/se_pokenav_on.s: %.s: %.mid
 $(MID_SUBDIR)/se_faint.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G127 -V110 -P5
 
-$(MID_SUBDIR)/se_shiny.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V095 -P5
+$(MID_SUBDIR)/se_shiny.s: sound/songs/midi/custom/se_shiny_crystal.s
+	cp $< $@
 
 $(MID_SUBDIR)/se_shop.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G127 -V090 -P5

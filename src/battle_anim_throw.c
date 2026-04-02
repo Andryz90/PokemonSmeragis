@@ -1,6 +1,7 @@
 #include "global.h"
 #include "battle.h"
 #include "battle_anim.h"
+#include "battle_main.h"
 #include "battle_controllers.h"
 #include "battle_interface.h"
 #include "decompress.h"
@@ -27,7 +28,8 @@ COMMON_DATA u32 gMonShrinkDuration = 0;
 COMMON_DATA u16 gMonShrinkDelta = 0;
 COMMON_DATA u16 gMonShrinkDistance = 0;
 
-enum {
+enum 
+{
     BALL_ROLL_1,
     BALL_PIVOT_1,
     BALL_ROLL_2,
@@ -37,16 +39,27 @@ enum {
     BALL_WAIT_NEXT_SHAKE
 };
 
-enum {
+enum 
+{
     MON_SHRINK,
     MON_SHRINK_STEP,
     MON_SHRINK_INVISIBLE,
     MON_SHRINK_FREE
 };
 
-enum {
-    SHINY_STAR_ENCIRCLE,
-    SHINY_STAR_DIAGONAL,
+enum 
+{
+    /*Screen*/
+    SHINY_SCREEN_DARKEN_MIN = 0,
+    SHINY_SCREEN_DARKEN_MAX = 20,
+    /*Sparkle*/
+    SHINY_SPARKLE_SCALE = 160,
+    SHINY_SPARKLE_RADIUS = 18,
+    SHINY_SPARKLE_Y_OFFSET = -1,
+    SHINY_START_DELAY = 8,
+    SHINY_SPAWN_INTERVAL = 5,
+    SHINY_SCREEN_DARKEN_DURATION = 6,
+    SHINY_SPARKLE_LIFETIME = 28,
 };
 
 static void AnimTask_UnusedLevelUpHealthBox_Step(u8);
@@ -55,6 +68,9 @@ static void AnimTask_ThrowBall_Step(u8);
 static void SpriteCB_Ball_Throw(struct Sprite *);
 static void AnimTask_ThrowBall_StandingTrainer_Step(u8);
 static void Task_PlayerThrow_Wait(u8);
+static u32 GetShinyScreenDarkenPalettesMask(u8 battler);
+static void StartShinyScreenDarken(u8 taskId);
+static void UpdateShinyScreenDarken(u8 taskId);
 static void SpriteCB_Ball_Arc(struct Sprite *);
 static void SpriteCB_Ball_Block(struct Sprite *);
 static void SpriteCB_Ball_MonShrink(struct Sprite *);
@@ -84,9 +100,8 @@ static void Task_FadeMon_ToBallColor(u8);
 static void Task_FadeMon_ToNormal(u8);
 static void Task_FadeMon_ToNormal_Step(u8);
 static void Task_ShinyStars(u8);
-static void SpriteCB_ShinyStars_Encircle(struct Sprite *);
-static void SpriteCB_ShinyStars_Diagonal(struct Sprite *);
 static void Task_ShinyStars_Wait(u8);
+static void SpriteCB_ShinyStars_Crystal(struct Sprite *);
 static void SpriteCB_PokeBlock_LiftArm(struct Sprite *);
 static void SpriteCB_PokeBlock_Arc(struct Sprite *);
 static void SpriteCB_ThrowPokeBlock_Free(struct Sprite *);
@@ -101,6 +116,53 @@ static void TimerBallOpenParticleAnimation(u8);
 static void PremierBallOpenParticleAnimation(u8);
 static void CB_CriticalCaptureThrownBallMovement(struct Sprite *sprite);
 static void SpriteCB_PokeBlock_Throw(struct Sprite *);
+
+static const union AffineAnimCmd sAffineAnim_ShinySparkle[] =
+{
+    AFFINEANIMCMD_FRAME(SHINY_SPARKLE_SCALE, SHINY_SPARKLE_SCALE, 0, 0),
+    AFFINEANIMCMD_END,
+};
+
+static const union AffineAnimCmd *const sAffineAnims_ShinySparkle[] =
+{
+    sAffineAnim_ShinySparkle,
+};
+
+static const struct SpriteTemplate sShinySparkleSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GOLD_STARS,
+    .paletteTag = ANIM_TAG_GOLD_STARS,
+    .oam = &gOamData_AffineNormal_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sAffineAnims_ShinySparkle,
+    .callback = SpriteCallbackDummy,
+};
+
+static bool32 ShouldWaitForOtherBattlerAnimationsBeforeShiny(u8 battler)
+{
+    u32 i;
+
+    for (i = 0; i < gBattlersCount; i++)
+    {
+        if (i == battler)
+            continue;
+
+        if (gBattleSpritesDataPtr->healthBoxesData[i].ballAnimActive
+         || gBattleSpritesDataPtr->healthBoxesData[i].specialAnimActive)
+            return TRUE;
+
+        if (!IsBattlerSpritePresent(i))
+            continue;
+
+        if ((gSprites[gBattlerSpriteIds[i]].callback != SpriteCallbackDummy
+          && gSprites[gBattlerSpriteIds[i]].callback != SpriteCallbackDummy_2)
+         || gSprites[gBattlerSpriteIds[i]].x2 != 0)
+            return TRUE;
+    }
+
+    return FALSE;
+}
 
 struct CaptureStar
 {
@@ -659,9 +721,6 @@ static const struct SpriteTemplate sSafariRockSpriteTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_PokeBlock_Throw,
 };
-
-extern const struct SpriteTemplate gWishStarSpriteTemplate;
-extern const struct SpriteTemplate gMiniTwinklingStarSpriteTemplate;
 
 // This is an unused function, but it seems likely that it was
 // intended to be an additional effect during the level-up animation.
@@ -2412,22 +2471,89 @@ void AnimTask_SetTargetToEffectBattler(u8 taskId)
     DestroyAnimVisualTask(taskId);
 }
 
-#define tBattler   data[0]
-#define tStarMove  data[1]
-#define tStarTimer data[10]
-#define tStarIdx   data[11]
-#define tNumStars  data[12]
-#define tTimer     data[13]
+#define tBattler     data[0]
+#define tSpawnTimer  data[10]
+#define tStarIdx     data[11]
+#define tNumStars    data[12]
+#define tDelayTimer  data[13]
+#define tScreenDarkenCoeff data[14]
+#define tScreenDarkenTimer data[15]
 
-#define sTaskId data[0]
-#define sPhase  data[1] // For encircling stars
-#define sTimer  data[1] // For diagnoal stars
+#define sTaskId       data[0]
+#define sLifetime     data[1]
+#define sBlinkCounter data[2]
+#define sPhase        data[3]
+#define sRadius       data[4]
+
+static const u8 sCrystalShinySparklePhases[] =
+{
+      0,  43,  85,
+    128, 171, 213,
+};
+
+static u32 GetShinyScreenDarkenPalettesMask(u8 battler)
+{
+    u32 selectedPalettes = PALETTES_ALL;
+    u32 battlerPal;
+    u32 sparklePal;
+
+    // Darken almost the whole scene, but keep the shiny battler and sparkle palette readable.
+    if (IsBattlerSpriteVisible(battler))
+    {
+        battlerPal = gSprites[gBattlerSpriteIds[battler]].oam.paletteNum + 16;
+        selectedPalettes &= ~(1u << battlerPal);
+    }
+
+    sparklePal = IndexOfSpritePaletteTag(ANIM_TAG_GOLD_STARS);
+    if (sparklePal != 0xFF)
+        selectedPalettes &= ~(1u << (sparklePal + 16));
+
+    return selectedPalettes;
+}
+
+static void StartShinyScreenDarken(u8 taskId)
+{
+    if (gTasks[taskId].tScreenDarkenTimer == 0)
+        gTasks[taskId].tScreenDarkenTimer = SHINY_SCREEN_DARKEN_DURATION;
+}
+
+static void UpdateShinyScreenDarken(u8 taskId)
+{
+    u8 coeff = 0;
+    u8 timer = gTasks[taskId].tScreenDarkenTimer;
+    u8 range = SHINY_SCREEN_DARKEN_MAX - SHINY_SCREEN_DARKEN_MIN;
+
+    if (timer > 0)
+    {
+        u8 elapsed = SHINY_SCREEN_DARKEN_DURATION - timer;
+        u8 fadeInFrames = (SHINY_SCREEN_DARKEN_DURATION + 1) / 2;
+        u8 fadeOutFrames = SHINY_SCREEN_DARKEN_DURATION - fadeInFrames;
+
+        if (elapsed < fadeInFrames)
+        {
+            coeff = SHINY_SCREEN_DARKEN_MIN
+                  + ((range * (elapsed + 1) + fadeInFrames - 1) / fadeInFrames);
+        }
+        else if (fadeOutFrames != 0)
+        {
+            coeff = SHINY_SCREEN_DARKEN_MIN
+                  + ((range * (SHINY_SCREEN_DARKEN_DURATION - elapsed - 1)) / fadeOutFrames);
+        }
+
+        gTasks[taskId].tScreenDarkenTimer--;
+    }
+
+    BlendPalettes(GetShinyScreenDarkenPalettesMask(gTasks[taskId].tBattler), coeff, RGB_BLACK);
+    gTasks[taskId].tScreenDarkenCoeff = coeff;
+}
 
 void TryShinyAnimation(u8 battler, struct Pokemon *mon)
 {
     bool8 isShiny;
-    u8 taskCirc, taskDgnl;
     struct Pokemon* illusionMon;
+
+    if (ShouldWaitForOtherBattlerAnimationsBeforeShiny(battler))
+        return;
 
     isShiny = GetMonData(mon, MON_DATA_IS_SHINY);
     gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = TRUE;
@@ -2445,12 +2571,7 @@ void TryShinyAnimation(u8 battler, struct Pokemon *mon)
                 LoadSpritePalette(&gBattleAnimPaletteTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
             }
 
-            taskCirc = CreateTask(Task_ShinyStars, 10);
-            taskDgnl = CreateTask(Task_ShinyStars, 10);
-            gTasks[taskCirc].tBattler = battler;
-            gTasks[taskDgnl].tBattler = battler;
-            gTasks[taskCirc].tStarMove = SHINY_STAR_ENCIRCLE;
-            gTasks[taskDgnl].tStarMove = SHINY_STAR_DIAGONAL;
+            gTasks[CreateTask(Task_ShinyStars, 10)].tBattler = battler;
             return;
         }
     }
@@ -2461,15 +2582,14 @@ void TryShinyAnimation(u8 battler, struct Pokemon *mon)
 static void Task_ShinyStars(u8 taskId)
 {
     u8 battler;
-    u8 x, y;
+    s16 x, y;
     u8 spriteId;
-    u16 timer;
-    s16 starIdx;
-    u8 pan;
+    u8 subpriority;
+    const struct SpriteTemplate *spriteTemplate;
 
-    if (gTasks[taskId].tTimer < 60)
+    if (gTasks[taskId].tDelayTimer < SHINY_START_DELAY)
     {
-        gTasks[taskId].tTimer++;
+        gTasks[taskId].tDelayTimer++;
         return;
     }
 
@@ -2477,82 +2597,68 @@ static void Task_ShinyStars(u8 taskId)
     if (gBattleSpritesDataPtr->animationData->numBallParticles)
         return;
 
-    timer = gTasks[taskId].tStarTimer++;
-    if (timer % 4) // Create sprite 1 of every 4 frames
+    battler = gTasks[taskId].tBattler;
+    UpdateShinyScreenDarken(taskId);
+
+    if (gTasks[taskId].tStarIdx >= ARRAY_COUNT(sCrystalShinySparklePhases))
+    {
+        gTasks[taskId].func = Task_ShinyStars_Wait;
+        return;
+    }
+
+    if ((gTasks[taskId].tSpawnTimer++ % SHINY_SPAWN_INTERVAL) != 0)
         return;
 
-    battler = gTasks[taskId].tBattler;
     x = GetBattlerSpriteCoord(battler, BATTLER_COORD_X);
-    y = GetBattlerSpriteCoord(battler, BATTLER_COORD_Y);
+    y = GetBattlerSpriteCoord(battler, BATTLER_COORD_Y) + SHINY_SPARKLE_Y_OFFSET;
+    spriteTemplate = &sShinySparkleSpriteTemplate;
+    subpriority = gSprites[gBattlerSpriteIds[battler]].subpriority;
 
-    starIdx = gTasks[taskId].tStarIdx;
-    if (starIdx == 0) // Big star
-    {
-        spriteId = CreateSprite(&gWishStarSpriteTemplate, x, y, 5);
-    }
-    else if (starIdx >= 0 && gTasks[taskId].tStarIdx < 4) // Medium star
-    {
-        spriteId = CreateSprite(&gMiniTwinklingStarSpriteTemplate, x, y, 5);
-        gSprites[spriteId].oam.tileNum += 4;
-    }
-    else // Small star
-    {
-        spriteId = CreateSprite(&gMiniTwinklingStarSpriteTemplate, x, y, 5);
-        gSprites[spriteId].oam.tileNum += 5;
-    }
-
-    if (gTasks[taskId].tStarMove == SHINY_STAR_ENCIRCLE)
-    {
-        gSprites[spriteId].callback = SpriteCB_ShinyStars_Encircle;
-    }
-    else
-    {
-        gSprites[spriteId].callback = SpriteCB_ShinyStars_Diagonal;
-        gSprites[spriteId].x2 = -32;
-        gSprites[spriteId].y2 = 32;
-        gSprites[spriteId].invisible = TRUE;
-        if (gTasks[taskId].tStarIdx == 0)
-        {
-            if (IsOnPlayerSide(battler))
-                pan = -64;
-            else
-                pan = 63;
-
-            PlaySE12WithPanning(SE_SHINY, pan);
-        }
-    }
-
-    gSprites[spriteId].sTaskId = taskId;
-    gTasks[taskId].tStarIdx++;
+    spriteId = CreateSprite(spriteTemplate, x, y, subpriority);
     if (spriteId != MAX_SPRITES)
-        gTasks[taskId].tNumStars++;
+    {
+        if (gTasks[taskId].tStarIdx == 0)
+            StartShinyScreenDarken(taskId);
 
-    if (gTasks[taskId].tStarIdx == 5)
-        gTasks[taskId].func = Task_ShinyStars_Wait;
+        gSprites[spriteId].callback = SpriteCB_ShinyStars_Crystal;
+        gSprites[spriteId].invisible = FALSE;
+        gSprites[spriteId].sTaskId = taskId;
+        gSprites[spriteId].sPhase = sCrystalShinySparklePhases[gTasks[taskId].tStarIdx];
+        gSprites[spriteId].sRadius = SHINY_SPARKLE_RADIUS;
+        gSprites[spriteId].x2 = Cos(gSprites[spriteId].sPhase, gSprites[spriteId].sRadius);
+        gSprites[spriteId].y2 = Sin(gSprites[spriteId].sPhase, gSprites[spriteId].sRadius);
+        gTasks[taskId].tNumStars++;
+        PlaySE(MUS_SHINY_CRYSTAL);
+    }
+
+    gTasks[taskId].tStarIdx++;
 }
 
 static void Task_ShinyStars_Wait(u8 taskId)
 {
     u8 battler;
 
-    if (gTasks[taskId].tNumStars == 0)
-    {
-        if (gTasks[taskId].tStarMove == SHINY_STAR_DIAGONAL)
-        {
-            battler = gTasks[taskId].tBattler;
-            gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = TRUE;
-        }
+    UpdateShinyScreenDarken(taskId);
 
+    if (gTasks[taskId].tNumStars == 0
+     && gTasks[taskId].tScreenDarkenCoeff == 0)
+    {
+        battler = gTasks[taskId].tBattler;
+        BlendPalettes(GetShinyScreenDarkenPalettesMask(battler), 0, RGB_BLACK);
+        gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = TRUE;
         DestroyTask(taskId);
     }
 }
 
-static void SpriteCB_ShinyStars_Encircle(struct Sprite *sprite)
+static void SpriteCB_ShinyStars_Crystal(struct Sprite *sprite)
 {
-    sprite->x2 = Sin(sprite->sPhase, 24);
-    sprite->y2 = Cos(sprite->sPhase, 24);
-    sprite->sPhase += 12;
-    if (sprite->sPhase > 255)
+    if (++sprite->sBlinkCounter >= 2)
+    {
+        sprite->invisible ^= 1;
+        sprite->sBlinkCounter = 0;
+    }
+
+    if (++sprite->sLifetime > SHINY_SPARKLE_LIFETIME)
     {
         gTasks[sprite->sTaskId].tNumStars--;
         FreeSpriteOamMatrix(sprite);
@@ -2560,37 +2666,19 @@ static void SpriteCB_ShinyStars_Encircle(struct Sprite *sprite)
     }
 }
 
-static void SpriteCB_ShinyStars_Diagonal(struct Sprite *sprite)
-{
-    // Delayed four frames to de-sync from encircling stars
-    if (sprite->sTimer < 4)
-    {
-        sprite->sTimer++;
-    }
-    else
-    {
-        sprite->invisible = FALSE;
-        sprite->x2 += 5;
-        sprite->y2 -= 5;
-        if (sprite->x2 > 32)
-        {
-            gTasks[sprite->sTaskId].tNumStars--;
-            FreeSpriteOamMatrix(sprite);
-            DestroySprite(sprite);
-        }
-    }
-}
-
 #undef tBattler
-#undef tStarMove
-#undef tStarTimer
+#undef tSpawnTimer
 #undef tStarIdx
 #undef tNumStars
-#undef tTimer
+#undef tDelayTimer
+#undef tScreenDarkenCoeff
+#undef tScreenDarkenTimer
 
 #undef sTaskId
+#undef sLifetime
+#undef sBlinkCounter
 #undef sPhase
-#undef sTimer
+#undef sRadius
 
 void AnimTask_LoadPokeblockGfx(u8 taskId)
 {
@@ -2769,4 +2857,3 @@ static void CB_CriticalCaptureThrownBallMovement(struct Sprite *sprite)
         sprite->callback = SpriteCB_Ball_Bounce_Step;
     }
 }
-

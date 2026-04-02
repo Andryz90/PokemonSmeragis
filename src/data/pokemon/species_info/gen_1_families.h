@@ -7019,7 +7019,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggMoveLearnset = sMeowthEggMoveLearnset,
         .formSpeciesIdTable = sMeowthFormSpeciesIdTable,
         .formChangeTable = sMeowthFormChangeTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_PERSIAN}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_PERSIAN}),
     },
 
     [SPECIES_PERSIAN] =
@@ -15089,7 +15089,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sHorseaLevelUpLearnset,
         .teachableLearnset = sHorseaTeachableLearnset,
         .eggMoveLearnset = sHorseaEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_SEADRA}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_SEADRA}),
     },
 
     [SPECIES_SEADRA] =

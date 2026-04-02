@@ -16973,7 +16973,8 @@ static const struct LevelUpMove sLycanrocMidnightLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sLycanrocDuskLevelUpLearnset[] = {
-        LEVEL_UP_MOVE(0, MOVE_CRUSH_CLAW),
+        LEVEL_UP_MOVE(0, MOVE_LOW_KICK),
+        LEVEL_UP_MOVE(1, MOVE_CRUSH_CLAW),
         LEVEL_UP_MOVE(1, MOVE_ACCELEROCK),
         LEVEL_UP_MOVE(1, MOVE_SUCKER_PUNCH),
         LEVEL_UP_MOVE(1, MOVE_TAUNT),
@@ -16990,12 +16991,14 @@ static const struct LevelUpMove sLycanrocDuskLevelUpLearnset[] = {
         LEVEL_UP_MOVE(16, MOVE_HOWL),
         LEVEL_UP_MOVE(20, MOVE_BITE),
         LEVEL_UP_MOVE(24, MOVE_ROCK_TOMB),
-        LEVEL_UP_MOVE(30, MOVE_ROAR),
-        LEVEL_UP_MOVE(36, MOVE_ROCK_SLIDE),
+        LEVEL_UP_MOVE(28, MOVE_DOUBLE_KICK),
+        LEVEL_UP_MOVE(32, MOVE_ROCK_SLIDE),
+        LEVEL_UP_MOVE(36, MOVE_ROAR),
         LEVEL_UP_MOVE(42, MOVE_CRUNCH),
-        LEVEL_UP_MOVE(48, MOVE_SCARY_FACE),
+        LEVEL_UP_MOVE(48, MOVE_THUNDEROUS_KICK),
         LEVEL_UP_MOVE(54, MOVE_STEALTH_ROCK),
         LEVEL_UP_MOVE(60, MOVE_STONE_EDGE),
+        LEVEL_UP_MOVE(62, MOVE_AXE_KICK),
         LEVEL_UP_END
 };
 #endif //P_FAMILY_ROCKRUFF

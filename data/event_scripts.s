@@ -1094,6 +1094,32 @@ Common_EventScript_LegendaryFlewAway::
 	release
 	end
 
+ChooseTime_EventScript_Text::
+	.string "Choose the time of the day you want.$"
+
+TimeMorning_Text::
+	.string "MORNING$"
+
+TimeDay_Text::
+	.string "DAY$"
+
+TimeEvening_Text::
+	.string "EVENING$"
+
+TimeNight_Text::
+	.string "NIGHT$"
+
+Common_EventScript_ReleaseAllEnd::
+	releaseall
+	end
+
+Common_EventScript_ReleaseEnd::
+	release
+	end
+
+Common_EventScript_End::
+	end
+
 Common_EventScript_PokemonPartner::
 	lock
 	faceplayer

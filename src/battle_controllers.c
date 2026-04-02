@@ -35,6 +35,29 @@ COMMON_DATA void (*gBattlerControllerFuncs[MAX_BATTLERS_COUNT])(u32 battler) = {
 COMMON_DATA u8 gBattleControllerData[MAX_BATTLERS_COUNT] = {0}; // Used by the battle controllers to store misc sprite/task IDs for each battler
 COMMON_DATA void (*gBattlerControllerEndFuncs[MAX_BATTLERS_COUNT])(u32 battler) = {0}; // Controller's buffer complete function for each battler
 
+static bool32 IsAnyBattlerShinyAnimActive(void)
+{
+    u32 i;
+
+    for (i = 0; i < gBattlersCount; i++)
+    {
+        if (gBattleSpritesDataPtr->healthBoxesData[i].triedShinyMonAnim
+         && !gBattleSpritesDataPtr->healthBoxesData[i].finishedShinyMonAnim)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+void TryFreeShinyStarsSpriteResources(void)
+{
+    if (IsAnyBattlerShinyAnimActive())
+        return;
+
+    FreeSpriteTilesByTag(ANIM_TAG_GOLD_STARS);
+    FreeSpritePaletteByTag(ANIM_TAG_GOLD_STARS);
+}
+
 static void CreateTasksForSendRecvLinkBuffers(void);
 static void InitLinkBtlControllers(void);
 static void InitSinglePlayerBtlControllers(void);
@@ -3176,8 +3199,7 @@ bool32 TryShinyAnimAfterMonAnimUtil(u32 battler)
 
     gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = FALSE;
     gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = FALSE;
-    FreeSpriteTilesByTag(ANIM_TAG_GOLD_STARS);
-    FreeSpritePaletteByTag(ANIM_TAG_GOLD_STARS);
+    TryFreeShinyStarsSpriteResources();
 
     return TRUE;
 }
@@ -3204,7 +3226,9 @@ bool32 SwitchIn_WaitAndEndUtil(u32 battler)
 
 bool32 SwitchIn_HandleSoundAndEndUtil(u32 battler)
 {
-    if (gBattleSpritesDataPtr->healthBoxesData[battler].specialAnimActive || IsCryPlayingOrClearCrySongs())
+    if (gBattleSpritesDataPtr->healthBoxesData[battler].specialAnimActive
+     || gBattleSpritesDataPtr->healthBoxesData[battler].waitForCry
+     || IsCryPlayingOrClearCrySongs())
         return FALSE;
 
     if (gSprites[gBattlerSpriteIds[battler]].callback != SpriteCallbackDummy
@@ -3226,8 +3250,7 @@ bool32 SwitchIn_ShowHealthboxUtil(u32 battler)
 
     gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = FALSE;
     gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = FALSE;
-    FreeSpriteTilesByTag(ANIM_TAG_GOLD_STARS);
-    FreeSpritePaletteByTag(ANIM_TAG_GOLD_STARS);
+    TryFreeShinyStarsSpriteResources();
 
     if (side == B_SIDE_PLAYER)
     {

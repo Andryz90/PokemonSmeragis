@@ -347,6 +347,13 @@
 	callnative ScrCmd_gettimeofday, requests_effects=1
 	.endm
 
+	@ Update the time of the day as the input
+	@ 0 = MORNING, 1 = DAY, 2 = EVENING, 3 = NIGHT
+	.macro settimeofday time:req
+	callnative ScrFunc_settimeofday, requests_effects=1
+	.2byte \time
+	.endm
+
 	@ Plays the specified sound. Only one sound may play at a time, with newer ones interrupting older ones.
 	.macro playse song:req
 	.byte SCR_OP_PLAYSE
