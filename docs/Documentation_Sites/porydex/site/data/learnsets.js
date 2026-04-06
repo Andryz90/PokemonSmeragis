@@ -170580,8 +170580,11 @@ exports.BattleLearnsets = {
     },
     "lycanrocdusk": {
         "learnset": {
-            "crushclaw": [
+            "lowkick": [
                 "L0"
+            ],
+            "crushclaw": [
+                "L1"
             ],
             "accelerock": [
                 "L1"
@@ -170635,21 +170638,23 @@ exports.BattleLearnsets = {
                 "L24",
                 "M"
             ],
-            "roar": [
-                "L30",
-                "M"
+            "doublekick": [
+                "L28"
             ],
             "rockslide": [
-                "L36",
+                "L32",
                 "T"
+            ],
+            "roar": [
+                "L36",
+                "M"
             ],
             "crunch": [
                 "L42",
                 "M"
             ],
-            "scaryface": [
-                "L48",
-                "T"
+            "thunderouskick": [
+                "L48"
             ],
             "stealthrock": [
                 "L54",
@@ -170658,6 +170663,9 @@ exports.BattleLearnsets = {
             "stoneedge": [
                 "L60",
                 "M"
+            ],
+            "axekick": [
+                "L62"
             ],
             "brickbreak": [
                 "M"
@@ -170722,6 +170730,9 @@ exports.BattleLearnsets = {
             "helpinghand": [
                 "T"
             ],
+            "highjumpkick": [
+                "T"
+            ],
             "hypervoice": [
                 "T"
             ],
@@ -170743,6 +170754,9 @@ exports.BattleLearnsets = {
             "sandstorm": [
                 "T"
             ],
+            "scaryface": [
+                "T"
+            ],
             "stompingtantrum": [
                 "T"
             ],
@@ -170750,6 +170764,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "thunderfang": [
+                "T"
+            ],
+            "triplekick": [
                 "T"
             ],
             "bodyslam": [

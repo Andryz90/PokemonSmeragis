@@ -4212,7 +4212,7 @@ exports.BattlePokedex = {
             "Persian-Alola"
         ],
         "prevo": "Meowth",
-        "evoLevel": 24,
+        "evoLevel": 20,
         "evoType": "level",
         "evoCondition": ""
     },
@@ -8968,7 +8968,7 @@ exports.BattlePokedex = {
         "heightm": 1.2,
         "weightkg": 25.0,
         "prevo": "Horsea",
-        "evoLevel": 32,
+        "evoLevel": 20,
         "evoType": "level",
         "evoCondition": "",
         "evos": [
@@ -17619,7 +17619,7 @@ exports.BattlePokedex = {
         "prevo": "Wurmple",
         "evoLevel": 7,
         "evoType": "level",
-        "evoCondition": "pid upper modulo 10 lt",
+        "evoCondition": "pid upper modulo 10 lt or level 7 if pid upper modulo 10 eq",
         "evos": [
             "Dustox"
         ]

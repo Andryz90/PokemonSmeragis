@@ -128,13 +128,13 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
         }
     }
     else if (move.named('Raging Bull')) {
-        if (attacker.named('Tauros-Paldea-Combat')) {
+        if (attacker.named('Tauros-Paldea-Combat', 'Tauros-Paldea-Combat-Breed')) {
             type = 'Fighting';
         }
-        else if (attacker.named('Tauros-Paldea-Blaze')) {
+        else if (attacker.named('Tauros-Paldea-Blaze', 'Tauros-Paldea-Blaze-Breed')) {
             type = 'Fire';
         }
-        else if (attacker.named('Tauros-Paldea-Aqua')) {
+        else if (attacker.named('Tauros-Paldea-Aqua', 'Tauros-Paldea-Aqua-Breed')) {
             type = 'Water';
         }
     }
@@ -259,7 +259,8 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
     if ((defender.hasAbility('Wonder Guard') && typeEffectiveness <= 1) ||
         (move.hasType('Grass') && defender.hasAbility('Sap Sipper')) ||
         (move.hasType('Fire') && defender.hasAbility('Flash Fire', 'Well-Baked Body')) ||
-        (move.hasType('Water') && defender.hasAbility('Dry Skin', 'Storm Drain', 'Water Absorb')) ||
+        (move.hasType('Water') &&
+            defender.hasAbility('Dry Skin', 'Storm Drain', 'Water Absorb', 'Water Compaction')) ||
         (move.hasType('Electric') &&
             defender.hasAbility('Lightning Rod', 'Motor Drive', 'Volt Absorb')) ||
         (move.hasType('Ground') &&

@@ -282,10 +282,10 @@ function addSets(pokes, name) {
 	for (var i = 0; i < rows.length; i++) {
 		currentRow = rows[i].split(/[()@]/);
 		for (var j = 0; j < currentRow.length; j++) {
-			currentRow[j] = checkExeptions(currentRow[j].trim());
-			if (calc.SPECIES[9][currentRow[j].trim()] !== undefined) {
-				currentPoke = calc.SPECIES[9][currentRow[j].trim()];
-				currentPoke.name = currentRow[j].trim();
+			var speciesName = resolveImportedSpeciesName(currentRow[j].trim());
+			if (calc.SPECIES[9][speciesName] !== undefined) {
+				currentPoke = calc.SPECIES[9][speciesName];
+				currentPoke.name = speciesName;
 				currentPoke.item = getItem(currentRow, j + 1);
 				if (j === 1 && currentRow[0].trim()) {
 					currentPoke.nameProp = currentRow[0].trim();
@@ -311,7 +311,10 @@ function addSets(pokes, name) {
 	}
 }
 
-function checkExeptions(poke) {
+function resolveImportedSpeciesName(poke) {
+	if (calc.SPECIES[9][poke] !== undefined) {
+		return poke;
+	}
 	switch (poke) {
 	case 'Aegislash':
 		poke = "Aegislash-Blade";
@@ -337,10 +340,6 @@ function checkExeptions(poke) {
 	case 'Pikachu-Pop-Star':
 	case 'Pikachu-Rock-Star':
 		poke = "Pikachu";
-		break;
-	case 'Vivillon-Fancy':
-	case 'Vivillon-Pokeball':
-		poke = "Vivillon";
 		break;
 	case 'Florges-White':
 	case 'Florges-Blue':

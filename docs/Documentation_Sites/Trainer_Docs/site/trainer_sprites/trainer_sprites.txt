@@ -17,6 +17,7 @@
 ^\s*(?:Team\s+)?Aqua\s+Grunt\b => showdown:aquagrunt
 ^\s*(?:Team\s+)?Magma\s+Grunt\b => showdown:magmagrunt
 ^\s*(?:Team\s+)?Magma\s+Admin\s+Tabitha\b => showdown:tabitha
+^\s*Leader\s+Johto\s+BUGSY\b => showdown:bugsy
 
 # --- Cooltrainer / Ace Trainer ---
 ^\s*Cool\s*Trainer\s*M\b|^\s*Cooltrainer\s*M\b|^\s*Ace\s*Trainer\s*M\b => showdown:cooltrainerm | showdown:acetrainer-m | showdown:acetrainer

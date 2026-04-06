@@ -1,4 +1,4 @@
-import * as I from './interface';
+﻿import * as I from './interface';
 import {toID, extend, DeepPartial, assignWithout} from '../util';
 
 export interface SpeciesData {
@@ -21,21 +21,20 @@ export interface SpeciesData {
   readonly abilities?: {0: string}; // ability
   readonly forceTeraType?: I.TypeName;
 }
-
 const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Abra': {types: ['Psychic'], bs: {hp: 25, at: 20, df: 15, sa: 105, sd: 55, sp: 90}, weightkg: 19.5},
-  'Aerodactyl': {types: ['Rock', 'Flying'], bs: {hp: 80, at: 105, df: 65, sa: 60, sd: 0, sp: 130}, weightkg: 59.0},
+  'Aerodactyl': {types: ['Rock', 'Flying'], bs: {hp: 80, at: 105, df: 65, sa: 60, sd: 75, sp: 130}, weightkg: 59.0},
   'Aerodactyl-Mega': {types: ['Rock', 'Flying'], bs: {hp: 80, at: 135, df: 85, sa: 70, sd: 95, sp: 150}, weightkg: 79.0},
   'Alakazam': {types: ['Psychic'], bs: {hp: 55, at: 50, df: 45, sa: 135, sd: 0, sp: 120}, weightkg: 48.0},
-  'Alakazam-Mega': {types: ['Psychic'], bs: {hp: 55, at: 50, df: 65, sa: 175, sd: 0, sp: 150}, weightkg: 48.0},
+  'Alakazam-Mega': {types: ['Psychic'], bs: {hp: 55, at: 50, df: 65, sa: 175, sd: 10, sp: 150}, weightkg: 48.0},
   'Annihilape': {types: ['Fighting', 'Ghost'], bs: {hp: 110, at: 115, df: 80, sa: 50, sd: 90, sp: 90}, weightkg: 56.0},
-  'Arbok': {types: ['Poison', 'Dark'], bs: {hp: 60, at: 0, df: 69, sa: 65, sd: 79, sp: 80}, weightkg: 65.0},
+  'Arbok': {types: ['Poison', 'Dark'], bs: {hp: 60, at: 95, df: 69, sa: 65, sd: 79, sp: 80}, weightkg: 65.0},
   'Arcanine': {types: ['Fire'], bs: {hp: 90, at: 110, df: 80, sa: 100, sd: 80, sp: 100}, weightkg: 155.0},
   'Arcanine-Hisui': {types: ['Fire', 'Rock'], bs: {hp: 95, at: 115, df: 80, sa: 95, sd: 80, sp: 90}, weightkg: 168.0},
-  'Articuno': {types: ['Ice', 'Flying'], bs: {hp: 90, at: 85, df: 100, sa: 0, sd: 125, sp: 85}, weightkg: 55.4},
+  'Articuno': {types: ['Ice', 'Flying'], bs: {hp: 90, at: 85, df: 100, sa: 95, sd: 125, sp: 85}, weightkg: 55.4},
   'Articuno-Galar': {types: ['Psychic', 'Flying'], bs: {hp: 90, at: 85, df: 85, sa: 125, sd: 100, sp: 95}, weightkg: 50.9},
   'Beedrill': {types: ['Bug', 'Poison'], bs: {hp: 65, at: 0, df: 40, sa: 45, sd: 80, sp: 80}, weightkg: 29.5},
-  'Beedrill-Mega': {types: ['Bug', 'Poison'], bs: {hp: 65, at: 0, df: 40, sa: 15, sd: 80, sp: 150}, weightkg: 40.5},
+  'Beedrill-Mega': {types: ['Bug', 'Poison'], bs: {hp: 65, at: 60, df: 40, sa: 15, sd: 80, sp: 150}, weightkg: 40.5},
   'Bellossom': {types: ['Grass', 'Fairy'], bs: {hp: 85, at: 80, df: 85, sa: 100, sd: 90, sp: 110}, weightkg: 5.8},
   'Bellsprout': {types: ['Grass', 'Poison'], bs: {hp: 50, at: 75, df: 35, sa: 70, sd: 30, sp: 40}, weightkg: 4.0},
   'Blastoise': {types: ['Water'], bs: {hp: 79, at: 83, df: 100, sa: 85, sd: 105, sp: 78}, weightkg: 85.5},
@@ -43,8 +42,8 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Blastoise-Mega': {types: ['Water'], bs: {hp: 79, at: 103, df: 120, sa: 135, sd: 115, sp: 78}, weightkg: 101.1},
   'Blissey': {types: ['Normal'], bs: {hp: 255, at: 10, df: 10, sa: 75, sd: 135, sp: 55}, weightkg: 46.8},
   'Bulbasaur': {types: ['Grass', 'Poison'], bs: {hp: 45, at: 49, df: 49, sa: 65, sd: 65, sp: 45}, weightkg: 6.9},
-  'Butterfree': {types: ['Bug', 'Flying'], bs: {hp: 60, at: 45, df: 50, sa: 0, sd: 80, sp: 70}, weightkg: 32.0},
-  'Butterfree-Gigantamax': {types: ['Bug', 'Flying'], bs: {hp: 60, at: 45, df: 50, sa: 0, sd: 80, sp: 70}, weightkg: 0.0},
+  'Butterfree': {types: ['Bug', 'Flying'], bs: {hp: 60, at: 45, df: 50, sa: 90, sd: 80, sp: 70}, weightkg: 32.0},
+  'Butterfree-Gigantamax': {types: ['Bug', 'Flying'], bs: {hp: 60, at: 45, df: 50, sa: 90, sd: 80, sp: 70}, weightkg: 0.0},
   'Caterpie': {types: ['Bug'], bs: {hp: 45, at: 30, df: 35, sa: 20, sd: 20, sp: 45}, weightkg: 2.9},
   'Chansey': {types: ['Normal'], bs: {hp: 250, at: 5, df: 5, sa: 35, sd: 105, sp: 50}, weightkg: 34.6},
   'Charizard': {types: ['Fire', 'Flying'], bs: {hp: 78, at: 84, df: 78, sa: 109, sd: 85, sp: 100}, weightkg: 90.5},
@@ -53,7 +52,7 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Charizard-Mega-Y': {types: ['Fire', 'Flying'], bs: {hp: 78, at: 104, df: 78, sa: 159, sd: 115, sp: 100}, weightkg: 100.5},
   'Charmander': {types: ['Fire'], bs: {hp: 39, at: 52, df: 43, sa: 60, sd: 50, sp: 65}, weightkg: 8.5},
   'Charmeleon': {types: ['Fire'], bs: {hp: 58, at: 64, df: 58, sa: 80, sd: 65, sp: 80}, weightkg: 19.0},
-  'Clefable': {types: ['Normal'], bs: {hp: 95, at: 70, df: 73, sa: 0, sd: 90, sp: 60}, weightkg: 40.0},
+  'Clefable': {types: ['Normal'], bs: {hp: 95, at: 70, df: 73, sa: 95, sd: 90, sp: 60}, weightkg: 40.0},
   'Clefairy': {types: ['Normal'], bs: {hp: 70, at: 45, df: 48, sa: 60, sd: 65, sp: 35}, weightkg: 7.5},
   'Cleffa': {types: ['Normal'], bs: {hp: 50, at: 25, df: 28, sa: 45, sd: 55, sp: 15}, weightkg: 3.0},
   'Cloyster': {types: ['Water', 'Ice'], bs: {hp: 50, at: 95, df: 180, sa: 85, sd: 45, sp: 70}, weightkg: 132.5},
@@ -63,29 +62,30 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Diglett': {types: ['Ground'], bs: {hp: 10, at: 55, df: 25, sa: 35, sd: 45, sp: 95}, weightkg: 0.8},
   'Diglett-Alola': {types: ['Ground', 'Steel'], bs: {hp: 10, at: 55, df: 30, sa: 35, sd: 45, sp: 90}, weightkg: 1.0},
   'Ditto': {types: ['Normal'], bs: {hp: 48, at: 48, df: 48, sa: 48, sd: 48, sp: 48}, weightkg: 4.0},
-  'Dodrio': {types: ['Normal', 'Flying'], bs: {hp: 60, at: 110, df: 70, sa: 60, sd: 60, sp: 0}, weightkg: 85.2},
+  'Dodrio': {types: ['Normal', 'Flying'], bs: {hp: 60, at: 110, df: 70, sa: 60, sd: 60, sp: 110}, weightkg: 85.2},
   'Doduo': {types: ['Normal', 'Flying'], bs: {hp: 35, at: 85, df: 45, sa: 35, sd: 35, sp: 75}, weightkg: 39.2},
   'Dragonair': {types: ['Dragon'], bs: {hp: 61, at: 84, df: 65, sa: 70, sd: 70, sp: 70}, weightkg: 16.5},
   'Dragonite': {types: ['Dragon', 'Flying'], bs: {hp: 91, at: 134, df: 95, sa: 100, sd: 100, sp: 80}, weightkg: 210.0},
+  'Dragonite-Mega': {types: ['Dragon', 'Flying'], bs: {hp: 91, at: 134, df: 95, sa: 100, sd: 100, sp: 80}, weightkg: 210.0},
   'Dratini': {types: ['Dragon'], bs: {hp: 41, at: 64, df: 45, sa: 50, sd: 50, sp: 50}, weightkg: 3.3},
   'Drowzee': {types: ['Psychic', 'Dark'], bs: {hp: 60, at: 48, df: 45, sa: 63, sd: 80, sp: 42}, weightkg: 32.4},
   'Dugtrio': {types: ['Ground'], bs: {hp: 35, at: 0, df: 50, sa: 50, sd: 70, sp: 120}, weightkg: 33.3},
   'Dugtrio-Alola': {types: ['Ground', 'Steel'], bs: {hp: 35, at: 0, df: 60, sa: 50, sd: 70, sp: 110}, weightkg: 66.6},
-  'Eevee': {types: ['Normal'], bs: {hp: 55, at: 55, df: 50, sa: 0, sd: 65, sp: 55}, weightkg: 6.5},
+  'Eevee': {types: ['Normal'], bs: {hp: 55, at: 55, df: 50, sa: 45, sd: 65, sp: 55}, weightkg: 6.5},
   'Eevee-Gigantamax': {types: ['Normal'], bs: {hp: 55, at: 55, df: 50, sa: 45, sd: 65, sp: 55}, weightkg: 0.0},
   'Eevee-Partner': {types: ['Normal'], bs: {hp: 65, at: 75, df: 70, sa: 65, sd: 85, sp: 75}, weightkg: 6.5},
   'Ekans': {types: ['Poison'], bs: {hp: 35, at: 60, df: 44, sa: 40, sd: 54, sp: 55}, weightkg: 6.9},
   'Electabuzz': {types: ['Electric', 'Fighting'], bs: {hp: 65, at: 95, df: 57, sa: 95, sd: 85, sp: 105}, weightkg: 30.0},
   'Electivire': {types: ['Electric', 'Fighting'], bs: {hp: 75, at: 123, df: 67, sa: 95, sd: 85, sp: 105}, weightkg: 138.6},
-  'Electrode': {types: ['Electric', 'Steel'], bs: {hp: 60, at: 50, df: 70, sa: 100, sd: 80, sp: 0}, weightkg: 66.6},
-  'Electrode-Hisui': {types: ['Electric', 'Grass'], bs: {hp: 60, at: 50, df: 70, sa: 100, sd: 80, sp: 0}, weightkg: 71.0},
+  'Electrode': {types: ['Electric', 'Steel'], bs: {hp: 60, at: 50, df: 70, sa: 100, sd: 80, sp: 150}, weightkg: 66.6},
+  'Electrode-Hisui': {types: ['Electric', 'Grass'], bs: {hp: 60, at: 50, df: 70, sa: 100, sd: 80, sp: 150}, weightkg: 71.0},
   'Elekid': {types: ['Electric'], bs: {hp: 45, at: 63, df: 37, sa: 65, sd: 55, sp: 95}, weightkg: 23.5},
   'Espeon': {types: ['Psychic'], bs: {hp: 65, at: 65, df: 60, sa: 130, sd: 95, sp: 110}, weightkg: 26.5},
   'Exeggcute': {types: ['Grass', 'Psychic'], bs: {hp: 60, at: 40, df: 80, sa: 60, sd: 55, sp: 40}, weightkg: 2.5},
   'Exeggutor': {types: ['Grass', 'Psychic'], bs: {hp: 95, at: 95, df: 85, sa: 125, sd: 90, sp: 55}, weightkg: 120.0},
   'Exeggutor-Alola': {types: ['Grass', 'Dragon'], bs: {hp: 95, at: 105, df: 85, sa: 125, sd: 0, sp: 45}, weightkg: 415.6},
   'Farfetchd': {types: ['Fighting', 'Flying'], bs: {hp: 65, at: 100, df: 55, sa: 58, sd: 62, sp: 100}, weightkg: 15.0},
-  'Farfetchd-Galar': {types: ['Fighting'], bs: {hp: 80, at: 0, df: 60, sa: 30, sd: 52, sp: 70}, weightkg: 42.0},
+  'Farfetchd-Galar': {types: ['Fighting'], bs: {hp: 80, at: 5, df: 60, sa: 30, sd: 52, sp: 70}, weightkg: 42.0},
   'Fearow': {types: ['Normal', 'Flying'], bs: {hp: 65, at: 90, df: 65, sa: 61, sd: 61, sp: 100}, weightkg: 38.0},
   'Flareon': {types: ['Fire'], bs: {hp: 65, at: 130, df: 60, sa: 65, sd: 95, sp: 110}, weightkg: 25.0},
   'Gastly': {types: ['Ghost', 'Poison'], bs: {hp: 30, at: 35, df: 30, sa: 100, sd: 35, sp: 80}, weightkg: 0.1},
@@ -121,9 +121,9 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Jigglypuff': {types: ['Normal'], bs: {hp: 115, at: 45, df: 20, sa: 45, sd: 25, sp: 20}, weightkg: 5.5},
   'Jolteon': {types: ['Electric'], bs: {hp: 65, at: 65, df: 60, sa: 110, sd: 95, sp: 130}, weightkg: 24.5},
   'Jynx': {types: ['Ice', 'Psychic'], bs: {hp: 65, at: 50, df: 35, sa: 115, sd: 95, sp: 95}, weightkg: 40.6},
-  'Kabuto': {types: ['Rock', 'Water'], bs: {hp: 30, at: 80, df: 90, sa: 0, sd: 45, sp: 55}, weightkg: 11.5},
-  'Kabutops': {types: ['Rock', 'Water'], bs: {hp: 60, at: 115, df: 105, sa: 0, sd: 70, sp: 80}, weightkg: 40.5},
-  'Kadabra': {types: ['Psychic'], bs: {hp: 40, at: 35, df: 30, sa: 120, sd: 0, sp: 105}, weightkg: 56.5},
+  'Kabuto': {types: ['Rock', 'Water'], bs: {hp: 30, at: 80, df: 90, sa: 55, sd: 45, sp: 55}, weightkg: 11.5},
+  'Kabutops': {types: ['Rock', 'Water'], bs: {hp: 60, at: 115, df: 105, sa: 65, sd: 70, sp: 80}, weightkg: 40.5},
+  'Kadabra': {types: ['Psychic'], bs: {hp: 40, at: 35, df: 30, sa: 120, sd: 70, sp: 105}, weightkg: 56.5},
   'Kakuna': {types: ['Bug', 'Poison'], bs: {hp: 45, at: 25, df: 50, sa: 25, sd: 25, sp: 35}, weightkg: 10.0},
   'Kangaskhan': {types: ['Normal'], bs: {hp: 105, at: 95, df: 80, sa: 40, sd: 80, sp: 90}, weightkg: 80.0},
   'Kangaskhan-Mega': {types: ['Normal'], bs: {hp: 105, at: 125, df: 100, sa: 60, sd: 100, sp: 100}, weightkg: 100.0},
@@ -159,11 +159,11 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Meowth-Gigantamax': {types: ['Normal'], bs: {hp: 40, at: 45, df: 35, sa: 40, sd: 40, sp: 90}, weightkg: 0.0},
   'Metapod': {types: ['Bug'], bs: {hp: 50, at: 20, df: 55, sa: 25, sd: 25, sp: 30}, weightkg: 9.9},
   'Mew': {types: ['Psychic'], bs: {hp: 100, at: 100, df: 100, sa: 100, sd: 100, sp: 100}, weightkg: 4.0},
-  'Mewtwo': {types: ['Psychic'], bs: {hp: 106, at: 110, df: 90, sa: 154, sd: 0, sp: 130}, weightkg: 122.0},
+  'Mewtwo': {types: ['Psychic'], bs: {hp: 106, at: 110, df: 90, sa: 154, sd: 90, sp: 130}, weightkg: 122.0},
   'Mewtwo-Mega-X': {types: ['Psychic', 'Fighting'], bs: {hp: 106, at: 190, df: 100, sa: 154, sd: 100, sp: 130}, weightkg: 127.0},
   'Mewtwo-Mega-Y': {types: ['Psychic'], bs: {hp: 106, at: 150, df: 70, sa: 194, sd: 120, sp: 140}, weightkg: 33.0},
   'Mime-Jr': {types: ['Psychic', 'Fairy'], bs: {hp: 35, at: 25, df: 45, sa: 70, sd: 90, sp: 60}, weightkg: 13.0},
-  'Moltres': {types: ['Fire', 'Flying'], bs: {hp: 90, at: 100, df: 90, sa: 125, sd: 0, sp: 90}, weightkg: 60.0},
+  'Moltres': {types: ['Fire', 'Flying'], bs: {hp: 90, at: 100, df: 90, sa: 125, sd: 85, sp: 90}, weightkg: 60.0},
   'Moltres-Galar': {types: ['Dark', 'Flying'], bs: {hp: 90, at: 85, df: 90, sa: 100, sd: 125, sp: 90}, weightkg: 66.0},
   'Mr-Mime': {types: ['Psychic', 'Fairy'], bs: {hp: 70, at: 45, df: 65, sa: 100, sd: 120, sp: 90}, weightkg: 54.5},
   'Mr-Mime-Galar': {types: ['Ice', 'Psychic'], bs: {hp: 50, at: 65, df: 65, sa: 90, sd: 90, sp: 100}, weightkg: 56.8},
@@ -180,8 +180,8 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Ninetales': {types: ['Fire', 'Fairy'], bs: {hp: 73, at: 76, df: 75, sa: 100, sd: 90, sp: 109}, weightkg: 19.9},
   'Ninetales-Alola': {types: ['Ice', 'Fairy'], bs: {hp: 73, at: 55, df: 90, sa: 100, sd: 90, sp: 109}, weightkg: 19.9},
   'Oddish': {types: ['Grass', 'Poison'], bs: {hp: 45, at: 50, df: 55, sa: 75, sd: 65, sp: 30}, weightkg: 5.4},
-  'Omanyte': {types: ['Rock', 'Water'], bs: {hp: 35, at: 40, df: 100, sa: 90, sd: 0, sp: 35}, weightkg: 7.5},
-  'Omastar': {types: ['Rock', 'Water'], bs: {hp: 70, at: 60, df: 125, sa: 115, sd: 0, sp: 55}, weightkg: 35.0},
+  'Omanyte': {types: ['Rock', 'Water'], bs: {hp: 35, at: 40, df: 100, sa: 90, sd: 55, sp: 35}, weightkg: 7.5},
+  'Omastar': {types: ['Rock', 'Water'], bs: {hp: 70, at: 60, df: 125, sa: 115, sd: 70, sp: 55}, weightkg: 35.0},
   'Onix': {types: ['Rock', 'Ground'], bs: {hp: 50, at: 90, df: 160, sa: 30, sd: 45, sp: 70}, weightkg: 210.0},
   'Paras': {types: ['Bug', 'Grass'], bs: {hp: 50, at: 70, df: 55, sa: 45, sd: 55, sp: 25}, weightkg: 5.4},
   'Parasect': {types: ['Bug', 'Grass'], bs: {hp: 80, at: 95, df: 80, sa: 60, sd: 80, sp: 30}, weightkg: 29.5},
@@ -191,26 +191,26 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Pichu': {types: ['Electric'], bs: {hp: 20, at: 40, df: 15, sa: 35, sd: 35, sp: 60}, weightkg: 2.0},
   'Pichu-Spiky-Eared': {types: ['Electric'], bs: {hp: 20, at: 40, df: 15, sa: 35, sd: 35, sp: 60}, weightkg: 2.0},
   'Pidgeot': {types: ['Normal', 'Flying'], bs: {hp: 83, at: 80, df: 80, sa: 95, sd: 80, sp: 0}, weightkg: 39.5},
-  'Pidgeot-Mega': {types: ['Normal', 'Flying'], bs: {hp: 83, at: 80, df: 85, sa: 145, sd: 90, sp: 0}, weightkg: 50.5},
+  'Pidgeot-Mega': {types: ['Normal', 'Flying'], bs: {hp: 83, at: 80, df: 85, sa: 145, sd: 90, sp: 20}, weightkg: 50.5},
   'Pidgeotto': {types: ['Normal', 'Flying'], bs: {hp: 63, at: 60, df: 60, sa: 70, sd: 60, sp: 71}, weightkg: 30.0},
   'Pidgey': {types: ['Normal', 'Flying'], bs: {hp: 40, at: 45, df: 40, sa: 45, sd: 40, sp: 56}, weightkg: 1.8},
-  'Pikachu': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Alola-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Belle': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Cosplay': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Gigantamax': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 0.0},
-  'Pikachu-Hoenn-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Kalos-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Libre': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Original-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
+  'Pikachu': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Alola-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Belle': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Cosplay': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Gigantamax': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 0.0},
+  'Pikachu-Hoenn-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Kalos-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Libre': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Original-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
   'Pikachu-Partner': {types: ['Electric'], bs: {hp: 45, at: 80, df: 50, sa: 75, sd: 60, sp: 120}, weightkg: 6.0},
-  'Pikachu-Partner-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Ph-D': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Pop-Star': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Rock-Star': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Sinnoh-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-Unova-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
-  'Pikachu-World-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 0, sa: 50, sd: 0, sp: 90}, weightkg: 6.0},
+  'Pikachu-Partner-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Ph-D': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Pop-Star': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Rock-Star': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Sinnoh-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-Unova-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
+  'Pikachu-World-Cap': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 50, sd: 50, sp: 90}, weightkg: 6.0},
   'Pinsir': {types: ['Bug', 'Fighting'], bs: {hp: 65, at: 125, df: 100, sa: 55, sd: 70, sp: 90}, weightkg: 55.0},
   'Pinsir-Mega': {types: ['Bug', 'Flying'], bs: {hp: 65, at: 155, df: 120, sa: 65, sd: 90, sp: 115}, weightkg: 59.0},
   'Politoed': {types: ['Water', 'Grass'], bs: {hp: 90, at: 75, df: 90, sa: 90, sd: 100, sp: 50}, weightkg: 33.9},
@@ -226,6 +226,8 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Psyduck': {types: ['Water'], bs: {hp: 50, at: 52, df: 48, sa: 70, sd: 50, sp: 60}, weightkg: 19.6},
   'Raichu': {types: ['Electric'], bs: {hp: 60, at: 110, df: 55, sa: 90, sd: 80, sp: 0}, weightkg: 30.0},
   'Raichu-Alola': {types: ['Electric', 'Psychic'], bs: {hp: 60, at: 85, df: 50, sa: 110, sd: 85, sp: 0}, weightkg: 21.0},
+  'Raichu-Mega-X': {types: ['Electric'], bs: {hp: 60, at: 110, df: 55, sa: 90, sd: 80, sp: 0}, weightkg: 30.0},
+  'Raichu-Mega-Y': {types: ['Electric'], bs: {hp: 60, at: 110, df: 55, sa: 90, sd: 80, sp: 0}, weightkg: 30.0},
   'Rapidash': {types: ['Fire', 'Normal'], bs: {hp: 65, at: 105, df: 70, sa: 70, sd: 70, sp: 120}, weightkg: 95.0},
   'Rapidash-Galar': {types: ['Psychic', 'Fairy'], bs: {hp: 65, at: 80, df: 70, sa: 110, sd: 70, sp: 115}, weightkg: 80.0},
   'Raticate': {types: ['Normal'], bs: {hp: 55, at: 81, df: 60, sa: 50, sd: 70, sp: 97}, weightkg: 18.5},
@@ -256,8 +258,8 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Slowpoke': {types: ['Water', 'Psychic'], bs: {hp: 90, at: 65, df: 65, sa: 40, sd: 40, sp: 15}, weightkg: 36.0},
   'Slowpoke-Galar': {types: ['Psychic'], bs: {hp: 90, at: 65, df: 65, sa: 40, sd: 40, sp: 15}, weightkg: 36.0},
   'Smoochum': {types: ['Ice', 'Psychic'], bs: {hp: 45, at: 30, df: 15, sa: 85, sd: 65, sp: 65}, weightkg: 6.0},
-  'Snorlax': {types: ['Normal'], bs: {hp: 160, at: 110, df: 65, sa: 65, sd: 0, sp: 30}, weightkg: 460.0},
-  'Snorlax-Gmax': {types: ['Normal'], bs: {hp: 160, at: 110, df: 65, sa: 65, sd: 0, sp: 30}, weightkg: 0.0},
+  'Snorlax': {types: ['Normal'], bs: {hp: 160, at: 110, df: 65, sa: 65, sd: 110, sp: 30}, weightkg: 460.0},
+  'Snorlax-Gmax': {types: ['Normal'], bs: {hp: 160, at: 110, df: 65, sa: 65, sd: 110, sp: 30}, weightkg: 0.0},
   'Spearow': {types: ['Normal', 'Flying'], bs: {hp: 40, at: 60, df: 30, sa: 31, sd: 31, sp: 70}, weightkg: 2.0},
   'Squirtle': {types: ['Water'], bs: {hp: 44, at: 48, df: 65, sa: 50, sd: 64, sp: 43}, weightkg: 9.0},
   'Starmie': {types: ['Water', 'Psychic'], bs: {hp: 60, at: 75, df: 85, sa: 105, sd: 95, sp: 115}, weightkg: 80.0},
@@ -268,8 +270,11 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Tangela': {types: ['Grass'], bs: {hp: 65, at: 55, df: 115, sa: 100, sd: 40, sp: 60}, weightkg: 35.0},
   'Tangrowth': {types: ['Grass'], bs: {hp: 100, at: 100, df: 125, sa: 110, sd: 50, sp: 50}, weightkg: 128.6},
   'Tauros': {types: ['Normal'], bs: {hp: 75, at: 100, df: 95, sa: 40, sd: 70, sp: 110}, weightkg: 88.4},
+  'Tauros-Paldea-Aqua': {types: ['Fighting', 'Water'], bs: {hp: 75, at: 110, df: 105, sa: 30, sd: 70, sp: 100}, weightkg: 110.0},
   'Tauros-Paldea-Aqua-Breed': {types: ['Fighting', 'Water'], bs: {hp: 75, at: 110, df: 105, sa: 30, sd: 70, sp: 100}, weightkg: 110.0},
+  'Tauros-Paldea-Blaze': {types: ['Fighting', 'Fire'], bs: {hp: 75, at: 110, df: 105, sa: 30, sd: 70, sp: 100}, weightkg: 85.0},
   'Tauros-Paldea-Blaze-Breed': {types: ['Fighting', 'Fire'], bs: {hp: 75, at: 110, df: 105, sa: 30, sd: 70, sp: 100}, weightkg: 85.0},
+  'Tauros-Paldea-Combat': {types: ['Fighting'], bs: {hp: 75, at: 110, df: 105, sa: 30, sd: 70, sp: 100}, weightkg: 115.0},
   'Tauros-Paldea-Combat-Breed': {types: ['Fighting'], bs: {hp: 75, at: 110, df: 105, sa: 30, sd: 70, sp: 100}, weightkg: 115.0},
   'Tentacool': {types: ['Water', 'Poison'], bs: {hp: 40, at: 40, df: 35, sa: 70, sd: 80, sp: 70}, weightkg: 45.5},
   'Tentacruel': {types: ['Water', 'Poison'], bs: {hp: 80, at: 70, df: 65, sa: 100, sd: 100, sp: 100}, weightkg: 55.0},
@@ -292,8 +297,8 @@ const RBY_PATCH: {[name: string]: SpeciesData} = {
   'Weepinbell': {types: ['Grass', 'Poison'], bs: {hp: 65, at: 90, df: 50, sa: 85, sd: 45, sp: 55}, weightkg: 6.4},
   'Weezing': {types: ['Poison'], bs: {hp: 65, at: 90, df: 120, sa: 85, sd: 70, sp: 60}, weightkg: 9.5},
   'Weezing-Galar': {types: ['Poison', 'Fairy'], bs: {hp: 65, at: 90, df: 120, sa: 85, sd: 70, sp: 60}, weightkg: 16.0},
-  'Wigglytuff': {types: ['Normal'], bs: {hp: 140, at: 70, df: 45, sa: 0, sd: 50, sp: 45}, weightkg: 12.0},
-  'Zapdos': {types: ['Electric', 'Flying'], bs: {hp: 90, at: 90, df: 85, sa: 125, sd: 0, sp: 100}, weightkg: 52.6},
+  'Wigglytuff': {types: ['Normal'], bs: {hp: 140, at: 70, df: 45, sa: 85, sd: 50, sp: 45}, weightkg: 12.0},
+  'Zapdos': {types: ['Electric', 'Flying'], bs: {hp: 90, at: 90, df: 85, sa: 125, sd: 90, sp: 100}, weightkg: 52.6},
   'Zapdos-Galar': {types: ['Fighting', 'Flying'], bs: {hp: 90, at: 125, df: 90, sa: 85, sd: 90, sp: 100}, weightkg: 58.2},
   'Zubat': {types: ['Poison', 'Flying'], bs: {hp: 40, at: 45, df: 35, sa: 30, sd: 40, sp: 55}, weightkg: 7.5},
 };
@@ -305,8 +310,8 @@ const GSC_PATCH: {[name: string]: SpeciesData} = {
   'Ambipom': {types: ['Normal'], bs: {hp: 75, at: 100, df: 66, sa: 60, sd: 66, sp: 115}, weightkg: 20.3},
   'Ampharos': {types: ['Electric'], bs: {hp: 100, at: 75, df: 90, sa: 115, sd: 90, sp: 55}, weightkg: 61.5},
   'Ampharos-Mega': {types: ['Electric', 'Dragon'], bs: {hp: 100, at: 95, df: 110, sa: 165, sd: 110, sp: 45}, weightkg: 61.5},
-  'Ariados': {types: ['Bug', 'Poison'], bs: {hp: 70, at: 90, df: 70, sa: 60, sd: 0, sp: 110}, weightkg: 33.5},
-  'Azumarill': {types: ['Water', 'Fairy'], bs: {hp: 100, at: 55, df: 80, sa: 0, sd: 80, sp: 50}, weightkg: 28.5},
+  'Ariados': {types: ['Bug', 'Poison'], bs: {hp: 70, at: 90, df: 70, sa: 60, sd: 70, sp: 110}, weightkg: 33.5},
+  'Azumarill': {types: ['Water', 'Fairy'], bs: {hp: 100, at: 55, df: 80, sa: 60, sd: 80, sp: 50}, weightkg: 28.5},
   'Azurill': {types: ['Normal', 'Fairy'], bs: {hp: 50, at: 20, df: 40, sa: 20, sd: 40, sp: 20}, weightkg: 2.0},
   'Bayleef': {types: ['Grass'], bs: {hp: 60, at: 62, df: 75, sa: 75, sd: 75, sp: 60}, weightkg: 15.8},
   'Bonsly': {types: ['Rock', 'Grass'], bs: {hp: 60, at: 90, df: 95, sa: 10, sd: 45, sp: 10}, weightkg: 15.0},
@@ -327,7 +332,7 @@ const GSC_PATCH: {[name: string]: SpeciesData} = {
   'Entei': {types: ['Fire'], bs: {hp: 115, at: 115, df: 85, sa: 90, sd: 75, sp: 100}, weightkg: 198.0},
   'Farigiraf': {types: ['Normal', 'Psychic'], bs: {hp: 120, at: 90, df: 70, sa: 110, sd: 70, sp: 60}, weightkg: 160.0},
   'Feraligatr': {types: ['Water', 'Dark'], bs: {hp: 85, at: 115, df: 100, sa: 49, sd: 83, sp: 98}, weightkg: 88.8},
-  'Feraligatr-Mega': {types: ['Water', 'Dragon'], bs: {hp: 85, at: 0, df: 0, sa: 49, sd: 0, sp: 0}, weightkg: 88.8},
+  'Feraligatr-Mega': {types: ['Water', 'Dragon'], bs: {hp: 85, at: 115, df: 100, sa: 49, sd: 83, sp: 98}, weightkg: 88.8},
   'Flaaffy': {types: ['Electric'], bs: {hp: 70, at: 55, df: 60, sa: 80, sd: 60, sp: 45}, weightkg: 13.3},
   'Forretress': {types: ['Bug', 'Steel'], bs: {hp: 90, at: 90, df: 140, sa: 60, sd: 60, sp: 40}, weightkg: 125.8},
   'Furret': {types: ['Normal'], bs: {hp: 85, at: 76, df: 64, sa: 45, sd: 55, sp: 90}, weightkg: 32.5},
@@ -344,7 +349,7 @@ const GSC_PATCH: {[name: string]: SpeciesData} = {
   'Houndoom': {types: ['Dark', 'Fire'], bs: {hp: 75, at: 90, df: 50, sa: 110, sd: 80, sp: 100}, weightkg: 35.0},
   'Houndoom-Mega': {types: ['Dark', 'Fire'], bs: {hp: 75, at: 90, df: 90, sa: 140, sd: 90, sp: 120}, weightkg: 49.5},
   'Houndour': {types: ['Dark', 'Fire'], bs: {hp: 45, at: 60, df: 30, sa: 80, sd: 50, sp: 70}, weightkg: 10.8},
-  'Jumpluff': {types: ['Grass', 'Flying'], bs: {hp: 75, at: 100, df: 70, sa: 55, sd: 0, sp: 110}, weightkg: 3.0},
+  'Jumpluff': {types: ['Grass', 'Flying'], bs: {hp: 75, at: 100, df: 70, sa: 55, sd: 95, sp: 110}, weightkg: 3.0},
   'Lanturn': {types: ['Water', 'Electric'], bs: {hp: 125, at: 58, df: 58, sa: 86, sd: 76, sp: 67}, weightkg: 22.5},
   'Larvitar': {types: ['Rock', 'Ground'], bs: {hp: 50, at: 64, df: 50, sa: 45, sd: 50, sp: 41}, weightkg: 72.0},
   'Ledian': {types: ['Bug', 'Fighting'], bs: {hp: 80, at: 100, df: 60, sa: 55, sd: 60, sp: 85}, weightkg: 35.6},
@@ -352,11 +357,12 @@ const GSC_PATCH: {[name: string]: SpeciesData} = {
   'Lugia': {types: ['Psychic', 'Water'], bs: {hp: 106, at: 90, df: 130, sa: 90, sd: 154, sp: 110}, weightkg: 216.0},
   'Magcargo': {types: ['Fire', 'Rock'], bs: {hp: 80, at: 50, df: 120, sa: 105, sd: 80, sp: 30}, weightkg: 55.0},
   'Mamoswine': {types: ['Ice', 'Ground'], bs: {hp: 110, at: 130, df: 80, sa: 70, sd: 60, sp: 80}, weightkg: 291.0},
-  'Mantine': {types: ['Water', 'Flying'], bs: {hp: 0, at: 40, df: 70, sa: 90, sd: 110, sp: 110}, weightkg: 220.0},
+  'Mantine': {types: ['Water', 'Flying'], bs: {hp: 85, at: 40, df: 70, sa: 90, sd: 110, sp: 110}, weightkg: 220.0},
   'Mantyke': {types: ['Water', 'Flying'], bs: {hp: 45, at: 20, df: 50, sa: 70, sd: 100, sp: 90}, weightkg: 65.0},
   'Mareep': {types: ['Electric'], bs: {hp: 55, at: 40, df: 50, sa: 65, sd: 45, sp: 35}, weightkg: 7.8},
   'Marill': {types: ['Water', 'Fairy'], bs: {hp: 70, at: 25, df: 50, sa: 20, sd: 50, sp: 40}, weightkg: 8.5},
   'Meganium': {types: ['Grass', 'Fairy'], bs: {hp: 80, at: 82, df: 90, sa: 103, sd: 90, sp: 80}, weightkg: 100.5},
+  'Meganium-Mega': {types: ['Grass', 'Fairy'], bs: {hp: 80, at: 82, df: 90, sa: 103, sd: 90, sp: 80}, weightkg: 100.5},
   'Miltank': {types: ['Normal'], bs: {hp: 95, at: 90, df: 95, sa: 40, sd: 70, sp: 90}, weightkg: 75.5},
   'Misdreavus': {types: ['Ghost', 'Fairy'], bs: {hp: 60, at: 60, df: 60, sa: 85, sd: 85, sp: 85}, weightkg: 1.0},
   'Mismagius': {types: ['Ghost'], bs: {hp: 60, at: 60, df: 60, sa: 105, sd: 105, sp: 105}, weightkg: 4.4},
@@ -371,8 +377,8 @@ const GSC_PATCH: {[name: string]: SpeciesData} = {
   'Pupitar': {types: ['Rock', 'Ground'], bs: {hp: 70, at: 84, df: 70, sa: 65, sd: 70, sp: 51}, weightkg: 152.0},
   'Quagsire': {types: ['Water', 'Ground'], bs: {hp: 130, at: 45, df: 100, sa: 75, sd: 60, sp: 20}, weightkg: 75.0},
   'Quilava': {types: ['Fire'], bs: {hp: 58, at: 54, df: 58, sa: 95, sd: 65, sp: 90}, weightkg: 19.0},
-  'Qwilfish': {types: ['Water', 'Poison'], bs: {hp: 65, at: 95, df: 0, sa: 55, sd: 55, sp: 85}, weightkg: 3.9},
-  'Qwilfish-Hisui': {types: ['Dark', 'Poison'], bs: {hp: 65, at: 95, df: 0, sa: 55, sd: 55, sp: 85}, weightkg: 3.9},
+  'Qwilfish': {types: ['Water', 'Poison'], bs: {hp: 65, at: 95, df: 85, sa: 55, sd: 55, sp: 85}, weightkg: 3.9},
+  'Qwilfish-Hisui': {types: ['Dark', 'Poison'], bs: {hp: 65, at: 95, df: 85, sa: 55, sd: 55, sp: 85}, weightkg: 3.9},
   'Raikou': {types: ['Electric'], bs: {hp: 90, at: 85, df: 75, sa: 120, sd: 95, sp: 130}, weightkg: 178.0},
   'Remoraid': {types: ['Water'], bs: {hp: 35, at: 65, df: 35, sa: 65, sd: 35, sp: 65}, weightkg: 12.0},
   'Sentret': {types: ['Normal'], bs: {hp: 35, at: 46, df: 34, sa: 35, sd: 45, sp: 20}, weightkg: 6.0},
@@ -460,7 +466,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Banette': {types: ['Ghost', 'Normal'], bs: {hp: 84, at: 115, df: 65, sa: 83, sd: 63, sp: 65}, weightkg: 12.5},
   'Banette-Mega': {types: ['Ghost', 'Normal'], bs: {hp: 84, at: 165, df: 75, sa: 93, sd: 83, sp: 75}, weightkg: 13.0},
   'Barboach': {types: ['Water', 'Ground'], bs: {hp: 50, at: 48, df: 43, sa: 46, sd: 41, sp: 60}, weightkg: 1.9},
-  'Beautifly': {types: ['Bug', 'Flying'], bs: {hp: 60, at: 70, df: 50, sa: 0, sd: 50, sp: 65}, weightkg: 28.4},
+  'Beautifly': {types: ['Bug', 'Flying'], bs: {hp: 60, at: 70, df: 50, sa: 100, sd: 50, sp: 65}, weightkg: 28.4},
   'Beldum': {types: ['Steel', 'Psychic'], bs: {hp: 40, at: 55, df: 80, sa: 35, sd: 60, sp: 30}, weightkg: 95.2},
   'Blaziken': {types: ['Fire', 'Fighting'], bs: {hp: 80, at: 120, df: 70, sa: 90, sd: 70, sp: 100}, weightkg: 52.0},
   'Blaziken-Mega': {types: ['Fire', 'Fighting'], bs: {hp: 80, at: 160, df: 80, sa: 110, sd: 80, sp: 120}, weightkg: 52.0},
@@ -476,7 +482,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Castform-Rainy': {types: ['Water'], bs: {hp: 85, at: 85, df: 85, sa: 110, sd: 110, sp: 110}, weightkg: 0.8},
   'Castform-Snowy': {types: ['Ice'], bs: {hp: 110, at: 110, df: 110, sa: 85, sd: 85, sp: 85}, weightkg: 0.8},
   'Castform-Sunny': {types: ['Fire'], bs: {hp: 85, at: 85, df: 85, sa: 110, sd: 110, sp: 110}, weightkg: 0.8},
-  'Chimecho': {types: ['Psychic', 'Ghost'], bs: {hp: 0, at: 50, df: 0, sa: 95, sd: 0, sp: 65}, weightkg: 1.0},
+  'Chimecho': {types: ['Psychic', 'Ghost'], bs: {hp: 75, at: 50, df: 80, sa: 95, sd: 90, sp: 65}, weightkg: 1.0},
   'Chingling': {types: ['Psychic'], bs: {hp: 45, at: 30, df: 50, sa: 65, sd: 50, sp: 45}, weightkg: 0.6},
   'Clamperl': {types: ['Water'], bs: {hp: 35, at: 64, df: 85, sa: 74, sd: 55, sp: 32}, weightkg: 52.5},
   'Claydol': {types: ['Ground', 'Psychic'], bs: {hp: 60, at: 70, df: 105, sa: 85, sd: 120, sp: 60}, weightkg: 108.0},
@@ -484,7 +490,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Corphish': {types: ['Water'], bs: {hp: 43, at: 80, df: 65, sa: 50, sd: 35, sp: 35}, weightkg: 11.5},
   'Cradily': {types: ['Rock', 'Grass'], bs: {hp: 96, at: 81, df: 97, sa: 81, sd: 107, sp: 43}, weightkg: 60.4},
   'Crawdaunt': {types: ['Water', 'Dark'], bs: {hp: 63, at: 120, df: 85, sa: 90, sd: 55, sp: 55}, weightkg: 32.8},
-  'Delcatty': {types: ['Normal', 'Fairy'], bs: {hp: 70, at: 65, df: 65, sa: 55, sd: 55, sp: 0}, weightkg: 32.6},
+  'Delcatty': {types: ['Normal', 'Fairy'], bs: {hp: 70, at: 65, df: 65, sa: 55, sd: 55, sp: 90}, weightkg: 32.6},
   'Deoxys-Attack': {types: ['Psychic'], bs: {hp: 50, at: 180, df: 20, sa: 180, sd: 20, sp: 150}, weightkg: 60.8},
   'Deoxys-Defense': {types: ['Psychic'], bs: {hp: 50, at: 70, df: 160, sa: 70, sd: 160, sp: 90}, weightkg: 60.8},
   'Deoxys-Normal': {types: ['Psychic'], bs: {hp: 50, at: 150, df: 50, sa: 150, sd: 50, sp: 150}, weightkg: 60.8},
@@ -494,7 +500,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Duskull': {types: ['Ghost'], bs: {hp: 20, at: 40, df: 90, sa: 30, sd: 90, sp: 25}, weightkg: 15.0},
   'Dustox': {types: ['Bug', 'Poison'], bs: {hp: 60, at: 50, df: 70, sa: 50, sd: 90, sp: 65}, weightkg: 31.6},
   'Electrike': {types: ['Electric'], bs: {hp: 40, at: 45, df: 40, sa: 65, sd: 40, sp: 70}, weightkg: 15.2},
-  'Exploud': {types: ['Normal'], bs: {hp: 104, at: 71, df: 73, sa: 111, sd: 0, sp: 68}, weightkg: 84.0},
+  'Exploud': {types: ['Normal'], bs: {hp: 104, at: 71, df: 73, sa: 111, sd: 73, sp: 68}, weightkg: 84.0},
   'Feebas': {types: ['Water'], bs: {hp: 20, at: 15, df: 20, sa: 10, sd: 55, sp: 80}, weightkg: 7.4},
   'Flygon': {types: ['Ground', 'Dragon'], bs: {hp: 80, at: 110, df: 80, sa: 80, sd: 80, sp: 105}, weightkg: 82.0},
   'Froslass': {types: ['Ice', 'Ghost'], bs: {hp: 70, at: 80, df: 70, sa: 100, sd: 80, sp: 110}, weightkg: 26.6},
@@ -512,7 +518,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Gulpin': {types: ['Poison'], bs: {hp: 70, at: 43, df: 53, sa: 43, sd: 53, sp: 40}, weightkg: 10.3},
   'Hariyama': {types: ['Fighting'], bs: {hp: 144, at: 120, df: 60, sa: 40, sd: 60, sp: 50}, weightkg: 253.8},
   'Huntail': {types: ['Water', 'Electric'], bs: {hp: 55, at: 114, df: 105, sa: 84, sd: 75, sp: 82}, weightkg: 27.0},
-  'Illumise': {types: ['Bug', 'Fairy'], bs: {hp: 65, at: 47, df: 0, sa: 93, sd: 0, sp: 85}, weightkg: 17.7},
+  'Illumise': {types: ['Bug', 'Fairy'], bs: {hp: 65, at: 47, df: 75, sa: 93, sd: 85, sp: 85}, weightkg: 17.7},
   'Jirachi': {types: ['Steel', 'Psychic'], bs: {hp: 100, at: 100, df: 100, sa: 100, sd: 100, sp: 100}, weightkg: 1.1},
   'Kecleon': {types: ['Normal', 'Grass'], bs: {hp: 70, at: 100, df: 70, sa: 60, sd: 100, sp: 40}, weightkg: 22.0},
   'Kirlia': {types: ['Psychic', 'Fairy'], bs: {hp: 38, at: 35, df: 35, sa: 65, sd: 55, sp: 50}, weightkg: 20.2},
@@ -530,13 +536,13 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Lotad': {types: ['Water', 'Grass'], bs: {hp: 40, at: 30, df: 30, sa: 40, sd: 50, sp: 30}, weightkg: 2.6},
   'Loudred': {types: ['Normal'], bs: {hp: 84, at: 51, df: 53, sa: 71, sd: 43, sp: 48}, weightkg: 40.5},
   'Ludicolo': {types: ['Water', 'Grass'], bs: {hp: 80, at: 60, df: 70, sa: 110, sd: 90, sp: 70}, weightkg: 55.0},
-  'Lunatone': {types: ['Rock', 'Dark'], bs: {hp: 0, at: 55, df: 65, sa: 105, sd: 85, sp: 85}, weightkg: 168.0},
+  'Lunatone': {types: ['Rock', 'Dark'], bs: {hp: 90, at: 55, df: 65, sa: 105, sd: 85, sp: 85}, weightkg: 168.0},
   'Luvdisc': {types: ['Water', 'Fairy'], bs: {hp: 43, at: 30, df: 55, sa: 40, sd: 65, sp: 97}, weightkg: 8.7},
   'Makuhita': {types: ['Fighting'], bs: {hp: 72, at: 60, df: 30, sa: 20, sd: 30, sp: 25}, weightkg: 86.4},
   'Manectric': {types: ['Electric'], bs: {hp: 70, at: 75, df: 60, sa: 115, sd: 80, sp: 115}, weightkg: 40.2},
   'Manectric-Mega': {types: ['Electric'], bs: {hp: 70, at: 95, df: 80, sa: 135, sd: 100, sp: 155}, weightkg: 44.0},
   'Marshtomp': {types: ['Water', 'Ground'], bs: {hp: 70, at: 85, df: 70, sa: 60, sd: 70, sp: 50}, weightkg: 28.0},
-  'Masquerain': {types: ['Bug', 'Water'], bs: {hp: 70, at: 60, df: 62, sa: 0, sd: 82, sp: 0}, weightkg: 3.6},
+  'Masquerain': {types: ['Bug', 'Water'], bs: {hp: 70, at: 60, df: 62, sa: 100, sd: 82, sp: 80}, weightkg: 3.6},
   'Mawile': {types: ['Steel'], bs: {hp: 70, at: 90, df: 100, sa: 55, sd: 55, sp: 50}, weightkg: 11.5},
   'Mawile-Mega': {types: ['Steel'], bs: {hp: 70, at: 105, df: 125, sa: 55, sd: 95, sp: 50}, weightkg: 23.5},
   'Medicham': {types: ['Fighting', 'Psychic'], bs: {hp: 60, at: 60, df: 75, sa: 60, sd: 75, sp: 80}, weightkg: 31.5},
@@ -555,7 +561,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Numel': {types: ['Fire', 'Ground'], bs: {hp: 60, at: 60, df: 40, sa: 65, sd: 45, sp: 35}, weightkg: 24.0},
   'Nuzleaf': {types: ['Grass', 'Dark'], bs: {hp: 70, at: 70, df: 40, sa: 60, sd: 40, sp: 60}, weightkg: 28.0},
   'Obstagoon': {types: ['Dark', 'Normal'], bs: {hp: 93, at: 90, df: 101, sa: 60, sd: 81, sp: 95}, weightkg: 46.0},
-  'Pelipper': {types: ['Water', 'Flying'], bs: {hp: 60, at: 50, df: 100, sa: 0, sd: 70, sp: 65}, weightkg: 28.0},
+  'Pelipper': {types: ['Water', 'Flying'], bs: {hp: 60, at: 50, df: 100, sa: 95, sd: 70, sp: 65}, weightkg: 28.0},
   'Plusle': {types: ['Electric'], bs: {hp: 60, at: 50, df: 40, sa: 85, sd: 75, sp: 95}, weightkg: 4.2},
   'Poochyena': {types: ['Dark'], bs: {hp: 35, at: 55, df: 35, sa: 30, sd: 30, sp: 45}, weightkg: 13.6},
   'Probopass': {types: ['Rock', 'Steel'], bs: {hp: 80, at: 55, df: 145, sa: 85, sd: 150, sp: 40}, weightkg: 340.0},
@@ -567,7 +573,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Registeel': {types: ['Steel'], bs: {hp: 80, at: 75, df: 150, sa: 75, sd: 150, sp: 50}, weightkg: 205.0},
   'Relicanth': {types: ['Water', 'Rock'], bs: {hp: 100, at: 90, df: 130, sa: 45, sd: 65, sp: 55}, weightkg: 23.4},
   'Roselia': {types: ['Grass', 'Poison'], bs: {hp: 50, at: 60, df: 45, sa: 100, sd: 80, sp: 85}, weightkg: 2.0},
-  'Roserade': {types: ['Grass', 'Poison'], bs: {hp: 60, at: 70, df: 0, sa: 125, sd: 105, sp: 105}, weightkg: 14.5},
+  'Roserade': {types: ['Grass', 'Poison'], bs: {hp: 60, at: 70, df: 65, sa: 125, sd: 105, sp: 105}, weightkg: 14.5},
   'Sableye': {types: ['Dark', 'Ghost'], bs: {hp: 50, at: 75, df: 75, sa: 65, sd: 65, sp: 50}, weightkg: 11.0},
   'Sableye-Mega': {types: ['Dark', 'Ghost'], bs: {hp: 50, at: 85, df: 125, sa: 85, sd: 115, sp: 20}, weightkg: 161.0},
   'Salamence': {types: ['Dragon', 'Flying'], bs: {hp: 95, at: 135, df: 80, sa: 110, sd: 80, sp: 100}, weightkg: 102.6},
@@ -589,7 +595,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Slaking': {types: ['Normal'], bs: {hp: 150, at: 160, df: 100, sa: 95, sd: 65, sp: 100}, weightkg: 130.5},
   'Slakoth': {types: ['Normal'], bs: {hp: 60, at: 60, df: 60, sa: 35, sd: 35, sp: 30}, weightkg: 24.0},
   'Snorunt': {types: ['Ice'], bs: {hp: 50, at: 50, df: 50, sa: 50, sd: 50, sp: 50}, weightkg: 16.8},
-  'Solrock': {types: ['Rock', 'Fire'], bs: {hp: 0, at: 100, df: 85, sa: 55, sd: 65, sp: 85}, weightkg: 154.0},
+  'Solrock': {types: ['Rock', 'Fire'], bs: {hp: 90, at: 100, df: 85, sa: 55, sd: 65, sp: 85}, weightkg: 154.0},
   'Spheal': {types: ['Ice', 'Water'], bs: {hp: 70, at: 65, df: 50, sa: 40, sd: 55, sp: 25}, weightkg: 39.5},
   'Spinda': {types: ['Normal'], bs: {hp: 70, at: 70, df: 70, sa: 70, sd: 70, sp: 70}, weightkg: 5.0},
   'Spoink': {types: ['Psychic'], bs: {hp: 60, at: 25, df: 35, sa: 70, sd: 80, sp: 60}, weightkg: 30.6},
@@ -598,7 +604,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Swalot': {types: ['Poison'], bs: {hp: 100, at: 73, df: 83, sa: 73, sd: 103, sp: 55}, weightkg: 80.0},
   'Swampert': {types: ['Water', 'Ground'], bs: {hp: 100, at: 110, df: 90, sa: 85, sd: 90, sp: 60}, weightkg: 81.9},
   'Swampert-Mega': {types: ['Water', 'Ground'], bs: {hp: 100, at: 150, df: 110, sa: 95, sd: 110, sp: 70}, weightkg: 102.0},
-  'Swellow': {types: ['Normal', 'Flying'], bs: {hp: 60, at: 85, df: 60, sa: 0, sd: 50, sp: 125}, weightkg: 19.8},
+  'Swellow': {types: ['Normal', 'Flying'], bs: {hp: 60, at: 85, df: 60, sa: 75, sd: 50, sp: 125}, weightkg: 19.8},
   'Taillow': {types: ['Normal', 'Flying'], bs: {hp: 40, at: 55, df: 30, sa: 30, sd: 30, sp: 85}, weightkg: 2.3},
   'Torchic': {types: ['Fire'], bs: {hp: 45, at: 60, df: 40, sa: 60, sd: 50, sp: 55}, weightkg: 2.5},
   'Torkoal': {types: ['Fire'], bs: {hp: 70, at: 85, df: 140, sa: 85, sd: 70, sp: 20}, weightkg: 80.4},
@@ -607,7 +613,7 @@ const ADV_PATCH: {[name: string]: SpeciesData} = {
   'Tropius': {types: ['Grass', 'Dragon'], bs: {hp: 99, at: 68, df: 83, sa: 92, sd: 87, sp: 85}, weightkg: 100.0},
   'Vibrava': {types: ['Ground', 'Dragon'], bs: {hp: 50, at: 100, df: 50, sa: 50, sd: 50, sp: 70}, weightkg: 15.3},
   'Vigoroth': {types: ['Normal'], bs: {hp: 80, at: 80, df: 80, sa: 55, sd: 55, sp: 90}, weightkg: 46.5},
-  'Volbeat': {types: ['Bug', 'Fairy'], bs: {hp: 65, at: 93, df: 0, sa: 47, sd: 0, sp: 85}, weightkg: 17.7},
+  'Volbeat': {types: ['Bug', 'Fairy'], bs: {hp: 65, at: 93, df: 75, sa: 47, sd: 85, sp: 85}, weightkg: 17.7},
   'Wailmer': {types: ['Water'], bs: {hp: 130, at: 70, df: 55, sa: 70, sd: 45, sp: 60}, weightkg: 130.0},
   'Wailord': {types: ['Water', 'Normal'], bs: {hp: 170, at: 70, df: 90, sa: 100, sd: 60, sp: 60}, weightkg: 398.0},
   'Walrein': {types: ['Ice', 'Water'], bs: {hp: 110, at: 105, df: 90, sa: 95, sd: 100, sp: 65}, weightkg: 150.6},
@@ -662,7 +668,7 @@ const DPP_PATCH: {[name: string]: SpeciesData} = {
   'Chimchar': {types: ['Fire'], bs: {hp: 44, at: 58, df: 44, sa: 58, sd: 44, sp: 61}, weightkg: 6.2},
   'Combee': {types: ['Bug', 'Flying'], bs: {hp: 30, at: 30, df: 42, sa: 30, sd: 42, sp: 70}, weightkg: 5.5},
   'Cranidos': {types: ['Rock'], bs: {hp: 67, at: 125, df: 40, sa: 30, sd: 30, sp: 58}, weightkg: 31.5},
-  'Cresselia': {types: ['Psychic'], bs: {hp: 120, at: 70, df: 0, sa: 75, sd: 0, sp: 85}, weightkg: 85.6},
+  'Cresselia': {types: ['Psychic'], bs: {hp: 120, at: 70, df: 110, sa: 75, sd: 120, sp: 85}, weightkg: 85.6},
   'Croagunk': {types: ['Poison', 'Fighting'], bs: {hp: 48, at: 61, df: 40, sa: 61, sd: 40, sp: 50}, weightkg: 23.0},
   'Darkrai': {types: ['Dark'], bs: {hp: 70, at: 90, df: 90, sa: 135, sd: 90, sp: 125}, weightkg: 50.5},
   'Dialga': {types: ['Steel', 'Dragon'], bs: {hp: 100, at: 120, df: 120, sa: 150, sd: 100, sp: 90}, weightkg: 683.0},
@@ -706,7 +712,7 @@ const DPP_PATCH: {[name: string]: SpeciesData} = {
   'Piplup': {types: ['Water'], bs: {hp: 53, at: 51, df: 53, sa: 61, sd: 56, sp: 40}, weightkg: 5.2},
   'Prinplup': {types: ['Water'], bs: {hp: 64, at: 66, df: 68, sa: 81, sd: 76, sp: 50}, weightkg: 23.0},
   'Purugly': {types: ['Normal'], bs: {hp: 110, at: 82, df: 64, sa: 64, sd: 59, sp: 60}, weightkg: 43.8},
-  'Rampardos': {types: ['Rock'], bs: {hp: 97, at: 165, df: 60, sa: 65, sd: 50, sp: 58}, weightkg: 102.5},
+  'Rampardos': {types: ['Rock', 'Dragon'], bs: {hp: 97, at: 165, df: 60, sa: 65, sd: 50, sp: 85}, weightkg: 102.5},
   'Regigigas': {types: ['Normal'], bs: {hp: 110, at: 160, df: 110, sa: 80, sd: 110, sp: 100}, weightkg: 420.0},
   'Riolu': {types: ['Fighting'], bs: {hp: 40, at: 70, df: 40, sa: 35, sd: 40, sp: 60}, weightkg: 20.2},
   'Rotom': {types: ['Electric', 'Ghost'], bs: {hp: 50, at: 50, df: 77, sa: 95, sd: 77, sp: 91}, weightkg: 0.3},
@@ -725,7 +731,7 @@ const DPP_PATCH: {[name: string]: SpeciesData} = {
   'Skuntank': {types: ['Poison', 'Dark'], bs: {hp: 103, at: 93, df: 67, sa: 71, sd: 61, sp: 84}, weightkg: 38.0},
   'Snover': {types: ['Grass', 'Ice'], bs: {hp: 60, at: 62, df: 50, sa: 62, sd: 60, sp: 40}, weightkg: 50.5},
   'Spiritomb': {types: ['Ghost', 'Dark'], bs: {hp: 50, at: 92, df: 108, sa: 92, sd: 108, sp: 35}, weightkg: 108.0},
-  'Staraptor': {types: ['Normal', 'Flying'], bs: {hp: 85, at: 120, df: 70, sa: 50, sd: 0, sp: 100}, weightkg: 24.9},
+  'Staraptor': {types: ['Normal', 'Flying'], bs: {hp: 85, at: 120, df: 70, sa: 50, sd: 60, sp: 100}, weightkg: 24.9},
   'Staravia': {types: ['Normal', 'Flying'], bs: {hp: 55, at: 75, df: 50, sa: 40, sd: 40, sp: 80}, weightkg: 15.5},
   'Starly': {types: ['Normal', 'Flying'], bs: {hp: 40, at: 55, df: 30, sa: 30, sd: 30, sp: 60}, weightkg: 2.0},
   'Stunky': {types: ['Poison', 'Dark'], bs: {hp: 63, at: 63, df: 47, sa: 41, sd: 41, sp: 74}, weightkg: 19.2},
@@ -755,7 +761,7 @@ const BW_PATCH: {[name: string]: SpeciesData} = {
   'Basculin-Blue-Striped': {types: ['Water'], bs: {hp: 70, at: 92, df: 65, sa: 80, sd: 55, sp: 98}, weightkg: 18.0},
   'Basculin-Red-Striped': {types: ['Water'], bs: {hp: 70, at: 92, df: 65, sa: 80, sd: 55, sp: 98}, weightkg: 18.0},
   'Basculin-White-Striped': {types: ['Water'], bs: {hp: 70, at: 92, df: 65, sa: 80, sd: 55, sp: 98}, weightkg: 18.0},
-  'Beartic': {types: ['Ice', 'Water'], bs: {hp: 100, at: 0, df: 80, sa: 70, sd: 80, sp: 50}, weightkg: 260.0},
+  'Beartic': {types: ['Ice', 'Water'], bs: {hp: 100, at: 130, df: 80, sa: 70, sd: 80, sp: 50}, weightkg: 260.0},
   'Beheeyem': {types: ['Psychic'], bs: {hp: 75, at: 75, df: 75, sa: 125, sd: 95, sp: 40}, weightkg: 34.5},
   'Bisharp': {types: ['Dark', 'Steel'], bs: {hp: 65, at: 125, df: 100, sa: 60, sd: 70, sp: 70}, weightkg: 70.0},
   'Blitzle': {types: ['Electric'], bs: {hp: 45, at: 60, df: 32, sa: 50, sd: 32, sp: 76}, weightkg: 29.8},
@@ -770,8 +776,8 @@ const BW_PATCH: {[name: string]: SpeciesData} = {
   'Cofagrigus': {types: ['Ghost', 'Steel'], bs: {hp: 58, at: 50, df: 145, sa: 95, sd: 105, sp: 30}, weightkg: 76.5},
   'Conkeldurr': {types: ['Fighting'], bs: {hp: 105, at: 140, df: 95, sa: 55, sd: 65, sp: 45}, weightkg: 87.0},
   'Cottonee': {types: ['Grass'], bs: {hp: 40, at: 27, df: 60, sa: 37, sd: 50, sp: 66}, weightkg: 0.6},
-  'Crustle': {types: ['Bug', 'Rock'], bs: {hp: 80, at: 0, df: 125, sa: 65, sd: 75, sp: 45}, weightkg: 200.0},
-  'Cryogonal': {types: ['Ice'], bs: {hp: 0, at: 50, df: 0, sa: 95, sd: 135, sp: 105}, weightkg: 148.0},
+  'Crustle': {types: ['Bug', 'Rock'], bs: {hp: 80, at: 105, df: 125, sa: 65, sd: 75, sp: 45}, weightkg: 200.0},
+  'Cryogonal': {types: ['Ice'], bs: {hp: 80, at: 50, df: 50, sa: 95, sd: 135, sp: 105}, weightkg: 148.0},
   'Cubchoo': {types: ['Ice'], bs: {hp: 55, at: 70, df: 40, sa: 60, sd: 40, sp: 40}, weightkg: 8.5},
   'Darmanitan-Galar-Standard-Mode': {types: ['Ice'], bs: {hp: 105, at: 140, df: 55, sa: 30, sd: 55, sp: 95}, weightkg: 120.0},
   'Darmanitan-Galar-Zen-Mode': {types: ['Ice', 'Fire'], bs: {hp: 105, at: 160, df: 55, sa: 30, sd: 55, sp: 135}, weightkg: 120.0},
@@ -811,7 +817,7 @@ const BW_PATCH: {[name: string]: SpeciesData} = {
   'Genesect-Chill': {types: ['Bug', 'Steel'], bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99}, weightkg: 82.5},
   'Genesect-Douse': {types: ['Bug', 'Steel'], bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99}, weightkg: 82.5},
   'Genesect-Shock': {types: ['Bug', 'Steel'], bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99}, weightkg: 82.5},
-  'Gigalith': {types: ['Rock'], bs: {hp: 85, at: 135, df: 130, sa: 60, sd: 0, sp: 25}, weightkg: 260.0},
+  'Gigalith': {types: ['Rock'], bs: {hp: 85, at: 135, df: 130, sa: 60, sd: 80, sp: 25}, weightkg: 260.0},
   'Golett': {types: ['Ground', 'Ghost'], bs: {hp: 79, at: 74, df: 50, sa: 35, sd: 50, sp: 35}, weightkg: 92.0},
   'Golurk': {types: ['Ground', 'Ghost'], bs: {hp: 120, at: 124, df: 80, sa: 55, sd: 80, sp: 55}, weightkg: 330.0},
   'Gothita': {types: ['Psychic'], bs: {hp: 45, at: 30, df: 50, sa: 55, sd: 65, sp: 45}, weightkg: 5.8},
@@ -832,7 +838,7 @@ const BW_PATCH: {[name: string]: SpeciesData} = {
   'Klink': {types: ['Steel'], bs: {hp: 40, at: 55, df: 70, sa: 45, sd: 60, sp: 30}, weightkg: 21.0},
   'Klinklang': {types: ['Steel', 'Electric'], bs: {hp: 70, at: 100, df: 115, sa: 70, sd: 85, sp: 90}, weightkg: 81.0},
   'Krokorok': {types: ['Ground', 'Dark'], bs: {hp: 60, at: 82, df: 45, sa: 45, sd: 45, sp: 74}, weightkg: 33.4},
-  'Krookodile': {types: ['Ground', 'Dark'], bs: {hp: 95, at: 117, df: 0, sa: 65, sd: 70, sp: 92}, weightkg: 96.3},
+  'Krookodile': {types: ['Ground', 'Dark'], bs: {hp: 95, at: 117, df: 80, sa: 65, sd: 70, sp: 92}, weightkg: 96.3},
   'Kyurem': {types: ['Dragon', 'Ice'], bs: {hp: 125, at: 130, df: 90, sa: 130, sd: 90, sp: 95}, weightkg: 325.0},
   'Kyurem-Black': {types: ['Dragon', 'Ice'], bs: {hp: 125, at: 170, df: 100, sa: 120, sd: 90, sp: 95}, weightkg: 325.0},
   'Kyurem-White': {types: ['Dragon', 'Ice'], bs: {hp: 125, at: 120, df: 90, sa: 170, sd: 100, sp: 95}, weightkg: 325.0},
@@ -840,7 +846,7 @@ const BW_PATCH: {[name: string]: SpeciesData} = {
   'Landorus-Incarnate': {types: ['Ground', 'Flying'], bs: {hp: 89, at: 125, df: 90, sa: 115, sd: 80, sp: 101}, weightkg: 68.0},
   'Landorus-Therian': {types: ['Ground', 'Flying'], bs: {hp: 89, at: 145, df: 90, sa: 105, sd: 80, sp: 91}, weightkg: 68.0},
   'Larvesta': {types: ['Bug', 'Fire'], bs: {hp: 55, at: 85, df: 55, sa: 50, sd: 55, sp: 60}, weightkg: 28.8},
-  'Leavanny': {types: ['Bug', 'Grass'], bs: {hp: 75, at: 103, df: 80, sa: 70, sd: 0, sp: 92}, weightkg: 20.5},
+  'Leavanny': {types: ['Bug', 'Grass'], bs: {hp: 75, at: 103, df: 80, sa: 70, sd: 80, sp: 92}, weightkg: 20.5},
   'Liepard': {types: ['Dark'], bs: {hp: 64, at: 88, df: 50, sa: 88, sd: 50, sp: 106}, weightkg: 37.5},
   'Lilligant': {types: ['Grass', 'Fairy'], bs: {hp: 70, at: 60, df: 75, sa: 110, sd: 75, sp: 100}, weightkg: 16.3},
   'Lilligant-Hisui': {types: ['Grass', 'Fighting'], bs: {hp: 70, at: 105, df: 75, sa: 50, sd: 75, sp: 105}, weightkg: 19.2},
@@ -879,10 +885,10 @@ const BW_PATCH: {[name: string]: SpeciesData} = {
   'Sawsbuck-Spring': {types: ['Fairy', 'Grass'], bs: {hp: 80, at: 105, df: 70, sa: 60, sd: 70, sp: 105}, weightkg: 92.5},
   'Sawsbuck-Summer': {types: ['Fire', 'Grass'], bs: {hp: 80, at: 105, df: 70, sa: 60, sd: 70, sp: 105}, weightkg: 92.5},
   'Sawsbuck-Winter': {types: ['Ice', 'Grass'], bs: {hp: 80, at: 105, df: 70, sa: 60, sd: 70, sp: 105}, weightkg: 92.5},
-  'Scolipede': {types: ['Bug', 'Poison'], bs: {hp: 60, at: 0, df: 89, sa: 55, sd: 69, sp: 112}, weightkg: 200.5},
+  'Scolipede': {types: ['Bug', 'Poison'], bs: {hp: 60, at: 100, df: 89, sa: 55, sd: 69, sp: 112}, weightkg: 200.5},
   'Scrafty': {types: ['Dark', 'Fighting'], bs: {hp: 65, at: 90, df: 115, sa: 45, sd: 115, sp: 58}, weightkg: 30.0},
   'Scraggy': {types: ['Dark', 'Fighting'], bs: {hp: 50, at: 75, df: 70, sa: 35, sd: 70, sp: 48}, weightkg: 11.8},
-  'Seismitoad': {types: ['Water', 'Ground'], bs: {hp: 105, at: 0, df: 75, sa: 85, sd: 75, sp: 74}, weightkg: 62.0},
+  'Seismitoad': {types: ['Water', 'Ground'], bs: {hp: 105, at: 95, df: 75, sa: 85, sd: 75, sp: 74}, weightkg: 62.0},
   'Serperior': {types: ['Grass', 'Dragon'], bs: {hp: 75, at: 45, df: 95, sa: 105, sd: 95, sp: 117}, weightkg: 63.0},
   'Servine': {types: ['Grass'], bs: {hp: 60, at: 60, df: 75, sa: 75, sd: 75, sp: 83}, weightkg: 16.0},
   'Sewaddle': {types: ['Bug', 'Grass'], bs: {hp: 45, at: 53, df: 70, sa: 40, sd: 60, sp: 42}, weightkg: 2.5},
@@ -893,7 +899,7 @@ const BW_PATCH: {[name: string]: SpeciesData} = {
   'Simisear': {types: ['Fire'], bs: {hp: 98, at: 75, df: 63, sa: 98, sd: 63, sp: 101}, weightkg: 28.0},
   'Snivy': {types: ['Grass'], bs: {hp: 45, at: 45, df: 55, sa: 45, sd: 55, sp: 63}, weightkg: 8.1},
   'Solosis': {types: ['Psychic'], bs: {hp: 45, at: 30, df: 40, sa: 105, sd: 50, sp: 20}, weightkg: 1.0},
-  'Stoutland': {types: ['Normal'], bs: {hp: 100, at: 0, df: 90, sa: 45, sd: 90, sp: 80}, weightkg: 61.0},
+  'Stoutland': {types: ['Normal'], bs: {hp: 100, at: 110, df: 90, sa: 45, sd: 90, sp: 80}, weightkg: 61.0},
   'Stunfisk': {types: ['Ground', 'Electric'], bs: {hp: 109, at: 66, df: 84, sa: 81, sd: 99, sp: 32}, weightkg: 11.0},
   'Stunfisk-Galar': {types: ['Ground', 'Steel'], bs: {hp: 109, at: 81, df: 99, sa: 66, sd: 84, sp: 32}, weightkg: 20.5},
   'Swadloon': {types: ['Bug', 'Grass'], bs: {hp: 55, at: 63, df: 90, sa: 50, sd: 80, sp: 42}, weightkg: 7.3},
@@ -912,7 +918,7 @@ const BW_PATCH: {[name: string]: SpeciesData} = {
   'Trubbish': {types: ['Poison'], bs: {hp: 50, at: 50, df: 62, sa: 40, sd: 62, sp: 65}, weightkg: 31.0},
   'Tympole': {types: ['Water'], bs: {hp: 50, at: 50, df: 40, sa: 50, sd: 40, sp: 64}, weightkg: 4.5},
   'Tynamo': {types: ['Electric'], bs: {hp: 35, at: 55, df: 40, sa: 45, sd: 40, sp: 60}, weightkg: 0.3},
-  'Unfezant': {types: ['Normal', 'Flying'], bs: {hp: 80, at: 0, df: 80, sa: 115, sd: 55, sp: 103}, weightkg: 29.0},
+  'Unfezant': {types: ['Normal', 'Flying'], bs: {hp: 80, at: 115, df: 80, sa: 115, sd: 55, sp: 103}, weightkg: 29.0},
   'Vanillish': {types: ['Ice'], bs: {hp: 51, at: 65, df: 65, sa: 80, sd: 75, sp: 59}, weightkg: 41.0},
   'Vanillite': {types: ['Ice'], bs: {hp: 36, at: 50, df: 50, sa: 65, sd: 60, sp: 44}, weightkg: 5.7},
   'Vanilluxe': {types: ['Ice'], bs: {hp: 71, at: 95, df: 85, sa: 110, sd: 95, sp: 91}, weightkg: 57.5},
@@ -924,7 +930,7 @@ const BW_PATCH: {[name: string]: SpeciesData} = {
   'Watchog': {types: ['Normal', 'Psychic'], bs: {hp: 60, at: 85, df: 69, sa: 60, sd: 69, sp: 77}, weightkg: 27.0},
   'Whimsicott': {types: ['Grass'], bs: {hp: 60, at: 67, df: 85, sa: 77, sd: 75, sp: 116}, weightkg: 6.6},
   'Whirlipede': {types: ['Bug', 'Poison'], bs: {hp: 40, at: 55, df: 99, sa: 40, sd: 79, sp: 47}, weightkg: 58.5},
-  'Woobat': {types: ['Psychic', 'Flying'], bs: {hp: 0, at: 45, df: 43, sa: 65, sd: 43, sp: 72}, weightkg: 2.1},
+  'Woobat': {types: ['Psychic', 'Flying'], bs: {hp: 65, at: 45, df: 43, sa: 65, sd: 43, sp: 72}, weightkg: 2.1},
   'Yamask': {types: ['Ghost'], bs: {hp: 38, at: 30, df: 85, sa: 55, sd: 65, sp: 30}, weightkg: 1.5},
   'Yamask-Galar': {types: ['Ground', 'Ghost'], bs: {hp: 38, at: 55, df: 85, sa: 30, sd: 65, sp: 30}, weightkg: 1.5},
   'Zebstrika': {types: ['Electric'], bs: {hp: 75, at: 100, df: 63, sa: 80, sd: 63, sp: 116}, weightkg: 79.5},
@@ -953,11 +959,13 @@ const XY_PATCH: {[name: string]: SpeciesData} = {
   'Bunnelby': {types: ['Normal'], bs: {hp: 38, at: 36, df: 38, sa: 32, sd: 36, sp: 57}, weightkg: 5.0},
   'Carbink': {types: ['Rock', 'Fairy'], bs: {hp: 50, at: 50, df: 150, sa: 50, sd: 150, sp: 50}, weightkg: 5.7},
   'Chesnaught': {types: ['Grass', 'Fighting'], bs: {hp: 88, at: 107, df: 122, sa: 74, sd: 75, sp: 64}, weightkg: 90.0},
+  'Chesnaught-Mega': {types: ['Grass', 'Fighting'], bs: {hp: 88, at: 107, df: 122, sa: 74, sd: 75, sp: 64}, weightkg: 90.0},
   'Chespin': {types: ['Grass'], bs: {hp: 56, at: 61, df: 65, sa: 48, sd: 45, sp: 38}, weightkg: 9.0},
   'Clauncher': {types: ['Water'], bs: {hp: 50, at: 53, df: 62, sa: 58, sd: 63, sp: 44}, weightkg: 8.3},
   'Clawitzer': {types: ['Water'], bs: {hp: 81, at: 73, df: 88, sa: 120, sd: 89, sp: 59}, weightkg: 35.3},
   'Dedenne': {types: ['Electric', 'Fairy'], bs: {hp: 67, at: 58, df: 57, sa: 81, sd: 67, sp: 101}, weightkg: 2.2},
   'Delphox': {types: ['Fire', 'Psychic'], bs: {hp: 75, at: 69, df: 72, sa: 114, sd: 100, sp: 104}, weightkg: 39.0},
+  'Delphox-Mega': {types: ['Fire', 'Psychic'], bs: {hp: 75, at: 69, df: 72, sa: 114, sd: 100, sp: 104}, weightkg: 39.0},
   'Diancie': {types: ['Rock', 'Fairy'], bs: {hp: 50, at: 100, df: 150, sa: 100, sd: 150, sp: 50}, weightkg: 8.8},
   'Diancie-Mega': {types: ['Rock', 'Fairy'], bs: {hp: 50, at: 160, df: 110, sa: 160, sd: 110, sp: 110}, weightkg: 27.8},
   'Diggersby': {types: ['Normal', 'Ground'], bs: {hp: 85, at: 60, df: 77, sa: 50, sd: 77, sp: 78}, weightkg: 42.4},
@@ -1440,21 +1448,567 @@ const SS_PATCH: {[name: string]: SpeciesData} = {
   'Urshifu-Single-Strike-Gmax': {types: ['Fighting', 'Dark'], bs: {hp: 100, at: 130, df: 100, sa: 63, sd: 60, sp: 97}, weightkg: 0.0},
   'Wooloo': {types: ['Normal'], bs: {hp: 42, at: 40, df: 55, sa: 40, sd: 45, sp: 48}, weightkg: 6.0},
   'Yamper': {types: ['Normal', 'Electric'], bs: {hp: 59, at: 45, df: 50, sa: 40, sd: 50, sp: 26}, weightkg: 13.5},
-  'Zacian-Crowned': {types: ['Fairy', 'Steel'], bs: {hp: 92, at: 0, df: 115, sa: 80, sd: 115, sp: 148}, weightkg: 355.0},
-  'Zacian-Hero': {types: ['Fairy'], bs: {hp: 92, at: 0, df: 115, sa: 80, sd: 115, sp: 138}, weightkg: 110.0},
-  'Zamazenta-Crowned': {types: ['Fighting', 'Steel'], bs: {hp: 92, at: 0, df: 0, sa: 80, sd: 0, sp: 128}, weightkg: 785.0},
-  'Zamazenta-Hero': {types: ['Fighting'], bs: {hp: 92, at: 0, df: 115, sa: 80, sd: 115, sp: 138}, weightkg: 210.0},
+  'Zacian-Crowned': {types: ['Fairy', 'Steel'], bs: {hp: 92, at: 150, df: 115, sa: 80, sd: 115, sp: 148}, weightkg: 355.0},
+  'Zacian-Hero': {types: ['Fairy'], bs: {hp: 92, at: 120, df: 115, sa: 80, sd: 115, sp: 138}, weightkg: 110.0},
+  'Zamazenta-Crowned': {types: ['Fighting', 'Steel'], bs: {hp: 92, at: 120, df: 140, sa: 80, sd: 140, sp: 128}, weightkg: 785.0},
+  'Zamazenta-Hero': {types: ['Fighting'], bs: {hp: 92, at: 120, df: 115, sa: 80, sd: 115, sp: 138}, weightkg: 210.0},
   'Zarude': {types: ['Dark', 'Grass'], bs: {hp: 105, at: 120, df: 105, sa: 70, sd: 95, sp: 105}, weightkg: 70.0},
   'Zarude-Dada': {types: ['Dark', 'Grass'], bs: {hp: 105, at: 120, df: 105, sa: 70, sd: 95, sp: 105}, weightkg: 70.0},
 };
 
 const SS: {[name: string]: SpeciesData} = extend(true, {}, SM, SS_PATCH);
 
+const SV_NFE = new Set<I.SpeciesName>(`
+Abra
+Aipom
+Amaura
+Anorith
+Applin
+Archen
+Arctibax
+Aron
+Arrokuda
+Axew
+Azurill
+Bagon
+Baltoy
+Barboach
+Basculin-Blue-Striped
+Basculin-Red-Striped
+Basculin-White-Striped
+Bayleef
+Beldum
+Bellsprout
+Bergmite
+Bidoof
+Binacle
+Bisharp
+Blipbug
+Blitzle
+Boldore
+Bonsly
+Bounsweet
+Braixen
+Bramblin
+Brionne
+Bronzor
+Budew
+Buizel
+Bulbasaur
+Buneary
+Bunnelby
+Burmy-Plant-Cloak
+Burmy-Sandy-Cloak
+Burmy-Trash-Cloak
+Cacnea
+Capsakid
+Carkol
+Carvanha
+Cascoon
+Caterpie
+Cetoddle
+Chansey
+Charcadet
+Charjabug
+Charmander
+Charmeleon
+Cherubi
+Chespin
+Chewtle
+Chikorita
+Chimchar
+Chinchou
+Chingling
+Clamperl
+Clauncher
+Clefairy
+Cleffa
+Clobbopus
+Combee
+Combusken
+Corphish
+Corsola-Galar
+Corvisquire
+Cosmoem
+Cosmog
+Cottonee
+Crabrawler
+Cranidos
+Croagunk
+Crocalor
+Croconaw
+Cubchoo
+Cubone
+Cufant
+Cutiefly
+Cyndaquil
+Dartrix
+Darumaka
+Darumaka-Galar
+Deerling-Autumn
+Deerling-Spring
+Deerling-Summer
+Deerling-Winter
+Deino
+Dewott
+Dewpider
+Diglett
+Diglett-Alola
+Dipplin
+Doduo
+Dolliv
+Dottler
+Doublade
+Dragonair
+Drakloak
+Dratini
+Dreepy
+Drifloon
+Drilbur
+Drizzile
+Drowzee
+Ducklett
+Dunsparce
+Duosion
+Duraludon
+Dusclops
+Duskull
+Dwebble
+Eelektrik
+Eevee
+Ekans
+Electabuzz
+Electrike
+Elekid
+Elgyem
+Espurr
+Exeggcute
+Farfetchd-Galar
+Feebas
+Fennekin
+Ferroseed
+Fidough
+Finizen
+Finneon
+Flaaffy
+Flabebe-Blue-Flower
+Flabebe-Orange-Flower
+Flabebe-Red-Flower
+Flabebe-White-Flower
+Flabebe-Yellow-Flower
+Fletchinder
+Fletchling
+Flittle
+Floette-Blue-Flower
+Floette-Orange-Flower
+Floette-Red-Flower
+Floette-White-Flower
+Floette-Yellow-Flower
+Floragato
+Fomantis
+Foongus
+Fraxure
+Frigibax
+Frillish
+Froakie
+Frogadier
+Fuecoco
+Gabite
+Gastly
+Geodude
+Geodude-Alola
+Gible
+Gimmighoul-Chest
+Gimmighoul-Roaming
+Girafarig
+Glameow
+Gligar
+Glimmet
+Gloom
+Golbat
+Goldeen
+Golett
+Goomy
+Gossifleur
+Gothita
+Gothorita
+Graveler
+Graveler-Alola
+Greavard
+Grimer
+Grimer-Alola
+Grookey
+Grotle
+Grovyle
+Growlithe
+Growlithe-Hisui
+Grubbin
+Gulpin
+Gurdurr
+Hakamo-O
+Happiny
+Hatenna
+Hattrem
+Haunter
+Helioptile
+Herdier
+Hippopotas
+Honedge
+Hoothoot
+Hoppip
+Horsea
+Houndour
+Igglybuff
+Impidimp
+Inkay
+Ivysaur
+Jangmo-O
+Jigglypuff
+Joltik
+Kabuto
+Kadabra
+Kakuna
+Karrablast
+Kirlia
+Klang
+Klink
+Koffing
+Krabby
+Kricketot
+Krokorok
+Kubfu
+Lairon
+Lampent
+Larvesta
+Larvitar
+Lechonk
+Ledyba
+Lickitung
+Lileep
+Lillipup
+Linoone-Galar
+Litleo
+Litten
+Litwick
+Lombre
+Lotad
+Loudred
+Luxio
+Machoke
+Machop
+Magby
+Magikarp
+Magmar
+Magnemite
+Magneton
+Makuhita
+Mankey
+Mantyke
+Mareanie
+Mareep
+Marill
+Marshtomp
+Maschiff
+Meditite
+Meowth
+Meowth-Alola
+Meowth-Galar
+Metang
+Metapod
+Mienfoo
+Milcery
+Mime-Jr
+Minccino
+Misdreavus
+Monferno
+Morelull
+Morgrem
+Mr-Mime-Galar
+Mudbray
+Mudkip
+Munchlax
+Munna
+Murkrow
+Nacli
+Naclstack
+Natu
+Nickit
+Nidoran-F
+Nidoran-M
+Nidorina
+Nidorino
+Nincada
+Noibat
+Nosepass
+Numel
+Nuzleaf
+Nymble
+Oddish
+Omanyte
+Onix
+Oshawott
+Palpitoad
+Pancham
+Panpour
+Pansage
+Pansear
+Paras
+Patrat
+Pawmi
+Pawmo
+Pawniard
+Petilil
+Phanpy
+Phantump
+Pichu
+Pidgeotto
+Pidgey
+Pidove
+Pignite
+Pikachu
+Pikipek
+Piloswine
+Pineco
+Piplup
+Poipole
+Poliwag
+Poliwhirl
+Poltchageist-Artisan
+Poltchageist-Counterfeit
+Ponyta
+Ponyta-Galar
+Poochyena
+Popplio
+Porygon
+Porygon2
+Primeape
+Prinplup
+Psyduck
+Pumpkaboo-Average
+Pumpkaboo-Large
+Pumpkaboo-Small
+Pumpkaboo-Super
+Pupitar
+Purrloin
+Quaxly
+Quaxwell
+Quilava
+Quilladin
+Qwilfish-Hisui
+Raboot
+Ralts
+Rattata
+Rattata-Alola
+Rellor
+Remoraid
+Rhydon
+Rhyhorn
+Riolu
+Rockruff
+Rockruff-Own-Tempo
+Roggenrola
+Rolycoly
+Rookidee
+Roselia
+Rowlet
+Rufflet
+Salandit
+Sandile
+Sandshrew
+Sandshrew-Alola
+Sandygast
+Scatterbug-Archipelago
+Scatterbug-Continental
+Scatterbug-Elegant
+Scatterbug-Fancy
+Scatterbug-Garden
+Scatterbug-High-Plains
+Scatterbug-Icy-Snow
+Scatterbug-Jungle
+Scatterbug-Marine
+Scatterbug-Meadow
+Scatterbug-Modern
+Scatterbug-Monsoon
+Scatterbug-Ocean
+Scatterbug-Pokeball
+Scatterbug-Polar
+Scatterbug-River
+Scatterbug-Sandstorm
+Scatterbug-Savanna
+Scatterbug-Sun
+Scatterbug-Tundra
+Scorbunny
+Scraggy
+Scyther
+Seadra
+Sealeo
+Seedot
+Seel
+Sentret
+Servine
+Sewaddle
+Shelgon
+Shellder
+Shellos-East-Sea
+Shellos-West-Sea
+Shelmet
+Shieldon
+Shinx
+Shroodle
+Shroomish
+Shuppet
+Silcoon
+Silicobra
+Sinistea-Antique
+Sinistea-Phony
+Sizzlipede
+Skiddo
+Skiploom
+Skitty
+Skorupi
+Skrelp
+Skwovet
+Slakoth
+Sliggoo
+Sliggoo-Hisui
+Slowpoke
+Slowpoke-Galar
+Slugma
+Smoliv
+Smoochum
+Sneasel
+Sneasel-Hisui
+Snivy
+Snom
+Snorunt
+Snover
+Snubbull
+Sobble
+Solosis
+Spearow
+Spewpa-Archipelago
+Spewpa-Continental
+Spewpa-Elegant
+Spewpa-Fancy
+Spewpa-Garden
+Spewpa-High-Plains
+Spewpa-Icy-Snow
+Spewpa-Jungle
+Spewpa-Marine
+Spewpa-Meadow
+Spewpa-Modern
+Spewpa-Monsoon
+Spewpa-Ocean
+Spewpa-Pokeball
+Spewpa-Polar
+Spewpa-River
+Spewpa-Sandstorm
+Spewpa-Savanna
+Spewpa-Sun
+Spewpa-Tundra
+Spheal
+Spinarak
+Spoink
+Sprigatito
+Spritzee
+Squirtle
+Stantler
+Staravia
+Starly
+Staryu
+Steenee
+Stufful
+Stunky
+Sunkern
+Surskit
+Swablu
+Swadloon
+Swinub
+Swirlix
+Tadbulb
+Taillow
+Tandemaus
+Tangela
+Tarountula
+Teddiursa
+Tentacool
+Tepig
+Thwackey
+Timburr
+Tinkatink
+Tinkatuff
+Tirtouga
+Toedscool
+Togepi
+Togetic
+Torchic
+Torracat
+Totodile
+Toxel
+Tranquill
+Trapinch
+Treecko
+Trubbish
+Trumbeak
+Turtwig
+Tympole
+Tynamo
+Type-Null
+Tyrogue
+Tyrunt
+Ursaring
+Vanillish
+Vanillite
+Varoom
+Venipede
+Venonat
+Vibrava
+Vigoroth
+Voltorb
+Voltorb-Hisui
+Vullaby
+Vulpix
+Vulpix-Alola
+Wailmer
+Wartortle
+Wattrel
+Weedle
+Weepinbell
+Whirlipede
+Whismur
+Wiglett
+Wimpod
+Wingull
+Woobat
+Wooloo
+Wooper
+Wooper-Paldea
+Wurmple
+Wynaut
+Yamask
+Yamask-Galar
+Yamper
+Yanma
+Yungoos
+Zigzagoon
+Zigzagoon-Galar
+Zorua
+Zorua-Hisui
+Zubat
+Zweilous
+`.trim().split('\n') as I.SpeciesName[]);
+
 const SV_PATCH: {[name: string]: SpeciesData} = {
+  'Aegislash-Blade': {types: ['Steel', 'Ghost'], bs: {hp: 60, at: 140, df: 50, sa: 140, sd: 50, sp: 60}, weightkg: 53.0},
+  'Aegislash-Shield': {types: ['Steel', 'Ghost'], bs: {hp: 60, at: 50, df: 140, sa: 50, sd: 140, sp: 60}, weightkg: 53.0},
+  'Alakazam': {types: ['Psychic'], bs: {hp: 55, at: 50, df: 45, sa: 135, sd: 95, sp: 120}, weightkg: 48.0},
+  'Alakazam-Mega': {types: ['Psychic'], bs: {hp: 55, at: 50, df: 65, sa: 175, sd: 105, sp: 150}, weightkg: 48.0},
   'Arboliva': {types: ['Grass', 'Normal'], bs: {hp: 78, at: 69, df: 90, sa: 125, sd: 109, sp: 39}, weightkg: 48.2},
   'Arctibax': {types: ['Dragon', 'Ice'], bs: {hp: 90, at: 95, df: 66, sa: 45, sd: 65, sp: 62}, weightkg: 30.0},
   'Armarouge': {types: ['Fire', 'Psychic'], bs: {hp: 85, at: 60, df: 100, sa: 125, sd: 80, sp: 75}, weightkg: 85.0},
   'Baxcalibur': {types: ['Dragon', 'Ice'], bs: {hp: 115, at: 145, df: 92, sa: 75, sd: 86, sp: 87}, weightkg: 210.0},
+  'Beedrill': {types: ['Bug', 'Poison'], bs: {hp: 65, at: 90, df: 40, sa: 45, sd: 80, sp: 80}, weightkg: 29.5},
+  'Beedrill-Mega': {types: ['Bug', 'Poison'], bs: {hp: 65, at: 150, df: 40, sa: 15, sd: 80, sp: 150}, weightkg: 40.5},
   'Bellibolt': {types: ['Electric'], bs: {hp: 109, at: 64, df: 91, sa: 103, sd: 83, sp: 45}, weightkg: 113.0},
   'Bombirdier': {types: ['Flying', 'Dark'], bs: {hp: 70, at: 103, df: 85, sa: 60, sd: 85, sp: 82}, weightkg: 42.9},
   'Brambleghast': {types: ['Grass', 'Ghost'], bs: {hp: 55, at: 115, df: 70, sa: 80, sd: 70, sp: 90}, weightkg: 6.0},
@@ -1472,7 +2026,11 @@ const SV_PATCH: {[name: string]: SpeciesData} = {
   'Dachsbun': {types: ['Fairy'], bs: {hp: 57, at: 80, df: 115, sa: 50, sd: 80, sp: 95}, weightkg: 14.9},
   'Dolliv': {types: ['Grass', 'Normal'], bs: {hp: 52, at: 53, df: 60, sa: 78, sd: 78, sp: 33}, weightkg: 11.9},
   'Dondozo': {types: ['Water'], bs: {hp: 150, at: 100, df: 115, sa: 65, sd: 65, sp: 35}, weightkg: 220.0},
+  'Dugtrio': {types: ['Ground'], bs: {hp: 35, at: 100, df: 50, sa: 50, sd: 70, sp: 120}, weightkg: 33.3},
+  'Dugtrio-Alola': {types: ['Ground', 'Steel'], bs: {hp: 35, at: 100, df: 60, sa: 50, sd: 70, sp: 110}, weightkg: 66.6},
   'Espathra': {types: ['Psychic'], bs: {hp: 95, at: 60, df: 60, sa: 101, sd: 60, sp: 105}, weightkg: 90.0},
+  'Exeggutor-Alola': {types: ['Grass', 'Dragon'], bs: {hp: 95, at: 105, df: 85, sa: 125, sd: 75, sp: 45}, weightkg: 415.6},
+  'Farfetchd-Galar': {types: ['Fighting'], bs: {hp: 80, at: 95, df: 60, sa: 30, sd: 52, sp: 70}, weightkg: 42.0},
   'Fezandipiti': {types: ['Poison', 'Fairy'], bs: {hp: 88, at: 91, df: 82, sa: 70, sd: 125, sp: 99}, weightkg: 30.1},
   'Fidough': {types: ['Fairy'], bs: {hp: 37, at: 55, df: 70, sa: 30, sd: 55, sp: 65}, weightkg: 10.9},
   'Finizen': {types: ['Water'], bs: {hp: 70, at: 45, df: 40, sa: 45, sd: 40, sp: 75}, weightkg: 60.2},
@@ -1489,6 +2047,7 @@ const SV_PATCH: {[name: string]: SpeciesData} = {
   'Glimmet': {types: ['Rock', 'Poison'], bs: {hp: 48, at: 35, df: 42, sa: 105, sd: 60, sp: 60}, weightkg: 8.0},
   'Glimmora': {types: ['Rock', 'Poison'], bs: {hp: 83, at: 55, df: 90, sa: 130, sd: 81, sp: 86}, weightkg: 45.0},
   'Gouging-Fire': {types: ['Fire', 'Dragon'], bs: {hp: 105, at: 115, df: 121, sa: 65, sd: 93, sp: 91}, weightkg: 590.0},
+  'Golem': {types: ['Rock', 'Ground'], bs: {hp: 80, at: 120, df: 130, sa: 55, sd: 65, sp: 45}, weightkg: 300.0},
   'Grafaiai': {types: ['Poison', 'Normal'], bs: {hp: 63, at: 95, df: 65, sa: 80, sd: 72, sp: 110}, weightkg: 27.2},
   'Great-Tusk': {types: ['Ground', 'Fighting'], bs: {hp: 115, at: 131, df: 131, sa: 53, sd: 53, sp: 87}, weightkg: 320.0},
   'Greavard': {types: ['Ghost'], bs: {hp: 50, at: 61, df: 60, sa: 30, sd: 55, sp: 34}, weightkg: 35.0},
@@ -1536,6 +2095,8 @@ const SV_PATCH: {[name: string]: SpeciesData} = {
   'Pawmo': {types: ['Electric', 'Fighting'], bs: {hp: 60, at: 75, df: 40, sa: 50, sd: 40, sp: 85}, weightkg: 6.5},
   'Pawmot': {types: ['Electric', 'Fighting'], bs: {hp: 70, at: 115, df: 70, sa: 70, sd: 60, sp: 105}, weightkg: 41.0},
   'Pecharunt': {types: ['Poison', 'Ghost'], bs: {hp: 88, at: 88, df: 160, sa: 88, sd: 88, sp: 88}, weightkg: 0.3},
+  'Pidgeot': {types: ['Normal', 'Flying'], bs: {hp: 83, at: 80, df: 80, sa: 95, sd: 80, sp: 101}, weightkg: 39.5},
+  'Pidgeot-Mega': {types: ['Normal', 'Flying'], bs: {hp: 83, at: 80, df: 85, sa: 145, sd: 90, sp: 121}, weightkg: 50.5},
   'Poltchageist-Artisan': {types: ['Grass', 'Ghost'], bs: {hp: 40, at: 45, df: 45, sa: 74, sd: 54, sp: 50}, weightkg: 1.1},
   'Poltchageist-Counterfeit': {types: ['Grass', 'Ghost'], bs: {hp: 40, at: 45, df: 45, sa: 74, sd: 54, sp: 50}, weightkg: 1.1},
   'Quaquaval': {types: ['Water', 'Fighting'], bs: {hp: 85, at: 120, df: 80, sa: 85, sd: 75, sp: 85}, weightkg: 61.9},
@@ -1543,6 +2104,10 @@ const SV_PATCH: {[name: string]: SpeciesData} = {
   'Quaxwell': {types: ['Water'], bs: {hp: 70, at: 85, df: 65, sa: 65, sd: 60, sp: 65}, weightkg: 21.5},
   'Rabsca': {types: ['Bug', 'Psychic'], bs: {hp: 75, at: 50, df: 85, sa: 115, sd: 100, sp: 45}, weightkg: 3.5},
   'Raging-Bolt': {types: ['Electric', 'Dragon'], bs: {hp: 125, at: 73, df: 91, sa: 137, sd: 89, sp: 75}, weightkg: 480.0},
+  'Raichu': {types: ['Electric'], bs: {hp: 60, at: 110, df: 55, sa: 90, sd: 80, sp: 110}, weightkg: 30.0},
+  'Raichu-Alola': {types: ['Electric', 'Psychic'], bs: {hp: 60, at: 85, df: 50, sa: 110, sd: 85, sp: 110}, weightkg: 21.0},
+  'Raichu-Mega-X': {types: ['Electric'], bs: {hp: 60, at: 110, df: 55, sa: 90, sd: 80, sp: 110}, weightkg: 30.0},
+  'Raichu-Mega-Y': {types: ['Electric'], bs: {hp: 60, at: 110, df: 55, sa: 90, sd: 80, sp: 110}, weightkg: 30.0},
   'Rellor': {types: ['Bug'], bs: {hp: 41, at: 50, df: 60, sa: 31, sd: 58, sp: 30}, weightkg: 1.0},
   'Revavroom': {types: ['Steel', 'Poison'], bs: {hp: 80, at: 119, df: 90, sa: 54, sd: 67, sp: 90}, weightkg: 120.0},
   'Roaring-Moon': {types: ['Dragon', 'Dark'], bs: {hp: 105, at: 139, df: 71, sa: 55, sd: 101, sp: 119}, weightkg: 380.0},
@@ -1647,6 +2212,9 @@ class Specie implements I.Specie {
     }
 
     assignWithout(this, data, Specie.EXCLUDE);
+    if (gen >= 9 && SV_NFE.has(this.name)) {
+      this.nfe = true;
+    }
   }
 }
 const SPECIES_BY_ID: Array<{[id: string]: Specie}> = [];
@@ -1662,3 +2230,6 @@ for (const species of SPECIES) {
   SPECIES_BY_ID.push(map);
   gen++;
 }
+
+
+

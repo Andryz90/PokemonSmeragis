@@ -49,6 +49,10 @@ def build_paths(args):
     splits_file = Path(args.splits).resolve() if args.splits else (site_dir / "splits.txt")
     sprites_dir = site_dir / "trainer_sprites"
     sprites_map = site_dir / "trainer_sprites.txt"
+    if not sprites_map.exists():
+        nested_sprites_map = sprites_dir / "trainer_sprites.txt"
+        if nested_sprites_map.exists():
+            sprites_map = nested_sprites_map
     return site_dir, in_file, out_main, splits_file, sprites_dir, sprites_map
 
 # ===== Utilities =====
@@ -88,6 +92,32 @@ def make_inorder_regex(s: str):
 
 def _cell_text(c) -> str:
     return (c.get_text(" ", strip=True) or "").strip()
+
+def trainer_id_parts(trainer_id: str | None):
+    if not trainer_id:
+        return "", None
+    tid = trainer_id.strip()
+    m = re.match(r"^(.*?)(?:_(\d+))?$", tid)
+    if not m:
+        return tid, None
+    base = (m.group(1) or tid).strip()
+    suffix = int(m.group(2)) if m.group(2) else None
+    return base, suffix
+
+def trainer_occurrence_rank(trainer_id: str | None):
+    _, suffix = trainer_id_parts(trainer_id)
+    if suffix == 1:
+        return (0, 1)
+    if suffix is None:
+        return (1, 0)
+    return (2, suffix)
+
+def sort_matched_trainers(entries):
+    families = {trainer_id_parts(entry["trainer_id"])[0] for entry in entries if entry.get("trainer_id")}
+    numeric_variants = any(trainer_id_parts(entry["trainer_id"])[1] is not None for entry in entries)
+    if len(families) == 1 and (numeric_variants or len(entries) > 1):
+        return sorted(entries, key=lambda entry: (trainer_occurrence_rank(entry.get("trainer_id")), entry["scan_order"]))
+    return sorted(entries, key=lambda entry: entry["scan_order"])
 
 # ===== Row classifiers =====
 ITEM_WORDS = {
@@ -659,6 +689,9 @@ def main(argv=None):
         title = re.sub(r"<.*?>","",title).strip() or "Trainer"
         return title
 
+    def table_trainer_id(t):
+        return (t.get("data-trainer-id") or "").strip()
+
     needed = set()
     for _, sections in splits_cfg:
         for _, toks in sections:
@@ -669,21 +702,29 @@ def main(argv=None):
                     needed.add(tk[1]); needed.add(tk[3])
     matchers = {s: make_inorder_regex(s) for s in needed}
 
-    seen = defaultdict(int)
-    found = {}
+    matched = defaultdict(list)
     totals = defaultdict(int)
 
-    for t in tables:
+    for scan_order, t in enumerate(tables):
         title = cap_title(t)
         low = canonicalize(title)
+        trainer_id = table_trainer_id(t)
         for sub in list(needed):
             if not sub: continue
             if sub in low or matchers[sub].search(low):
-                seen[sub] += 1; occ = seen[sub]
-                totals[sub] = occ
-                key = (sub, occ)
-                if key not in found:
-                    found[key] = (title, BeautifulSoup(str(t), "html.parser").table)
+                matched[sub].append({
+                    "title": title,
+                    "trainer_id": trainer_id,
+                    "scan_order": scan_order,
+                    "table": BeautifulSoup(str(t), "html.parser").table,
+                })
+
+    found = {}
+    for sub, entries in matched.items():
+        ordered_entries = sort_matched_trainers(entries)
+        totals[sub] = len(ordered_entries)
+        for occ, entry in enumerate(ordered_entries, start=1):
+            found[(sub, occ)] = (entry["title"], entry["table"])
 
     buttons, panels = [], []
     default_active = splits_cfg[0][0]
@@ -713,8 +754,8 @@ def main(argv=None):
 
                 else:
                     _, s1, o1, s2, o2 = tk
-                    occ1 = (o1 if o1 is not None else totals.get(s1, 1))
-                    occ2 = (o2 if o2 is not None else totals.get(s2, 1))
+                    occ1 = (o1 if o1 is not None else 1)
+                    occ2 = (o2 if o2 is not None else 1)
                     k1 = (s1, occ1); k2 = (s2, occ2)
                     if k1 not in found or k2 not in found:
                         print(f'[warn] incomplete merge in "{name}": "{s1}" #{occ1} && "{s2}" #{occ2}', file=sys.stderr)

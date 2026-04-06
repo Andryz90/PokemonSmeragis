@@ -414,10 +414,38 @@ $(".status").bind("keyup change", function () {
 });
 
 var lockerMove = "";
+
+function getResolvedMoveData(moveName) {
+	var move = moves[moveName] || moves['(No Move)'];
+	if (!move || move.category === 'Status' || move.bp > 0 || moveName === '(No Move)') {
+		return move;
+	}
+	var resolved = $.extend({}, move);
+	for (var g = gen - 1; g >= 1; g--) {
+		var previous = calc.MOVES[g] && calc.MOVES[g][moveName];
+		if (!previous) {
+			continue;
+		}
+		if (resolved.bp === 0 && previous.bp > 0) {
+			resolved.bp = previous.bp;
+		}
+		if (!resolved.type && previous.type) {
+			resolved.type = previous.type;
+		}
+		if (!resolved.category && previous.category) {
+			resolved.category = previous.category;
+		}
+		if (resolved.bp > 0 && resolved.type && resolved.category) {
+			break;
+		}
+	}
+	return resolved;
+}
+
 // auto-update move details on select
 $(".move-selector").change(function () {
 	var moveName = $(this).val();
-	var move = moves[moveName] || moves['(No Move)'];
+	var move = getResolvedMoveData(moveName);
 	var moveGroupObj = $(this).parent();
 	moveGroupObj.children(".move-bp").val(moveName === 'Present' ? 40 : move.bp);
 	var m = moveName.match(HIDDEN_POWER_REGEX);
@@ -589,6 +617,7 @@ function sortmons(a, b) {
 }
 
 var CURRENT_TRAINER_POKS = [];
+var TRAINER_OPTION_PREFIX = "__trainer__:";
 
 function extractSetIdFromTrainerEntry(entry) {
 	var match = String(entry || "").match(/^\[[^\]]+\](.+)$/);
@@ -597,12 +626,47 @@ function extractSetIdFromTrainerEntry(entry) {
 
 function extractTrainerNameFromSet(setName) {
 	var text = String(setName || "");
-	var openIndex = text.lastIndexOf(" (");
+	var openIndex = text.indexOf(" (");
 	var closeIndex = text.lastIndexOf(")");
 	if (openIndex === -1 || closeIndex <= openIndex) {
 		return "";
 	}
 	return text.substring(openIndex + 2, closeIndex);
+}
+
+function isTrainerOptionValue(value) {
+	return startsWith(String(value || ""), TRAINER_OPTION_PREFIX);
+}
+
+function getTrainerOptionIndex(value) {
+	var text = String(value || "");
+	return parseInt(text.slice(TRAINER_OPTION_PREFIX.length), 10);
+}
+
+function getTrainerSearchOptions() {
+	var seen = Object.create(null);
+	var options = [];
+	for (var i = 0; i < TR_NAMES.length; i++) {
+		var key = parseTrainerSortKey(TR_NAMES[i]);
+		if (!isFinite(key.trainerIndex) || key.trainerIndex === Number.MAX_SAFE_INTEGER || seen[key.trainerIndex]) {
+			continue;
+		}
+		var setId = extractSetIdFromTrainerEntry(TR_NAMES[i]);
+		var trainerName = extractTrainerNameFromSet(setId);
+		if (!trainerName) {
+			continue;
+		}
+		seen[key.trainerIndex] = true;
+		options.push({
+			pokemon: trainerName,
+			set: "Trainer",
+			text: trainerName,
+			id: TRAINER_OPTION_PREFIX + key.trainerIndex,
+			trainerName: trainerName,
+			isTrainerOption: true
+		});
+	}
+	return options;
 }
 
 function getTrainerIndices() {
@@ -666,10 +730,49 @@ function setOpposingSet(setName) {
 	$('.opposing .select2-chosen').text(setName);
 }
 
+function getBestSetForTrainerIndex(value) {
+	var all_poks = SETDEX_SV;
+	var bestSet = null;
+	var bestSlot = Number.MAX_SAFE_INTEGER;
+	for (const [pok_name, poks] of Object.entries(all_poks)) {
+		var pok_tr_names = Object.keys(poks);
+		for (i in pok_tr_names) {
+			var setData = poks[pok_tr_names[i]] || {};
+			var index = Number(setData["index"]);
+			if (!isFinite(index) || index !== Number(value)) {
+				continue;
+			}
+			var slot = Number(setData["slot"]);
+			if (!isFinite(slot)) {
+				slot = Number.MAX_SAFE_INTEGER;
+			}
+			if (slot < bestSlot) {
+				bestSlot = slot;
+				bestSet = `${pok_name} (${pok_tr_names[i]})`;
+			}
+		}
+	}
+	return bestSet;
+}
+
 // auto-update set details on select
 $(".set-selector").change(function () {
 	window.NO_CALC = true;
 	var fullSetName = $(this).val();
+	if (isTrainerOptionValue(fullSetName)) {
+		var trainerIndex = getTrainerOptionIndex(fullSetName);
+		var bestSet = getBestSetForTrainerIndex(trainerIndex);
+		if (bestSet) {
+			if ($(this).hasClass('opposing')) {
+				selectTrainer(trainerIndex);
+			} else {
+				$('.player').val(bestSet);
+				$('.player').change();
+				$('.player .select2-chosen').text(bestSet);
+			}
+		}
+		return;
+	}
 	if ($(this).hasClass('opposing')) {
 		topPokemonIcon(fullSetName, $("#p2mon")[0])
 		CURRENT_TRAINER_POKS = get_trainer_poks(fullSetName)
@@ -1430,6 +1533,45 @@ function getSelectOptions(arr, sort, defaultOption) {
 	}
 	return r;
 }
+
+function normalizeSetSearchValue(value) {
+	return String(value || "").toUpperCase();
+}
+
+function optionMatchesSetSearch(option, searchTerm) {
+	if (!searchTerm) {
+		return true;
+	}
+	var terms = normalizeSetSearchValue(searchTerm).split(/\s+/).filter(Boolean);
+	var haystacks = [
+		normalizeSetSearchValue(option.pokemon),
+		normalizeSetSearchValue(option.set),
+		normalizeSetSearchValue(option.text),
+		normalizeSetSearchValue(option.id)
+	];
+	return terms.every(function (term) {
+		for (var i = 0; i < haystacks.length; i++) {
+			if (haystacks[i].indexOf(term) !== -1) {
+				return true;
+			}
+		}
+		return false;
+	});
+}
+
+function formatDefaultSetResult(option) {
+	if ($("#randoms").prop("checked")) {
+		return option.pokemon;
+	}
+	if (option.isTrainerOption) {
+		return "<b>Trainer</b> " + option.text;
+	}
+	if (!option.set) {
+		return "<b>" + option.text + "</b>";
+	}
+	return "&nbsp;&nbsp;&nbsp;" + option.set + " <small>(" + option.pokemon + ")</small>";
+}
+
 var stickyMoves = (function () {
 	var lastClicked = 'resultMoveL1';
 	$(".result-move").click(function () {
@@ -1531,22 +1673,31 @@ function getTerrainEffects() {
 function loadDefaultLists() {
 	$(".set-selector").select2({
 		formatResult: function (object) {
-			if ($("#randoms").prop("checked")) {
-				return object.pokemon;
-			} else {
-				return object.set ? ("&nbsp;&nbsp;&nbsp;" + object.set) : ("<b>" + object.text + "</b>");
-			}
+			return formatDefaultSetResult(object);
 		},
 		query: function (query) {
 			var pageSize = 30;
 			var results = [];
+			var trainerResults = [];
+			if (!$("#randoms").prop("checked")) {
+				var trainerOptions = getTrainerSearchOptions();
+				for (var t = 0; t < trainerOptions.length; t++) {
+					if (optionMatchesSetSearch(trainerOptions[t], query.term)) {
+						trainerResults.push(trainerOptions[t]);
+					}
+				}
+			}
+			if (trainerResults.length) {
+				query.callback({
+					results: trainerResults.slice((query.page - 1) * pageSize, query.page * pageSize),
+					more: trainerResults.length >= query.page * pageSize
+				});
+				return;
+			}
 			var options = getSetOptions();
 			for (var i = 0; i < options.length; i++) {
 				var option = options[i];
-				var pokeName = option.pokemon.toUpperCase();
-				if (!query.term || query.term.toUpperCase().split(" ").every(function (term) {
-					return pokeName.indexOf(term) === 0 || pokeName.indexOf("-" + term) >= 0 || pokeName.indexOf(" " + term) >= 0;
-				})) {
+				if (optionMatchesSetSearch(option, query.term)) {
 					if ($("#randoms").prop("checked")) {
 						if (option.id) results.push(option);
 					} else {
@@ -1637,43 +1788,130 @@ function addBoxed(poke) {
 	var newPoke = document.createElement("img");
 	newPoke.id = `${poke.name}${poke.nameProp}`
 	newPoke.className = "trainer-pok left-side";
-	newPoke.src = getSrcImgPokemon(poke);
+	setPokemonSprite(newPoke, poke.name);
 	newPoke.dataset.id = `${poke.name} (${poke.nameProp})`
 	newPoke.addEventListener("dragstart", dragstart_handler);
 	$('#box-poke-list')[0].appendChild(newPoke)
 }
 
+var SPRITE_NAME_ALIASES = {
+	"Zygarde-10%": "Zygarde-10%25",
+	"Tauros-Paldea-Water": "Tauros-Paldea-Aqua",
+	"Tauros-Paldea-Fire": "Tauros-Paldea-Blaze",
+	"Tauros-Paldea": "Tauros-Paldea-Combat",
+	"Pumpkaboo-Super": "Pumpkaboo",
+	"Aegislash-Shield": "Aegislash"
+};
+
+var SHOWDOWN_SPRITE_ALIASES = {
+	"porygon-z": "porygonz",
+	"mr-mime": "mrmime",
+	"mr-mime-galar": "mrmime-galar",
+	"mime-jr": "mimejr",
+	"type-null": "typenull",
+	"jangmo-o": "jangmoo",
+	"hakamo-o": "hakamoo",
+	"kommo-o": "kommoo",
+	"nidoran-f": "nidoranf",
+	"nidoran-m": "nidoranm"
+};
+
+function getSpriteBaseSpecies(speciesName) {
+	var species = calc.SPECIES[9] && calc.SPECIES[9][speciesName];
+	if (species && species.baseSpecies) {
+		return species.baseSpecies;
+	}
+	return speciesName.indexOf("-") !== -1 ? speciesName.split("-")[0] : speciesName;
+}
+
+function toSpriteFileName(speciesName) {
+	return SPRITE_NAME_ALIASES[speciesName] || speciesName;
+}
+
+function pushSpriteCandidate(candidates, candidate) {
+	if (!candidate || candidates.indexOf(candidate) !== -1) {
+		return;
+	}
+	candidates.push(candidate);
+}
+
+function toShowdownSpriteId(speciesName) {
+	var name = toSpriteFileName(speciesName || "");
+	name = name.replace(/\s*\((?:M|F|Male|Female)\)\s*$/i, "");
+	if (name.normalize) {
+		name = name.normalize("NFKD");
+	}
+	name = name.toLowerCase().trim();
+	name = name.replace(/[.'’_:]/g, "");
+	name = name.replace(/\s+/g, "");
+	return SHOWDOWN_SPRITE_ALIASES[name] || name;
+}
+
+function addSpriteNameVariants(candidates, speciesName) {
+	if (!speciesName) {
+		return;
+	}
+	var aliased = toSpriteFileName(speciesName);
+	var compact = speciesName
+		.replace(/[%':.]/g, "")
+		.replace(/\s+/g, "%20");
+	var compactAliased = aliased
+		.replace(/[%':.]/g, "")
+		.replace(/\s+/g, "%20");
+	pushSpriteCandidate(candidates, aliased);
+	pushSpriteCandidate(candidates, speciesName);
+	pushSpriteCandidate(candidates, compact);
+	pushSpriteCandidate(candidates, compactAliased);
+}
+
+function getSpriteCandidates(speciesName) {
+	var baseSpecies = getSpriteBaseSpecies(speciesName);
+	var candidates = [];
+	addSpriteNameVariants(candidates, speciesName);
+	addSpriteNameVariants(candidates, baseSpecies);
+	return candidates;
+}
+
 function getSrcImgPokemon(poke) {
-	//edge case
 	if (!poke) {
-		return
+		return;
 	}
-	var spriteName = poke.name;
-	if (spriteName == "Zygarde-10%") {
-		spriteName = "Zygarde-10%25"
+	return `https://play.pokemonshowdown.com/sprites/gen5/${toShowdownSpriteId(poke.name)}.png`
+}
+
+function setPokemonSprite(node, speciesName) {
+	if (!node || !speciesName) {
+		return;
 	}
-	if (spriteName == "Tauros-Paldea-Water") {
-		spriteName = "Tauros-Paldea-Aqua"
+	var candidates = getSpriteCandidates(speciesName);
+	var urls = [];
+	var showdownId = toShowdownSpriteId(speciesName);
+	if (showdownId) {
+		urls.push(`https://play.pokemonshowdown.com/sprites/gen5/${showdownId}.png`);
 	}
-	if (spriteName == "Tauros-Paldea-Fire") {
-		spriteName = "Tauros-Paldea-Blaze"
+	var showdownBaseId = toShowdownSpriteId(getSpriteBaseSpecies(speciesName));
+	if (showdownBaseId && showdownBaseId !== showdownId) {
+		urls.push(`https://play.pokemonshowdown.com/sprites/gen5/${showdownBaseId}.png`);
 	}
-	if (spriteName == "Tauros-Paldea") {
-		spriteName = "Tauros-Paldea-Combat"
+	for (var i = 0; i < candidates.length; i++) {
+		urls.push(`https://raw.githubusercontent.com/May8th1995/sprites/master/${candidates[i]}.png`);
 	}
-	if (spriteName == "Wooper-Paldea") {
-		spriteName = "WooperPaldea"
+	var uniqueUrls = [];
+	for (var j = 0; j < urls.length; j++) {
+		if (uniqueUrls.indexOf(urls[j]) === -1) {
+			uniqueUrls.push(urls[j]);
+		}
 	}
-	if (spriteName == "Pumpkaboo-Super") {
-		spriteName = "Pumpkaboo"
-	}
-	if (spriteName == "Mime Jr.") {
-		spriteName = "Mime%20Jr"
-	}
-	if (spriteName == "Aegislash-Shield") {
-		spriteName = "Aegislash"
-	}
-	return `https://raw.githubusercontent.com/May8th1995/sprites/master/${spriteName}.png`
+	var currentIndex = 0;
+	node.onerror = function () {
+		currentIndex++;
+		if (currentIndex < uniqueUrls.length) {
+			node.src = uniqueUrls[currentIndex];
+		} else {
+			node.onerror = null;
+		}
+	};
+	node.src = uniqueUrls[0];
 }
 
 function get_trainer_poks(trainer_name) {
@@ -1690,8 +1928,7 @@ function get_trainer_poks(trainer_name) {
 
 function topPokemonIcon(fullname, node) {
 	var mon = { name: fullname.split(" (")[0] };
-	var src = getSrcImgPokemon(mon);
-	node.src = src;
+	setPokemonSprite(node, mon.name);
 }
 
 $(document).on('click', '.right-side', function () {
@@ -1725,27 +1962,7 @@ function selectFirstMon() {
 
 function selectTrainer(value) {
 	localStorage.setItem("lasttimetrainer", value);
-	all_poks = SETDEX_SV
-	var bestSet = null
-	var bestSlot = Number.MAX_SAFE_INTEGER
-	for (const [pok_name, poks] of Object.entries(all_poks)) {
-		var pok_tr_names = Object.keys(poks)
-		for (i in pok_tr_names) {
-			var setData = poks[pok_tr_names[i]] || {}
-			var index = Number(setData["index"])
-			if (!isFinite(index) || index !== Number(value)) {
-				continue
-			}
-			var slot = Number(setData["slot"])
-			if (!isFinite(slot)) {
-				slot = Number.MAX_SAFE_INTEGER
-			}
-			if (slot < bestSlot) {
-				bestSlot = slot
-				bestSet = `${pok_name} (${pok_tr_names[i]})`
-			}
-		}
-	}
+	var bestSet = getBestSetForTrainerIndex(value);
 	if (bestSet) {
 		setOpposingSet(bestSet);
 	}
