@@ -1,6 +1,7 @@
 #include "global.h"
 #include "battle.h"
 #include "battle_anim.h"
+#include "battle_controllers.h"
 #include "decompress.h"
 #include "graphics.h"
 #include "main.h"
@@ -912,6 +913,10 @@ static void Task_PlayCryWhenReleasedFromBall(u8 taskId)
     {
     case 0:
     default:
+        if (gTasks[taskId].tCryTaskWaitMode == RELEASE_MON_CRY_WAIT_FOR_AFFINE
+         && ShouldPlayerWaitForOpponentIntro(battler))
+            break;
+
         if ((gTasks[taskId].tCryTaskWaitMode == RELEASE_MON_CRY_WAIT_FOR_AFFINE
              && gSprites[monSpriteId].affineAnimEnded)
          || (gTasks[taskId].tCryTaskWaitMode == RELEASE_MON_CRY_WAIT_FOR_MON_ANIM

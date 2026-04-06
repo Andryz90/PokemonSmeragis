@@ -2452,6 +2452,8 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_DIRE_CLAW",
+      "MOVE_IRON_HEAD",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_PAY_DAY",
@@ -3609,7 +3611,6 @@
         "Level": 20,
         "Move": "MOVE_QUICK_GUARD"
       },
-
       {
         "Level": 27,
         "Move": "MOVE_AIR_CUTTER"
@@ -5676,6 +5677,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_ROCK_SMASH",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -5799,6 +5801,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_ROCK_SMASH",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -5924,13 +5927,14 @@
         "Level": 66,
         "Move": "MOVE_DOUBLE_EDGE"
       },
-    {
-      "Level": 70,
-      "Move": "MOVE_G_MAX_CHI_STRIKE"
-    }
+      {
+        "Level": 70,
+        "Move": "MOVE_G_MAX_CHI_STRIKE"
+      }
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_ROCK_SMASH",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -6250,7 +6254,6 @@
         "Level": 10,
         "Move": "MOVE_EMBER"
       },
-      
       {
         "Level": 15,
         "Move": "MOVE_FLAME_CHARGE"
@@ -8081,7 +8084,8 @@
       "MOVE_ALLY_SWITCH",
       "MOVE_SCALD",
       "MOVE_HIGH_HORSEPOWER",
-      "MOVE_LIQUIDATION"
+      "MOVE_LIQUIDATION",
+      "MOVE_GYRO_BALL"
     ],
     "EggMoves": [
       "MOVE_ANCIENT_POWER",
@@ -8392,6 +8396,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_FRUSTRATION",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -8435,8 +8440,7 @@
       "MOVE_IRON_DEFENSE",
       "MOVE_EARTH_POWER",
       "MOVE_IRON_HEAD",
-      "MOVE_STEALTH_ROCK",
-      "MOVE_FRUSTRATION"
+      "MOVE_STEALTH_ROCK"
     ],
     "EggMoves": [
       "MOVE_ANCIENT_POWER",
@@ -8498,7 +8502,6 @@
         "Level": 32,
         "Move": "MOVE_SHADOW_CLAW"
       },
-
       {
         "Level": 36,
         "Move": "MOVE_FOCUS_ENERGY"
@@ -8526,6 +8529,11 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_HEAD_SMASH",
+      "MOVE_WILD_CHARGE",
+      "MOVE_PHANTOM_FORCE",
+      "MOVE_SHADOW_BONE",
+      "MOVE_FRUSTRATION",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -11260,6 +11268,9 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_DRAIN_PUNCH",
+      "MOVE_CIRCLE_THROW",
+      "MOVE_SKY_DROP",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_DIG",
@@ -11298,7 +11309,8 @@
       "MOVE_STONE_EDGE",
       "MOVE_STEALTH_ROCK",
       "MOVE_HIGH_HORSEPOWER",
-      "MOVE_THROAT_CHOP"
+      "MOVE_THROAT_CHOP",
+      "MOVE_TRAILBLAZE"
     ],
     "EggMoves": [
       "MOVE_FEINT",
@@ -12849,10 +12861,12 @@
       {
         "Level": 41,
         "Move": "MOVE_AQUA_CUTTER"
-      } 
+      }
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_CEASELESS_EDGE",
+      "MOVE_STONE_AXE",
       "MOVE_MEGA_KICK",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -12900,7 +12914,8 @@
       "MOVE_STONE_EDGE",
       "MOVE_STEALTH_ROCK",
       "MOVE_SCALD",
-      "MOVE_LIQUIDATION"
+      "MOVE_LIQUIDATION",
+      "MOVE_KOWTOW_CLEAVE"
     ],
     "EggMoves": [
       "MOVE_AURORA_BEAM",
@@ -12914,8 +12929,7 @@
     ],
     "TutorMoves": [
       "MOVE_FLIP_TURN",
-      "MOVE_METEOR_BEAM",
-      "MOVE_KOWTOW_CLEAVE"
+      "MOVE_METEOR_BEAM"
     ]
   },
   "AERODACTYL": {
@@ -12968,10 +12982,10 @@
         "Level": 50,
         "Move": "MOVE_ACCELEROCK"
       },
-    {
-      "Level": 50,
-      "Move": "MOVE_ACCELEROCK"
-    },
+      {
+        "Level": 50,
+        "Move": "MOVE_ACCELEROCK"
+      },
       {
         "Level": 60,
         "Move": "MOVE_GIGA_IMPACT"
@@ -12979,6 +12993,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_HEAD_SMASH",
       "MOVE_FLY",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
@@ -13035,7 +13050,6 @@
       "MOVE_WIDE_GUARD"
     ],
     "TutorMoves": [
-      "MOVE_HEAD_SMASH",
       "MOVE_DUAL_WINGBEAT",
       "MOVE_METEOR_BEAM"
     ]
@@ -22560,7 +22574,6 @@
   },
   "LINOONE": {
     "LevelMoves": [
-
       {
         "Level": 0,
         "Move": "MOVE_SLASH"
@@ -26308,6 +26321,10 @@
   "WAILORD": {
     "LevelMoves": [
       {
+        "Level": 0,
+        "Move": "MOVE_WATER_SPOUT"
+      },
+      {
         "Level": 1,
         "Move": "MOVE_SOAK"
       },
@@ -26374,10 +26391,6 @@
       {
         "Level": 49,
         "Move": "MOVE_HYDRO_PUMP"
-      },
-      {
-        "Level": 54,
-        "Move": "MOVE_WATER_SPOUT"
       }
     ],
     "PreEvoMoves": [],
@@ -37115,10 +37128,10 @@
         "Level": 1,
         "Move": "MOVE_LIFE_DEW"
       },
-    {
-      "Level": 1,
-      "Move": "MOVE_RAZOR_WIND"
-    }
+      {
+        "Level": 1,
+        "Move": "MOVE_RAZOR_WIND"
+      }
     ],
     "PreEvoMoves": [],
     "TMMoves": [
@@ -42285,6 +42298,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_ROCK_SMASH",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -42392,6 +42406,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_ROCK_SMASH",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -45671,6 +45686,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_DETERIO",
       "MOVE_HYPER_BEAM",
       "MOVE_GIGA_IMPACT",
       "MOVE_SOLAR_BEAM",
@@ -50265,10 +50281,7 @@
       "MOVE_BUG_BUZZ",
       "MOVE_FOCUS_BLAST",
       "MOVE_ENERGY_BALL",
-      "MOVE_VENOM_DRENCH",
-      "MOVE_THUNDERBOLT",
-      "MOVE_ICE_BEAM",
-      "MOVE_EARTH_POWER"
+      "MOVE_VENOM_DRENCH"
     ],
     "EggMoves": [
       "MOVE_DOUBLE_EDGE",
@@ -50278,7 +50291,6 @@
     ],
     "TutorMoves": [
       "MOVE_SKITTER_SMACK"
-
     ]
   },
   "STUNFISK": {
@@ -54585,6 +54597,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_ROCK_SMASH",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -54719,6 +54732,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_ROCK_SMASH",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_FIRE_PUNCH",
@@ -63154,6 +63168,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_ROCK_SMASH",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -63266,6 +63281,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_ROCK_SMASH",
       "MOVE_MEGA_PUNCH",
       "MOVE_MEGA_KICK",
       "MOVE_ICE_PUNCH",
@@ -66538,7 +66554,7 @@
   },
   "NIHILEGO": {
     "LevelMoves": [
-     {
+      {
         "Level": 0,
         "Move": "MOVE_POISON_DRAIN"
       },
@@ -72623,6 +72639,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_COMBO_PUNCH",
       "MOVE_MEGA_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_REST",
@@ -72742,6 +72759,7 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_COMBO_PUNCH",
       "MOVE_MEGA_PUNCH",
       "MOVE_ICE_PUNCH",
       "MOVE_HYPER_BEAM",
@@ -74079,8 +74097,8 @@
         "Move": "MOVE_IRON_DEFENSE"
       },
       {
-      "Level": 0,
-      "Move": "MOVE_ROYAL_GUARD"
+        "Level": 0,
+        "Move": "MOVE_ROYAL_GUARD"
       },
       {
         "Level": 1,
@@ -74161,6 +74179,8 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_U_TURN",
+      "MOVE_ROCK_SMASH",
       "MOVE_SOLAR_BLADE",
       "MOVE_REST",
       "MOVE_SNORE",
@@ -79501,7 +79521,14 @@
       "MOVE_WILD_CHARGE",
       "MOVE_PLAY_ROUGH",
       "MOVE_DAZZLING_GLEAM",
-      "MOVE_HIGH_HORSEPOWER"
+      "MOVE_HIGH_HORSEPOWER",
+      "MOVE_PSYCHIC_NOISE",
+      "MOVE_ALLURING_VOICE",
+      "MOVE_GRASS_KNOT",
+      "MOVE_NASTY_PLOT",
+      "MOVE_EARTH_POWER",
+      "MOVE_MOONBLAST",
+      "MOVE_DRAINING_KISS"
     ],
     "EggMoves": [
       "MOVE_DOUBLE_EDGE",
@@ -79642,7 +79669,14 @@
       "MOVE_PLAY_ROUGH",
       "MOVE_DAZZLING_GLEAM",
       "MOVE_HIGH_HORSEPOWER",
-      "MOVE_THROAT_CHOP"
+      "MOVE_THROAT_CHOP",
+      "MOVE_PSYCHIC_NOISE",
+      "MOVE_ALLURING_VOICE",
+      "MOVE_GRASS_KNOT",
+      "MOVE_NASTY_PLOT",
+      "MOVE_EARTH_POWER",
+      "MOVE_MOONBLAST",
+      "MOVE_DRAINING_KISS"
     ],
     "EggMoves": [
       "MOVE_DOUBLE_EDGE",

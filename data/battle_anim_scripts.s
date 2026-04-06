@@ -14003,6 +14003,7 @@ gBattleAnimMove_SteelBeam::
 	call SteelBeam_Continuity
 	waitforvisualfinish
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 1, 10, 0, RGB(24, 24, 48)
+	waitforvisualfinish
 	call UnsetHighSpeedBg
 	end
 SteelBeam_Continuity:

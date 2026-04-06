@@ -60,6 +60,8 @@ enum
     SHINY_SPAWN_INTERVAL = 5,
     SHINY_SCREEN_DARKEN_DURATION = 6,
     SHINY_SPARKLE_LIFETIME = 28,
+    SHINY_PARTICLE_WAIT_TIMEOUT = 45,
+    SHINY_TASK_TIMEOUT = 180,
 };
 
 static void AnimTask_UnusedLevelUpHealthBox_Step(u8);
@@ -88,6 +90,7 @@ static void SpriteCB_Ball_FadeOut(struct Sprite *);
 static void DestroySpriteAfterOneFrame(struct Sprite *);
 static void LoadBallParticleGfx(u8);
 static void SpriteCB_CaptureStar_Flicker(struct Sprite *);
+static bool32 IsBattlerReadyForShiny(u8 battler);
 static void SpriteCB_Ball_Release_Wait(struct Sprite *);
 static void SpriteCB_Ball_Block_Step(struct Sprite *);
 static void PokeBallOpenParticleAnimation_Step1(struct Sprite *);
@@ -101,6 +104,7 @@ static void Task_FadeMon_ToNormal(u8);
 static void Task_FadeMon_ToNormal_Step(u8);
 static void Task_ShinyStars(u8);
 static void Task_ShinyStars_Wait(u8);
+static void FinishShinyAnimationTask(u8);
 static void SpriteCB_ShinyStars_Crystal(struct Sprite *);
 static void SpriteCB_PokeBlock_LiftArm(struct Sprite *);
 static void SpriteCB_PokeBlock_Arc(struct Sprite *);
@@ -148,12 +152,43 @@ static bool32 ShouldWaitForOtherBattlerAnimationsBeforeShiny(u8 battler)
         if (i == battler)
             continue;
 
+        if (gBattleSpritesDataPtr->animationData->introAnimActive
+         && GetBattlerSide(battler) == B_SIDE_PLAYER
+         && GetBattlerSide(i) == B_SIDE_OPPONENT)
+        {
+            if (gBattleSpritesDataPtr->healthBoxesData[i].ballAnimActive
+             || gBattleSpritesDataPtr->healthBoxesData[i].specialAnimActive)
+                return TRUE;
+            continue;
+        }
+
+        if (gBattleSpritesDataPtr->animationData->introAnimActive
+         && GetBattlerSide(battler) == B_SIDE_OPPONENT
+         && GetBattlerSide(i) == B_SIDE_PLAYER
+         && IsValidForBattle(GetBattlerMon(i))
+         && !IsBattlerSpritePresent(i))
+            return TRUE;
+
+        if (GetBattlerSide(i) == GetBattlerSide(battler)
+         && !gBattleSpritesDataPtr->healthBoxesData[i].triedShinyMonAnim
+         && !gBattleSpritesDataPtr->healthBoxesData[i].finishedShinyMonAnim
+         && IsValidForBattle(GetBattlerMon(i))
+         && GetMonData(GetBattlerMon(i), MON_DATA_IS_SHINY)
+         && IsBattlerReadyForShiny(i))
+            continue;
+
         if (gBattleSpritesDataPtr->healthBoxesData[i].ballAnimActive
          || gBattleSpritesDataPtr->healthBoxesData[i].specialAnimActive)
             return TRUE;
 
         if (!IsBattlerSpritePresent(i))
             continue;
+
+        if (gBattleSpritesDataPtr->animationData->introAnimActive
+         && GetBattlerSide(battler) == B_SIDE_OPPONENT
+         && GetBattlerSide(i) == B_SIDE_PLAYER
+         && gSprites[gBattlerSpriteIds[i]].callback != SpriteCallbackDummy)
+            return TRUE;
 
         if ((gSprites[gBattlerSpriteIds[i]].callback != SpriteCallbackDummy
           && gSprites[gBattlerSpriteIds[i]].callback != SpriteCallbackDummy_2)
@@ -162,6 +197,31 @@ static bool32 ShouldWaitForOtherBattlerAnimationsBeforeShiny(u8 battler)
     }
 
     return FALSE;
+}
+
+static bool32 IsBattlerReadyForShiny(u8 battler)
+{
+    u32 battlerX;
+    struct Sprite *sprite;
+
+    if (!IsBattlerSpritePresent(battler))
+        return FALSE;
+
+    if (gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive)
+        return FALSE;
+
+    sprite = &gSprites[gBattlerSpriteIds[battler]];
+    if (sprite->x2 != 0 || sprite->y2 != 0)
+        return FALSE;
+
+    if (IsOnPlayerSide(battler))
+    {
+        battlerX = GetBattlerSpriteCoord(battler, BATTLER_COORD_X_2);
+        if (sprite->x != battlerX)
+            return FALSE;
+    }
+
+    return TRUE;
 }
 
 struct CaptureStar
@@ -2472,6 +2532,8 @@ void AnimTask_SetTargetToEffectBattler(u8 taskId)
 }
 
 #define tBattler     data[0]
+#define tParticleWaitTimer data[8]
+#define tLifetime    data[9]
 #define tSpawnTimer  data[10]
 #define tStarIdx     data[11]
 #define tNumStars    data[12]
@@ -2552,10 +2614,12 @@ void TryShinyAnimation(u8 battler, struct Pokemon *mon)
     bool8 isShiny;
     struct Pokemon* illusionMon;
 
-    if (ShouldWaitForOtherBattlerAnimationsBeforeShiny(battler))
+    isShiny = GetMonData(mon, MON_DATA_IS_SHINY);
+    if (isShiny
+     && (ShouldWaitForOtherBattlerAnimationsBeforeShiny(battler)
+      || !IsBattlerReadyForShiny(battler)))
         return;
 
-    isShiny = GetMonData(mon, MON_DATA_IS_SHINY);
     gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = TRUE;
     illusionMon = GetIllusionMonPtr(battler);
     if (illusionMon != NULL)
@@ -2593,8 +2657,15 @@ static void Task_ShinyStars(u8 taskId)
         return;
     }
 
-    // Wait until the ball particles have despawned
-    if (gBattleSpritesDataPtr->animationData->numBallParticles)
+    if (gTasks[taskId].tLifetime++ > SHINY_TASK_TIMEOUT)
+    {
+        FinishShinyAnimationTask(taskId);
+        return;
+    }
+
+    // Wait until the ball particles have despawned, but don't deadlock if one leaks.
+    if (gBattleSpritesDataPtr->animationData->numBallParticles
+     && gTasks[taskId].tParticleWaitTimer++ < SHINY_PARTICLE_WAIT_TIMEOUT)
         return;
 
     battler = gTasks[taskId].tBattler;
@@ -2636,18 +2707,26 @@ static void Task_ShinyStars(u8 taskId)
 
 static void Task_ShinyStars_Wait(u8 taskId)
 {
-    u8 battler;
+    if (gTasks[taskId].tLifetime++ > SHINY_TASK_TIMEOUT)
+    {
+        FinishShinyAnimationTask(taskId);
+        return;
+    }
 
     UpdateShinyScreenDarken(taskId);
 
     if (gTasks[taskId].tNumStars == 0
      && gTasks[taskId].tScreenDarkenCoeff == 0)
-    {
-        battler = gTasks[taskId].tBattler;
-        BlendPalettes(GetShinyScreenDarkenPalettesMask(battler), 0, RGB_BLACK);
-        gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = TRUE;
-        DestroyTask(taskId);
-    }
+        FinishShinyAnimationTask(taskId);
+}
+
+static void FinishShinyAnimationTask(u8 taskId)
+{
+    u8 battler = gTasks[taskId].tBattler;
+
+    BlendPalettes(GetShinyScreenDarkenPalettesMask(battler), 0, RGB_BLACK);
+    gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = TRUE;
+    DestroyTask(taskId);
 }
 
 static void SpriteCB_ShinyStars_Crystal(struct Sprite *sprite)
@@ -2672,6 +2751,8 @@ static void SpriteCB_ShinyStars_Crystal(struct Sprite *sprite)
 #undef tNumStars
 #undef tDelayTimer
 #undef tScreenDarkenCoeff
+#undef tParticleWaitTimer
+#undef tLifetime
 #undef tScreenDarkenTimer
 
 #undef sTaskId

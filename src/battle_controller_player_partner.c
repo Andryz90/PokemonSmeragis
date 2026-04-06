@@ -166,6 +166,9 @@ static void Intro_WaitForHealthbox(u32 battler)
 // Also used by the link partner.
 void Controller_PlayerPartnerShowIntroHealthbox(u32 battler)
 {
+    if (ShouldPlayerWaitForOpponentIntro(battler))
+        return;
+
     if (!gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive
         && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].ballAnimActive
         && gSprites[gBattleControllerData[battler]].callback == SpriteCallbackDummy

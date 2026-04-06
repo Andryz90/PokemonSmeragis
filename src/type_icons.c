@@ -11,6 +11,7 @@
 
 static void LoadTypeSpritesAndPalettes(void);
 static void LoadTypeIconsPerBattler(u32, u32);
+static bool32 AreTypeIconsPresent(void);
 
 static bool32 UseDoubleBattleCoords(u32);
 
@@ -247,6 +248,9 @@ void LoadTypeIcons(u32 battler)
         || (B_SHOW_TYPES == SHOW_TYPES_SEEN && !GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN)))
         return;
 
+    if (AreTypeIconsPresent())
+        return;
+
     LoadTypeSpritesAndPalettes();
 
     for (position = 0; position < gBattlersCount; ++position)
@@ -262,6 +266,25 @@ static void LoadTypeSpritesAndPalettes(void)
     LoadCompressedSpriteSheet(&sSpriteSheet_TypeIcons2);
     LoadSpritePalette(&sTypeIconPal1);
     LoadSpritePalette(&sTypeIconPal2);
+}
+
+static bool32 AreTypeIconsPresent(void)
+{
+    u32 spriteId;
+
+    for (spriteId = 0; spriteId < MAX_SPRITES; ++spriteId)
+    {
+        if (!gSprites[spriteId].inUse)
+            continue;
+
+        if (gSprites[spriteId].template->paletteTag == TYPE_ICON_TAG
+         || gSprites[spriteId].template->paletteTag == TYPE_ICON_TAG_2
+         || gSprites[spriteId].template->tileTag == TYPE_ICON_TAG
+         || gSprites[spriteId].template->tileTag == TYPE_ICON_TAG_2)
+            return TRUE;
+    }
+
+    return FALSE;
 }
 
 static void LoadTypeIconsPerBattler(u32 battler, u32 position)
@@ -299,13 +322,14 @@ static u32 GetMonPublicType(u32 battlerId, u32 typeNum)
     struct Pokemon* mon = GetBattlerMon(battlerId);
     u32 monSpecies = GetMonData(mon,MON_DATA_SPECIES,NULL);
     struct Pokemon* monIllusion;
-    u32 illusionSpecies;
+    u32 illusionSpecies = SPECIES_NONE;
 
     if (ShouldHideUncaughtType(monSpecies) || ShouldHideUnseenType(monSpecies))
         return TYPE_MYSTERY;
 
     monIllusion = GetIllusionMonPtr(battlerId);
-    illusionSpecies = GetMonData(monIllusion,MON_DATA_SPECIES,NULL);
+    if (monIllusion != NULL)
+        illusionSpecies = GetMonData(monIllusion, MON_DATA_SPECIES, NULL);
 
     if (GetActiveGimmick(battlerId) == GIMMICK_TERA)
         return GetMonDefensiveTeraType(mon,monIllusion,battlerId,typeNum,illusionSpecies,monSpecies);
@@ -489,6 +513,9 @@ static void FreeAllTypeIconResources(void)
 
 static void (* const sShowTypesControllerFuncs[])(u32 battler) =
 {
+    PlayerHandleChooseAction,
+    PlayerHandleChooseActionAfterDma3,
+    PlayerHandleInputChooseAction,
     PlayerHandleChooseMove,
     HandleChooseMoveAfterDma3,
     HandleInputChooseTarget,
@@ -565,4 +592,3 @@ static s32 GetTypeIconBounceMovement(s32 originalY, u32 position)
     struct Sprite* healthbox = &gSprites[gHealthboxSpriteIds[GetBattlerAtPosition(position)]];
     return originalY + healthbox->y2;
 }
-

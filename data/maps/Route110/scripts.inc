@@ -1,7 +1,6 @@
 .set LOCALID_CHALLENGE_BIKER, 21
 .set LOCALID_RIVAL, 28
 .set LOCALID_RIVAL_ON_BIKE, 29
-.set LOCALID_BIRCH, 36
 
 Route110_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Route110_OnResume
@@ -54,7 +53,7 @@ Route110_EventScript_BeginCylcingRoadChallenge::
 	setvar VAR_CYCLING_CHALLENGE_STATE, 2
 	return
 Route110_ChangeBirchPos::
-	setobjectxyperm LOCALID_BIRCH, 9, 84
+	setobjectxyperm LOCALID_BIRCH_R110, 9, 84
 	return 
 Route110_EventScript_AquaGrunt1::
 	lock
@@ -623,7 +622,7 @@ Route110_EventScript_BirchScene4::
 	goto Route110_EventScript_BirchScene
 
 Route110_GoBackFightGym::
-	applymovement LOCALID_BIRCH, Common_Movement_FacePlayer
+	applymovement LOCALID_BIRCH_R110, Common_Movement_FacePlayer
 	goto_if_set FLAG_BADGE02_GET, Route110_EventScript_BirchScene_End
 	msgbox Route110_GoBackFightGym_Text, MSGBOX_DEFAULT
 	closemessage
@@ -631,7 +630,7 @@ Route110_GoBackFightGym::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER Common_Movement_WalkDown
 	waitmovement 0
-	applymovement LOCALID_BIRCH, Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_BIRCH_R110, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	setvar VAR_BIRCH_TRIGGER_110, 1
 	releaseall
@@ -650,7 +649,7 @@ Route110_EventScript_BirchScene_End::
 	message LavaridgeTown_Text_ReceivedTheEgg
 	waitfanfare
 	msgbox Route110_Text_BadgeOk_End, MSGBOX_DEFAULT
-	applymovement LOCALID_BIRCH, Common_Movement_Delay32
+	applymovement LOCALID_BIRCH_R110, Common_Movement_Delay32
 	waitmovement 0
 	msgbox Route110_Text_KeepAnEyeOutForRival, MSGBOX_DEFAULT
 	closemessage
@@ -661,20 +660,20 @@ Route110_EventScript_BirchScene_End::
 	setflag FLAG_HIDE_ROUTE_110_BIRCH
 	setvar VAR_BIRCH_TRIGGER_110, 2
 	setvar VAR_REGISTER_BIRCH_STATE, 2
-	removeobject LOCALID_BIRCH
+	removeobject LOCALID_BIRCH_R110
 	releaseall
 	end
 
 Route110_EventScript_BirchScene::
 	lockall
-	addobject LOCALID_BIRCH
+	addobject LOCALID_BIRCH_R110
 	goto_if_eq VAR_BIRCH_TRIGGER_110, 1, Route110_GoBackFightGym
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchEntrance
+	applymovement LOCALID_BIRCH_R110, Route110_Movement_BirchEntrance
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_BIRCH, Common_Movement_ExclamationMark
+	applymovement LOCALID_BIRCH_R110, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_BIRCH, Common_Movement_Delay48
+	applymovement LOCALID_BIRCH_R110, Common_Movement_Delay48
 	waitmovement 0
 	call_if_eq VAR_0x8008, 1, Route110_EventScript_BirchApproachPlayer1
 	call_if_eq VAR_0x8008, 2, Route110_EventScript_BirchApproachPlayer2
@@ -683,13 +682,13 @@ Route110_EventScript_BirchScene::
 	msgbox Route110_Text_ImagineSeeingYouHere, MSGBOX_DEFAULT
 	closemessage
 	delay 20
-	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_BIRCH_R110, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	delay 10
-	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_BIRCH_R110, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	delay 20
-	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_BIRCH_R110, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	delay 30
 	msgbox Route110_Text_HeardYouInstallMatchCall, MSGBOX_DEFAULT
@@ -708,42 +707,42 @@ Route110_EventScript_BirchScene::
 	end
 
 Route110_EventScript_BirchApproachPlayer1::
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer1
+	applymovement LOCALID_BIRCH_R110, Route110_Movement_BirchApproachPlayer1
 	waitmovement 0
 	return
 
 Route110_EventScript_BirchApproachPlayer2::
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer2
+	applymovement LOCALID_BIRCH_R110, Route110_Movement_BirchApproachPlayer2
 	waitmovement 0
 	return
 
 Route110_EventScript_BirchApproachPlayer3::
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer3
+	applymovement LOCALID_BIRCH_R110, Route110_Movement_BirchApproachPlayer3
 	waitmovement 0
 	return
 
 Route110_EventScript_BirchApproachPlayer4::
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer4
+	applymovement LOCALID_BIRCH_R110, Route110_Movement_BirchApproachPlayer4
 	waitmovement 0
 	return
 
 Route110_EventScript_BirchExit1::
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchExit1
+	applymovement LOCALID_BIRCH_R110, Route110_Movement_BirchExit1
 	waitmovement 0
 	return
 
 Route110_EventScript_BirchExit2::
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchExit2
+	applymovement LOCALID_BIRCH_R110, Route110_Movement_BirchExit2
 	waitmovement 0
 	return
 
 Route110_EventScript_BirchExit3::
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchExit3
+	applymovement LOCALID_BIRCH_R110, Route110_Movement_BirchExit3
 	waitmovement 0
 	return
 
 Route110_EventScript_BirchExit4::
-	applymovement LOCALID_BIRCH, Route110_Movement_BirchExit4
+	applymovement LOCALID_BIRCH_R110, Route110_Movement_BirchExit4
 	waitmovement 0
 	return
 

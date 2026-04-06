@@ -107,6 +107,13 @@ SHELL := bash -o pipefail
 
 # Set flags for tools
 ASFLAGS := -mcpu=arm7tdmi --defsym MODERN=1
+ifeq ($(DINFO),1)
+  ASFLAGS += --gdwarf-4
+else
+  ifeq ($(DEBUG),1)
+    ASFLAGS += --gdwarf-4
+  endif
+endif
 
 INCLUDE_DIRS := include
 INCLUDE_CPP_ARGS := $(INCLUDE_DIRS:%=-iquote %)
@@ -120,7 +127,15 @@ endif
 CPPFLAGS := $(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=$(TEST) -std=gnu17
 ARMCC := $(PREFIX)gcc
 PATH_ARMCC := PATH="$(PATH)" $(ARMCC)
-CC1 := $(shell $(PATH_ARMCC) --print-prog-name=cc1) -quiet
+CC1_FLAGS := -quiet
+ifeq ($(DINFO),1)
+  CC1_FLAGS += -gdwarf-4
+else
+  ifeq ($(DEBUG),1)
+    CC1_FLAGS += -gdwarf-4
+  endif
+endif
+CC1 := $(shell $(PATH_ARMCC) --print-prog-name=cc1) $(CC1_FLAGS)
 override CFLAGS += -mthumb -mthumb-interwork -O$(O_LEVEL) -mabi=apcs-gnu -mtune=arm7tdmi -march=armv4t -Wno-pointer-to-int-cast -std=gnu17 -Werror -Wall -Wno-strict-aliasing -Wno-attribute-alias -Woverride-init
 ifeq ($(ANALYZE),1)
   override CFLAGS += -fanalyzer
@@ -133,12 +148,15 @@ ifeq ($(UNUSED_ERROR),0)
 endif
 LIBPATH := -L "$(dir $(shell $(PATH_ARMCC) -mthumb -print-file-name=libgcc.a))" -L "$(dir $(shell $(PATH_ARMCC) -mthumb -print-file-name=libnosys.a))" -L "$(dir $(shell $(PATH_ARMCC) -mthumb -print-file-name=libc.a))"
 LIB := $(LIBPATH) -lc -lnosys -lgcc -L../../libagbsyscall -lagbsyscall
+# Keep debug info on a DWARF version that VS Code/GDB frontends handle reliably.
+DEBUG_INFO_FLAGS := -g -gdwarf-4
+
 # Enable debug info if set
 ifeq ($(DINFO),1)
-  override CFLAGS += -g
+  override CFLAGS += $(DEBUG_INFO_FLAGS)
 else
   ifeq ($(DEBUG),1)
-    override CFLAGS += -g
+    override CFLAGS += $(DEBUG_INFO_FLAGS)
   endif
 endif
 
@@ -331,7 +349,7 @@ tidycheck:
 	rm -rf $(OBJ_DIR_NAME_TEST)
 
 tidydebug:
-	rm -rf $(DEBUG_OBJ_DIR_NAME)
+	rm -rf $(OBJ_DIR_NAME_DEBUG)
 
 # Other rules
 include graphics_file_rules.mk

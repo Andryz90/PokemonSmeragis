@@ -2986,6 +2986,8 @@ static void SpriteCB_WaitShinyAndLoadMonSprite(struct Sprite *sprite)
         return;
     if (sprite->x2 != 0 || sprite->y2 != 0)
         return;
+    if (ShouldPlayerWaitForOpponentIntro(battler))
+        return;
 
     if (!gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim)
     {
@@ -3004,6 +3006,9 @@ void SpriteCB_PlayerMonFromBall(struct Sprite *sprite)
     if (sprite->affineAnimEnded
      && !gBattleSpritesDataPtr->healthBoxesData[sprite->sBattler].ballAnimActive)
     {
+        if (ShouldPlayerWaitForOpponentIntro(sprite->sBattler))
+            return;
+
         if (GetMonData(GetBattlerMon(sprite->sBattler), MON_DATA_IS_SHINY))
             sprite->callback = SpriteCB_WaitShinyAndLoadMonSprite;
         else
@@ -3020,7 +3025,7 @@ void SpriteCB_PlayerMonSlideIn(struct Sprite *sprite)
     }
     else if (sprite->data[3] == 1)
     {
-        if (sprite->animEnded)
+        if (!sprite->animEnded)
             return;
         sprite->data[4] = sprite->x;
         sprite->x = -33;
@@ -3044,7 +3049,7 @@ void SpriteCB_PlayerMonSlideIn(struct Sprite *sprite)
         }
         else
         {
-            sprite->callback = SpriteCB_PlayerMonFromBall;
+            BattleAnimateBackSprite(sprite, sprite->sSpeciesId);
             PlayCry_ByMode(sprite->sSpeciesId, -25, CRY_MODE_NORMAL);
         }
     }

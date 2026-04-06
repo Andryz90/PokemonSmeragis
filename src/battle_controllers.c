@@ -93,6 +93,7 @@ void SetUpBattleVarsAndBirchZigzagoon(void)
     for (i = 0; i < MAX_BATTLERS_COUNT; i++)
     {
         gBattlerControllerFuncs[i] = BattleControllerDummy;
+        gBattleControllerData[i] = SPRITE_NONE;
         gBattlerPositions[i] = 0xFF;
         gActionSelectionCursor[i] = 0;
         gMoveSelectionCursor[i] = 0;
@@ -2928,6 +2929,37 @@ bool32 TwoOpponentIntroMons(u32 battler) // Double battle with both opponent pok
             && IsValidForBattle(GetBattlerMon(BATTLE_PARTNER(battler))));
 }
 
+bool32 ShouldPlayerWaitForOpponentIntro(u32 battler)
+{
+    u32 i;
+
+    if (!gBattleSpritesDataPtr->animationData->introAnimActive || !IsOnPlayerSide(battler))
+        return FALSE;
+
+    for (i = 0; i < gBattlersCount; i++)
+    {
+        if (GetBattlerSide(i) != B_SIDE_OPPONENT || !IsValidForBattle(GetBattlerMon(i)))
+            continue;
+
+        if (gBattleSpritesDataPtr->healthBoxesData[i].ballAnimActive
+         || gBattleSpritesDataPtr->healthBoxesData[i].specialAnimActive
+         || gBattleSpritesDataPtr->healthBoxesData[i].waitForCry)
+            return TRUE;
+
+        if (gSprites[gHealthboxSpriteIds[i]].callback != SpriteCallbackDummy)
+            return TRUE;
+
+        if (!IsBattlerSpritePresent(i))
+            return TRUE;
+
+        if (gBattleControllerData[i] != SPRITE_NONE
+         && gSprites[gBattleControllerData[i]].callback != SpriteCallbackDummy)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
 // Task data for Task_StartSendOutAnim
 #define tBattlerId          data[0]
 #define tStartTimer         data[1]
@@ -2942,6 +2974,9 @@ void BtlController_HandleIntroTrainerBallThrow(u32 battler, u16 tagTrainerPal, c
 {
     u8 paletteNum, taskId;
     u32 side = GetBattlerSide(battler);
+
+    if (side == B_SIDE_PLAYER && ShouldPlayerWaitForOpponentIntro(battler))
+        return;
 
     SetSpritePrimaryCoordsFromSecondaryCoords(&gSprites[gBattleStruct->trainerSlideSpriteIds[battler]]);
     if (side == B_SIDE_PLAYER)

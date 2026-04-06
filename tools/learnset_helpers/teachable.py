@@ -1,7 +1,266 @@
 import glob
-import re
 import json
 import os
+import re
+
+
+PORYMOVES_DIR = "./tools/learnset_helpers/porymoves_files"
+TEACHABLE_HEADER = "./src/data/pokemon/teachable_learnsets.h"
+LEVELUP_HEADER = "./src/data/pokemon/level_up_learnsets/gen_9.h"
+CUSTOM_TEACHABLE_JSON = os.path.join(PORYMOVES_DIR, "custom.json")
+CURRENT_GENERATION = 9
+
+MOVESET_KEYS = ("LevelMoves", "PreEvoMoves", "TMMoves", "EggMoves", "TutorMoves")
+NON_LEVEL_KEYS = ("PreEvoMoves", "TMMoves", "EggMoves", "TutorMoves")
+TEACHABLE_KEYS = ("TMMoves", "TutorMoves")
+HEADER_WARNING = "// DO NOT MODIFY THIS FILE! "
+
+GEN_FILE_PRIORITY = {
+    1: ["rgb.json", "xd.json"],
+    2: ["c.json", "gs.json"],
+    3: ["frlg.json", "rse.json"],
+    4: ["hgss.json", "pt.json", "dp.json"],
+    5: ["b2w2.json", "bw.json"],
+    6: ["oras.json", "xy.json", "y.json"],
+    7: ["usum.json", "sm.json", "lgpe.json"],
+    8: ["swsh.json", "bdsp.json", "la.json"],
+    9: ["sv.json"],
+}
+
+ACTIVE_FALLBACK_FILES = {
+    9: ["sv.json"],
+    8: ["swsh.json"],
+    7: ["usum.json"],
+}
+
+
+def parse_mon_name(name):
+    return re.sub(r"(?!^)([A-Z]+)", r"_\1", name).upper()
+
+
+def empty_entry():
+    return {key: [] for key in MOVESET_KEYS}
+
+
+def load_json(path):
+    with open(path, "r") as file:
+        return json.load(file)
+
+
+def dump_json(path, payload):
+    with open(path, "w") as file:
+        json.dump(payload, file, indent=2)
+
+
+def generation_sort_key(gen, path):
+    basename = os.path.basename(path)
+    priority = GEN_FILE_PRIORITY.get(gen, [])
+    try:
+        index = priority.index(basename)
+    except ValueError:
+        index = len(priority)
+    return (index, basename)
+
+
+def get_generation_paths(gen):
+    pattern = os.path.join(PORYMOVES_DIR, f"Gen{gen}", "*.json")
+    return sorted(
+        [
+            path
+            for path in glob.glob(pattern)
+            if os.path.basename(path).lower() != "zcustom.json"
+        ],
+        key=lambda path: generation_sort_key(gen, path),
+    )
+
+
+def get_active_generation_paths(gen):
+    active_files = ACTIVE_FALLBACK_FILES.get(gen)
+    if active_files is None:
+        return get_generation_paths(gen)
+
+    paths = []
+    for filename in active_files:
+        path = os.path.join(PORYMOVES_DIR, f"Gen{gen}", filename)
+        if os.path.exists(path):
+            paths.append(path)
+    return paths
+
+
+def build_source_catalog():
+    catalog = []
+    for gen in range(CURRENT_GENERATION, 0, -1):
+        for path in get_active_generation_paths(gen):
+            catalog.append((path, load_json(path)))
+    return catalog
+
+
+def list_header_mons(path, pattern):
+    with open(path, "r") as file:
+        raw = file.read()
+    return re.findall(pattern, raw), raw
+
+
+def append_unique_move(container, move):
+    if move not in container:
+        container.append(move)
+
+
+def collect_teachable_moves(entry):
+    moves = []
+    for key in TEACHABLE_KEYS:
+        for move in entry.get(key, []):
+            if move == "MOVE_TERA_BLAST":
+                continue
+            append_unique_move(moves, move)
+    return moves
+
+
+def collect_level_moves(entry):
+    moves = []
+    seen_moves = set()
+    for move in entry.get("LevelMoves", []):
+        move_name = move["Move"]
+        if move_name in seen_moves:
+            continue
+        seen_moves.add(move_name)
+        moves.append({"Move": move_name, "Level": int(move["Level"])})
+    return moves
+
+
+def has_non_level_data(entry):
+    return any(entry.get(key) for key in NON_LEVEL_KEYS)
+
+
+def next_levelup_fallback(entries):
+    for _, entry in entries:
+        if entry.get("LevelMoves"):
+            return entry
+    return None
+
+
+def should_skip_level_source(entry, fallback_entries):
+    level_moves = entry.get("LevelMoves", [])
+    if not level_moves:
+        return True
+
+    if has_non_level_data(entry):
+        return False
+
+    fallback_entry = next_levelup_fallback(fallback_entries)
+    if fallback_entry is None:
+        return False
+
+    if has_non_level_data(fallback_entry):
+        return True
+
+    return len(fallback_entry.get("LevelMoves", [])) > len(level_moves)
+
+
+def resolve_mon_entries(mon_name, source_catalog):
+    entries = []
+    for path, data in source_catalog:
+        entry = data.get(mon_name)
+        if entry is not None:
+            entries.append((path, entry))
+    return entries
+
+
+def resolve_teachable_moves(mon_name, source_catalog):
+    entries = resolve_mon_entries(mon_name, source_catalog)
+    if not entries:
+        return None
+
+    for _, entry in entries:
+        moves = collect_teachable_moves(entry)
+        if moves:
+            return moves
+
+    return []
+
+
+def resolve_level_moves(mon_name, source_catalog):
+    entries = resolve_mon_entries(mon_name, source_catalog)
+    if not entries:
+        return None
+
+    for index, (_, entry) in enumerate(entries):
+        if should_skip_level_source(entry, entries[index + 1:]):
+            continue
+        return collect_level_moves(entry)
+
+    return []
+
+
+def preserve_custom_teachable_moves(compatibility_dict, raw_header):
+    if HEADER_WARNING in raw_header:
+        return compatibility_dict
+
+    custom_teachables = {}
+    for entry in re.findall(r"static const u16 s(.*)TeachableLearnset\[\] = {\n((.|\n)*?)\n};", raw_header):
+        mon_name = parse_mon_name(entry[0])
+        if mon_name == "NONE":
+            continue
+
+        custom_teachables.setdefault(mon_name, [])
+        for move in entry[1].split("\n"):
+            move = move.replace(",", "").strip()
+            if move == "" or move == "MOVE_UNAVAILABLE":
+                continue
+            if mon_name not in compatibility_dict or move not in compatibility_dict[mon_name]:
+                append_unique_move(custom_teachables[mon_name], move)
+
+    custom_payload = load_json(CUSTOM_TEACHABLE_JSON) if os.path.exists(CUSTOM_TEACHABLE_JSON) else {}
+    wrote_custom_payload = False
+    for mon_name, moves in custom_teachables.items():
+        if not moves:
+            continue
+
+        custom_payload.setdefault(mon_name, empty_entry())
+        compatibility_dict.setdefault(mon_name, [])
+        for move in moves:
+            append_unique_move(custom_payload[mon_name]["TutorMoves"], move)
+            append_unique_move(compatibility_dict[mon_name], move)
+        wrote_custom_payload = True
+
+    if wrote_custom_payload:
+        dump_json(CUSTOM_TEACHABLE_JSON, custom_payload)
+        print("FIRST RUN: Updated custom.json with teachable_learnsets.h's data")
+
+    return compatibility_dict
+
+
+def preserve_custom_level_moves(compatibility_dict, level_for_moves, raw_header):
+    custom_found = False
+    for entry in re.findall(r"static const struct LevelUpMove s(.*)LevelUpLearnset\[\] = {\n((.|\n)*?)\n};", raw_header):
+        mon_name = parse_mon_name(entry[0])
+        if mon_name == "NONE":
+            continue
+
+        compatibility_dict.setdefault(mon_name, [])
+        level_for_moves.setdefault(mon_name, [])
+
+        for move in entry[1].split("\n"):
+            move = move.strip()
+            if move == "" or move == "LEVEL_UP_END":
+                continue
+
+            level = int(move[move.index("(") + 1:move.index(",")].strip())
+            move_name = move[move.index(",") + 2:move.index(")")].strip()
+            if move_name == "" or move_name == "MOVE_UNAVAILABLE":
+                continue
+            if move_name in compatibility_dict[mon_name]:
+                continue
+
+            compatibility_dict[mon_name].append(move_name)
+            level_for_moves[mon_name].append(level)
+            custom_found = True
+
+    if custom_found:
+        print("FIRST RUN: Preserved level-up data from gen_9.h")
+
+    return compatibility_dict, level_for_moves
+
 
 # before all else, abort if the config is off
 with open("./include/config/pokemon.h", "r") as file:
@@ -11,9 +270,7 @@ with open("./include/config/pokemon.h", "r") as file:
     if learnset_config[0] != "TRUE":
         quit()
 
-def parse_mon_name(name):
-    return re.sub(r'(?!^)([A-Z]+)', r'_\1', name).upper()
-    
+
 tm_moves = []
 tutor_moves = []
 level_for_moves = {}
@@ -23,170 +280,86 @@ trace_mons = set(
     if x.strip()
 )
 
+
 def is_traced_mon(mon_name, mon_parsed):
     return mon_name.upper() in trace_mons or mon_parsed in trace_mons
-# scan incs
-incs_to_check =  glob.glob('./data/scripts/*.inc') # all .incs in the script folder
-incs_to_check += glob.glob('./data/maps/*/scripts.inc') # all map scripts
 
-if len(incs_to_check) == 0: # disabled if no jsons present
+
+# scan incs
+incs_to_check = glob.glob("./data/scripts/*.inc")
+incs_to_check += glob.glob("./data/maps/*/scripts.inc")
+
+if len(incs_to_check) == 0:
     quit()
 
 for file in incs_to_check:
-    with open(file, 'r', encoding="utf8") as f2:
+    with open(file, "r", encoding="utf8") as f2:
         raw = f2.read()
-    if 'special ChooseMonForMoveTutor' in raw:
-        for x in re.findall(r'setvar VAR_0x8005, (MOVE_.*)', raw):
-            if not x in tutor_moves:
-                tutor_moves.append(x)
+    if "special ChooseMonForMoveTutor" in raw:
+        for move in re.findall(r"setvar VAR_0x8005, (MOVE_.*)", raw):
+            append_unique_move(tutor_moves, move)
+
 
 # scan TMs and HMs
-with open("./include/constants/tms_hms.h", 'r') as file:
-    for x in re.findall(r'F\((.*)\)', file.read()):
-        if not 'MOVE_' + x in tm_moves:
-            tm_moves.append('MOVE_' + x)
+with open("./include/constants/tms_hms.h", "r") as file:
+    for move in re.findall(r"F\((.*)\)", file.read()):
+        append_unique_move(tm_moves, "MOVE_" + move)
+
 
 # look up universal moves to exclude them
 universal_moves = []
 with open("./src/pokemon.c", "r") as file:
-    for x in re.findall(r"static const u16 sUniversalMoves\[\] =(.|\n)*?{((.|\n)*?)};", file.read())[0]:
-        x = x.replace("\n", "")
-        for y in x.split(","):
-            y = y.strip()
-            if y == "":
+    match = re.search(r"static const u16 sUniversalMoves\[\]\s*=\s*{((.|\n)*?)};", file.read())
+    if match:
+        for move in match.group(1).replace("\n", "").split(","):
+            move = move.strip()
+            if move == "":
                 continue
+            append_unique_move(universal_moves, move)
 
-# get compatibility from jsons
+
+source_catalog = build_source_catalog()
+
+
 def construct_compatibility_dict(force_custom_check):
     dict_out = {}
-    pth = './tools/learnset_helpers/porymoves_files/sv.json'
-    f = open(pth, 'r')
-    if pth != './tools/learnset_helpers/porymoves_files\\custom.json':
-        data = json.load(f)
-        for mon in data.keys():
-            # if  mon == 'PANSEAR' or mon == 'SIMISEAR':
-            #     pass
-            if not mon in dict_out:
-                dict_out[mon] = []
-                if (len(data[mon]['TMMoves']) != 0 or len(data[mon]['TutorMoves']) != 0):
-                    for move in data[mon]['TMMoves']:
-                        if not move in dict_out[mon] and move != 'MOVE_TERA_BLAST':
-                            dict_out[mon].append(move)
-                    for move in data[mon]['TutorMoves']:
-                        if not move in dict_out[mon] and move != 'MOVE_TERA_BLAST':
-                            dict_out[mon].append(move)
-                    #for move in data[mon]['PreEvoMoves']:
-                    #    if not move in dict_out[mon]:
-                    #        dict_out[mon].append(move)
-                    #for move in data[mon]['EggMoves']:
-                    #    if not move in dict_out[mon]:
-                    #        dict_out[mon].append(move)
-                else:
-                    pth = './tools/learnset_helpers/porymoves_files/swsh.json'
-                    f = open(pth, 'r')
-                    data_new = json.load(f)
-                    if (mon in data_new.keys() and (len(data_new[mon]['TMMoves']) != 0 or len(data_new[mon]['TutorMoves']) != 0)):
-                        for move in data_new[mon]['TMMoves']:
-                            if not move in dict_out[mon] and move != 'MOVE_TERA_BLAST':
-                                dict_out[mon].append(move)
-                        for move in data_new[mon]['TutorMoves']:
-                            if not move in dict_out[mon] and move != 'MOVE_TERA_BLAST':
-                                dict_out[mon].append(move)
-                    else:
-                        pth = './tools/learnset_helpers/porymoves_files/usum.json'   
-                        f = open(pth, 'r')
-                        data_new = json.load(f)
-                        if (mon in data_new.keys() and (len(data_new[mon]['TMMoves']) != 0 or len(data_new[mon]['TutorMoves']) != 0)):
-                            for move in data_new[mon]['TMMoves']:
-                                if not move in dict_out[mon] and move != 'MOVE_TERA_BLAST':
-                                    dict_out[mon].append(move)
-                            for move in data_new[mon]['TutorMoves']:
-                                if not move in dict_out[mon] and move != 'MOVE_TERA_BLAST':
-                                    dict_out[mon].append(move)
+    list_of_mons, raw = list_header_mons(TEACHABLE_HEADER, r"static const u16 s(.*)TeachableLearnset")
 
-    else:
-        for mon in data.keys():
-            if not mon in dict_out:
-                dict_out[mon] = []
-                level_for_moves[mon] = []
-            universal_moves.append(y)
-            for move in data[mon]['TMMoves']:
-                if not move in dict_out[mon]:
-                    dict_out[mon].append(move['Move'])
-            # for move in data[mon]['EggMoves']:
-            #     if not move in dict_out[mon]:
-            #         dict_out[mon].append(move)
-            for move in data[mon]['TutorMoves']:
-                if not move in dict_out[mon]:
-                    dict_out[mon].append(move)        
+    for mon in list_of_mons:
+        mon_parsed = parse_mon_name(mon)
+        if mon_parsed in ("NONE", "MEW"):
+            continue
 
-    # if the file was not previously generated, check if there is custom data there that needs to be preserved
-    with open("./src/data/pokemon/teachable_learnsets.h", 'r') as file:
-        raw = file.read()
-        if not "// DO NOT MODIFY THIS FILE! " in raw and force_custom_check == True:
-            custom_teachable_compatibilities = {}
-            for entry in re.findall(r"static const u16 s(.*)TeachableLearnset\[\] = {\n((.|\n)*?)\n};", raw):
-                monname = parse_mon_name(entry[0])
-                if monname == "NONE":
-                    continue
-                compatibility = entry[1].split("\n")
-                if not monname in custom_teachable_compatibilities:
-                    custom_teachable_compatibilities[monname] = []
-                if not monname in dict_out:
-                    # this mon is unknown, so all data needs to be preserved
-                    for move in compatibility:
-                        move = move.replace(",", "").strip()
-                        if move == "" or move == "MOVE_UNAVAILABLE":
-                            continue
-                        custom_teachable_compatibilities[monname].append(move)
-                else:
-                    # this mon is known, so check if the moves in the old teachable_learnsets.h are not in the jsons
-                    for move in compatibility:
-                        move = move.replace(",", "").strip()
-                        if move == "" or move == "MOVE_UNAVAILABLE":
-                            continue
-                        if not move in dict_out[monname]:
-                            custom_teachable_compatibilities[monname].append(move)
-            # actually store the data in custom.json
-            if os.path.exists("./tools/learnset_helpers/porymoves_files/custom.json"):
-                f2 = open("./tools/learnset_helpers/porymoves_files/custom.json", "r")
-                custom_json = json.load(f2)
-                f2.close()
-            else:
-                custom_json = {}
-            for x in custom_teachable_compatibilities:
-                if len(custom_teachable_compatibilities[x]) == 0:
-                    continue
-                if not x in custom_json:
-                    custom_json[x] = { "LevelMoves": [], "PreEvoMoves": [], "TMMoves": [], "EggMoves": [], "TutorMoves": []}
-                for move in custom_teachable_compatibilities[x]:
-                    custom_json[x]["TutorMoves"].append(move)
-                f2 = open("./tools/learnset_helpers/porymoves_files/custom.json", "w")
-                f2.write(json.dumps(custom_json, indent=2))
-                f2.close()
-            print("FIRST RUN: Updated custom.json with teachable_learnsets.h's data")
-            # rerun the process
-            dict_out = construct_compatibility_dict(False)
+        teachable_moves = resolve_teachable_moves(mon_parsed, source_catalog)
+        if teachable_moves is not None:
+            dict_out[mon_parsed] = teachable_moves
+
+    if force_custom_check:
+        dict_out = preserve_custom_teachable_moves(dict_out, raw)
+
     return dict_out
+
 
 compatibility_dict = construct_compatibility_dict(True)
 
+
 # actually prepare the file
-with open("./src/data/pokemon/teachable_learnsets.h", 'r') as file:
+with open(TEACHABLE_HEADER, "r") as file:
     out = file.read()
-    list_of_mons = re.findall(r'static const u16 s(.*)TeachableLearnset', out)
+    list_of_mons = re.findall(r"static const u16 s(.*)TeachableLearnset", out)
+
 for mon in list_of_mons:
     mon_parsed = parse_mon_name(mon)
     tm_learnset = []
     tutor_learnset = []
     if mon_parsed == "NONE" or mon_parsed == "MEW":
         continue
-    if not mon_parsed in compatibility_dict:
+    if mon_parsed not in compatibility_dict:
         print("Unable to find %s in json" % mon)
         if is_traced_mon(mon, mon_parsed):
             print("[TRACE] %s: missing from teachable compatibility dict" % mon)
         continue
-    
+
     for move in compatibility_dict[mon_parsed]:
         if move in tutor_moves:
             continue
@@ -196,15 +369,6 @@ for mon in list_of_mons:
             continue
         tm_learnset.append(move)
 
-    # for move in tm_moves:
-    #     if move in universal_moves:
-    #         continue
-    #     if move in tm_learnset:
-    #         continue
-    #     if move in compatibility_dict[mon_parsed]:
-    #         tm_learnset.append(move)
-    #         continue
-        
     for move in tutor_moves:
         if move in universal_moves:
             continue
@@ -213,6 +377,7 @@ for mon in list_of_mons:
         if move in compatibility_dict[mon_parsed]:
             tutor_learnset.append(move)
             continue
+
     tm_learnset.sort()
     tutor_learnset.sort()
     tm_learnset += tutor_learnset
@@ -220,12 +385,17 @@ for mon in list_of_mons:
     if len(tm_learnset) > 0:
         repl += ",\n    ".join(tm_learnset) + ",\n    "
     repl += "MOVE_UNAVAILABLE,\n};"
-    newout = re.sub(r'static const u16 s%sTeachableLearnset\[\] = {[\s\S]*?};' % mon, repl, out)
+    newout = re.sub(
+        r"static const u16 s%sTeachableLearnset\[\] = {[\s\S]*?};" % re.escape(mon),
+        repl,
+        out,
+    )
     if newout != out:
         out = newout
         print("Updated %s" % mon)
     elif is_traced_mon(mon, mon_parsed):
         print("[TRACE] %s: no teachable changes" % mon)
+
 
 # add/update header
 header = "//\n// DO NOT MODIFY THIS FILE! It is auto-generated from tools/learnset_helpers/teachable.py\n//\n\n"
@@ -233,7 +403,7 @@ longest_move_name = 0
 for move in tm_moves + tutor_moves:
     if len(move) > longest_move_name:
         longest_move_name = len(move)
-longest_move_name += 2 # + 2 for a hyphen and a space
+longest_move_name += 2
 
 universal_title = "Near-universal moves found in sUniversalMoves:"
 tmhm_title = "TM/HM moves found in \"include/constants/tms_hms.h\":"
@@ -246,9 +416,11 @@ if longest_move_name < len(tmhm_title):
 if longest_move_name < len(tutor_title):
     longest_move_name = len(tutor_title)
 
-def header_print(str):
+
+def header_print(string):
     global header
-    header += "// " + str + " " * (longest_move_name - len(str)) + " //\n"
+    header += "// " + string + " " * (longest_move_name - len(string)) + " //\n"
+
 
 header += "// " + longest_move_name * "*" + " //\n"
 header_print(tmhm_title)
@@ -256,196 +428,104 @@ for move in tm_moves:
     header_print("- " + move)
 header += "// " + longest_move_name * "*" + " //\n"
 header_print(tutor_title)
-tutor_moves.sort() # alphabetically sort tutor moves for easier referencing
-for move in tutor_moves: 
+tutor_moves.sort()
+for move in tutor_moves:
     header_print("- " + move)
 header += "// " + longest_move_name * "*" + " //\n"
 header_print(universal_title)
-universal_moves.sort() # alphabetically sort near-universal moves for easier referencing
+universal_moves.sort()
 for move in universal_moves:
     header_print("- " + move)
 header += "// " + longest_move_name * "*" + " //\n\n"
 
-if not "// DO NOT MODIFY THIS FILE! " in out:
+if HEADER_WARNING not in out:
     out = header + out
 else:
     out = re.sub(r"\/\/\n\/\/ DO NOT MODIFY THIS FILE!(.|\n)*\* \/\/\n\n", header, out)
 
-with open("./src/data/pokemon/teachable_learnsets.h", 'w') as file:
+with open(TEACHABLE_HEADER, "w") as file:
     file.write(out)
-
-
-#Same thing but for Level up Moves
-# get compatibility from jsons
 
 
 def construct_compatibility_levelset(force_custom_check):
     dict_out = {}
-    move_level_begin = False
-    
-    def add_level_moves(mon, moves):
-        for move in moves:
-            if not move['Move'] in dict_out[mon]:
-                dict_out[mon].append(move['Move'])
-                level_for_moves[mon].append(move['Level'])
+    list_of_mons, raw = list_header_mons(
+        LEVELUP_HEADER,
+        r"static const struct LevelUpMove s(.*)LevelUpLearnset",
+    )
 
-    def fill_from_fallback(mon):
-        # Prefer manually curated root files first, then fallback to per-gen archives.
-        fallback_paths = [
-            './tools/learnset_helpers/porymoves_files/usum.json',
-            './tools/learnset_helpers/porymoves_files/swsh.json',
-            './tools/learnset_helpers/porymoves_files/sv.json',
-        ]
-        for i in reversed(range(1, 9)):
-            fallback_paths += sorted(glob.glob('./tools/learnset_helpers/porymoves_files/Gen' + str(i) + '/*.json'))
+    for mon in list_of_mons:
+        mon_parsed = parse_mon_name(mon)
+        if mon_parsed == "NONE":
+            continue
 
-        for pth in fallback_paths:
-            if not os.path.exists(pth):
-                continue
-            with open(pth, 'r') as f:
-                data_new = json.load(f)
-            if mon in data_new.keys() and len(data_new[mon]['LevelMoves']) != 0:
-                add_level_moves(mon, data_new[mon]['LevelMoves'])
-                return
+        level_moves = resolve_level_moves(mon_parsed, source_catalog)
+        if level_moves is None:
+            continue
 
-    for pth in sorted(glob.glob('./tools/learnset_helpers/porymoves_files/Gen9/*.json')):
-        with open(pth, 'r') as f:
-            data = json.load(f)
-        if os.path.basename(pth).lower() != 'zcustom.json':
-            for mon in data.keys():
-                if not mon in dict_out:
-                    dict_out[mon] = []
-                    level_for_moves[mon] = []
-                if len(data[mon]['LevelMoves']) != 0:
-                    add_level_moves(mon, data[mon]['LevelMoves'])
-                elif len(dict_out[mon]) == 0:
-                    fill_from_fallback(mon)
-        else:
-            for mon in data.keys():
-                if not mon in dict_out:
-                    dict_out[mon] = []
-                    level_for_moves[mon] = []
-                for move in data[mon]['LevelMoves']:
-                    move_level_begin = False
-                    if move['Level'] == 1 or move['Level'] == 0:
-                        move_level_begin = True
-                    if not move['Move'] in dict_out[mon] and (move['Level'] in level_for_moves[mon] and move_level_begin):
-                        dict_out[mon].append(move['Move'])
-                        level_for_moves[mon].append(move['Level'])
-                        move_level_begin = False
-        
+        dict_out[mon_parsed] = []
+        level_for_moves[mon_parsed] = []
+        for move in level_moves:
+            dict_out[mon_parsed].append(move["Move"])
+            level_for_moves[mon_parsed].append(move["Level"])
 
-            
+    if force_custom_check:
+        dict_out, _ = preserve_custom_level_moves(dict_out, level_for_moves, raw)
 
-    # if the file was not previously generated, check if there is custom data there that needs to be preserved
-    with open("./src/data/pokemon/level_up_learnsets/gen_9.h", 'r') as file:
-        raw = file.read()
-        if  force_custom_check == True:
-            custom_teachable_compatibilities = {}
-            level = []
-            for entry in re.findall(r"static const struct LevelUpMove s(.*)LevelUpLearnset\[\] = {\n((.|\n)*?)\n};", raw):
-                monname = parse_mon_name(entry[0])
-                if monname == "NONE":
-                    continue
-                compatibility = entry[1].split("\n")
-                if not monname in custom_teachable_compatibilities:
-                    custom_teachable_compatibilities[monname] = { 'Moves':[], 'Level':[]}
-                if not monname in dict_out:
-                    # this mon is unknown, so all data needs to be preserved
-                    for move in compatibility:
-                        move = move.strip()
-                        if (move != 'LEVEL_UP_END' and len(move) > 0):
-                            level = move[move.index('(')+1:move.index(',')]
-                            level = level.strip()
-                            move = move[move.index(',')+2:move.index(')')]
-                        move = move.replace(",", "").strip()
-                        if move == "" or move == "MOVE_UNAVAILABLE":
-                            continue
-                        custom_teachable_compatibilities[monname]["Moves"].append(move)
-                        custom_teachable_compatibilities[monname]["Level"].append(level)
-                else:
-                    # this mon is known, so check if the moves in the old levelup_learnsets.h are not in the jsons
-                    for move in compatibility: 
-                        move = move.strip()
-                        if (move != 'LEVEL_UP_END' and len(move) > 0):
-                            level = move[move.index('(')+1:move.index(',')]
-                            level = level.strip()
-                            move = move[move.index(',')+2:move.index(')')]
-                            # move = move.replace(",", "").strip()
-                            if move == "" or move == "MOVE_UNAVAILABLE":
-                                continue
-                            if not move in dict_out[monname]:
-                                custom_teachable_compatibilities[monname]["Moves"].append(move)
-                                custom_teachable_compatibilities[monname]["Level"].append(int(level))
-                            
-            # actually store the data in custom.json
-            custom_json = {}
-            for x in custom_teachable_compatibilities:
-                if len(custom_teachable_compatibilities[x]) == 0:
-                    continue
-                if not x in custom_json:
-                    custom_json[x] = { "LevelMoves": []}
-                index = 0
-                for move in custom_teachable_compatibilities[x]["Moves"]:
-                    custom_json[x]["LevelMoves"].append({"Move":move, 'Level':custom_teachable_compatibilities[x]["Level"][index]})
-                    index+=1       
-                f2 = open("./tools/learnset_helpers/porymoves_files/Gen9/zcustom.json", "w")
-                f2.write(json.dumps(custom_json, indent=2))
-                if os.path.exists("./tools/learnset_helpers/porymoves_files/Gen9/zcustom.json"):
-                    f2.close()
-                    os.remove("./tools/learnset_helpers/porymoves_files/Gen9/zcustom.json") #Remove it to have a clean run next time
-                f2.close()
-            print("FIRST RUN: Updated custom.json with Gen9_Learnset.h's data")
-            # rerun the process
-            dict_out = construct_compatibility_levelset(False)
     return dict_out
 
+
 compatibility_dict = construct_compatibility_levelset(True)
+
+
 # actually prepare the file
-with open("./src/data/pokemon/level_up_learnsets/gen_9.h", 'r') as file:
+with open(LEVELUP_HEADER, "r") as file:
     out = file.read()
-    list_of_mons = re.findall(r'static const struct LevelUpMove s(.*)LevelUpLearnset', out)
+    list_of_mons = re.findall(r"static const struct LevelUpMove s(.*)LevelUpLearnset", out)
+
 for mon in list_of_mons:
     mon_parsed = parse_mon_name(mon)
     levelup_moves = []
     levels = []
     index = 0
-    move_index = 0
-    index_lenght = 0
     if mon_parsed == "NONE":
         continue
-    if not mon_parsed in compatibility_dict:
+    if mon_parsed not in compatibility_dict:
         print("Unable to find %s in json" % mon)
         if is_traced_mon(mon, mon_parsed):
             print("[TRACE] %s: missing from level-up compatibility dict" % mon)
         continue
-    
+
     for move in compatibility_dict[mon_parsed]:
         levelup_moves.append(move)
         levels.append(level_for_moves[mon_parsed][index])
         index += 1
-    #levelup_moves.sort()
+
     repl = "static const struct LevelUpMove s%sLevelUpLearnset[] = {\n    " % mon
     index = 0
-    index_lenght = len(levelup_moves)
-    while index < index_lenght :
+    while index < len(levelup_moves):
         if len(levelup_moves) > 0:
-            repl += "    LEVEL_UP_MOVE("+(str(levels[index]))+", "+(levelup_moves[index]) + "),\n    "
+            repl += "    LEVEL_UP_MOVE(" + str(levels[index]) + ", " + levelup_moves[index] + "),\n    "
         index += 1
     repl += "    LEVEL_UP_END\n};"
-    newout = re.sub(r'static const struct LevelUpMove s%sLevelUpLearnset\[\] = {[\s\S]*?};' % mon, repl, out)
+    newout = re.sub(
+        r"static const struct LevelUpMove s%sLevelUpLearnset\[\] = {[\s\S]*?};" % re.escape(mon),
+        repl,
+        out,
+    )
     if newout != out:
         out = newout
         print("Updated %s" % mon)
     elif is_traced_mon(mon, mon_parsed):
         print("[TRACE] %s: no level-up changes" % mon)
-        
+
+
 # add/update header
 header = "//\n// DO NOT MODIFY THIS FILE! It is auto-generated from tools/learnset_helpers/teachable.py\n//\n\n"
-if not "// DO NOT MODIFY THIS FILE! " in out:
+if HEADER_WARNING not in out:
     out = header + out
 else:
     out = re.sub(r"\/\/\n\/\/ DO NOT MODIFY THIS FILE!(.|\n)*\* \/\/\n\n", header, out)
 
-with open("./src/data/pokemon/level_up_learnsets/gen_9.h", 'w') as file:
+with open(LEVELUP_HEADER, "w") as file:
     file.write(out)

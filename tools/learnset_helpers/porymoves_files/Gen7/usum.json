@@ -21564,6 +21564,12 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_CLOSE_COMBAT",
+      "MOVE_BULLET_PUNCH",
+      "MOVE_COMBO_PUNCH",
+      "MOVE_SHADOW_PUNCH",
+      "MOVE_POUNCE",
+      "MOVE_LEECH_LIFE",
       "MOVE_TOXIC",
       "MOVE_HIDDEN_POWER",
       "MOVE_SUNNY_DAY",
@@ -34739,7 +34745,7 @@
     "LevelMoves": [
       {
         "Level": 0,
-        "Move": "MOVE_GUST"
+        "Move": "MOVE_MEGA_DRAIN"
       },
       {
         "Level": 1,
@@ -34747,11 +34753,11 @@
       },
       {
         "Level": 12,
-        "Move": "MOVE_ABSORB"
+        "Move": "MOVE_STUN_SPORE"
       },
       {
         "Level": 15,
-        "Move": "MOVE_STUN_SPORE"
+        "Move": "MOVE_BUG_BITE"
       },
       {
         "Level": 17,
@@ -34771,7 +34777,7 @@
       },
       {
         "Level": 27,
-        "Move": "MOVE_ATTRACT"
+        "Move": "MOVE_DRAINING_KISS"
       },
       {
         "Level": 30,
@@ -34832,7 +34838,9 @@
       "MOVE_SLEEP_TALK",
       "MOVE_U_TURN",
       "MOVE_SUBSTITUTE",
-      "MOVE_CONFIDE"
+      "MOVE_CONFIDE",
+      "MOVE_DRAINING_KISS",
+      "MOVE_GIGA_DRAIN"
     ],
     "EggMoves": [],
     "TutorMoves": [
@@ -34876,7 +34884,7 @@
     "LevelMoves": [
       {
         "Level": 0,
-        "Move": "MOVE_GUST"
+        "Move": "MOVE_POISON_DRAIN"
       },
       {
         "Level": 1,
@@ -34911,6 +34919,10 @@
         "Move": "MOVE_LIGHT_SCREEN"
       },
       {
+        "Level": 28,
+        "Move": "MOVE_RAGE_POWDER"
+      },
+      {
         "Level": 30,
         "Move": "MOVE_WHIRLWIND"
       },
@@ -34929,6 +34941,10 @@
       {
         "Level": 40,
         "Move": "MOVE_QUIVER_DANCE"
+      },
+      {
+        "Level": 45,
+        "Move": "MOVE_DETERIO"
       }
     ],
     "PreEvoMoves": [
@@ -34941,6 +34957,8 @@
       "MOVE_HARDEN"
     ],
     "TMMoves": [
+      "MOVE_DETERIO",
+      "MOVE_POISON_DRAIN",
       "MOVE_TOXIC",
       "MOVE_VENOSHOCK",
       "MOVE_HIDDEN_POWER",
@@ -39043,7 +39061,7 @@
       {
         "Level": 1,
         "Move": "MOVE_FACADE"
-      },      
+      },
       {
         "Level": 1,
         "Move": "MOVE_COVET"
@@ -46061,7 +46079,10 @@
       "MOVE_SWAGGER",
       "MOVE_SLEEP_TALK",
       "MOVE_SUBSTITUTE",
-      "MOVE_CONFIDE"
+      "MOVE_CONFIDE",
+      "MOVE_WILL_O_WISP",
+      "MOVE_THUNDER_WAVE",
+      "MOVE_HOARFROST"
     ],
     "EggMoves": [
       "MOVE_AMNESIA",
@@ -46087,7 +46108,6 @@
   },
   "KECLEON": {
     "LevelMoves": [
-
       {
         "Level": 1,
         "Move": "MOVE_THIEF"
@@ -46183,6 +46203,9 @@
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_BULLET_SEED",
+      "MOVE_GRASSY_GLIDE",
+      "MOVE_SOLAR_BLADE",
       "MOVE_WORK_UP",
       "MOVE_TOXIC",
       "MOVE_HIDDEN_POWER",
@@ -59045,13 +59068,16 @@
         "Level": 55,
         "Move": "MOVE_GUNK_SHOT"
       },
-     {
+      {
         "Level": 60,
         "Move": "MOVE_DETERIO"
       }
     ],
     "PreEvoMoves": [],
     "TMMoves": [
+      "MOVE_LEECH_LIFE",
+      "MOVE_POISON_FANG",
+      "MOVE_POISON_DRAIN",
       "MOVE_TOXIC",
       "MOVE_HIDDEN_POWER",
       "MOVE_SUNNY_DAY",
@@ -66026,6 +66052,8 @@
       "MOVE_WORK_UP"
     ],
     "TMMoves": [
+      "MOVE_PSYCHIC",
+      "MOVE_TRICK_ROOM",
       "MOVE_WORK_UP",
       "MOVE_TOXIC",
       "MOVE_HIDDEN_POWER",
@@ -67305,7 +67333,8 @@
       "MOVE_SWAGGER",
       "MOVE_SLEEP_TALK",
       "MOVE_SUBSTITUTE",
-      "MOVE_CONFIDE"
+      "MOVE_CONFIDE",
+      "MOVE_SCORCHING_SANDS"
     ],
     "EggMoves": [
       "MOVE_ASTONISH",
