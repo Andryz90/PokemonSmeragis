@@ -6875,7 +6875,7 @@ exports.BattlePokedex = {
             "Muk-Alola"
         ],
         "prevo": "Grimer",
-        "evoLevel": 38,
+        "evoLevel": 24,
         "evoType": "level",
         "evoCondition": ""
     },
@@ -6967,7 +6967,7 @@ exports.BattlePokedex = {
         "baseSpecies": "Muk",
         "forme": "Alola",
         "prevo": "Grimer-Alola",
-        "evoLevel": 38,
+        "evoLevel": 24,
         "evoType": "level",
         "evoCondition": ""
     },
@@ -32563,7 +32563,7 @@ exports.BattlePokedex = {
         "heightm": 1.3,
         "weightkg": 24.2,
         "prevo": "Ducklett",
-        "evoLevel": 35,
+        "evoLevel": 24,
         "evoType": "level",
         "evoCondition": ""
     },

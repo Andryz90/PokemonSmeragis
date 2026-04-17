@@ -530,7 +530,7 @@ Tentacool:  [Lv.15]
 Marill:  [Lv.15]  
 
 ## Psychic F JACLYN
-Abra: Hidden Power [Lv.16 | IVs 0/0/0/0/0/0]  
+Abra: Hidden Power Fighting [Lv.16 | IVs 0/0/0/0/0/0]  
 
 ## School Kid F KAREN
 Marill @Oran Berry: Aqua Jet, Aqua Tail, Bounce, Charm [Lv.15 | Huge Power | Adamant Nature]  
@@ -569,7 +569,7 @@ Toedscool: Stun Spore, Mega Drain, Mud Shot, Hex [Lv.16 | Mycelium Might | Modes
 ## Youngster JOHNSON
 Shellos: Recover, Water Pulse, Mud Bomb, Ancient Power [Lv.15 | Storm Drain]  
 Tentacool @Black Sludge: Water Pulse, Acid, Supersonic [Lv.16 | Liquid Ooze]  
-Panpour @Petaya Berry: Water Pulse, Work Up, Hidden Power, Lick [Lv.15 | Gluttony | Timid Nature | IVs 31/0/0/31/31/31]  
+Panpour @Petaya Berry: Water Pulse, Work Up, Hidden Power Ice, Lick [Lv.15 | Gluttony | Timid Nature | IVs 31/0/0/31/31/31]  
 
 ## Ninja Boy LAO
 Koffing: Poison Gas, Tackle, Smog, Self Destruct [Lv.17]  
@@ -593,7 +593,7 @@ Geodude:  [Lv.16]
 Sandshrew:  [Lv.18]  
 
 ## Leader ROXANNE
-Glimmet (F) @Focus Sash: Stealth Rock, Hidden Power, Venoshock, Ancient Power [Lv.15 | Toxic Debris | Timid Nature | IVs 31/0/31/30/31/31]  
+Glimmet (F) @Focus Sash: Stealth Rock, Hidden Power Grass, Venoshock, Ancient Power [Lv.15 | Toxic Debris | Timid Nature | IVs 31/0/31/30/31/31]  
 Archen: Pluck, Rock Tomb, Roost, Quick Attack [Lv.16 | Defeatist | Adamant Nature]  
 Lileep @Oran Berry: Mega Drain, Acid, Rock Tomb, Recover [Lv.16 | Storm Drain | Modest Nature]  
 Nosepass (M) @Shuca Berry: Thunder Wave, Rock Tomb, Sandstorm, Spark [Lv.17 | Sand Force]  
@@ -773,7 +773,7 @@ Farfetchd-Galar: Rock Smash, Brutal Swing, Peck, Fury Cutter [Lv.21 | Scrappy]
 Grovyle @Miracle Seed: X-Scissor, Giga Drain, Assurance, Quick Attack [Lv.23 | Technician]  
 Growlithe-Hisui @Charcoal: Fire Fang, Bite, Rock Tomb, Retaliate [Lv.22 | Intimidate]  
 Seadra @Scope Lens: Focus Energy, Dragon Breath, Bubble Beam, Icy Wind [Lv.21 | Sniper]  
-Ponyta-Galar: Confusion, Draining Kiss, Hidden Power, Calm Mind [Lv.21 | Adaptability | Modest Nature | IVs 31/0/31/31/31/31]  
+Ponyta-Galar: Confusion, Draining Kiss, Hidden Power Dragon, Calm Mind [Lv.21 | Adaptability | Modest Nature | IVs 31/0/31/31/31/31]  
 
 ## Rival MAY
 Farfetchd-Galar: Rock Smash, Brutal Swing, Peck, Fury Cutter [Lv.21 | Scrappy]  
@@ -1628,19 +1628,19 @@ Farfetchd-Galar @Leek: Dual Wingbeat, Night Slash, Facade, Brick Break [Lv.27 | 
 Grovyle @Miracle Seed: Cut, Bullet Seed, Rock Slide, Quick Attack [Lv.30 | Technician | Adamant Nature]  
 Arcanine-Hisui @Charcoal: Will-O-Wisp, Heat Crash, Rock Tomb, Extreme Speed [Lv.28 | Rock Head]  
 Seadra @Scope Lens: Focus Energy, Snipe Shot, Dragon Pulse, Icy Wind [Lv.28 | Sniper | Serious Nature]  
-Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power [Lv.28 | Adaptability | Modest Nature | IVs 31/0/31/30/31/30]  
+Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power Fire [Lv.28 | Adaptability | Modest Nature | IVs 31/0/31/30/31/30]  
 
 ## Rival MAY
 Seadra @Scope Lens: Focus Energy, Snipe Shot, Dragon Pulse, Icy Wind [Lv.28 | Sniper | Serious Nature]  
 Combusken @Charcoal: Bulk Up, Brick Break, Aerial Ace, Fire Punch [Lv.30 | Speed Boost | Adamant Nature]  
-Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power [Lv.28 | Adaptability | Modest Nature | IVs 31/0/31/30/31/30]  
+Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power Fire [Lv.28 | Adaptability | Modest Nature | IVs 31/0/31/30/31/30]  
 Bisharp: Iron Head, Sucker Punch, Knock Off, Psycho Cut [Lv.28 | Defiant]  
 Electrode-Hisui @Air Balloon: Giga Drain, Thunderbolt, Volt Switch [Lv.28 | Static]  
 
 ## Rival MAY
 Farfetchd-Galar @Leek: Dual Wingbeat, Night Slash, Facade, Brick Break [Lv.27 | Scrappy | Adamant Nature]  
 Marshtomp @Soft Sand: Rock Slide, Liquidation, Rock Smash, Bulldoze [Lv.30 | Immunity]  
-Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power [Lv.28 | Adaptability | Modest Nature | IVs 31/0/31/30/31/30]  
+Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power Fire [Lv.28 | Adaptability | Modest Nature | IVs 31/0/31/30/31/30]  
 Electrode-Hisui @Air Balloon: Giga Drain, Thunderbolt, Volt Switch [Lv.28 | Static]  
 Arcanine-Hisui @Charcoal: Will-O-Wisp, Heat Crash, Rock Tomb, Extreme Speed [Lv.28 | Rock Head]  
 
@@ -1897,7 +1897,7 @@ Hariyama:  [Lv.32]
 ## Guitarist KIRK
 Eelektross @Leftovers: Discharge, Fire Punch, Flash [Lv.32 | Levitate]  
 Raichu @Air Balloon: Fake Out, Thunder Punch, Surf, Knock Off [Lv.32 | Lightning Rod | Adamant Nature]  
-Electrode @Air Balloon: Electroweb, Hyper Voice, Flash Cannon, Hidden Power [Lv.32 | Galvanize | Serious Nature | IVs 31/0/30/31/31/31]  
+Electrode @Air Balloon: Electroweb, Hyper Voice, Flash Cannon, Hidden Power Ice [Lv.32 | Galvanize | Serious Nature | IVs 31/0/30/31/31/31]  
 
 ## Team Aqua GRUNT
 Carvanha:  [Lv.32]  
@@ -1908,7 +1908,7 @@ Pelipper:  [Lv.32]
 
 ## Psychic M EDWARD
 Indeedee: Psyshock, Hyper Voice [Lv.32 | Synchronize]  
-Kadabra: Psybeam, Hidden Power [Lv.32 | Magic Guard | IVs 31/0/30/31/30/31]  
+Kadabra: Psybeam, Hidden Power Bug [Lv.32 | Magic Guard | IVs 31/0/30/31/30/31]  
 
 ## School Kid M JERRY
 Kirlia:  [Lv.32]  
@@ -2005,7 +2005,7 @@ Swellow:  [Lv.32]
 Skarmory:  [Lv.32]  
 
 ## Triathlete F ALYSSA
-Magneton: Thunder Wave, Thunderbolt, Flash Cannon, Hidden Power [Lv.32 | Analytic | IVs 31/1/30/30/30/30]  
+Magneton: Thunder Wave, Thunderbolt, Flash Cannon, Hidden Power Fighting [Lv.32 | Analytic | IVs 31/1/30/30/30/30]  
 Electrode: Boomburst, Steel Beam, Electroweb [Lv.32 | Punk Rock]  
 
 ## Triathlete F MELINA
@@ -2072,7 +2072,7 @@ Machoke:  [Lv.33]
 Machamp @Black Belt:  [Lv.33]  
 
 ## Guitarist SHAWN
-Manectric: Discharge, Flame Burst, Hidden Power [Lv.33 | Lightning Rod | IVs 31/0/31/30/31/31]  
+Manectric: Discharge, Flame Burst, Hidden Power Grass [Lv.33 | Lightning Rod | IVs 31/0/31/30/31/31]  
 Lanturn: Scald, Discharge, Flip Turn, Eerie Impulse [Lv.33 | Volt Absorb]  
 
 ## Bug Maniac DEREK
@@ -2323,7 +2323,7 @@ Manectric:  [Lv.34]
 
 ## Leader WATTSON
 Pincurchin @Terrain Extender: Zing Zap, Soak, Liquidation, Toxic Spikes [Lv.32 | Electric Surge | Brave Nature]  
-Manectric @Manectite: Thunderbolt, Volt Switch, Flamethrower, Hidden Power [Lv.34 | Intimidate | Mild Nature | IVs 31/0/30/31/31/31]  
+Manectric @Manectite: Thunderbolt, Volt Switch, Flamethrower, Hidden Power Ice [Lv.34 | Intimidate | Mild Nature | IVs 31/0/30/31/31/31]  
 Rotom-Mow @Miracle Seed: Leaf Storm, Volt Switch, Dark Pulse, Will-O-Wisp [Lv.33 | Levitate | Modest Nature]  
 Boltund @Electric Seed: Supercell Slam, Play Rough, Facade, Crunch [Lv.33 | Electric Pelt | Adamant Nature]  
 Raichu-Alola @Focus Sash: Psyshock, Surf, Nasty Plot, Volt Switch [Lv.33 | Surge Surfer | Modest Nature]  
@@ -2677,7 +2677,7 @@ Linoone: Sand Attack, Pin Missile, Tail Whip, Surf [Lv.36]
 ## Cooltrainer F BROOKE
 Pelipper (F) @Life Orb: Hurricane, Hydro Pump, U-turn, Roost [Lv.36 | Drizzle | Modest Nature]  
 Camerupt (F) @Passho Berry: Sunny Day, Solar Beam, Flamethrower, Earth Power [Lv.36 | Solid Rock | Modest Nature]  
-Roserade @Wide Lens: Giga Drain, Hidden Power, Sludge Bomb, Sleep Powder [Lv.36 | Technician | Timid Nature | IVs 31/0/31/30/31/30]  
+Roserade @Wide Lens: Giga Drain, Hidden Power Fire, Sludge Bomb, Sleep Powder [Lv.36 | Technician | Timid Nature | IVs 31/0/31/30/31/30]  
 
 ## Lady CINDY
 Linoone @Nugget: Fury Swipes, Mud Sport, Odor Sleuth, Sand Attack [Lv.36]  
@@ -2903,7 +2903,7 @@ Talonflame @Sharp Beak: Flare Blitz, Dual Wingbeat, Roost, U-turn [Lv.38 | Flame
 ## Camper SHANE
 Golem @Custap Berry: Stealth Rock, Stone Edge, Earthquake, Explosion [Lv.38 | Sturdy]  
 Breloom @Focus Sash: Mach Punch, Bullet Seed, Spore, Rock Tomb [Lv.38 | Technician]  
-Manectric: Thunderbolt, Flame Burst, Volt Switch, Hidden Power [Lv.38 | Lightning Rod | IVs 31/30/31/30/30/31]  
+Manectric: Thunderbolt, Flame Burst, Volt Switch, Hidden Power Ground [Lv.38 | Lightning Rod | IVs 31/30/31/30/30/31]  
 Crobat @Leftovers: Brave Bird, Cross Poison, Roost, U-Turn [Lv.38 | Inner Focus]  
 Ludicolo @Leftovers: Scald, Giga Drain, Ice Beam, Rain Dance [Lv.38 | Swift Swim]  
 
@@ -2945,7 +2945,7 @@ Camerupt @Chesto Berry: Curse, Amnesia, Rest, Flamethrower [Lv.38 | Magma Armor 
 Wailmer:  [Lv.38]  
 
 ## Picnicker NANCY
-Aromatisse @Misty Seed: Moonblast, Draining Kiss, Calm Mind, Hidden Power [Lv.38 | Misty Surge | Modest Nature | IVs 31/0/31/30/31/30]  
+Aromatisse @Misty Seed: Moonblast, Draining Kiss, Calm Mind, Hidden Power Fire [Lv.38 | Misty Surge | Modest Nature | IVs 31/0/31/30/31/30]  
 Florges @Misty Seed: Moonblast, Calm Mind, Leech Seed, Giga Drain [Lv.38 | Misty Pelt | Modest Nature]  
 Carbink @Misty Seed: Body Press, Moonblast, Terrain Pulse, Calm Mind [Lv.38 | Clear Body]  
 Gardevoir (F) @Leftovers: Moonblast, Mystical Fire, Calm Mind, Draining Kiss [Lv.38 | Trace | Timid Nature]  
@@ -3525,7 +3525,7 @@ Magmortar @Wise Glasses: Aura Sphere, Armor Cannon, Dark Pulse, Earth Power [Lv.
 Claydol @Light Clay: Stealth Rock, Psychic, Reflect, Light Screen [Lv.46 | Levitate | Bold Nature]  
 Lunatone @Chople Berry: Dark Pulse, Nasty Plot, Power Gem, Meteor Beam [Lv.46 | Levitate | Modest Nature]  
 Solrock @Passho Berry: Zen Headbutt, Flare Blitz, Stone Edge, Earthquake [Lv.46 | Levitate | Jolly Nature]  
-Heliolisk @Expert Belt: Hyper Voice, Hidden Power, Thunderbolt, Grass Knot [Lv.46 | Sand Veil | Modest Nature | IVs 31/1/31/30/30/31]  
+Heliolisk @Expert Belt: Hyper Voice, Hidden Power Ground, Thunderbolt, Grass Knot [Lv.46 | Sand Veil | Modest Nature | IVs 31/1/31/30/30/31]  
 
 ## Leader JUAN
 Luvdisc: Water Pulse, Attract, Sweet Kiss, Flail [Lv.41]  
@@ -3654,7 +3654,7 @@ Dodrio @Life Orb: Brave Bird, Body Slam, Drill Run, Jump Kick [Lv.48 | Adaptabil
 Fearow @Scope Lens: Drill Peck, Drill Run, Roost, Pursuit [Lv.48 | Sniper]  
 Swellow @Flame Orb: Facade, Brave Bird, Protect, U-turn [Lv.50 | Guts | Adamant Nature]  
 Staraptor @Silk Scarf: Double-Edge, Brave Bird, Close Combat, Roost [Lv.48 | Reckless]  
-Unfezant @Choice Specs: Air Slash, Hidden Power, Hyper Voice, U-turn [Lv.49 | Super Luck | Timid Nature | IVs 31/30/31/31/31/31]  
+Unfezant @Choice Specs: Air Slash, Hidden Power Dragon, Hyper Voice, U-turn [Lv.49 | Super Luck | Timid Nature | IVs 31/30/31/31/31/31]  
 
 ## Triathlete M BENJAMIN
 Cyclizar @Sitrus Berry: Dragon Claw, Giga Impact, U-turn, Quick Attack [Lv.50 | Shed Skin | Jolly Nature]  
@@ -3673,9 +3673,9 @@ Miltank @Muscle Band: Defense Curl, Rollout [Lv.50 | Scrappy | Adamant Nature]
 
 ## Triathlete F ABIGAIL
 Magnezone @Custap Berry: Explosion, Discharge, Flash Cannon, Body Press [Lv.48 | Sturdy | Bold Nature]  
-Electrode @Air Balloon: Explosion, Thunderbolt, Flash Cannon, Hidden Power [Lv.48 | Aftermath | Modest Nature | IVs 31/31/31/31/31/31]  
+Electrode @Air Balloon: Explosion, Thunderbolt, Flash Cannon, Hidden Power Dark [Lv.48 | Aftermath | Modest Nature | IVs 31/31/31/31/31/31]  
 Zebstrika @Choice Band: High Horsepower, Thunderous Kick, Stomp, Supercell Slam [Lv.49 | Iron Kick | Jolly Nature]  
-Manectric @Magnet: Electric Terrain, Rising Voltage, Discharge, Hidden Power [Lv.50 | Lightning Rod | Modest Nature | IVs 31/0/30/31/31/31]  
+Manectric @Magnet: Electric Terrain, Rising Voltage, Discharge, Hidden Power Ice [Lv.50 | Lightning Rod | Modest Nature | IVs 31/0/30/31/31/31]  
 Pachirisu @Sitrus Berry: U-turn, Super Fang, Thunder Wave, Encore [Volt Absorb | Timid Nature]  
 
 ## Picnicker HEIDI
@@ -3691,7 +3691,7 @@ Krookodile @Choice Band: Earthquake, Knock Off, Darkest Lariat, Brick Break [Lv.
 ## Magma Leader MAXIE
 Hippowdon @Leftovers: Stealth Rock, Roar, Stone Edge, Earthquake [Lv.48 | Sand Stream | Adamant Nature]  
 Maractus @Absorb Bulb: Shore Up, Earth Power, Giga Drain, Weather Ball [Lv.48 | Sand Force | Modest Nature]  
-Camerupt @Cameruptite: Earth Power, Heat Wave, Hidden Power, Eruption [Lv.49 | Magma Armor | Modest Nature | IVs 31/0/31/31/31/31]  
+Camerupt @Cameruptite: Earth Power, Heat Wave, Hidden Power Dragon, Eruption [Lv.49 | Magma Armor | Modest Nature | IVs 31/0/31/31/31/31]  
 Volcarona @Safety Goggles: Quiver Dance, Fiery Dance, Bug Buzz, Giga Drain [Lv.48 | Flame Body | Timid Nature]  
 Garchomp: Scale Shot, Stone Edge, Earthquake, Brick Break [Lv.49 | Sand Veil | Adamant Nature]  
 Regirock @Leftovers: Stone Edge, Body Press, Earthquake, Iron Defense [Lv.50 | Clear Body | Impish Nature]  

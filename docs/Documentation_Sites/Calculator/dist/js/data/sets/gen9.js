@@ -189,7 +189,7 @@ var SETDEX_SV = {
     }
   },
   "Sableye": {
-    "Cooltrainer VINCENT": {
+    "Cooltrainer M VINCENT": {
       "index": 2,
       "slot": 0,
       "level": "1",
@@ -283,7 +283,7 @@ var SETDEX_SV = {
     }
   },
   "Medicham": {
-    "Cooltrainer VINCENT": {
+    "Cooltrainer M VINCENT": {
       "index": 2,
       "slot": 1,
       "level": "1",
@@ -306,7 +306,7 @@ var SETDEX_SV = {
         "Fake Out"
       ]
     },
-    "Winstrate VICKY": {
+    "Expert F VICKY": {
       "index": 19,
       "slot": 0,
       "level": "1",
@@ -329,7 +329,7 @@ var SETDEX_SV = {
         "Thunder Punch"
       ]
     },
-    "Psychic MARLENE": {
+    "Psychic F MARLENE": {
       "index": 50,
       "slot": 0,
       "level": "1",
@@ -375,7 +375,7 @@ var SETDEX_SV = {
         "Protect"
       ]
     },
-    "Cooltrainer FELIX": {
+    "Cooltrainer M FELIX": {
       "index": 205,
       "slot": 0,
       "level": "43",
@@ -512,7 +512,7 @@ var SETDEX_SV = {
     }
   },
   "Sharpedo": {
-    "Cooltrainer VINCENT": {
+    "Cooltrainer M VINCENT": {
       "index": 2,
       "slot": 2,
       "level": "1",
@@ -537,7 +537,7 @@ var SETDEX_SV = {
     }
   },
   "Greninja": {
-    "Cooltrainer VINCENT": {
+    "Cooltrainer M VINCENT": {
       "index": 2,
       "slot": 3,
       "level": "1",
@@ -562,7 +562,7 @@ var SETDEX_SV = {
     }
   },
   "Meowscarada": {
-    "Cooltrainer VINCENT": {
+    "Cooltrainer M VINCENT": {
       "index": 2,
       "slot": 4,
       "level": "1",
@@ -587,7 +587,7 @@ var SETDEX_SV = {
     }
   },
   "Gyarados": {
-    "Cooltrainer VINCENT": {
+    "Cooltrainer M VINCENT": {
       "index": 2,
       "slot": 5,
       "level": "1",
@@ -680,7 +680,7 @@ var SETDEX_SV = {
     }
   },
   "Mawile": {
-    "Cooltrainer LEROY": {
+    "Cooltrainer M LEROY": {
       "index": 3,
       "slot": 0,
       "level": "1",
@@ -703,7 +703,7 @@ var SETDEX_SV = {
         "Swords Dance"
       ]
     },
-    "Cooltrainer WENDY": {
+    "Cooltrainer F WENDY": {
       "index": 123,
       "slot": 0,
       "level": "29",
@@ -728,7 +728,7 @@ var SETDEX_SV = {
     }
   },
   "Rotom-Wash": {
-    "Cooltrainer LEROY": {
+    "Cooltrainer M LEROY": {
       "index": 3,
       "slot": 1,
       "level": "1",
@@ -753,7 +753,7 @@ var SETDEX_SV = {
     }
   },
   "Kingdra": {
-    "Cooltrainer LEROY": {
+    "Cooltrainer M LEROY": {
       "index": 3,
       "slot": 2,
       "level": "1",
@@ -824,7 +824,7 @@ var SETDEX_SV = {
     }
   },
   "Azumarill": {
-    "Cooltrainer LEROY": {
+    "Cooltrainer M LEROY": {
       "index": 3,
       "slot": 3,
       "level": "1",
@@ -985,7 +985,7 @@ var SETDEX_SV = {
     }
   },
   "Scizor": {
-    "Cooltrainer LEROY": {
+    "Cooltrainer M LEROY": {
       "index": 3,
       "slot": 4,
       "level": "1",
@@ -1008,7 +1008,7 @@ var SETDEX_SV = {
         "Knock Off"
       ]
     },
-    "Winstrate VICKY": {
+    "Expert F VICKY": {
       "index": 19,
       "slot": 2,
       "level": "1",
@@ -1033,7 +1033,7 @@ var SETDEX_SV = {
     }
   },
   "Ceruledge": {
-    "Cooltrainer LEROY": {
+    "Cooltrainer M LEROY": {
       "index": 3,
       "slot": 5,
       "level": "1",
@@ -1104,7 +1104,7 @@ var SETDEX_SV = {
     }
   },
   "Aggron": {
-    "Cooltrainer KEIRA": {
+    "Cooltrainer F KEIRA": {
       "index": 4,
       "slot": 0,
       "level": "1",
@@ -1198,7 +1198,7 @@ var SETDEX_SV = {
     }
   },
   "Manectric": {
-    "Cooltrainer KEIRA": {
+    "Cooltrainer F KEIRA": {
       "index": 4,
       "slot": 1,
       "level": "1",
@@ -1221,7 +1221,7 @@ var SETDEX_SV = {
         "Overheat"
       ]
     },
-    "Cooltrainer LEONEL": {
+    "Cooltrainer M LEONEL": {
       "index": 133,
       "slot": 0,
       "level": "30",
@@ -1243,7 +1243,7 @@ var SETDEX_SV = {
         "Thunder Wave"
       ]
     },
-    "Cooltrainer ATHENA": {
+    "Cooltrainer F ATHENA": {
       "index": 144,
       "slot": 0,
       "level": "32",
@@ -1284,7 +1284,7 @@ var SETDEX_SV = {
       "moves": [
         "Discharge",
         "Flame Burst",
-        "Hidden Power"
+        "Hidden Power Grass"
       ]
     },
     "Leader WATTSON": {
@@ -1307,10 +1307,10 @@ var SETDEX_SV = {
         "Thunderbolt",
         "Volt Switch",
         "Flamethrower",
-        "Hidden Power"
+        "Hidden Power Ice"
       ]
     },
-    "Cooltrainer MARLEY": {
+    "Cooltrainer F MARLEY": {
       "index": 158,
       "slot": 0,
       "level": "34",
@@ -1376,10 +1376,10 @@ var SETDEX_SV = {
         "Thunderbolt",
         "Flame Burst",
         "Volt Switch",
-        "Hidden Power"
+        "Hidden Power Ground"
       ]
     },
-    "Triathlete ABIGAIL": {
+    "Triathlete F ABIGAIL": {
       "index": 239,
       "slot": 3,
       "level": "50",
@@ -1399,12 +1399,12 @@ var SETDEX_SV = {
         "Electric Terrain",
         "Rising Voltage",
         "Discharge",
-        "Hidden Power"
+        "Hidden Power Ice"
       ]
     }
   },
   "Magnezone": {
-    "Cooltrainer KEIRA": {
+    "Cooltrainer F KEIRA": {
       "index": 4,
       "slot": 2,
       "level": "1",
@@ -1493,7 +1493,7 @@ var SETDEX_SV = {
         "Explosion"
       ]
     },
-    "Triathlete ABIGAIL": {
+    "Triathlete F ABIGAIL": {
       "index": 239,
       "slot": 0,
       "level": "48",
@@ -1518,7 +1518,7 @@ var SETDEX_SV = {
     }
   },
   "Tinkaton": {
-    "Cooltrainer KEIRA": {
+    "Cooltrainer F KEIRA": {
       "index": 4,
       "slot": 3,
       "level": "1",
@@ -1589,7 +1589,7 @@ var SETDEX_SV = {
     }
   },
   "Rotom-Heat": {
-    "Cooltrainer KEIRA": {
+    "Cooltrainer F KEIRA": {
       "index": 4,
       "slot": 4,
       "level": "1",
@@ -1635,7 +1635,7 @@ var SETDEX_SV = {
     }
   },
   "Glimmora": {
-    "Cooltrainer KEIRA": {
+    "Cooltrainer F KEIRA": {
       "index": 4,
       "slot": 5,
       "level": "1",
@@ -1779,7 +1779,7 @@ var SETDEX_SV = {
         "Protect"
       ]
     },
-    "Cooltrainer QUINCY": {
+    "Cooltrainer M QUINCY": {
       "index": 207,
       "slot": 1,
       "level": "43",
@@ -2142,7 +2142,7 @@ var SETDEX_SV = {
         "Baton Pass"
       ]
     },
-    "Cooltrainer BERKE": {
+    "Cooltrainer M BERKE": {
       "index": 262,
       "slot": 0,
       "level": "56",
@@ -2213,7 +2213,7 @@ var SETDEX_SV = {
         "Feint Attack"
       ]
     },
-    "Cooltrainer JODY": {
+    "Cooltrainer F JODY": {
       "index": 257,
       "slot": 4,
       "level": "52",
@@ -2310,7 +2310,7 @@ var SETDEX_SV = {
     }
   },
   "Alakazam": {
-    "Psychic JOSHUA": {
+    "Psychic M JOSHUA": {
       "index": 8,
       "slot": 0,
       "level": "1",
@@ -2335,7 +2335,7 @@ var SETDEX_SV = {
     }
   },
   "Solrock": {
-    "Psychic JOSHUA": {
+    "Psychic M JOSHUA": {
       "index": 8,
       "slot": 1,
       "level": "1",
@@ -2404,7 +2404,7 @@ var SETDEX_SV = {
         "Will-O-Wisp"
       ]
     },
-    "Triathlete JULIO": {
+    "Triathlete M JULIO": {
       "index": 200,
       "slot": 2,
       "level": "40",
@@ -2450,7 +2450,7 @@ var SETDEX_SV = {
         "Flamethrower"
       ]
     },
-    "Cooltrainer MITCHELL": {
+    "Cooltrainer M MITCHELL": {
       "index": 210,
       "slot": 1,
       "level": "43",
@@ -2590,7 +2590,7 @@ var SETDEX_SV = {
     }
   },
   "Reuniclus": {
-    "Psychic JOSHUA": {
+    "Psychic M JOSHUA": {
       "index": 8,
       "slot": 2,
       "level": "1",
@@ -2615,7 +2615,7 @@ var SETDEX_SV = {
     }
   },
   "Bronzong": {
-    "Psychic JOSHUA": {
+    "Psychic M JOSHUA": {
       "index": 8,
       "slot": 3,
       "level": "1",
@@ -2638,7 +2638,7 @@ var SETDEX_SV = {
         "Stealth Rock"
       ]
     },
-    "Pkmn Breeder ISAAC": {
+    "Pokemon Breeder M ISAAC": {
       "index": 143,
       "slot": 3,
       "level": "32",
@@ -2663,7 +2663,7 @@ var SETDEX_SV = {
     }
   },
   "Slowking-Galar": {
-    "Psychic JOSHUA": {
+    "Psychic M JOSHUA": {
       "index": 8,
       "slot": 4,
       "level": "1",
@@ -2711,7 +2711,7 @@ var SETDEX_SV = {
     }
   },
   "Gallade": {
-    "Psychic JOSHUA": {
+    "Psychic M JOSHUA": {
       "index": 8,
       "slot": 5,
       "level": "1",
@@ -2782,7 +2782,7 @@ var SETDEX_SV = {
     }
   },
   "Gardevoir": {
-    "Psychic ALEXIS": {
+    "Psychic F ALEXIS": {
       "index": 9,
       "slot": 0,
       "level": "1",
@@ -2851,7 +2851,7 @@ var SETDEX_SV = {
         "Draining Kiss"
       ]
     },
-    "Cooltrainer KATELYNN": {
+    "Cooltrainer F KATELYNN": {
       "index": 208,
       "slot": 0,
       "level": "43",
@@ -3014,7 +3014,7 @@ var SETDEX_SV = {
     }
   },
   "Xatu": {
-    "Psychic ALEXIS": {
+    "Psychic F ALEXIS": {
       "index": 9,
       "slot": 1,
       "level": "1",
@@ -3177,7 +3177,7 @@ var SETDEX_SV = {
     }
   },
   "Farigiraf": {
-    "Psychic ALEXIS": {
+    "Psychic F ALEXIS": {
       "index": 9,
       "slot": 2,
       "level": "1",
@@ -3225,7 +3225,7 @@ var SETDEX_SV = {
     }
   },
   "Mr. Rime": {
-    "Psychic ALEXIS": {
+    "Psychic F ALEXIS": {
       "index": 9,
       "slot": 3,
       "level": "1",
@@ -3273,7 +3273,7 @@ var SETDEX_SV = {
     }
   },
   "Indeedee-F": {
-    "Psychic ALEXIS": {
+    "Psychic F ALEXIS": {
       "index": 9,
       "slot": 4,
       "level": "1",
@@ -3298,7 +3298,7 @@ var SETDEX_SV = {
     }
   },
   "Slowbro": {
-    "Psychic ALEXIS": {
+    "Psychic F ALEXIS": {
       "index": 9,
       "slot": 5,
       "level": "1",
@@ -3580,7 +3580,7 @@ var SETDEX_SV = {
         "Bug Buzz"
       ]
     },
-    "School Kid GEORGIA": {
+    "School Kid F GEORGIA": {
       "index": 15,
       "slot": 1,
       "level": "1",
@@ -3626,7 +3626,7 @@ var SETDEX_SV = {
         "Stun Spore"
       ]
     },
-    "Pokefan ISABEL": {
+    "Pokefan F ISABEL": {
       "index": 118,
       "slot": 1,
       "level": "28",
@@ -3697,7 +3697,7 @@ var SETDEX_SV = {
         "Venoshock"
       ]
     },
-    "School Kid GEORGIA": {
+    "School Kid F GEORGIA": {
       "index": 15,
       "slot": 2,
       "level": "1",
@@ -3743,7 +3743,7 @@ var SETDEX_SV = {
         "Protect"
       ]
     },
-    "Pokefan KALEB": {
+    "Pokefan M KALEB": {
       "index": 122,
       "slot": 1,
       "level": "28",
@@ -3793,7 +3793,7 @@ var SETDEX_SV = {
     }
   },
   "Kirlia": {
-    "School Kid JERRY": {
+    "School Kid M JERRY": {
       "index": 12,
       "slot": 0,
       "level": "1",
@@ -3816,7 +3816,7 @@ var SETDEX_SV = {
         "Light Screen"
       ]
     },
-    "School Kid TED": {
+    "School Kid M TED": {
       "index": 13,
       "slot": 1,
       "level": "1",
@@ -3863,7 +3863,7 @@ var SETDEX_SV = {
     }
   },
   "Darumaka-Galar": {
-    "School Kid JERRY": {
+    "School Kid M JERRY": {
       "index": 12,
       "slot": 1,
       "level": "1",
@@ -3888,7 +3888,7 @@ var SETDEX_SV = {
     }
   },
   "Hattrem": {
-    "School Kid JERRY": {
+    "School Kid M JERRY": {
       "index": 12,
       "slot": 2,
       "level": "1",
@@ -3913,7 +3913,7 @@ var SETDEX_SV = {
     }
   },
   "Mr. Mime": {
-    "School Kid TED": {
+    "School Kid M TED": {
       "index": 13,
       "slot": 0,
       "level": "1",
@@ -3938,7 +3938,7 @@ var SETDEX_SV = {
     }
   },
   "Kadabra": {
-    "School Kid TED": {
+    "School Kid M TED": {
       "index": 13,
       "slot": 2,
       "level": "1",
@@ -3961,7 +3961,7 @@ var SETDEX_SV = {
         "Recover"
       ]
     },
-    "Psychic EDWARD": {
+    "Psychic M EDWARD": {
       "index": 138,
       "slot": 1,
       "level": "32",
@@ -3979,12 +3979,12 @@ var SETDEX_SV = {
       "nature": null,
       "moves": [
         "Psybeam",
-        "Hidden Power"
+        "Hidden Power Bug"
       ]
     }
   },
   "Swoobat": {
-    "School Kid TED": {
+    "School Kid M TED": {
       "index": 13,
       "slot": 3,
       "level": "1",
@@ -4008,7 +4008,7 @@ var SETDEX_SV = {
     }
   },
   "Ninetales": {
-    "School Kid PAUL": {
+    "School Kid M PAUL": {
       "index": 14,
       "slot": 0,
       "level": "1",
@@ -4078,7 +4078,7 @@ var SETDEX_SV = {
     }
   },
   "Camerupt": {
-    "School Kid PAUL": {
+    "School Kid M PAUL": {
       "index": 14,
       "slot": 1,
       "level": "1",
@@ -4101,7 +4101,7 @@ var SETDEX_SV = {
         "Yawn"
       ]
     },
-    "Cooltrainer BROOKE": {
+    "Cooltrainer F BROOKE": {
       "index": 171,
       "slot": 1,
       "level": "36",
@@ -4235,13 +4235,13 @@ var SETDEX_SV = {
       "moves": [
         "Earth Power",
         "Heat Wave",
-        "Hidden Power",
+        "Hidden Power Dragon",
         "Eruption"
       ]
     }
   },
   "Gloom": {
-    "School Kid PAUL": {
+    "School Kid M PAUL": {
       "index": 14,
       "slot": 2,
       "level": "1",
@@ -4289,7 +4289,7 @@ var SETDEX_SV = {
     }
   },
   "Roselia": {
-    "School Kid PAUL": {
+    "School Kid M PAUL": {
       "index": 14,
       "slot": 3,
       "level": "1",
@@ -4381,7 +4381,7 @@ var SETDEX_SV = {
         "Leech Seed"
       ]
     },
-    "Cooltrainer WENDY": {
+    "Cooltrainer F WENDY": {
       "index": 123,
       "slot": 1,
       "level": "29",
@@ -4521,7 +4521,7 @@ var SETDEX_SV = {
     }
   },
   "Leavanny": {
-    "School Kid GEORGIA": {
+    "School Kid F GEORGIA": {
       "index": 15,
       "slot": 0,
       "level": "1",
@@ -4568,7 +4568,7 @@ var SETDEX_SV = {
     }
   },
   "Charjabug": {
-    "School Kid GEORGIA": {
+    "School Kid F GEORGIA": {
       "index": 15,
       "slot": 3,
       "level": "1",
@@ -4593,7 +4593,7 @@ var SETDEX_SV = {
     }
   },
   "Swellow": {
-    "Winstrate VICTOR": {
+    "Pokefan M VICTOR": {
       "index": 16,
       "slot": 0,
       "level": "1",
@@ -4639,7 +4639,7 @@ var SETDEX_SV = {
         "Quick Attack"
       ]
     },
-    "Cooltrainer BRAXTON": {
+    "Cooltrainer M BRAXTON": {
       "index": 117,
       "slot": 0,
       "level": "28",
@@ -4662,7 +4662,7 @@ var SETDEX_SV = {
         "Endeavor"
       ]
     },
-    "Triathlete ANTHONY": {
+    "Triathlete M ANTHONY": {
       "index": 236,
       "slot": 2,
       "level": "50",
@@ -4687,7 +4687,7 @@ var SETDEX_SV = {
     }
   },
   "Obstagoon": {
-    "Winstrate VICTOR": {
+    "Pokefan M VICTOR": {
       "index": 16,
       "slot": 1,
       "level": "1",
@@ -4757,7 +4757,7 @@ var SETDEX_SV = {
     }
   },
   "Pinsir": {
-    "Winstrate VICTOR": {
+    "Pokefan M VICTOR": {
       "index": 16,
       "slot": 2,
       "level": "1",
@@ -4805,7 +4805,7 @@ var SETDEX_SV = {
     }
   },
   "Delcatty": {
-    "Pokefan MIGUEL": {
+    "Pokefan M MIGUEL": {
       "index": 17,
       "slot": 0,
       "level": "1",
@@ -4828,7 +4828,7 @@ var SETDEX_SV = {
         "Double-Edge"
       ]
     },
-    "Pkmn Breeder LYDIA": {
+    "Pokemon Breeder F LYDIA": {
       "index": 159,
       "slot": 1,
       "level": "34",
@@ -4873,7 +4873,7 @@ var SETDEX_SV = {
         "Thunder Wave"
       ]
     },
-    "Pokefan COLTON": {
+    "Pokefan M COLTON": {
       "index": 203,
       "slot": 5,
       "level": "42",
@@ -4988,7 +4988,7 @@ var SETDEX_SV = {
         "Feint Attack"
       ]
     },
-    "Cooltrainer BERKE": {
+    "Cooltrainer M BERKE": {
       "index": 262,
       "slot": 2,
       "level": "56",
@@ -5033,7 +5033,7 @@ var SETDEX_SV = {
     }
   },
   "Clefable": {
-    "Pokefan MIGUEL": {
+    "Pokefan M MIGUEL": {
       "index": 17,
       "slot": 1,
       "level": "1",
@@ -5056,7 +5056,7 @@ var SETDEX_SV = {
         "Moonblast"
       ]
     },
-    "Cooltrainer MARY": {
+    "Cooltrainer F MARY": {
       "index": 251,
       "slot": 1,
       "level": "51",
@@ -5081,7 +5081,7 @@ var SETDEX_SV = {
     }
   },
   "Togekiss": {
-    "Pokefan MIGUEL": {
+    "Pokefan M MIGUEL": {
       "index": 17,
       "slot": 2,
       "level": "1",
@@ -5129,7 +5129,7 @@ var SETDEX_SV = {
     }
   },
   "Gothitelle": {
-    "Pokefan MIGUEL": {
+    "Pokefan M MIGUEL": {
       "index": 17,
       "slot": 3,
       "level": "1",
@@ -5152,7 +5152,7 @@ var SETDEX_SV = {
         "Energy Ball"
       ]
     },
-    "Cooltrainer RANDALL": {
+    "Cooltrainer M RANDALL": {
       "index": 250,
       "slot": 4,
       "level": "51",
@@ -5177,7 +5177,7 @@ var SETDEX_SV = {
     }
   },
   "Arboliva": {
-    "Winstrate VICTORIA": {
+    "Pokefan F VICTORIA": {
       "index": 18,
       "slot": 0,
       "level": "1",
@@ -5223,7 +5223,7 @@ var SETDEX_SV = {
         "Earth Power"
       ]
     },
-    "Cooltrainer GEORGE": {
+    "Cooltrainer M GEORGE": {
       "index": 254,
       "slot": 5,
       "level": "53",
@@ -5248,7 +5248,7 @@ var SETDEX_SV = {
     }
   },
   "Trevenant": {
-    "Winstrate VICTORIA": {
+    "Pokefan F VICTORIA": {
       "index": 18,
       "slot": 1,
       "level": "1",
@@ -5296,7 +5296,7 @@ var SETDEX_SV = {
     }
   },
   "Sceptile": {
-    "Winstrate VICTORIA": {
+    "Pokefan F VICTORIA": {
       "index": 18,
       "slot": 2,
       "level": "1",
@@ -5344,7 +5344,7 @@ var SETDEX_SV = {
     }
   },
   "Hawlucha": {
-    "Winstrate VICKY": {
+    "Expert F VICKY": {
       "index": 19,
       "slot": 1,
       "level": "1",
@@ -5415,7 +5415,7 @@ var SETDEX_SV = {
         "Protect"
       ]
     },
-    "Cooltrainer ATHENA": {
+    "Cooltrainer F ATHENA": {
       "index": 144,
       "slot": 1,
       "level": "32",
@@ -5626,7 +5626,7 @@ var SETDEX_SV = {
         "Rollout"
       ]
     },
-    "Cooltrainer MARY": {
+    "Cooltrainer F MARY": {
       "index": 251,
       "slot": 5,
       "level": "52",
@@ -5983,7 +5983,7 @@ var SETDEX_SV = {
         "U-turn"
       ]
     },
-    "Triathlete BENJAMIN": {
+    "Triathlete M BENJAMIN": {
       "index": 237,
       "slot": 1,
       "level": "49",
@@ -6079,7 +6079,7 @@ var SETDEX_SV = {
         "U-turn"
       ]
     },
-    "Triathlete JACOB": {
+    "Triathlete M JACOB": {
       "index": 235,
       "slot": 2,
       "level": "49",
@@ -6319,7 +6319,7 @@ var SETDEX_SV = {
         "Earthquake"
       ]
     },
-    "Cooltrainer WILTON": {
+    "Cooltrainer M WILTON": {
       "index": 163,
       "slot": 2,
       "level": "35",
@@ -6342,7 +6342,7 @@ var SETDEX_SV = {
         "Earthquake"
       ]
     },
-    "Cooltrainer ALEXIA": {
+    "Cooltrainer F ALEXIA": {
       "index": 255,
       "slot": 2,
       "level": "52",
@@ -6630,7 +6630,7 @@ var SETDEX_SV = {
         "Dazzling Gleam"
       ]
     },
-    "Pkmn Breeder LYDIA": {
+    "Pokemon Breeder F LYDIA": {
       "index": 159,
       "slot": 2,
       "level": "34",
@@ -6701,7 +6701,7 @@ var SETDEX_SV = {
         "Thunder Wave"
       ]
     },
-    "Cooltrainer MARY": {
+    "Cooltrainer F MARY": {
       "index": 251,
       "slot": 2,
       "level": "51",
@@ -6724,7 +6724,7 @@ var SETDEX_SV = {
         "Play Rough"
       ]
     },
-    "Cooltrainer PARKER": {
+    "Cooltrainer M PARKER": {
       "index": 253,
       "slot": 4,
       "level": "52",
@@ -6819,7 +6819,7 @@ var SETDEX_SV = {
         "U-turn"
       ]
     },
-    "Pokefan KALEB": {
+    "Pokefan M KALEB": {
       "index": 122,
       "slot": 0,
       "level": "27",
@@ -6867,7 +6867,7 @@ var SETDEX_SV = {
         "Protect"
       ]
     },
-    "Pokefan ISABEL": {
+    "Pokefan F ISABEL": {
       "index": 118,
       "slot": 0,
       "level": "27",
@@ -7102,7 +7102,7 @@ var SETDEX_SV = {
         "Signal Beam"
       ]
     },
-    "Pkmn Breeder ISAAC": {
+    "Pokemon Breeder M ISAAC": {
       "index": 143,
       "slot": 1,
       "level": "32",
@@ -7125,7 +7125,7 @@ var SETDEX_SV = {
         "Shadow Ball"
       ]
     },
-    "Cooltrainer JODY": {
+    "Cooltrainer F JODY": {
       "index": 257,
       "slot": 3,
       "level": "54",
@@ -7173,7 +7173,7 @@ var SETDEX_SV = {
         "Shadow Ball"
       ]
     },
-    "Psychic MARIELA": {
+    "Psychic F MARIELA": {
       "index": 51,
       "slot": 0,
       "level": "1",
@@ -7434,7 +7434,7 @@ var SETDEX_SV = {
         "Low Kick"
       ]
     },
-    "Cooltrainer BRAXTON": {
+    "Cooltrainer M BRAXTON": {
       "index": 117,
       "slot": 4,
       "level": "28",
@@ -7719,7 +7719,7 @@ var SETDEX_SV = {
         "Sleep Powder"
       ]
     },
-    "Triathlete MARIA": {
+    "Triathlete F MARIA": {
       "index": 141,
       "slot": 0,
       "level": "32",
@@ -7742,7 +7742,7 @@ var SETDEX_SV = {
         "Synthesis"
       ]
     },
-    "Cooltrainer BROOKE": {
+    "Cooltrainer F BROOKE": {
       "index": 171,
       "slot": 2,
       "level": "36",
@@ -7760,7 +7760,7 @@ var SETDEX_SV = {
       "nature": "Timid",
       "moves": [
         "Giga Drain",
-        "Hidden Power",
+        "Hidden Power Fire",
         "Sludge Bomb",
         "Sleep Powder"
       ]
@@ -8078,7 +8078,7 @@ var SETDEX_SV = {
         "Protect"
       ]
     },
-    "School Kid KAREN": {
+    "School Kid F KAREN": {
       "index": 79,
       "slot": 0,
       "level": "15",
@@ -8317,7 +8317,7 @@ var SETDEX_SV = {
         "Spore"
       ]
     },
-    "Pkmn Breeder LYDIA": {
+    "Pokemon Breeder F LYDIA": {
       "index": 159,
       "slot": 0,
       "level": "33",
@@ -8461,7 +8461,7 @@ var SETDEX_SV = {
         "Play Rough"
       ]
     },
-    "Triathlete JASMINE": {
+    "Triathlete F JASMINE": {
       "index": 238,
       "slot": 0,
       "level": "50",
@@ -8484,7 +8484,7 @@ var SETDEX_SV = {
         "Return"
       ]
     },
-    "Cooltrainer BERKE": {
+    "Cooltrainer M BERKE": {
       "index": 262,
       "slot": 5,
       "level": "56",
@@ -8577,7 +8577,7 @@ var SETDEX_SV = {
         "Charm"
       ]
     },
-    "Triathlete ABIGAIL": {
+    "Triathlete F ABIGAIL": {
       "index": 239,
       "slot": 4,
       "level": "48",
@@ -8671,7 +8671,7 @@ var SETDEX_SV = {
         "Explosion"
       ]
     },
-    "Triathlete JASMINE": {
+    "Triathlete F JASMINE": {
       "index": 238,
       "slot": 1,
       "level": "50",
@@ -9364,7 +9364,7 @@ var SETDEX_SV = {
         "Sludge Bomb"
       ]
     },
-    "Triathlete BENJAMIN": {
+    "Triathlete M BENJAMIN": {
       "index": 237,
       "slot": 2,
       "level": "49",
@@ -9431,10 +9431,10 @@ var SETDEX_SV = {
         "Electroweb",
         "Hyper Voice",
         "Flash Cannon",
-        "Hidden Power"
+        "Hidden Power Ice"
       ]
     },
-    "Triathlete ALYSSA": {
+    "Triathlete F ALYSSA": {
       "index": 146,
       "slot": 1,
       "level": "32",
@@ -9456,7 +9456,7 @@ var SETDEX_SV = {
         "Electroweb"
       ]
     },
-    "Triathlete ABIGAIL": {
+    "Triathlete F ABIGAIL": {
       "index": 239,
       "slot": 1,
       "level": "48",
@@ -9476,7 +9476,7 @@ var SETDEX_SV = {
         "Explosion",
         "Thunderbolt",
         "Flash Cannon",
-        "Hidden Power"
+        "Hidden Power Dark"
       ]
     }
   },
@@ -9883,7 +9883,7 @@ var SETDEX_SV = {
         "Surf"
       ]
     },
-    "Psychic BRANDI": {
+    "Psychic F BRANDI": {
       "index": 161,
       "slot": 0,
       "level": "34",
@@ -10068,7 +10068,7 @@ var SETDEX_SV = {
       "nature": "Modest",
       "moves": [
         "Hyper Voice",
-        "Hidden Power",
+        "Hidden Power Ground",
         "Thunderbolt",
         "Grass Knot"
       ]
@@ -10123,7 +10123,7 @@ var SETDEX_SV = {
     }
   },
   "Grumpig": {
-    "Psychic MARLENE": {
+    "Psychic F MARLENE": {
       "index": 50,
       "slot": 1,
       "level": "1",
@@ -10148,7 +10148,7 @@ var SETDEX_SV = {
     }
   },
   "Hypno": {
-    "Psychic MARLENE": {
+    "Psychic F MARLENE": {
       "index": 50,
       "slot": 2,
       "level": "1",
@@ -10219,7 +10219,7 @@ var SETDEX_SV = {
     }
   },
   "Hatterene": {
-    "Psychic MARIELA": {
+    "Psychic F MARIELA": {
       "index": 51,
       "slot": 1,
       "level": "1",
@@ -10244,7 +10244,7 @@ var SETDEX_SV = {
     }
   },
   "Rabsca": {
-    "Psychic MARIELA": {
+    "Psychic F MARIELA": {
       "index": 51,
       "slot": 2,
       "level": "1",
@@ -10269,7 +10269,7 @@ var SETDEX_SV = {
     }
   },
   "Orbeetle": {
-    "Psychic MARIELA": {
+    "Psychic F MARIELA": {
       "index": 51,
       "slot": 3,
       "level": "1",
@@ -10294,7 +10294,7 @@ var SETDEX_SV = {
     }
   },
   "Slowbro-Galar": {
-    "Psychic MARIELA": {
+    "Psychic F MARIELA": {
       "index": 51,
       "slot": 4,
       "level": "1",
@@ -10342,7 +10342,7 @@ var SETDEX_SV = {
     }
   },
   "Delphox": {
-    "Psychic MARIELA": {
+    "Psychic F MARIELA": {
       "index": 51,
       "slot": 5,
       "level": "1",
@@ -10390,7 +10390,7 @@ var SETDEX_SV = {
     }
   },
   "Armarouge": {
-    "Psychic ALVARO": {
+    "Psychic M ALVARO": {
       "index": 52,
       "slot": 0,
       "level": "1",
@@ -10413,7 +10413,7 @@ var SETDEX_SV = {
         "Calm Mind"
       ]
     },
-    "Triathlete JULIO": {
+    "Triathlete M JULIO": {
       "index": 200,
       "slot": 0,
       "level": "40",
@@ -10461,7 +10461,7 @@ var SETDEX_SV = {
     }
   },
   "Sigilyph": {
-    "Psychic ALVARO": {
+    "Psychic M ALVARO": {
       "index": 52,
       "slot": 1,
       "level": "1",
@@ -10509,7 +10509,7 @@ var SETDEX_SV = {
     }
   },
   "Gengar": {
-    "Psychic ALVARO": {
+    "Psychic M ALVARO": {
       "index": 52,
       "slot": 2,
       "level": "1",
@@ -10534,7 +10534,7 @@ var SETDEX_SV = {
     }
   },
   "Meowstic": {
-    "Psychic ALVARO": {
+    "Psychic M ALVARO": {
       "index": 52,
       "slot": 3,
       "level": "1",
@@ -10557,7 +10557,7 @@ var SETDEX_SV = {
         "Thunder Wave"
       ]
     },
-    "Cooltrainer BERKE": {
+    "Cooltrainer M BERKE": {
       "index": 262,
       "slot": 3,
       "level": "56",
@@ -10579,7 +10579,7 @@ var SETDEX_SV = {
     }
   },
   "Oranguru": {
-    "Psychic ALVARO": {
+    "Psychic M ALVARO": {
       "index": 52,
       "slot": 4,
       "level": "1",
@@ -10604,7 +10604,7 @@ var SETDEX_SV = {
     }
   },
   "Slowking": {
-    "Psychic ALVARO": {
+    "Psychic M ALVARO": {
       "index": 52,
       "slot": 5,
       "level": "1",
@@ -10698,7 +10698,7 @@ var SETDEX_SV = {
         "Safeguard"
       ]
     },
-    "Psychic CEDRIC": {
+    "Psychic M CEDRIC": {
       "index": 142,
       "slot": 0,
       "level": "32",
@@ -10796,7 +10796,7 @@ var SETDEX_SV = {
         "Aromatherapy"
       ]
     },
-    "Cooltrainer PARKER": {
+    "Cooltrainer M PARKER": {
       "index": 253,
       "slot": 0,
       "level": "53",
@@ -10816,7 +10816,7 @@ var SETDEX_SV = {
         "Metronome"
       ]
     },
-    "Cooltrainer GEORGE": {
+    "Cooltrainer M GEORGE": {
       "index": 254,
       "slot": 1,
       "level": "52",
@@ -10910,7 +10910,7 @@ var SETDEX_SV = {
         "Body Press"
       ]
     },
-    "Triathlete JACOB": {
+    "Triathlete M JACOB": {
       "index": 235,
       "slot": 0,
       "level": "49",
@@ -11353,7 +11353,7 @@ var SETDEX_SV = {
         "Leech Seed"
       ]
     },
-    "School Kid KAREN": {
+    "School Kid F KAREN": {
       "index": 79,
       "slot": 1,
       "level": "14",
@@ -11421,7 +11421,7 @@ var SETDEX_SV = {
         "Icy Wind"
       ]
     },
-    "Cooltrainer WENDY": {
+    "Cooltrainer F WENDY": {
       "index": 123,
       "slot": 2,
       "level": "29",
@@ -11467,7 +11467,7 @@ var SETDEX_SV = {
         "Aerial Ace"
       ]
     },
-    "Cooltrainer BROOKE": {
+    "Cooltrainer F BROOKE": {
       "index": 171,
       "slot": 0,
       "level": "36",
@@ -11830,7 +11830,7 @@ var SETDEX_SV = {
         "Flail"
       ]
     },
-    "Pokefan ANNIKA": {
+    "Pokefan F ANNIKA": {
       "index": 193,
       "slot": 1,
       "level": "39",
@@ -11878,7 +11878,7 @@ var SETDEX_SV = {
         "Last Resort"
       ]
     },
-    "Pokefan COLTON": {
+    "Pokefan M COLTON": {
       "index": 203,
       "slot": 4,
       "level": "30",
@@ -12340,7 +12340,7 @@ var SETDEX_SV = {
         "Bulldoze"
       ]
     },
-    "Cooltrainer BRAXTON": {
+    "Cooltrainer M BRAXTON": {
       "index": 117,
       "slot": 1,
       "level": "28",
@@ -12580,7 +12580,7 @@ var SETDEX_SV = {
     }
   },
   "Abra": {
-    "Psychic JACLYN": {
+    "Psychic F JACLYN": {
       "index": 78,
       "slot": 0,
       "level": "16",
@@ -12597,12 +12597,12 @@ var SETDEX_SV = {
       "ability": null,
       "nature": null,
       "moves": [
-        "Hidden Power"
+        "Hidden Power Fighting"
       ]
     }
   },
   "Vulpix": {
-    "School Kid KAREN": {
+    "School Kid F KAREN": {
       "index": 79,
       "slot": 2,
       "level": "16",
@@ -12964,7 +12964,7 @@ var SETDEX_SV = {
       "moves": [
         "Water Pulse",
         "Work Up",
-        "Hidden Power",
+        "Hidden Power Ice",
         "Lick"
       ]
     }
@@ -13105,7 +13105,7 @@ var SETDEX_SV = {
       "nature": "Timid",
       "moves": [
         "Stealth Rock",
-        "Hidden Power",
+        "Hidden Power Grass",
         "Venoshock",
         "Ancient Power"
       ]
@@ -13596,7 +13596,7 @@ var SETDEX_SV = {
         "Rain Dance"
       ]
     },
-    "Cooltrainer BRAXTON": {
+    "Cooltrainer M BRAXTON": {
       "index": 117,
       "slot": 2,
       "level": "28",
@@ -13619,7 +13619,7 @@ var SETDEX_SV = {
         "Water Pulse"
       ]
     },
-    "Cooltrainer WILTON": {
+    "Cooltrainer M WILTON": {
       "index": 163,
       "slot": 0,
       "level": "35",
@@ -13836,7 +13836,7 @@ var SETDEX_SV = {
         "Covet"
       ]
     },
-    "Cooltrainer RANDALL": {
+    "Cooltrainer M RANDALL": {
       "index": 250,
       "slot": 5,
       "level": "1",
@@ -15247,7 +15247,7 @@ var SETDEX_SV = {
       "moves": [
         "Confusion",
         "Draining Kiss",
-        "Hidden Power",
+        "Hidden Power Dragon",
         "Calm Mind"
       ]
     },
@@ -15619,7 +15619,7 @@ var SETDEX_SV = {
     }
   },
   "Magneton": {
-    "Cooltrainer BRAXTON": {
+    "Cooltrainer M BRAXTON": {
       "index": 117,
       "slot": 3,
       "level": "28",
@@ -15642,7 +15642,7 @@ var SETDEX_SV = {
         "Sonic Boom"
       ]
     },
-    "Triathlete ALYSSA": {
+    "Triathlete F ALYSSA": {
       "index": 146,
       "slot": 0,
       "level": "32",
@@ -15662,7 +15662,7 @@ var SETDEX_SV = {
         "Thunder Wave",
         "Thunderbolt",
         "Flash Cannon",
-        "Hidden Power"
+        "Hidden Power Fighting"
       ]
     },
     "Interviewer GABBY & TY [2]": {
@@ -16227,7 +16227,7 @@ var SETDEX_SV = {
       "moves": [
         "Psybeam",
         "Draining Kiss",
-        "Hidden Power"
+        "Hidden Power Fire"
       ]
     },
     "Rival MAY (Route 110 Treecko)": {
@@ -16249,7 +16249,7 @@ var SETDEX_SV = {
       "moves": [
         "Psybeam",
         "Draining Kiss",
-        "Hidden Power"
+        "Hidden Power Fire"
       ]
     },
     "Rival MAY (Route 110 Torchic)": {
@@ -16271,7 +16271,7 @@ var SETDEX_SV = {
       "moves": [
         "Psybeam",
         "Draining Kiss",
-        "Hidden Power"
+        "Hidden Power Fire"
       ]
     }
   },
@@ -16299,7 +16299,7 @@ var SETDEX_SV = {
         "Drain Punch"
       ]
     },
-    "Expert TIMOTHY": {
+    "Expert M TIMOTHY": {
       "index": 152,
       "slot": 0,
       "level": "33",
@@ -16510,7 +16510,7 @@ var SETDEX_SV = {
     }
   },
   "Indeedee": {
-    "Psychic EDWARD": {
+    "Psychic M EDWARD": {
       "index": 138,
       "slot": 0,
       "level": "32",
@@ -16581,7 +16581,7 @@ var SETDEX_SV = {
         "Feint Attack"
       ]
     },
-    "Cooltrainer QUINCY": {
+    "Cooltrainer M QUINCY": {
       "index": 207,
       "slot": 0,
       "level": "43",
@@ -16604,7 +16604,7 @@ var SETDEX_SV = {
         "Flamethrower"
       ]
     },
-    "Cooltrainer KATELYNN": {
+    "Cooltrainer F KATELYNN": {
       "index": 208,
       "slot": 1,
       "level": "43",
@@ -16627,7 +16627,7 @@ var SETDEX_SV = {
         "Brick Break"
       ]
     },
-    "Cooltrainer PARKER": {
+    "Cooltrainer M PARKER": {
       "index": 253,
       "slot": 2,
       "level": "53",
@@ -16672,7 +16672,7 @@ var SETDEX_SV = {
     }
   },
   "Squawkabilly-Blue": {
-    "Triathlete DYLAN": {
+    "Triathlete M DYLAN": {
       "index": 140,
       "slot": 0,
       "level": "32",
@@ -16697,7 +16697,7 @@ var SETDEX_SV = {
     }
   },
   "Squawkabilly-White": {
-    "Triathlete DYLAN": {
+    "Triathlete M DYLAN": {
       "index": 140,
       "slot": 1,
       "level": "32",
@@ -16722,7 +16722,7 @@ var SETDEX_SV = {
     }
   },
   "Squawkabilly-Yellow": {
-    "Triathlete DYLAN": {
+    "Triathlete M DYLAN": {
       "index": 140,
       "slot": 2,
       "level": "32",
@@ -16747,7 +16747,7 @@ var SETDEX_SV = {
     }
   },
   "Squawkabilly": {
-    "Triathlete DYLAN": {
+    "Triathlete M DYLAN": {
       "index": 140,
       "slot": 3,
       "level": "32",
@@ -16772,7 +16772,7 @@ var SETDEX_SV = {
     }
   },
   "Dodrio": {
-    "Triathlete DYLAN": {
+    "Triathlete M DYLAN": {
       "index": 140,
       "slot": 4,
       "level": "32",
@@ -16795,7 +16795,7 @@ var SETDEX_SV = {
         "Jump Kick"
       ]
     },
-    "Triathlete ANTHONY": {
+    "Triathlete M ANTHONY": {
       "index": 236,
       "slot": 0,
       "level": "48",
@@ -16818,7 +16818,7 @@ var SETDEX_SV = {
         "Jump Kick"
       ]
     },
-    "Cooltrainer MARY": {
+    "Cooltrainer F MARY": {
       "index": 251,
       "slot": 4,
       "level": "51",
@@ -16843,7 +16843,7 @@ var SETDEX_SV = {
     }
   },
   "Scovillain": {
-    "Triathlete MARIA": {
+    "Triathlete F MARIA": {
       "index": 141,
       "slot": 1,
       "level": "32",
@@ -16889,7 +16889,7 @@ var SETDEX_SV = {
     }
   },
   "Dipplin": {
-    "Pkmn Breeder ISAAC": {
+    "Pokemon Breeder M ISAAC": {
       "index": 143,
       "slot": 0,
       "level": "32",
@@ -16914,7 +16914,7 @@ var SETDEX_SV = {
     }
   },
   "Klinklang": {
-    "Pkmn Breeder ISAAC": {
+    "Pokemon Breeder M ISAAC": {
       "index": 143,
       "slot": 2,
       "level": "32",
@@ -16963,7 +16963,7 @@ var SETDEX_SV = {
     }
   },
   "Whimsicott": {
-    "Triathlete MELINA": {
+    "Triathlete F MELINA": {
       "index": 147,
       "slot": 0,
       "level": "32",
@@ -17034,7 +17034,7 @@ var SETDEX_SV = {
     }
   },
   "Florges": {
-    "Triathlete MELINA": {
+    "Triathlete F MELINA": {
       "index": 147,
       "slot": 1,
       "level": "32",
@@ -17105,7 +17105,7 @@ var SETDEX_SV = {
         "Eerie Impulse"
       ]
     },
-    "Cooltrainer DIANNE": {
+    "Cooltrainer F DIANNE": {
       "index": 209,
       "slot": 1,
       "level": "43",
@@ -17603,7 +17603,7 @@ var SETDEX_SV = {
         "Signal Beam"
       ]
     },
-    "Triathlete JACOB": {
+    "Triathlete M JACOB": {
       "index": 235,
       "slot": 1,
       "level": "49",
@@ -17798,7 +17798,7 @@ var SETDEX_SV = {
     }
   },
   "Lilligant-Hisui": {
-    "Pkmn Breeder LYDIA": {
+    "Pokemon Breeder F LYDIA": {
       "index": 159,
       "slot": 3,
       "level": "34",
@@ -17868,7 +17868,7 @@ var SETDEX_SV = {
         "Body Slam"
       ]
     },
-    "Cooltrainer GEORGE": {
+    "Cooltrainer M GEORGE": {
       "index": 254,
       "slot": 4,
       "level": "52",
@@ -17959,7 +17959,7 @@ var SETDEX_SV = {
         "Hyper Voice"
       ]
     },
-    "Cooltrainer MARY": {
+    "Cooltrainer F MARY": {
       "index": 251,
       "slot": 3,
       "level": "51",
@@ -17984,7 +17984,7 @@ var SETDEX_SV = {
     }
   },
   "Swanna": {
-    "Psychic BRANDI": {
+    "Psychic F BRANDI": {
       "index": 161,
       "slot": 1,
       "level": "34",
@@ -18008,7 +18008,7 @@ var SETDEX_SV = {
     }
   },
   "Quagsire": {
-    "Psychic BRANDI": {
+    "Psychic F BRANDI": {
       "index": 161,
       "slot": 2,
       "level": "34",
@@ -18103,7 +18103,7 @@ var SETDEX_SV = {
     }
   },
   "Scolipede": {
-    "Cooltrainer WILTON": {
+    "Cooltrainer M WILTON": {
       "index": 163,
       "slot": 1,
       "level": "35",
@@ -18610,7 +18610,7 @@ var SETDEX_SV = {
         "Roost"
       ]
     },
-    "Triathlete BENJAMIN": {
+    "Triathlete M BENJAMIN": {
       "index": 237,
       "slot": 4,
       "level": "49",
@@ -18801,7 +18801,7 @@ var SETDEX_SV = {
         "High Horsepower"
       ]
     },
-    "Triathlete JACOB": {
+    "Triathlete M JACOB": {
       "index": 235,
       "slot": 4,
       "level": "50",
@@ -18988,7 +18988,7 @@ var SETDEX_SV = {
         "Moonblast",
         "Draining Kiss",
         "Calm Mind",
-        "Hidden Power"
+        "Hidden Power Fire"
       ]
     }
   },
@@ -19039,7 +19039,7 @@ var SETDEX_SV = {
         "Body Press"
       ]
     },
-    "Triathlete JASMINE": {
+    "Triathlete F JASMINE": {
       "index": 238,
       "slot": 2,
       "level": "50",
@@ -19227,7 +19227,7 @@ var SETDEX_SV = {
         "Light Screen"
       ]
     },
-    "Cooltrainer FELIX": {
+    "Cooltrainer M FELIX": {
       "index": 205,
       "slot": 1,
       "level": "43",
@@ -19248,7 +19248,7 @@ var SETDEX_SV = {
         "Earthquake"
       ]
     },
-    "Cooltrainer DIANNE": {
+    "Cooltrainer F DIANNE": {
       "index": 209,
       "slot": 0,
       "level": "43",
@@ -19867,7 +19867,7 @@ var SETDEX_SV = {
         "Sunny Day"
       ]
     },
-    "Cooltrainer GERALD": {
+    "Cooltrainer M GERALD": {
       "index": 204,
       "slot": 0,
       "level": "41",
@@ -19917,7 +19917,7 @@ var SETDEX_SV = {
     }
   },
   "Charizard": {
-    "Triathlete JULIO": {
+    "Triathlete M JULIO": {
       "index": 200,
       "slot": 1,
       "level": "40",
@@ -19940,7 +19940,7 @@ var SETDEX_SV = {
         "Air Slash"
       ]
     },
-    "Cooltrainer GERALD": {
+    "Cooltrainer M GERALD": {
       "index": 204,
       "slot": 1,
       "level": "42",
@@ -20059,7 +20059,7 @@ var SETDEX_SV = {
         "Calm Mind"
       ]
     },
-    "Cooltrainer MITCHELL": {
+    "Cooltrainer M MITCHELL": {
       "index": 210,
       "slot": 0,
       "level": "43",
@@ -20199,7 +20199,7 @@ var SETDEX_SV = {
     }
   },
   "Turtonator": {
-    "Cooltrainer GERALD": {
+    "Cooltrainer M GERALD": {
       "index": 204,
       "slot": 2,
       "level": "42",
@@ -21083,7 +21083,7 @@ var SETDEX_SV = {
     }
   },
   "Accelgor": {
-    "Triathlete JACOB": {
+    "Triathlete M JACOB": {
       "index": 235,
       "slot": 3,
       "level": "49",
@@ -21108,7 +21108,7 @@ var SETDEX_SV = {
     }
   },
   "Fearow": {
-    "Triathlete ANTHONY": {
+    "Triathlete M ANTHONY": {
       "index": 236,
       "slot": 1,
       "level": "48",
@@ -21131,7 +21131,7 @@ var SETDEX_SV = {
         "Pursuit"
       ]
     },
-    "Cooltrainer RANDALL": {
+    "Cooltrainer M RANDALL": {
       "index": 250,
       "slot": 2,
       "level": "51",
@@ -21156,7 +21156,7 @@ var SETDEX_SV = {
     }
   },
   "Staraptor": {
-    "Triathlete ANTHONY": {
+    "Triathlete M ANTHONY": {
       "index": 236,
       "slot": 3,
       "level": "48",
@@ -21179,7 +21179,7 @@ var SETDEX_SV = {
         "Roost"
       ]
     },
-    "Cooltrainer JODY": {
+    "Cooltrainer F JODY": {
       "index": 257,
       "slot": 2,
       "level": "54",
@@ -21204,7 +21204,7 @@ var SETDEX_SV = {
     }
   },
   "Unfezant": {
-    "Triathlete ANTHONY": {
+    "Triathlete M ANTHONY": {
       "index": 236,
       "slot": 4,
       "level": "49",
@@ -21222,14 +21222,14 @@ var SETDEX_SV = {
       "nature": "Timid",
       "moves": [
         "Air Slash",
-        "Hidden Power",
+        "Hidden Power Dragon",
         "Hyper Voice",
         "U-turn"
       ]
     }
   },
   "Cyclizar": {
-    "Triathlete BENJAMIN": {
+    "Triathlete M BENJAMIN": {
       "index": 237,
       "slot": 0,
       "level": "50",
@@ -21277,7 +21277,7 @@ var SETDEX_SV = {
     }
   },
   "Garbodor": {
-    "Triathlete BENJAMIN": {
+    "Triathlete M BENJAMIN": {
       "index": 237,
       "slot": 3,
       "level": "50",
@@ -21302,7 +21302,7 @@ var SETDEX_SV = {
     }
   },
   "Revavroom": {
-    "Triathlete BENJAMIN": {
+    "Triathlete M BENJAMIN": {
       "index": 237,
       "slot": 5,
       "level": "48",
@@ -21327,7 +21327,7 @@ var SETDEX_SV = {
     }
   },
   "Shuckle": {
-    "Triathlete JASMINE": {
+    "Triathlete F JASMINE": {
       "index": 238,
       "slot": 3,
       "level": "50",
@@ -21350,7 +21350,7 @@ var SETDEX_SV = {
     }
   },
   "Miltank": {
-    "Triathlete JASMINE": {
+    "Triathlete F JASMINE": {
       "index": 238,
       "slot": 4,
       "level": "50",
@@ -21371,7 +21371,7 @@ var SETDEX_SV = {
         "Rollout"
       ]
     },
-    "Cooltrainer PARKER": {
+    "Cooltrainer M PARKER": {
       "index": 253,
       "slot": 5,
       "level": "53",
@@ -21393,7 +21393,7 @@ var SETDEX_SV = {
     }
   },
   "Zebstrika": {
-    "Triathlete ABIGAIL": {
+    "Triathlete F ABIGAIL": {
       "index": 239,
       "slot": 2,
       "level": "49",
@@ -21737,7 +21737,7 @@ var SETDEX_SV = {
     }
   },
   "Dudunsparce": {
-    "Cooltrainer RANDALL": {
+    "Cooltrainer M RANDALL": {
       "index": 250,
       "slot": 0,
       "level": "51",
@@ -21762,7 +21762,7 @@ var SETDEX_SV = {
     }
   },
   "Raticate-Alola": {
-    "Cooltrainer RANDALL": {
+    "Cooltrainer M RANDALL": {
       "index": 250,
       "slot": 1,
       "level": "51",
@@ -21787,7 +21787,7 @@ var SETDEX_SV = {
     }
   },
   "Gumshoos": {
-    "Cooltrainer RANDALL": {
+    "Cooltrainer M RANDALL": {
       "index": 250,
       "slot": 3,
       "level": "52",
@@ -21810,7 +21810,7 @@ var SETDEX_SV = {
     }
   },
   "Bouffalant": {
-    "Cooltrainer MARY": {
+    "Cooltrainer F MARY": {
       "index": 251,
       "slot": 0,
       "level": "51",
@@ -21835,7 +21835,7 @@ var SETDEX_SV = {
     }
   },
   "Grafaiai": {
-    "Cooltrainer PARKER": {
+    "Cooltrainer M PARKER": {
       "index": 253,
       "slot": 1,
       "level": "52",
@@ -21857,7 +21857,7 @@ var SETDEX_SV = {
     }
   },
   "Meloetta": {
-    "Cooltrainer PARKER": {
+    "Cooltrainer M PARKER": {
       "index": 253,
       "slot": 3,
       "level": "52",
@@ -21879,7 +21879,7 @@ var SETDEX_SV = {
     }
   },
   "Braviary": {
-    "Cooltrainer GEORGE": {
+    "Cooltrainer M GEORGE": {
       "index": 254,
       "slot": 0,
       "level": "52",
@@ -21904,7 +21904,7 @@ var SETDEX_SV = {
     }
   },
   "Drampa": {
-    "Cooltrainer GEORGE": {
+    "Cooltrainer M GEORGE": {
       "index": 254,
       "slot": 2,
       "level": "52",
@@ -21929,7 +21929,7 @@ var SETDEX_SV = {
     }
   },
   "Audino": {
-    "Cooltrainer GEORGE": {
+    "Cooltrainer M GEORGE": {
       "index": 254,
       "slot": 3,
       "level": "52",
@@ -21954,7 +21954,7 @@ var SETDEX_SV = {
     }
   },
   "Dubwool": {
-    "Cooltrainer ALEXIA": {
+    "Cooltrainer F ALEXIA": {
       "index": 255,
       "slot": 0,
       "level": "52",
@@ -21979,7 +21979,7 @@ var SETDEX_SV = {
     }
   },
   "Type: Null": {
-    "Cooltrainer ALEXIA": {
+    "Cooltrainer F ALEXIA": {
       "index": 255,
       "slot": 1,
       "level": "52",
@@ -22004,7 +22004,7 @@ var SETDEX_SV = {
     }
   },
   "Furfrou": {
-    "Cooltrainer ALEXIA": {
+    "Cooltrainer F ALEXIA": {
       "index": 255,
       "slot": 3,
       "level": "52",
@@ -22027,7 +22027,7 @@ var SETDEX_SV = {
     }
   },
   "Wyrdeer": {
-    "Cooltrainer ALEXIA": {
+    "Cooltrainer F ALEXIA": {
       "index": 255,
       "slot": 4,
       "level": "52",
@@ -22052,7 +22052,7 @@ var SETDEX_SV = {
     }
   },
   "Oinkologne-F": {
-    "Cooltrainer ALEXIA": {
+    "Cooltrainer F ALEXIA": {
       "index": 255,
       "slot": 5,
       "level": "53",
@@ -22127,7 +22127,7 @@ var SETDEX_SV = {
     }
   },
   "Ursaluna": {
-    "Cooltrainer JODY": {
+    "Cooltrainer F JODY": {
       "index": 257,
       "slot": 0,
       "level": "52",
@@ -22152,7 +22152,7 @@ var SETDEX_SV = {
     }
   },
   "Maushold-Four": {
-    "Cooltrainer JODY": {
+    "Cooltrainer F JODY": {
       "index": 257,
       "slot": 1,
       "level": "54",
@@ -22176,7 +22176,7 @@ var SETDEX_SV = {
     }
   },
   "Chatot": {
-    "Cooltrainer JODY": {
+    "Cooltrainer F JODY": {
       "index": 257,
       "slot": 5,
       "level": "52",
@@ -22299,7 +22299,7 @@ var SETDEX_SV = {
     }
   },
   "Liepard": {
-    "Cooltrainer BERKE": {
+    "Cooltrainer M BERKE": {
       "index": 262,
       "slot": 1,
       "level": "56",
@@ -22321,7 +22321,7 @@ var SETDEX_SV = {
     }
   },
   "Persian-Alola": {
-    "Cooltrainer BERKE": {
+    "Cooltrainer M BERKE": {
       "index": 262,
       "slot": 4,
       "level": "56",

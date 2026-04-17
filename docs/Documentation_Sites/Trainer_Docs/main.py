@@ -88,6 +88,41 @@ def ensure_default_ivs(mon: Pokemon):
     if mon.ivs is None:
         mon.ivs = {"hp": 31, "at": 31, "df": 31, "sa": 31, "sd": 31, "sp": 31}
 
+HIDDEN_POWER_TYPES = [
+    "Fighting", "Flying", "Poison", "Ground",
+    "Rock", "Bug", "Ghost", "Steel",
+    "Fire", "Water", "Grass", "Electric",
+    "Psychic", "Ice", "Dragon", "Dark",
+]
+
+def hidden_power_type_from_ivs(ivs: Optional[dict]) -> str:
+    values = ivs or {"hp": 31, "at": 31, "df": 31, "sa": 31, "sd": 31, "sp": 31}
+    hp = int(values.get("hp", 31))
+    at = int(values.get("at", 31))
+    df = int(values.get("df", 31))
+    sa = int(values.get("sa", 31))
+    sd = int(values.get("sd", 31))
+    sp = int(values.get("sp", 31))
+    hidden_idx = ((hp % 2) + 2 * (at % 2) + 4 * (df % 2) + 8 * (sp % 2) + 16 * (sa % 2) + 32 * (sd % 2)) * 5 // 21
+    return HIDDEN_POWER_TYPES[hidden_idx]
+
+def normalize_hidden_power_move(move: str, ivs: Optional[dict]) -> str:
+    text = (move or "").strip()
+    if not text:
+        return text
+    m = re.match(r"^hidden power(?:\s+([a-z]+))?$", text, flags=re.I)
+    if not m:
+        return text
+    explicit = m.group(1)
+    if explicit:
+        return f"Hidden Power {explicit.capitalize()}"
+    return f"Hidden Power {hidden_power_type_from_ivs(ivs)}"
+
+def normalize_hidden_power_moves(mon: Pokemon):
+    if not mon.moves:
+        return
+    mon.moves = [normalize_hidden_power_move(move, mon.ivs) for move in mon.moves]
+
 def build_display_name(trainer_class: Optional[str], trainer_name: Optional[str], trainer_pic: Optional[str]) -> str:
     left = (trainer_class or "").strip()
     right = (trainer_name or "").strip()
@@ -124,6 +159,7 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
         nonlocal parsing_mon, pokemon, mon_index, trainer
         if parsing_mon and pokemon:
             ensure_default_ivs(pokemon)
+            normalize_hidden_power_moves(pokemon)
             pokemon.index = mon_index
             mon_index += 1
             if trainer:
@@ -225,6 +261,7 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
 
     if parsing_mon and pokemon:
         ensure_default_ivs(pokemon)
+        normalize_hidden_power_moves(pokemon)
         pokemon.index = mon_index
         if trainer:
             trainer.party.append(pokemon)
@@ -403,9 +440,111 @@ def sprite_url(species: str) -> str:
         "kommo-o": "kommoo",
         "nidoran-f": "nidoranf",
         "nidoran-m": "nidoranm",
+        "oricorio-pom-pom": "oricorio-pompom",
+        "tauros-paldea-combat": "taurospaldeacombat",
+        "tauros-paldea-aqua": "taurospaldeaaqua",
+        "tauros-paldea-blaze": "taurospaldeablaze",
     }
     s = aliases.get(s, s)
     return f"https://play.pokemonshowdown.com/sprites/gen5/{s}.png"
+
+def sprite_sources(species: str) -> List[str]:
+    if not species:
+        return []
+
+    aliases = {
+        "Zygarde-10%": "Zygarde-10%25",
+        "Tauros-Paldea-Water": "Tauros-Paldea-Aqua",
+        "Tauros-Paldea-Fire": "Tauros-Paldea-Blaze",
+        "Tauros-Paldea": "Tauros-Paldea-Combat",
+        "Pumpkaboo-Super": "Pumpkaboo",
+        "Aegislash-Shield": "Aegislash",
+    }
+    showdown_aliases = {
+        "porygon-z": "porygonz",
+        "mr-mime": "mrmime",
+        "mr-mime-galar": "mrmime-galar",
+        "mime-jr": "mimejr",
+        "type-null": "typenull",
+        "jangmo-o": "jangmoo",
+        "hakamo-o": "hakamoo",
+        "kommo-o": "kommoo",
+        "nidoran-f": "nidoranf",
+        "nidoran-m": "nidoranm",
+        "oricorio-pom-pom": "oricorio-pompom",
+        "tauros-paldea-combat": "taurospaldeacombat",
+        "tauros-paldea-aqua": "taurospaldeaaqua",
+        "tauros-paldea-blaze": "taurospaldeablaze",
+    }
+
+    def normalized_species_name(name: str) -> str:
+        return re.sub(r"\s*\((?:M|F|Male|Female)\)\s*$", "", name or "", flags=re.I).strip()
+
+    def sprite_file_name(name: str) -> str:
+        return aliases.get(normalized_species_name(name), normalized_species_name(name))
+
+    def showdown_sprite_id(name: str) -> str:
+        s = sprite_file_name(name)
+        s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
+        s = s.lower().strip()
+        s = re.sub(r"[.\'â€™_:]", "", s)
+        s = s.replace(" ", "")
+        return showdown_aliases.get(s, s)
+
+    def push(candidates: List[str], candidate: str):
+        if candidate and candidate not in candidates:
+            candidates.append(candidate)
+
+    def add_variants(candidates: List[str], name: str):
+        if not name:
+            return
+        aliased = sprite_file_name(name)
+        compact = re.sub(r"[%':.]", "", name).replace(" ", "%20")
+        compact_aliased = re.sub(r"[%':.]", "", aliased).replace(" ", "%20")
+        push(candidates, aliased)
+        push(candidates, normalized_species_name(name))
+        push(candidates, compact)
+        push(candidates, compact_aliased)
+
+    name = normalized_species_name(species)
+    candidates: List[str] = []
+    add_variants(candidates, name)
+
+    urls: List[str] = []
+    showdown_id = showdown_sprite_id(name)
+    if showdown_id:
+        urls.append(f"https://play.pokemonshowdown.com/sprites/gen5/{showdown_id}.png")
+    for candidate in candidates:
+        urls.append(f"https://raw.githubusercontent.com/May8th1995/sprites/master/{candidate}.png")
+
+    base_species = name.split("-")[0] if "-" in name else name
+    if base_species and base_species != name:
+        base_showdown_id = showdown_sprite_id(base_species)
+        if base_showdown_id and base_showdown_id != showdown_id:
+            urls.append(f"https://play.pokemonshowdown.com/sprites/gen5/{base_showdown_id}.png")
+        base_candidates: List[str] = []
+        add_variants(base_candidates, base_species)
+        for candidate in base_candidates:
+            urls.append(f"https://raw.githubusercontent.com/May8th1995/sprites/master/{candidate}.png")
+
+    unique_urls: List[str] = []
+    for url in urls:
+        if url not in unique_urls:
+            unique_urls.append(url)
+    return unique_urls
+
+def sprite_img_html(species: str) -> str:
+    urls = sprite_sources(species)
+    if not urls:
+        return ""
+    escaped_urls = html.escape(json.dumps(urls), quote=True)
+    first_url = html.escape(urls[0], quote=True)
+    return (
+        f'<img src="{first_url}" alt="" '
+        f'onerror="this.dataset.try=(this.dataset.try||0)-0+1;var a={escaped_urls};'
+        f'if(this.dataset.try&lt;a.length){{this.src=a[this.dataset.try];}}'
+        f'else{{this.onerror=null;this.classList.add(\'hidden\');}}"></img>'
+    )
 
 # =============================
 # Output: Webpage with tables
@@ -432,7 +571,7 @@ def generate_webpage(trainers: List[Trainer]) -> str:
 
         html_parts.append('<tr> <!-- Images -->')
         for m in mons:
-            html_parts.append(f"<td><img src=\"{sprite_url(m.species)}\" alt=\"\"></img></td>")
+            html_parts.append(f"<td>{sprite_img_html(m.species)}</td>")
         html_parts.append("</tr>")
 
         html_parts.append('<tr> <!-- Species -->')
