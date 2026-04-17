@@ -41,7 +41,7 @@ FLAG_MAP_BOOL = {
 # regex
 MOVE_BLOCK_RE = re.compile(r"\[\s*(?P<tag>MOVE_[A-Z0-9_]+)\s*\]\s*=\s*\{(?P<body>.*?)\},\s*", re.DOTALL)
 NAME_RE   = re.compile(r"\.name\s*=\s*COMPOUND_STRING\(\s*\"(?P<name>.*?)\"\s*\)\s*,", re.DOTALL)
-POWER_RE  = re.compile(r"\.power\s*=\s*(?P<num>[-]?\d+)\s*,")
+POWER_RE  = re.compile(r"\.power\s*=\s*(?P<expr>[^,\n]+(?:\?[^,\n]+:[^,\n]+)?)\s*,")
 TYPE_RE   = re.compile(r"\.type\s*=\s*(?P<val>[A-Z_]+)\s*,")
 CAT_RE    = re.compile(r"\.category\s*=\s*(?P<val>[A-Z_]+)\s*,")
 PRIORITY_RE = re.compile(r"\.priority\s*=\s*(?P<num>[-]?\d+)\s*,")
@@ -49,6 +49,18 @@ STRIKE_RE   = re.compile(r"\.strikeCount\s*=\s*(?P<num>\d+)\s*,")
 EFFECT_RE   = re.compile(r"\.effect\s*=\s*(?P<val>[A-Z_]+)\s*,")
 ABSORB_RE   = re.compile(r"\.argument\s*=\s*\{\s*\.absorbPercentage\s*=\s*(?P<num>\d+)\s*\}\s*,", re.DOTALL)
 SECONDARIES_RE = re.compile(r"\.additionalEffects\s*=\s*ADDITIONAL_EFFECTS", re.DOTALL)
+
+def resolve_numeric_expr(expr, default=0):
+    if expr is None:
+        return default
+    expr = expr.strip()
+    if re.fullmatch(r"[-]?\d+", expr):
+        return int(expr)
+    if "?" in expr and ":" in expr:
+        true_branch = expr.split("?", 1)[1].split(":", 1)[0].strip()
+        return resolve_numeric_expr(true_branch, default)
+    m = re.search(r"[-]?\d+", expr)
+    return int(m.group(0)) if m else default
 
 def flag_present(body, c_field): 
     return re.search(rf"\.{c_field}\s*=\s*TRUE\s*,", body) is not None
@@ -60,8 +72,19 @@ def drain_from_absorb(pct):
     g = gcd(pct, 100); return [pct//g, 100//g]
 
 GEN_KEYS = ["RBY","GSC","ADV","DPP","BW","XY","SM","SS","SV"]
-GEN_OBJ_RE = {g: re.compile(rf"(const\s+{g}.*?\{{)(?P<body>.*?)(\}}\s*;)", re.DOTALL) for g in GEN_KEYS}
-ENTRY_RE = re.compile(r"('(?P<name>[^']+?)'\s*:\s*\{(?P<obj>.*?)\}\s*,?)", re.DOTALL)
+GEN_OBJ_RE = {
+    "RBY": re.compile(r"(const\s+RBY\s*:[^=]+=\s*\{)(?P<body>.*?)(\}\s*;)", re.DOTALL),
+    "GSC_PATCH": re.compile(r"(const\s+GSC_PATCH\s*:[^=]+=\s*\{)(?P<body>.*?)(\}\s*;)", re.DOTALL),
+    "ADV_PATCH": re.compile(r"(const\s+ADV_PATCH\s*:[^=]+=\s*\{)(?P<body>.*?)(\}\s*;)", re.DOTALL),
+    "DPP_PATCH": re.compile(r"(const\s+DPP_PATCH\s*:[^=]+=\s*\{)(?P<body>.*?)(\}\s*;)", re.DOTALL),
+    "BW_PATCH": re.compile(r"(const\s+BW_PATCH\s*:[^=]+=\s*\{)(?P<body>.*?)(\}\s*;)", re.DOTALL),
+    "XY_PATCH": re.compile(r"(const\s+XY_PATCH\s*:[^=]+=\s*\{)(?P<body>.*?)(\}\s*;)", re.DOTALL),
+    "SM_PATCH": re.compile(r"(const\s+SM_PATCH\s*:[^=]+=\s*\{)(?P<body>.*?)(\}\s*;)", re.DOTALL),
+    "SS_PATCH": re.compile(r"(const\s+SS_PATCH\s*:[^=]+=\s*\{)(?P<body>.*?)(\}\s*;)", re.DOTALL),
+    "SV_PATCH": re.compile(r"(const\s+SV_PATCH\s*:[^=]+=\s*\{)(?P<body>.*?)(\}\s*;)", re.DOTALL),
+    "SV": re.compile(r"(const\s+SV\s*:[^=]+=\s*extend\(true,\s*\{)(?P<body>.*?)(\}\s*,\s*SS\s*,\s*SV_PATCH\s*\)\s*;)", re.DOTALL),
+}
+ENTRY_RE = re.compile(r"((?P<quote>['\"])(?P<name>.+?)(?P=quote)\s*:\s*\{(?P<obj>.*?)\}\s*,?)", re.DOTALL)
 
 def parse_ts_gen_object(body):
     return collections.OrderedDict((m.group("name"), m.group(0)) for m in ENTRY_RE.finditer(body))
@@ -75,7 +98,7 @@ def emit_ts_entry(name, data):
         if isinstance(v,list): return json.dumps(v)
         return f"'{v}'"
     parts = [f"{k}: {val(data[k])}" for k in order if k in data]
-    return f"  '{name}': {{ {', '.join(parts)} }},"
+    return f"  {json.dumps(name, ensure_ascii=False)}: {{ {', '.join(parts)} }},"
 
 
 # ---------- parse moves_info.h ----------
@@ -94,7 +117,7 @@ def parse_moves_info(h_text):
                 continue
 
             data = {}
-            pw = POWER_RE.search(body); data["bp"] = int(pw.group("num")) if pw else 0
+            pw = POWER_RE.search(body); data["bp"] = resolve_numeric_expr(pw.group("expr")) if pw else 0
             ty = TYPE_RE.search(body)
             if ty and ty.group("val") in TYPE_MAP: data["type"]=TYPE_MAP[ty.group("val")]
             else:
@@ -188,7 +211,8 @@ def main():
     parsed, warns, kicking=parse_moves_info(h)
     gens=read_ts_generations(ts)
 
-    missing_gens = [g for g in GEN_KEYS if g not in gens]
+    required_gens = ["RBY", "GSC_PATCH", "ADV_PATCH", "DPP_PATCH", "BW_PATCH", "XY_PATCH", "SM_PATCH", "SS_PATCH", "SV_PATCH", "SV"]
+    missing_gens = [g for g in required_gens if g not in gens]
     if missing_gens:
         sys.exit(f"[fatal] Mancano gli oggetti di generazione in moves.ts: {', '.join(missing_gens)}")
 

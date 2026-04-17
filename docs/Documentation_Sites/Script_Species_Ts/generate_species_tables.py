@@ -125,14 +125,54 @@ def extract_types(body, macros):
     return []
 
 def extract_weightkg(body):
-    m = re.search(r'\.weight\s*=\s*(\d+)\s*,', body)
-    return (int(m.group(1))/10.0) if m else 0.0
+    m = re.search(r'\.weight\s*=\s*([^,\n]+)\s*,', body)
+    value = resolve_numeric_expr(m.group(1), None) if m else None
+    return (value / 10.0) if value is not None else 0.0
 
-def extract_stats(body):
+def extract_nfe(body):
+    return bool(re.search(r'\.evolutions\s*=\s*EVOLUTION\s*\(', body, re.DOTALL))
+
+def resolve_numeric_expr(expr, macros=None, default=None, seen=None):
+    if expr is None:
+        return default
+    expr = expr.strip()
+    if not expr:
+        return default
+    if seen is None:
+        seen = set()
+    if re.fullmatch(r'-?\d+', expr):
+        return int(expr)
+    if '?' in expr and ':' in expr:
+        true_branch = expr.split('?', 1)[1].split(':', 1)[0].strip()
+        return resolve_numeric_expr(true_branch, macros, default, seen)
+    if macros and re.fullmatch(r'[A-Z][A-Z0-9_]*', expr):
+        if expr in seen:
+            return default
+        seen = seen | {expr}
+        variants = macros.get(expr, [])
+        for variant in variants:
+            value = resolve_numeric_expr(variant["body"], macros, None, seen)
+            if value is not None:
+                return value
+        return default
+    if macros:
+        arithmetic = re.fullmatch(r'([A-Z][A-Z0-9_]*|-?\d+)\s*([+-])\s*(-?\d+)', expr)
+        if arithmetic:
+            left = resolve_numeric_expr(arithmetic.group(1), macros, None, seen)
+            right = int(arithmetic.group(3))
+            if left is None:
+                return default
+            return left + right if arithmetic.group(2) == '+' else left - right
+    m = re.search(r'-?\d+', expr)
+    return int(m.group(0)) if m else default
+
+def extract_stats(body, macros):
     out = {}
     for cfield, short in [('baseHP','hp'),('baseAttack','at'),('baseDefense','df'),('baseSpeed','sp'),('baseSpAttack','sa'),('baseSpDefense','sd')]:
-        m = re.search(r'\.%s\s*=\s*(\d+)' % re.escape(cfield), body)
-        if m: out[short] = int(m.group(1))
+        m = re.search(r'\.%s\s*=\s*([^,\n]+)' % re.escape(cfield), body)
+        value = resolve_numeric_expr(m.group(1), macros, None) if m else None
+        if value is not None:
+            out[short] = value
     for k in ['hp','at','df','sa','sd','sp']: out.setdefault(k, 0)
     return out
 
@@ -185,7 +225,10 @@ def parse_species(text):
         _t = extract_types(exp, macros)
         if name.startswith('Alcremie') and (not _t):
             _t = ['Fairy']
-        data[name] = {'types': _t, 'bs': extract_stats(exp), 'weightkg': extract_weightkg(exp)}
+        entry = {'types': _t, 'bs': extract_stats(exp, macros), 'weightkg': extract_weightkg(exp)}
+        if extract_nfe(exp):
+            entry['nfe'] = True
+        data[name] = entry
 
     # Case 2: macro-based with params
     for m in SPECIES_MACRO_ASSIGN_RE.finditer(text):
@@ -225,7 +268,20 @@ def parse_species(text):
         # Alcremie family: force Fairy typing if unresolved/empty
         if name.startswith('Alcremie') and (not types):
             types = ['Fairy']
-        data[name] = {'types': types, 'bs': extract_stats(body), 'weightkg': extract_weightkg(body)}
+        entry = {'types': types, 'bs': extract_stats(body, macros), 'weightkg': extract_weightkg(body)}
+        if extract_nfe(body):
+            entry['nfe'] = True
+        data[name] = entry
+
+    # Alias compatibility for Paldean Tauros names used by the calculator set data.
+    for canonical in (
+        'Tauros-Paldea-Combat-Breed',
+        'Tauros-Paldea-Blaze-Breed',
+        'Tauros-Paldea-Aqua-Breed',
+    ):
+        alias = canonical.replace('-Breed', '')
+        if canonical in data and alias not in data:
+            data[alias] = dict(data[canonical])
     return data
 
 def main():
@@ -249,6 +305,7 @@ def main():
                 if prev[name].get('types') != info.get('types'): changed['types'] = info.get('types')
                 if prev[name].get('bs') != info.get('bs'): changed['bs'] = info.get('bs')
                 if abs(prev[name].get('weightkg', 0) - info.get('weightkg', 0)) > 1e-6: changed['weightkg'] = info.get('weightkg')
+                if prev[name].get('nfe') != info.get('nfe'): changed['nfe'] = info.get('nfe')
                 if changed: patch[name] = changed
         patches[lbl + "_PATCH"] = patch
         prev = {**prev, **data}
@@ -260,6 +317,7 @@ def main():
         if 'types' in val: parts.append(f"types: {fmt_types(val['types'])}")
         if 'bs' in val: parts.append(f"bs: {fmt_bs(val['bs'])}")
         if 'weightkg' in val: parts.append(f"weightkg: {val['weightkg']:.1f}")
+        if val.get('nfe'): parts.append("nfe: true")
         return '{' + ', '.join(parts) + '}'
 
 

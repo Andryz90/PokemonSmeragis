@@ -6,7 +6,7 @@ Toedscruel (F) @Leftovers: Spore, Giga Drain, Earth Power, Knock Off [Lv.1 | Myc
 Parasect (F) @Occa Berry: Leech Life, Spore, Bullet Seed, Pursuit [Lv.1 | Damp]  
 Golduck (F): Psyshock, Hydro Pump, Nasty Plot [Lv.1 | Swift Swim]  
 
-## Cooltrainer VINCENT
+## Cooltrainer M VINCENT
 Sableye @Covert Cloak: Will-O-Wisp, Recover, Knock Off, Taunt [Lv.1 | Prankster | Careful Nature]  
 Medicham @Life Orb: High Jump Kick, Zen Headbutt, Ice Punch, Fake Out [Lv.1 | Pure Power | Jolly Nature]  
 Sharpedo @White Herb: Protect, Crunch, Liquidation, Psychic Fangs [Lv.1 | Speed Boost | Jolly Nature]  
@@ -14,7 +14,7 @@ Greninja @Expert Belt: Hydro Pump, Dark Pulse, Ice Beam, U-turn [Lv.1 | Protean 
 Meowscarada @Choice Band: Flower Trick, Knock Off, U-turn, Play Rough [Lv.1 | Protean | Jolly Nature]  
 Gyarados @Lum Berry: Dragon Dance, Waterfall, Crunch, Earthquake [Lv.1 | Intimidate | Jolly Nature]  
 
-## Cooltrainer LEROY
+## Cooltrainer M LEROY
 Mawile @Life Orb: Play Rough, Iron Head, Sucker Punch, Swords Dance [Lv.1 | Intimidate | Adamant Nature]  
 Rotom-Wash @Sitrus Berry: Hydro Pump, Volt Switch, Thunderbolt, Will-O-Wisp [Lv.1 | Levitate | Timid Nature]  
 Kingdra @Mystic Water: Hydro Pump, Dragon Pulse, Ice Beam, Rain Dance [Lv.1 | Swift Swim | Modest Nature]  
@@ -22,7 +22,7 @@ Azumarill @Sitrus Berry: Belly Drum, Aqua Jet, Play Rough, Liquidation [Lv.1 | H
 Scizor @Choice Band: Bullet Punch, U-turn, Superpower, Knock Off [Lv.1 | Technician | Adamant Nature]  
 Ceruledge @Spell Tag: Bitter Blade, Shadow Sneak, Shadow Claw, Close Combat [Lv.1 | Flash Fire | Jolly Nature]  
 
-## Cooltrainer KEIRA
+## Cooltrainer F KEIRA
 Aggron @Assault Vest: Heavy Slam, Rock Slide, Earthquake, Fire Punch [Lv.1 | Sturdy | Adamant Nature]  
 Manectric @Choice Specs: Thunderbolt, Volt Switch, Flamethrower, Overheat [Lv.1 | Lightning Rod | Timid Nature]  
 Magnezone @Air Balloon: Thunderbolt, Flash Cannon, Volt Switch, Tri Attack [Lv.1 | Analytic | Modest Nature]  
@@ -52,7 +52,7 @@ Ditto: Transform [Lv.1 | Imposter | Serious Nature]
 Porygon2: Tri Attack, Recover, Ice Beam, Thunderbolt [Lv.1 | Download | Calm Nature]  
 Raticate @Flame Orb: Hyper Fang, Quick Attack, Pursuit, Crunch [Lv.1 | Guts | Adamant Nature]  
 
-## Psychic JOSHUA
+## Psychic M JOSHUA
 Alakazam @Life Orb: Psychic, Focus Blast, Shadow Ball, Nasty Plot [Lv.1 | Magic Guard | Timid Nature]  
 Solrock @Heat Rock: Stealth Rock, Rock Slide, Earthquake, Zen Headbutt [Lv.1 | Levitate | Adamant Nature]  
 Reuniclus @Leftovers: Psychic, Focus Blast, Recover, Trick Room [Lv.1 | Magic Guard | Quiet Nature]  
@@ -60,7 +60,7 @@ Bronzong @Colbur Berry: Psychic, Flash Cannon, Earthquake, Stealth Rock [Lv.1 | 
 Slowking-Galar @Assault Vest: Future Sight, Sludge Wave, Flamethrower, Chilly Reception [Lv.1 | Regenerator | Modest Nature]  
 Gallade @Choice Scarf: Close Combat, Psycho Cut, Knock Off, Leaf Blade [Lv.1 | Justified | Jolly Nature]  
 
-## Psychic ALEXIS
+## Psychic F ALEXIS
 Gardevoir @Choice Scarf: Moonblast, Psychic, Thunderbolt, Trick [Lv.1 | Trace | Timid Nature]  
 Xatu @Rocky Helmet: Psychic, Heat Wave, Roost, U-turn [Lv.1 | Magic Bounce | Bold Nature]  
 Farigiraf @Throat Spray: Hyper Voice, Psychic, Dazzling Gleam, Trick Room [Lv.1 | Armor Tail | Modest Nature]  
@@ -83,51 +83,51 @@ Scyther @Eviolite: Cut, Dual Wingbeat, U-turn, Roost [Lv.1 | Technician | Adaman
 Beautifly (F) @Big Root: Giga Drain, Draining Kiss, Air Slash, Bug Buzz [Lv.1 | Lifedrainer | Timid Nature]  
 Dustox @Silver Powder: Toxic, Protect, Bug Bite, Venoshock [Lv.1 | Shield Dust]  
 
-## School Kid JERRY
+## School Kid M JERRY
 Kirlia: Psybeam, Draining Kiss, Future Sight, Light Screen [Lv.1 | Trace]  
 Darumaka-Galar: Ice Punch, Brick Break, Rock Slide, Power-Up Punch [Lv.1 | Hustle]  
 Hattrem: Reflect, Psybeam, Draining Kiss, Future Sight [Lv.1 | Magic Bounce | Modest Nature]  
 
-## School Kid JERRY
+## School Kid M JERRY
 Gardevoir: Psychic, Draining Kiss, Moonblast, Light Screen [Lv.1 | Trace]  
 Darmanitan-Galar: Ice Punch, Brick Break, Rock Slide, Power-Up Punch [Lv.1 | Gorilla Tactics]  
 Hatterene: Reflect, Psychic, Draining Kiss, Moonblast [Lv.1 | Magic Bounce | Modest Nature]  
 
-## School Kid TED
+## School Kid M TED
 Mr. Mime @Light Clay: Psychic, Dazzling Gleam, Reflect, Light Screen [Lv.1 | Filter | Calm Nature]  
 Kirlia @Eviolite: Psychic, Dazzling Gleam, Calm Mind, Draining Kiss [Lv.1 | Trace | Timid Nature]  
 Kadabra @Twisted Spoon: Psychic, Focus Blast, Shadow Ball, Recover [Lv.1 | Synchronize | Timid Nature]  
 Swoobat @Wise Glasses: Air Slash, Psychic, Calm Mind [Lv.1 | Simple | Timid Nature]  
 
-## School Kid PAUL
+## School Kid M PAUL
 Ninetales @Charcoal: Temper Flare, Solar Beam, Dazzling Gleam [Lv.1 | Drought | Timid Nature]  
 Camerupt @Soft Sand: Earth Power, Lava Plume, Rock Slide, Yawn [Lv.1 | Magma Armor | Quiet Nature]  
 Gloom @Miracle Seed: Sleep Powder, Poison Drain, Giga Drain, Synthesis [Lv.1 | Chlorophyll | Modest Nature]  
 Roselia @Poison Barb: Giga Drain, Sludge Bomb, Leech Seed, Toxic Spikes [Lv.1 | Natural Cure | Timid Nature]  
 
-## School Kid GEORGIA
+## School Kid F GEORGIA
 Leavanny @Occa Berry: Leaf Blade, X-Scissor, Knock Off, Sticky Web [Lv.1 | Overcoat | Jolly Nature]  
 Beautifly @Silver Powder: Quiver Dance, Bug Buzz, Air Slash, Giga Drain [Lv.1 | Lifedrainer | Timid Nature]  
 Dustox @Black Sludge: Toxic, Venoshock, Moonlight, Protect [Lv.1 | Shield Dust | Bold Nature]  
 Charjabug @Magnet: Discharge, Bug Buzz, Thunder Wave, Volt Switch [Lv.1 | Battery | Modest Nature]  
 
-## Winstrate VICTOR
+## Pokefan M VICTOR
 Swellow @Flame Orb: Protect, Facade, Brave Bird, Quick Attack [Lv.1 | Guts | Adamant Nature]  
 Obstagoon @Flame Orb: Obstruct, Facade, Knock Off, Fire Punch [Lv.1 | Guts | Jolly Nature]  
 Pinsir @Coba Berry: Drain Punch, Flying Press, Bulk Up, Earthquake [Lv.1 | Moxie]  
 
-## Pokefan MIGUEL
+## Pokefan M MIGUEL
 Delcatty @Silk Scarf: Fake Out, Sing, Attract, Double-Edge [Lv.1 | Cute Charm | Adamant Nature]  
 Clefable @Life Orb: Calm Mind, Thunderbolt, Ice Beam, Moonblast [Lv.1 | Magic Guard]  
 Togekiss @Leftovers: Tailwind, Roost, Air Slash, Dazzling Gleam [Lv.1 | Serene Grace | Gentle Nature]  
 Gothitelle @Leftovers: Calm Mind, Dark Pulse, Psychic, Energy Ball [Lv.1 | Shadow Tag | Modest Nature]  
 
-## Winstrate VICTORIA
+## Pokefan F VICTORIA
 Arboliva @Grassy Seed: Hyper Voice, Leech Seed, Giga Drain, Strength Sap [Lv.1 | Seed Sower | Calm Nature]  
 Trevenant @Sitrus Berry: Protect, Substitute, Drain Punch, Horn Leech [Lv.1 | Harvest]  
 Sceptile @Choice Band: Dual Chop, Bullet Seed, Trailblaze, Brick Break [Lv.1 | Technician | Adamant Nature]  
 
-## Winstrate VICKY
+## Expert F VICKY
 Medicham @Choice Scarf: High Jump Kick, Zen Headbutt, Ice Punch, Thunder Punch [Lv.1 | Pure Power | Adamant Nature]  
 Hawlucha @White Herb: Acrobatics, Close Combat, Swords Dance, Steel Wing [Lv.1 | Unburden | Adamant Nature]  
 Scizor @Life Orb: Bullet Punch, U-turn, Knock Off, Swords Dance [Lv.1 | Technician | Adamant Nature]  
@@ -304,12 +304,12 @@ Heliolisk @Absorb Bulb: Discharge, Thunder, Hyper Voice, Focus Blast [Lv.1 | Dry
 Masquerain @Sharp Beak: Surf, Hurricane, Bug Buzz, Energy Ball [Lv.1 | Swift Swim | Modest Nature]  
 Kilowattrel @Heavy-Duty Boots: Discharge, Hurricane, U-turn, Weather Ball [Lv.1 | Volt Absorb | Modest Nature]  
 
-## Psychic MARLENE
+## Psychic F MARLENE
 Medicham: Fake Out, Drain Punch, Zen Headbutt, Helping Hand [Lv.1 | Pure Power | Brave Nature]  
 Grumpig @Light Clay: Light Screen, Reflect, Psychic Noise, Psychic Terrain [Lv.1 | Thick Fat]  
 Hypno @Big Root: Hypnosis, Dream Eater, Calm Mind, Dark Pulse [Lv.1 | Bad Dreams]  
 
-## Psychic MARIELA
+## Psychic F MARIELA
 Chimecho @Twisted Spoon: Calm Mind, Psychic, Shadow Ball, Recover [Lv.1 | Levitate | Modest Nature]  
 Hatterene @Sitrus Berry: Psychic, Dazzling Gleam, Mystical Fire, Calm Mind [Lv.1 | Magic Bounce | Modest Nature]  
 Rabsca @Colbur Berry: Psychic, Bug Buzz, Recover, Trick Room [Lv.1 | Synchronize | Modest Nature]  
@@ -317,7 +317,7 @@ Orbeetle @Light Clay: Psychic, Bug Buzz, Reflect, Light Screen [Lv.1 | Frisk | B
 Slowbro-Galar @Quick Claw: Shell Side Arm, Expanding Force, Trick Room, Ice Beam [Lv.1 | Quick Draw | Modest Nature]  
 Delphox @Wise Glasses: Psychic, Flamethrower, Shadow Ball, Nasty Plot [Lv.1 | Blaze | Timid Nature]  
 
-## Psychic ALVARO
+## Psychic M ALVARO
 Armarouge @Weakness Policy: Armor Cannon, Psychic, Aura Sphere, Calm Mind [Lv.1 | Flash Fire | Modest Nature]  
 Sigilyph @Flame Orb: Psychic, Air Slash, Cosmic Power, Stored Power [Lv.1 | Magic Guard | Timid Nature]  
 Gengar @Life Orb: Shadow Ball, Sludge Bomb, Focus Blast, Destiny Bond [Lv.1 | Cursed Body | Timid Nature]  
@@ -529,10 +529,10 @@ Tentacool:  [Lv.15]
 ## Swimmer F ISABELLE
 Marill:  [Lv.15]  
 
-## Psychic JACLYN
-Abra: Hidden Power [Lv.16 | IVs 0/0/0/0/0/0]  
+## Psychic F JACLYN
+Abra: Hidden Power Fighting [Lv.16 | IVs 0/0/0/0/0/0]  
 
-## School Kid KAREN
+## School Kid F KAREN
 Marill @Oran Berry: Aqua Jet, Aqua Tail, Bounce, Charm [Lv.15 | Huge Power | Adamant Nature]  
 Shroomish @Toxic Orb: Mega Drain, Leech Seed, Headbutt, Stun Spore [Lv.14 | Poison Heal | Serious Nature]  
 Vulpix: Incinerate, Draining Kiss, Quick Attack, Disable [Lv.16 | Flash Fire]  
@@ -549,7 +549,7 @@ Cranidos: Headbutt, Rock Smash, Rock Tomb [Lv.16 | Sheer Force]
 ## Fisherman WADE
 Tentacool:  [Lv.16]  
 
-## Triathlete ABIGAIL
+## Triathlete F ABIGAIL
 Magnemite:  [Lv.16]  
 
 ## Hiker MARC
@@ -569,7 +569,7 @@ Toedscool: Stun Spore, Mega Drain, Mud Shot, Hex [Lv.16 | Mycelium Might | Modes
 ## Youngster JOHNSON
 Shellos: Recover, Water Pulse, Mud Bomb, Ancient Power [Lv.15 | Storm Drain]  
 Tentacool @Black Sludge: Water Pulse, Acid, Supersonic [Lv.16 | Liquid Ooze]  
-Panpour @Petaya Berry: Water Pulse, Work Up, Hidden Power, Lick [Lv.15 | Gluttony | Timid Nature | IVs 0/0/31/31/31/31]  
+Panpour @Petaya Berry: Water Pulse, Work Up, Hidden Power Ice, Lick [Lv.15 | Gluttony | Timid Nature | IVs 31/0/0/31/31/31]  
 
 ## Ninja Boy LAO
 Koffing: Poison Gas, Tackle, Smog, Self Destruct [Lv.17]  
@@ -593,7 +593,7 @@ Geodude:  [Lv.16]
 Sandshrew:  [Lv.18]  
 
 ## Leader ROXANNE
-Glimmet (F) @Focus Sash: Stealth Rock, Hidden Power, Venoshock, Ancient Power [Lv.15 | Toxic Debris | Timid Nature | IVs 0/30/31/31/31/31]  
+Glimmet (F) @Focus Sash: Stealth Rock, Hidden Power Grass, Venoshock, Ancient Power [Lv.15 | Toxic Debris | Timid Nature | IVs 31/0/31/30/31/31]  
 Archen: Pluck, Rock Tomb, Roost, Quick Attack [Lv.16 | Defeatist | Adamant Nature]  
 Lileep @Oran Berry: Mega Drain, Acid, Rock Tomb, Recover [Lv.16 | Storm Drain | Modest Nature]  
 Nosepass (M) @Shuca Berry: Thunder Wave, Rock Tomb, Sandstorm, Spark [Lv.17 | Sand Force]  
@@ -647,7 +647,7 @@ Shroomish:  [Lv.21]
 ## Beauty SHIRLEY
 Numel:  [Lv.21]  
 
-## Expert SHELBY
+## Expert F SHELBY
 Meditite:  [Lv.21]  
 Makuhita:  [Lv.21]  
 
@@ -695,7 +695,7 @@ Pelipper: Water Gun, Gust, Icy Wind [Lv.20 | Drizzle]
 Palpitoad @Soft Sand: Mud Shot, Bubble Beam [Lv.22 | Swift Swim]  
 Lombre @Oran Berry: Giga Drain, Bubble Beam [Lv.22 | Rain Dish]  
 
-## Pkmn Breeder ISAAC
+## Pokemon Breeder M ISAAC
 Loudred:  [Lv.22]  
 Linoone:  [Lv.22]  
 Aron:  [Lv.22]  
@@ -703,7 +703,7 @@ Mightyena:  [Lv.22]
 Swellow:  [Lv.22]  
 Makuhita:  [Lv.22]  
 
-## Pkmn Breeder LYDIA
+## Pokemon Breeder F LYDIA
 Wingull:  [Lv.22]  
 Shroomish:  [Lv.22]  
 Marill:  [Lv.22]  
@@ -773,7 +773,7 @@ Farfetchd-Galar: Rock Smash, Brutal Swing, Peck, Fury Cutter [Lv.21 | Scrappy]
 Grovyle @Miracle Seed: X-Scissor, Giga Drain, Assurance, Quick Attack [Lv.23 | Technician]  
 Growlithe-Hisui @Charcoal: Fire Fang, Bite, Rock Tomb, Retaliate [Lv.22 | Intimidate]  
 Seadra @Scope Lens: Focus Energy, Dragon Breath, Bubble Beam, Icy Wind [Lv.21 | Sniper]  
-Ponyta-Galar: Confusion, Draining Kiss, Hidden Power, Calm Mind [Lv.21 | Adaptability | Modest Nature | IVs 0/31/31/31/31/31]  
+Ponyta-Galar: Confusion, Draining Kiss, Hidden Power Dragon, Calm Mind [Lv.21 | Adaptability | Modest Nature | IVs 31/0/31/31/31/31]  
 
 ## Rival MAY
 Farfetchd-Galar: Rock Smash, Brutal Swing, Peck, Fury Cutter [Lv.21 | Scrappy]  
@@ -819,7 +819,7 @@ Wingull:  [Lv.24]
 Machop:  [Lv.24]  
 Tentacool:  [Lv.24]  
 
-## Cooltrainer CAROLINA
+## Cooltrainer F CAROLINA
 Manectric:  [Lv.24]  
 Swellow:  [Lv.24]  
 Manectric:  [Lv.24]  
@@ -901,7 +901,7 @@ Swablu:  [Lv.25]
 Spheal:  [Lv.25]  
 Machoke:  [Lv.25]  
 
-## Pkmn Breeder ISAAC
+## Pokemon Breeder M ISAAC
 Loudred:  [Lv.25]  
 Linoone:  [Lv.25]  
 Aron:  [Lv.25]  
@@ -909,7 +909,7 @@ Mightyena:  [Lv.25]
 Swellow:  [Lv.25]  
 Hariyama:  [Lv.25]  
 
-## Pkmn Breeder LYDIA
+## Pokemon Breeder F LYDIA
 Pelipper:  [Lv.25]  
 Breloom:  [Lv.25]  
 Marill:  [Lv.25]  
@@ -948,7 +948,7 @@ Skarmory:  [Lv.25]
 Slugma:  [Lv.25]  
 Numel:  [Lv.25]  
 
-## Pkmn Breeder MYLES
+## Pokemon Breeder M MYLES
 Makuhita:  [Lv.25]  
 Wingull:  [Lv.25]  
 Tropius:  [Lv.25]  
@@ -956,7 +956,7 @@ Zigzagoon:  [Lv.25]
 Electrike:  [Lv.25]  
 Numel:  [Lv.25]  
 
-## Pkmn Breeder PAT
+## Pokemon Breeder F PAT
 Poochyena:  [Lv.25]  
 Shroomish:  [Lv.25]  
 Electrike:  [Lv.25]  
@@ -964,7 +964,7 @@ Marill:  [Lv.25]
 Sandshrew:  [Lv.25]  
 Gulpin:  [Lv.25]  
 
-## Pkmn Breeder GABRIELLE
+## Pokemon Breeder F GABRIELLE
 Skitty:  [Lv.26]  
 Poochyena:  [Lv.26]  
 Zigzagoon:  [Lv.26]  
@@ -998,12 +998,12 @@ Marill:  [Lv.26]
 ## Tuber M CHARLIE
 Marill:  [Lv.26]  
 
-## Cooltrainer WILTON
+## Cooltrainer M WILTON
 Electrike:  [Lv.26]  
 Wailmer:  [Lv.26]  
 Makuhita:  [Lv.26]  
 
-## Cooltrainer BROOKE
+## Cooltrainer F BROOKE
 Wingull:  [Lv.26]  
 Numel:  [Lv.26]  
 Roselia:  [Lv.26]  
@@ -1034,25 +1034,25 @@ Taillow:  [Lv.26]
 ## Bug Maniac BRENT
 Surskit:  [Lv.26]  
 
-## Psychic WILLIAM
+## Psychic M WILLIAM
 Ralts:  [Lv.26]  
 Ralts:  [Lv.26]  
 Kirlia:  [Lv.26]  
 
-## Psychic KAYLA
+## Psychic F KAYLA
 Wobbuffet:  [Lv.26]  
 Natu:  [Lv.26]  
 Kadabra:  [Lv.26]  
 
-## School Kid JERRY
+## School Kid M JERRY
 Ralts:  [Lv.26]  
 Meditite:  [Lv.26]  
 
-## School Kid KAREN
+## School Kid F KAREN
 Shroomish:  [Lv.26]  
 Whismur:  [Lv.26]  
 
-## Pokefan ISABEL
+## Pokefan F ISABEL
 Plusle @Oran Berry:  [Lv.26]  
 Minun @Oran Berry:  [Lv.26]  
 
@@ -1109,10 +1109,10 @@ Roselia:  [Lv.26]
 Lombre:  [Lv.26]  
 Shroomish:  [Lv.26]  
 
-## Triathlete CAMRON
+## Triathlete M CAMRON
 Staryu:  [Lv.26]  
 
-## Triathlete KYRA
+## Triathlete F KYRA
 Doduo:  [Lv.26]  
 Dodrio:  [Lv.26]  
 
@@ -1120,7 +1120,7 @@ Dodrio:  [Lv.26]
 Ninjask:  [Lv.26]  
 Gulpin:  [Lv.26]  
 
-## Psychic ALIX
+## Psychic F ALIX
 Kadabra:  [Lv.26]  
 Kirlia:  [Lv.26]  
 
@@ -1183,7 +1183,7 @@ Surskit:  [Lv.27]
 Surskit:  [Lv.27]  
 Surskit:  [Lv.27]  
 
-## Expert TIMOTHY
+## Expert M TIMOTHY
 Hariyama:  [Lv.27]  
 
 ## Youngster CALVIN
@@ -1203,7 +1203,7 @@ Tropius:  [Lv.27]
 Plusle:  [Lv.27]  
 Minun:  [Lv.27]  
 
-## Cooltrainer 2 JAZMYN
+## Cooltrainer F JAZMYN
 Absol:  [Lv.27]  
 
 ## Bug Catcher DAVIS
@@ -1250,7 +1250,7 @@ Shroomish:  [Lv.28]
 Gloom:  [Lv.28]  
 Roselia:  [Lv.28]  
 
-## Cooltrainer BRAXTON
+## Cooltrainer M BRAXTON
 Swellow: Focus Energy, Quick Attack, Wing Attack, Endeavor [Lv.28]  
 Trapinch: Bite, Dig, Feint Attack, Sand Tomb [Lv.28]  
 Wailmer: Rollout, Whirlpool, Astonish, Water Pulse [Lv.28]  
@@ -1266,7 +1266,7 @@ Magnemite:  [Lv.28]
 Loudred:  [Lv.28]  
 Magnemite:  [Lv.28]  
 
-## Pokefan ISABEL
+## Pokefan F ISABEL
 Illumise @Silver Powder: Dazzling Gleam, Silver Wind, Giga Drain, Roost [Lv.27 | Tinted Lens | Modest Nature]  
 Beautifly @Big Root: Draining Kiss, Giga Drain, Leech Life, Air Cutter [Lv.28 | Lifedrainer | Hasty Nature]  
 
@@ -1275,13 +1275,13 @@ Golbat: Tailwind, Poison Fang, Dual Wingbeat, U-turn [Lv.28 | Inner Focus]
 Kilowattrel: Discharge, Air Slash, U-turn, Tailwind [Lv.28 | Volt Absorb | Modest Nature]  
 Pidgeotto @Power Herb: Hurricane, Razor Wind, U-turn, Tailwind [Lv.28 | Tangled Feet | Modest Nature]  
 
-## Triathlete ABIGAIL
+## Triathlete F ABIGAIL
 Magnemite:  [Lv.28]  
 
-## Triathlete DYLAN
+## Triathlete M DYLAN
 Doduo:  [Lv.28]  
 
-## Triathlete MARIA
+## Triathlete F MARIA
 Doduo:  [Lv.28]  
 
 ## Bird Keeper COLIN
@@ -1297,7 +1297,7 @@ Breloom:  [Lv.28]
 Gloom:  [Lv.28]  
 Swablu:  [Lv.28]  
 
-## Pkmn Breeder ISAAC
+## Pokemon Breeder M ISAAC
 Loudred:  [Lv.28]  
 Linoone:  [Lv.28]  
 Aron:  [Lv.28]  
@@ -1305,7 +1305,7 @@ Mightyena:  [Lv.28]
 Swellow:  [Lv.28]  
 Hariyama:  [Lv.28]  
 
-## Pkmn Breeder LYDIA
+## Pokemon Breeder F LYDIA
 Pelipper:  [Lv.28]  
 Breloom:  [Lv.28]  
 Marill:  [Lv.28]  
@@ -1335,7 +1335,7 @@ Ninjask: Sand Attack, Double Team, Fury Cutter, Swords Dance [Lv.28]
 Nincada: Leech Life, Fury Swipes, Mind Reader, Dig [Lv.28]  
 Koffing: Tackle, Self Destruct, Sludge, Smokescreen [Lv.28]  
 
-## Pokefan KALEB
+## Pokefan M KALEB
 Volbeat @Focus Band: U-turn, Thunder Wave, Roost, Covet [Lv.27 | Prankster | Impish Nature]  
 Dustox @Black Sludge: Rage Powder, Toxic, Silver Wind, Moonlight [Lv.28 | Friend Guard | Calm Nature]  
 
@@ -1356,7 +1356,7 @@ Machop:  [Lv.28]
 Numel:  [Lv.28]  
 Graveler:  [Lv.28]  
 
-## Cooltrainer MARCEL
+## Cooltrainer M MARCEL
 Manectric:  [Lv.29]  
 Shiftry:  [Lv.29]  
 
@@ -1364,17 +1364,17 @@ Shiftry:  [Lv.29]
 Marill:  [Lv.29]  
 Marill:  [Lv.29]  
 
-## Cooltrainer WILTON
+## Cooltrainer M WILTON
 Manectric:  [Lv.29]  
 Wailmer:  [Lv.29]  
 Makuhita:  [Lv.29]  
 
-## Cooltrainer WENDY
+## Cooltrainer F WENDY
 Mawile: Baton Pass, Feint Attack, Fake Tears, Bite [Lv.29]  
 Roselia: Mega Drain, Magical Leaf, Grass Whistle, Leech Seed [Lv.29]  
 Pelipper: Fly, Water Gun, Mist, Protect [Lv.29]  
 
-## Cooltrainer BROOKE
+## Cooltrainer F BROOKE
 Pelipper:  [Lv.29]  
 Numel:  [Lv.29]  
 Roselia:  [Lv.29]  
@@ -1406,18 +1406,18 @@ Swellow:  [Lv.29]
 ## Gentleman WALTER
 Manectric:  [Lv.29]  
 
-## School Kid JERRY
+## School Kid M JERRY
 Kirlia:  [Lv.29]  
 Meditite:  [Lv.29]  
 
-## School Kid KAREN
+## School Kid F KAREN
 Shroomish:  [Lv.29]  
 Loudred:  [Lv.29]  
 
-## Pokefan MIGUEL
+## Pokefan M MIGUEL
 Skitty @Oran Berry:  [Lv.29]  
 
-## Pokefan ISABEL
+## Pokefan F ISABEL
 Plusle @Oran Berry:  [Lv.29]  
 Minun @Oran Berry:  [Lv.29]  
 
@@ -1515,7 +1515,7 @@ Baltoy:  [Lv.29]
 Dustox:  [Lv.29]  
 Beautifly:  [Lv.29]  
 
-## Cooltrainer CRISTIN
+## Cooltrainer F CRISTIN
 Loudred:  [Lv.29]  
 Vigoroth:  [Lv.29]  
 
@@ -1531,7 +1531,7 @@ Seviper:  [Lv.30]
 Poochyena:  [Lv.30]  
 Carvanha:  [Lv.30]  
 
-## Expert FREDRICK
+## Expert M FREDRICK
 Makuhita:  [Lv.30]  
 Machoke:  [Lv.30]  
 
@@ -1545,7 +1545,7 @@ Loudred:  [Lv.30]
 ## Tuber M RICKY
 Linoone: Sand Attack, Pin Missile, Tail Whip, Surf [Lv.30]  
 
-## Cooltrainer JENNIFER
+## Cooltrainer F JENNIFER
 Sableye:  [Lv.30]  
 
 ## Hex Maniac KINDRA
@@ -1570,7 +1570,7 @@ Sharpedo:  [Lv.30]
 Electrike:  [Lv.30]  
 Loudred:  [Lv.30]  
 
-## Psychic JACKI
+## Psychic F JACKI
 Kadabra:  [Lv.30]  
 Lunatone:  [Lv.30]  
 
@@ -1578,10 +1578,10 @@ Lunatone:  [Lv.30]
 Zigzagoon: Growl, Tail Whip, Headbutt, Odor Sleuth [Lv.28]  
 Makuhita: Tackle, Focus Energy, Arm Thrust [Lv.30]  
 
-## Pokefan VANESSA
+## Pokefan F VANESSA
 Pikachu @Oran Berry:  [Lv.30]  
 
-## Expert SHELBY
+## Expert F SHELBY
 Meditite:  [Lv.30]  
 Makuhita:  [Lv.30]  
 
@@ -1589,7 +1589,7 @@ Makuhita:  [Lv.30]
 Swellow:  [Lv.28]  
 Mightyena:  [Lv.30]  
 
-## Triathlete BENJAMIN
+## Triathlete M BENJAMIN
 Magnemite:  [Lv.30]  
 
 ## Bird Keeper HUMBERTO
@@ -1628,19 +1628,19 @@ Farfetchd-Galar @Leek: Dual Wingbeat, Night Slash, Facade, Brick Break [Lv.27 | 
 Grovyle @Miracle Seed: Cut, Bullet Seed, Rock Slide, Quick Attack [Lv.30 | Technician | Adamant Nature]  
 Arcanine-Hisui @Charcoal: Will-O-Wisp, Heat Crash, Rock Tomb, Extreme Speed [Lv.28 | Rock Head]  
 Seadra @Scope Lens: Focus Energy, Snipe Shot, Dragon Pulse, Icy Wind [Lv.28 | Sniper | Serious Nature]  
-Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power [Lv.28 | Adaptability | Modest Nature | IVs 0/30/30/31/31/31]  
+Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power Fire [Lv.28 | Adaptability | Modest Nature | IVs 31/0/31/30/31/30]  
 
 ## Rival MAY
 Seadra @Scope Lens: Focus Energy, Snipe Shot, Dragon Pulse, Icy Wind [Lv.28 | Sniper | Serious Nature]  
 Combusken @Charcoal: Bulk Up, Brick Break, Aerial Ace, Fire Punch [Lv.30 | Speed Boost | Adamant Nature]  
-Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power [Lv.28 | Adaptability | Modest Nature | IVs 0/30/30/31/31/31]  
+Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power Fire [Lv.28 | Adaptability | Modest Nature | IVs 31/0/31/30/31/30]  
 Bisharp: Iron Head, Sucker Punch, Knock Off, Psycho Cut [Lv.28 | Defiant]  
 Electrode-Hisui @Air Balloon: Giga Drain, Thunderbolt, Volt Switch [Lv.28 | Static]  
 
 ## Rival MAY
 Farfetchd-Galar @Leek: Dual Wingbeat, Night Slash, Facade, Brick Break [Lv.27 | Scrappy | Adamant Nature]  
 Marshtomp @Soft Sand: Rock Slide, Liquidation, Rock Smash, Bulldoze [Lv.30 | Immunity]  
-Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power [Lv.28 | Adaptability | Modest Nature | IVs 0/30/30/31/31/31]  
+Rapidash-Galar @Expert Belt: Psybeam, Draining Kiss, Hidden Power Fire [Lv.28 | Adaptability | Modest Nature | IVs 31/0/31/30/31/30]  
 Electrode-Hisui @Air Balloon: Giga Drain, Thunderbolt, Volt Switch [Lv.28 | Static]  
 Arcanine-Hisui @Charcoal: Will-O-Wisp, Heat Crash, Rock Tomb, Extreme Speed [Lv.28 | Rock Head]  
 
@@ -1662,7 +1662,7 @@ Graveler:  [Lv.30]
 Volbeat:  [Lv.30]  
 Illumise:  [Lv.30]  
 
-## Cooltrainer LEONEL
+## Cooltrainer M LEONEL
 Manectric: Thunder, Quick Attack, Thunder Wave [Lv.30]  
 
 ## Bird Keeper DARIUS
@@ -1729,7 +1729,7 @@ Surskit:  [Lv.31]
 Surskit:  [Lv.31]  
 Surskit:  [Lv.31]  
 
-## Psychic CAMERON
+## Psychic M CAMERON
 Solrock:  [Lv.31]  
 
 ## Sr And Jr ANNA & MEG [Double Battle]
@@ -1744,10 +1744,10 @@ Carvanha:  [Lv.30]
 Tentacruel:  [Lv.30]  
 Gyarados:  [Lv.31]  
 
-## Triathlete DYLAN
+## Triathlete M DYLAN
 Doduo:  [Lv.31]  
 
-## Triathlete MARIA
+## Triathlete F MARIA
 Doduo:  [Lv.31]  
 
 ## Picnicker DIANA
@@ -1791,7 +1791,7 @@ Lombre:  [Lv.29]
 Slugma:  [Lv.29]  
 Marshtomp:  [Lv.31]  
 
-## Pkmn Breeder ISAAC
+## Pokemon Breeder M ISAAC
 Loudred:  [Lv.31]  
 Linoone:  [Lv.31]  
 Lairon:  [Lv.31]  
@@ -1799,7 +1799,7 @@ Mightyena:  [Lv.31]
 Swellow:  [Lv.31]  
 Hariyama:  [Lv.31]  
 
-## Pkmn Breeder LYDIA
+## Pokemon Breeder F LYDIA
 Pelipper:  [Lv.31]  
 Breloom:  [Lv.31]  
 Azumarill:  [Lv.31]  
@@ -1831,7 +1831,7 @@ Manectric:  [Lv.31]
 Sandshrew:  [Lv.31]  
 Sandshrew:  [Lv.31]  
 
-## Pkmn Breeder GABRIELLE
+## Pokemon Breeder F GABRIELLE
 Skitty:  [Lv.31]  
 Mightyena:  [Lv.31]  
 Zigzagoon:  [Lv.31]  
@@ -1867,12 +1867,12 @@ Zubat:  [Lv.32]
 Marill:  [Lv.32]  
 Marill:  [Lv.32]  
 
-## Cooltrainer WILTON
+## Cooltrainer M WILTON
 Manectric:  [Lv.32]  
 Wailmer:  [Lv.32]  
 Makuhita:  [Lv.32]  
 
-## Cooltrainer BROOKE
+## Cooltrainer F BROOKE
 Pelipper:  [Lv.32]  
 Numel:  [Lv.32]  
 Roselia:  [Lv.32]  
@@ -1897,7 +1897,7 @@ Hariyama:  [Lv.32]
 ## Guitarist KIRK
 Eelektross @Leftovers: Discharge, Fire Punch, Flash [Lv.32 | Levitate]  
 Raichu @Air Balloon: Fake Out, Thunder Punch, Surf, Knock Off [Lv.32 | Lightning Rod | Adamant Nature]  
-Electrode @Air Balloon: Electroweb, Hyper Voice, Flash Cannon, Hidden Power [Lv.32 | Galvanize | Serious Nature | IVs 0/30/31/31/31/31]  
+Electrode @Air Balloon: Electroweb, Hyper Voice, Flash Cannon, Hidden Power Ice [Lv.32 | Galvanize | Serious Nature | IVs 31/0/30/31/31/31]  
 
 ## Team Aqua GRUNT
 Carvanha:  [Lv.32]  
@@ -1906,15 +1906,15 @@ Carvanha:  [Lv.32]
 Slugma:  [Lv.32]  
 Pelipper:  [Lv.32]  
 
-## Psychic EDWARD
+## Psychic M EDWARD
 Indeedee: Psyshock, Hyper Voice [Lv.32 | Synchronize]  
-Kadabra: Psybeam, Hidden Power [Lv.32 | Magic Guard | IVs 0/30/30/31/31/31]  
+Kadabra: Psybeam, Hidden Power Bug [Lv.32 | Magic Guard | IVs 31/0/30/31/30/31]  
 
-## School Kid JERRY
+## School Kid M JERRY
 Kirlia:  [Lv.32]  
 Medicham:  [Lv.32]  
 
-## School Kid KAREN
+## School Kid F KAREN
 Breloom:  [Lv.32]  
 Loudred:  [Lv.32]  
 
@@ -1922,21 +1922,21 @@ Loudred:  [Lv.32]
 Spinda: Hypnosis, Psybeam, Dizzy Punch, Teeter Dance [Lv.30]  
 Slaking: Focus Punch, Yawn, Slack Off, Feint Attack [Lv.32]  
 
-## Pokefan MIGUEL
+## Pokefan M MIGUEL
 Skitty @Oran Berry:  [Lv.32]  
 
-## Pokefan ISABEL
+## Pokefan F ISABEL
 Plusle @Oran Berry:  [Lv.32]  
 Minun @Oran Berry:  [Lv.32]  
 
-## Triathlete DYLAN
+## Triathlete M DYLAN
 Squawkabilly-Blue @Leftovers: Facade, Quick Attack, Brave Bird, Parting Shot [Lv.32 | Intimidate | Impish Nature]  
 Squawkabilly-White @Wide Lens: Facade, Quick Attack, Brave Bird, Parting Shot [Lv.32 | Hustle | Adamant Nature]  
 Squawkabilly-Yellow @Life Orb: Pounce, Facade, Brave Bird, Parting Shot [Lv.32 | Sheer Force]  
 Squawkabilly @Flame Orb: Facade, Brave Bird, Quick Attack, U-turn [Lv.32 | Guts]  
 Dodrio @Sharp Beak: Tri Attack, Drill Peck, Peck, Jump Kick [Lv.32 | Tangled Feet]  
 
-## Triathlete MARIA
+## Triathlete F MARIA
 Roserade: Sludge Bomb, Grass Knot, Protect, Synthesis [Lv.32 | Technician]  
 Scovillain @White Herb: Temper Flare, Bullet Seed, Stomping Tantrum, Spicy Extract [Lv.32 | Chlorophyll | Adamant Nature]  
 
@@ -1957,20 +1957,20 @@ Hariyama:  [Lv.32]
 ## Parasol Lady MADELINE
 Numel: Ember, Take Down, Magnitude, Sunny Day [Lv.32]  
 
-## Psychic CEDRIC
+## Psychic M CEDRIC
 Wobbuffet: Destiny Bond, Safeguard, Counter, Mirror Coat [Lv.32]  
 
 ## Collector EDWIN
 Lombre:  [Lv.32]  
 Nuzleaf:  [Lv.32]  
 
-## Pkmn Breeder ISAAC
+## Pokemon Breeder M ISAAC
 Dipplin @Sitrus Berry: Recycle, Giga Drain, Dragon Pulse, Sucker Punch [Lv.32 | Gluttony]  
 Porygon-Z @Expert Belt: Tri Attack, Discharge, Icy Wind, Shadow Ball [Lv.32 | Analytic]  
 Klinklang @Metal Coat: Volt Switch, Wild Charge, Gear Grind [Lv.32 | Clear Body]  
 Bronzong: Gyro Ball, Psychic Noise, Body Press, Charge Beam [Lv.32 | Levitate | Brave Nature]  
 
-## Cooltrainer ATHENA
+## Cooltrainer F ATHENA
 Manectric: Thunder, Thunder Wave, Quick Attack [Lv.32]  
 Linoone: Surf, Thief [Lv.32]  
 
@@ -2004,11 +2004,11 @@ Sharpedo:  [Lv.32]
 Swellow:  [Lv.32]  
 Skarmory:  [Lv.32]  
 
-## Triathlete ALYSSA
-Magneton: Thunder Wave, Thunderbolt, Flash Cannon, Hidden Power [Lv.32 | Analytic | IVs 1/30/30/30/30/31]  
+## Triathlete F ALYSSA
+Magneton: Thunder Wave, Thunderbolt, Flash Cannon, Hidden Power Fighting [Lv.32 | Analytic | IVs 31/1/30/30/30/30]  
 Electrode: Boomburst, Steel Beam, Electroweb [Lv.32 | Punk Rock]  
 
-## Triathlete MELINA
+## Triathlete F MELINA
 Whimsicott @Heat Rock: Sunny Day, Helping Hand, Taunt, Giga Drain [Lv.32 | Prankster]  
 Florges @Leftovers: Giga Drain, Dazzling Gleam, Calm Mind, Helping Hand [Lv.32 | Flower Veil]  
 
@@ -2027,14 +2027,14 @@ Loudred:  [Lv.33]
 ## Tuber M RICKY
 Linoone: Sand Attack, Pin Missile, Tail Whip, Surf [Lv.33]  
 
-## Cooltrainer WARREN
+## Cooltrainer M WARREN
 Graveler:  [Lv.33]  
 Ludicolo:  [Lv.33]  
 
 ## Lady CINDY
 Linoone @Nugget:  [Lv.33]  
 
-## Expert MOLLIE
+## Expert F MOLLIE
 Whiscash:  [Lv.33]  
 Meditite:  [Lv.33]  
 
@@ -2072,7 +2072,7 @@ Machoke:  [Lv.33]
 Machamp @Black Belt:  [Lv.33]  
 
 ## Guitarist SHAWN
-Manectric: Discharge, Flame Burst, Hidden Power [Lv.33 | Lightning Rod | IVs 0/30/31/31/31/31]  
+Manectric: Discharge, Flame Burst, Hidden Power Grass [Lv.33 | Lightning Rod | IVs 31/0/31/30/31/31]  
 Lanturn: Scald, Discharge, Flip Turn, Eerie Impulse [Lv.33 | Volt Absorb]  
 
 ## Bug Maniac DEREK
@@ -2082,7 +2082,7 @@ Ariados @Scope Lens: Cut, Cross Poison, U-turn, Night Slash [Lv.33 | Sniper]
 Durant @Wide Lens: First Impression, Iron Head, Rock Slide, Facade [Lv.32 | Hustle]  
 Masquerain: Bug Buzz, U-turn, Scald, Giga Drain [Lv.33 | Water Bubble]  
 
-## Psychic CAMERON
+## Psychic M CAMERON
 Kadabra:  [Lv.33]  
 Solrock:  [Lv.33]  
 
@@ -2097,10 +2097,10 @@ Altaria @Oran Berry: Earthquake, Dragon Breath, Dragon Dance, Aerial Ace [Lv.33]
 Zigzagoon: Growl, Tail Whip, Headbutt, Odor Sleuth [Lv.31]  
 Makuhita: Tackle, Focus Energy, Arm Thrust [Lv.33]  
 
-## Expert TIMOTHY
+## Expert M TIMOTHY
 Hariyama: Arm Thrust, Knock Off, Sand Attack, Dig [Lv.33]  
 
-## Expert SHELBY
+## Expert F SHELBY
 Medicham:  [Lv.33]  
 Hariyama:  [Lv.33]  
 
@@ -2114,18 +2114,18 @@ Swellow:  [Lv.31]
 Linoone:  [Lv.29]  
 Mightyena:  [Lv.33]  
 
-## Triathlete BENJAMIN
+## Triathlete M BENJAMIN
 Magnemite:  [Lv.33]  
 
-## Triathlete CAMDEN
+## Triathlete M CAMDEN
 Staryu:  [Lv.33]  
 Staryu:  [Lv.33]  
 
-## Triathlete PABLO
+## Triathlete M PABLO
 Staryu:  [Lv.33]  
 Staryu:  [Lv.33]  
 
-## Triathlete ALLISON
+## Triathlete F ALLISON
 Wingull:  [Lv.27]  
 Staryu:  [Lv.33]  
 
@@ -2165,7 +2165,7 @@ Minun: Spark, Charge, Charm, Helping Hand [Lv.33]
 Wingull:  [Lv.33]  
 Machoke:  [Lv.33]  
 
-## Expert AURON
+## Expert M AURON
 Manectric:  [Lv.33]  
 Machamp:  [Lv.33]  
 
@@ -2177,7 +2177,7 @@ Spheal:  [Lv.33]
 Meditite:  [Lv.33]  
 Hariyama:  [Lv.33]  
 
-## Expert CONOR
+## Expert M CONOR
 Chinchou:  [Lv.33]  
 Hariyama:  [Lv.33]  
 
@@ -2185,11 +2185,11 @@ Hariyama:  [Lv.33]
 Gloom:  [Lv.33]  
 Roselia:  [Lv.33]  
 
-## Expert PAXTON
+## Expert M PAXTON
 Swellow:  [Lv.33]  
 Breloom:  [Lv.33]  
 
-## Cooltrainer JONATHAN
+## Cooltrainer M JONATHAN
 Kecleon:  [Lv.33]  
 Loudred:  [Lv.33]  
 
@@ -2219,11 +2219,11 @@ Mightyena:  [Lv.28]
 Zubat:  [Lv.30]  
 Camerupt:  [Lv.33]  
 
-## Cooltrainer DARCY
+## Cooltrainer F DARCY
 Pelipper:  [Lv.33]  
 Camerupt:  [Lv.33]  
 
-## Expert MAKAYLA
+## Expert F MAKAYLA
 Roselia:  [Lv.33]  
 Medicham:  [Lv.33]  
 
@@ -2241,7 +2241,7 @@ Machoke:  [Lv.33]
 Camerupt:  [Lv.33]  
 Golem:  [Lv.33]  
 
-## Pkmn Breeder GABRIELLE
+## Pokemon Breeder F GABRIELLE
 Skitty:  [Lv.33]  
 Mightyena:  [Lv.33]  
 Linoone:  [Lv.33]  
@@ -2261,7 +2261,7 @@ Breloom:  [Lv.34]
 Gloom:  [Lv.34]  
 Roselia:  [Lv.34]  
 
-## Cooltrainer BROOKE
+## Cooltrainer F BROOKE
 Pelipper:  [Lv.34]  
 Camerupt:  [Lv.34]  
 Roselia:  [Lv.34]  
@@ -2314,7 +2314,7 @@ Surskit:  [Lv.34]
 Surskit:  [Lv.34]  
 Masquerain:  [Lv.34]  
 
-## Psychic JACKI
+## Psychic F JACKI
 Kadabra:  [Lv.34]  
 Lunatone:  [Lv.34]  
 
@@ -2323,38 +2323,38 @@ Manectric:  [Lv.34]
 
 ## Leader WATTSON
 Pincurchin @Terrain Extender: Zing Zap, Soak, Liquidation, Toxic Spikes [Lv.32 | Electric Surge | Brave Nature]  
-Manectric @Manectite: Thunderbolt, Volt Switch, Flamethrower, Hidden Power [Lv.34 | Intimidate | Mild Nature | IVs 0/30/31/31/31/31]  
+Manectric @Manectite: Thunderbolt, Volt Switch, Flamethrower, Hidden Power Ice [Lv.34 | Intimidate | Mild Nature | IVs 31/0/30/31/31/31]  
 Rotom-Mow @Miracle Seed: Leaf Storm, Volt Switch, Dark Pulse, Will-O-Wisp [Lv.33 | Levitate | Modest Nature]  
 Boltund @Electric Seed: Supercell Slam, Play Rough, Facade, Crunch [Lv.33 | Electric Pelt | Adamant Nature]  
 Raichu-Alola @Focus Sash: Psyshock, Surf, Nasty Plot, Volt Switch [Lv.33 | Surge Surfer | Modest Nature]  
 Electivire @Expert Belt: Thunder Punch, Drain Punch, Mach Punch, Ice Punch [Lv.33 | Iron Fist | Adamant Nature]  
 
-## School Kid JERRY
+## School Kid M JERRY
 Kirlia:  [Lv.34]  
 Banette:  [Lv.34]  
 Medicham:  [Lv.34]  
 
-## Triathlete ABIGAIL
+## Triathlete F ABIGAIL
 Magneton:  [Lv.34]  
 
-## Triathlete DYLAN
+## Triathlete M DYLAN
 Dodrio:  [Lv.34]  
 
-## Triathlete MARIA
+## Triathlete F MARIA
 Dodrio:  [Lv.34]  
 
-## Triathlete CHASE
+## Triathlete M CHASE
 Wingull:  [Lv.26]  
 Staryu:  [Lv.34]  
 
-## Triathlete ISOBEL
+## Triathlete F ISOBEL
 Staryu:  [Lv.34]  
 
-## Triathlete DONNY
+## Triathlete F DONNY
 Wingull:  [Lv.26]  
 Staryu:  [Lv.34]  
 
-## Triathlete TALIA
+## Triathlete F TALIA
 Staryu:  [Lv.34]  
 
 ## Dragon Tamer AARON
@@ -2398,13 +2398,13 @@ Seaking:  [Lv.34]
 Lanturn:  [Lv.34]  
 Pelipper:  [Lv.34]  
 
-## Cooltrainer MARLEY
+## Cooltrainer F MARLEY
 Manectric: Bite, Roar, Thunder Wave, Thunderbolt [Lv.34]  
 
 ## Sailor HUDSON
 Wailmer:  [Lv.34]  
 
-## Pkmn Breeder LYDIA
+## Pokemon Breeder F LYDIA
 Breloom @Loaded Dice: Spore, Mach Punch, Bullet Seed, Rock Tomb [Lv.33 | Technician]  
 Delcatty @Silk Scarf: Fake Out, Sing, Last Resort [Lv.34 | Cute Charm | Adamant Nature]  
 Comfey (F) @Big Root: Leech Seed, Draining Kiss, Giga Drain, Dazzling Gleam [Lv.34 | Triage]  
@@ -2419,7 +2419,7 @@ Carvanha:  [Lv.34]
 ## Swimmer M CLARENCE
 Sharpedo:  [Lv.34]  
 
-## Triathlete ISABELLA
+## Triathlete F ISABELLA
 Staryu:  [Lv.34]  
 
 ## Lass HALEY
@@ -2467,11 +2467,11 @@ Marshtomp:  [Lv.34]
 Carvanha:  [Lv.31]  
 Tentacruel:  [Lv.34]  
 
-## Cooltrainer ALEXA
+## Cooltrainer F ALEXA
 Gloom:  [Lv.34]  
 Azumarill:  [Lv.34]  
 
-## Cooltrainer RUBEN
+## Cooltrainer M RUBEN
 Shiftry:  [Lv.34]  
 Nosepass:  [Lv.34]  
 
@@ -2490,7 +2490,7 @@ Boltund @Expert Belt: Thunder Fang, Psychic Fangs, Crunch, Shock Wave [Lv.34 | S
 Dunsparce @Eviolite: Shock Wave, Ancient Power, Body Slam [Lv.34 | Serene Grace | Quiet Nature]  
 Exploud @Silk Scarf: Shock Wave, Hyper Voice, Surf, Incinerate [Lv.34 | Punk Rock | Modest Nature]  
 
-## Psychic BRANDI
+## Psychic F BRANDI
 Politoed: Muddy Water, Giga Drain, Flip Turn, Icy Wind [Lv.34 | Drizzle]  
 Swanna @Wacan Berry: Rest, Weather Ball, Air Slash [Lv.34 | Hydration]  
 Quagsire @Leftovers: Earthquake, Liquidation, Toxic, Protect [Lv.34 | Water Absorb]  
@@ -2512,12 +2512,12 @@ Horsea:  [Lv.34]
 Azumarill:  [Lv.35]  
 Azumarill:  [Lv.35]  
 
-## Cooltrainer WILTON
+## Cooltrainer M WILTON
 Wailmer: Water Spout, Icy Wind, Scald, Protect [Lv.35 | Water Veil]  
 Scolipede @Bright Powder: Leech Life, Poison Jab, Earthquake, Aqua Tail [Lv.35 | Poison Point]  
 Bewear @Expert Belt: Double-Edge, Darkest Lariat, Drain Punch, Earthquake [Lv.35 | Fluffy]  
 
-## Cooltrainer WILTON
+## Cooltrainer M WILTON
 Manectric:  [Lv.35]  
 Wailmer:  [Lv.35]  
 Hariyama:  [Lv.35]  
@@ -2542,14 +2542,14 @@ Crabominable: Ice Hammer, Brick Break, Return, Facade [Lv.35 | Iron Fist]
 Solrock @Air Balloon: Solar Beam, Temper Flare, Rock Slide, Psycho Cut [Lv.35 | Drought]  
 Centiskorch @Charcoal: Heat Wave, Power Whip, Coil, Leech Life [Lv.35 | Flash Fire]  
 
-## School Kid KAREN
+## School Kid F KAREN
 Breloom:  [Lv.35]  
 Exploud:  [Lv.35]  
 
-## Pokefan MIGUEL
+## Pokefan M MIGUEL
 Delcatty @Oran Berry:  [Lv.35]  
 
-## Pokefan ISABEL
+## Pokefan F ISABEL
 Plusle @Sitrus Berry:  [Lv.35]  
 Minun @Sitrus Berry:  [Lv.35]  
 
@@ -2567,10 +2567,10 @@ Gyarados:  [Lv.26]
 Gyarados:  [Lv.30]  
 Gyarados:  [Lv.35]  
 
-## Triathlete ISAIAH
+## Triathlete M ISAIAH
 Staryu:  [Lv.35]  
 
-## Triathlete KATELYN
+## Triathlete F KATELYN
 Staryu:  [Lv.35]  
 
 ## Bird Keeper ROBERT
@@ -2631,7 +2631,7 @@ Nosepass:  [Lv.35]
 Sandshrew:  [Lv.35]  
 Sandshrew:  [Lv.35]  
 
-## Cooltrainer CRISTIN
+## Cooltrainer F CRISTIN
 Loudred:  [Lv.35]  
 Vigoroth:  [Lv.35]  
 
@@ -2640,7 +2640,7 @@ Electrike:  [Lv.35]
 Electrike:  [Lv.35]  
 Loudred:  [Lv.35]  
 
-## Pkmn Breeder GABRIELLE
+## Pokemon Breeder F GABRIELLE
 Delcatty:  [Lv.35]  
 Mightyena:  [Lv.35]  
 Linoone:  [Lv.35]  
@@ -2674,10 +2674,10 @@ Loudred:  [Lv.36]
 ## Tuber M RICKY
 Linoone: Sand Attack, Pin Missile, Tail Whip, Surf [Lv.36]  
 
-## Cooltrainer BROOKE
+## Cooltrainer F BROOKE
 Pelipper (F) @Life Orb: Hurricane, Hydro Pump, U-turn, Roost [Lv.36 | Drizzle | Modest Nature]  
 Camerupt (F) @Passho Berry: Sunny Day, Solar Beam, Flamethrower, Earth Power [Lv.36 | Solid Rock | Modest Nature]  
-Roserade @Wide Lens: Giga Drain, Hidden Power, Sludge Bomb, Sleep Powder [Lv.36 | Technician | Timid Nature | IVs 0/30/30/31/31/31]  
+Roserade @Wide Lens: Giga Drain, Hidden Power Fire, Sludge Bomb, Sleep Powder [Lv.36 | Technician | Timid Nature | IVs 31/0/31/30/31/30]  
 
 ## Lady CINDY
 Linoone @Nugget: Fury Swipes, Mud Sport, Odor Sleuth, Sand Attack [Lv.36]  
@@ -2695,22 +2695,22 @@ Wurmple:  [Lv.36]
 Surskit:  [Lv.36]  
 Masquerain:  [Lv.36]  
 
-## Psychic PRESTON
+## Psychic M PRESTON
 Kirlia:  [Lv.36]  
 
-## Psychic VIRGIL
+## Psychic M VIRGIL
 Ralts:  [Lv.36]  
 
-## Psychic BLAKE
+## Psychic M BLAKE
 Girafarig:  [Lv.36]  
 
-## Psychic HANNAH
+## Psychic F HANNAH
 Kirlia:  [Lv.36]  
 
-## Psychic SAMANTHA
+## Psychic F SAMANTHA
 Xatu:  [Lv.36]  
 
-## Psychic MAURA
+## Psychic F MAURA
 Kadabra:  [Lv.36]  
 
 ## Gentleman WALTER
@@ -2721,10 +2721,10 @@ Manectric: Quick Attack, Spark, Odor Sleuth, Roar [Lv.36]
 Linoone: Growl, Tail Whip, Headbutt, Odor Sleuth [Lv.34]  
 Makuhita: Tackle, Focus Energy, Arm Thrust [Lv.36]  
 
-## Expert TIMOTHY
+## Expert M TIMOTHY
 Hariyama: Arm Thrust, Knock Off, Sand Attack, Dig [Lv.36]  
 
-## Expert SHELBY
+## Expert F SHELBY
 Medicham:  [Lv.36]  
 Hariyama:  [Lv.36]  
 
@@ -2733,7 +2733,7 @@ Swellow:  [Lv.34]
 Linoone:  [Lv.32]  
 Mightyena:  [Lv.36]  
 
-## Triathlete BENJAMIN
+## Triathlete M BENJAMIN
 Magneton:  [Lv.36]  
 
 ## Twins AMY & LIV [Double Battle]
@@ -2761,10 +2761,10 @@ Kadabra:  [Lv.36]
 ## Gentleman CLIFFORD
 Girafarig:  [Lv.36]  
 
-## Psychic NICHOLAS
+## Psychic M NICHOLAS
 Wobbuffet:  [Lv.36]  
 
-## Psychic MACEY
+## Psychic F MACEY
 Natu:  [Lv.36]  
 
 ## Young Couple KIRA & DAN [Double Battle]
@@ -2798,7 +2798,7 @@ Seadra:  [Lv.36]
 Sharpedo:  [Lv.37]  
 Mightyena:  [Lv.37]  
 
-## Psychic JACKI
+## Psychic F JACKI
 Kadabra:  [Lv.37]  
 Lunatone:  [Lv.37]  
 
@@ -2808,13 +2808,13 @@ Flygon (M) @Expert Belt: Earthquake, Dragon Claw, Dragon Dance, X-Scissor [Lv.36
 Mr. Rime (M) @Never-Melt Ice: Ice Beam, Ice Shard, Psychic, Light Screen [Lv.36 | Tangled Feet | Serious Nature]  
 Bisharp @Black Glasses: Swords Dance, Sucker Punch, Iron Head, Night Slash [Lv.37 | Defiant | Adamant Nature]  
 
-## Triathlete ABIGAIL
+## Triathlete F ABIGAIL
 Magneton:  [Lv.37]  
 
-## Triathlete DYLAN
+## Triathlete M DYLAN
 Dodrio:  [Lv.37]  
 
-## Triathlete MARIA
+## Triathlete F MARIA
 Dodrio:  [Lv.37]  
 
 ## Dragon Tamer NICOLAS
@@ -2828,7 +2828,7 @@ Camerupt: Flamethrower, Take Down, Earthquake, Sunny Day [Lv.37]
 ## Pkmn Ranger JACKSON
 Breloom:  [Lv.37]  
 
-## Psychic TERRY
+## Psychic F TERRY
 Girafarig:  [Lv.37]  
 
 ## Leader ROXANNE [Double Battle]
@@ -2848,7 +2848,7 @@ Nosepass:  [Lv.37]
 Sandslash:  [Lv.37]  
 Sandslash:  [Lv.37]  
 
-## Triathlete PABLO
+## Triathlete M PABLO
 Staryu:  [Lv.37]  
 Staryu:  [Lv.37]  
 
@@ -2856,7 +2856,7 @@ Staryu:  [Lv.37]
 Machoke:  [Lv.37]  
 Machoke:  [Lv.37]  
 
-## Cooltrainer CRISTIN
+## Cooltrainer F CRISTIN
 Spinda:  [Lv.37]  
 Loudred:  [Lv.37]  
 Vigoroth:  [Lv.37]  
@@ -2866,7 +2866,7 @@ Electrike:  [Lv.37]
 Manectric:  [Lv.37]  
 Loudred:  [Lv.37]  
 
-## Pkmn Breeder GABRIELLE
+## Pokemon Breeder F GABRIELLE
 Delcatty:  [Lv.37]  
 Mightyena:  [Lv.37]  
 Linoone:  [Lv.37]  
@@ -2903,7 +2903,7 @@ Talonflame @Sharp Beak: Flare Blitz, Dual Wingbeat, Roost, U-turn [Lv.38 | Flame
 ## Camper SHANE
 Golem @Custap Berry: Stealth Rock, Stone Edge, Earthquake, Explosion [Lv.38 | Sturdy]  
 Breloom @Focus Sash: Mach Punch, Bullet Seed, Spore, Rock Tomb [Lv.38 | Technician]  
-Manectric: Thunderbolt, Flame Burst, Volt Switch, Hidden Power [Lv.38 | Lightning Rod | IVs 30/30/30/31/31/31]  
+Manectric: Thunderbolt, Flame Burst, Volt Switch, Hidden Power Ground [Lv.38 | Lightning Rod | IVs 31/30/31/30/30/31]  
 Crobat @Leftovers: Brave Bird, Cross Poison, Roost, U-Turn [Lv.38 | Inner Focus]  
 Ludicolo @Leftovers: Scald, Giga Drain, Ice Beam, Rain Dance [Lv.38 | Swift Swim]  
 
@@ -2914,7 +2914,7 @@ Surskit:  [Lv.38]
 Masquerain @Silver Powder:  [Lv.38]  
 Beautifly:  [Lv.38]  
 
-## Psychic CAMERON
+## Psychic M CAMERON
 Kadabra:  [Lv.38]  
 Solrock:  [Lv.38]  
 
@@ -2922,7 +2922,7 @@ Solrock:  [Lv.38]
 Linoone: Growl, Tail Whip, Headbutt, Odor Sleuth [Lv.36]  
 Hariyama: Tackle, Focus Energy, Arm Thrust [Lv.38]  
 
-## Pokefan MIGUEL
+## Pokefan M MIGUEL
 Delcatty @Sitrus Berry:  [Lv.38]  
 
 ## Fisherman CLAUDE
@@ -2945,7 +2945,7 @@ Camerupt @Chesto Berry: Curse, Amnesia, Rest, Flamethrower [Lv.38 | Magma Armor 
 Wailmer:  [Lv.38]  
 
 ## Picnicker NANCY
-Aromatisse @Misty Seed: Moonblast, Draining Kiss, Calm Mind, Hidden Power [Lv.38 | Misty Surge | Modest Nature | IVs 0/30/30/31/31/31]  
+Aromatisse @Misty Seed: Moonblast, Draining Kiss, Calm Mind, Hidden Power Fire [Lv.38 | Misty Surge | Modest Nature | IVs 31/0/31/30/31/30]  
 Florges @Misty Seed: Moonblast, Calm Mind, Leech Seed, Giga Drain [Lv.38 | Misty Pelt | Modest Nature]  
 Carbink @Misty Seed: Body Press, Moonblast, Terrain Pulse, Calm Mind [Lv.38 | Clear Body]  
 Gardevoir (F) @Leftovers: Moonblast, Mystical Fire, Calm Mind, Draining Kiss [Lv.38 | Trace | Timid Nature]  
@@ -3015,25 +3015,25 @@ Sharpedo:  [Lv.39]
 Linoone: Headbutt, Sand Attack, Odor Sleuth, Fury Swipes [Lv.39]  
 Manectric: Quick Attack, Spark, Odor Sleuth [Lv.39]  
 
-## Pokefan BETHANY
+## Pokefan F BETHANY
 Azurill @Oran Berry:  [Lv.35]  
 Marill @Oran Berry:  [Lv.37]  
 Azumarill @Oran Berry:  [Lv.39]  
 
-## Expert TIMOTHY
+## Expert M TIMOTHY
 Hariyama: Arm Thrust, Belly Drum, Sand Attack, Dig [Lv.39]  
 
-## Expert SHELBY
+## Expert F SHELBY
 Medicham:  [Lv.39]  
 Hariyama:  [Lv.39]  
 
-## Triathlete BENJAMIN
+## Triathlete M BENJAMIN
 Magneton:  [Lv.39]  
 
-## Triathlete ISAIAH
+## Triathlete M ISAIAH
 Staryu:  [Lv.39]  
 
-## Triathlete KATELYN
+## Triathlete F KATELYN
 Staryu:  [Lv.39]  
 
 ## Sailor ERNEST
@@ -3041,7 +3041,7 @@ Pelipper:  [Lv.39]
 Tentacool:  [Lv.39]  
 Machoke:  [Lv.39]  
 
-## Pokefan ANNIKA
+## Pokefan F ANNIKA
 Feebas @Oran Berry: Flail, Water Pulse, Return, Attract [Lv.39]  
 Feebas @Oran Berry: Flail, Water Pulse, Return, Attract [Lv.39]  
 
@@ -3077,7 +3077,7 @@ Illumise:  [Lv.39]
 Medicham: Psychic, Fire Punch, Psych Up, Protect [Lv.39]  
 Hariyama: Focus Punch, Rock Tomb, Rest, Belly Drum [Lv.39]  
 
-## Triathlete PABLO
+## Triathlete M PABLO
 Wingull:  [Lv.39]  
 Staryu:  [Lv.39]  
 Staryu:  [Lv.39]  
@@ -3087,7 +3087,7 @@ Makuhita:  [Lv.39]
 Machoke:  [Lv.39]  
 Machoke:  [Lv.39]  
 
-## Cooltrainer CRISTIN
+## Cooltrainer F CRISTIN
 Spinda:  [Lv.39]  
 Loudred:  [Lv.39]  
 Vigoroth:  [Lv.39]  
@@ -3119,7 +3119,7 @@ Ceruledge @Expert Belt: Bitter Blade, Poltergeist, Shadow Sneak, Brick Break [Lv
 Leafeon @Miracle Seed: Synthesis, Leaf Blade, Body Slam, Knock Off [Lv.40 | Chlorophyll | Adamant Nature]  
 Sunflora @Charcoal: Solar Beam, Weather Ball, Earth Power, Sunny Day [Lv.40 | Solar Power | Modest Nature]  
 
-## Psychic JACKI
+## Psychic F JACKI
 Kadabra:  [Lv.40]  
 Lunatone:  [Lv.40]  
 
@@ -3145,7 +3145,7 @@ Camerupt:  [Lv.36]
 Mightyena:  [Lv.38]  
 Golbat:  [Lv.40]  
 
-## Triathlete JULIO
+## Triathlete M JULIO
 Armarouge: Armor Cannon, Psyshock, Will-O-Wisp, Aura Sphere [Lv.40 | Mega Launcher | Modest Nature]  
 Charizard @Charti Berry: Flamethrower, Solar Beam, Ancient Power, Air Slash [Lv.40 | Solar Power]  
 Solrock @Air Balloon: Zen Headbutt, Rock Slide, Flare Blitz, Protect [Lv.40 | Drought]  
@@ -3174,7 +3174,7 @@ Kingdra:  [Lv.40]
 Kecleon: Bind, Lick, Fury Swipes, Feint Attack [Lv.41]  
 Seviper: Poison Tail, Screech, Glare, Crunch [Lv.41]  
 
-## Psychic CAMERON
+## Psychic M CAMERON
 Kadabra:  [Lv.41]  
 Solrock:  [Lv.41]  
 
@@ -3194,7 +3194,7 @@ Xatu:  [Lv.41]
 ## Swimmer F JENNY
 Wailmer:  [Lv.41]  
 
-## Triathlete PABLO
+## Triathlete M PABLO
 Pelipper:  [Lv.41]  
 Staryu:  [Lv.41]  
 Staryu:  [Lv.41]  
@@ -3204,7 +3204,7 @@ Hariyama:  [Lv.41]
 Machoke:  [Lv.41]  
 Machoke:  [Lv.41]  
 
-## Cooltrainer CRISTIN
+## Cooltrainer F CRISTIN
 Spinda:  [Lv.41]  
 Exploud:  [Lv.41]  
 Slaking:  [Lv.41]  
@@ -3214,28 +3214,28 @@ Manectric:  [Lv.41]
 Manectric:  [Lv.41]  
 Exploud:  [Lv.41]  
 
-## Cooltrainer SAMUEL
+## Cooltrainer M SAMUEL
 Swellow:  [Lv.42]  
 Mawile:  [Lv.42]  
 Kadabra:  [Lv.42]  
 
-## Cooltrainer VITO
+## Cooltrainer M VITO
 Dodrio:  [Lv.42]  
 Kadabra:  [Lv.42]  
 Electrode:  [Lv.42]  
 Shiftry:  [Lv.42]  
 
-## Cooltrainer OWEN
+## Cooltrainer M OWEN
 Kecleon:  [Lv.42]  
 Graveler:  [Lv.42]  
 Wailord:  [Lv.42]  
 
-## Cooltrainer MICHELLE
+## Cooltrainer F MICHELLE
 Torkoal:  [Lv.42]  
 Medicham:  [Lv.42]  
 Ludicolo:  [Lv.42]  
 
-## Cooltrainer JULIE
+## Cooltrainer F JULIE
 Sandslash:  [Lv.42]  
 Ninetales:  [Lv.42]  
 Tropius:  [Lv.42]  
@@ -3256,7 +3256,7 @@ Xatu: Psychic, Sunny Day, Confuse Ray, Calm Mind [Lv.41]
 Lunatone @Sitrus Berry: Light Screen, Psychic, Hypnosis, Calm Mind [Lv.42]  
 Solrock @Sitrus Berry: Sunny Day, Solar Beam, Psychic, Flamethrower [Lv.42]  
 
-## Pokefan COLTON
+## Pokefan M COLTON
 Skitty @Oran Berry: Assist, Charm, Feint Attack, Heal Bell [Lv.22]  
 Skitty @Oran Berry: Assist, Charm, Feint Attack, Heal Bell [Lv.36]  
 Skitty @Oran Berry: Assist, Charm, Feint Attack, Heal Bell [Lv.40]  
@@ -3264,13 +3264,13 @@ Skitty @Oran Berry: Assist, Charm, Feint Attack, Heal Bell [Lv.12]
 Skitty @Oran Berry: Assist, Charm, Feint Attack, Heal Bell [Lv.30]  
 Delcatty @Oran Berry: Assist, Charm, Feint Attack, Heal Bell [Lv.42]  
 
-## Expert TIMOTHY
+## Expert M TIMOTHY
 Hariyama: Arm Thrust, Belly Drum, Sand Attack, Dig [Lv.42]  
 
-## Triathlete ISAIAH
+## Triathlete M ISAIAH
 Staryu:  [Lv.42]  
 
-## Triathlete KATELYN
+## Triathlete F KATELYN
 Staryu:  [Lv.42]  
 
 ## Sailor ERNEST
@@ -3278,7 +3278,7 @@ Pelipper:  [Lv.42]
 Tentacool:  [Lv.42]  
 Machoke:  [Lv.42]  
 
-## Cooltrainer GERALD
+## Cooltrainer M GERALD
 Sunflora @Leftovers: Weather Ball, Solar Beam, Synthesis, Earth Power [Lv.41 | Drought | Calm Nature]  
 Charizard @Heavy-Duty Boots: Solar Beam, Heat Wave, Air Slash, Scorching Sands [Lv.42 | Solar Power | Timid Nature]  
 Turtonator @Absorb Bulb: Shell Trap, Flamethrower, Solar Beam, Dragon Pulse [Lv.42 | Shell Armor | Modest Nature]  
@@ -3305,19 +3305,19 @@ Mightyena:  [Lv.41]
 Crobat:  [Lv.41]  
 Sharpedo:  [Lv.43]  
 
-## Cooltrainer FELIX
+## Cooltrainer M FELIX
 Medicham: Psychic [Lv.43]  
 Claydol: Skill Swap, Earthquake [Lv.43]  
 
-## Cooltrainer EDGAR
+## Cooltrainer M EDGAR
 Cacturne:  [Lv.43]  
 Pelipper:  [Lv.43]  
 
-## Cooltrainer ALBERT
+## Cooltrainer M ALBERT
 Magneton:  [Lv.43]  
 Muk:  [Lv.43]  
 
-## Cooltrainer CAROLINE
+## Cooltrainer F CAROLINE
 Skarmory:  [Lv.43]  
 Sableye:  [Lv.43]  
 
@@ -3327,19 +3327,19 @@ Camerupt @Passho Berry: Solar Beam, Flamethrower, Earth Power, Ancient Power [Lv
 Rotom-Heat @Choice Specs: Volt Switch, Overheat [Lv.43 | Levitate | Modest Nature]  
 Blaziken: Swords Dance, Close Combat, Flare Blitz, Earthquake [Lv.43 | Speed Boost | Jolly Nature]  
 
-## Psychic JACKI
+## Psychic F JACKI
 Lunatone:  [Lv.43]  
 Alakazam:  [Lv.43]  
 
-## Cooltrainer QUINCY
+## Cooltrainer M QUINCY
 Slaking: Attract, Ice Beam, Thunderbolt, Flamethrower [Lv.43]  
 Dusclops: Skill Swap, Protect, Will O Wisp, Toxic [Lv.43]  
 
-## Cooltrainer KATELYNN
+## Cooltrainer F KATELYNN
 Gardevoir: Skill Swap, Psychic, Thunderbolt, Calm Mind [Lv.43]  
 Slaking: Earthquake, Shadow Ball, Aerial Ace, Brick Break [Lv.43]  
 
-## Cooltrainer DIANNE
+## Cooltrainer F DIANNE
 Claydol: Skill Swap, Earthquake [Lv.43]  
 Lanturn: Thunderbolt, Earthquake [Lv.43]  
 
@@ -3352,11 +3352,11 @@ Machop:  [Lv.43]
 Pelipper:  [Lv.43]  
 Machoke:  [Lv.43]  
 
-## Cooltrainer MITCHELL
+## Cooltrainer M MITCHELL
 Lunatone: Explosion, Reflect, Light Screen, Psychic [Lv.43]  
 Solrock: Explosion, Reflect, Light Screen, Shadow Ball [Lv.43]  
 
-## Cooltrainer HALLE
+## Cooltrainer F HALLE
 Sableye:  [Lv.43]  
 Absol:  [Lv.43]  
 
@@ -3364,7 +3364,7 @@ Absol:  [Lv.43]
 Medicham: Psychic, Fire Punch, Psych Up, Protect [Lv.43]  
 Hariyama: Focus Punch, Rock Tomb, Rest, Belly Drum [Lv.43]  
 
-## Triathlete PABLO
+## Triathlete M PABLO
 Pelipper:  [Lv.43]  
 Starmie:  [Lv.43]  
 Starmie:  [Lv.43]  
@@ -3419,10 +3419,10 @@ Gliscor @Toxic Orb: Protect, High Horsepower, Knock Off, Dual Wingbeat [Lv.45 | 
 Nidoqueen @Life Orb: Sludge Wave, Thunderbolt, Ice Beam, Tectonic Power [Lv.45 | Sheer Force | Timid Nature]  
 Gastrodon @Leftovers: Scald, Earth Power, Ice Beam, Recover [Lv.45 | Storm Drain | Quiet Nature]  
 
-## Cooltrainer HOPE
+## Cooltrainer F HOPE
 Roselia:  [Lv.45]  
 
-## Cooltrainer SHANNON
+## Cooltrainer F SHANNON
 Claydol:  [Lv.45]  
 
 ## Lady NAOMI
@@ -3431,7 +3431,7 @@ Roselia @Nugget:  [Lv.45]
 ## Rich Boy GARRET
 Azumarill @Nugget:  [Lv.45]  
 
-## Psychic CAMERON
+## Psychic M CAMERON
 Solrock:  [Lv.45]  
 Alakazam:  [Lv.45]  
 
@@ -3446,10 +3446,10 @@ Ceruledge @Spell Tag: Bitter Blade, Poltergeist, Swords Dance, Will-O-Wisp [Lv.4
 Scovillain @Choice Specs: Giga Drain, Overheat [Lv.43 | Chlorophyll]  
 Cherrim @Life Orb: Solar Blade, Temper Flare, Morning Sun, Protect [Lv.44 | Flower Gift | Adamant Nature]  
 
-## Triathlete ISAIAH
+## Triathlete M ISAIAH
 Starmie:  [Lv.45]  
 
-## Triathlete KATELYN
+## Triathlete F KATELYN
 Starmie:  [Lv.45]  
 
 ## Swimmer F JENNY
@@ -3525,7 +3525,7 @@ Magmortar @Wise Glasses: Aura Sphere, Armor Cannon, Dark Pulse, Earth Power [Lv.
 Claydol @Light Clay: Stealth Rock, Psychic, Reflect, Light Screen [Lv.46 | Levitate | Bold Nature]  
 Lunatone @Chople Berry: Dark Pulse, Nasty Plot, Power Gem, Meteor Beam [Lv.46 | Levitate | Modest Nature]  
 Solrock @Passho Berry: Zen Headbutt, Flare Blitz, Stone Edge, Earthquake [Lv.46 | Levitate | Jolly Nature]  
-Heliolisk @Expert Belt: Hyper Voice, Hidden Power, Thunderbolt, Grass Knot [Lv.46 | Sand Veil | Modest Nature | IVs 1/30/30/31/31/31]  
+Heliolisk @Expert Belt: Hyper Voice, Hidden Power Ground, Thunderbolt, Grass Knot [Lv.46 | Sand Veil | Modest Nature | IVs 31/1/31/30/30/31]  
 
 ## Leader JUAN
 Luvdisc: Water Pulse, Attract, Sweet Kiss, Flail [Lv.41]  
@@ -3591,10 +3591,10 @@ Camerupt @Soft Sand: Earth Power, Flamethrower, Ancient Power, Overheat [Lv.48 |
 Crobat: Acrobatics, Cross Poison, U-turn, Roost [Lv.47 | Infiltrator]  
 Sandslash @Bright Powder: Earthquake, Stone Edge, Focus Punch, Substitute [Lv.46 | Sand Veil | Jolly Nature]  
 
-## Triathlete ISAIAH
+## Triathlete M ISAIAH
 Starmie:  [Lv.48]  
 
-## Triathlete KATELYN
+## Triathlete F KATELYN
 Starmie:  [Lv.48]  
 
 ## Rival WALLY
@@ -3642,21 +3642,21 @@ Cofagrigus @Leftovers: Pain Split, Will-O-Wisp, Shadow Ball, Destiny Bond [Lv.50
 Claydol @Leftovers: Earth Power, Psychic, Ancient Power, Explosion [Lv.50 | Levitate | Modest Nature]  
 Golurk @Punching Glove: Shadow Punch, Drain Punch, Ice Punch, Thunder Punch [Lv.50 | Iron Fist | Jolly Nature]  
 
-## Triathlete JACOB
+## Triathlete M JACOB
 Skarmory @Leftovers: Iron Defense, Body Press, Steel Wing, Roost [Lv.49 | Weak Armor | Impish Nature]  
 Jolteon @Magnet: Thunderbolt, Volt Switch, Alluring Voice [Lv.49 | Lightning Rod | Modest Nature]  
 Noivern @Throat Spray: Boomburst, Dragon Pulse, Hurricane, U-turn [Lv.49 | Infiltrator | Timid Nature]  
 Accelgor @Life Orb: Bug Buzz, Pursuit, Dark Pulse, Giga Drain [Lv.49 | Sheer Force | Timid Nature]  
 Rapidash @Choice Band: Double-Edge, Flare Blitz [Lv.50 | Reckless | Jolly Nature]  
 
-## Triathlete ANTHONY
+## Triathlete M ANTHONY
 Dodrio @Life Orb: Brave Bird, Body Slam, Drill Run, Jump Kick [Lv.48 | Adaptability | Jolly Nature]  
 Fearow @Scope Lens: Drill Peck, Drill Run, Roost, Pursuit [Lv.48 | Sniper]  
 Swellow @Flame Orb: Facade, Brave Bird, Protect, U-turn [Lv.50 | Guts | Adamant Nature]  
 Staraptor @Silk Scarf: Double-Edge, Brave Bird, Close Combat, Roost [Lv.48 | Reckless]  
-Unfezant @Choice Specs: Air Slash, Hidden Power, Hyper Voice, U-turn [Lv.49 | Super Luck | Timid Nature | IVs 30/31/31/31/31/31]  
+Unfezant @Choice Specs: Air Slash, Hidden Power Dragon, Hyper Voice, U-turn [Lv.49 | Super Luck | Timid Nature | IVs 31/30/31/31/31/31]  
 
-## Triathlete BENJAMIN
+## Triathlete M BENJAMIN
 Cyclizar @Sitrus Berry: Dragon Claw, Giga Impact, U-turn, Quick Attack [Lv.50 | Shed Skin | Jolly Nature]  
 Talonflame @Sharp Beak: Brave Bird, Flame Charge, Roost, Steel Wing [Lv.49 | Gale Wings | Jolly Nature]  
 Toxtricity @Throat Spray: Overdrive, Sludge Bomb, Boomburst, Shift Gear [Lv.49 | Punk Rock | Timid Nature]  
@@ -3664,18 +3664,18 @@ Garbodor @King's Rock: Gunk Shot, Stockpile, Swallow, Deterio [Lv.50 | Stench]
 Crobat @Black Sludge: Brave Bird, Cross Poison, U-turn, Roost [Lv.49 | Inner Focus | Jolly Nature]  
 Revavroom @Air Balloon: Iron Head, Poison Jab, Shift Gear, High Horsepower [Lv.48 | Overcoat | Jolly Nature]  
 
-## Triathlete JASMINE
+## Triathlete F JASMINE
 Purugly @Hard Stone: Defense Curl, Rollout, Fake Out, Return [Lv.50 | Defiant | Jolly Nature]  
 Golem @Focus Band: Defense Curl, Rollout [Lv.50 | Sturdy | Adamant Nature]  
 Donphan @Quick Claw: Defense Curl, Rollout [Lv.50 | Sturdy | Adamant Nature]  
 Shuckle @Sitrus Berry: Power Trick, Rollout [Lv.50 | Gluttony | Adamant Nature]  
 Miltank @Muscle Band: Defense Curl, Rollout [Lv.50 | Scrappy | Adamant Nature]  
 
-## Triathlete ABIGAIL
+## Triathlete F ABIGAIL
 Magnezone @Custap Berry: Explosion, Discharge, Flash Cannon, Body Press [Lv.48 | Sturdy | Bold Nature]  
-Electrode @Air Balloon: Explosion, Thunderbolt, Flash Cannon, Hidden Power [Lv.48 | Aftermath | Modest Nature | IVs 31/31/31/31/31/31]  
+Electrode @Air Balloon: Explosion, Thunderbolt, Flash Cannon, Hidden Power Dark [Lv.48 | Aftermath | Modest Nature | IVs 31/31/31/31/31/31]  
 Zebstrika @Choice Band: High Horsepower, Thunderous Kick, Stomp, Supercell Slam [Lv.49 | Iron Kick | Jolly Nature]  
-Manectric @Magnet: Electric Terrain, Rising Voltage, Discharge, Hidden Power [Lv.50 | Lightning Rod | Modest Nature | IVs 0/30/31/31/31/31]  
+Manectric @Magnet: Electric Terrain, Rising Voltage, Discharge, Hidden Power Ice [Lv.50 | Lightning Rod | Modest Nature | IVs 31/0/30/31/31/31]  
 Pachirisu @Sitrus Berry: U-turn, Super Fang, Thunder Wave, Encore [Volt Absorb | Timid Nature]  
 
 ## Picnicker HEIDI
@@ -3691,7 +3691,7 @@ Krookodile @Choice Band: Earthquake, Knock Off, Darkest Lariat, Brick Break [Lv.
 ## Magma Leader MAXIE
 Hippowdon @Leftovers: Stealth Rock, Roar, Stone Edge, Earthquake [Lv.48 | Sand Stream | Adamant Nature]  
 Maractus @Absorb Bulb: Shore Up, Earth Power, Giga Drain, Weather Ball [Lv.48 | Sand Force | Modest Nature]  
-Camerupt @Cameruptite: Earth Power, Heat Wave, Hidden Power, Eruption [Lv.49 | Magma Armor | Modest Nature | IVs 0/31/31/31/31/31]  
+Camerupt @Cameruptite: Earth Power, Heat Wave, Hidden Power Dragon, Eruption [Lv.49 | Magma Armor | Modest Nature | IVs 31/0/31/31/31/31]  
 Volcarona @Safety Goggles: Quiver Dance, Fiery Dance, Bug Buzz, Giga Drain [Lv.48 | Flame Body | Timid Nature]  
 Garchomp: Scale Shot, Stone Edge, Earthquake, Brick Break [Lv.49 | Sand Veil | Adamant Nature]  
 Regirock @Leftovers: Stone Edge, Body Press, Earthquake, Iron Defense [Lv.50 | Clear Body | Impish Nature]  
@@ -3775,7 +3775,7 @@ Kingdra @Chesto Berry: Water Pulse, Double Team, Ice Beam, Rest [Lv.51]
 Kabutops @Expert Belt: Aqua Cutter, Ceaseless Edge, Stone Axe [Lv.52 | Sharpness]  
 Omastar @Rindo Berry: Meteor Beam, Muddy Water, Earth Power, Protect [Lv.52 | Solid Rock | Modest Nature]  
 
-## Cooltrainer RANDALL
+## Cooltrainer M RANDALL
 Dudunsparce @Rocky Helmet: Pursuit, Coil, Body Slam, Roost [Lv.51 | Serene Grace | Adamant Nature]  
 Raticate-Alola @Wide Lens: Pursuit, Return, U-turn, Sucker Punch [Lv.51 | Hustle | Brave Nature]  
 Fearow @Scope Lens: Pursuit, Drill Peck, Facade, Drill Run [Lv.51 | Sniper | Jolly Nature]  
@@ -3783,7 +3783,7 @@ Gumshoos @Choice Band: Pursuit, Double-Edge [Lv.52 | Stakeout | Adamant Nature]
 Gothitelle @Leftovers: Nasty Plot, Protect, Psychic Noise, Shadow Ball [Lv.51 | Shadow Tag | Modest Nature]  
 Azurill @Focus Sash: Perish Song, Whirlpool [Lv.1 | Sap Sipper]  
 
-## Cooltrainer MARY
+## Cooltrainer F MARY
 Bouffalant @Focus Sash: Double Team, Work Up, Smart Strike, Head Charge [Lv.51 | Reckless]  
 Clefable @Life Orb: Minimize, Moonblast, Moonlight, Mystical Fire [Lv.51 | Magic Guard | Modest Nature]  
 Wigglytuff @Focus Band: Minimize, Mud-Slap, Return, Play Rough [Lv.51 | Cute Charm | Jolly Nature]  
@@ -3811,7 +3811,7 @@ Medicham: Focus Punch, Light Screen, Reflect, Psychic [Lv.48]
 Hitmontop: Pursuit, Counter, Protect, Triple Kick [Lv.50]  
 Hariyama @Sitrus Berry: Fake Out, Focus Punch, Belly Drum, Earthquake [Lv.52]  
 
-## Cooltrainer PARKER
+## Cooltrainer M PARKER
 Blissey @Leftovers: Metronome [Lv.53 | Natural Cure | Calm Nature]  
 Grafaiai @Metronome: Metronome [Lv.52 | Prankster | Adamant Nature]  
 Slaking @Rocky Helmet: Metronome [Lv.53 | Truant | Adamant Nature]  
@@ -3819,7 +3819,7 @@ Meloetta @Metronome: Metronome [Lv.52 | Serene Grace | Modest Nature]
 Wigglytuff @Metronome: Metronome [Lv.52 | Cute Charm | Modest Nature]  
 Miltank @Metronome: Metronome [Lv.53 | Scrappy | Impish Nature]  
 
-## Cooltrainer GEORGE
+## Cooltrainer M GEORGE
 Braviary @Life Orb: Close Combat, Roost, Double-Edge, Brave Bird [Lv.52 | Sheer Force | Adamant Nature]  
 Blissey @Leftovers: Thunder Wave, Soft-Boiled, Seismic Toss, Hyper Voice [Lv.52 | Natural Cure | Calm Nature]  
 Drampa @Sitrus Berry: Hyper Voice, Dragon Pulse, Roost, Thunderbolt [Lv.52 | Berserk | Modest Nature]  
@@ -3827,7 +3827,7 @@ Audino @Leftovers: Wish, Protect, Dazzling Gleam, Hyper Voice [Lv.52 | Regenerat
 Dunsparce @Eviolite: Roost, Body Slam, Earthquake, Coil [Lv.52 | Serene Grace]  
 Arboliva @Sitrus Berry: Substitute, Protect, Leech Seed, Hyper Voice [Lv.53 | Harvest]  
 
-## Cooltrainer ALEXIA
+## Cooltrainer F ALEXIA
 Dubwool @Leftovers: Body Press, Cotton Guard, Facade, Zen Headbutt [Lv.52 | Fluffy]  
 Type: Null @Eviolite: Return, Shadow Claw, Sleep Talk, Rest [Lv.52 | Battle Armor | Impish Nature]  
 Bewear @Leftovers: Swords Dance, Drain Punch, Facade, Shadow Claw [Lv.52 | Fluffy | Adamant Nature]  
@@ -3842,7 +3842,7 @@ Sealeo: Attract, Double Edge, Hail, Blizzard [Lv.52]
 Glalie: Shadow Ball, Explosion, Hail, Ice Beam [Lv.52]  
 Walrein @Sitrus Berry: Surf, Body Slam, Ice Beam, Sheer Cold [Lv.53]  
 
-## Cooltrainer JODY
+## Cooltrainer F JODY
 Ursaluna @Flame Orb: Protect, Facade, Headlong Rush, Thunder Punch [Lv.52 | Guts | Adamant Nature]  
 Maushold-Four @Wide Lens: Tidy Up, Population Bomb, Taunt [Lv.54 | Technician | Adamant Nature]  
 Staraptor @Choice Band: Brave Bird, Double-Edge, U-turn, Close Combat [Lv.54 | Reckless | Adamant Nature]  
@@ -3911,7 +3911,7 @@ Xatu @Chesto Berry: Psychic, Rest, Confuse Ray, Calm Mind [Lv.54]
 Lunatone @Chesto Berry: Earthquake, Psychic, Rest, Calm Mind [Lv.55]  
 Solrock @Sitrus Berry: Sunny Day, Solar Beam, Psychic, Flamethrower [Lv.55]  
 
-## Cooltrainer BERKE
+## Cooltrainer M BERKE
 Smeargle @Focus Band: Fissure, Sheer Cold, Guillotine, Fake Out [Lv.56 | Moody]  
 Liepard @Focus Band: Assist [Lv.56 | Prankster | Gentle Nature]  
 Delcatty @Focus Band: Assist [Lv.56 | Cute Charm | Jolly Nature]  

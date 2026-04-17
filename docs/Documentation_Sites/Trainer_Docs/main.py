@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import html
 import unicodedata
 from typing import List, Optional
 
@@ -28,6 +29,8 @@ class Trainer:
         self.name: str = ""
         self.trainer_id: Optional[str] = None
         self.double_battle: str = "No"
+        self.trainer_class: Optional[str] = None
+        self.trainer_pic: Optional[str] = None
         self.party: List[Pokemon] = []
 
 # =============================
@@ -85,6 +88,61 @@ def ensure_default_ivs(mon: Pokemon):
     if mon.ivs is None:
         mon.ivs = {"hp": 31, "at": 31, "df": 31, "sa": 31, "sd": 31, "sp": 31}
 
+HIDDEN_POWER_TYPES = [
+    "Fighting", "Flying", "Poison", "Ground",
+    "Rock", "Bug", "Ghost", "Steel",
+    "Fire", "Water", "Grass", "Electric",
+    "Psychic", "Ice", "Dragon", "Dark",
+]
+
+def hidden_power_type_from_ivs(ivs: Optional[dict]) -> str:
+    values = ivs or {"hp": 31, "at": 31, "df": 31, "sa": 31, "sd": 31, "sp": 31}
+    hp = int(values.get("hp", 31))
+    at = int(values.get("at", 31))
+    df = int(values.get("df", 31))
+    sa = int(values.get("sa", 31))
+    sd = int(values.get("sd", 31))
+    sp = int(values.get("sp", 31))
+    hidden_idx = ((hp % 2) + 2 * (at % 2) + 4 * (df % 2) + 8 * (sp % 2) + 16 * (sa % 2) + 32 * (sd % 2)) * 5 // 21
+    return HIDDEN_POWER_TYPES[hidden_idx]
+
+def normalize_hidden_power_move(move: str, ivs: Optional[dict]) -> str:
+    text = (move or "").strip()
+    if not text:
+        return text
+    m = re.match(r"^hidden power(?:\s+([a-z]+))?$", text, flags=re.I)
+    if not m:
+        return text
+    explicit = m.group(1)
+    if explicit:
+        return f"Hidden Power {explicit.capitalize()}"
+    return f"Hidden Power {hidden_power_type_from_ivs(ivs)}"
+
+def normalize_hidden_power_moves(mon: Pokemon):
+    if not mon.moves:
+        return
+    mon.moves = [normalize_hidden_power_move(move, mon.ivs) for move in mon.moves]
+
+def build_display_name(trainer_class: Optional[str], trainer_name: Optional[str], trainer_pic: Optional[str]) -> str:
+    left = (trainer_class or "").strip()
+    right = (trainer_name or "").strip()
+    pic = (trainer_pic or "").strip()
+
+    if pic in {
+        "Swimmer M", "Swimmer F", "Cooltrainer M", "Cooltrainer F",
+        "School Kid M", "School Kid F", "Pokefan M", "Pokefan F",
+        "Expert M", "Expert F", "Psychic M", "Psychic F",
+    }:
+        left = pic
+    elif pic.startswith("Pokemon Breeder"):
+        left = pic
+    else:
+        triathlete_match = re.match(r"^(?:[A-Za-z]+\s+)?Triathlete\s+([MF])$", pic)
+        if triathlete_match:
+            left = f"Triathlete {triathlete_match.group(1)}"
+
+    return (left + " " + right).strip() or right or "Unknown"
+
 def parse_parties(lines: List[str]) -> List[Trainer]:
     trainer_parties: List[Trainer] = []
     trainer: Optional[Trainer] = None
@@ -94,12 +152,14 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
     mon_index = 0
     trainer_name = None
     trainer_class = None
+    trainer_pic = None
     trainer_id = None
 
     def close_mon():
         nonlocal parsing_mon, pokemon, mon_index, trainer
         if parsing_mon and pokemon:
             ensure_default_ivs(pokemon)
+            normalize_hidden_power_moves(pokemon)
             pokemon.index = mon_index
             mon_index += 1
             if trainer:
@@ -127,11 +187,15 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
             close_mon()
             close_trainer()
             trainer = Trainer()
-            left = (trainer_class or "").strip()
-            right = (trainer_name or "").strip()
-            trainer.name = (left + " " + right).strip() or (trainer_name or "Unknown")
+            trainer.name = build_display_name(trainer_class, trainer_name, trainer_pic)
             trainer.trainer_id = trainer_id
+            trainer.trainer_class = trainer_class
             mon_index = 0
+        elif line.startswith("Pic:"):
+            trainer_pic = line.split(":", 1)[1].strip()
+            if trainer:
+                trainer.trainer_pic = trainer_pic
+                trainer.name = build_display_name(trainer_class, trainer_name, trainer_pic)
         elif line.startswith("Double Battle:"):
             if trainer:
                 trainer.double_battle = line.split(":", 1)[1].strip()
@@ -145,6 +209,7 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
                 trainer = None
                 trainer_name = None
                 trainer_class = None
+                trainer_pic = None
 
         elif (prev_line == "\n") and not any(line.startswith(p) for p in ("Name:", "Class:", "Double Battle:") + IGNORED_PREFIXES) and line.strip():
             parsing_mon = True
@@ -171,18 +236,21 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
                 if m:
                     pokemon.nature = m.group(1).strip()
             elif line.startswith("IVs:"):
+                _STAT_NAME_MAP = {"hp": "hp", "atk": "at", "def": "df", "spa": "sa", "spd": "sd", "spe": "sp"}
                 ival = line.split(":", 1)[1].strip()
-                chunks = [seg.split(" ")[0].strip() for seg in ival.split(" / ")]
-                while len(chunks) < 6:
-                    chunks.append("31")
-                pokemon.ivs = {
-                    "hp": int(chunks[0] or 31),
-                    "at": int(chunks[1] or 31),
-                    "df": int(chunks[2] or 31),
-                    "sa": int(chunks[3] or 31),
-                    "sd": int(chunks[4] or 31),
-                    "sp": int(chunks[5] or 31),
-                }
+                ivs = {"hp": 31, "at": 31, "df": 31, "sa": 31, "sd": 31, "sp": 31}
+                for seg in ival.split("/"):
+                    seg = seg.strip()
+                    parts = seg.split()
+                    if len(parts) == 2:
+                        val_str, stat_name = parts
+                        key = _STAT_NAME_MAP.get(stat_name.lower())
+                        if key:
+                            ivs[key] = int(val_str)
+                    elif len(parts) == 1 and parts[0].isdigit():
+                        # positional fallback (shouldn't happen in Showdown format)
+                        pass
+                pokemon.ivs = ivs
                 pokemon.ivs_specified = True
             elif line.startswith("- "):
                 pokemon.moves.append(line[2:].strip())
@@ -193,6 +261,7 @@ def parse_parties(lines: List[str]) -> List[Trainer]:
 
     if parsing_mon and pokemon:
         ensure_default_ivs(pokemon)
+        normalize_hidden_power_moves(pokemon)
         pokemon.index = mon_index
         if trainer:
             trainer.party.append(pokemon)
@@ -242,44 +311,87 @@ def generate_mastersheet(trainers: List[Trainer]) -> str:
 # =============================
 # Output: JS (per calculator)
 # =============================
-def _trainer_id_suffix_num(trainer_id: Optional[str]) -> Optional[int]:
+def _is_relevant_trainer(trainer: Trainer) -> bool:
+    """A trainer is relevant if at least one Pokemon has at least one move."""
+    return any(bool(mon.moves) for mon in trainer.party)
+
+def _location_suffix(trainer_id: Optional[str], trainer_name: str) -> Optional[str]:
+    """Extract a human-readable location/version suffix from the trainer_id.
+
+    Examples:
+      TRAINER_GRUNT_RUSTURF_TUNNEL       + "Team Aqua GRUNT"   -> "Rusturf Tunnel"
+      TRAINER_MAGMA_GRUNT_ROUTE114       + "Team Magma GRUNT"  -> "Route114"
+      TRAINER_WINONA_3                   + "Leader WINONA"     -> "3"
+      TRAINER_DECLAN                     + "Swimmer M DECLAN"  -> None (exact match)
+    """
     if not trainer_id:
         return None
-    m = re.search(r"_(\d+)$", trainer_id.strip())
-    return int(m.group(1)) if m else None
+    tid = trainer_id.upper()
+    for prefix in ("TRAINER_", "PARTNER_"):
+        if tid.startswith(prefix):
+            tid = tid[len(prefix):]
+            break
 
-def pick_primary_calc_trainers(trainers: List[Trainer]) -> List[tuple[str, Trainer]]:
-    chosen: dict[str, Trainer] = {}
-    order: List[str] = []
+    # Try progressively more words from the right side of the name as the key.
+    # e.g. "Team Magma GRUNT" -> try "GRUNT", then "MAGMA_GRUNT", then "TEAM_MAGMA_GRUNT"
+    name_words = re.sub(r"[^A-Z0-9 ]", "", trainer_name.upper()).split()
+    if not name_words:
+        return None
 
-    for tr in trainers:
-        base = (tr.name or "Unknown").strip() or "Unknown"
-        if base not in chosen:
-            chosen[base] = tr
-            order.append(base)
-            continue
-
-        cur = chosen[base]
-        cur_n = _trainer_id_suffix_num(cur.trainer_id)
-        new_n = _trainer_id_suffix_num(tr.trainer_id)
-
-        # Prefer the primary roster (_1), otherwise keep the earliest seen.
-        if new_n is not None and (cur_n is None or new_n < cur_n):
-            chosen[base] = tr
-
-    return [(name, chosen[name]) for name in order]
+    for n in range(1, len(name_words) + 1):
+        name_key = "_".join(name_words[-n:])
+        if tid == name_key:
+            return None  # exact match, no suffix
+        if tid.startswith(name_key + "_"):
+            suffix = tid[len(name_key) + 1:]
+            return suffix.replace("_", " ").title()
+    return None
 
 def generate_cals_sets(trainers: List[Trainer]) -> str:
-    data = {}
-    for trainer_index, (tr_label, tr) in enumerate(pick_primary_calc_trainers(trainers), start=1):
+    # Numeric-versioned trainers (e.g., WINONA_1..5): keep only the lowest version,
+    # displayed without the number. Location-based variants keep individual entries.
+    best_numeric: dict[str, tuple[int, Trainer]] = {}
+    for tr in trainers:
+        if not _is_relevant_trainer(tr):
+            continue
+        base = (tr.name or "Unknown").strip() or "Unknown"
+        suffix = _location_suffix(tr.trainer_id, base)
+        if suffix is not None and suffix.isdigit():
+            num = int(suffix)
+            if base not in best_numeric or num < best_numeric[base][0]:
+                best_numeric[base] = (num, tr)
+
+    data: dict = {}
+    used_labels: dict[str, int] = {}
+    trainer_index = 0
+    seen_numeric: set[str] = set()
+    for tr in trainers:
+        if not _is_relevant_trainer(tr):
+            continue
+        base = (tr.name or "Unknown").strip() or "Unknown"
+        suffix = _location_suffix(tr.trainer_id, base)
+        if suffix is not None and suffix.isdigit():
+            if best_numeric.get(base, (None, None))[1] is not tr or base in seen_numeric:
+                continue
+            seen_numeric.add(base)
+            tr_label = base
+        else:
+            tr_label = f"{base} ({suffix})" if suffix else base
+
+        trainer_index += 1
+        if tr_label in used_labels:
+            used_labels[tr_label] += 1
+            tr_label = f"{tr_label} [{used_labels[tr_label]}]"
+        else:
+            used_labels[tr_label] = 1
+
         fallback_level = next((m.level for m in tr.party if m.level), "1")
         for slot_fallback, mon in enumerate(tr.party):
-            species = (mon.species or "").strip()
+            species = re.sub(r"\s*\((?:M|F)\)\s*$", "", (mon.species or "").strip())
             if not species:
                 continue
-            data.setdefault(species, {})
             slot_index = mon.index if mon.index is not None else slot_fallback
-            data[species][tr_label] = {
+            data.setdefault(species, {})[tr_label] = {
                 "index": trainer_index,
                 "slot": slot_index,
                 "level": mon.level if mon.level else fallback_level,
@@ -328,9 +440,111 @@ def sprite_url(species: str) -> str:
         "kommo-o": "kommoo",
         "nidoran-f": "nidoranf",
         "nidoran-m": "nidoranm",
+        "oricorio-pom-pom": "oricorio-pompom",
+        "tauros-paldea-combat": "taurospaldeacombat",
+        "tauros-paldea-aqua": "taurospaldeaaqua",
+        "tauros-paldea-blaze": "taurospaldeablaze",
     }
     s = aliases.get(s, s)
     return f"https://play.pokemonshowdown.com/sprites/gen5/{s}.png"
+
+def sprite_sources(species: str) -> List[str]:
+    if not species:
+        return []
+
+    aliases = {
+        "Zygarde-10%": "Zygarde-10%25",
+        "Tauros-Paldea-Water": "Tauros-Paldea-Aqua",
+        "Tauros-Paldea-Fire": "Tauros-Paldea-Blaze",
+        "Tauros-Paldea": "Tauros-Paldea-Combat",
+        "Pumpkaboo-Super": "Pumpkaboo",
+        "Aegislash-Shield": "Aegislash",
+    }
+    showdown_aliases = {
+        "porygon-z": "porygonz",
+        "mr-mime": "mrmime",
+        "mr-mime-galar": "mrmime-galar",
+        "mime-jr": "mimejr",
+        "type-null": "typenull",
+        "jangmo-o": "jangmoo",
+        "hakamo-o": "hakamoo",
+        "kommo-o": "kommoo",
+        "nidoran-f": "nidoranf",
+        "nidoran-m": "nidoranm",
+        "oricorio-pom-pom": "oricorio-pompom",
+        "tauros-paldea-combat": "taurospaldeacombat",
+        "tauros-paldea-aqua": "taurospaldeaaqua",
+        "tauros-paldea-blaze": "taurospaldeablaze",
+    }
+
+    def normalized_species_name(name: str) -> str:
+        return re.sub(r"\s*\((?:M|F|Male|Female)\)\s*$", "", name or "", flags=re.I).strip()
+
+    def sprite_file_name(name: str) -> str:
+        return aliases.get(normalized_species_name(name), normalized_species_name(name))
+
+    def showdown_sprite_id(name: str) -> str:
+        s = sprite_file_name(name)
+        s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
+        s = s.lower().strip()
+        s = re.sub(r"[.\'â€™_:]", "", s)
+        s = s.replace(" ", "")
+        return showdown_aliases.get(s, s)
+
+    def push(candidates: List[str], candidate: str):
+        if candidate and candidate not in candidates:
+            candidates.append(candidate)
+
+    def add_variants(candidates: List[str], name: str):
+        if not name:
+            return
+        aliased = sprite_file_name(name)
+        compact = re.sub(r"[%':.]", "", name).replace(" ", "%20")
+        compact_aliased = re.sub(r"[%':.]", "", aliased).replace(" ", "%20")
+        push(candidates, aliased)
+        push(candidates, normalized_species_name(name))
+        push(candidates, compact)
+        push(candidates, compact_aliased)
+
+    name = normalized_species_name(species)
+    candidates: List[str] = []
+    add_variants(candidates, name)
+
+    urls: List[str] = []
+    showdown_id = showdown_sprite_id(name)
+    if showdown_id:
+        urls.append(f"https://play.pokemonshowdown.com/sprites/gen5/{showdown_id}.png")
+    for candidate in candidates:
+        urls.append(f"https://raw.githubusercontent.com/May8th1995/sprites/master/{candidate}.png")
+
+    base_species = name.split("-")[0] if "-" in name else name
+    if base_species and base_species != name:
+        base_showdown_id = showdown_sprite_id(base_species)
+        if base_showdown_id and base_showdown_id != showdown_id:
+            urls.append(f"https://play.pokemonshowdown.com/sprites/gen5/{base_showdown_id}.png")
+        base_candidates: List[str] = []
+        add_variants(base_candidates, base_species)
+        for candidate in base_candidates:
+            urls.append(f"https://raw.githubusercontent.com/May8th1995/sprites/master/{candidate}.png")
+
+    unique_urls: List[str] = []
+    for url in urls:
+        if url not in unique_urls:
+            unique_urls.append(url)
+    return unique_urls
+
+def sprite_img_html(species: str) -> str:
+    urls = sprite_sources(species)
+    if not urls:
+        return ""
+    escaped_urls = html.escape(json.dumps(urls), quote=True)
+    first_url = html.escape(urls[0], quote=True)
+    return (
+        f'<img src="{first_url}" alt="" '
+        f'onerror="this.dataset.try=(this.dataset.try||0)-0+1;var a={escaped_urls};'
+        f'if(this.dataset.try&lt;a.length){{this.src=a[this.dataset.try];}}'
+        f'else{{this.onerror=null;this.classList.add(\'hidden\');}}"></img>'
+    )
 
 # =============================
 # Output: Webpage with tables
@@ -343,7 +557,12 @@ def generate_webpage(trainers: List[Trainer]) -> str:
         if not real_party:
             continue
 
-        html_parts.append('<table class="content-table">')
+        trainer_id_attr = html.escape((tr.trainer_id or "").strip(), quote=True)
+        trainer_name_attr = html.escape((tr.name or "").strip(), quote=True)
+        html_parts.append(
+            f'<table class="content-table" data-trainer-id="{trainer_id_attr}" '
+            f'data-trainer-name="{trainer_name_attr}">'
+        )
         caption = tr.name + (" [Double Battle]" if tr.double_battle and tr.double_battle.strip().lower() == "yes" else "")
         html_parts.append(f'<caption class="caption-content">{caption}</caption>')
         html_parts.append("<tbody>")
@@ -352,7 +571,7 @@ def generate_webpage(trainers: List[Trainer]) -> str:
 
         html_parts.append('<tr> <!-- Images -->')
         for m in mons:
-            html_parts.append(f"<td><img src=\"{sprite_url(m.species)}\" alt=\"\"></img></td>")
+            html_parts.append(f"<td>{sprite_img_html(m.species)}</td>")
         html_parts.append("</tr>")
 
         html_parts.append('<tr> <!-- Species -->')

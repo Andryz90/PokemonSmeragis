@@ -103,7 +103,7 @@ Object.assign(window.BattleStaticEncounters, {
             "level": 5,
             "rate": "Egg",
             "mode": "static",
-            "zoneid": "route110-egg-648"
+            "zoneid": "route110-egg-647"
         }
     ],
     "clobbopus": [
@@ -128,7 +128,7 @@ Object.assign(window.BattleStaticEncounters, {
             "level": 5,
             "rate": "Egg",
             "mode": "static",
-            "zoneid": "route110-egg-648"
+            "zoneid": "route110-egg-647"
         }
     ],
     "delphoxmega": [
@@ -663,7 +663,7 @@ Object.assign(window.BattleStaticEncounters, {
             "level": 5,
             "rate": "Egg",
             "mode": "static",
-            "zoneid": "route110-egg-648"
+            "zoneid": "route110-egg-647"
         }
     ],
     "treecko": [

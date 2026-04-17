@@ -186,7 +186,7 @@ html, body {
 }
 
 .trainer-pok{
-    height:  100%;
+    height:  40px;
     width:  auto;
     margin-right:  10px;
     cursor: pointer;
@@ -203,6 +203,70 @@ html, body {
     outline-offset: 1px;
     background: rgba(26, 188, 156, 0.12);
     border-radius: 6px;
+}
+
+.doubles-extra-slot {
+    margin-top: 10px;
+}
+
+.doubles-matchup-controls {
+    margin: 8px 0;
+    padding: 8px;
+    border: 1px solid #6e92c4;
+    border-radius: 6px;
+    background: rgba(201, 222, 252, 0.72);
+}
+
+.doubles-matchup-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.doubles-matchup-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.doubles-slot-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.doubles-slot-row .doubles-extra-slot {
+    margin-top: 0;
+}
+
+.doubles-player-pokemon-row,
+.doubles-enemy-pokemon-row,
+.doubles-player-team-row,
+.doubles-enemy-team-row {
+    flex-direction: column;
+}
+
+.doubles-player-pokemon-row .poke-info,
+.doubles-enemy-pokemon-row .poke-info {
+    width: 27em;
+}
+
+.doubles-player-team-row .poke-info,
+.doubles-enemy-team-row .poke-info {
+    width: 30em;
+}
+
+@media (min-width: 175em) {
+    .doubles-player-pokemon-row,
+    .doubles-enemy-pokemon-row {
+        flex-direction: row;
+    }
+}
+
+.doubles-matchup-btn.active {
+    outline: 2px solid #1abc9c;
+    outline-offset: 1px;
 }
 
 .wrapper {
@@ -692,6 +756,8 @@ table.field {
 
 #p2mon, #p1mon, #monSingle, #monDouble {
     min-height: 30px;
+    max-height: 80px;
+    width: auto;
 }
 
 .info-paragraph > b{

@@ -1,14 +1,19 @@
-$("#p2 .ability").bind("keyup change", function () {
+$("#p2 .ability, #p4 .ability").bind("keyup change", function () {
 	autosetWeather($(this).val(), 1);
 	autosetTerrain($(this).val(), 1);
 });
 
-$("#p2 .item").bind("keyup change", function () {
-	autosetStatus("#p2", $(this).val());
+$("#p2 .item, #p4 .item").bind("keyup change", function () {
+	var pokeId = "#" + $(this).closest(".poke-info").prop("id");
+	autosetStatus(pokeId, $(this).val());
 });
 
 lastManualStatus["#p2"] = "Healthy";
-lastAutoStatus["#p1"] = "Healthy";
+lastManualStatus["#p3"] = "Healthy";
+lastManualStatus["#p4"] = "Healthy";
+lastAutoStatus["#p2"] = "Healthy";
+lastAutoStatus["#p3"] = "Healthy";
+lastAutoStatus["#p4"] = "Healthy";
 
 var resultLocations = [[], []];
 for (var i = 0; i < 4; i++) {
@@ -23,9 +28,27 @@ for (var i = 0; i < 4; i++) {
 }
 
 var damageResults;
+function getCurrentCalcPair() {
+	if (typeof getActiveCalcPairIds === "function") {
+		return getActiveCalcPairIds();
+	}
+	return { attackerId: "p1", defenderId: "p2" };
+}
+
+function slotLabel(slotId) {
+	switch (slotId) {
+		case "p1": return "Pokemon 1";
+		case "p2": return "Pokemon 2";
+		case "p3": return "Pokemon 3";
+		case "p4": return "Pokemon 4";
+		default: return slotId || "";
+	}
+}
+
 function performCalculations() {
-	var p1info = $("#p1");
-	var p2info = $("#p2");
+	var pair = getCurrentCalcPair();
+	var p1info = $("#" + pair.attackerId);
+	var p2info = $("#" + pair.defenderId);
 	var p1 = createPokemon(p1info);
 	var p2 = createPokemon(p2info);
 	var p1field = createField();
@@ -93,14 +116,16 @@ function performCalculations() {
 	}
 	bestResult.prop("checked", true);
 	bestResult.change();
-	$("#resultHeaderL").text(p1.name + "'s Moves (select one to show detailed results)");
-	$("#resultHeaderR").text(p2.name + "'s Moves (select one to show detailed results)");
+	$("#resultHeaderL").text(slotLabel(pair.attackerId) + " (" + p1.name + ") Moves (select one to show detailed results)");
+	$("#resultHeaderR").text(slotLabel(pair.defenderId) + " (" + p2.name + ") Moves (select one to show detailed results)");
 }
+window.performCalculations = performCalculations;
 
 
 function calculationsColors(p1info, p2) {
 	if (!p2) {
-		var p2info = $("#p2");
+		var pair = getCurrentCalcPair();
+		var p2info = $("#" + pair.defenderId);
 		var p2 = createPokemon(p2info);
 	}
 	var p1 = createPokemon(p1info);
