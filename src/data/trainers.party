@@ -15700,7 +15700,7 @@ Adamant Nature
 - Head Smash  
 
 Victreebel (M) @ Heat Rock  
-Ability: Lifedrainer  
+Ability: Chlorophyll  
 Level: 38  
 - Sunny Day  
 - Weather Ball  
@@ -16464,16 +16464,16 @@ Music: Male
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices/ Omniscient
 
-Tinkaton  
+Tinkaton  @ Lum Berry
 Ability: Own Tempo  
 Level: 34  
 - Gigaton Hammer  
 - Sweet Kiss  
 - Play Rough  
-- Slam  
+- Knock Off  
 
-Gardevoir (M)  
-Ability: Synchronize  
+Gardevoir (M)  @ Life Orb
+Ability: Trace  
 Level: 36  
 IVs: 0 Atk  
 - Calm Mind  
@@ -16481,15 +16481,15 @@ IVs: 0 Atk
 - Draining Kiss  
 - Shadow Ball  
 
-Azumarill (M)  
+Azumarill (M)  @ Mystic Water
 Ability: Huge Power  
 Level: 35  
 - Liquidation  
 - Aqua Jet  
 - Play Rough  
 
-Ninetales (M)  
-Ability: Flash Fire  
+Ninetales (M)  @ Heat Rock
+Ability: Drought
 Level: 35  
 IVs: 0 Atk  
 - Dazzling Gleam  
@@ -16498,13 +16498,13 @@ IVs: 0 Atk
 - Extrasensory  
 
 Bellossom (M)  
-Ability: Healer  
+Ability: Chlorophyll  
 Level: 35   
 IVs: 0 Atk  
 - Sleep Powder  
 - Moonblast  
 - Giga Drain  
-- Moonlight  
+- Weather Ball  
 
 Gallade  
 Ability: Sharpness  

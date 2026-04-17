@@ -329,7 +329,7 @@ bool8 RemoveBagItem(u16 itemId, u16 count)
 
     if (GetItemPocket(itemId) == POCKET_NONE || itemId == ITEM_NONE)
         return FALSE;
-    if (itemId == ITEM_RARE_CANDY_KEY_ITEM) 
+    if (itemId == ITEM_CAP_CANDY || itemId == ITEM_INFINITE_RARE_CANDY) 
     {
         return FALSE;
     }

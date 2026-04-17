@@ -24,6 +24,8 @@ FallarborTown_Mart_EventScript_SpecialClerk::
 
 	.align 2
 FallarborTown_Mart_SpecialPokemart:
+	.2byte ITEM_ELECTIRIZER
+	.2byte ITEM_MAGMARIZER
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_SHIELD
 	.2byte ITEM_ABSORB_BULB

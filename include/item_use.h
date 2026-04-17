@@ -54,6 +54,7 @@ void ItemUseOutOfBattle_TownMap(u8 taskId);
 //Custom 
 void ItemUseOutOfBattle_PokeVial(u8);
 void ItemUseOutOfBattle_InfiniteRepel(u8 taskId);
+void ItemUseOutOfBattle_PocketPc (u8 taskId);
 
 enum {
     BALL_THROW_UNABLE_TWO_MONS,

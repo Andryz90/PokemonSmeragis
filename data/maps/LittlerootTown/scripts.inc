@@ -616,7 +616,9 @@ LittlerootTown_RaraCandies::
 	.string "Here, take these too.  $"
 LittlerootTown_Give_KeyItems::
 	msgbox LittlerootTown_RaraCandies, MSGBOX_DEFAULT
-    giveitem ITEM_RARE_CANDY_KEY_ITEM
+    giveitem ITEM_CAP_CANDY
+	giveitem ITEM_POCKET_PC
+	giveitem ITEM_INFINITE_RARE_CANDY
 	giveitem ITEM_INFINITE_REPEL
     return
 

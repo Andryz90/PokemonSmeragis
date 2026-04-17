@@ -88,6 +88,7 @@ static void MoveSelectionDisplayMoveType(u32 battler);
 static void MoveSelectionDisplayMoveNames(u32 battler);
 static void TryMoveSelectionDisplayMoveDescription(u32 battler);
 static void MoveSelectionDisplayMoveDescription(u32 battler);
+static void ResetMoveDescriptionState(void);
 static void SwitchIn_HandleSoundAndEnd(u32 battler);
 static void WaitForMonSelection(u32 battler);
 static void CompleteWhenChoseItem(u32 battler);
@@ -773,6 +774,7 @@ void HandleInputChooseMove(u32 battler)
     {
         PlaySE(SE_SELECT);
         gBattleStruct->gimmick.playerSelect = FALSE;
+        ResetMoveDescriptionState();
         if (gBattleStruct->zmove.viewing)
         {
             ReloadMoveNames(battler);
@@ -872,13 +874,7 @@ void HandleInputChooseMove(u32 battler)
     {
         if (JOY_NEW(B_MOVE_DESCRIPTION_BUTTON) || JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON))
         {
-            gBattleStruct->descriptionSubmenu = FALSE;
-            if (gCategoryIconSpriteId != 0xFF)
-            {
-                DestroySprite(&gSprites[gCategoryIconSpriteId]);
-                gCategoryIconSpriteId = 0xFF;
-            }
-
+            ResetMoveDescriptionState();
             FillWindowPixelBuffer(B_WIN_MOVE_DESCRIPTION, PIXEL_FILL(0));
             ClearStdWindowAndFrame(B_WIN_MOVE_DESCRIPTION, FALSE);
             CopyWindowToVram(B_WIN_MOVE_DESCRIPTION, COPYWIN_GFX);
@@ -919,7 +915,7 @@ static void ReloadMoveNames(u32 battler)
     else
     {
         gBattleStruct->zmove.viewing = FALSE;
-        MoveSelectionDestroyCursorAt(battler);
+        MoveSelectionDestroyCursorAt(gMoveSelectionCursor[battler]);
         MoveSelectionDisplayMoveNames(battler);
         MoveSelectionCreateCursorAt(gMoveSelectionCursor[battler], 0);
         if (B_SHOW_EFFECTIVENESS)
@@ -1808,12 +1804,27 @@ static void MoveSelectionDisplayMoveDescription(u32 battler)
     StringAppend(gDisplayedStringBattle, GetMoveDescription(move));
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_DESCRIPTION);
 
-    if (gCategoryIconSpriteId == 0xFF)
-        gCategoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, 38, 64, 1);
+    if (gCategoryIconSpriteId == 0xFF || gCategoryIconSpriteId == MAX_SPRITES)
+    {
+        u8 spriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, 38, 64, 1);
+        if (spriteId != MAX_SPRITES)
+            gCategoryIconSpriteId = spriteId;
+        else
+            gCategoryIconSpriteId = 0xFF;
+    }
 
-    StartSpriteAnim(&gSprites[gCategoryIconSpriteId], GetBattleMoveCategory(move));
+    if (gCategoryIconSpriteId != 0xFF)
+        StartSpriteAnim(&gSprites[gCategoryIconSpriteId], GetBattleMoveCategory(move));
 
     CopyWindowToVram(B_WIN_MOVE_DESCRIPTION, COPYWIN_FULL);
+}
+
+static void ResetMoveDescriptionState(void)
+{
+    gBattleStruct->descriptionSubmenu = FALSE;
+    if (gCategoryIconSpriteId != 0xFF && gCategoryIconSpriteId != MAX_SPRITES)
+        DestroySprite(&gSprites[gCategoryIconSpriteId]);
+    gCategoryIconSpriteId = 0xFF;
 }
 
 void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 baseTileNum)
@@ -2152,6 +2163,7 @@ void PlayerHandleChooseMove(u32 battler)
     {
         struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battler][4]);
 
+        ResetMoveDescriptionState();
         InitMoveSelectionsVarsAndStrings(battler);
         gBattleStruct->gimmick.playerSelect = FALSE;
         TryToAddMoveInfoWindow();

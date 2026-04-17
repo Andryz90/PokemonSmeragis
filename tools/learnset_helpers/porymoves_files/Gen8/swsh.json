@@ -1942,20 +1942,36 @@
         "Move": "MOVE_FURY_SWIPES"
       },
       {
+        "Level": 18,
+        "Move": "MOVE_ACID"
+      },
+      {
         "Level": 22,
         "Move": "MOVE_TOXIC_SPIKES"
+      },
+      {
+        "Level": 24,
+        "Move": "MOVE_BULLDOZE"
       },
       {
         "Level": 29,
         "Move": "MOVE_DOUBLE_KICK"
       },
       {
-        "Level": 36,
+        "Level": 34,
         "Move": "MOVE_BITE"
+      },
+      {
+        "Level": 38,
+        "Move": "MOVE_SLUDGE_BOMB"
       },
       {
         "Level": 43,
         "Move": "MOVE_HELPING_HAND"
+      },
+      {
+        "Level": 48,
+        "Move": "MOVE_SLUDGE_WAVE"
       },
       {
         "Level": 50,
@@ -2007,7 +2023,8 @@
       "MOVE_TOXIC_SPIKES",
       "MOVE_POISON_JAB",
       "MOVE_EARTH_POWER",
-      "MOVE_VENOM_DRENCH"
+      "MOVE_VENOM_DRENCH",
+      "MOVE_SLUDGE_WAVE"
     ],
     "EggMoves": [
       "MOVE_COUNTER",
@@ -2024,7 +2041,7 @@
     "LevelMoves": [
       {
         "Level": 0,
-        "Move": "MOVE_SUPERPOWER"
+        "Move": "MOVE_TECTONIC_POWER"
       },
       {
         "Level": 1,
@@ -2064,10 +2081,6 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_EARTH_POWER"
-      },
-      {
-        "Level": 1,
         "Move": "MOVE_GROWL"
       },
       {
@@ -2081,6 +2094,10 @@
       {
         "Level": 1,
         "Move": "MOVE_TAIL_WHIP"
+      },
+      {
+        "Level": 1,
+        "Move": "MOVE_ACID"
       }
     ],
     "PreEvoMoves": [],
@@ -2525,7 +2542,9 @@
       "MOVE_VENOM_DRENCH",
       "MOVE_HIGH_HORSEPOWER",
       "MOVE_THROAT_CHOP",
-      "MOVE_BODY_PRESS"
+      "MOVE_BODY_PRESS",
+      "MOVE_DIRE_CLAW",
+      "MOVE_IRON_HEAD"
     ],
     "EggMoves": [
       "MOVE_CONFUSION",

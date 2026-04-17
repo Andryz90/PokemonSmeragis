@@ -1933,8 +1933,8 @@ const struct Item gItemsInfo[] =
                 .iconPic = gItemIcon_RareCandy,
                 .iconPalette = gItemIconPalette_RareCandy,
             },
-        // Infinite Candy
-        [ITEM_RARE_CANDY_KEY_ITEM] =
+        // Candy Candy
+        [ITEM_CAP_CANDY] =
             {
                 .name = _("Cap Candy"),
                 .description = COMPOUND_STRING(
@@ -1948,6 +1948,36 @@ const struct Item gItemsInfo[] =
                 .iconPic = gItemIcon_RareCandy,
                 .iconPalette = gItemIconPalette_RareCandy,
             },
+        // Infinite Candy
+        [ITEM_INFINITE_RARE_CANDY] =
+            {
+                .name = _("Infinite Candy"),
+                .description = COMPOUND_STRING(
+                    "Raises the level\n"
+                    "of a Pokémon by\n"
+                    "one, whitin level cap."),
+                .pocket = POCKET_KEY_ITEMS,
+                .type = ITEM_USE_PARTY_MENU,
+                .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
+                .effect = gItemEffect_RareCandy,
+                .iconPic = gItemIcon_RareCandy,
+                .iconPalette = gItemIconPalette_RareCandy,
+            },
+        // Pocket PC
+        [ITEM_POCKET_PC] =
+        {
+            .name = _("Pocket PC"),
+            .description = COMPOUND_STRING(
+                "Allow to have access\n"
+                "to the PC through\n"
+                "a remote terminal."),
+            .pocket = POCKET_KEY_ITEMS,
+            .type = ITEM_USE_FIELD,
+            .importance = 1,
+            .fieldUseFunc = ItemUseOutOfBattle_PocketPc,
+            .iconPic = gItemIcon_TeachyTV,
+            .iconPalette = gItemIconPalette_TeachyTV,
+        },
         [ITEM_EXP_CANDY_XS] =
             {
         .name = _("Exp. Candy XS"),

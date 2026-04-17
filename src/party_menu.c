@@ -4648,7 +4648,7 @@ void CB2_ShowPartyMenuForItemUse(void)
 
 static void CB2_ReturnToBagMenu(void)
 {
-    if (InBattlePyramid() == FALSE && gSpecialVar_ItemId != ITEM_RARE_CANDY_KEY_ITEM)
+    if (InBattlePyramid() == FALSE && gSpecialVar_ItemId != ITEM_CAP_CANDY && gSpecialVar_ItemId != ITEM_INFINITE_RARE_CANDY)
         GoToBagMenu(ITEMMENULOCATION_LAST, POCKETS_COUNT, NULL);
     else if (InBattlePyramid() == FALSE)
         GoToBagMenu(ITEMMENULOCATION_FIELD, POCKETS_COUNT, NULL);
@@ -5901,7 +5901,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
 
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
 
-    if (sInitialLevel >= GetCurrentLevelCap() && *itemPtr == ITEM_RARE_CANDY_KEY_ITEM)
+    if (sInitialLevel >= GetCurrentLevelCap() && (*itemPtr == ITEM_CAP_CANDY || *itemPtr == ITEM_INFINITE_RARE_CANDY))
     {
         cannotUseEffect = TRUE;
     }

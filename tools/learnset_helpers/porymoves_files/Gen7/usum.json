@@ -67255,14 +67255,18 @@
       },
       {
         "Level": 25,
-        "Move": "MOVE_AMNESIA"
+        "Move": "MOVE_WILL_O_WISP"
       },
       {
         "Level": 28,
+        "Move": "MOVE_AMNESIA"
+      },
+      {
+        "Level": 30,
         "Move": "MOVE_FLING"
       },
       {
-        "Level": 31,
+        "Level": 32,
         "Move": "MOVE_ACROBATICS"
       },
       {

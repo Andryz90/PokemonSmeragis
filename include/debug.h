@@ -6,6 +6,7 @@ void DebugTask_HandleMenuInput_Give(u8 taskId);
 void Debug_Custom_Menu (u8 taskId);
 extern const u8 Debug_FlagsAndVarNotSetBattleConfigMessage[];
 const u8 *GetWeatherName(u32 weatherId);
+void DebugAction_PCBag_AccessPC(u8 taskId);
 
 extern EWRAM_DATA bool8 gIsDebugBattle;
 extern EWRAM_DATA u64 gDebugAIFlags;

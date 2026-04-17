@@ -426,7 +426,6 @@ static void DebugAction_PCBag_Fill_PocketPokeBalls(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketTMHM(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketBerries(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketKeyItems(u8 taskId);
-static void DebugAction_PCBag_AccessPC(u8 taskId);
 static void DebugAction_PCBag_ClearBag(u8 taskId);
 static void DebugAction_PCBag_ClearBoxes(u8 taskId);
 
@@ -4035,7 +4034,7 @@ static void DebugAction_PCBag_Fill_PocketKeyItems(u8 taskId)
     }
 }
 
-static void DebugAction_PCBag_AccessPC(u8 taskId)
+void DebugAction_PCBag_AccessPC(u8 taskId)
 {
     Debug_DestroyMenu_Full_Script(taskId, EventScript_PC);
 }

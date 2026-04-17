@@ -10,6 +10,7 @@
 #include "battle_z_move.h"
 #include "battle_gimmick.h"
 #include "caps.h"
+#include "data.h"
 #include "generational_changes.h"
 #include "party_menu.h"
 #include "pokemon.h"
@@ -3526,11 +3527,22 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 side = (BATTLE_OPPOSITE(GetBattlerPosition(battler))) & BIT_SIDE;
                 target1 = GetBattlerAtPosition(side);
                 target2 = GetBattlerAtPosition(side + BIT_FLANK);
+
                 if (IsDoubleBattle())
                 {
                     if (!gAbilitiesInfo[gBattleMons[target1].ability].cantBeTraced && gBattleMons[target1].hp != 0
                         && !gAbilitiesInfo[gBattleMons[target2].ability].cantBeTraced && gBattleMons[target2].hp != 0)
-                        chosenTarget = GetBattlerAtPosition((RandomPercentage(RNG_TRACE, 50) * 2) | side), effect++;
+                    {
+                        // Trace now copies pokemon's ability in front
+                        if (GetBattlerPosition(battler) & BIT_FLANK)
+                            chosenTarget = target1; 
+                        else
+                            chosenTarget = target2;
+
+                        effect++;
+                        // chosenTarget = GetBattlerAtPosition((RandomPercentage(RNG_TRACE, 50) * 2) | side), effect++;
+                    }
+
                     else if (!gAbilitiesInfo[gBattleMons[target1].ability].cantBeTraced && gBattleMons[target1].hp != 0)
                         chosenTarget = target1, effect++;
                     else if (!gAbilitiesInfo[gBattleMons[target2].ability].cantBeTraced && gBattleMons[target2].hp != 0)
@@ -11852,6 +11864,23 @@ static const u8 LookupTable_TrainerWithDynamicLevel[MAX_TRAINER_DYNAMIC_LEVEL][T
 };
 
 
+static bool8 CheckIfTrainerIsOptional (const char* trainerName)
+{
+    if (trainerName != NULL)
+    {
+        for (u8 i = 0u; i < MAX_TRAINER_DYNAMIC_LEVEL; i++)
+        {
+            if ((strcmp(trainerName, (const char*) LookupTable_TrainerWithDynamicLevel[i]) == 0) ||
+                GetCurrentRegionMapSectionId() == MAPSEC_TRICK_HOUSE || GetCurrentRegionMapSectionId() == MAPSEC_ROUTE_115) 
+            {
+                return TRUE;
+            }
+        }
+    }
+
+    return FALSE;
+}
+
 bool8 SetTrainerLevelIfDynamic (const struct Trainer *trainer, u8* MonLevel)
 {
     u8 MaxLevel = 0u;
@@ -11859,8 +11888,7 @@ bool8 SetTrainerLevelIfDynamic (const struct Trainer *trainer, u8* MonLevel)
     /*Confronting each name to see if there is the right one*/
     for (uint8_t i = 0u; i < MAX_TRAINER_DYNAMIC_LEVEL; i++)
     {
-        if ((strcmp((const char*)trainer->trainerName, (const char*) LookupTable_TrainerWithDynamicLevel[i]) == 0) ||
-            GetCurrentRegionMapSectionId() == MAPSEC_TRICK_HOUSE || GetCurrentRegionMapSectionId() == MAPSEC_ROUTE_115) 
+        if (trainer != NULL && IsTrainerOptional(trainer))
         {
             /*Now search into the Players party*/
             for (uint8_t j = 0u; j < PARTY_SIZE; j++)
@@ -11895,4 +11923,18 @@ bool8 SetTrainerLevelIfDynamic (const struct Trainer *trainer, u8* MonLevel)
         return TRUE;
     }
     return FALSE;
+}
+
+
+bool8 IsTrainerOptional (const struct Trainer *trainer)
+{
+    if (trainer != NULL)
+        return CheckIfTrainerIsOptional((const char*)trainer->trainerName);
+
+    return FALSE;
+}
+
+bool8 IsTrainerOptionalFromId (const u16 trainerId)
+{
+    return CheckIfTrainerIsOptional((const char*)GetTrainerNameFromId(trainerId));
 }

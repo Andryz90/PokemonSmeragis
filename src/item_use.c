@@ -8,6 +8,7 @@
 #include "berry_powder.h"
 #include "bike.h"
 #include "coins.h"
+#include "debug.h"
 #include "data.h"
 #include "event_data.h"
 #include "event_object_lock.h"
@@ -61,6 +62,7 @@ static void PlayerFaceHiddenItem(u8);
 static void CheckForHiddenItemsInMapConnection(u8);
 static void Task_OpenRegisteredPokeblockCase(u8);
 static void Task_AccessPokemonBoxLink(u8);
+static void Task_AccessPocketPc(u8);
 static void ItemUseOnFieldCB_Bike(u8);
 static void ItemUseOnFieldCB_Rod(u8);
 static void ItemUseOnFieldCB_Itemfinder(u8);
@@ -1694,5 +1696,18 @@ static void ItemUseOnFieldCB_PokeVial(u8 taskId)
     //VarSet(VAR_POKE_VIAL_CHARGES, VarGet(VAR_POKE_VIAL_CHARGES) - 1);
     DisplayItemMessageOnField(taskId, gText_UsedPokeVial, Task_CloseCantUseKeyItemMessage);
 }
+
+static void Task_AccessPocketPc(u8 taskId)
+{
+    ScriptContext_SetupScript(EventScript_PC);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_PocketPc(u8 taskId)
+{
+    sItemUseOnFieldCB = Task_AccessPocketPc;
+    SetUpItemUseOnFieldCallback(taskId);
+}
+
 
 #undef tUsingRegisteredKeyItem

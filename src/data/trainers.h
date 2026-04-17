@@ -38991,7 +38991,7 @@ F_TRAINER_FEMALE |
 #line 15705
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15703
-            .ability = ABILITY_LIFEDRAINER,
+            .ability = ABILITY_CHLOROPHYLL,
 #line 15704
             .lvl = 38,
             .nature = NATURE_HARDY,
@@ -40891,6 +40891,8 @@ F_TRAINER_FEMALE |
 #line 16467
             .species = SPECIES_TINKATON,
             .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16467
+            .heldItem = ITEM_LUM_BERRY,
 #line 16470
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 16468
@@ -40904,7 +40906,7 @@ F_TRAINER_FEMALE |
                 MOVE_GIGATON_HAMMER,
                 MOVE_SWEET_KISS,
                 MOVE_PLAY_ROUGH,
-                MOVE_SLAM,
+                MOVE_KNOCK_OFF,
             },
             },
             {
@@ -40912,10 +40914,12 @@ F_TRAINER_FEMALE |
             .species = SPECIES_GARDEVOIR,
 #line 16475
             .gender = TRAINER_MON_MALE,
+#line 16475
+            .heldItem = ITEM_LIFE_ORB,
 #line 16478
             .iv = TRAINER_PARTY_IVS(31, 0, 31, 31, 31, 31),
 #line 16476
-            .ability = ABILITY_SYNCHRONIZE,
+            .ability = ABILITY_TRACE,
 #line 16477
             .lvl = 36,
             .nature = NATURE_HARDY,
@@ -40933,6 +40937,8 @@ F_TRAINER_FEMALE |
             .species = SPECIES_AZUMARILL,
 #line 16484
             .gender = TRAINER_MON_MALE,
+#line 16484
+            .heldItem = ITEM_MYSTIC_WATER,
 #line 16487
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 16485
@@ -40953,10 +40959,12 @@ F_TRAINER_FEMALE |
             .species = SPECIES_NINETALES,
 #line 16491
             .gender = TRAINER_MON_MALE,
+#line 16491
+            .heldItem = ITEM_HEAT_ROCK,
 #line 16494
             .iv = TRAINER_PARTY_IVS(31, 0, 31, 31, 31, 31),
 #line 16492
-            .ability = ABILITY_FLASH_FIRE,
+            .ability = ABILITY_DROUGHT,
 #line 16493
             .lvl = 35,
             .nature = NATURE_HARDY,
@@ -40977,7 +40985,7 @@ F_TRAINER_FEMALE |
 #line 16503
             .iv = TRAINER_PARTY_IVS(31, 0, 31, 31, 31, 31),
 #line 16501
-            .ability = ABILITY_HEALER,
+            .ability = ABILITY_CHLOROPHYLL,
 #line 16502
             .lvl = 35,
             .nature = NATURE_HARDY,
@@ -40987,7 +40995,7 @@ F_TRAINER_FEMALE |
                 MOVE_SLEEP_POWDER,
                 MOVE_MOONBLAST,
                 MOVE_GIGA_DRAIN,
-                MOVE_MOONLIGHT,
+                MOVE_WEATHER_BALL,
             },
             },
             {

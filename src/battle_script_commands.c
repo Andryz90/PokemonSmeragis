@@ -8894,6 +8894,11 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
             moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * trainerMoney;
         else
             moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
+
+        if (IsTrainerOptionalFromId(trainerId))
+        {
+            moneyReward += 1000;
+        }
     }
 
     return moneyReward;

@@ -2167,16 +2167,7 @@
     "TutorMoves": []
   },
   "NIDOQUEEN": {
-    "LevelMoves": [
-      {
-        "Level": 0,
-        "Move": "MOVE_TECTONIC_POWER"
-      },
-      {
-        "Level": 1,
-        "Move": "MOVE_SUPERPOWER"
-      }
-    ],
+    "LevelMoves": [],
     "PreEvoMoves": [],
     "TMMoves": [],
     "EggMoves": [],
@@ -2199,10 +2190,7 @@
   "NIDOKING": {
     "LevelMoves": [],
     "PreEvoMoves": [],
-    "TMMoves": [
-      "MOVE_DIRE_CLAW",
-      "MOVE_IRON_HEAD"
-    ],
+    "TMMoves": [],
     "EggMoves": [],
     "TutorMoves": []
   },
@@ -25102,15 +25090,15 @@
       },
       {
         "Level": 30,
+        "Move": "MOVE_MUDDY_WATER"
+      },
+      {
+        "Level": 34,
         "Move": "MOVE_TAKE_DOWN"
       },
       {
-        "Level": 35,
-        "Move": "MOVE_AMNESIA"
-      },
-      {
         "Level": 40,
-        "Move": "MOVE_MUDDY_WATER"
+        "Move": "MOVE_AMNESIA"
       },
       {
         "Level": 45,
@@ -25493,11 +25481,15 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_ASSURANCE"
+        "Move": "MOVE_SUCKER_PUNCH"
+      },
+      {
+        "Level": 26,
+        "Move": "MOVE_SCARY_FACE"
       },
       {
         "Level": 28,
-        "Move": "MOVE_SCARY_FACE"
+        "Move": "MOVE_ASSURANCE"
       },
       {
         "Level": 32,

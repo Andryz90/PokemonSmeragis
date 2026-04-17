@@ -81,6 +81,7 @@ SlateportCity_Mart_Pokemart_BoostDmgItem:
 	.2byte ITEM_SILVER_POWDER
 	.2byte ITEM_TWISTED_SPOON
 	.2byte ITEM_DRAGON_FANG
+	.2byte ITEM_METAL_COAT
 	.2byte ITEM_NONE
 	release
 	end

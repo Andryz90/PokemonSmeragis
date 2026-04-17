@@ -400,4 +400,7 @@ bool32 IsRepelActive(void);
 u8 GenerateNumberForTrainerTeams (void);
 u8 GetTrainerTeamOffset (u8 index);
 bool8 SetTrainerLevelIfDynamic (const struct Trainer *trainer, u8* MonLevel);
+bool8 IsTrainerOptional (const struct Trainer *trainer);
+bool8 IsTrainerOptionalFromId (const u16 trainerId);
+
 #endif // GUARD_BATTLE_UTIL_H

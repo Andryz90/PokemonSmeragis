@@ -96,7 +96,7 @@ EWRAM_DATA struct SpriteTemplate gMultiuseSpriteTemplate = {0};
 EWRAM_DATA static struct MonSpritesGfxManager *sMonSpritesGfxManagers[MON_SPR_GFX_MANAGERS_COUNT] = {NULL};
 EWRAM_DATA static u8 sTriedEvolving = 0;
 EWRAM_DATA u16 gFollowerSteps = 0;
-EWRAM_DATA static u8 Level_Before_Item = 0u;
+
 
 
 #include "data/moves_info.h"
@@ -3399,7 +3399,10 @@ u8 CopyMonToPC(struct Pokemon *mon)
             struct BoxPokemon *checkingMon = GetBoxedMonPtr(boxNo, boxPos);
             if (GetBoxMonData(checkingMon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
             {
-                MonRestorePP(mon);
+                if (OW_PC_HEAL <= GEN_7)
+                    HealPokemon(mon);
+                else
+                    MonRestorePP(mon);
                 CopyMon(checkingMon, &mon->box, sizeof(mon->box));
                 gSpecialVar_MonBoxId = boxNo;
                 gSpecialVar_MonBoxPos = boxPos;
@@ -3883,12 +3886,10 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                     dataUnsigned = gExperienceTables[gSpeciesInfo[GetMonData(mon, MON_DATA_SPECIES, NULL)].growthRate][GetMonData(mon, MON_DATA_LEVEL, NULL) + 1];
 
                     // If I'm using the item skip all the level to the level cap without going one by one. Normal Rare Candy skip and overlevel if already in cap
-                    if (B_RARE_CANDY_CAP && *B_EXP_CAP_TYPE != EXP_CAP_NONE && item == ITEM_RARE_CANDY_KEY_ITEM)
+                    if (B_RARE_CANDY_CAP && *B_EXP_CAP_TYPE != EXP_CAP_NONE && item == ITEM_CAP_CANDY)
                     {
                         u32 currentLevelCap = GetCurrentLevelCap();
                         u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
-                        //Save the level before the item is used to check the levelup moveset from here to the cap
-                        Level_Before_Item = GetMonData(mon, MON_DATA_LEVEL, NULL);
 
                         dataUnsigned = gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap];
                         retVal = FALSE;

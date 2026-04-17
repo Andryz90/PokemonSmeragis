@@ -4566,8 +4566,6 @@ void RegisterTalkedFossil (void)
         if (gObjectEvents[i].active && gObjectEvents[i].localId == gSpecialVar_LastTalked && gObjectEvents[i].active)
         {
             fossil_item = FossilItem_LookUpTable[gObjectEvents[i].trainerRange_berryTreeId];
-            MgbaPrintf(MGBA_LOG_ERROR, "item: %u", fossil_item);
-            MgbaPrintf(MGBA_LOG_ERROR, "ID: %u", gObjectEvents[i].trainerRange_berryTreeId);
             VarSet(VAR_UNUSED_0x8014, fossil_item);
             StringCopy(gStringVar1, gItemsInfo[fossil_item].name);
         }

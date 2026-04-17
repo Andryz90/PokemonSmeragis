@@ -12247,7 +12247,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sOnixTeachableLearnset,
         .eggMoveLearnset = sOnixEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_STEELIX, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})},
-                                {EVO_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX}),
+                                {EVO_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX},
+                                {EVO_LEVEL, 34, SPECIES_STEELIX,
+                                CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -14407,7 +14409,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sRhydonLevelUpLearnset,
         .teachableLearnset = sRhydonTeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_RHYPERIOR, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})},
-                                {EVO_ITEM, ITEM_METAL_COAT, SPECIES_RHYPERIOR}),
+                                {EVO_ITEM, ITEM_METAL_COAT, SPECIES_RHYPERIOR},
+                                {EVO_LEVEL, 40, SPECIES_RHYPERIOR,
+                                CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -15952,7 +15956,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggMoveLearnset = sScytherEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_SCIZOR, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})},
                                 {EVO_ITEM, ITEM_BLACK_AUGURITE, SPECIES_KLEAVOR},
-                                {EVO_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR}),
+                                {EVO_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR},
+                                {EVO_LEVEL, 36, SPECIES_SCIZOR,
+                                    CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -16557,7 +16563,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 73 : 117,
         .evYield_Speed = 1,
-        .itemCommon = ITEM_MAGMARIZER,
         .itemRare = ITEM_CHARCOAL,
         .genderRatio = PERCENT_FEMALE(25),
         .eggCycles = 25,

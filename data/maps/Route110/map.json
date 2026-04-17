@@ -278,6 +278,7 @@
       "flag": "FLAG_ITEM_ROUTE_110_RARE_CANDY"
     },
     {
+      "local_id": "LOCALID_CHALLENGE_BIKER_R110",
       "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
       "x": 27,
       "y": 92,
@@ -369,6 +370,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_RIVAL_R110",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 34,
       "y": 54,
@@ -382,6 +384,7 @@
       "flag": "FLAG_HIDE_ROUTE_110_RIVAL"
     },
     {
+      "local_id": "LOCALID_RIVAL_R110_BIKE",
       "graphics_id": "OBJ_EVENT_GFX_VAR_3",
       "x": 34,
       "y": 54,
