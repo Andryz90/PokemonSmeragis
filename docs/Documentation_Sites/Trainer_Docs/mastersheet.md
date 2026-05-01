@@ -2772,11 +2772,11 @@ Volbeat:  [Lv.36]
 Illumise:  [Lv.36]  
 
 ## Rival WALLY
-Tinkaton: Gigaton Hammer, Sweet Kiss, Play Rough, Slam [Lv.34 | Own Tempo]  
-Gardevoir (M): Calm Mind, Psychic, Draining Kiss, Shadow Ball [Lv.36 | Synchronize]  
-Azumarill (M): Liquidation, Aqua Jet, Play Rough [Lv.35 | Huge Power]  
-Ninetales (M): Dazzling Gleam, Incinerate, Will-O-Wisp, Extrasensory [Lv.35 | Flash Fire]  
-Bellossom (M): Sleep Powder, Moonblast, Giga Drain, Moonlight [Lv.35 | Healer]  
+Tinkaton @Lum Berry: Gigaton Hammer, Sweet Kiss, Play Rough, Knock Off [Lv.34 | Own Tempo]  
+Gardevoir (M) @Life Orb: Calm Mind, Psychic, Draining Kiss, Shadow Ball [Lv.36 | Trace]  
+Azumarill (M) @Mystic Water: Liquidation, Aqua Jet, Play Rough [Lv.35 | Huge Power]  
+Ninetales (M) @Heat Rock: Dazzling Gleam, Incinerate, Will-O-Wisp, Extrasensory [Lv.35 | Drought]  
+Bellossom (M): Sleep Powder, Moonblast, Giga Drain, Weather Ball [Lv.35 | Chlorophyll]  
 Gallade: Swords Dance, Leaf Blade, Slash, Sacred Sword [Lv.36 | Sharpness]  
 
 ## Fisherman WAYNE
@@ -2952,7 +2952,7 @@ Gardevoir (F) @Leftovers: Moonblast, Mystical Fire, Calm Mind, Draining Kiss [Lv
 
 ## Team Magma GRUNT
 Donphan (M) @Hard Stone: Stealth Rock, Earthquake, Ice Spinner, Head Smash [Lv.38 | Rock Head | Adamant Nature]  
-Victreebel (M) @Heat Rock: Sunny Day, Weather Ball, Poison Drain, Giga Drain [Lv.38 | Lifedrainer]  
+Victreebel (M) @Heat Rock: Sunny Day, Weather Ball, Poison Drain, Giga Drain [Lv.38 | Chlorophyll]  
 Volcarona (F) @Heavy-Duty Boots: Quiver Dance, Flamethrower, Giga Drain, Bug Buzz [Lv.38 | Flame Body | Timid Nature]  
 Centiskorch @Charcoal: Fire Lash, Knock Off, Coil, Leech Life [Lv.38 | Flash Fire]  
 Claydol @Leftovers: Earth Power, Psychic, Future Sight, Body Press [Lv.38 | Levitate | Bold Nature]  

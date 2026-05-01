@@ -61,6 +61,10 @@ POKEDEX_URL = "https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/po
 DOCS_URL = "https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Site/site.html"
 MERGE_SIDE_LIMIT = 3
 MERGE_PICK = "first"
+MERGE_LABELS = {
+    "double": "Double Battle",
+    "back-to-back": "Back-to-Back",
+}
 
 def _rel_to_output(local_path: Path, out_parent: Path) -> str:
     try:
@@ -82,6 +86,10 @@ def canonicalize(s: str) -> str:
     x = re.sub(r"[^\w\s]+", " ", x)
     x = re.sub(r"\s+", " ", x).strip()
     return x
+
+def themed_caption_suffix(themed: str) -> str:
+    label = MERGE_LABELS.get(themed)
+    return f" [{label}]" if label else ""
 
 def make_inorder_regex(s: str):
     words = re.findall(r"[a-z0-9]+", s.lower())
@@ -551,7 +559,7 @@ def build_table_from_columns(title, columns, trainer_pic_lists, themed="single",
         set_img_with_fallbacks(img, candidates or [])
         cap.append(img)
 
-    cap.append(title + (" [Double Battle]" if themed == "double" else ""))
+    cap.append(title + themed_caption_suffix(themed))
     sep = soup.new_tag("span"); sep.string = " · "; cap.append(sep)
     a = soup.new_tag("a", href=CALC_URL, target="_blank", rel="noopener"); a.string = "Open Calculator"; cap.append(a)
 
@@ -581,7 +589,7 @@ def build_table_from_columns(title, columns, trainer_pic_lists, themed="single",
 
     return tbl
 
-def merge_two_tables(title1, t1, title2, t2, custom_rules, sprites_dir: Path, out_parent: Path):
+def merge_two_tables(title1, t1, title2, t2, custom_rules, sprites_dir: Path, out_parent: Path, themed="double"):
     cols1_all = parse_table_columns(t1)
     cols2_all = parse_table_columns(t2)
 
@@ -598,7 +606,7 @@ def merge_two_tables(title1, t1, title2, t2, custom_rules, sprites_dir: Path, ou
     pics2 = detect_trainer_sprite(title2, custom_rules, sprites_dir, out_parent)
     merged_title = f"{title1} & {title2}"
     cut_after = (len(cols1) - 1) if cols1 else None
-    merged_tbl = build_table_from_columns(merged_title, columns, [pics1, pics2], themed="double", cut_after=cut_after)
+    merged_tbl = build_table_from_columns(merged_title, columns, [pics1, pics2], themed=themed, cut_after=cut_after)
     return merged_tbl
 
 # ===== splits.txt =====
@@ -616,10 +624,17 @@ def parse_splits(splits_file: Path):
             if not tok:
                 continue
             if "&&" in tok:
+                merge_theme = "double"
+                merge_tag = re.match(r"^(.*?)(?:\s*\[(Double Battle|Back(?:-|\s*)to(?:-|\s*)Back)\])\s*$", tok, re.I)
+                if merge_tag:
+                    tok = merge_tag.group(1).strip()
+                    raw_theme = canonicalize(merge_tag.group(2))
+                    if raw_theme == "back to back":
+                        merge_theme = "back-to-back"
                 left, right = tok.split("&&", 1)
                 s1, o1 = _parse_sub_occ(left); s2, o2 = _parse_sub_occ(right)
                 if s1 and s2:
-                    tokens.append(("merge", s1, o1, s2, o2))
+                    tokens.append(("merge", s1, o1, s2, o2, merge_theme))
             else:
                 s, o = _parse_sub_occ(tok)
                 if s:
@@ -753,7 +768,7 @@ def main(argv=None):
                     items.append(str(rebuilt))
 
                 else:
-                    _, s1, o1, s2, o2 = tk
+                    _, s1, o1, s2, o2, merge_theme = tk
                     occ1 = (o1 if o1 is not None else 1)
                     occ2 = (o2 if o2 is not None else 1)
                     k1 = (s1, occ1); k2 = (s2, occ2)
@@ -762,8 +777,10 @@ def main(argv=None):
                         continue
                     title1, tag1 = found[k1]
                     title2, tag2 = found[k2]
-                    merged_tbl = merge_two_tables(title1, tag1, title2, tag2, custom_rules, sprites_dir, out_main.parent)
-                    merged_tbl["id"] = slugify(f"{title1} & {title2} [Double Battle]")
+                    merged_tbl = merge_two_tables(
+                        title1, tag1, title2, tag2, custom_rules, sprites_dir, out_main.parent, themed=merge_theme
+                    )
+                    merged_tbl["id"] = slugify(f"{title1} & {title2}{themed_caption_suffix(merge_theme)}")
                     merged_tbl["class"] = (merged_tbl.get("class", []) + ["trainer-block"])
                     items.append(str(merged_tbl))
 

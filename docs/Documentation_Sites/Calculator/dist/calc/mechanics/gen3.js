@@ -63,9 +63,9 @@ function calculateADV(gen, attacker, defender, move, field) {
         desc.moveType = move.type;
         desc.moveBP = move.bp;
     }
-    var type1Effectiveness = (0, util_1.getMoveEffectiveness)(gen, move, defender.types[0], field.defenderSide.isForesight);
+    var type1Effectiveness = (0, util_1.getMoveEffectiveness)(gen, move, defender.types[0], field.defenderSide.isForesight, undefined, undefined, attacker.hasAbility('Corrosion'));
     var type2Effectiveness = defender.types[1]
-        ? (0, util_1.getMoveEffectiveness)(gen, move, defender.types[1], field.defenderSide.isForesight)
+        ? (0, util_1.getMoveEffectiveness)(gen, move, defender.types[1], field.defenderSide.isForesight, undefined, undefined, attacker.hasAbility('Corrosion'))
         : 1;
     var typeEffectiveness = type1Effectiveness * type2Effectiveness;
     if (typeEffectiveness === 0) {

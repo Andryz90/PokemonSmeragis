@@ -150,10 +150,13 @@ export function getMoveEffectiveness(
   isGhostRevealed?: boolean,
   isGravity?: boolean,
   isRingTarget?: boolean,
+  isCorrosion?: boolean,
 ) {
   if ((isRingTarget || isGhostRevealed) && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
     return 1;
   } else if ((isRingTarget || isGravity) && type === 'Flying' && move.hasType('Ground')) {
+    return 1;
+  } else if (isCorrosion && type === 'Steel' && move.hasType('Poison')) {
     return 1;
   } else if (move.named('Freeze-Dry') && type === 'Water') {
     return 2;
