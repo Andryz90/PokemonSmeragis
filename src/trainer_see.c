@@ -24,10 +24,11 @@
 #define MAX_APPROACHING_TRAINERS 8
 
 // this file's functions
-static u8 CheckTrainer(u8 objectEventId);
+static u8 CheckTrainer(u8 objectEventId, struct ApproachingTrainer *approachingTrainer);
 static u8 GetTrainerApproachDistance(struct ObjectEvent *trainerObj);
 static u8 CheckPathBetweenTrainerAndPlayer(struct ObjectEvent *trainerObj, u8 approachDistance, u8 direction);
-static void InitTrainerApproachTask(struct ObjectEvent *trainerObj, u8 range);
+static void InitTrainerApproachTask(u8 approachingTrainerId, struct ObjectEvent *trainerObj, u8 range);
+static void InitSelectedTrainerApproachTasks(void);
 static void Task_RunTrainerSeeFuncList(u8 taskId);
 static void Task_EndTrainerApproach(u8 taskId);
 static void SetIconSpriteData(struct Sprite *sprite, u16 fldEffId, u8 spriteAnimNum);
@@ -390,8 +391,10 @@ static void SortAllApproachingTrainersByDistanceAndLocalId(void)
 #define DOUBLE_BATTLE_TYPE_NUM      (2u)
 bool8 CheckForTrainersWantingBattle(void)
 {
+    struct ApproachingTrainer approachingTrainer = {0};
     u8 i;
     u8 numTrainers = 0u;
+    bool8 foundScriptedDoubleBattle = FALSE;
 
     if (FlagGet(OW_FLAG_NO_TRAINER_SEE))
         return FALSE;
@@ -410,10 +413,15 @@ bool8 CheckForTrainersWantingBattle(void)
             && gObjectEvents[i].trainerType != TRAINER_TYPE_BACK_TO_BACK)
             continue;
 
-        numTrainers = CheckTrainer(i);
+        numTrainers = CheckTrainer(i, &approachingTrainer);
         if (numTrainers == 0xFF) // non-trainerbatle script
         {
-            u32 objectEventId = gApproachingTrainers[gNoOfApproachingTrainers - 1].objectEventId;
+            u32 objectEventId;
+
+            gApproachingTrainers[0] = approachingTrainer;
+            gNoOfApproachingTrainers = 1;
+            InitSelectedTrainerApproachTasks();
+            objectEventId = gApproachingTrainers[0].objectEventId;
             gSelectedObjectEvent = objectEventId;
             gSpecialVar_LastTalked = gObjectEvents[objectEventId].localId;
             ScriptContext_SetupScript(EventScript_ObjectApproachPlayer);
@@ -423,8 +431,10 @@ bool8 CheckForTrainersWantingBattle(void)
 
         if (numTrainers == DOUBLE_BATTLE_TYPE_NUM)
         {
-            /*Custom: this sets the double battles*/
-            allNoOfApproachingTrainers = DOUBLE_BATTLE_TYPE_NUM;
+            // A scripted double battle already knows which trainer should trigger.
+            gApproachingTrainers[0] = approachingTrainer;
+            gNoOfApproachingTrainers = 1;
+            foundScriptedDoubleBattle = TRUE;
             break;
         }
 
@@ -433,19 +443,16 @@ bool8 CheckForTrainersWantingBattle(void)
 
         if (allNoOfApproachingTrainers < MAX_APPROACHING_TRAINERS)
         {
-            allApproachingTrainers[allNoOfApproachingTrainers] = gApproachingTrainers[gNoOfApproachingTrainers - 1];
+            allApproachingTrainers[allNoOfApproachingTrainers] = approachingTrainer;
             allNoOfApproachingTrainers++;
         }
 
-
-        if (gNoOfApproachingTrainers > 1)
-            break;
         if (GetMonsStateToDoubles_2() != PLAYER_HAS_TWO_USABLE_MONS) // one trainer found and cant have a double battle
             break;
     }
 
-    //Custom: Sort every trainer that want to battle, skip if double
-    if (allNoOfApproachingTrainers != DOUBLE_BATTLE_TYPE_NUM)
+    // Custom: Sort every trainer that wants to battle, unless a scripted double battle already decided it.
+    if (!foundScriptedDoubleBattle)
     {
         SortAllApproachingTrainersByDistanceAndLocalId();
         gNoOfApproachingTrainers = (allNoOfApproachingTrainers > 2) ? 2 : allNoOfApproachingTrainers;
@@ -462,6 +469,8 @@ bool8 CheckForTrainersWantingBattle(void)
             }
         }
     }
+
+    InitSelectedTrainerApproachTasks();
 
     if (gNoOfApproachingTrainers == 1)
     {
@@ -491,7 +500,7 @@ bool8 CheckForTrainersWantingBattle(void)
     }
 }
 
-static u8 CheckTrainer(u8 objectEventId)
+static u8 CheckTrainer(u8 objectEventId, struct ApproachingTrainer *approachingTrainer)
 {
     const u8 *scriptPtr, *trainerBattlePtr;
     u8 numTrainers = 1;
@@ -555,11 +564,10 @@ static u8 CheckTrainer(u8 objectEventId)
         }
     }
 
-    gApproachingTrainers[gNoOfApproachingTrainers].objectEventId = objectEventId;
-    gApproachingTrainers[gNoOfApproachingTrainers].trainerScriptPtr = scriptPtr;
-    gApproachingTrainers[gNoOfApproachingTrainers].radius = approachDistance;
-    InitTrainerApproachTask(&gObjectEvents[objectEventId], approachDistance - 1);
-    gNoOfApproachingTrainers++;
+    approachingTrainer->objectEventId = objectEventId;
+    approachingTrainer->trainerScriptPtr = scriptPtr;
+    approachingTrainer->radius = approachDistance;
+    approachingTrainer->taskId = 0;
 
     return numTrainers;
 }
@@ -676,7 +684,18 @@ static u8 CheckPathBetweenTrainerAndPlayer(struct ObjectEvent *trainerObj, u8 ap
 #define tTrainerObjectEventId   data[7]
 #define tPokemonObjectEventId   data[6]
 
-static void InitTrainerApproachTask(struct ObjectEvent *trainerObj, u8 range)
+static void InitSelectedTrainerApproachTasks(void)
+{
+    u8 i;
+
+    for (i = 0; i < gNoOfApproachingTrainers; i++)
+    {
+        u8 objectEventId = gApproachingTrainers[i].objectEventId;
+        InitTrainerApproachTask(i, &gObjectEvents[objectEventId], gApproachingTrainers[i].radius - 1);
+    }
+}
+
+static void InitTrainerApproachTask(u8 approachingTrainerId, struct ObjectEvent *trainerObj, u8 range)
 {
     struct Task *task;
     u8 i;
@@ -697,10 +716,10 @@ static void InitTrainerApproachTask(struct ObjectEvent *trainerObj, u8 range)
         }
     }
 
-    gApproachingTrainers[gNoOfApproachingTrainers].taskId = CreateTask(Task_RunTrainerSeeFuncList, 0x50);
-    task = &gTasks[gApproachingTrainers[gNoOfApproachingTrainers].taskId];
+    gApproachingTrainers[approachingTrainerId].taskId = CreateTask(Task_RunTrainerSeeFuncList, 0x50);
+    task = &gTasks[gApproachingTrainers[approachingTrainerId].taskId];
     task->tTrainerRange = range;
-    task->tTrainerObjectEventId = gApproachingTrainers[gNoOfApproachingTrainers].objectEventId;
+    task->tTrainerObjectEventId = gApproachingTrainers[approachingTrainerId].objectEventId;
     if (PokemonFollower)
         task->tPokemonObjectEventId = pokemonfollowerObj - gObjectEvents;
 }

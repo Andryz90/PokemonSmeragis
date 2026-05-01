@@ -139,6 +139,10 @@ static void Intro_WaitForHealthbox(u32 battler)
 {
     bool32 finished = FALSE;
 
+    if (!gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim
+     && !gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive)
+        TryShinyAnimationDirect(battler, GetBattlerMon(battler));
+
     if (!IsDoubleBattle() || (IsDoubleBattle() && (gBattleTypeFlags & BATTLE_TYPE_MULTI)))
     {
         if (gSprites[gHealthboxSpriteIds[battler]].callback == SpriteCallbackDummy)
@@ -156,7 +160,8 @@ static void Intro_WaitForHealthbox(u32 battler)
     if (IsCryPlayingOrClearCrySongs())
         finished = FALSE;
 
-    if (finished)
+    if (finished
+     && gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim)
     {
         gBattleSpritesDataPtr->healthBoxesData[battler].introEndDelay = 3;
         gBattlerControllerFuncs[battler] = Intro_DelayAndEnd;
@@ -176,7 +181,7 @@ void Controller_PlayerPartnerShowIntroHealthbox(u32 battler)
         && ++gBattleSpritesDataPtr->healthBoxesData[battler].introEndDelay != 1)
     {
         gBattleSpritesDataPtr->healthBoxesData[battler].introEndDelay = 0;
-        TryShinyAnimation(battler, GetBattlerMon(battler));
+        TryShinyAnimationDirect(battler, GetBattlerMon(battler));
 
         if (IsDoubleBattle() && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
         {

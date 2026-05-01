@@ -153,13 +153,22 @@ static bool32 ShouldWaitForOtherBattlerAnimationsBeforeShiny(u8 battler)
             continue;
 
         if (gBattleSpritesDataPtr->animationData->introAnimActive
-         && GetBattlerSide(battler) == B_SIDE_PLAYER
-         && GetBattlerSide(i) == B_SIDE_OPPONENT)
+         && GetBattlerSide(battler) == B_SIDE_PLAYER)
         {
-            if (gBattleSpritesDataPtr->healthBoxesData[i].ballAnimActive
-             || gBattleSpritesDataPtr->healthBoxesData[i].specialAnimActive)
-                return TRUE;
-            continue;
+            // Let the player-side shiny intro overlap the enemy send-out and any
+            // non-shiny ally intro work, but still serialize two allied shinies.
+            if (GetBattlerSide(i) == B_SIDE_OPPONENT)
+                continue;
+
+            if (GetBattlerSide(i) == B_SIDE_PLAYER)
+            {
+                if (IsValidForBattle(GetBattlerMon(i))
+                 && GetMonData(GetBattlerMon(i), MON_DATA_IS_SHINY)
+                 && !gBattleSpritesDataPtr->healthBoxesData[i].finishedShinyMonAnim
+                 && i > battler)
+                    return TRUE;
+                continue;
+            }
         }
 
         if (gBattleSpritesDataPtr->animationData->introAnimActive
@@ -199,6 +208,40 @@ static bool32 ShouldWaitForOtherBattlerAnimationsBeforeShiny(u8 battler)
     return FALSE;
 }
 
+static bool32 CanTryCreateShinyAnimationTask(u8 battler, struct Pokemon *mon)
+{
+    struct Pokemon *illusionMon;
+
+    illusionMon = GetIllusionMonPtr(battler);
+    if (illusionMon != NULL)
+        mon = illusionMon;
+
+    if (IsBattlerSpriteVisible(battler) && IsValidForBattle(mon))
+        return TRUE;
+
+    return FALSE;
+}
+
+static bool32 ShouldWaitForSameSideShinyBeforeDirectStart(u8 battler)
+{
+    u32 i;
+
+    for (i = 0; i < gBattlersCount; i++)
+    {
+        if (i == battler
+         || GetBattlerSide(i) != GetBattlerSide(battler)
+         || !IsValidForBattle(GetBattlerMon(i))
+         || !GetMonData(GetBattlerMon(i), MON_DATA_IS_SHINY)
+         || gBattleSpritesDataPtr->healthBoxesData[i].finishedShinyMonAnim)
+            continue;
+
+        if (i > battler)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
 static bool32 IsBattlerReadyForShiny(u8 battler)
 {
     u32 battlerX;
@@ -214,7 +257,8 @@ static bool32 IsBattlerReadyForShiny(u8 battler)
     if (sprite->x2 != 0 || sprite->y2 != 0)
         return FALSE;
 
-    if (IsOnPlayerSide(battler))
+    if (IsOnPlayerSide(battler)
+     && !gBattleSpritesDataPtr->animationData->introAnimActive)
     {
         battlerX = GetBattlerSpriteCoord(battler, BATTLER_COORD_X_2);
         if (sprite->x != battlerX)
@@ -222,6 +266,61 @@ static bool32 IsBattlerReadyForShiny(u8 battler)
     }
 
     return TRUE;
+}
+
+static bool32 TryCreateShinyAnimationTask(u8 battler, struct Pokemon *mon)
+{
+    struct Pokemon *illusionMon;
+    u8 taskId;
+
+    illusionMon = GetIllusionMonPtr(battler);
+    if (illusionMon != NULL)
+        mon = illusionMon;
+
+    if (!IsBattlerSpriteVisible(battler) || !IsValidForBattle(mon))
+        return FALSE;
+
+    if (GetSpriteTileStartByTag(ANIM_TAG_GOLD_STARS) == 0xFFFF)
+    {
+        LoadCompressedSpriteSheetUsingHeap(&gBattleAnimPicTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
+        LoadSpritePalette(&gBattleAnimPaletteTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
+    }
+
+    if (GetTaskCount() >= NUM_TASKS)
+    {
+        gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = TRUE;
+        gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = TRUE;
+        return TRUE;
+    }
+
+    taskId = CreateTask(Task_ShinyStars, 10);
+    if (!gTasks[taskId].isActive || gTasks[taskId].func != Task_ShinyStars)
+    {
+        gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = TRUE;
+        gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = TRUE;
+        return TRUE;
+    }
+
+    gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = TRUE;
+    gTasks[taskId].data[0] = battler;
+    return TRUE;
+}
+
+bool32 TryShinyAnimationDirect(u8 battler, struct Pokemon *mon)
+{
+    if (!GetMonData(mon, MON_DATA_IS_SHINY))
+    {
+        gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = TRUE;
+        gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = TRUE;
+        return TRUE;
+    }
+
+    if (ShouldWaitForSameSideShinyBeforeDirectStart(battler)
+     || !IsBattlerReadyForShiny(battler)
+     || !CanTryCreateShinyAnimationTask(battler, mon))
+        return FALSE;
+
+    return TryCreateShinyAnimationTask(battler, mon);
 }
 
 struct CaptureStar
@@ -2612,43 +2711,34 @@ static void UpdateShinyScreenDarken(u8 taskId)
 void TryShinyAnimation(u8 battler, struct Pokemon *mon)
 {
     bool8 isShiny;
-    struct Pokemon* illusionMon;
+    bool32 waitForOthers;
+    bool32 ready;
 
     isShiny = GetMonData(mon, MON_DATA_IS_SHINY);
-    if (isShiny
-     && (ShouldWaitForOtherBattlerAnimationsBeforeShiny(battler)
-      || !IsBattlerReadyForShiny(battler)))
+    if (isShiny)
+    {
+        waitForOthers = ShouldWaitForOtherBattlerAnimationsBeforeShiny(battler);
+        ready = IsBattlerReadyForShiny(battler);
+        if (waitForOthers || !ready)
+            return;
+    }
+
+    if (isShiny && !CanTryCreateShinyAnimationTask(battler, mon))
+        return;
+
+    if (isShiny && TryCreateShinyAnimationTask(battler, mon))
         return;
 
     gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = TRUE;
-    illusionMon = GetIllusionMonPtr(battler);
-    if (illusionMon != NULL)
-        mon = illusionMon;
-
-    if (IsBattlerSpriteVisible(battler) && IsValidForBattle(mon))
-    {
-        if (isShiny)
-        {
-            if (GetSpriteTileStartByTag(ANIM_TAG_GOLD_STARS) == 0xFFFF)
-            {
-                LoadCompressedSpriteSheetUsingHeap(&gBattleAnimPicTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
-                LoadSpritePalette(&gBattleAnimPaletteTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
-            }
-
-            gTasks[CreateTask(Task_ShinyStars, 10)].tBattler = battler;
-            return;
-        }
-    }
-
     gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = TRUE;
 }
-
 static void Task_ShinyStars(u8 taskId)
 {
     u8 battler;
     s16 x, y;
     u8 spriteId;
     u8 subpriority;
+    struct Sprite *battlerSprite;
     const struct SpriteTemplate *spriteTemplate;
 
     if (gTasks[taskId].tDelayTimer < SHINY_START_DELAY)
@@ -2680,10 +2770,11 @@ static void Task_ShinyStars(u8 taskId)
     if ((gTasks[taskId].tSpawnTimer++ % SHINY_SPAWN_INTERVAL) != 0)
         return;
 
-    x = GetBattlerSpriteCoord(battler, BATTLER_COORD_X);
-    y = GetBattlerSpriteCoord(battler, BATTLER_COORD_Y) + SHINY_SPARKLE_Y_OFFSET;
+    battlerSprite = &gSprites[gBattlerSpriteIds[battler]];
+    x = battlerSprite->x + battlerSprite->x2;
+    y = battlerSprite->y + battlerSprite->y2 + SHINY_SPARKLE_Y_OFFSET;
     spriteTemplate = &sShinySparkleSpriteTemplate;
-    subpriority = gSprites[gBattlerSpriteIds[battler]].subpriority;
+    subpriority = battlerSprite->subpriority;
 
     spriteId = CreateSprite(spriteTemplate, x, y, subpriority);
     if (spriteId != MAX_SPRITES)
@@ -2691,6 +2782,9 @@ static void Task_ShinyStars(u8 taskId)
         if (gTasks[taskId].tStarIdx == 0)
             StartShinyScreenDarken(taskId);
 
+        gSprites[spriteId].oam.priority = battlerSprite->oam.priority;
+        if (gSprites[spriteId].oam.priority != 0)
+            gSprites[spriteId].oam.priority--;
         gSprites[spriteId].callback = SpriteCB_ShinyStars_Crystal;
         gSprites[spriteId].invisible = FALSE;
         gSprites[spriteId].sTaskId = taskId;

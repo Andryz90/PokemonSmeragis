@@ -16469,7 +16469,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sElectabuzzLevelUpLearnset,
         .teachableLearnset = sElectabuzzTeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ELECTIVIRE, CONDITIONS({IF_HOLD_ITEM, ITEM_ELECTIRIZER})},
-                                {EVO_ITEM, ITEM_ELECTIRIZER, SPECIES_ELECTIVIRE}),
+                                {EVO_ITEM, ITEM_ELECTIRIZER, SPECIES_ELECTIVIRE},
+                                {EVO_LEVEL, 0, SPECIES_ELECTIVIRE, CONDITIONS({IF_HOLD_ITEM, ITEM_ELECTIRIZER})}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -16636,7 +16637,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 167,
         .evYield_SpAttack = 2,
-        .itemRare = ITEM_MAGMARIZER,
         .genderRatio = PERCENT_FEMALE(25),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
@@ -16690,7 +16690,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sMagmarLevelUpLearnset,
         .teachableLearnset = sMagmarTeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_MAGMORTAR, CONDITIONS({IF_HOLD_ITEM, ITEM_MAGMARIZER})},
-                                {EVO_ITEM, ITEM_MAGMARIZER, SPECIES_MAGMORTAR}),
+                                {EVO_ITEM, ITEM_MAGMARIZER, SPECIES_MAGMORTAR},
+                                {EVO_LEVEL, 0, SPECIES_MAGMORTAR, CONDITIONS({IF_HOLD_ITEM, ITEM_MAGMARIZER})}),
     },
 
 #if P_GEN_4_CROSS_EVOS

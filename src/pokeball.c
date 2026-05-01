@@ -47,7 +47,7 @@ static void SpriteCB_HealthboxSlideIn(struct Sprite *sprite);
 static void SpriteCB_HitAnimHealthoxEffect(struct Sprite *sprite);
 static u16 GetBattlerPokeballItemId(u8 battler);
 static u8 GetReleaseMonCryCase(u8 battler);
-static void CreateReleaseMonCryTask(u8 battler, struct Pokemon *mon, u8 initialState, u8 waitMode);
+static bool32 CreateReleaseMonCryTask(u8 battler, struct Pokemon *mon, u8 initialState, u8 waitMode);
 
 // rom const data
 
@@ -1002,7 +1002,7 @@ static u8 GetReleaseMonCryCase(u8 battler)
         return 2;
 }
 
-static void CreateReleaseMonCryTask(u8 battler, struct Pokemon *mon, u8 initialState, u8 waitMode)
+static bool32 CreateReleaseMonCryTask(u8 battler, struct Pokemon *mon, u8 initialState, u8 waitMode)
 {
     struct Pokemon *illusionMon;
     s8 pan;
@@ -1013,7 +1013,12 @@ static void CreateReleaseMonCryTask(u8 battler, struct Pokemon *mon, u8 initialS
     else
         pan = -25;
 
+    if (GetTaskCount() >= NUM_TASKS)
+        return FALSE;
+
     taskId = CreateTask(Task_PlayCryWhenReleasedFromBall, 3);
+    if (!gTasks[taskId].isActive || gTasks[taskId].func != Task_PlayCryWhenReleasedFromBall)
+        return FALSE;
 
     illusionMon = GetIllusionMonPtr(battler);
     if (illusionMon != NULL)
@@ -1029,11 +1034,14 @@ static void CreateReleaseMonCryTask(u8 battler, struct Pokemon *mon, u8 initialS
     gTasks[taskId].tCryTaskMonPtr2 = (u32)(mon);
     gTasks[taskId].tCryTaskWaitMode = waitMode;
     gTasks[taskId].tCryTaskState = initialState;
+
+    return TRUE;
 }
 
 void StartMonReleaseCryAfterShiny(u8 battler)
 {
-    CreateReleaseMonCryTask(battler, GetBattlerMon(battler), GetReleaseMonCryCase(battler) + 1, RELEASE_MON_CRY_WAIT_FOR_MON_ANIM);
+    if (!CreateReleaseMonCryTask(battler, GetBattlerMon(battler), GetReleaseMonCryCase(battler) + 1, RELEASE_MON_CRY_WAIT_FOR_MON_ANIM))
+        gBattleSpritesDataPtr->healthBoxesData[battler].waitForCry = FALSE;
 }
 
 static void SpriteCB_ReleaseMonFromBall(struct Sprite *sprite)
@@ -1070,8 +1078,9 @@ static void SpriteCB_ReleaseMonFromBall(struct Sprite *sprite)
         }
 
         gBattleSpritesDataPtr->healthBoxesData[battler].waitForCry = TRUE;
-        if (!isShiny)
-            CreateReleaseMonCryTask(battler, mon, 0, RELEASE_MON_CRY_WAIT_FOR_AFFINE);
+        if (!isShiny
+         && !CreateReleaseMonCryTask(battler, mon, 0, RELEASE_MON_CRY_WAIT_FOR_AFFINE))
+            gBattleSpritesDataPtr->healthBoxesData[battler].waitForCry = FALSE;
     }
 
     StartSpriteAffineAnim(&gSprites[gBattlerSpriteIds[sprite->sBattler]], BATTLER_AFFINE_EMERGE);

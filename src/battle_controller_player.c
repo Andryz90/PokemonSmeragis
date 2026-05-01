@@ -1238,6 +1238,15 @@ static void Intro_WaitForShinyAnimAndHealthbox(u32 battler)
     bool8 healthboxAnimDone = FALSE;
     bool8 twoMons = TwoPlayerIntroMons(battler) && !(gBattleTypeFlags & BATTLE_TYPE_MULTI);
 
+    if (!gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim
+     && !gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive)
+        TryShinyAnimationDirect(battler, GetBattlerMon(battler));
+
+    if (twoMons
+     && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].triedShinyMonAnim
+     && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].ballAnimActive)
+        TryShinyAnimationDirect(BATTLE_PARTNER(battler), GetBattlerMon(BATTLE_PARTNER(battler)));
+
     // Check if healthbox has finished sliding in
     if (twoMons)
     {
@@ -1288,13 +1297,13 @@ static void Intro_TryShinyAnimShowHealthbox(u32 battler)
     // Start shiny animation if applicable for 1st Pokémon
     if (!gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim
      && !gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive)
-        TryShinyAnimation(battler, GetBattlerMon(battler));
+        TryShinyAnimationDirect(battler, GetBattlerMon(battler));
 
     // Start shiny animation if applicable for 2nd Pokémon
     if (twoMons
      && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].triedShinyMonAnim
      && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(battler)].ballAnimActive)
-        TryShinyAnimation(BATTLE_PARTNER(battler), GetBattlerMon(BATTLE_PARTNER(battler)));
+        TryShinyAnimationDirect(BATTLE_PARTNER(battler), GetBattlerMon(BATTLE_PARTNER(battler)));
 
     // Show healthbox after ball anim
     if (!gBattleSpritesDataPtr->healthBoxesData[battler].ballAnimActive
