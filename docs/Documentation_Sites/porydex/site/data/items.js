@@ -8324,5 +8324,19 @@ exports.BattleItems = {
         "desc": "",
         "shortDesc": "",
         "isNonstandard": null
+    },
+    "infinitecandy": {
+        "name": "Infinite Candy",
+        "num": 2786,
+        "desc": "",
+        "shortDesc": "",
+        "isNonstandard": null
+    },
+    "pocketpc": {
+        "name": "Pocket PC",
+        "num": 2787,
+        "desc": "",
+        "shortDesc": "",
+        "isNonstandard": null
     }
 }

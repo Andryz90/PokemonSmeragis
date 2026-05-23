@@ -928,7 +928,7 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": false,
-      "item": null,
+      "item": "Mystic Water",
       "ability": "Huge Power",
       "nature": null,
       "moves": [
@@ -1554,14 +1554,14 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": false,
-      "item": null,
+      "item": "Lum Berry",
       "ability": "Own Tempo",
       "nature": null,
       "moves": [
         "Gigaton Hammer",
         "Sweet Kiss",
         "Play Rough",
-        "Slam"
+        "Knock Off"
       ]
     },
     "Partner Rival WALLY [2]": {
@@ -2818,8 +2818,8 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": true,
-      "item": null,
-      "ability": "Synchronize",
+      "item": "Life Orb",
+      "ability": "Trace",
       "nature": null,
       "moves": [
         "Calm Mind",
@@ -3224,7 +3224,7 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Mr. Rime": {
+  "Mr-Rime": {
     "Psychic F ALEXIS": {
       "index": 9,
       "slot": 3,
@@ -3912,7 +3912,7 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Mr. Mime": {
+  "Mr-Mime": {
     "School Kid M TED": {
       "index": 13,
       "slot": 0,
@@ -4043,8 +4043,8 @@ var SETDEX_SV = {
         "sp": 31
       },
       "ivsSpecified": true,
-      "item": null,
-      "ability": "Flash Fire",
+      "item": "Heat Rock",
+      "ability": "Drought",
       "nature": null,
       "moves": [
         "Dazzling Gleam",
@@ -8580,7 +8580,7 @@ var SETDEX_SV = {
     "Triathlete F ABIGAIL": {
       "index": 239,
       "slot": 4,
-      "level": "48",
+      "level": "50",
       "ivs": {
         "hp": 31,
         "at": 31,
@@ -18411,13 +18411,13 @@ var SETDEX_SV = {
       },
       "ivsSpecified": true,
       "item": null,
-      "ability": "Healer",
+      "ability": "Chlorophyll",
       "nature": null,
       "moves": [
         "Sleep Powder",
         "Moonblast",
         "Giga Drain",
-        "Moonlight"
+        "Weather Ball"
       ]
     },
     "Kindler JACE": {
@@ -19099,7 +19099,7 @@ var SETDEX_SV = {
       },
       "ivsSpecified": false,
       "item": "Heat Rock",
-      "ability": "Lifedrainer",
+      "ability": "Chlorophyll",
       "nature": null,
       "moves": [
         "Sunny Day",
@@ -21978,7 +21978,7 @@ var SETDEX_SV = {
       ]
     }
   },
-  "Type: Null": {
+  "Type-Null": {
     "Cooltrainer F ALEXIA": {
       "index": 255,
       "slot": 1,

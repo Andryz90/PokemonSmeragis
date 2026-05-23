@@ -1,15 +1,36 @@
 #!/usr/bin/env python3
 import argparse
+import json
 import re
 import shutil
 from pathlib import Path
 
 
 RE_HEADER = re.compile(r'^\s*window\.TRAINER_SETS\s*=\s*\{', re.MULTILINE)
+RE_OBJECT = re.compile(r'^\s*window\.TRAINER_SETS\s*=\s*(\{.*\})\s*;?\s*$', re.MULTILINE | re.DOTALL)
 
 # Remove trailing " (M)" / " (F)" inside quoted strings (both " and ')
 RE_GENDER_QUOTED_DQ = re.compile(r'"([^"\n]*?)\s*\((M|F)\)"')
 RE_GENDER_QUOTED_SQ = re.compile(r"'([^'\n]*?)\s*\((M|F)\)'")
+
+CALC_SPECIES_ALIASES = {
+    "Mime Jr.": "Mime-Jr",
+    "Mr. Mime": "Mr-Mime",
+    "Mr. Mime-Galar": "Mr-Mime-Galar",
+    "Mr. Rime": "Mr-Rime",
+    "Type: Null": "Type-Null",
+}
+
+
+def _load_trainer_sets(text: str):
+    match = RE_OBJECT.search(text)
+    if not match:
+        return None
+
+    try:
+        return json.loads(match.group(1))
+    except json.JSONDecodeError:
+        return None
 
 
 def transform(text: str) -> tuple[str, dict]:
@@ -17,12 +38,24 @@ def transform(text: str) -> tuple[str, dict]:
         "header_replaced": 0,
         "gender_removed_dq": 0,
         "gender_removed_sq": 0,
+        "species_renamed": 0,
     }
 
-    # Header
-    new_text, n = RE_HEADER.subn("var SETDEX_SV = {", text, count=1)
-    stats["header_replaced"] = n
-    text = new_text
+    trainer_sets = _load_trainer_sets(text)
+    if trainer_sets is not None:
+        remapped_sets = {}
+        for species, sets in trainer_sets.items():
+            calc_species = CALC_SPECIES_ALIASES.get(species, species)
+            if calc_species != species:
+                stats["species_renamed"] += 1
+            remapped_sets[calc_species] = sets
+        text = "var SETDEX_SV = " + json.dumps(remapped_sets, ensure_ascii=False, indent=2) + ";\n"
+        stats["header_replaced"] = 1
+    else:
+        # Header fallback if the object could not be parsed.
+        new_text, n = RE_HEADER.subn("var SETDEX_SV = {", text, count=1)
+        stats["header_replaced"] = n
+        text = new_text
 
     # Gender suffixes in double-quoted strings
     def _dq(m: re.Match) -> str:
@@ -67,6 +100,7 @@ def main() -> int:
         print("[warn] Header 'window.TRAINER_SETS = {' not found; no header replacement applied.")
     print(f"[ok] Written: {dst}")
     print(f"     header_replaced={stats['header_replaced']}")
+    print(f"     species_renamed={stats['species_renamed']}")
     print(f"     gender_removed={stats['gender_removed_dq'] + stats['gender_removed_sq']} "
           f"(dq={stats['gender_removed_dq']}, sq={stats['gender_removed_sq']})")
     return 0

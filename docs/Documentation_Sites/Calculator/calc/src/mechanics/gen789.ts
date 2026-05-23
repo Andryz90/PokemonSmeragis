@@ -298,7 +298,8 @@ export function calculateSMSSSV(
     defender.types[0],
     isGhostRevealed,
     field.isGravity,
-    isRingTarget
+    isRingTarget,
+    attacker.hasAbility('Corrosion')
   );
   const type2Effectiveness = defender.types[1]
     ? getMoveEffectiveness(
@@ -307,7 +308,8 @@ export function calculateSMSSSV(
       defender.types[1],
       isGhostRevealed,
       field.isGravity,
-      isRingTarget
+      isRingTarget,
+      attacker.hasAbility('Corrosion')
     )
     : 1;
   let typeEffectiveness = type1Effectiveness * type2Effectiveness;
@@ -328,7 +330,8 @@ export function calculateSMSSSV(
       defender.teraType,
       isGhostRevealed,
       field.isGravity,
-      isRingTarget
+      isRingTarget,
+      attacker.hasAbility('Corrosion')
     );
   }
 
@@ -993,7 +996,8 @@ export function calculateBPModsSMSSSV(
       defender.types[0],
       isGhostRevealed,
       field.isGravity,
-      isRingTarget
+      isRingTarget,
+      attacker.hasAbility('Corrosion')
     );
     const type2Effectiveness = defender.types[1] ? getMoveEffectiveness(
       gen,
@@ -1001,7 +1005,8 @@ export function calculateBPModsSMSSSV(
       defender.types[0],
       isGhostRevealed,
       field.isGravity,
-      isRingTarget
+      isRingTarget,
+      attacker.hasAbility('Corrosion')
     ) : 1;
     if (type1Effectiveness * type2Effectiveness >= 2) {
       bpMods.push(5461);

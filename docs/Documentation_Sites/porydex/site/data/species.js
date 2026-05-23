@@ -7351,7 +7351,7 @@ exports.BattlePokedex = {
         ],
         "prevo": "Onix",
         "evoType": "trade",
-        "evoCondition": "while holding Metal Coat or use Metal Coat",
+        "evoCondition": "while holding Metal Coat or use Metal Coat or level 34 while holding Metal Coat",
         "evoItem": "Metal Coat"
     },
     "steelixmega": {
@@ -8598,7 +8598,7 @@ exports.BattlePokedex = {
         "weightkg": 282.8,
         "prevo": "Rhydon",
         "evoType": "trade",
-        "evoCondition": "while holding Metal Coat or use Metal Coat",
+        "evoCondition": "while holding Metal Coat or use Metal Coat or level 40 while holding Metal Coat",
         "evoItem": "Metal Coat"
     },
     "happiny": {
@@ -9449,7 +9449,7 @@ exports.BattlePokedex = {
         ],
         "prevo": "Scyther",
         "evoType": "trade",
-        "evoCondition": "while holding Metal Coat or use Metal Coat",
+        "evoCondition": "while holding Metal Coat or use Metal Coat or level 36 while holding Metal Coat",
         "evoItem": "Metal Coat"
     },
     "scizormega": {
@@ -9736,7 +9736,7 @@ exports.BattlePokedex = {
         "weightkg": 138.6,
         "prevo": "Electabuzz",
         "evoType": "trade",
-        "evoCondition": "while holding Electirizer or use Electirizer",
+        "evoCondition": "while holding Electirizer or use Electirizer or level-up while holding Electirizer",
         "evoItem": "Electirizer"
     },
     "magby": {
@@ -9796,9 +9796,7 @@ exports.BattlePokedex = {
         "evYields": {
             "spa": 2
         },
-        "items": {
-            "R": "Magmarizer"
-        },
+        "items": {},
         "eggGroups": [
             "Human-Like"
         ],
@@ -9863,7 +9861,7 @@ exports.BattlePokedex = {
         "weightkg": 68.0,
         "prevo": "Magmar",
         "evoType": "trade",
-        "evoCondition": "while holding Magmarizer or use Magmarizer",
+        "evoCondition": "while holding Magmarizer or use Magmarizer or level-up while holding Magmarizer",
         "evoItem": "Magmarizer"
     },
     "pinsir": {

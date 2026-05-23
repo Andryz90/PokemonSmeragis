@@ -56,6 +56,24 @@ describe('calc', () => {
       });
     });
 
+    inGens(7, 9, ({gen, calculate, Pokemon, Move}) => {
+      test(`Corrosion lets Poison hit Steel (gen ${gen})`, () => {
+        const withoutCorrosion = calculate(
+          Pokemon('Salazzle', {ability: 'Oblivious'}),
+          Pokemon('Beldum'),
+          Move('Sludge Bomb')
+        );
+        expect(withoutCorrosion.damage).toBe(0);
+
+        const withCorrosion = calculate(
+          Pokemon('Salazzle', {ability: 'Corrosion'}),
+          Pokemon('Beldum'),
+          Move('Sludge Bomb')
+        );
+        expect(withCorrosion.range()[0]).toBeGreaterThan(0);
+      });
+    });
+
     inGens(1, 9, ({gen, calculate, Pokemon, Move}) => {
       test(`Non-damaging (gen ${gen})`, () => {
         const result = calculate(Pokemon('Snorlax'), Pokemon('Vulpix'), Move('Barrier'));

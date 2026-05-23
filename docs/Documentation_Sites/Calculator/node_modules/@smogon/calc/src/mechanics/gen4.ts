@@ -104,9 +104,25 @@ export function calculateDPP(
 
   const isGhostRevealed = attacker.hasAbility('Scrappy') || field.defenderSide.isForesight;
   let type1Effectiveness =
-    getMoveEffectiveness(gen, move, defender.types[0], isGhostRevealed, field.isGravity);
+    getMoveEffectiveness(
+      gen,
+      move,
+      defender.types[0],
+      isGhostRevealed,
+      field.isGravity,
+      undefined,
+      attacker.hasAbility('Corrosion')
+    );
   let type2Effectiveness = defender.types[1]
-    ? getMoveEffectiveness(gen, move, defender.types[1], isGhostRevealed, field.isGravity)
+    ? getMoveEffectiveness(
+      gen,
+      move,
+      defender.types[1],
+      isGhostRevealed,
+      field.isGravity,
+      undefined,
+      attacker.hasAbility('Corrosion')
+    )
     : 1;
 
   let typeEffectiveness = type1Effectiveness * type2Effectiveness;
