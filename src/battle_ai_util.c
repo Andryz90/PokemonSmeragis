@@ -4620,8 +4620,13 @@ u32 IncreaseSubstituteMoveScore(u32 battlerAtk, u32 battlerDef, u32 move)
     }
     else if (effect == EFFECT_SHED_TAIL) // Shed Tail specific
     {
-        if ((ShouldPivot(battlerAtk, battlerDef, gAiLogicData->abilities[battlerDef], move, gAiThinkingStruct->movesetIndex))
-        && (HasAnyKnownMove(battlerDef) && (GetBestDmgFromBattler(battlerDef, battlerAtk, AI_DEFENDING) < gBattleMons[battlerAtk].maxHP / 2)))
+        bool32 safeAgainstKnownDamage = HasAnyKnownMove(battlerDef)
+            && GetBestDmgFromBattler(battlerDef, battlerAtk, AI_DEFENDING) < gBattleMons[battlerAtk].maxHP / 2;
+        bool32 emergencyPivot = AI_IsFaster(battlerAtk, battlerDef, move)
+            && CanTargetFaintAi(battlerDef, battlerAtk);
+
+        if (ShouldPivot(battlerAtk, battlerDef, gAiLogicData->abilities[battlerDef], move, gAiThinkingStruct->movesetIndex)
+         && (safeAgainstKnownDamage || emergencyPivot))
             scoreIncrease += BEST_EFFECT;
     }
 

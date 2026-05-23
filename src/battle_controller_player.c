@@ -197,6 +197,14 @@ static void PlayerBufferRunCommand(u32 battler)
     }
 }
 
+bool32 IsBattlerWaitingForMoveSelection(u32 battler)
+{
+    return battler < gBattlersCount
+        && gBattlerControllerFuncs[battler] == PlayerBufferRunCommand
+        && !(gBattleControllerExecFlags & (1u << battler))
+        && gBattleResources->bufferB[battler][1] == B_ACTION_USE_MOVE;
+}
+
 static void CompleteOnBattlerSpritePosX_0(u32 battler)
 {
     if (gSprites[gBattlerSpriteIds[battler]].x2 == 0)

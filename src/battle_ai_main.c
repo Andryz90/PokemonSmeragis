@@ -25,6 +25,7 @@
 #include "constants/hold_effects.h"
 #include "constants/moves.h"
 #include "constants/items.h"
+#include "constants/opponents.h"
 #include "constants/trainers.h"
 
 #define AI_ACTION_DONE          (1 << 0)
@@ -37,6 +38,7 @@ static u32 ChooseMoveOrAction_Doubles(u32 battler);
 static inline void BattleAI_DoAIProcessing(struct AiThinkingStruct *aiThink, u32 battlerAtk, u32 battlerDef);
 static inline void BattleAI_DoAIProcessing_PredictedSwitchin(struct AiThinkingStruct *aiThink, struct AiLogicData *aiData, u32 battlerAtk, u32 battlerDef);
 static bool32 IsPinchBerryItemEffect(enum ItemHoldEffect holdEffect);
+static bool32 ShouldForceTrainerOmniscient(u16 trainerId);
 
 // ewram
 EWRAM_DATA const u8 *gAIScriptPtr = NULL;   // Still used in contests
@@ -179,6 +181,37 @@ static u64 GetWildAiFlags(void)
     return flags;
 }
 
+static bool32 ShouldForceTrainerOmniscient(u16 trainerId)
+{
+    if (trainerId >= TRAINERS_COUNT)
+        return FALSE;
+
+    switch (GetTrainerClassFromId(trainerId))
+    {
+    case TRAINER_CLASS_LEADER:
+    case TRAINER_CLASS_LEADER_JOHTO:
+    case TRAINER_CLASS_CHAMPION:
+        return TRUE;
+    }
+
+    // These story fights unlock the custom level-cap flags in src/caps.c.
+    switch (trainerId)
+    {
+    case TRAINER_GRUNT_PETALBURG_WOODS:
+    case TRAINER_GRUNT_RUSTURF_TUNNEL:
+    case TRAINER_BRENDAN_ROUTE_110_MUDKIP:
+    case TRAINER_BRENDAN_ROUTE_110_TREECKO:
+    case TRAINER_BRENDAN_ROUTE_110_TORCHIC:
+    case TRAINER_MAY_ROUTE_110_MUDKIP:
+    case TRAINER_MAY_ROUTE_110_TREECKO:
+    case TRAINER_MAY_ROUTE_110_TORCHIC:
+    case TRAINER_MAXIE_DESERT:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
 static u64 GetAiFlags(u16 trainerId)
 {
     u64 flags = 0;
@@ -205,6 +238,9 @@ static u64 GetAiFlags(u16 trainerId)
             flags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT;
         else
             flags = GetTrainerAIFlagsFromId(trainerId);
+
+        if (ShouldForceTrainerOmniscient(trainerId))
+            flags |= AI_FLAG_OMNISCIENT;
     }
 
     if (IsDoubleBattle())

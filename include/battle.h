@@ -1127,6 +1127,7 @@ extern struct QueuedStatBoost gQueuedStatBoosts[MAX_BATTLERS_COUNT];
 
 extern void (*gPreBattleCallback1)(void);
 extern void (*gBattleMainFunc)(void);
+bool32 IsBattleActionSelectionActive(void);
 extern struct BattleResults gBattleResults;
 extern u8 gLeveledUpInBattle;
 extern u8 gHealthboxSpriteIds[MAX_BATTLERS_COUNT];

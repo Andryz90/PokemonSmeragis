@@ -8209,7 +8209,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sPoliwhirlTeachableLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_WATER_STONE, SPECIES_POLIWRATH},
                                 {EVO_TRADE, 0, SPECIES_POLITOED, CONDITIONS({IF_HOLD_ITEM, ITEM_KINGS_ROCK})},
-                                {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_POLITOED}),
+                                {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_POLITOED},
+                                {EVO_LEVEL, 0, SPECIES_POLITOED, CONDITIONS({IF_HOLD_ITEM, ITEM_KINGS_ROCK})}),
     },
 
     [SPECIES_POLIWRATH] =
@@ -10183,7 +10184,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sSlowpokeTeachableLearnset,
         .eggMoveLearnset = sSlowpokeEggMoveLearnset,
         .formSpeciesIdTable = sSlowpokeFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_SLOWBRO},
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SLOWKING, CONDITIONS({IF_HOLD_ITEM, ITEM_KINGS_ROCK})},
+                                {EVO_LEVEL, 37, SPECIES_SLOWBRO},
                                 {EVO_TRADE, 0, SPECIES_SLOWKING, CONDITIONS({IF_HOLD_ITEM, ITEM_KINGS_ROCK})},
                                 {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING}),
     },
@@ -12248,8 +12250,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggMoveLearnset = sOnixEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_STEELIX, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})},
                                 {EVO_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX},
-                                {EVO_LEVEL, 34, SPECIES_STEELIX,
-                                CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
+                                {EVO_LEVEL, 0, SPECIES_STEELIX, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -14410,8 +14411,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sRhydonTeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_RHYPERIOR, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})},
                                 {EVO_ITEM, ITEM_METAL_COAT, SPECIES_RHYPERIOR},
-                                {EVO_LEVEL, 40, SPECIES_RHYPERIOR,
-                                CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
+                                {EVO_LEVEL, 0, SPECIES_RHYPERIOR, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -15170,7 +15170,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sSeadraLevelUpLearnset,
         .teachableLearnset = sSeadraTeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_KINGDRA, CONDITIONS({IF_HOLD_ITEM, ITEM_DRAGON_SCALE})},
-                                {EVO_ITEM, ITEM_DRAGON_SCALE, SPECIES_KINGDRA}),
+                                {EVO_ITEM, ITEM_DRAGON_SCALE, SPECIES_KINGDRA},
+                                {EVO_LEVEL, 0, SPECIES_KINGDRA, CONDITIONS({IF_HOLD_ITEM, ITEM_DRAGON_SCALE})}),
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -15957,8 +15958,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_SCIZOR, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})},
                                 {EVO_ITEM, ITEM_BLACK_AUGURITE, SPECIES_KLEAVOR},
                                 {EVO_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR},
-                                {EVO_LEVEL, 36, SPECIES_SCIZOR,
-                                    CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
+                                {EVO_LEVEL, 0, SPECIES_SCIZOR, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -18490,7 +18490,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPorygonLevelUpLearnset,
         .teachableLearnset = sPorygonTeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_PORYGON2, CONDITIONS({IF_HOLD_ITEM, ITEM_UPGRADE})},
-                                {EVO_ITEM, ITEM_UPGRADE, SPECIES_PORYGON2}),
+                                {EVO_ITEM, ITEM_UPGRADE, SPECIES_PORYGON2},
+                                {EVO_LEVEL, 0, SPECIES_PORYGON2, CONDITIONS({IF_HOLD_ITEM, ITEM_UPGRADE})}),
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -18567,7 +18568,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPorygon2LevelUpLearnset,
         .teachableLearnset = sPorygon2TeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_PORYGON_Z, CONDITIONS({IF_HOLD_ITEM, ITEM_DUBIOUS_DISC})},
-                                {EVO_ITEM, ITEM_DUBIOUS_DISC, SPECIES_PORYGON_Z}),
+                                {EVO_ITEM, ITEM_DUBIOUS_DISC, SPECIES_PORYGON_Z},
+                                {EVO_LEVEL, 0, SPECIES_PORYGON_Z, CONDITIONS({IF_HOLD_ITEM, ITEM_DUBIOUS_DISC})}),
     },
 
 #if P_GEN_4_CROSS_EVOS

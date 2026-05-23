@@ -30,8 +30,9 @@ PKMN_Center_Move_Tutor::
 	dynmultipush PKMN_Center_SwapGender, 	3
 	dynmultipush PKMN_Center_DamagePokemon, 4
 	dynmultipush PKMN_Center_ChangeTime,    5
-	dynmultipush PKMN_Center_Cancel, 		6	
-	dynmultistack 0, 0, FALSE, 7, FALSE, 0, NULL
+	dynmultipush PKMN_Center_ShinyOdds,    6
+	dynmultipush PKMN_Center_Cancel, 		MULTI_B_PRESSED
+	dynmultistack 0, 0, FALSE, 8, FALSE, 0, NULL
 	compare VAR_RESULT, MULTI_B_PRESSED
 	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
 	switch VAR_RESULT
@@ -41,7 +42,7 @@ PKMN_Center_Move_Tutor::
 	case 3, PKMN_Center_Swap_Pokemon_Gender
 	case 4, PKMN_Center_EventScript_DamageSet
 	case 5, PKMN_Center_EventScript_SetTime
-	case 6, PKMN_Center_Move_Tutor_General_Exit
+	case 6, PKMN_Center_EventScript_SetShinyOdds
 	releaseall
 	end
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Move Reminder @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -622,6 +623,25 @@ PKMN_Center_EventScript_SetTime::
 	releaseall
 	end
 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Change Shiny Odds @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+PKMN_Center_EventScript_SetShinyOdds::
+	msgbox PKMN_Center_ShinyOdds_ChooseText, MSGBOX_DEFAULT
+	dynmultipush PKMN_Center_ShinyOdds_Default, 0
+	dynmultipush PKMN_Center_ShinyOdds_4096, 16
+	dynmultipush PKMN_Center_ShinyOdds_2048, 32
+	dynmultipush PKMN_Center_ShinyOdds_1024, 64
+	dynmultipush PKMN_Center_ShinyOdds_512, 128
+	dynmultipush PKMN_Center_Cancel, MULTI_B_PRESSED
+	dynmultistack 0, 0, FALSE, 6, FALSE, 0, NULL
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq PKMN_Center_Move_Tutor_General_Exit
+	copyvar VAR_SHINY_ODDS_SETTING, VAR_RESULT
+	msgbox PKMN_Center_ShinyOdds_DoneText, MSGBOX_DEFAULT
+	call PKMN_Center_Move_Tutor_General_Exit
+	releaseall
+	end
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Strings @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 PKMN_Center_NameRater::
@@ -638,6 +658,8 @@ PKMN_Center_DamagePokemon::
 	.string "Damage a Pokémon $"
 PKMN_Center_ChangeTime::
 	.string "Change Time of the Day $"
+PKMN_Center_ShinyOdds::
+	.string "Set Shiny Odds $"
 PKMN_Center_ChangeNature::
 	.string "Change Nature $"
 PKMN_Center_MaxIVs::
@@ -758,6 +780,22 @@ PKMN_Center_Text_ApplyingStatus::
 PKMN_Center_Text_Damage::
 	.string "Which POKéMON you want\n"
 	.string "to pre-damage? $"
+PKMN_Center_ShinyOdds_ChooseText::
+	.string "Choose the base shiny odds used for\n"
+	.string "newly generated POKéMON. $"
+PKMN_Center_ShinyOdds_Default::
+	.string "Default (1/8192) $"
+PKMN_Center_ShinyOdds_4096::
+	.string "1/4096 $"
+PKMN_Center_ShinyOdds_2048::
+	.string "1/2048 $"
+PKMN_Center_ShinyOdds_1024::
+	.string "1/1024 $"
+PKMN_Center_ShinyOdds_512::
+	.string "1/512 $"
+PKMN_Center_ShinyOdds_DoneText::
+	.string "Done! The new shiny odds will apply\n"
+	.string "to newly generated POKéMON. $"
 PKMN_Center_Text_Damage_YesNo::
 	.string "{STR_VAR_1} will be damaged\n"
 	.string "are you sure? $"

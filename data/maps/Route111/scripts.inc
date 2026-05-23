@@ -26,24 +26,24 @@ Route111_EventScript_CloseDesertRuins::
 
 @ Show Mirage Tower just prior to disintegration. Mirage Tower is otherwise handled by the map layout
 Route111_EventScript_ShowTemporaryMirageTower::
-	setmetatile 18, 53, METATILE_Mauville_MirageTower_Tile0, FALSE
-	setmetatile 19, 53, METATILE_Mauville_MirageTower_Tile1, FALSE
-	setmetatile 20, 53, METATILE_Mauville_MirageTower_Tile2, FALSE
-	setmetatile 18, 54, METATILE_Mauville_MirageTower_Tile3, FALSE
-	setmetatile 19, 54, METATILE_Mauville_MirageTower_Tile4, FALSE
-	setmetatile 20, 54, METATILE_Mauville_MirageTower_Tile5, FALSE
-	setmetatile 18, 55, METATILE_Mauville_MirageTower_Tile6, FALSE
-	setmetatile 19, 55, METATILE_Mauville_MirageTower_Tile7, FALSE
-	setmetatile 20, 55, METATILE_Mauville_MirageTower_Tile8, FALSE
-	setmetatile 18, 56, METATILE_Mauville_MirageTower_Tile9, FALSE
-	setmetatile 19, 56, METATILE_Mauville_MirageTower_TileA, FALSE
-	setmetatile 20, 56, METATILE_Mauville_MirageTower_TileB, FALSE
-	setmetatile 18, 57, METATILE_Mauville_MirageTower_TileC, FALSE
-	setmetatile 19, 57, METATILE_Mauville_MirageTower_TileD, FALSE
-	setmetatile 20, 57, METATILE_Mauville_MirageTower_TileE, FALSE
-	setmetatile 18, 58, METATILE_Mauville_MirageTower_TileF, FALSE
+	setmetatile 18, 53, METATILE_Mauville_MirageTower_Tile0, TRUE
+	setmetatile 19, 53, METATILE_Mauville_MirageTower_Tile1, TRUE
+	setmetatile 20, 53, METATILE_Mauville_MirageTower_Tile2, TRUE
+	setmetatile 18, 54, METATILE_Mauville_MirageTower_Tile3, TRUE
+	setmetatile 19, 54, METATILE_Mauville_MirageTower_Tile4, TRUE
+	setmetatile 20, 54, METATILE_Mauville_MirageTower_Tile5, TRUE
+	setmetatile 18, 55, METATILE_Mauville_MirageTower_Tile6, TRUE
+	setmetatile 19, 55, METATILE_Mauville_MirageTower_Tile7, TRUE
+	setmetatile 20, 55, METATILE_Mauville_MirageTower_Tile8, TRUE
+	setmetatile 18, 56, METATILE_Mauville_MirageTower_Tile9, TRUE
+	setmetatile 19, 56, METATILE_Mauville_MirageTower_TileA, TRUE
+	setmetatile 20, 56, METATILE_Mauville_MirageTower_TileB, TRUE
+	setmetatile 18, 57, METATILE_Mauville_MirageTower_TileC, TRUE
+	setmetatile 19, 57, METATILE_Mauville_MirageTower_TileD, TRUE
+	setmetatile 20, 57, METATILE_Mauville_MirageTower_TileE, TRUE
+	setmetatile 18, 58, METATILE_Mauville_MirageTower_TileF, TRUE
 	setmetatile 19, 58, METATILE_Mauville_MirageTower_Tile10, FALSE
-	setmetatile 20, 58, METATILE_Mauville_MirageTower_Tile11, FALSE
+	setmetatile 20, 58, METATILE_Mauville_MirageTower_Tile11, TRUE
 	return
 
 Route111_OnTransition:
@@ -1027,17 +1027,7 @@ Route111_EventScript_MirageTowerDisappear::
 	delay 16
 	special StartMirageTowerDisintegration
 	waitstate
-	special StartMirageTowerFossilFallAndSink
-	waitstate
 	setvar VAR_MIRAGE_TOWER_STATE, 2
-	clearflag FLAG_HIDE_DESERT_UNDERPASS_FOSSIL
-	goto_if_set FLAG_CHOSE_CLAW_FOSSIL, Route111_EventScript_RootFossilDisappeared
-	msgbox Route111_Text_ClawFossilDisappeared, MSGBOX_DEFAULT
-	releaseall
-	end
-
-Route111_EventScript_RootFossilDisappeared::
-	msgbox Route111_Text_RootFossilDisappeared, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -1972,6 +1962,9 @@ Route111_EdoInteractionExit_Text::
 
 Common_Script_End::
 	end
+	
+Common_Script_Return::
+	return
 
 Demo_IsFinished_Text::
 	.string "The demo is finished.\nThanks for playing!\p"

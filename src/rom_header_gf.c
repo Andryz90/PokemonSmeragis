@@ -80,7 +80,7 @@ struct GFRomHeader
     u32 gcnLinkFlagsOffset;
     u32 gameClearFlag;
     u32 ribbonFlag;
-    u8 bagCountItems;
+    u16 bagCountItems;
     u8 bagCountTeraShards;
     u8 bagCountMegaStones;
     u8 bagCountKeyItems;

@@ -6,15 +6,15 @@ Route110_MapScripts::
 	.byte 0
 
 Route110_OnResume:
-	
 	special UpdateCyclingRoadState
+	special SetRoute110WarpTrigger
 	end
 Route110_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call Common_EventScript_SetupRivalOnBikeGfxId
-	goto_if_eq VAR_BIRCH_TRIGGER_110, 1, Route110_ChangeBirchPos
+	call_if_eq VAR_BIRCH_TRIGGER_110, 1, Route110_ChangeBirchPos
 	call_if_eq VAR_CYCLING_CHALLENGE_STATE, 1, Route110_EventScript_SaveCyclingMusic
-	goto_if_eq VAR_R110_STATE, 1, Route110_EventScript_MovePokemonInWay
+	call_if_eq VAR_R110_STATE, 1, Route110_EventScript_MovePokemonInWay
 	end
 
 Route110_EventScript_SaveCyclingMusic::
@@ -23,13 +23,13 @@ Route110_EventScript_SaveCyclingMusic::
 
 Route110_Trigger_Rivals_Event::
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	call_if_ne VAR_TEMP_0, 16, Common_Script_End
-	call_if_ne VAR_TEMP_1, 89, Common_Script_End
+	goto_if_ne VAR_TEMP_0, 16, Common_Script_Return
+	goto_if_ne VAR_TEMP_1, 89, Common_Script_Return
 	goto Route110_EventScript_Wally_Rival
-	return
 
 Route110_EventScript_MovePokemonInWay::
-	call_if_unset FLAG_MAXIE_DESERT, Common_Script_End
+	goto_if_unset FLAG_MAXIE_DESERT, Common_Script_Return
+	clearflag FLAG_HIDE_RIVALS_R110
 	setobjectxyperm LOCALID_FENNEK_R110_1, 5, 20
 	setobjectxyperm LOCALID_FENNEK_R110_2, 4, 21
 	setobjectxyperm LOCALID_FENNEK_R110_3, 3, 20
@@ -42,7 +42,7 @@ Route110_EventScript_MovePokemonInWay::
 
 Route110_OnFrame:
 	map_script_2 VAR_CYCLING_CHALLENGE_STATE, 1, Route110_EventScript_BeginCylcingRoadChallenge
-	map_script_2 VAR_R110_STATE, 1, Route110_Trigger_Rivals_Event
+	map_script_2 VAR_R110_WARP_TRIGGER, 1, Route110_EventScript_Wally_Rival_FromCyclingRoadWarp
 	.2byte 0
 
 Route110_EventScript_BeginCylcingRoadChallenge::
@@ -820,6 +820,23 @@ Route110_EventScript_Wally_Rival::
 	msgbox Common_Text_PlayerName, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
+	goto Route110_EventScript_Wally_Rival_Common
+
+Route110_EventScript_Wally_Rival_FromCyclingRoadWarp::
+	setvar VAR_R110_WARP_TRIGGER, 0
+	lock 
+	applymovement LOCALID_RIVAL_R110_2, Common_Movement_FacePlayer
+	waitmovement 0
+	applymovement LOCALID_WALLY_R110, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_WALLY_R110, Common_Movement_ExclamationMark
+	applymovement LOCALID_RIVAL_R110_2, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Common_Text_PlayerName, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PLAYER, Route110_Movement_PlayerApproachFromCyclingRoadWarp
+	waitmovement 0
+
+Route110_EventScript_Wally_Rival_Common::
 	msgbox Route110_Text_Rival, MSGBOX_DEFAULT
 	msgbox Route110_Wally_Text, MSGBOX_DEFAULT
 	msgbox Route110_Text_Rival2, MSGBOX_DEFAULT
@@ -843,9 +860,14 @@ Route110_EventScript_Wally_Rival::
 	removeobject LOCALID_CUBONE_R110_3
 	removeobject LOCALID_RIVAL_R110_2
 	removeobject LOCALID_WALLY_R110
+	setflag FLAG_HIDE_RIVALS_R110
 	setvar VAR_R110_STATE, 2
 	release
 	end 
+	
+Route110_Movement_PlayerApproachFromCyclingRoadWarp::
+	walk_down
+	step_end
 
 
 Route110_Wally_Exit_Movement::

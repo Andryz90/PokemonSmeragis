@@ -4876,6 +4876,11 @@ static void HandleTurnActionSelectionState(void)
     }
 }
 
+bool32 IsBattleActionSelectionActive(void)
+{
+    return gBattleMainFunc == HandleTurnActionSelectionState;
+}
+
 static bool8 AllAtActionConfirmed(void)
 {
     s32 i, count;

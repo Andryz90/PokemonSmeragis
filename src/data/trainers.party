@@ -9473,9 +9473,51 @@ Music: Female
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Magnemite
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Magnezone @ Custap Berry  
+Ability: Sturdy  
+Level: 48  
+Bold Nature  
+- Explosion  
+- Discharge  
+- Flash Cannon  
+- Body Press  
+
+Electrode @ Air Balloon  
+Ability: Aftermath  
+Level: 48  
+Modest Nature  
+- Explosion  
+- Thunderbolt  
+- Flash Cannon  
+- Hidden Power
+
+Zebstrika @ Choice Band  
+Ability: Iron Kick  
+Level: 49   
+Jolly Nature  
+- High Horsepower  
+- Thunderous Kick  
+- Stomp  
+- Supercell Slam  
+
+Manectric @ Magnet  
+Ability: Lightning Rod  
+Level: 50  
+Modest Nature  
+IVs: 0 Atk / 30 Def  
+- Electric Terrain  
+- Rising Voltage  
+- Discharge  
+- Hidden Power  
+
+Pachirisu @ Sitrus Berry  
+Ability: Volt Absorb   
+Level: 50
+Timid Nature  
+- U-turn  
+- Super Fang  
+- Thunder Wave  
+- Encore  
 
 === TRAINER_JASMINE ===
 Name: JASMINE
@@ -9547,50 +9589,9 @@ Music: Female
 Double Battle: No
 AI: Check bad Move / Try To Faint / Prefer Highest Damage Move / Check Viability / HP Aware / Smart Switching / Smart Mon Choices
 
-Magnezone @ Custap Berry  
-Ability: Sturdy  
-Level: 48  
-Bold Nature  
-- Explosion  
-- Discharge  
-- Flash Cannon  
-- Body Press  
-
-Electrode @ Air Balloon  
-Ability: Aftermath  
-Level: 48  
-Modest Nature  
-- Explosion  
-- Thunderbolt  
-- Flash Cannon  
-- Hidden Power
-
-Zebstrika @ Choice Band  
-Ability: Iron Kick  
-Level: 49   
-Jolly Nature  
-- High Horsepower  
-- Thunderous Kick  
-- Stomp  
-- Supercell Slam  
-
-Manectric @ Magnet  
-Ability: Lightning Rod  
-Level: 50  
-Modest Nature  
-IVs: 0 Atk / 30 Def  
-- Electric Terrain  
-- Rising Voltage  
-- Discharge  
-- Hidden Power  
-
-Pachirisu @ Sitrus Berry  
-Ability: Volt Absorb   
-Timid Nature  
-- U-turn  
-- Super Fang  
-- Thunder Wave  
-- Encore  
+Magnemite
+Level: 50
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 
 
