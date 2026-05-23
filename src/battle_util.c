@@ -2048,7 +2048,9 @@ static void CancellerObedience(u32 *effect)
 
 static void CancellerTruant(u32 *effect)
 {
-    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_TRUANT && gDisableStructs[gBattlerAttacker].truantCounter)
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_TRUANT
+     && gDisableStructs[gBattlerAttacker].truantCounter
+     && RandomPercentage(RNG_TRUANT, 50))
     {
         CancelMultiTurnMoves(gBattlerAttacker, SKY_DROP_ATTACKCANCELLER_CHECK);
         gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;

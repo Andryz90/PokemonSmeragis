@@ -118,6 +118,7 @@ EventScript_NoRoomForDecor::
 Std_FindItem::
 	lock
 	faceplayer
+	setvar VAR_RESULT, FALSE
 	waitse
 	copyvar VAR_0x8006, ITEMID
 	copyvar VAR_0x8004, ITEMID
@@ -127,6 +128,7 @@ Std_FindItem::
 	bufferitemnameplural STR_VAR_2, ITEMID, AMOUNT
 	checkitemtype ITEMID
 	callnative ScrCmd_isachest
+	copyvar VAR_0x8009, VAR_0x8008
 	goto_if_eq VAR_0x8008, TRUE, EventScript_OpenChest
 	call EventScript_BufferPocketNameAndTryFanfare
 	call_if_eq VAR_0x8007, TRUE, EventScript_PickUpItem
@@ -161,11 +163,13 @@ EventScript_PickUpItem2::
 	goto_if_eq VAR_RESULT, TRUE, EventScript_PutBattlePyramidItemInBag
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
 	hideitemdescription
+	setvar VAR_RESULT, TRUE
 	return
 
 EventScript_PutBattlePyramidItemInBag::
 	msgbox gText_PlayerPutItemInBag, MSGBOX_DEFAULT
 	hideitemdescription
+	setvar VAR_RESULT, TRUE
 	return
 
 EventScript_FoundTMHM::
@@ -193,7 +197,13 @@ EventScript_FoundItemMessage::
 EventScript_NoRoomToPickUpItem::
 	msgbox gText_ObtainedTheItem, MSGBOX_DEFAULT
 	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
+	call_if_eq VAR_0x8009, TRUE, EventScript_RestoreChestAfterBagIsFull
 	setvar VAR_RESULT, FALSE
+	return
+
+EventScript_RestoreChestAfterBagIsFull::
+	callnative ScrCmd_closechest
+	refreshobjectsinmap
 	return
 
 EventScript_HiddenItemScript::
@@ -250,6 +260,7 @@ EventScript_NoRoomForHiddenItem::
 	end
 
 EventScript_PickedItemAlready::
+	setvar VAR_RESULT, FALSE
 	msgbox Text_PickedItemAlready, MSGBOX_AUTOCLOSE
 	release
 	end

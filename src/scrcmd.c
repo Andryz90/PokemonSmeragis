@@ -3333,3 +3333,20 @@ void ScrCmd_openchest(void)
             ObjectEventFaceOppositeDirection(&gObjectEvents[gSelectedObjectEvent], DIR_NORTH);
     }
 }
+
+void ScrCmd_closechest(void)
+{
+    u16 localId = gSpecialVar_LastTalked;
+    const struct ObjectEventTemplate *obj = GetObjectEventTemplateByLocalIdAndMap(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+    u8 objectEventId;
+
+    if (!TryGetObjectEventIdByLocalIdAndMap(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, &objectEventId))
+    {
+        u16 flag = GetObjectEventFlagIdByLocalIdAndMap(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+        FlagClear(flag);
+        gSpecialVar_0x8008 = FALSE;
+        ObjectEventSetGraphicsId(&gObjectEvents[gSelectedObjectEvent], obj->graphicsId);
+        if (gObjectEvents[gSelectedObjectEvent].active)
+            ObjectEventFaceOppositeDirection(&gObjectEvents[gSelectedObjectEvent], DIR_NORTH);
+    }
+}

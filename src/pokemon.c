@@ -1103,6 +1103,20 @@ void ZeroPlayerPartyMons(void)
         ZeroMonData(&gPlayerParty[i]);
 }
 
+static u32 GetShinyOddsThresholdForNewMon(void)
+{
+    switch (VarGet(VAR_SHINY_ODDS_SETTING))
+    {
+    case 16:
+    case 32:
+    case 64:
+    case 128:
+        return VarGet(VAR_SHINY_ODDS_SETTING);
+    default:
+        return SHINY_ODDS;
+    }
+}
+
 void ZeroEnemyPartyMons(void)
 {
     s32 i;
@@ -1176,6 +1190,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         else
         {
             u32 totalRerolls = 0;
+            u32 shinyOdds = GetShinyOddsThresholdForNewMon();
             if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
                 totalRerolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
             if (LURE_STEP_COUNT != 0)
@@ -1185,13 +1200,13 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
             if (gDexNavSpecies)
                 totalRerolls += CalculateDexNavShinyRolls();
 
-            while (GET_SHINY_VALUE(value, personality) >= SHINY_ODDS && totalRerolls > 0)
+            while (GET_SHINY_VALUE(value, personality) >= shinyOdds && totalRerolls > 0)
             {
                 personality = Random32();
                 totalRerolls--;
             }
 
-            isShiny = GET_SHINY_VALUE(value, personality) < SHINY_ODDS;
+            isShiny = GET_SHINY_VALUE(value, personality) < shinyOdds;
         }
     }
     if (hasFixedPersonality)

@@ -298,6 +298,21 @@ void UpdateCyclingRoadState(void)
     }
 }
 
+void SetRoute110WarpTrigger(void)
+{
+    VarSet(VAR_R110_WARP_TRIGGER, 0);
+
+    if (VarGet(VAR_R110_STATE) != 1)
+        return;
+
+    if (gLastUsedWarp.mapNum != MAP_NUM(MAP_ROUTE110_SEASIDE_CYCLING_ROAD_NORTH_ENTRANCE)
+     || gLastUsedWarp.mapGroup != MAP_GROUP(MAP_ROUTE110_SEASIDE_CYCLING_ROAD_NORTH_ENTRANCE))
+        return;
+
+    if (gSaveBlock1Ptr->pos.x == 16 && gSaveBlock1Ptr->pos.y == 88)
+        VarSet(VAR_R110_WARP_TRIGGER, 1);
+}
+
 void SetSSTidalFlag(void)
 {
     FlagSet(FLAG_SYS_CRUISE_MODE);

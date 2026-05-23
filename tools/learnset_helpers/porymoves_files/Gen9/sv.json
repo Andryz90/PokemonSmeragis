@@ -13580,6 +13580,10 @@
         "Move": "MOVE_SWEET_SCENT"
       },
       {
+        "Level": 36,
+        "Move": "MOVE_GIGA_DRAIN"
+      },
+      {
         "Level": 40,
         "Move": "MOVE_LIGHT_SCREEN"
       },
@@ -13598,10 +13602,6 @@
       {
         "Level": 54,
         "Move": "MOVE_SAFEGUARD"
-      },
-      {
-        "Level": 58,
-        "Move": "MOVE_GIGA_DRAIN"
       },
       {
         "Level": 64,
@@ -67553,16 +67553,16 @@
         "Move": "MOVE_SHADOW_BALL"
       },
       {
-        "Level": 47,
-        "Move": "MOVE_HYPNOSIS"
-      },
-      {
         "Level": 40,
-        "Move": "MOVE_IRON_DEFENSE"
+        "Move": "MOVE_HEX"
       },
       {
-        "Level": 54,
+        "Level": 44,
         "Move": "MOVE_EARTH_POWER"
+      },
+      {
+        "Level": 50,
+        "Move": "MOVE_HYPNOSIS"
       },
       {
         "Level": 68,

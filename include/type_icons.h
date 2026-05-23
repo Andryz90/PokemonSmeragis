@@ -5,11 +5,10 @@ void LoadTypeIcons(u32 battler);
 
 #define TYPE_ICON_TAG 0x2720
 #define TYPE_ICON_TAG_2 0x2721
-#define NUM_FRAMES_HIDE_TYPE_ICON 10
 
 #define tMonPosition      data[0]
-#define tBattlerId        data[1]
-#define tHideIconTimer    data[2]
+#define tTypeSlot         data[1]
+#define tDisplayedType    data[2]
 #define tVerticalPosition data[3]
 
 #define TYPE_ICON_1_FRAME(monType) ((monType - 1) * 2)
