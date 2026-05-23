@@ -3676,7 +3676,7 @@ Magnezone @Custap Berry: Explosion, Discharge, Flash Cannon, Body Press [Lv.48 |
 Electrode @Air Balloon: Explosion, Thunderbolt, Flash Cannon, Hidden Power Dark [Lv.48 | Aftermath | Modest Nature | IVs 31/31/31/31/31/31]  
 Zebstrika @Choice Band: High Horsepower, Thunderous Kick, Stomp, Supercell Slam [Lv.49 | Iron Kick | Jolly Nature]  
 Manectric @Magnet: Electric Terrain, Rising Voltage, Discharge, Hidden Power Ice [Lv.50 | Lightning Rod | Modest Nature | IVs 31/0/30/31/31/31]  
-Pachirisu @Sitrus Berry: U-turn, Super Fang, Thunder Wave, Encore [Volt Absorb | Timid Nature]  
+Pachirisu @Sitrus Berry: U-turn, Super Fang, Thunder Wave, Encore [Lv.50 | Volt Absorb | Timid Nature]  
 
 ## Picnicker HEIDI
 Gogoat @Safety Goggles: Bulk Up, Horn Leech, Milk Drink, Earthquake [Lv.50 | Sap Sipper | Jolly Nature]  

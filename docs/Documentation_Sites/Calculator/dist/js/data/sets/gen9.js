@@ -8580,7 +8580,7 @@ var SETDEX_SV = {
     "Triathlete F ABIGAIL": {
       "index": 239,
       "slot": 4,
-      "level": "48",
+      "level": "50",
       "ivs": {
         "hp": 31,
         "at": 31,

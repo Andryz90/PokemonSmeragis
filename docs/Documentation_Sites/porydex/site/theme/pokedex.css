@@ -217,6 +217,13 @@ table.stats .stat {
 	width: 38px;
 	font-weight: bold;
 }
+.porydex-stat-changes {
+	margin-top: 6px;
+}
+.porydex-stat-changes small {
+	display: block;
+	line-height: 1.35;
+}
 .statbar span {
 	display: block;
 	background: #aaa;

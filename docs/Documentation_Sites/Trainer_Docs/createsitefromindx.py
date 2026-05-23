@@ -11,6 +11,7 @@ from __future__ import annotations
 import os, re, sys, unicodedata, argparse, html
 from pathlib import Path
 from collections import defaultdict
+from urllib.parse import urlencode
 
 try:
     from bs4 import BeautifulSoup  # pip install beautifulsoup4
@@ -56,7 +57,7 @@ def build_paths(args):
     return site_dir, in_file, out_main, splits_file, sprites_dir, sprites_map
 
 # ===== Utilities =====
-CALC_URL = "https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Calculator/dist/index.html"
+CALC_URL = "../../Calculator/dist/index.html"
 POKEDEX_URL = "https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/porydex/site/index.html"
 DOCS_URL = "https://andryz90.github.io/PokemonSmeragis/Documentation_Sites/Site/site.html"
 MERGE_SIDE_LIMIT = 3
@@ -100,6 +101,13 @@ def make_inorder_regex(s: str):
 
 def _cell_text(c) -> str:
     return (c.get_text(" ", strip=True) or "").strip()
+
+def calc_url_for_columns(columns, trainer_title: str|None) -> str:
+    species = next(((c.get("species") or "").strip() for c in columns if (c.get("species") or "").strip()), "")
+    trainer_title = (trainer_title or "").strip()
+    if not species or not trainer_title:
+        return CALC_URL
+    return CALC_URL + "?" + urlencode({"p2s": species, "p2set": trainer_title})
 
 def trainer_id_parts(trainer_id: str | None):
     if not trainer_id:
@@ -545,7 +553,7 @@ def parse_table_columns(tbl):
     return cols
 
 # ===== Build HTML =====
-def build_table_from_columns(title, columns, trainer_pic_lists, themed="single", cut_after=None):
+def build_table_from_columns(title, columns, trainer_pic_lists, themed="single", cut_after=None, calc_title=None):
     soup = BeautifulSoup('<table class="content-table"><caption class="caption-content"></caption><tbody></tbody></table>', "html.parser")
     tbl = soup.table
     cap = tbl.caption
@@ -561,7 +569,7 @@ def build_table_from_columns(title, columns, trainer_pic_lists, themed="single",
 
     cap.append(title + themed_caption_suffix(themed))
     sep = soup.new_tag("span"); sep.string = " · "; cap.append(sep)
-    a = soup.new_tag("a", href=CALC_URL, target="_blank", rel="noopener"); a.string = "Open Calculator"; cap.append(a)
+    a = soup.new_tag("a", href=calc_url_for_columns(columns, calc_title or title), target="_blank", rel="noopener"); a.string = "Open Calculator"; cap.append(a)
 
     def make_row(values, tag="td"):
         r = soup.new_tag("tr")
@@ -589,7 +597,7 @@ def build_table_from_columns(title, columns, trainer_pic_lists, themed="single",
 
     return tbl
 
-def merge_two_tables(title1, t1, title2, t2, custom_rules, sprites_dir: Path, out_parent: Path, themed="double"):
+def merge_two_tables(title1, t1, title2, t2, custom_rules, sprites_dir: Path, out_parent: Path, themed="double", calc_title1=None):
     cols1_all = parse_table_columns(t1)
     cols2_all = parse_table_columns(t2)
 
@@ -606,16 +614,21 @@ def merge_two_tables(title1, t1, title2, t2, custom_rules, sprites_dir: Path, ou
     pics2 = detect_trainer_sprite(title2, custom_rules, sprites_dir, out_parent)
     merged_title = f"{title1} & {title2}"
     cut_after = (len(cols1) - 1) if cols1 else None
-    merged_tbl = build_table_from_columns(merged_title, columns, [pics1, pics2], themed=themed, cut_after=cut_after)
+    merged_tbl = build_table_from_columns(merged_title, columns, [pics1, pics2], themed=themed, cut_after=cut_after, calc_title=calc_title1 or title1)
     return merged_tbl
 
 # ===== splits.txt =====
+def apply_display_note(title: str, note: str|None) -> str:
+    note = (note or "").strip()
+    return f"{title} ({note})" if note else title
+
 def parse_splits(splits_file: Path):
     def _parse_sub_occ(piece: str):
-        m = re.match(r"^(.*?)(?:\s*#(\d+))?$", piece.strip())
+        m = re.match(r"^(.*?)(?:\s*#(\d+))?(?:\s*\(([^()]+)\))?$", piece.strip())
         raw = (m.group(1) or "").strip() if m else ""
         occ = int(m.group(2)) if (m and m.group(2)) else None
-        return canonicalize(raw), occ
+        note = (m.group(3) or "").strip() if (m and m.group(3)) else None
+        return canonicalize(raw), occ, note
 
     def _parse_tokens(rhs: str):
         tokens = []
@@ -632,13 +645,13 @@ def parse_splits(splits_file: Path):
                     if raw_theme == "back to back":
                         merge_theme = "back-to-back"
                 left, right = tok.split("&&", 1)
-                s1, o1 = _parse_sub_occ(left); s2, o2 = _parse_sub_occ(right)
+                s1, o1, n1 = _parse_sub_occ(left); s2, o2, n2 = _parse_sub_occ(right)
                 if s1 and s2:
-                    tokens.append(("merge", s1, o1, s2, o2, merge_theme))
+                    tokens.append(("merge", s1, o1, n1, s2, o2, n2, merge_theme))
             else:
-                s, o = _parse_sub_occ(tok)
+                s, o, n = _parse_sub_occ(tok)
                 if s:
-                    tokens.append(("single", s, o))
+                    tokens.append(("single", s, o, n))
         return tokens
 
     mapping = []
@@ -714,7 +727,7 @@ def main(argv=None):
                 if tk[0] == "single":
                     needed.add(tk[1])
                 else:
-                    needed.add(tk[1]); needed.add(tk[3])
+                    needed.add(tk[1]); needed.add(tk[4])
     matchers = {s: make_inorder_regex(s) for s in needed}
 
     matched = defaultdict(list)
@@ -753,22 +766,23 @@ def main(argv=None):
 
             for tk in toks:
                 if tk[0] == "single":
-                    _, sub, occ = tk
+                    _, sub, occ, note = tk
                     occ = occ if occ is not None else 1
                     key = (sub, occ)
                     if key not in found:
                         print(f'[warn] token not matched: {name}: "{sub}" #{occ}', file=sys.stderr)
                         continue
                     title, raw_tag = found[key]
+                    display_title = apply_display_note(title, note)
                     pic_candidates = detect_trainer_sprite(title, custom_rules, sprites_dir, out_main.parent)
                     cols = parse_table_columns(raw_tag)
-                    rebuilt = build_table_from_columns(title, cols, [pic_candidates], themed="single")
-                    rebuilt["id"] = slugify(title)
+                    rebuilt = build_table_from_columns(display_title, cols, [pic_candidates], themed="single", calc_title=title)
+                    rebuilt["id"] = slugify(display_title)
                     rebuilt["class"] = (rebuilt.get("class", []) + ["trainer-block"])
                     items.append(str(rebuilt))
 
                 else:
-                    _, s1, o1, s2, o2, merge_theme = tk
+                    _, s1, o1, n1, s2, o2, n2, merge_theme = tk
                     occ1 = (o1 if o1 is not None else 1)
                     occ2 = (o2 if o2 is not None else 1)
                     k1 = (s1, occ1); k2 = (s2, occ2)
@@ -777,10 +791,12 @@ def main(argv=None):
                         continue
                     title1, tag1 = found[k1]
                     title2, tag2 = found[k2]
+                    display_title1 = apply_display_note(title1, n1)
+                    display_title2 = apply_display_note(title2, n2)
                     merged_tbl = merge_two_tables(
-                        title1, tag1, title2, tag2, custom_rules, sprites_dir, out_main.parent, themed=merge_theme
+                        display_title1, tag1, display_title2, tag2, custom_rules, sprites_dir, out_main.parent, themed=merge_theme, calc_title1=title1
                     )
-                    merged_tbl["id"] = slugify(f"{title1} & {title2}{themed_caption_suffix(merge_theme)}")
+                    merged_tbl["id"] = slugify(f"{display_title1} & {display_title2}{themed_caption_suffix(merge_theme)}")
                     merged_tbl["class"] = (merged_tbl.get("class", []) + ["trainer-block"])
                     items.append(str(merged_tbl))
 

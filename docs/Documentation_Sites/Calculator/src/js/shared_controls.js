@@ -1106,6 +1106,86 @@ function setPlayerSet(setName, slotId) {
 	setSlotSet(slotId, setName);
 }
 
+function stripSetGenderSuffix(speciesName) {
+	return String(speciesName || "").replace(/\s*\((M|F)\)\s*$/i, "").trim();
+}
+
+function normalizeLinkedSetText(text) {
+	return stripSetGenderSuffix(text).toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+function linkedSpeciesMatches(candidate, speciesKey) {
+	var candidateText = stripSetGenderSuffix(candidate).toLowerCase();
+	var speciesText = stripSetGenderSuffix(speciesKey).toLowerCase();
+	var candidateLoose = normalizeLinkedSetText(candidate);
+	var speciesLoose = normalizeLinkedSetText(speciesKey);
+	return candidateText === speciesText || candidateLoose === speciesLoose
+		|| speciesText.indexOf(candidateText) >= 0 || candidateText.indexOf(speciesText) >= 0;
+}
+
+function linkedTrainerMatches(candidate, setKey) {
+	var candidateText = String(candidate || "").toLowerCase();
+	var setText = String(setKey || "").toLowerCase();
+	return candidateText === setText || setText.indexOf(candidateText) >= 0 || candidateText.indexOf(setText) >= 0;
+}
+
+function resolveLinkedTrainerSet(speciesName, trainerName) {
+	speciesName = String(speciesName || "").trim();
+	trainerName = String(trainerName || "")
+		.replace(/\s*Open\s+Calculator\s*$/i, "")
+		.replace(/\s*\[(Double Battle|Back-to-Back)\]\s*$/i, "")
+		.replace(/\s+·\s*$/i, "")
+		.trim();
+	if (!speciesName || !trainerName || !setdex) {
+		return "";
+	}
+
+	var direct = speciesName + " (" + trainerName + ")";
+	if (setdex[speciesName] && setdex[speciesName][trainerName]) {
+		return direct;
+	}
+
+	var speciesKeys = Object.keys(setdex);
+	for (var i = 0; i < speciesKeys.length; i++) {
+		var speciesKey = speciesKeys[i];
+		if (!linkedSpeciesMatches(speciesName, speciesKey)) {
+			continue;
+		}
+		var sets = setdex[speciesKey] || {};
+		var setKeys = Object.keys(sets);
+		for (var j = 0; j < setKeys.length; j++) {
+			var setKey = setKeys[j];
+			if (linkedTrainerMatches(trainerName, setKey)) {
+				return speciesKey + " (" + setKey + ")";
+			}
+		}
+	}
+	for (var fallbackSpeciesIndex = 0; fallbackSpeciesIndex < speciesKeys.length; fallbackSpeciesIndex++) {
+		var fallbackSpeciesKey = speciesKeys[fallbackSpeciesIndex];
+		var fallbackSets = setdex[fallbackSpeciesKey] || {};
+		var fallbackSetKeys = Object.keys(fallbackSets);
+		for (var fallbackSetIndex = 0; fallbackSetIndex < fallbackSetKeys.length; fallbackSetIndex++) {
+			var fallbackSetKey = fallbackSetKeys[fallbackSetIndex];
+			if (linkedTrainerMatches(trainerName, fallbackSetKey)) {
+				return fallbackSpeciesKey + " (" + fallbackSetKey + ")";
+			}
+		}
+	}
+	return "";
+}
+
+function applyCalculatorDeepLinkParams(params) {
+	var p2Set = resolveLinkedTrainerSet(params.get("p2s"), params.get("p2set"));
+	if (p2Set) {
+		setOpposingSet(p2Set, "p2");
+	}
+
+	var p1Set = resolveLinkedTrainerSet(params.get("p1s"), params.get("p1set"));
+	if (p1Set) {
+		setPlayerSet(p1Set, "p1");
+	}
+}
+
 function resolveSetSelectionValue(value) {
 	if (!value) {
 		return "";
@@ -1624,8 +1704,41 @@ function getMoveDetails(moveInfo, species, ability, item, useMax) {
 	});
 }
 
+function getAllySlotId(slotId) {
+	switch (slotId) {
+		case "p1": return document.getElementById("p3") ? "p3" : null;
+		case "p2": return document.getElementById("p4") ? "p4" : null;
+		case "p3": return document.getElementById("p1") ? "p1" : null;
+		case "p4": return document.getElementById("p2") ? "p2" : null;
+		default: return null;
+	}
+}
+
+function getAutoAllySupport(slotId, gameType, weather) {
+	var support = {
+		isFlowerGift: false,
+		isFriendGuard: false,
+		isBattery: false,
+		isPowerSpot: false
+	};
+	if (gameType !== "Doubles") {
+		return support;
+	}
+	var allySlotId = getAllySlotId(slotId);
+	if (!allySlotId) {
+		return support;
+	}
+	var ability = String($("#" + allySlotId + " .ability").val() || "").trim();
+	support.isFlowerGift = ability === "Flower Gift" && (weather === "Sun" || weather === "Harsh Sunshine");
+	support.isFriendGuard = ability === "Friend Guard";
+	support.isBattery = ability === "Battery";
+	support.isPowerSpot = ability === "Power Spot";
+	return support;
+}
+
 function createField() {
 	var gameType = $("input:radio[name='format']:checked").val();
+	var calcPair = getActiveCalcPairIds();
 	var isBeadsOfRuin = $("#beads").prop("checked");
 	var isTabletsOfRuin = $("#tablets").prop("checked");
 	var isSwordOfRuin = $("#sword").prop("checked");
@@ -1662,6 +1775,10 @@ function createField() {
 	var isAuroraVeil = [$("#auroraVeilL").prop("checked"), $("#auroraVeilR").prop("checked")];
 	var isBattery = [$("#batteryL").prop("checked"), $("#batteryR").prop("checked")];
 	var isPowerSpot = [$("#powerSpotL").prop("checked"), $("#powerSpotR").prop("checked")];
+	var allySupport = [
+		getAutoAllySupport(calcPair.attackerId, gameType, weather),
+		getAutoAllySupport(calcPair.defenderId, gameType, weather)
+	];
 	// TODO: support switching in as well!
 	var isSwitchingOut = [$("#switchingL").prop("checked"), $("#switchingR").prop("checked")];
 
@@ -1671,8 +1788,13 @@ function createField() {
 			vinelash: vinelash[i], wildfire: wildfire[i], cannonade: cannonade[i], volcalith: volcalith[i],
 			isReflect: isReflect[i], isLightScreen: isLightScreen[i],
 			isProtected: isProtected[i], isSeeded: isSeeded[i], isForesight: isForesight[i],
-			isTailwind: isTailwind[i], isHelpingHand: isHelpingHand[i], isFlowerGift: isFlowerGift[i], isFriendGuard: isFriendGuard[i],
-			isAuroraVeil: isAuroraVeil[i], isBattery: isBattery[i], isPowerSpot: isPowerSpot[i], isSwitching: isSwitchingOut[i] ? 'out' : undefined
+			isTailwind: isTailwind[i], isHelpingHand: isHelpingHand[i],
+			isFlowerGift: isFlowerGift[i] || allySupport[i].isFlowerGift,
+			isFriendGuard: isFriendGuard[i] || allySupport[i].isFriendGuard,
+			isAuroraVeil: isAuroraVeil[i],
+			isBattery: isBattery[i] || allySupport[i].isBattery,
+			isPowerSpot: isPowerSpot[i] || allySupport[i].isPowerSpot,
+			isSwitching: isSwitchingOut[i] ? 'out' : undefined
 		});
 	};
 	return new calc.Field({
@@ -2758,6 +2880,7 @@ $(document).ready(function () {
 			selectTrainer(parseInt(lastP4, 10), "p4");
 		}
 	}
+	applyCalculatorDeepLinkParams(params);
 });
 
 /* Click-to-copy function */

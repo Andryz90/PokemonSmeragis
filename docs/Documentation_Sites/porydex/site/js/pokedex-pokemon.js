@@ -413,7 +413,72 @@ function renderPorydexEncounterZoneRow(zoneName, tag, href) {
 	return '<li class="result"><div class="porydex-encounter-zone-row porydex-encounter-zone-row-static">' +
 		'<span class="porydex-encounter-zone-tag' + tagClass + '">' + safeTag + '</span>' +
 		'<span class="porydex-encounter-zone-name">' + safeName + '</span>' +
-		'</div></li>';
+	'</div></li>';
+}
+
+var PORYDEX_STAT_TITLES = {
+	hp: 'HP',
+	atk: 'Attack',
+	def: 'Defense',
+	spa: 'Sp. Atk',
+	spd: 'Sp. Def',
+	spe: 'Speed'
+};
+
+function getPorydexVanillaBaseStats(pokemon) {
+	if (!pokemon || !window.BattleVanillaPokedex) return null;
+
+	var vanilla = BattleVanillaPokedex[pokemon.id] || BattleVanillaPokedex[toID(pokemon.name || '')];
+	if (!vanilla || !vanilla.baseStats) return null;
+
+	return vanilla.baseStats;
+}
+
+function getPorydexVanillaStatChanges(pokemon) {
+	var vanillaBaseStats = getPorydexVanillaBaseStats(pokemon);
+	if (!vanillaBaseStats || !pokemon || !pokemon.baseStats) return [];
+
+	var changes = [];
+	var currentTotal = 0;
+	var vanillaTotal = 0;
+	for (var stat in BattleStatNames) {
+		var current = Number(pokemon.baseStats[stat]);
+		var vanilla = Number(vanillaBaseStats[stat]);
+		if (!isFinite(current) || !isFinite(vanilla)) continue;
+
+		currentTotal += current;
+		vanillaTotal += vanilla;
+		if (current !== vanilla) {
+			changes.push({
+				label: PORYDEX_STAT_TITLES[stat] || stat.toUpperCase(),
+				from: vanilla,
+				to: current,
+			});
+		}
+	}
+
+	if (!changes.length) return changes;
+	if (currentTotal !== vanillaTotal) {
+		changes.push({
+			label: 'Total',
+			from: vanillaTotal,
+			to: currentTotal,
+		});
+	}
+
+	return changes;
+}
+
+function renderPorydexVanillaStatChanges(pokemon) {
+	var changes = getPorydexVanillaStatChanges(pokemon);
+	if (!changes.length) return '';
+
+	var buf = '<div class="porydex-stat-changes">';
+	for (var i = 0; i < changes.length; i++) {
+		buf += '<small>' + changes[i].label + ': ' + changes[i].from + ' -> ' + changes[i].to + '</small>';
+	}
+	buf += '</div>';
+	return buf;
 }
 
 var PokedexPokemonPanel = PokedexResultPanel.extend({
@@ -491,14 +556,6 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 		buf += '<dl>';
 		buf += '<dt style="clear:left">Base stats:</dt><dd><table class="stats">';
 
-		var StatTitles = {
-			hp: "HP",
-			atk: "Attack",
-			def: "Defense",
-			spa: "Sp. Atk",
-			spd: "Sp. Def",
-			spe: "Speed"
-		};
 		buf += '<tr><td></td><td></td><td style="width:200px"></td><th class="ministat"><abbr title="0 IVs, 0 EVs, negative nature">min&minus;</a></th><th class="ministat"><abbr title="31 IVs, 0 EVs, neutral nature">min</abbr></th><th class="ministat"><abbr title="31 IVs, 252 EVs, neutral nature">max</abbr></th><th class="ministat"><abbr title="31 IVs, 252 EVs, positive nature">max+</abbr></th>';
 		var bst = 0;
 		for (var stat in BattleStatNames) {
@@ -508,14 +565,14 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 			if (width > 200) width = 200;
 			var color = Math.floor(baseStat*180/255);
 			if (color > 360) color = 360;
-			buf += '<tr><th>'+StatTitles[stat]+':</th><td class="stat">'+baseStat+'</td>';
+			buf += '<tr><th>'+PORYDEX_STAT_TITLES[stat]+':</th><td class="stat">'+baseStat+'</td>';
 			buf += '<td class="statbar"><span style="width:'+Math.floor(width)+'px;background:hsl('+color+',85%,45%);border-color:hsl('+color+',75%,35%)"></span></td>';
 			buf += '<td class="ministat"><small>'+(stat==='hp'?'':this.getStat(baseStat, false, 100, 0, 0, 0.9))+'</small></td><td class="ministat"><small>'+this.getStat(baseStat, stat==='hp', 100, 31, 0, 1.0)+'</small></td>';
 			buf += '<td class="ministat"><small>'+this.getStat(baseStat, stat==='hp', 100, 31, 255, 1.0)+'</small></td><td class="ministat"><small>'+(stat==='hp'?'':this.getStat(baseStat, false, 100, 31, 255, 1.1))+'</small></td></tr>';
 		}
 		buf += '<tr><th class="bst">Total:</th><td class="bst">'+bst+'</td><td></td><td class="ministat" colspan="4">at level <input type="text" class="textbox" name="level" placeholder="100" size="5" /></td>';
 
-		buf += '</table></dd>';
+		buf += '</table>' + renderPorydexVanillaStatChanges(pokemon) + '</dd>';
 
 		buf += '<dt>Evolution:</dt> <dd>';
 		var template = pokemon;
