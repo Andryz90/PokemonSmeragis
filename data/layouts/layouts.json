@@ -4517,7 +4517,7 @@
       "width": 40,
       "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_AreaZero",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/AreaZero_Outside/border.bin",
       "blockdata_filepath": "data/layouts/AreaZero_Outside/map.bin"
     },
