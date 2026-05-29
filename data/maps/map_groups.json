@@ -596,7 +596,9 @@
     "DewfordMEadowHouse",
     "DewfordMeadowHouse1F",
     "AreaZero_Outside",
-    "Slateport_Sewer"
+    "Slateport_Sewer",
+    "AreaZero_Inside",
+    "AreaZero_Inside_2"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",
