@@ -1768,7 +1768,12 @@
       "height": 1
     },
     {
-      "id": "MAPSEC_AREA_ZERO"
+      "id": "MAPSEC_AREA_ZERO",
+      "name": "Area Zero",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_SLATEPORT_SEWERS",

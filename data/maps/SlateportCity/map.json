@@ -807,7 +807,7 @@
     },
     {
       "x": 28,
-      "y": 12,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_HARBOR",
       "dest_warp_id": "0"
@@ -832,6 +832,13 @@
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_SEWER",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_AREA_ZERO_OUTSIDE",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

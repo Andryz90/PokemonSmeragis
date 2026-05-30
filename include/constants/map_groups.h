@@ -571,6 +571,8 @@
 #define MAP_DEWFORD_MEADOW_HOUSE1F                          (91 | (26 << 8))
 #define MAP_AREA_ZERO_OUTSIDE                               (92 | (26 << 8))
 #define MAP_SLATEPORT_SEWER                                 (93 | (26 << 8))
+#define MAP_AREA_ZERO_INSIDE                                (94 | (26 << 8))
+#define MAP_AREA_ZERO_INSIDE_2                              (95 | (26 << 8))
 
 // gMapGroup_IndoorRoute104Prototype
 #define MAP_ROUTE104_PROTOTYPE                          (0 | (27 << 8))
