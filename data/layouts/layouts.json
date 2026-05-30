@@ -4515,7 +4515,7 @@
       "id": "LAYOUT_AREA_ZERO_OUTSIDE",
       "name": "AreaZero_Outside_Layout",
       "width": 40,
-      "height": 80,
+      "height": 82,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/AreaZero_Outside/border.bin",
