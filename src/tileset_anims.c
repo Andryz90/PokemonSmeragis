@@ -43,6 +43,7 @@ static void TilesetAnim_MauvilleGym(u16);
 static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
+static void TilesetAnim_AreaZeroOutside(u16);
 static void TilesetAnim_Sewer(u16 timer);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
@@ -58,6 +59,8 @@ static void QueueAnimTiles_Mauville_Flowers(u16, u8);
 static void QueueAnimTiles_BikeShop_BlinkingLights(u16);
 static void QueueAnimTiles_BattlePyramid_Torch(u16);
 static void QueueAnimTiles_BattlePyramid_StatueShadow(u16);
+static void QueueAnimTiles_BigTree(u16, u16);
+static void QueueAnimTiles_SmallTrees(u16, u16, u16);
 static void BlendAnimPalette_BattleDome_FloorLights(u16);
 static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16);
 static void QueueAnimTiles_Lavaridge_Steam(u8);
@@ -502,6 +505,34 @@ const u16 gTilesetAnims_Area_Zero_Frame1[] = INCBIN_U16("data/tilesets/secondary
 const u16 gTilesetAnims_Area_Zero_Frame2[] = INCBIN_U16("data/tilesets/secondary/area_zero/2.4bpp");
 const u16 gTilesetAnims_Area_Zero_Frame3[] = INCBIN_U16("data/tilesets/secondary/area_zero/3.4bpp");
 
+const u16 gTilesetAnims_BigTree_Frame0[] = INCBIN_U16("data/tilesets/anim/big_tree/0.4bpp");
+const u16 gTilesetAnims_BigTree_Frame1[] = INCBIN_U16("data/tilesets/anim/big_tree/1.4bpp");
+const u16 gTilesetAnims_BigTree_Frame2[] = INCBIN_U16("data/tilesets/anim/big_tree/2.4bpp");
+const u16 gTilesetAnims_BigTree_Frame3[] = INCBIN_U16("data/tilesets/anim/big_tree/3.4bpp");
+const u16 gTilesetAnims_BigTree_Frame4[] = INCBIN_U16("data/tilesets/anim/big_tree/4.4bpp");
+
+const u16 gTilesetAnims_SmallTrees_Frame0[] = INCBIN_U16("data/tilesets/anim/small_trees/0.4bpp");
+const u16 gTilesetAnims_SmallTrees_Frame1[] = INCBIN_U16("data/tilesets/anim/small_trees/1.4bpp");
+const u16 gTilesetAnims_SmallTrees_Frame2[] = INCBIN_U16("data/tilesets/anim/small_trees/2.4bpp");
+const u16 gTilesetAnims_SmallTrees_Frame3[] = INCBIN_U16("data/tilesets/anim/small_trees/3.4bpp");
+const u16 gTilesetAnims_SmallTrees_Frame4[] = INCBIN_U16("data/tilesets/anim/small_trees/4.4bpp");
+
+const u16 *const gTilesetAnims_BigTree[] = {
+    gTilesetAnims_BigTree_Frame0,
+    gTilesetAnims_BigTree_Frame1,
+    gTilesetAnims_BigTree_Frame2,
+    gTilesetAnims_BigTree_Frame3,
+    gTilesetAnims_BigTree_Frame4
+};
+
+const u16 *const gTilesetAnims_SmallTrees[] = {
+    gTilesetAnims_SmallTrees_Frame0,
+    gTilesetAnims_SmallTrees_Frame1,
+    gTilesetAnims_SmallTrees_Frame2,
+    gTilesetAnims_SmallTrees_Frame3,
+    gTilesetAnims_SmallTrees_Frame4
+};
+
 const u16 *const gTilesetAnims_Sootopolis_StormyWater[] = {
     gTilesetAnims_Sootopolis_StormyWater_Frame0,
     gTilesetAnims_Sootopolis_StormyWater_Frame1,
@@ -851,6 +882,13 @@ void InitTilesetAnim_BattleDome(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_BattleDome;
 }
 
+void InitTilesetAnim_AreaZeroOutside(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 50;
+    sSecondaryTilesetAnimCallback = TilesetAnim_AreaZeroOutside;
+}
+
 void InitTilesetAnim_Sewer(void)
 {
     sSecondaryTilesetAnimCounter = 0;
@@ -862,6 +900,15 @@ static void TilesetAnim_Sewer(u16 timer)
 {
     if (timer % 16 == 0)
         QueueAnimTiles_Sewer_Dirty_Water(timer / 16);
+}
+
+static void TilesetAnim_AreaZeroOutside(u16 timer)
+{
+    if (timer % 10 == 0)
+    {
+        QueueAnimTiles_BigTree(timer / 10, 464);
+        QueueAnimTiles_SmallTrees(timer / 10, 226, 242);
+    }
 }
 
 static void TilesetAnim_Rustboro(u16 timer)
@@ -1097,6 +1144,20 @@ static void QueueAnimTiles_Sewer_Dirty_Water(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Sewer_DirtyWater);
     AppendTilesetAnimToBuffer(gTilesetAnims_Sewer_DirtyWater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 7)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_BigTree(u16 timer, u16 tileStart)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_BigTree);
+    AppendTilesetAnimToBuffer(gTilesetAnims_BigTree[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + tileStart)), 48 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_SmallTrees(u16 timer, u16 firstTileStart, u16 secondTileStart)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_SmallTrees);
+
+    AppendTilesetAnimToBuffer(gTilesetAnims_SmallTrees[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + firstTileStart)), 12 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_SmallTrees[i] + (12 * TILE_SIZE_4BPP / sizeof(u16)), (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + secondTileStart)), 12 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_MauvilleGym(u16 timer)

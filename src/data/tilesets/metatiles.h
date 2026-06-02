@@ -210,5 +210,8 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 const u16 gMetatiles_AreaZero[] = INCBIN_U16("data/tilesets/secondary/area_zero/metatiles.bin");
 const u16 gMetatileAttributes_AreaZero[] = INCBIN_U16("data/tilesets/secondary/area_zero/metatile_attributes.bin");
 
+const u16 gMetatiles_AreaZeroOutside[] = INCBIN_U16("data/tilesets/secondary/area_zero_outside/metatiles.bin");
+const u16 gMetatileAttributes_AreaZeroOutside[] = INCBIN_U16("data/tilesets/secondary/area_zero_outside/metatile_attributes.bin");
+
 const u16 gMetatiles_Sewer[] = INCBIN_U16("data/tilesets/secondary/sewer/metatiles.bin");
 const u16 gMetatileAttributes_Sewer[] = INCBIN_U16("data/tilesets/secondary/sewer/metatile_attributes.bin");

@@ -47,6 +47,7 @@
 #include "constants/event_objects.h"
 #include "constants/game_stat.h"
 #include "constants/items.h"
+#include "constants/maps.h"
 #include "constants/songs.h"
 #include "constants/map_types.h"
 #include "constants/trainers.h"
@@ -441,10 +442,17 @@ void StartWallyTutorialBattle(void)
 
 void BattleSetup_StartScriptedWildBattle(void)
 {
+    u16 song = 0;
+
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = 0;
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_AREA_ZERO_INSIDE)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_AREA_ZERO_INSIDE)
+     && GetMonData(&gEnemyParty[0], MON_DATA_SPECIES) == SPECIES_GREAT_TUSK)
+        song = MUS_AREA_ZERO_BATTLE;
+
+    CreateBattleStartTask(GetWildBattleTransition(), song);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();

@@ -78,11 +78,11 @@
 #define FLAG_THICK_CLUB_UNDERPASS_TUNNEL                0x40
 #define FLAG_LEEK_UNDERPASS_TUNNEL                      0x41
 #define FLAG_POISON_DRAIN_TM                            0x42 
-#define FLAG_UNUSED_0x043                               0x43 // Unused Flag
-#define FLAG_UNUSED_0x044                               0x44 // Unused Flag
-#define FLAG_UNUSED_0x045                               0x45 // Unused Flag
-#define FLAG_UNUSED_0x046                               0x46 // Unused Flag
-#define FLAG_UNUSED_0x047                               0x47 // Unused Flag
+#define FLAG_AREA_ZERO_OBJ                              0x43
+#define FLAG_AREA_ZERO_LATIS                            0x44
+#define FLAG_AREA_ZERO_CRYSTAL                          0x45
+#define FLAG_AREA_ZERO_CRYSTAL2                         0x46 
+#define FLAG_AREA_ZERO_GREAT_TUSK                       0x47
 #define FLAG_UNUSED_0x048                               0x48 // Unused Flag
 #define FLAG_UNUSED_0x049                               0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A                               0x4A // Unused Flag
@@ -523,7 +523,7 @@
 #define FLAG_HS_R114                         0x1E1
 #define FLAG_R110_CYCLING_ROAD_TEMP          0x1E2
 #define FLAG_NORMAN_GYM_PATH                 0x1E3
-#define FLAG_NORMAN_GYM_PATH_LOCKED          FLAG_UNUSED_0x043
+#define FLAG_NORMAN_GYM_PATH_LOCKED          FLAG_RECEIVED_CHARCOAL
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4

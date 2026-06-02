@@ -4517,7 +4517,7 @@
       "width": 40,
       "height": 82,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_AreaZeroOutside",
       "border_filepath": "data/layouts/AreaZero_Outside/border.bin",
       "blockdata_filepath": "data/layouts/AreaZero_Outside/map.bin"
     },
@@ -4544,8 +4544,8 @@
     {
       "id": "LAYOUT_AREA_ZERO_INSIDE_2",
       "name": "AreaZero_Inside_2_Layout",
-      "width": 25,
-      "height": 30,
+      "width": 61,
+      "height": 51,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_AreaZero",
       "border_filepath": "data/layouts/AreaZero_Inside_2/border.bin",

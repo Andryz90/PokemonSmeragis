@@ -260,6 +260,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chest;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ChestOpen;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trees;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TreesBackGround;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TeracrystalSmall;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -515,6 +516,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CHEST_OPEN] =               &gObjectEventGraphicsInfo_ChestOpen,
     [OBJ_EVENT_GFX_TREES_ANIM] =               &gObjectEventGraphicsInfo_Trees,
     [OBJ_EVENT_GFX_TREES_ANIM_BCGRND] =        &gObjectEventGraphicsInfo_TreesBackGround,
+    [OBJ_EVENT_GFX_TERACRYSTAL_SMALL] =        &gObjectEventGraphicsInfo_TeracrystalSmall,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

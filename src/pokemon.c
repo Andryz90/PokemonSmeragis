@@ -5960,6 +5960,26 @@ bool32 IsSpeciesInHoennDex(u16 species)
         return TRUE;
 }
 
+static inline bool8 IsSpeciesParadoxPokemon (u16 species)
+{
+    static const u16 Paradox_Species_LookUpTable[] = 
+    {
+        SPECIES_GREAT_TUSK, SPECIES_SCREAM_TAIL, SPECIES_BRUTE_BONNET, SPECIES_FLUTTER_MANE,
+        SPECIES_SLITHER_WING, SPECIES_SANDY_SHOCKS, SPECIES_IRON_TREADS, SPECIES_IRON_BUNDLE, 
+        SPECIES_IRON_HANDS, SPECIES_IRON_JUGULIS, SPECIES_IRON_MOTH, SPECIES_IRON_THORNS,
+        SPECIES_WALKING_WAKE, SPECIES_IRON_LEAVES, SPECIES_GOUGING_FIRE, SPECIES_RAGING_BOLT, 
+        SPECIES_IRON_BOULDER, SPECIES_IRON_CROWN,  
+    };
+    u16 i = 0u;
+
+    for (i = 0u; i < ARRAY_COUNT(Paradox_Species_LookUpTable); i++)
+    {
+        if (species == Paradox_Species_LookUpTable[i])
+            return TRUE;
+    }
+    return FALSE;
+}
+
 u16 GetBattleBGM(void)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
@@ -6038,6 +6058,9 @@ u16 GetBattleBGM(void)
     }
     else
     {
+        if (IsSpeciesParadoxPokemon(GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL)) ||
+            GetCurrentRegionMapSectionId() == MAPSEC_AREA_ZERO)
+            return MUS_AREA_ZERO_BATTLE;
         return MUS_VS_WILD;
     }
 }

@@ -16,8 +16,11 @@
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
 #include "constants/field_effects.h"
+#include "constants/map_groups.h"
 #include "constants/map_types.h"
+#include "constants/maps.h"
 #include "constants/songs.h"
+#include "constants/vars.h"
 
 static void Task_DoFieldMove_Init(u8 taskId);
 static void Task_DoFieldMove_ShowMonAfterPose(u8 taskId);
@@ -25,6 +28,7 @@ static void Task_DoFieldMove_WaitForMon(u8 taskId);
 static void Task_DoFieldMove_RunFunc(u8 taskId);
 
 static void FieldCallback_RockSmash(void);
+static void FieldCallback_RockSmashCrystal(void);
 static void FieldMove_RockSmash(void);
 
 bool8 CheckObjectGraphicsInFrontOfPlayer(u16 graphicsId)
@@ -137,6 +141,15 @@ bool8 SetUpFieldMove_RockSmash(void)
         gPostMenuFieldCallback = FieldCallback_RockSmash;
         return TRUE;
     }
+    else if (/*gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_AREA_ZERO_OUTSIDE)
+          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_AREA_ZERO_OUTSIDE*/
+          VarGet(VAR_AREAZERO_STATE) > 3
+          && CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_TERACRYSTAL_SMALL) == TRUE)
+    {
+        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+        gPostMenuFieldCallback = FieldCallback_RockSmashCrystal;
+        return TRUE;
+    }
     else
     {
         return FALSE;
@@ -147,6 +160,12 @@ static void FieldCallback_RockSmash(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
     ScriptContext_SetupScript(EventScript_UseRockSmash);
+}
+
+static void FieldCallback_RockSmashCrystal(void)
+{
+    gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    ScriptContext_SetupScript(AreaZero_Outside_EventScript_UseRockSmashCrystal);
 }
 
 bool8 FldEff_UseRockSmash(void)

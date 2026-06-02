@@ -1,6 +1,22 @@
 #ifndef GUARD_METATILE_LABELS_H
 #define GUARD_METATILE_LABELS_H
 
+// gTileset_AreaZeroOutside
+#define METATILE_AreaZeroOutside_BigTree_BottomCenterLeft   0x384
+#define METATILE_AreaZeroOutside_BigTree_BottomCenterRight  0x385
+#define METATILE_AreaZeroOutside_BigTree_BottomLeft         0x383
+#define METATILE_AreaZeroOutside_BigTree_BottomRight        0x386
+#define METATILE_AreaZeroOutside_BigTree_MiddleCenterLeft   0x380
+#define METATILE_AreaZeroOutside_BigTree_MiddleCenterRight  0x381
+#define METATILE_AreaZeroOutside_BigTree_MiddleLeft         0x37F
+#define METATILE_AreaZeroOutside_BigTree_MiddleRight        0x382
+#define METATILE_AreaZeroOutside_BigTree_TopCenterLeft      0x37C
+#define METATILE_AreaZeroOutside_BigTree_TopCenterRight     0x37D
+#define METATILE_AreaZeroOutside_BigTree_TopLeft            0x37B
+#define METATILE_AreaZeroOutside_BigTree_TopRight           0x37E
+#define METATILE_AreaZeroOutside_SmallTrees_First           0x387
+#define METATILE_AreaZeroOutside_SmallTrees_Last            0x39E
+
 // gTileset_BattleArena
 #define METATILE_BattleArena_Door  0x21B
 

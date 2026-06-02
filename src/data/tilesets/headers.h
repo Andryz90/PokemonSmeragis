@@ -839,6 +839,17 @@ const struct Tileset gTileset_AreaZero =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_AreaZeroOutside =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_AreaZeroOutside,
+    .palettes = gTilesetPalettes_AreaZeroOutside,
+    .metatiles = gMetatiles_AreaZeroOutside,
+    .metatileAttributes = gMetatileAttributes_AreaZeroOutside,
+    .callback = InitTilesetAnim_AreaZeroOutside,
+};
+
 const struct Tileset gTileset_Sewer =
 {
     .isCompressed = TRUE,

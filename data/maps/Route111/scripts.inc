@@ -960,7 +960,7 @@ Route111_CloseRegiDoors_After_MagmaDesert_EventScript::
 	setwarp MAP_ROUTE111, 11, 67
 	special DoContestHallWarp
 	waitstate
-	msgbox Demo_IsFinished_Text, MSGBOX_DEFAULT
+	@msgbox Demo_IsFinished_Text, MSGBOX_DEFAULT
 	release
 	end
 Route111_Andry_EventScript_OnFrame_Final::

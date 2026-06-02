@@ -1171,6 +1171,8 @@ static u32 GetBallThrowableState(void)
         return BALL_THROW_UNABLE_SEMI_INVULNERABLE;
     else if (FlagGet(B_FLAG_NO_CATCHING))
         return BALL_THROW_UNABLE_DISABLED_FLAG;
+    else if (GetCurrentRegionMapSectionId() == MAPSEC_AREA_ZERO && VarGet(VAR_AREAZERO_STATE) != 0xFF)
+        return BALL_THROW_UNABLE_DISABLED_FLAG;
 
     return BALL_THROW_ABLE;
 }
