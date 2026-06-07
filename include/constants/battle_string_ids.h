@@ -742,7 +742,8 @@ enum StringID
     STRINGID_SPIRITBODY,                          
     STRINGID_ALREADYFROZEN,                      
     STRINGID_FORMATION,     
-    STRINGID_DEBUG,                       
+    STRINGID_DEBUG,         
+    STRINGID_AREAZERO_CANTESCAPE,              
     STRINGID_COUNT
 };
 
@@ -1044,6 +1045,7 @@ enum NoEscapeStringID
     B_MSG_PREVENTS_ESCAPE,
     B_MSG_CANT_ESCAPE_2,
     B_MSG_ATTACKER_CANT_ESCAPE,
+    B_MSG_CANT_ESCAPE_SCRIPT,
 };
 
 // gGotPoisonedStringIds / gGotParalyzedStringIds / gFellAsleepStringIds

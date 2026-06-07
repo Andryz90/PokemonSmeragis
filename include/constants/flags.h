@@ -83,8 +83,8 @@
 #define FLAG_AREA_ZERO_CRYSTAL                          0x45
 #define FLAG_AREA_ZERO_CRYSTAL2                         0x46 
 #define FLAG_AREA_ZERO_GREAT_TUSK                       0x47
-#define FLAG_UNUSED_0x048                               0x48 // Unused Flag
-#define FLAG_UNUSED_0x049                               0x49 // Unused Flag
+#define FLAG_AREA_ZERO_IRON_JUGULIS                     0x48
+#define FLAG_AREA_ZERO_FLUTTER_MANE                     0x49
 #define FLAG_UNUSED_0x04A                               0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B                               0x4B // Unused Flag
 #define FLAG_UNUSED_0x04C                               0x4C // Unused Flag

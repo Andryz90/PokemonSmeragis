@@ -6,7 +6,26 @@ AreaZero_Outside_MapScripts::
 
 AreaZero_Outside_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
+	call_if_ge VAR_AREAZERO_STATE, 5, AreaZero_Outside_OnTransition_SetPostCaveObjectPositions
 	end
+
+AreaZero_Outside_OnTransition_SetPostCaveObjectPositions:
+	clearflag FLAG_AREA_ZERO_LATIS
+	setobjectxyperm AREA_ZERO_LATIOS, 21, 14
+	setobjectxyperm AREA_ZERO_LATIAS, 24, 14
+	setobjectmovementtype AREA_ZERO_LATIOS, MOVEMENT_TYPE_FACE_DOWN
+	setobjectmovementtype AREA_ZERO_LATIAS, MOVEMENT_TYPE_FACE_DOWN
+	setobjectxyperm AREAZERO_STEVEN, 0, 0
+	setobjectxyperm AREAZERO_ANDRY, 0, 0
+	setobjectxyperm AREAZERO_EDO, 0, 0
+	setobjectxyperm AREAZERO_WALLY, 0, 0
+	setobjectxyperm AREAZERO_RIVAL, 0, 0
+	setobjectmovementtype AREAZERO_STEVEN, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_ANDRY, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_EDO, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_WALLY, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_RIVAL, MOVEMENT_TYPE_NONE
+	return
 
 AreaZero_Outside_OnWarp:
 	map_script_2 VAR_AREAZERO_STATE, 1, AreaZero_Outside_EventScript_PlayerFaceUp
@@ -376,7 +395,7 @@ AreaZero_Outside_EventScript_SplitfaceCryComment:
 	msgbox AreaZero_Outside_Text_AndryCav, MSGBOX_DEFAULT
 	setwarp MAP_AREA_ZERO_INSIDE, 10, 15
 	special DoContestHallWarp
-	waitstate
+	waitstate 
 	end
 
 AreaZero_Outside_Steven_ReachWally::

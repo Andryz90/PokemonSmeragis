@@ -5574,39 +5574,34 @@ bool8 PlayerHasMove(u16 move)
 }
 bool8 MonCanLearnMove(struct Pokemon *mon, u16 move)
 {
-    u8 i, j;
+    u8 j;
     const u16 *teachableLearnset;
     const struct LevelUpMove* leveluplearnset; 
     u16 species;
 
-    //Check if the player has the move in the bag and if the pokemons in the party can learn it
-     for (i = 0; i < PARTY_SIZE; i++)
+    if (GetMonData(mon, MON_DATA_IS_EGG))
+        return FALSE;
+
+    species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    if (!species)
+        return FALSE;
+
+    // This check for the TM/HM (used for the overworld script or to actually learn them).
+    teachableLearnset = GetSpeciesTeachableLearnset(species);
+    leveluplearnset = GetSpeciesLevelUpLearnset(species);
+
+    for (j = 0; teachableLearnset[j] != MOVE_UNAVAILABLE; j++)
     {
-        species = GetMonData(mon, MON_DATA_SPECIES, NULL);
-        if (!species || species == SPECIES_EGG)
-        {
-            break;
-        }
-        else
-        {
-            //This check for the TM/HM (used for the overworld script or to actually learn them)
-            teachableLearnset = GetSpeciesTeachableLearnset (species);
-            leveluplearnset = GetSpeciesLevelUpLearnset(species);
-
-            for (j = 0; teachableLearnset[j] != MOVE_UNAVAILABLE; j++)
-            {
-                if (teachableLearnset[j] == move)
-                {
-                    return TRUE;
-                }
-            }
-
-            for (j = 0; leveluplearnset[j].move != LEVEL_UP_MOVE_END; j++)
-            {
-                return TRUE;
-            }
-        }
+        if (teachableLearnset[j] == move)
+            return TRUE;
     }
+
+    for (j = 0; leveluplearnset[j].move != LEVEL_UP_MOVE_END; j++)
+    {
+        if (leveluplearnset[j].move == move)
+            return TRUE;
+    }
+
     return FALSE;
 }
 
