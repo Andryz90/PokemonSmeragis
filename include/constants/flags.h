@@ -661,7 +661,7 @@
 #define FLAG_HIDE_PETALBURG_CITY_RIVAL                       (FLAG_HIDDEN_ITEMS_START + 0x71)   // Not an hidden item LMFAO
 #define FLAG_HEAVVY_DUTY_BOOTS                               (FLAG_HIDDEN_ITEMS_START + 0x72) 
 #define FLAG_SOAL_SHELL                                      (FLAG_HIDDEN_ITEMS_START + 0x73) 
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
+#define FLAG_POLTERGEIST_TM 0x268
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
@@ -1236,15 +1236,15 @@
 #define FLAG_SEASPRAY_HEART_SCALE                                   0x49D
 #define FLAG_HIDE_RIVALS_R110                                       0x49E 
 #define FLAG_CHILLING_WATER_TM                                      0x49F
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
+#define FLAG_AREA_ZERO_INSIDE_2_PARADOXES                           0x4A0
+#define FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT                      0x4A1
+#define FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES                     0x4A2
+#define FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON                       0x4A3
+#define FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS                      0x4A4
+#define FLAG_AREA_ZERO_INSIDE_2_BOTTOM_PARADOXES                    0x4A5
+#define FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS                         0x4A6
+#define FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS                        0x4A7
+#define FLAG_AREA_ZERO_INSIDE_2_POST_SCENE_NPCS                     0x4A8
 #define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
 #define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
 #define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag

@@ -141,7 +141,8 @@ void GetAIPartyIndexes(u32 battler, s32 *firstId, s32 *lastId)
     {
         *firstId = 0, *lastId = PARTY_SIZE;
     }
-    else if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_INGAME_PARTNER | BATTLE_TYPE_TOWER_LINK_MULTI))
+    else if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TOWER_LINK_MULTI)
+          || (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && IsOnPlayerSide(battler)))
     {
         if ((battler & BIT_FLANK) == B_FLANK_LEFT)
             *firstId = 0, *lastId = PARTY_SIZE / 2;

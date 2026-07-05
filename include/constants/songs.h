@@ -495,7 +495,8 @@
 #define MUS_GYMLEADER_JOHTO         560
 #define MUS_SHINY_CRYSTAL           561
 #define MUS_AREA_ZERO_BATTLE        562
-#define END_MUS                     MUS_AREA_ZERO_BATTLE
+#define MUS_VS_WALLY                563
+#define END_MUS                     MUS_VS_WALLY
 
 // These PH_* constants are phoneme sounds used by the "bard" NPC (see src/bard_music.c and src/mauville_old_man.c).
 // Each comes in a triplet of PH_*_BLEND, PH_*_HELD, and PH_*_SOLO, and the name of each triplet incorporates the English phonetic sound it represents.

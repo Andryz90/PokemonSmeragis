@@ -271,3 +271,127 @@
             },
         },
     },
+#line 115
+    [DIFFICULTY_NORMAL][PARTNER_ANDRY] =
+    {
+#line 116
+        .trainerName = _("ANDRY"),
+#line 117
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+#line 118
+        .trainerPic = TRAINER_BACK_PIC_STEVEN,
+        .encounterMusic_gender =
+#line 120
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 122
+            .species = SPECIES_SYLVEON,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 122
+            .heldItem = ITEM_THROAT_SPRAY,
+#line 126
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 123
+            .ability = ABILITY_PIXILATE,
+#line 124
+            .lvl = 60,
+#line 125
+            .nature = NATURE_MODEST,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 127
+                MOVE_MOONBLAST,
+                MOVE_HYPER_VOICE,
+                MOVE_MYSTICAL_FIRE,
+                MOVE_PROTECT,
+            },
+            },
+            {
+#line 132
+            .species = SPECIES_MIMIKYU,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 132
+            .heldItem = ITEM_LIFE_ORB,
+#line 136
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 133
+            .ability = ABILITY_DISGUISE,
+#line 134
+            .lvl = 60,
+#line 135
+            .nature = NATURE_JOLLY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 136
+                MOVE_SWORDS_DANCE,
+                MOVE_PLAY_ROUGH,
+                MOVE_SHADOW_CLAW,
+                MOVE_SHADOW_SNEAK,
+            },
+            },
+        },
+    },
+#line 142
+    [DIFFICULTY_NORMAL][PARTNER_SPLITFACE] =
+    {
+#line 143
+        .trainerName = _("SPLITFACE"),
+#line 144
+        .trainerClass = TRAINER_CLASS_DEVELOPER,
+#line 145
+        .trainerPic = TRAINER_BACK_PIC_STEVEN,
+        .encounterMusic_gender =
+#line 147
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 149
+            .species = SPECIES_ABOMASNOW,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 153
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 150
+            .ability = ABILITY_SNOW_WARNING,
+#line 151
+            .lvl = 60,
+#line 152
+            .nature = NATURE_MODEST,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 153
+                MOVE_BLIZZARD,
+                MOVE_GIGA_DRAIN,
+                MOVE_ICE_SHARD,
+                MOVE_PROTECT,
+            },
+            },
+            {
+#line 158
+            .species = SPECIES_GLALIE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 158
+            .heldItem = ITEM_LEFTOVERS,
+#line 162
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 159
+            .ability = ABILITY_ICE_BODY,
+#line 160
+            .lvl = 60,
+#line 161
+            .nature = NATURE_TIMID,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 162
+                MOVE_BLIZZARD,
+                MOVE_PROTECT,
+                MOVE_TOXIC,
+                MOVE_SUBSTITUTE,
+            },
+            },
+        },
+    },

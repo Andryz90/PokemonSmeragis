@@ -154,6 +154,7 @@ EWRAM_DATA u8 gBattleTextBuff1[TEXT_BUFF_ARRAY_COUNT] = {0};
 EWRAM_DATA u8 gBattleTextBuff2[TEXT_BUFF_ARRAY_COUNT] = {0};
 EWRAM_DATA u8 gBattleTextBuff3[TEXT_BUFF_ARRAY_COUNT + 13] = {0};   // expanded for stupidly long z move names
 EWRAM_DATA u32 gBattleTypeFlags = 0;
+EWRAM_DATA u64 gScriptedWildAiFlags = 0u; // Custom
 EWRAM_DATA u8 gBattleEnvironment = 0;
 EWRAM_DATA struct MultiPartnerMenuPokemon gMultiPartnerParty[MULTI_PARTY_SIZE] = {0};
 EWRAM_DATA static struct MultiPartnerMenuPokemon *sMultiPartnerPartyBuffer = NULL;
@@ -6332,7 +6333,7 @@ bool32 IsWildMonSmart(void)
 #if B_SMART_WILD_AI_FLAG != 0
     return (FlagGet(B_SMART_WILD_AI_FLAG));
 #else
-    return FALSE;
+    return GetWildAiFlag() != 0;
 #endif
 }
 
@@ -6364,4 +6365,21 @@ bool32 DidPlayerForfeitNormalTrainerBattle(void)
         return FALSE;
 
     return (gBattleOutcome == B_OUTCOME_FORFEITED);
+}
+
+/* Custom */
+void SetScriptedWildAiFlags(u64 flags)
+{
+    gScriptedWildAiFlags = flags;
+}
+
+/* Clear the flags for AI wild mon battle */
+void ClearScriptedWildAiFlags(void)
+{
+    gScriptedWildAiFlags = 0;
+}
+
+u64 GetWildAiFlag (void)
+{
+    return gScriptedWildAiFlags;
 }

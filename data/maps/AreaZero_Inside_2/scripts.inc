@@ -1,2 +1,1276 @@
+.set AREA_ZERO_WILD_MON_ENC_VALUE, 	15
+.set AREA_ZERO_FINAL_EVENT_DONE_VALUE, 16
+
 AreaZero_Inside_2_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, AreaZero_Inside_2_OnTransition
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, AreaZero_Inside_2_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, AreaZero_Inside_2_OnFrame
 	.byte 0
+
+AreaZero_Inside_2_OnTransition:
+	call Common_EventScript_SetupRivalGfxId
+	setvar VAR_TEMP_0, 0
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON
+	setflag FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS
+	setflag FLAG_AREA_ZERO_INSIDE_2_BOTTOM_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	setflag FLAG_AREA_ZERO_INSIDE_2_POST_SCENE_NPCS
+	call_if_eq VAR_AREAZERO_STATE, 8, AreaZero_Inside_2_OnTransition_SetEntranceState
+	call_if_ge VAR_AREAZERO_STATE, 9, AreaZero_Inside_2_OnTransition_SetPostEntranceState
+	call_if_eq VAR_AREAZERO_STATE, 9, AreaZero_Inside_2_OnTransition_SetParadoxBattleState
+	call_if_ge VAR_AREAZERO_STATE, 10, AreaZero_Inside_2_OnTransition_SetParadoxBattleDone
+	call_if_eq VAR_AREAZERO_STATE, 10, AreaZero_Inside_2_OnTransition_SetSplitfaceBattleState
+	call_if_ge VAR_AREAZERO_STATE, 11, AreaZero_Inside_2_OnTransition_SetSplitfaceBattleDone
+	call_if_ge VAR_AREAZERO_STATE, 12, AreaZero_Inside_2_OnTransition_SetSurroundedState
+	call_if_ge VAR_AREAZERO_STATE, 13, AreaZero_Inside_2_OnTransition_SetPlayerParadoxBattleDone
+	call_if_eq VAR_AREAZERO_STATE, AREA_ZERO_WILD_MON_ENC_VALUE, AreaZero_Inside_2_OnTransition_SetPostPlayerParadoxScene
+	call_if_ge VAR_AREAZERO_STATE, AREA_ZERO_FINAL_EVENT_DONE_VALUE, AreaZero_Inside_2_OnTransition_SetFinalEventDone
+	end
+
+AreaZero_Inside_2_OnTransition_SetEntranceState:
+	clearflag FLAG_AREA_ZERO_OBJ
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_2, 9, 44
+	setobjectxyperm AREAZERO_EDO_INSIDE_2, 10, 44
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE_2, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype AREAZERO_EDO_INSIDE_2, MOVEMENT_TYPE_FACE_UP
+	return
+
+AreaZero_Inside_2_OnTransition_SetPostEntranceState:
+	setvar VAR_TEMP_0, 1
+	setflag FLAG_AREA_ZERO_OBJ
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_EDO_INSIDE_2, 0, 0
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_EDO_INSIDE_2, MOVEMENT_TYPE_NONE
+	return
+
+AreaZero_Inside_2_OnTransition_SetParadoxBattleState:
+	clearflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	clearflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	setobjectxyperm AREAZERO_IRON_THORNS_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_IRON_JUGULIS_INSIDE_2, 2, 0
+	setobjectxyperm AREAZERO_SCREAMING_TAIL_INSIDE_2, 1, 0
+	return
+
+AreaZero_Inside_2_OnTransition_SetParadoxBattleDone:
+	setflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	return
+
+AreaZero_Inside_2_OnTransition_SetSplitfaceBattleState:
+	clearflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_3, 27, 14
+	setobjectxyperm AREAZERO_EDO_INSIDE_3, 39, 14
+	setobjectxyperm AREAZERO_IRON_BUNDLE_INSIDE_2, 36, 14
+	setobjectxyperm AREAZERO_IRON_VALIANT_INSIDE_2, 36, 15
+	setobjectxyperm AREAZERO_IRON_THORNS_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_IRON_JUGULIS_INSIDE_2, 2, 0
+	setobjectxyperm AREAZERO_SCREAMING_TAIL_INSIDE_2, 1, 0
+	return
+
+AreaZero_Inside_2_OnTransition_SetSplitfaceBattleDone:
+	setflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_3, 31, 14
+	setobjectxyperm AREAZERO_EDO_INSIDE_3, 37, 14
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE_3, MOVEMENT_TYPE_FACE_LEFT
+	setobjectmovementtype AREAZERO_EDO_INSIDE_3, MOVEMENT_TYPE_FACE_LEFT
+	return
+
+AreaZero_Inside_2_OnTransition_SetSurroundedState:
+	clearflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	clearflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	clearflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	clearflag FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS
+	clearflag FLAG_AREA_ZERO_INSIDE_2_BOTTOM_PARADOXES
+	clearflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_3, 34, 14
+	setobjectxyperm AREAZERO_EDO_INSIDE_3, 36, 14
+	setobjectxyperm AREAZERO_BRUTE_BONNET_INSIDE_2, 33, 14
+	setobjectxyperm AREAZERO_IRON_VALIANT_INSIDE_2, 33, 15
+	setobjectxyperm AREAZERO_SLITHER_WING_INSIDE_2, 37, 14
+	setobjectxyperm AREAZERO_IRON_BUNDLE_INSIDE_2, 37, 15
+	setobjectxyperm AREAZERO_IRON_THORNS_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_IRON_JUGULIS_INSIDE_2, 34, 13
+	setobjectxyperm AREAZERO_SCREAMING_TAIL_INSIDE_2, 35, 13
+	setobjectxyperm AREAZERO_GREAT_TUSK_INSIDE_2, 34, 16
+	setobjectxyperm AREAZERO_FLUTTER_MANE_INSIDE_2, 35, 16
+	setobjectxyperm AREAZERO_WALLY_INSIDE_2, 32, 14
+	setobjectxyperm AREAZERO_RIVAL_INSIDE_2, 32, 15
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE_3, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype AREAZERO_EDO_INSIDE_3, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype AREAZERO_BRUTE_BONNET_INSIDE_2, MOVEMENT_TYPE_FACE_LEFT
+	setobjectmovementtype AREAZERO_IRON_VALIANT_INSIDE_2, MOVEMENT_TYPE_FACE_LEFT
+	setobjectmovementtype AREAZERO_SLITHER_WING_INSIDE_2, MOVEMENT_TYPE_FACE_LEFT
+	setobjectmovementtype AREAZERO_IRON_BUNDLE_INSIDE_2, MOVEMENT_TYPE_FACE_LEFT
+	setobjectmovementtype AREAZERO_IRON_JUGULIS_INSIDE_2, MOVEMENT_TYPE_FACE_DOWN
+	setobjectmovementtype AREAZERO_SCREAMING_TAIL_INSIDE_2, MOVEMENT_TYPE_FACE_DOWN
+	setobjectmovementtype AREAZERO_GREAT_TUSK_INSIDE_2, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype AREAZERO_FLUTTER_MANE_INSIDE_2, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype AREAZERO_WALLY_INSIDE_2, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectmovementtype AREAZERO_RIVAL_INSIDE_2, MOVEMENT_TYPE_FACE_RIGHT
+	return
+
+AreaZero_Inside_2_OnTransition_SetPlayerParadoxBattleDone:
+	call AreaZero_Inside_2_EventScript_HideAllSurroundingParadoxes
+	return
+
+AreaZero_Inside_2_OnTransition_SetPostPlayerParadoxScene:
+	setflag FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS
+	removeobject AREAZERO_ANDRY_INSIDE_3
+	removeobject AREAZERO_EDO_INSIDE_3
+	removeobject AREAZERO_WALLY_INSIDE_2
+	removeobject AREAZERO_RIVAL_INSIDE_2
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_3, 0, 0
+	setobjectxyperm AREAZERO_EDO_INSIDE_3, 0, 0
+	setobjectxyperm AREAZERO_WALLY_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_RIVAL_INSIDE_2, 0, 0
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE_3, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_EDO_INSIDE_3, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_WALLY_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_RIVAL_INSIDE_2, MOVEMENT_TYPE_NONE
+	clearflag FLAG_AREA_ZERO_INSIDE_2_POST_SCENE_NPCS
+	return
+
+AreaZero_Inside_2_OnTransition_SetFinalEventDone:
+	call AreaZero_Inside_2_EventScript_RemoveAllAreaZeroInside2Npcs
+	return
+
+AreaZero_Inside_2_OnWarp:
+	map_script_2 VAR_AREAZERO_STATE, 8, AreaZero_Inside_2_EventScript_PlayerFaceUp
+	.2byte 0
+
+AreaZero_Inside_2_EventScript_PlayerFaceUp::
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	end
+
+AreaZero_Inside_2_OnFrame:
+	map_script_2 VAR_AREAZERO_STATE, 8, AreaZero_Inside_2_EventScript_Entrance
+	map_script_2 VAR_AREAZERO_STATE, 10, AreaZero_Inside_2_EventScript_AfterAndryBattleScene
+	map_script_2 VAR_AREAZERO_STATE, 11, AreaZero_Inside_2_EventScript_AfterSplitfaceBattleScene
+	.2byte 0
+
+AreaZero_Inside_2_EventScript_Entrance::
+	lockall
+	delay 8
+	applymovement AREAZERO_ANDRY_INSIDE_2, AreaZero_Inside_2_Movement_AndryRunAhead
+	applymovement AREAZERO_EDO_INSIDE_2, AreaZero_Inside_2_Movement_SplitfaceRunAhead
+	waitmovement 0
+	removeobject AREAZERO_ANDRY_INSIDE_2
+	removeobject AREAZERO_EDO_INSIDE_2
+	setflag FLAG_AREA_ZERO_OBJ
+	setvar VAR_AREAZERO_STATE, 9
+	setvar VAR_TEMP_0, 1
+	releaseall
+	end
+
+AreaZero_Inside_2_EventScript_CantReturn::
+	lockall
+	msgbox AreaZero_Inside_2_Text_CantReturn, MSGBOX_DEFAULT
+	closemessage
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_eq VAR_RESULT, DIR_NORTH, AreaZero_Inside_2_EventScript_CantReturn_StepDown
+	goto_if_eq VAR_RESULT, DIR_SOUTH, AreaZero_Inside_2_EventScript_CantReturn_StepUp
+	goto_if_eq VAR_RESULT, DIR_WEST, AreaZero_Inside_2_EventScript_CantReturn_StepRight
+	goto_if_eq VAR_RESULT, DIR_EAST, AreaZero_Inside_2_EventScript_CantReturn_StepLeft
+	goto AreaZero_Inside_2_EventScript_CantReturn_StepUp
+
+AreaZero_Inside_2_EventScript_CantReturn_StepDown:
+	applymovement LOCALID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	releaseall
+	end
+
+AreaZero_Inside_2_EventScript_CantReturn_StepUp:
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	turnobject LOCALID_PLAYER, DIR_SOUTH
+	releaseall
+	end
+
+AreaZero_Inside_2_EventScript_CantReturn_StepRight:
+	applymovement LOCALID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	turnobject LOCALID_PLAYER, DIR_WEST
+	releaseall
+	end
+
+AreaZero_Inside_2_EventScript_CantReturn_StepLeft:
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	turnobject LOCALID_PLAYER, DIR_EAST
+	releaseall
+	end
+
+AreaZero_Inside_2_EventScript_PostWally::
+	lock
+	faceplayer
+	msgbox AreaZero_Inside_2_Text_PostWally, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+AreaZero_Inside_2_EventScript_PostRival::
+	lock
+	faceplayer
+	msgbox AreaZero_Inside_2_Text_PostRival, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+AreaZero_Inside_2_EventScript_PostSplitface::
+	lock
+	faceplayer
+	msgbox AreaZero_Inside_2_Text_PostSplitface, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+AreaZero_Inside_2_EventScript_FinalTriggerTop::
+	lockall
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerFinalApproachTop
+	waitmovement 0
+	goto AreaZero_Inside_2_EventScript_FinalScene
+
+AreaZero_Inside_2_EventScript_FinalTriggerMiddle::
+	lockall
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerFinalApproachMiddle
+	waitmovement 0
+	goto AreaZero_Inside_2_EventScript_FinalScene
+
+AreaZero_Inside_2_EventScript_FinalTriggerBottom::
+	lockall
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerFinalApproachBottom
+	waitmovement 0
+	goto AreaZero_Inside_2_EventScript_FinalScene
+
+AreaZero_Inside_2_EventScript_FinalScene:
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	turnobject AREAZERO_ANDRY_INSIDE_4, DIR_NORTH
+	turnobject AREAZERO_STEVEN_INSIDE_2, DIR_SOUTH
+	delay 8
+	msgbox AreaZero_Inside_2_Text_FinalAndryChecksSteven, MSGBOX_DEFAULT
+	msgbox AreaZero_Inside_2_Text_FinalStevenSample, MSGBOX_DEFAULT
+	msgbox AreaZero_Inside_2_Text_FinalAndryHurryOut, MSGBOX_DEFAULT
+	msgbox AreaZero_Inside_2_Text_FinalStevenProceed, MSGBOX_DEFAULT
+	closemessage
+	turnobject AREAZERO_ANDRY_INSIDE_4, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_WEST
+	delay 8
+	msgbox AreaZero_Inside_2_Text_FinalAndryWarnsOthers, MSGBOX_DEFAULT
+	closemessage
+	msgbox AreaZero_Inside_2_Text_FinalStevenLetsGo, MSGBOX_DEFAULT
+	closemessage
+	delay 12
+	setvar VAR_AREAZERO_STATE, AREA_ZERO_FINAL_EVENT_DONE_VALUE
+	warpteleport MAP_AQUA_HIDEOUT_UNUSED_RUBY_MAP1, 1
+	waitstate
+	releaseall
+	end
+
+AreaZero_Inside_2_EventScript_AndryBattleTriggerTop::
+	lockall
+	call AreaZero_Inside_2_EventScript_AndryBattleIntro
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerRunToAndry
+	waitmovement 0
+	msgbox AreaZero_Inside_2_Text_AndryAskHelp, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerTakeBattlePositionTop
+	waitmovement 0
+	goto AreaZero_Inside_2_EventScript_StartAndryParadoxBattle
+
+AreaZero_Inside_2_EventScript_AndryBattleTriggerMiddle::
+	lockall
+	call AreaZero_Inside_2_EventScript_AndryBattleIntro
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerRunToAndry
+	waitmovement 0
+	msgbox AreaZero_Inside_2_Text_AndryAskHelp, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerTakeBattlePositionMiddle
+	waitmovement 0
+	goto AreaZero_Inside_2_EventScript_StartAndryParadoxBattle
+
+AreaZero_Inside_2_EventScript_AndryBattleTriggerBottom::
+	lockall
+	call AreaZero_Inside_2_EventScript_AndryBattleIntro
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerRunToAndry
+	waitmovement 0
+	msgbox AreaZero_Inside_2_Text_AndryAskHelp, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerTakeBattlePositionBottom
+	waitmovement 0
+	goto AreaZero_Inside_2_EventScript_StartAndryParadoxBattle
+
+AreaZero_Inside_2_EventScript_AndryBattleIntro:
+	playmoncry SPECIES_BRUTE_BONNET, CRY_MODE_NORMAL
+	waitmoncry
+	playmoncry SPECIES_SLITHER_WING, CRY_MODE_NORMAL
+	waitmoncry
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	return
+
+AreaZero_Inside_2_EventScript_StartAndryParadoxBattle:
+	turnobject LOCALID_PLAYER, DIR_EAST
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_EAST
+	setcustomwildbattle  SPECIES_BRUTE_BONNET, 70, ITEM_BOOSTER_ENERGY, MOVE_SPORE, MOVE_SUCKER_PUNCH, MOVE_SEED_BOMB, MOVE_CLOSE_COMBAT, SPECIES_SLITHER_WING, 70, ITEM_BOOSTER_ENERGY, MOVE_FIRST_IMPRESSION, MOVE_CLOSE_COMBAT, MOVE_LEECH_LIFE, MOVE_WILD_CHARGE
+	setwildbattleaiflags AI_FLAG_SMART_TRAINER
+	multi_fixed_wild PARTNER_ANDRY
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq AreaZero_Inside_2_EventScript_Lost
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_ne AreaZero_Inside_2_EventScript_AndryBattleNotWon
+	setflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	removeobject AREAZERO_BRUTE_BONNET_INSIDE_2
+	removeobject AREAZERO_SLITHER_WING_INSIDE_2
+	setvar VAR_AREAZERO_STATE, 10
+	goto AreaZero_Inside_2_EventScript_AfterAndryBattleScene
+
+AreaZero_Inside_2_EventScript_AndryBattleNotWon:
+	releaseall
+	end
+
+AreaZero_Inside_2_EventScript_AfterAndryBattleScene::
+	lockall
+	call AreaZero_Inside_2_EventScript_SetupAfterAndryBattleScene
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_SOUTH
+	msgbox AreaZero_Inside_2_Text_AndryThanks, MSGBOX_DEFAULT
+	closemessage
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_EAST
+	applymovement AREAZERO_ANDRY_INSIDE_3, AreaZero_Inside_2_Movement_AndryAdvanceAfterBattle
+	waitmovement 0
+	addobject AREAZERO_IRON_BUNDLE_INSIDE_2
+	addobject AREAZERO_IRON_VALIANT_INSIDE_2
+	turnobject AREAZERO_IRON_BUNDLE_INSIDE_2, DIR_WEST
+	turnobject AREAZERO_IRON_VALIANT_INSIDE_2, DIR_WEST
+	playmoncry SPECIES_IRON_BUNDLE, CRY_MODE_NORMAL
+	playmoncry SPECIES_IRON_VALIANT, CRY_MODE_NORMAL
+	waitmoncry
+	applymovement AREAZERO_IRON_BUNDLE_INSIDE_2, AreaZero_Inside_2_Movement_IronBundleApproach
+	applymovement AREAZERO_IRON_VALIANT_INSIDE_2, AreaZero_Inside_2_Movement_IronValiantApproach
+	applymovement AREAZERO_ANDRY_INSIDE_3, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox AreaZero_Inside_2_Text_AndryAgain, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerReachAndry
+	waitmovement 0
+	turnobject LOCALID_PLAYER, DIR_EAST
+	setobjectxyperm AREAZERO_EDO_INSIDE_3, 39, 14
+	addobject AREAZERO_EDO_INSIDE_3
+	turnobject AREAZERO_EDO_INSIDE_3, DIR_WEST
+	applymovement AREAZERO_EDO_INSIDE_3, AreaZero_Inside_2_Movement_SplitfaceRushIn
+	waitmovement 0
+	turnobject AREAZERO_EDO_INSIDE_3, DIR_WEST
+	turnobject AREAZERO_IRON_BUNDLE_INSIDE_2, DIR_EAST
+	msgbox AreaZero_Inside_2_Text_SplitfaceDelibird, MSGBOX_DEFAULT
+	closemessage
+	call AreaZero_Inside_2_EventScript_AddAndryParadoxes
+	playmoncry SPECIES_IRON_THORNS, CRY_MODE_NORMAL
+	playmoncry SPECIES_SCREAM_TAIL, CRY_MODE_NORMAL
+	waitmoncry
+	applymovement AREAZERO_ANDRY_INSIDE_3, Common_Movement_QuestionMark
+	applymovement AREAZERO_EDO_INSIDE_3, Common_Movement_QuestionMark
+	waitmovement 0
+	applymovement AREAZERO_IRON_THORNS_INSIDE_2, AreaZero_Inside_2_Movement_LeftParadoxApproachTop
+	applymovement AREAZERO_SCREAMING_TAIL_INSIDE_2, AreaZero_Inside_2_Movement_LeftParadoxApproachBottom
+	waitmovement 0
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_WEST
+	msgbox AreaZero_Inside_2_Text_AndryHandlesNewParadoxes, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_PlayerTakeIronValiantPosition
+	waitmovement 0
+	turnobject LOCALID_PLAYER, DIR_EAST
+	turnobject AREAZERO_IRON_VALIANT_INSIDE_2, DIR_WEST
+	goto AreaZero_Inside_2_EventScript_StartSplitfaceParadoxBattle
+
+AreaZero_Inside_2_EventScript_SetupAfterAndryBattleScene:
+	setflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	clearflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	setobjectxy OBJ_EVENT_ID_PLAYER, 27, 15
+	setobjectxy AREAZERO_ANDRY_INSIDE_3, 27, 14
+	setobjectxyperm AREAZERO_EDO_INSIDE_3, 39, 14
+	setobjectxyperm AREAZERO_IRON_BUNDLE_INSIDE_2, 36, 14
+	setobjectxyperm AREAZERO_IRON_VALIANT_INSIDE_2, 36, 15
+	setobjectxyperm AREAZERO_IRON_THORNS_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_IRON_JUGULIS_INSIDE_2, 2, 0
+	setobjectxyperm AREAZERO_SCREAMING_TAIL_INSIDE_2, 1, 0
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON
+	removeobject AREAZERO_EDO_INSIDE_3
+	removeobject AREAZERO_IRON_BUNDLE_INSIDE_2
+	removeobject AREAZERO_IRON_VALIANT_INSIDE_2
+	removeobject AREAZERO_IRON_THORNS_INSIDE_2
+	removeobject AREAZERO_IRON_JUGULIS_INSIDE_2
+	removeobject AREAZERO_SCREAMING_TAIL_INSIDE_2
+	removeobject AREAZERO_ANDRY_SYLVEON_INSIDE_2
+	removeobject AREAZERO_ANDRY_MIMIKYU_INSIDE_2
+	return
+
+AreaZero_Inside_2_EventScript_AddAndryParadoxes:
+	setobjectxyperm AREAZERO_IRON_THORNS_INSIDE_2, 22, 14
+	setobjectxyperm AREAZERO_SCREAMING_TAIL_INSIDE_2, 22, 15
+	clearflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	clearflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	addobject AREAZERO_IRON_THORNS_INSIDE_2
+	addobject AREAZERO_SCREAMING_TAIL_INSIDE_2
+	turnobject AREAZERO_IRON_THORNS_INSIDE_2, DIR_EAST
+	turnobject AREAZERO_SCREAMING_TAIL_INSIDE_2, DIR_EAST
+	return
+
+AreaZero_Inside_2_EventScript_StartSplitfaceParadoxBattle:
+	call AreaZero_Inside_2_EventScript_PrepareAndryPokemonForSplitfaceBattle
+	setcustomwildbattle  SPECIES_IRON_BUNDLE, 70, ITEM_BOOSTER_ENERGY, MOVE_FREEZE_DRY, MOVE_HYDRO_PUMP, MOVE_SHEER_COLD, MOVE_SUBSTITUTE, SPECIES_IRON_VALIANT, 70, ITEM_BOOSTER_ENERGY, MOVE_SPIRIT_BREAK, MOVE_DRAIN_PUNCH, MOVE_PROTECT, MOVE_KNOCK_OFF
+	setwildbattleaiflags AI_FLAG_SMART_TRAINER
+	multi_fixed_wild PARTNER_SPLITFACE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq AreaZero_Inside_2_EventScript_Lost
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_ne AreaZero_Inside_2_EventScript_SplitfaceBattleNotWon
+	setflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	removeobject AREAZERO_IRON_BUNDLE_INSIDE_2
+	removeobject AREAZERO_IRON_VALIANT_INSIDE_2
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	removeobject AREAZERO_IRON_THORNS_INSIDE_2
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	removeobject AREAZERO_SCREAMING_TAIL_INSIDE_2
+	setvar VAR_AREAZERO_STATE, 11
+	call AreaZero_Inside_2_EventScript_RecallAndryPokemonAfterSplitfaceBattle
+	goto AreaZero_Inside_2_EventScript_AfterSplitfaceBattleScene
+
+AreaZero_Inside_2_EventScript_PrepareAndryPokemonForSplitfaceBattle:
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON
+	removeobject AREAZERO_ANDRY_SYLVEON_INSIDE_2
+	removeobject AREAZERO_ANDRY_MIMIKYU_INSIDE_2
+	setobjectxyperm AREAZERO_ANDRY_SYLVEON_INSIDE_2, 31, 13
+	setobjectxyperm AREAZERO_ANDRY_MIMIKYU_INSIDE_2, 31, 15
+	clearflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON
+	addobject AREAZERO_ANDRY_SYLVEON_INSIDE_2
+	addobject AREAZERO_ANDRY_MIMIKYU_INSIDE_2
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_WEST
+	turnobject AREAZERO_ANDRY_SYLVEON_INSIDE_2, DIR_WEST
+	turnobject AREAZERO_ANDRY_MIMIKYU_INSIDE_2, DIR_WEST
+	return
+
+AreaZero_Inside_2_EventScript_RecallAndryPokemonAfterSplitfaceBattle:
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_WEST
+	turnobject AREAZERO_ANDRY_SYLVEON_INSIDE_2, DIR_WEST
+	turnobject AREAZERO_ANDRY_MIMIKYU_INSIDE_2, DIR_WEST
+	delay 24
+	playse SE_BALL_OPEN
+	applymovement AREAZERO_ANDRY_SYLVEON_INSIDE_2, AreaZero_Inside_2_Movement_ReturnToPokeball
+	applymovement AREAZERO_ANDRY_MIMIKYU_INSIDE_2, AreaZero_Inside_2_Movement_ReturnToPokeball
+	waitmovement 0
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON
+	removeobject AREAZERO_ANDRY_SYLVEON_INSIDE_2
+	removeobject AREAZERO_ANDRY_MIMIKYU_INSIDE_2
+	return
+
+AreaZero_Inside_2_EventScript_AfterSplitfaceBattleScene:
+	lockall
+	call AreaZero_Inside_2_EventScript_SetupAfterSplitfaceBattleScene
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	turnobject AREAZERO_EDO_INSIDE_3, DIR_WEST
+	delay 12
+	msgbox AreaZero_Inside_2_Text_SplitfaceParadoxesIncreasing, MSGBOX_DEFAULT
+	closemessage
+	delay 12
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_EAST
+	msgbox AreaZero_Inside_2_Text_AndrySupportSteven, MSGBOX_DEFAULT
+	closemessage
+	delay 16
+	applymovement AREAZERO_ANDRY_INSIDE_3, AreaZero_Inside_2_Movement_GroupAdvanceAndry
+	applymovement LOCALID_PLAYER, AreaZero_Inside_2_Movement_GroupAdvancePlayer
+	applymovement AREAZERO_EDO_INSIDE_3, AreaZero_Inside_2_Movement_GroupAdvanceSplitface
+	waitmovement 0
+	turnobject LOCALID_PLAYER, DIR_EAST
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_EAST
+	turnobject AREAZERO_EDO_INSIDE_3, DIR_EAST
+	delay 24
+	call AreaZero_Inside_2_EventScript_AddSurroundingParadoxes
+	delay 8
+	applymovement AREAZERO_BRUTE_BONNET_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxEnterLeft
+	applymovement AREAZERO_IRON_VALIANT_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxEnterLeft
+	applymovement AREAZERO_SLITHER_WING_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxEnterRight
+	applymovement AREAZERO_IRON_BUNDLE_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxEnterRight
+	applymovement AREAZERO_IRON_JUGULIS_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxEnterTop
+	applymovement AREAZERO_SCREAMING_TAIL_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxEnterTop
+	applymovement AREAZERO_GREAT_TUSK_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxEnterBottom
+	applymovement AREAZERO_FLUTTER_MANE_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxEnterBottom
+	waitmovement 0
+	delay 16
+	turnobject LOCALID_PLAYER, DIR_SOUTH
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_WEST
+	turnobject AREAZERO_EDO_INSIDE_3, DIR_EAST
+	applymovement LOCALID_PLAYER, Common_Movement_QuestionMark
+	applymovement AREAZERO_ANDRY_INSIDE_3, Common_Movement_QuestionMark
+	applymovement AREAZERO_EDO_INSIDE_3, Common_Movement_QuestionMark
+	waitmovement 0
+	msgbox AreaZero_Inside_2_Text_GroupSurrounded, MSGBOX_DEFAULT
+	closemessage
+	delay 12
+	msgbox AreaZero_Inside_2_Text_BackToBack, MSGBOX_DEFAULT
+	closemessage
+	delay 8
+	special SpawnCameraObject
+	applymovement AREAZERO_ANDRY_INSIDE_3, AreaZero_Inside_2_Movement_GroupTightenAndry
+	applymovement LOCALID_CAMERA, AreaZero_Inside_2_Movement_CameraPanUp
+	applymovement AREAZERO_EDO_INSIDE_3, AreaZero_Inside_2_Movement_GroupTightenSplitface
+	waitmovement 0
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_SOUTH
+	turnobject AREAZERO_EDO_INSIDE_3, DIR_EAST
+	delay 16
+	applymovement AREAZERO_BRUTE_BONNET_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxCloseLeft
+	applymovement AREAZERO_IRON_VALIANT_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxCloseLeft
+	applymovement AREAZERO_SLITHER_WING_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxCloseRight
+	applymovement AREAZERO_IRON_BUNDLE_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxCloseRight
+	applymovement AREAZERO_IRON_JUGULIS_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxCloseTop
+	applymovement AREAZERO_SCREAMING_TAIL_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxCloseTop
+	applymovement AREAZERO_GREAT_TUSK_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxCloseBottom
+	applymovement AREAZERO_FLUTTER_MANE_INSIDE_2, AreaZero_Inside_2_Movement_ParadoxCloseBottom
+	waitmovement 0
+	delay 16
+	applymovement LOCALID_CAMERA, AreaZero_Inside_2_Movement_CameraPanBackToPlayer
+	waitmovement 0
+	special RemoveCameraObject
+	call AreaZero_Inside_2_EventScript_AddReinforcements
+	delay 8
+	applymovement AREAZERO_WALLY_INSIDE_2, AreaZero_Inside_2_Movement_ReinforcementRushIn
+	applymovement AREAZERO_RIVAL_INSIDE_2, AreaZero_Inside_2_Movement_ReinforcementRushIn
+	waitmovement 0
+	turnobject AREAZERO_WALLY_INSIDE_2, DIR_EAST
+	turnobject AREAZERO_RIVAL_INSIDE_2, DIR_EAST
+	applymovement AREAZERO_WALLY_INSIDE_2, Common_Movement_ExclamationMark
+	applymovement AREAZERO_RIVAL_INSIDE_2, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox AreaZero_Inside_2_Text_ReinforcementsArrive, MSGBOX_DEFAULT
+	closemessage
+	delay 8
+	msgbox AreaZero_Inside_2_Text_AndryCoversUpperSide, MSGBOX_DEFAULT
+	closemessage
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_NORTH
+	turnobject AREAZERO_BRUTE_BONNET_INSIDE_2, DIR_WEST
+	turnobject AREAZERO_IRON_VALIANT_INSIDE_2, DIR_WEST
+	delay 12
+	setvar VAR_AREAZERO_STATE, 12
+	goto AreaZero_Inside_2_EventScript_StartPlayerParadoxBattle
+
+AreaZero_Inside_2_EventScript_StartPlayerParadoxBattle:
+	turnobject LOCALID_PLAYER, DIR_SOUTH
+	turnobject AREAZERO_GREAT_TUSK_INSIDE_2, DIR_NORTH
+	turnobject AREAZERO_FLUTTER_MANE_INSIDE_2, DIR_NORTH
+	playmoncry SPECIES_GREAT_TUSK, CRY_MODE_NORMAL
+	playmoncry SPECIES_FLUTTER_MANE, CRY_MODE_NORMAL
+	waitmoncry
+	setcustomwildbattle  SPECIES_GREAT_TUSK, 70, ITEM_BOOSTER_ENERGY, MOVE_HEADLONG_RUSH, MOVE_CLOSE_COMBAT, MOVE_ICE_SPINNER, MOVE_BODY_PRESS, SPECIES_FLUTTER_MANE, 70, ITEM_BOOSTER_ENERGY, MOVE_MOONBLAST, MOVE_SHADOW_BALL, MOVE_PSYSHOCK, MOVE_MYSTICAL_FIRE
+	setwildbattleaiflags AI_FLAG_SMART_TRAINER
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq AreaZero_Inside_2_EventScript_Lost
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq AreaZero_Inside_2_EventScript_PlayerParadoxBattleWon
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq AreaZero_Inside_2_EventScript_PlayerParadoxBattleWon
+	goto AreaZero_Inside_2_EventScript_StartPlayerParadoxBattle
+
+AreaZero_Inside_2_EventScript_PlayerParadoxBattleWon:
+	call AreaZero_Inside_2_EventScript_HideAllSurroundingParadoxes
+	removeobject AREAZERO_BRUTE_BONNET_INSIDE_2
+	removeobject AREAZERO_IRON_VALIANT_INSIDE_2
+	removeobject AREAZERO_SLITHER_WING_INSIDE_2
+	removeobject AREAZERO_IRON_BUNDLE_INSIDE_2
+	removeobject AREAZERO_IRON_THORNS_INSIDE_2
+	removeobject AREAZERO_IRON_JUGULIS_INSIDE_2
+	removeobject AREAZERO_SCREAMING_TAIL_INSIDE_2
+	removeobject AREAZERO_GREAT_TUSK_INSIDE_2
+	removeobject AREAZERO_FLUTTER_MANE_INSIDE_2
+	setvar VAR_AREAZERO_STATE, 13
+	turnobject LOCALID_PLAYER, DIR_WEST
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_WEST
+	turnobject AREAZERO_EDO_INSIDE_3, DIR_WEST
+	turnobject AREAZERO_WALLY_INSIDE_2, DIR_EAST
+	turnobject AREAZERO_RIVAL_INSIDE_2, DIR_EAST
+	delay 8
+	msgbox AreaZero_Inside_2_Text_WallyRivalWereDelayed, MSGBOX_DEFAULT
+	msgbox AreaZero_Inside_2_Text_GroupStillDoesNotKnow, MSGBOX_DEFAULT
+	msgbox AreaZero_Inside_2_Text_WallyNoticesStevenMissing, MSGBOX_DEFAULT
+	msgbox AreaZero_Inside_2_Text_AndryStevenWentAhead, MSGBOX_DEFAULT
+	msgbox AreaZero_Inside_2_Text_HurryAfterSteven, MSGBOX_DEFAULT
+	closemessage
+	delay 8
+	fadescreen FADE_TO_BLACK
+	call AreaZero_Inside_2_EventScript_SetPostPlayerParadoxScenePositions
+	setvar VAR_AREAZERO_STATE, AREA_ZERO_WILD_MON_ENC_VALUE
+	clearflag FLAG_TEMP_HIDE_FOLLOWER
+	callnative UpdateFollowingPokemon
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+AreaZero_Inside_2_EventScript_SetPostPlayerParadoxScenePositions:
+	setflag FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS
+	removeobject AREAZERO_ANDRY_INSIDE_3
+	removeobject AREAZERO_EDO_INSIDE_3
+	removeobject AREAZERO_WALLY_INSIDE_2
+	removeobject AREAZERO_RIVAL_INSIDE_2
+	setobjectxy OBJ_EVENT_ID_PLAYER, 35, 15
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_3, 0, 0
+	setobjectxyperm AREAZERO_EDO_INSIDE_3, 0, 0
+	setobjectxyperm AREAZERO_WALLY_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_RIVAL_INSIDE_2, 0, 0
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE_3, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_EDO_INSIDE_3, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_WALLY_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_RIVAL_INSIDE_2, MOVEMENT_TYPE_NONE
+	clearflag FLAG_AREA_ZERO_INSIDE_2_POST_SCENE_NPCS
+	addobject AREAZERO_WALLY_INSIDE_3
+	addobject AREAZERO_RIVAL_INSIDE_3
+	addobject AREAZERO_EDO_INSIDE_4
+	addobject AREAZERO_ANDRY_INSIDE_4
+	addobject AREAZERO_STEVEN_INSIDE_2
+	turnobject LOCALID_PLAYER, DIR_EAST
+	return
+
+AreaZero_Inside_2_EventScript_HideAllSurroundingParadoxes:
+	setflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_BOTTOM_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	setobjectxyperm AREAZERO_BRUTE_BONNET_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_IRON_VALIANT_INSIDE_2, 1, 0
+	setobjectxyperm AREAZERO_SLITHER_WING_INSIDE_2, 2, 0
+	setobjectxyperm AREAZERO_IRON_BUNDLE_INSIDE_2, 3, 0
+	setobjectxyperm AREAZERO_IRON_THORNS_INSIDE_2, 4, 0
+	setobjectxyperm AREAZERO_IRON_JUGULIS_INSIDE_2, 5, 0
+	setobjectxyperm AREAZERO_SCREAMING_TAIL_INSIDE_2, 6, 0
+	setobjectxyperm AREAZERO_GREAT_TUSK_INSIDE_2, 7, 0
+	setobjectxyperm AREAZERO_FLUTTER_MANE_INSIDE_2, 8, 0
+	setobjectmovementtype AREAZERO_BRUTE_BONNET_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_IRON_VALIANT_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_SLITHER_WING_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_IRON_BUNDLE_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_IRON_THORNS_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_IRON_JUGULIS_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_SCREAMING_TAIL_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_GREAT_TUSK_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_FLUTTER_MANE_INSIDE_2, MOVEMENT_TYPE_NONE
+	return
+
+AreaZero_Inside_2_EventScript_RemoveAllAreaZeroInside2Npcs:
+	setflag FLAG_AREA_ZERO_OBJ
+	setflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON
+	setflag FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS
+	setflag FLAG_AREA_ZERO_INSIDE_2_BOTTOM_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	setflag FLAG_AREA_ZERO_INSIDE_2_POST_SCENE_NPCS
+	removeobject AREAZERO_ANDRY_INSIDE_3
+	removeobject AREAZERO_EDO_INSIDE_3
+	removeobject AREAZERO_SLITHER_WING_INSIDE_2
+	removeobject AREAZERO_BRUTE_BONNET_INSIDE_2
+	removeobject AREAZERO_IRON_BUNDLE_INSIDE_2
+	removeobject AREAZERO_IRON_VALIANT_INSIDE_2
+	removeobject AREAZERO_ANDRY_INSIDE_2
+	removeobject AREAZERO_EDO_INSIDE_2
+	removeobject AREAZERO_IRON_THORNS_INSIDE_2
+	removeobject AREAZERO_SCREAMING_TAIL_INSIDE_2
+	removeobject AREAZERO_IRON_JUGULIS_INSIDE_2
+	removeobject AREAZERO_ANDRY_SYLVEON_INSIDE_2
+	removeobject AREAZERO_ANDRY_MIMIKYU_INSIDE_2
+	removeobject AREAZERO_WALLY_INSIDE_2
+	removeobject AREAZERO_RIVAL_INSIDE_2
+	removeobject AREAZERO_GREAT_TUSK_INSIDE_2
+	removeobject AREAZERO_FLUTTER_MANE_INSIDE_2
+	removeobject AREAZERO_WALLY_INSIDE_3
+	removeobject AREAZERO_RIVAL_INSIDE_3
+	removeobject AREAZERO_EDO_INSIDE_4
+	removeobject AREAZERO_ANDRY_INSIDE_4
+	removeobject AREAZERO_STEVEN_INSIDE_2
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_3, 0, 0
+	setobjectxyperm AREAZERO_EDO_INSIDE_3, 0, 0
+	setobjectxyperm AREAZERO_SLITHER_WING_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_BRUTE_BONNET_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_IRON_BUNDLE_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_IRON_VALIANT_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_EDO_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_IRON_THORNS_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_SCREAMING_TAIL_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_IRON_JUGULIS_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_ANDRY_SYLVEON_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_ANDRY_MIMIKYU_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_WALLY_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_RIVAL_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_GREAT_TUSK_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_FLUTTER_MANE_INSIDE_2, 0, 0
+	setobjectxyperm AREAZERO_WALLY_INSIDE_3, 0, 0
+	setobjectxyperm AREAZERO_RIVAL_INSIDE_3, 0, 0
+	setobjectxyperm AREAZERO_EDO_INSIDE_4, 0, 0
+	setobjectxyperm AREAZERO_ANDRY_INSIDE_4, 0, 0
+	setobjectxyperm AREAZERO_STEVEN_INSIDE_2, 0, 0
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE_3, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_EDO_INSIDE_3, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_SLITHER_WING_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_BRUTE_BONNET_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_IRON_BUNDLE_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_IRON_VALIANT_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_EDO_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_IRON_THORNS_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_SCREAMING_TAIL_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_IRON_JUGULIS_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_ANDRY_SYLVEON_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_ANDRY_MIMIKYU_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_WALLY_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_RIVAL_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_GREAT_TUSK_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_FLUTTER_MANE_INSIDE_2, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_WALLY_INSIDE_3, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_RIVAL_INSIDE_3, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_EDO_INSIDE_4, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE_4, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_STEVEN_INSIDE_2, MOVEMENT_TYPE_NONE
+	return
+
+AreaZero_Inside_2_EventScript_SetupAfterSplitfaceBattleScene:
+	setflag FLAG_TEMP_HIDE_FOLLOWER
+	callnative RemoveFollowingPokemon
+	setflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON
+	setflag FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS
+	setflag FLAG_AREA_ZERO_INSIDE_2_BOTTOM_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	removeobject AREAZERO_BRUTE_BONNET_INSIDE_2
+	removeobject AREAZERO_SLITHER_WING_INSIDE_2
+	removeobject AREAZERO_IRON_BUNDLE_INSIDE_2
+	removeobject AREAZERO_IRON_VALIANT_INSIDE_2
+	removeobject AREAZERO_IRON_THORNS_INSIDE_2
+	removeobject AREAZERO_IRON_JUGULIS_INSIDE_2
+	removeobject AREAZERO_SCREAMING_TAIL_INSIDE_2
+	removeobject AREAZERO_GREAT_TUSK_INSIDE_2
+	removeobject AREAZERO_FLUTTER_MANE_INSIDE_2
+	removeobject AREAZERO_ANDRY_SYLVEON_INSIDE_2
+	removeobject AREAZERO_ANDRY_MIMIKYU_INSIDE_2
+	removeobject AREAZERO_WALLY_INSIDE_2
+	removeobject AREAZERO_RIVAL_INSIDE_2
+	setobjectxy OBJ_EVENT_ID_PLAYER, 32, 15
+	setobjectxy AREAZERO_ANDRY_INSIDE_3, 31, 14
+	setobjectxy AREAZERO_EDO_INSIDE_3, 34, 14
+	turnobject LOCALID_PLAYER, DIR_EAST
+	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_EAST
+	turnobject AREAZERO_EDO_INSIDE_3, DIR_WEST
+	return
+
+AreaZero_Inside_2_EventScript_AddSurroundingParadoxes:
+	setflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_BOTTOM_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	removeobject AREAZERO_BRUTE_BONNET_INSIDE_2
+	removeobject AREAZERO_SLITHER_WING_INSIDE_2
+	removeobject AREAZERO_IRON_BUNDLE_INSIDE_2
+	removeobject AREAZERO_IRON_VALIANT_INSIDE_2
+	removeobject AREAZERO_IRON_THORNS_INSIDE_2
+	removeobject AREAZERO_IRON_JUGULIS_INSIDE_2
+	removeobject AREAZERO_SCREAMING_TAIL_INSIDE_2
+	removeobject AREAZERO_GREAT_TUSK_INSIDE_2
+	removeobject AREAZERO_FLUTTER_MANE_INSIDE_2
+	setobjectxyperm AREAZERO_BRUTE_BONNET_INSIDE_2, 24, 14
+	setobjectxyperm AREAZERO_IRON_VALIANT_INSIDE_2, 24, 15
+	setobjectxyperm AREAZERO_SLITHER_WING_INSIDE_2, 45, 14
+	setobjectxyperm AREAZERO_IRON_BUNDLE_INSIDE_2, 45, 15
+	setobjectxyperm AREAZERO_IRON_JUGULIS_INSIDE_2, 34, 7
+	setobjectxyperm AREAZERO_SCREAMING_TAIL_INSIDE_2, 35, 7
+	setobjectxyperm AREAZERO_GREAT_TUSK_INSIDE_2, 34, 23
+	setobjectxyperm AREAZERO_FLUTTER_MANE_INSIDE_2, 35, 23
+	clearflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	clearflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	clearflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	clearflag FLAG_AREA_ZERO_INSIDE_2_BOTTOM_PARADOXES
+	clearflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	addobject AREAZERO_BRUTE_BONNET_INSIDE_2
+	addobject AREAZERO_SLITHER_WING_INSIDE_2
+	addobject AREAZERO_IRON_BUNDLE_INSIDE_2
+	addobject AREAZERO_IRON_VALIANT_INSIDE_2
+	addobject AREAZERO_IRON_JUGULIS_INSIDE_2
+	addobject AREAZERO_SCREAMING_TAIL_INSIDE_2
+	addobject AREAZERO_GREAT_TUSK_INSIDE_2
+	addobject AREAZERO_FLUTTER_MANE_INSIDE_2
+	turnobject AREAZERO_BRUTE_BONNET_INSIDE_2, DIR_EAST
+	turnobject AREAZERO_IRON_VALIANT_INSIDE_2, DIR_EAST
+	turnobject AREAZERO_SLITHER_WING_INSIDE_2, DIR_WEST
+	turnobject AREAZERO_IRON_BUNDLE_INSIDE_2, DIR_WEST
+	turnobject AREAZERO_IRON_JUGULIS_INSIDE_2, DIR_SOUTH
+	turnobject AREAZERO_SCREAMING_TAIL_INSIDE_2, DIR_SOUTH
+	turnobject AREAZERO_GREAT_TUSK_INSIDE_2, DIR_NORTH
+	turnobject AREAZERO_FLUTTER_MANE_INSIDE_2, DIR_NORTH
+	return
+
+AreaZero_Inside_2_EventScript_AddReinforcements:
+	call Common_EventScript_SetupRivalGfxId
+	setflag FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS
+	removeobject AREAZERO_WALLY_INSIDE_2
+	removeobject AREAZERO_RIVAL_INSIDE_2
+	setobjectxyperm AREAZERO_WALLY_INSIDE_2, 20, 14
+	setobjectxyperm AREAZERO_RIVAL_INSIDE_2, 20, 15
+	clearflag FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS
+	addobject AREAZERO_WALLY_INSIDE_2
+	addobject AREAZERO_RIVAL_INSIDE_2
+	turnobject AREAZERO_WALLY_INSIDE_2, DIR_EAST
+	turnobject AREAZERO_RIVAL_INSIDE_2, DIR_EAST
+	return
+
+AreaZero_Inside_2_EventScript_SplitfaceBattleNotWon:
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON
+	removeobject AREAZERO_ANDRY_SYLVEON_INSIDE_2
+	removeobject AREAZERO_ANDRY_MIMIKYU_INSIDE_2
+	releaseall
+	end
+
+AreaZero_Inside_2_EventScript_Lost:
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+
+AreaZero_Inside_2_Movement_AndryRunAhead:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+AreaZero_Inside_2_Movement_SplitfaceRunAhead:
+	delay_16
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+AreaZero_Inside_2_Movement_PlayerRunToAndry:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_PlayerTakeBattlePositionTop:
+	walk_fast_down
+	walk_fast_right
+	walk_fast_down
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_PlayerTakeBattlePositionMiddle:
+	walk_fast_right
+	walk_fast_down
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_PlayerTakeBattlePositionBottom:
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_AndryAdvanceAfterBattle:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_IronBundleApproach:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+AreaZero_Inside_2_Movement_IronValiantApproach:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+AreaZero_Inside_2_Movement_PlayerReachAndry:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_SplitfaceRushIn:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+AreaZero_Inside_2_Movement_LeftParadoxApproachTop:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_LeftParadoxApproachBottom:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_PlayerTakeIronValiantPosition:
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_ReturnToPokeball:
+	enter_pokeball
+	step_end
+
+AreaZero_Inside_2_Movement_GroupAdvanceAndry:
+	walk_right
+	walk_right
+	step_end
+
+AreaZero_Inside_2_Movement_GroupAdvancePlayer:
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+AreaZero_Inside_2_Movement_GroupAdvanceSplitface:
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+AreaZero_Inside_2_Movement_ParadoxEnterLeft:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_ParadoxEnterRight:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+AreaZero_Inside_2_Movement_ParadoxEnterTop:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+AreaZero_Inside_2_Movement_ParadoxEnterBottom:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+AreaZero_Inside_2_Movement_ParadoxCloseLeft:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_ParadoxCloseRight:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+AreaZero_Inside_2_Movement_ParadoxCloseTop:
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+AreaZero_Inside_2_Movement_ParadoxCloseBottom:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+AreaZero_Inside_2_Movement_GroupTightenAndry:
+	lock_facing_direction
+	walk_right
+	unlock_facing_direction
+	step_end
+
+AreaZero_Inside_2_Movement_CameraPanUp:
+	walk_up
+	step_end
+
+AreaZero_Inside_2_Movement_CameraPanBackToPlayer:
+	walk_fast_down
+	step_end
+
+AreaZero_Inside_2_Movement_GroupTightenSplitface:
+	lock_facing_direction
+	walk_left
+	unlock_facing_direction
+	step_end
+
+AreaZero_Inside_2_Movement_ReinforcementRushIn:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+AreaZero_Inside_2_Movement_PlayerFinalApproachTop:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+AreaZero_Inside_2_Movement_PlayerFinalApproachMiddle:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+AreaZero_Inside_2_Movement_PlayerFinalApproachBottom:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+AreaZero_Inside_2_Text_CantReturn:
+	.string "WALLY and {RIVAL} are\n"
+	.string "holding the entrance.\p"
+	.string "Leave them to it and\n"
+	.string "keep moving forward. $"
+
+AreaZero_Inside_2_Text_AndryAskHelp:
+	.string "ANDRY: This cave is full of\n"
+	.string "these strange creatures.\p"
+	.string "They're very strong, and we're\n"
+	.string "struggling to move forward.\p"
+	.string "Will you help me? $"
+
+AreaZero_Inside_2_Text_AndryThanks:
+	.string "ANDRY: Thanks.\p"
+	.string "SPLITFACE went ahead alone.\n"
+	.string "We should catch up to him. $"
+
+AreaZero_Inside_2_Text_AndryAgain:
+	.string "ANDRY: Again...?\n"
+	.string "They just keep coming. $"
+
+AreaZero_Inside_2_Text_SplitfaceDelibird:
+	.string "SPLITFACE: It looks like a\n"
+	.string "DELIBIRD...\p"
+	.string "But way cooler! $"
+
+AreaZero_Inside_2_Text_AndryHandlesNewParadoxes:
+	.string "ANDRY: From here too?\n"
+	.string "We've just cleared that way.\p"
+	.string "Fine. I'll keep these two\n"
+	.string "busy.\p"
+	.string "{PLAYER} please, help SPLITFACE! $"
+
+AreaZero_Inside_2_Text_SplitfaceParadoxesIncreasing:
+	.string "SPLITFACE: The farther we go,\n"
+	.string "the more of them show up.\p"
+	.string "What even are they?\p"
+	.string "They look like fusions of\n"
+	.string "creatures we already know...\p"
+	.string "But either futuristic or\n"
+	.string "ancient. $"
+
+AreaZero_Inside_2_Text_AndrySupportSteven:
+	.string "ANDRY: I noticed that too.\p"
+	.string "But we don't have time\n"
+	.string "to stand around.\p"
+	.string "STEVEN is farther ahead,\n"
+	.string "and he's alone.\p"
+	.string "We need to support him. $"
+
+AreaZero_Inside_2_Text_GroupSurrounded:
+	.string "SPLITFACE: Dio sborrato-\p"
+	.string "ANDRY: Stay sharp.\n"
+	.string "They're boxing us in. $"
+
+AreaZero_Inside_2_Text_BackToBack:
+	.string "ANDRY: Back to back!\p"
+	.string "Do not let them\n"
+	.string "split us up. $"
+
+AreaZero_Inside_2_Text_ReinforcementsArrive:
+	.string "WALLY: GUYS!\p"
+	.string "{RIVAL}: We'll help.\n"
+	.string "We'll cover this side! $"
+
+AreaZero_Inside_2_Text_AndryCoversUpperSide:
+	.string "ANDRY: Okay.\n"
+	.string "Then I'll cover this one! $"
+
+AreaZero_Inside_2_Text_WallyRivalWereDelayed:
+	.string "WALLY: Sorry we're late!\p"
+	.string "We were attacked again\n"
+	.string "and again on the way here.\p"
+	.string "{RIVAL}: They kept coming\n"
+	.string "after us.\p"
+	.string "{RIVAL}: What are these things? $"
+
+AreaZero_Inside_2_Text_GroupStillDoesNotKnow:
+	.string "ANDRY: We still don't know.\p"
+	.string "They look like a real POKéMON\n"
+	.string "but ancient or futuristic.\p"
+	.string "We still have no idea\n"
+	.string "where they come from. $"
+
+AreaZero_Inside_2_Text_WallyNoticesStevenMissing:
+	.string "WALLY: Wait...\n"
+	.string "Where is STEVEN? $"
+
+AreaZero_Inside_2_Text_AndryStevenWentAhead:
+	.string "ANDRY: He went ahead.\p"
+	.string "He wanted to learn more\n"
+	.string "about the crystals. $"
+
+AreaZero_Inside_2_Text_HurryAfterSteven:
+	.string "{RIVAL}: Then we should hurry.\p"
+	.string "If STEVEN is alone up ahead,\n"
+	.string "we can't waste time.\p"
+	.string "WALLY: Let's go. $"
+
+AreaZero_Inside_2_Text_PostWally:
+	.string "WALLY: I'll cover our backs.\p"
+	.string "We need to keep moving. $"
+
+AreaZero_Inside_2_Text_PostRival:
+	.string "{RIVAL}: I'm trying to work out\n"
+	.string "what these crystals really are.\p"
+	.string "I want to bring my dad some\n"
+	.string "real analysis data.\p"
+	.string "Let's head toward STEVEN.\p"
+	.string "Maybe he's figured something\n"
+	.string "out about this phenomenon. $"
+
+AreaZero_Inside_2_Text_PostSplitface:
+	.string "SPLITFACE: Sparkles Sparkles...\p"
+	.string "Oh sorry, I should focus. $"
+
+AreaZero_Inside_2_Text_FinalAndryChecksSteven:
+	.string "ANDRY: STEVEN!\p"
+	.string "Are you all right?\n"
+	.string "Did everything go okay? $"
+
+AreaZero_Inside_2_Text_FinalStevenSample:
+	.string "STEVEN: I didn't have too much\n"
+	.string "trouble, thanks to you.\p"
+	.string "You kept the POKéMON at bay\n"
+	.string "long enough for me.\p"
+	.string "And I found a lead on what\n"
+	.string "these crystals might be.\p"
+	.string "I also collected a significant\n"
+	.string "sample to analyze in my lab. $"
+
+AreaZero_Inside_2_Text_FinalAndryHurryOut:
+	.string "ANDRY: That's great news.\p"
+	.string "Then we should hurry out\n"
+	.string "before this gets any worse. $"
+
+AreaZero_Inside_2_Text_FinalStevenProceed:
+	.string "STEVEN: If we keep going,\n"
+	.string "we may find our answer.\p"
+	.string "But this cave is dangerous.\n"
+	.string "We should be careful. $"
+
+AreaZero_Inside_2_Text_FinalAndryWarnsOthers:
+	.string "ANDRY: Go on ahead.\p"
+	.string "I'll go back and warn\n"
+	.string "the others. $"
+
+AreaZero_Inside_2_Text_FinalStevenLetsGo:
+	.string "STEVEN: {PLAYER}, let's go. $"

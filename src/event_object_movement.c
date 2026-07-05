@@ -1646,6 +1646,22 @@ static s16 ReallocSpriteTiles(struct Sprite *sprite, u32 byteSize)
     return i;
 }
 
+static u16 GetCompressedObjectEventTileTag(u16 graphicsId)
+{
+    u16 tagId = graphicsId;
+
+    if (graphicsId & OBJ_EVENT_MON)
+    {
+        tagId = NUM_OBJ_EVENT_GFX + (graphicsId & OBJ_EVENT_MON_SPECIES_MASK);
+        if (graphicsId & OBJ_EVENT_MON_SHINY)
+            tagId += NUM_SPECIES;
+        if (graphicsId & OBJ_EVENT_MON_FEMALE)
+            tagId += NUM_SPECIES * 2;
+    }
+
+    return COMP_OW_TILE_TAG_BASE + tagId;
+}
+
 u16 LoadSheetGraphicsInfo(const struct ObjectEventGraphicsInfo *info, u16 uuid, struct Sprite *sprite)
 {
     u16 tag = info->tileTag;
@@ -1657,7 +1673,7 @@ u16 LoadSheetGraphicsInfo(const struct ObjectEventGraphicsInfo *info, u16 uuid, 
         u16 tileStart;
         bool32 oldInvisible;
         if (tag == TAG_NONE)
-            tag = COMP_OW_TILE_TAG_BASE + uuid;
+            tag = GetCompressedObjectEventTileTag(uuid);
 
         if (sprite)
         {

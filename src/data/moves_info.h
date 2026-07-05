@@ -5035,7 +5035,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Hurls mud in the foe's face\n"
             "to reduce its accuracy."),
         .effect = EFFECT_HIT,
-        .power = 20,
+        .power = 40,
         .type = TYPE_GROUND,
         .accuracy = 100,
         .pp = 5,
@@ -5044,7 +5044,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_ACC_MINUS_1,
-            .chance = 100,
+            .chance = 50,
         }),
         .contestEffect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -8701,12 +8701,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "A chilling attack that\n"
             "causes fainting if it hits."),
         .effect = EFFECT_OHKO,
-        .power = 1,
+        .power = 110,
         .type = TYPE_ICE,
-        .accuracy = 30,
+        .accuracy = 50,
         .pp = 5,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
+            .chance = 100,
+        }),
+        .alwaysHitsInHailSnow = TRUE,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,

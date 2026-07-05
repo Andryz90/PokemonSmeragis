@@ -5,6 +5,7 @@
 #include "battle_anim.h"
 #include "battle_ai_util.h"
 #include "battle_ai_main.h"
+#include "battle_main.h"
 #include "battle_controllers.h"
 #include "battle_factory.h"
 #include "battle_setup.h"
@@ -163,6 +164,7 @@ static u64 GetWildAiFlags(void)
 {
     u32 avgLevel = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
     u64 flags = 0;
+    u64 WildAiFlags = GetWildAiFlag();
 
     if (IsDoubleBattle())
         avgLevel = (GetMonData(&gEnemyParty[0], MON_DATA_LEVEL) + GetMonData(&gEnemyParty[1], MON_DATA_LEVEL)) / 2;
@@ -177,6 +179,8 @@ static u64 GetWildAiFlags(void)
 
     if (B_VAR_WILD_AI_FLAGS != 0 && VarGet(B_VAR_WILD_AI_FLAGS) != 0)
         flags |= VarGet(B_VAR_WILD_AI_FLAGS);
+
+    flags |= WildAiFlags;
 
     return flags;
 }

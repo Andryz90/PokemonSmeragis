@@ -110,3 +110,56 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 - Protect
 - Solar Beam
 - Dragon Claw
+
+
+=== PARTNER_ANDRY ===
+Name: ANDRY
+Class: Pkmn Trainer 1
+Pic: Steven
+Gender: Male
+Music: Male
+
+Sylveon @ Throat Spray
+Ability: Pixilate
+Level: 60
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Hyper Voice
+- Mystical Fire
+- Protect
+
+Mimikyu @ Life Orb
+Ability: Disguise
+Level: 60
+Jolly Nature
+- Swords Dance
+- Play Rough
+- Shadow Claw
+- Shadow Sneak
+
+
+=== PARTNER_SPLITFACE ===
+Name: SPLITFACE
+Class: Developer
+Pic: Steven
+Gender: Male
+Music: Male
+
+Abomasnow
+Ability: Snow Warning
+Level: 60
+Modest Nature
+- Blizzard
+- Giga Drain
+- Ice Shard
+- Protect
+
+Glalie @ Leftovers
+Ability: Ice Body
+Level: 60
+Timid Nature
+- Blizzard
+- Protect
+- Toxic
+- Substitute

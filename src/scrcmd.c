@@ -1,6 +1,7 @@
 #include "global.h"
 #include "frontier_util.h"
 #include "battle_setup.h"
+#include "battle_main.h"
 #include "berry.h"
 #include "clock.h"
 #include "coins.h"
@@ -2555,6 +2556,81 @@ bool8 ScrCmd_setwildbattle(struct ScriptContext *ctx)
         CreateScriptedDoubleWildMon(species, level, item, species2, level2, item2);
         sIsScriptedWildDouble = TRUE;
     }
+
+    return FALSE;
+}
+
+
+bool8 ScrCmd_setwildbattleaiflags(struct ScriptContext *ctx)
+{
+    u32 flags = ScriptReadWord(ctx);
+
+    Script_RequestEffects(SCREFF_V1);
+    
+    SetScriptedWildAiFlags((u32)flags);
+
+    return FALSE;
+}
+
+/* Customable wild battle */
+bool8 ScrCmd_setcustomwildbattle(struct ScriptContext *ctx)
+{
+    u16 species = ScriptReadHalfword(ctx);
+    u8 level = ScriptReadByte(ctx);
+    u16 item = ScriptReadHalfword(ctx);
+    u16 moves[8] = {MOVE_NONE};
+
+    u16 species2 = 0u;
+    u8 level2 = 0u;
+    u16 item2 = 0u;
+    u8 i = 0u;
+    
+    for (i = 0u; i < MAX_MON_MOVES; i++)
+    {
+        moves[i] = ScriptReadHalfword(ctx);
+    }
+
+    species2 = ScriptReadHalfword(ctx);
+    level2 = ScriptReadByte(ctx);
+    item2 = ScriptReadHalfword(ctx);
+
+    for (; i < 2 * MAX_MON_MOVES; i++)
+    {
+        moves[i] = ScriptReadHalfword(ctx);
+    }
+
+    Script_RequestEffects(SCREFF_V1);
+
+    if (species >= VAR_0x8000 && species <= SPECIAL_VARS_END)
+    {
+        species = VarGet(species);
+        level = VarGet(VAR_UNUSED_0x8014);
+    }
+        
+    if(species2 == SPECIES_NONE)
+    {
+        CreateScriptedWildMon(species, level, item);
+        sIsScriptedWildDouble = FALSE;
+    }
+    else
+    {
+        if (species2 >= VAR_0x8000 && species2 <= SPECIAL_VARS_END)
+        {
+            species2 = VarGet(species2);
+            level2 = VarGet(level2);
+        }
+        CreateScriptedDoubleWildMon(species, level, item, species2, level2, item2);
+        sIsScriptedWildDouble = TRUE;
+    }
+
+    for (u8 j = 0; j < MAX_MON_MOVES; j++)
+    {
+        SetMonMoveSlot(&gEnemyParty[0], moves[j], j);
+
+        if (sIsScriptedWildDouble)
+            SetMonMoveSlot(&gEnemyParty[1], moves[MAX_MON_MOVES + j], j);
+    }
+
 
     return FALSE;
 }

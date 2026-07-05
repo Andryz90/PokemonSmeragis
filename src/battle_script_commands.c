@@ -7815,7 +7815,25 @@ bool32 CanBattlerSwitch(u32 battler)
 
         ret = (i != PARTY_SIZE);
     }
-    else if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER)
+    else if (WILD_DOUBLE_BATTLE && !IsOnPlayerSide(battler))
+    {
+        battlerIn1 = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+        battlerIn2 = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
+        party = gEnemyParty;
+
+        for (i = 0; i < PARTY_SIZE; i++)
+        {
+            if (GetMonData(&party[i], MON_DATA_HP) != 0
+             && GetMonData(&party[i], MON_DATA_SPECIES) != SPECIES_NONE
+             && !GetMonData(&party[i], MON_DATA_IS_EGG)
+             && i != gBattlerPartyIndexes[battlerIn1] && i != gBattlerPartyIndexes[battlerIn2])
+                break;
+        }
+
+        ret = (i != PARTY_SIZE);
+    }
+    else if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER
+          && (IsOnPlayerSide(battler) || gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS))
     {
         party = GetBattlerParty(battler);
 
@@ -8229,7 +8247,8 @@ static void Cmd_switchhandleorder(void)
             *((BATTLE_PARTNER(battler)) * 3 + (u8 *)(gBattleStruct->battlerPartyOrders) + 0) |= (gBattleResources->bufferB[battler][2] & 0xF0) >> 4;
             *((BATTLE_PARTNER(battler)) * 3 + (u8 *)(gBattleStruct->battlerPartyOrders) + 2) = gBattleResources->bufferB[battler][3];
         }
-        else if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER)
+        else if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER
+              && (IsOnPlayerSide(battler) || gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS))
         {
             SwitchPartyOrderInGameMulti(battler, gBattleStruct->monToSwitchIntoId[battler]);
         }
@@ -12761,7 +12780,8 @@ static void Cmd_forcerandomswitch(void)
         }
         else if ((gBattleTypeFlags & BATTLE_TYPE_BATTLE_TOWER && gBattleTypeFlags & BATTLE_TYPE_LINK)
             || (gBattleTypeFlags & BATTLE_TYPE_BATTLE_TOWER && gBattleTypeFlags & BATTLE_TYPE_RECORDED_LINK)
-            || (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER))
+            || (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER
+                && (IsOnPlayerSide(gBattlerTarget) || gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)))
         {
             if ((gBattlerTarget & BIT_FLANK) != B_FLANK_LEFT)
             {

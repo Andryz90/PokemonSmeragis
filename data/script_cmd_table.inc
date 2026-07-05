@@ -254,6 +254,8 @@ gScriptCmdTable::
 	script_cmd_table_entry SCR_OP_BUFFERNATURENAME			    ScrCmd_buffernaturename,			requests_effects=1  @ 0xe5
 	script_cmd_table_entry SCR_OP_CHECKITEMSLIST			    ScrCmd_checkitemslist,				requests_effects=1  @ 0xe6
 	script_cmd_table_entry SCR_OP_REFRESHOBJECTINMAP            ScrCmd_refreshobjectsinmap,         requests_effects=1  @ 0xe7
+	script_cmd_table_entry SCR_OP_SETWILDBATTLEAIFLAGS          ScrCmd_setwildbattleaiflags,        requests_effects=1  @ 0xe8
+	script_cmd_table_entry SCR_OP_SETCUSTOMWILDBATTLE           ScrCmd_setcustomwildbattle,         requests_effects=1  @ 0xe9
 	.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

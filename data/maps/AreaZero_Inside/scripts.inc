@@ -1,3 +1,5 @@
+.set AREA_ZERO_INSIDE_2_POST_SCENE_VALUE, 15
+
 AreaZero_Inside_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, AreaZero_Inside_OnTransition
 	@map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, AreaZero_Inside_OnWarp
@@ -10,6 +12,7 @@ AreaZero_Inside_OnTransition:
 	setflag FLAG_AREA_ZERO_IRON_JUGULIS
 	setflag FLAG_AREA_ZERO_FLUTTER_MANE
 	call_if_ge VAR_AREAZERO_STATE, 8, AreaZero_Inside_OnTransition_SetPostParadoxObjectPositions
+	call_if_ge VAR_AREAZERO_STATE, AREA_ZERO_INSIDE_2_POST_SCENE_VALUE, AreaZero_Inside_OnTransition_RemoveAllAreaZeroInsideNpcs
 	end
 
 AreaZero_Inside_OnTransition_SetPostParadoxObjectPositions:
@@ -30,6 +33,37 @@ AreaZero_Inside_OnTransition_SetPostParadoxObjectPositions:
 	setobjectmovementtype AREAZERO_RIVAL_INSIDE, MOVEMENT_TYPE_FACE_DOWN
 	setobjectmovementtype AREAZERO_IRON_JUGULIS_INSIDE, MOVEMENT_TYPE_FACE_UP
 	setobjectmovementtype AREAZERO_FLUTTER_MANE_INSIDE, MOVEMENT_TYPE_FACE_UP
+	return
+
+AreaZero_Inside_OnTransition_RemoveAllAreaZeroInsideNpcs:
+	setflag FLAG_AREA_ZERO_OBJ
+	setflag FLAG_AREA_ZERO_GREAT_TUSK
+	setflag FLAG_AREA_ZERO_IRON_JUGULIS
+	setflag FLAG_AREA_ZERO_FLUTTER_MANE
+	removeobject AREAZERO_EDO_INSIDE
+	removeobject AREAZERO_ANDRY_INSIDE
+	removeobject AREAZERO_WALLY_INSIDE
+	removeobject AREAZERO_STEVEN_INSIDE
+	removeobject AREAZERO_RIVAL_INSIDE
+	removeobject AREAZERO_GREAT_TUSK_INSIDE
+	removeobject AREAZERO_IRON_JUGULIS_INSIDE
+	removeobject AREAZERO_FLUTTER_MANE_INSIDE
+	setobjectxyperm AREAZERO_EDO_INSIDE, 0, 0
+	setobjectxyperm AREAZERO_ANDRY_INSIDE, 0, 0
+	setobjectxyperm AREAZERO_WALLY_INSIDE, 0, 0
+	setobjectxyperm AREAZERO_STEVEN_INSIDE, 0, 0
+	setobjectxyperm AREAZERO_RIVAL_INSIDE, 0, 0
+	setobjectxyperm AREAZERO_GREAT_TUSK_INSIDE, 0, 0
+	setobjectxyperm AREAZERO_IRON_JUGULIS_INSIDE, 0, 0
+	setobjectxyperm AREAZERO_FLUTTER_MANE_INSIDE, 0, 0
+	setobjectmovementtype AREAZERO_EDO_INSIDE, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_ANDRY_INSIDE, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_WALLY_INSIDE, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_STEVEN_INSIDE, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_RIVAL_INSIDE, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_GREAT_TUSK_INSIDE, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_IRON_JUGULIS_INSIDE, MOVEMENT_TYPE_NONE
+	setobjectmovementtype AREAZERO_FLUTTER_MANE_INSIDE, MOVEMENT_TYPE_NONE
 	return
 
 AreaZero_Inside_OnFrame:
@@ -168,8 +202,9 @@ AreaZero_Inside_EventScript_AfterBreakingStoryCrystal::
 	msgbox AreaZero_Inside_Text_WallyPlayer, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LAST_TALKED, AREAZERO_GREAT_TUSK_INSIDE
-	setwildbattle SPECIES_GREAT_TUSK, 70
+	setcustomwildbattle  	SPECIES_GREAT_TUSK, 70, ITEM_BOOSTER_ENERGY, MOVE_CLOSE_COMBAT, MOVE_HEADLONG_RUSH, MOVE_ICE_SPINNER, MOVE_BODY_PRESS
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setwildbattleaiflags AI_FLAG_SMART_TRAINER
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome

@@ -12609,6 +12609,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_AREA_ZERO_INSIDE_2",
+          "base_label": "gAreaZero_Inside_2",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_GREAT_TUSK"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_IRON_JUGULIS"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_SLITHER_WING"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_BRUTE_BONNET"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_SCREAM_TAIL"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_IRON_THORNS"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_IRON_TREADS"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_IRON_TREADS"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_IRON_BUNDLE"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_IRON_BUNDLE"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_FLUTTER_MANE"
+              },
+              {
+                "min_level": 70,
+                "max_level": 70,
+                "species": "SPECIES_FLUTTER_MANE"
+              }
+            ]
+          }
         }
       ]
     },

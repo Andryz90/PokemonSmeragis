@@ -335,6 +335,7 @@ static void DoStandardWildBattle(bool32 isDouble)
     StopPlayerAvatar();
     gMain.savedCallback = CB2_EndWildBattle;
     gBattleTypeFlags = 0;
+    ClearScriptedWildAiFlags();
     if (IsNPCFollowerWildBattle())
     {
         gBattleTypeFlags |= BATTLE_TYPE_MULTI | BATTLE_TYPE_INGAME_PARTNER | BATTLE_TYPE_DOUBLE;
@@ -360,6 +361,7 @@ void DoStandardWildBattle_Debug(void)
     StopPlayerAvatar();
     gMain.savedCallback = CB2_EndWildBattle;
     gBattleTypeFlags = 0;
+    ClearScriptedWildAiFlags();
     if (InBattlePyramid())
     {
         VarSet(VAR_TEMP_PLAYING_PYRAMID_MUSIC, 0);
@@ -379,6 +381,7 @@ void BattleSetup_StartRoamerBattle(void)
     StopPlayerAvatar();
     gMain.savedCallback = CB2_EndWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_ROAMER;
+    ClearScriptedWildAiFlags();
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
@@ -393,6 +396,7 @@ static void DoSafariBattle(void)
     StopPlayerAvatar();
     gMain.savedCallback = CB2_EndSafariBattle;
     gBattleTypeFlags = BATTLE_TYPE_SAFARI;
+    ClearScriptedWildAiFlags();
     CreateBattleStartTask(GetWildBattleTransition(), 0);
 }
 
@@ -403,6 +407,7 @@ static void DoBattlePikeWildBattle(void)
     StopPlayerAvatar();
     gMain.savedCallback = CB2_EndWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_PIKE;
+    ClearScriptedWildAiFlags();
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
@@ -437,6 +442,7 @@ void StartWallyTutorialBattle(void)
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
     gBattleTypeFlags = BATTLE_TYPE_WALLY_TUTORIAL;
+    ClearScriptedWildAiFlags();
     CreateBattleStartTask(B_TRANSITION_SLICE, 0);
 }
 
@@ -444,12 +450,11 @@ void BattleSetup_StartScriptedWildBattle(void)
 {
     u16 song = 0;
 
-    LockPlayerFieldControls();
-    gMain.savedCallback = CB2_EndScriptedWildBattle;
-    gBattleTypeFlags = 0;
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_AREA_ZERO_INSIDE)
-     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_AREA_ZERO_INSIDE)
-     && GetMonData(&gEnemyParty[0], MON_DATA_SPECIES) == SPECIES_GREAT_TUSK)
+	LockPlayerFieldControls();
+	gMain.savedCallback = CB2_EndScriptedWildBattle;
+	gBattleTypeFlags = 0;
+	if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_AREA_ZERO_INSIDE)
+	 && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_AREA_ZERO_INSIDE))
         song = MUS_AREA_ZERO_BATTLE;
 
     CreateBattleStartTask(GetWildBattleTransition(), song);
@@ -461,11 +466,11 @@ void BattleSetup_StartScriptedWildBattle(void)
 
 void BattleSetup_StartScriptedDoubleWildBattle(void)
 {
-    LockPlayerFieldControls();
-    gMain.savedCallback = CB2_EndScriptedWildBattle;
-    gBattleTypeFlags = BATTLE_TYPE_DOUBLE;
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
-    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+	LockPlayerFieldControls();
+	gMain.savedCallback = CB2_EndScriptedWildBattle;
+	gBattleTypeFlags = BATTLE_TYPE_DOUBLE;
+	CreateBattleStartTask(GetWildBattleTransition(), 0);
+	IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();
     TryUpdateGymLeaderRematchFromWild();
@@ -476,6 +481,7 @@ void BattleSetup_StartLatiBattle(void)
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY;
+    ClearScriptedWildAiFlags();
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
@@ -488,6 +494,7 @@ void BattleSetup_StartLegendaryBattle(void)
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY;
+    ClearScriptedWildAiFlags();
 
     switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
     {
@@ -530,6 +537,7 @@ void StartGroudonKyogreBattle(void)
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY;
+    ClearScriptedWildAiFlags();
 
     if (gGameVersion == VERSION_RUBY)
         CreateBattleStartTask(B_TRANSITION_ANGLED_WIPES, MUS_VS_KYOGRE_GROUDON); // GROUDON
@@ -550,6 +558,7 @@ void StartRegiBattle(void)
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY;
+    ClearScriptedWildAiFlags();
 
     species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
     switch (species)
@@ -631,6 +640,7 @@ static void CB2_EndScriptedWildBattle(void)
         DowngradeBadPoison();
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
     }
+    ClearScriptedWildAiFlags();
 }
 
 u8 BattleSetup_GetEnvironmentId(void)
@@ -899,6 +909,7 @@ static void CB2_StartFirstBattle(void)
     if (IsBattleTransitionDone() == TRUE)
     {
         gBattleTypeFlags = BATTLE_TYPE_FIRST_BATTLE;
+        ClearScriptedWildAiFlags();
         gMain.savedCallback = CB2_EndFirstBattle;
         FreeAllWindowBuffers();
         SetMainCallback2(CB2_InitBattle);
@@ -1192,6 +1203,7 @@ void ClearTrainerFlag(u16 trainerId)
 
 void BattleSetup_StartTrainerBattle(void)
 {
+    ClearScriptedWildAiFlags();
     if (gNoOfApproachingTrainers == 2)
     {
         if (FollowerNPCIsBattlePartner())
@@ -1360,6 +1372,7 @@ static void CB2_EndRematchBattle(void)
 
 void BattleSetup_StartRematchBattle(void)
 {
+    ClearScriptedWildAiFlags();
     gBattleTypeFlags = BATTLE_TYPE_TRAINER;
     gMain.savedCallback = CB2_EndRematchBattle;
     DoTrainerBattle();
@@ -1880,6 +1893,8 @@ bool8 IsTrainerReadyForRematch(void)
 
 static void HandleRematchVarsOnBattleEnd(void)
 {
+    ClearScriptedWildAiFlags();
+
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && (I_VS_SEEKER_CHARGING != 0))
         ClearRematchMovementByTrainerId();
 

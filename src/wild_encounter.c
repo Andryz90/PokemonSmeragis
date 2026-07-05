@@ -625,11 +625,18 @@ void CreateWildMon(u16 species, u8 level)
 #define TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildPokemon, type, ability, ptr, count) TryGetAbilityInfluencedWildMonIndex(wildPokemon, type, ability, ptr)
 #endif
 
+/* Set in AreaZero_Inside_2 scripts.inc */
+#define AREA_ZERO_WILD_MON_ENC_VALUE    15u
+
 static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 area, u8 flags)
 {
     u8 wildMonIndex = 0;
     u8 level;
     u16 species = wildMonInfo->wildPokemon[wildMonIndex].species;
+
+    if (GetCurrentRegionMapSectionId() == MAPSEC_AREA_ZERO && VarGet(VAR_AREAZERO_STATE) < AREA_ZERO_WILD_MON_ENC_VALUE)
+        return FALSE;
+
     switch (area)
     {
     case WILD_AREA_LAND:

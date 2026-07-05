@@ -443,8 +443,8 @@
 #define OBJ_EVENT_PAL_TAG_WHITE                   (OBJ_EVENT_PAL_TAG_NONE - 1)
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
-// This + localId is used as the tileTag
-// for compressed graphicsInfos
+// This is used as the base tileTag for compressed graphicsInfos.
+// Object graphics ids and Pokémon species graphics use separate sub-ranges.
 // '(C)ompressed (E)vent'
 #define COMP_OW_TILE_TAG_BASE 0xCE00
 
