@@ -18364,7 +18364,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Attacks with a thick leek.\n"
             "The user must then rest."),
         .effect = EFFECT_HIT,
-        .power = 150,
+        .power = 100,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 5,
@@ -18373,10 +18373,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .metronomeBanned = TRUE,
         .instructBanned = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_RECHARGE,
-            .self = TRUE,
-        }),
+        .ignoresTargetAbility = TRUE,
+        .ignoresTargetDefenseEvasionStages = TRUE,
         .contestEffect = CONTEST_EFFECT_JAMS_OTHERS_BUT_MISS_ONE_TURN,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,

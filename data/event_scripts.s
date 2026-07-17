@@ -1247,3 +1247,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/AreaZero_Inside_2/scripts.inc"
 
 	.include "data/maps/AreaZero_Inside/scripts.inc"
+
+	.include "data/maps/AreaZero_Outside2/scripts.inc"

@@ -1,0 +1,20 @@
+{
+  "id": "MAP_AREA_ZERO_OUTSIDE2",
+  "name": "AreaZero_Outside2",
+  "layout": "LAYOUT_AREA_ZERO_OUTSIDE2",
+  "music": "MUS_AREA_ZERO",
+  "region_map_section": "MAPSEC_AREA_ZERO",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}
