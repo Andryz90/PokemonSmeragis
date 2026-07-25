@@ -1245,7 +1245,7 @@
 #define FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS                         0x4A6
 #define FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS                        0x4A7
 #define FLAG_AREA_ZERO_INSIDE_2_POST_SCENE_NPCS                     0x4A8
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
+#define FLAG_NAV_POKERIDER                                          0x4A9 
 #define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
 #define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
 #define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag

@@ -177,6 +177,7 @@ static void CreateReflectionEffectSprites(void);
 static u8 GetObjectEventIdByLocalIdAndMapInternal(u8, u8, u8);
 static bool8 GetAvailableObjectEventId(u16, u8, u8, u8 *);
 static void SetObjectEventDynamicGraphicsId(struct ObjectEvent *);
+static u16 ResolveRandomWildObjectGraphicsId(u16 graphicsId);
 static void RemoveObjectEventInternal(struct ObjectEvent *);
 static u16 GetObjectEventFlagIdByObjectEventId(u8);
 static void UpdateObjectEventVisibility(struct ObjectEvent *, struct Sprite *);
@@ -1806,6 +1807,8 @@ u8 TrySpawnObjectEventTemplate(const struct ObjectEventTemplate *objectEventTemp
 {
     u8 objectEventId;
     u16 graphicsId = objectEventTemplate->graphicsId;
+    struct ObjectEventTemplate resolvedTemplate;
+    const struct ObjectEventTemplate *spawnTemplate = objectEventTemplate;
     struct SpriteTemplate spriteTemplate;
     struct SpriteFrameImage spriteFrameImage;
     const struct ObjectEventGraphicsInfo *graphicsInfo;
@@ -1815,12 +1818,27 @@ u8 TrySpawnObjectEventTemplate(const struct ObjectEventTemplate *objectEventTemp
 
     if (FlagGet(objectEventTemplate->flagId) && chestType != 0)
         graphicsId = chestType;
+    else
+    {
+        if (graphicsId >= OBJ_EVENT_GFX_VARS && graphicsId <= OBJ_EVENT_GFX_VAR_F)
+            graphicsId = VarGetObjectEventGraphicsId(graphicsId - OBJ_EVENT_GFX_VARS);
+        /* Custom: Randomize species in table */
+        else if (graphicsId == OBJ_EVENT_GFX_RND_LAND || graphicsId == OBJ_EVENT_GFX_RND_WATER)
+            graphicsId = ResolveRandomWildObjectGraphicsId(graphicsId);
+    }
+
+    if (graphicsId != objectEventTemplate->graphicsId)
+    {
+        resolvedTemplate = *objectEventTemplate;
+        resolvedTemplate.graphicsId = graphicsId;
+        spawnTemplate = &resolvedTemplate;
+    }
 
     graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
-    CopyObjectGraphicsInfoToSpriteTemplate_WithMovementType(graphicsId, objectEventTemplate->movementType, &spriteTemplate, &subspriteTables);
+    CopyObjectGraphicsInfoToSpriteTemplate_WithMovementType(graphicsId, spawnTemplate->movementType, &spriteTemplate, &subspriteTables);
     spriteFrameImage.size = graphicsInfo->size;
     spriteTemplate.images = &spriteFrameImage;
-    objectEventId = TrySetupObjectEventSprite(objectEventTemplate, &spriteTemplate, mapNum, mapGroup, cameraX, cameraY);
+    objectEventId = TrySetupObjectEventSprite(spawnTemplate, &spriteTemplate, mapNum, mapGroup, cameraX, cameraY);
 
     if (objectEventId == OBJECT_EVENTS_COUNT)
         return OBJECT_EVENTS_COUNT;
@@ -3144,6 +3162,29 @@ static void SetBerryTreeGraphics(struct ObjectEvent *objectEvent, struct Sprite 
         SetBerryTreeGraphicsById(objectEvent, berryId, berryStage);
         StartSpriteAnim(sprite, berryStage);
     }
+}
+
+/* Custom: Randomize species for Land/Water defined in encounter table */
+static u16 ResolveRandomWildObjectGraphicsId(u16 graphicsId)
+{
+    u16 species;
+
+    switch (graphicsId)
+    {
+    case OBJ_EVENT_GFX_SPECIES_RAND_LAND:
+        species = GetRandomLocalWildMon(WILD_AREA_LAND);
+        break;
+    case OBJ_EVENT_GFX_SPECIES_RAND_WATER:
+        species = GetRandomLocalWildMon(WILD_AREA_WATER);
+        break;
+    default:
+        return graphicsId;
+    }
+
+    if (species == SPECIES_NONE)
+        return OBJ_EVENT_GFX_NINJA_BOY;
+
+    return species + OBJ_EVENT_MON;
 }
 
 const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)

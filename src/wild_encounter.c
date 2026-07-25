@@ -1179,6 +1179,54 @@ u16 GetLocalWaterMon(void)
     return SPECIES_NONE;
 }
 
+/* Custom: Randomize species defined in encounter table */
+u16 GetRandomLocalWildMon(enum WildPokemonArea area)
+{
+    u32 headerId = GetCurrentMapWildMonHeaderId();
+    enum TimeOfDay timeOfDay;
+    const struct WildPokemonInfo *wildMonInfo = NULL;
+    u8 wildCount = 0;
+    u16 species = SPECIES_NONE;
+
+    if (headerId == HEADER_NONE)
+        return SPECIES_NONE;
+
+    timeOfDay = GetTimeOfDayForEncounters(headerId, area);
+
+    for (u8 attempts = 0u; attempts < 5u && species == SPECIES_NONE; attempts++)
+    {
+        switch (area)
+        {
+        case WILD_AREA_LAND:
+            wildMonInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo;
+            wildCount = LAND_WILD_COUNT;
+            break;
+        case WILD_AREA_WATER:
+            wildMonInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].waterMonsInfo;
+            wildCount = WATER_WILD_COUNT;
+            break;
+        case WILD_AREA_ROCKS:
+            wildMonInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].rockSmashMonsInfo;
+            wildCount = ROCK_WILD_COUNT;
+            break;
+        case WILD_AREA_FISHING:
+            wildMonInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].fishingMonsInfo;
+            wildCount = FISH_WILD_COUNT;
+            break;
+        case WILD_AREA_HIDDEN:
+            wildMonInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].hiddenMonsInfo;
+            wildCount = HIDDEN_WILD_COUNT;
+            break;
+        }
+
+        if (wildMonInfo == NULL || wildCount == 0)
+            species = SPECIES_NONE;
+        else
+            species =  wildMonInfo->wildPokemon[Random() % wildCount].species;
+    }
+    return species;
+}
+
 bool8 UpdateRepelCounter(void)
 {
     u16 repelLureVar = VarGet(VAR_REPEL_STEP_COUNT);

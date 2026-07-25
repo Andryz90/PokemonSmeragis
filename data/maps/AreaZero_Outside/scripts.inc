@@ -6,8 +6,24 @@ AreaZero_Outside_MapScripts::
 
 AreaZero_Outside_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
+	call_if_eq VAR_AREAZERO_STATE, 0xFF, AreaZero_Outside_OnTransition_RestoreWildMons
+	call_if_ne VAR_AREAZERO_STATE, 0xFF, AreaZero_Outside_OnTransition_HideWildMons
 	call_if_ge VAR_AREAZERO_STATE, 5, AreaZero_Outside_OnTransition_SetPostCaveObjectPositions
 	end
+
+AreaZero_Outside_OnTransition_RestoreWildMons:
+	setobjectxyperm AREAZERO_WILD_OW_MON_1, 18, 37
+	setobjectxyperm AREAZERO_WILD_OW_MON_2, 30, 35
+	setobjectxyperm AREAZERO_WILD_OW_MON_3, 23, 30
+	setobjectxyperm AREAZERO_WILD_OW_MON_4, 26, 23
+	return
+
+AreaZero_Outside_OnTransition_HideWildMons:
+	setobjectxyperm AREAZERO_WILD_OW_MON_1, 0, 0
+	setobjectxyperm AREAZERO_WILD_OW_MON_2, 0, 0
+	setobjectxyperm AREAZERO_WILD_OW_MON_3, 0, 0
+	setobjectxyperm AREAZERO_WILD_OW_MON_4, 0, 0
+	return
 
 AreaZero_Outside_OnTransition_SetPostCaveObjectPositions:
 	clearflag FLAG_AREA_ZERO_LATIS

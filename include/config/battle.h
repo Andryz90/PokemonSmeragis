@@ -2,6 +2,7 @@
 #define GUARD_CONFIG_BATTLE_H
 
 // Calculation settings
+#define B_ORAS_SPRITE               TRUE      // If TRUE, uses the ORAS-inspired front sprites for Archie, Maxie, and Wally.
 #define B_CRIT_CHANCE               GEN_LATEST // Chances of a critical hit landing. See CalcCritChanceStage. Gen6+ chances guarantee that Farfetch'd and Sirfetch'd always get critical hits while holding a Leek and using high-crit ratio moves.
 #define B_CRIT_MULTIPLIER           GEN_LATEST // In Gen6+, critical hits multiply damage by 1.5 instead of 2.
 #define B_PARALYSIS_SPEED           GEN_LATEST // In Gen7+, Speed is decreased by 50% instead of 75%.
