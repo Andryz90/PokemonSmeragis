@@ -335,8 +335,8 @@
       "x": 33,
       "y": 35,
       "elevation": 0,
-      "dest_map": "MAP_AREA_ZERO_INSIDE_2",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_AREA_ZERO_OUTSIDE2",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
