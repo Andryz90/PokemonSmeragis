@@ -5,7 +5,7 @@
   "music": "MUS_AREA_ZERO",
   "region_map_section": "MAPSEC_AREA_ZERO",
   "requires_flash": false,
-  "weather": "WEATHER_SUNNY_CLOUDS",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -127,6 +127,7 @@
       "flag": "FLAG_TEMP_8"
     },
     {
+      "local_id": "AREAZERO2_ANDRY",
       "graphics_id": "OBJ_EVENT_GFX_ANDRY",
       "x": 22,
       "y": 43,
@@ -136,37 +137,25 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "AreaZero_Outside2_EventScript_Andry",
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_OBJ"
     },
     {
-      "local_id": "AREAZERO2_WILD_OW_MON_7",
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES_RAND_WATER",
-      "x": 30,
-      "y": 8,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
-      "movement_range_x": 2,
-      "movement_range_y": 2,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "70",
-      "script": "Common_EventScript_WildOWMon",
-      "flag": "FLAG_TEMP_7"
-    },
-    {
+      "local_id": "AREAZERO2_STEVEN",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN",
-      "x": 17,
-      "y": 38,
+      "x": 16,
+      "y": 37,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "AreaZero_Outside2_EventScript_Steven",
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_OBJ"
     },
     {
+      "local_id": "AREAZERO2_EDO",
       "graphics_id": "OBJ_EVENT_GFX_EDOCAP",
       "x": 14,
       "y": 44,
@@ -176,10 +165,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "AreaZero_Outside2_EventScript_Splitface",
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_OBJ"
     },
     {
+      "local_id": "AREAZERO2_WALLY",
       "graphics_id": "OBJ_EVENT_GFX_WALLY",
       "x": 20,
       "y": 44,
@@ -189,27 +179,28 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "AreaZero_Outside2_EventScript_Wally",
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_OBJ"
     },
     {
-      "local_id": "AREAZERO_RIVAL_INSIDE_3",
+      "local_id": "AREAZERO2_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 17,
       "y": 44,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "AreaZero_Inside_2_EventScript_PostRival",
-      "flag": "FLAG_AREA_ZERO_INSIDE_2_POST_SCENE_NPCS"
+      "script": "AreaZero_Outside2_EventScript_Rival",
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_OBJ"
     },
     {
+      "local_id": "AREAZERO2_MIRAIDON",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MIRAIDON)",
-      "x": 15,
-      "y": 10,
+      "x": 12,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -217,12 +208,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_KORAIDON",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(KORAIDON)",
-      "x": 17,
-      "y": 10,
+      "x": 20,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -230,12 +222,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_FLUTTER_MANE",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(FLUTTER_MANE)",
-      "x": 18,
-      "y": 9,
+      "x": 20,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -243,24 +236,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_GREAT_TUSK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(GREAT_TUSK)",
-      "x": 18,
-      "y": 10,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SLITHER_WINGS)",
-      "x": 18,
+      "x": 29,
       "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -269,12 +250,27 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_SLITHER_WING",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SLITHER_WING)",
+      "x": 20,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
+    },
+    {
+      "local_id": "AREAZERO2_BRUTE_BONNET",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BRUTE_BONNET)",
-      "x": 19,
-      "y": 11,
+      "x": 23,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -282,12 +278,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_ROARING_MOON",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ROARING_MOON)",
-      "x": 19,
-      "y": 10,
+      "x": 23,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -295,12 +292,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SCREAMING_TAIL)",
-      "x": 19,
-      "y": 9,
+      "local_id": "AREAZERO2_SCREAM_TAIL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SCREAM_TAIL)",
+      "x": 23,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -308,12 +306,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_IRON_JUGULIS",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(IRON_JUGULIS)",
-      "x": 14,
-      "y": 9,
+      "x": -3,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -321,12 +320,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_IRON_BUNDLE",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(IRON_BUNDLE)",
-      "x": 14,
-      "y": 10,
+      "x": -3,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -334,12 +334,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_IRON_VALIANT",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(IRON_VALIANT)",
-      "x": 14,
-      "y": 11,
+      "x": -3,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -347,12 +348,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_IRON_HANDS",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(IRON_HANDS)",
-      "x": 13,
-      "y": 11,
+      "x": -6,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -360,12 +362,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_IRON_MOTH",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(IRON_MOTH)",
-      "x": 13,
-      "y": 10,
+      "x": -6,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -373,12 +376,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     },
     {
+      "local_id": "AREAZERO2_IRON_THORNS",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(IRON_THORNS)",
-      "x": 13,
-      "y": 9,
+      "x": -6,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -386,7 +390,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
     }
   ],
   "warp_events": [
@@ -405,6 +409,16 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "17",
+      "script": "AreaZero_Outside2_EventScript_LegendaryApproach"
+    }
+  ],
   "bg_events": []
 }

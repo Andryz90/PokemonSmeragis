@@ -279,7 +279,7 @@ AreaZero_Inside_2_EventScript_FinalScene:
 	closemessage
 	delay 12
 	setvar VAR_AREAZERO_STATE, AREA_ZERO_FINAL_EVENT_DONE_VALUE
-	warpteleport MAP_AQUA_HIDEOUT_UNUSED_RUBY_MAP1, 1
+	warp MAP_AREA_ZERO_OUTSIDE2, 0
 	waitstate
 	releaseall
 	end
@@ -1115,9 +1115,9 @@ AreaZero_Inside_2_Movement_PlayerFinalApproachBottom:
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
-	walk_fast_left
-	walk_fast_left
 	walk_fast_up
+	walk_fast_left
+	walk_fast_left
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
