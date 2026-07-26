@@ -4564,8 +4564,8 @@
     {
       "id": "LAYOUT_AREA_ZERO_OUTSIDE2",
       "name": "AreaZero_Outside2_Layout",
-      "width": 35,
-      "height": 45,
+      "width": 48,
+      "height": 48,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_AreaZeroOutside",
       "border_filepath": "data/layouts/AreaZero_Outside2/border.bin",
