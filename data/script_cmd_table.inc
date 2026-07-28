@@ -256,6 +256,8 @@ gScriptCmdTable::
 	script_cmd_table_entry SCR_OP_REFRESHOBJECTINMAP            ScrCmd_refreshobjectsinmap,         requests_effects=1  @ 0xe7
 	script_cmd_table_entry SCR_OP_SETWILDBATTLEAIFLAGS          ScrCmd_setwildbattleaiflags,        requests_effects=1  @ 0xe8
 	script_cmd_table_entry SCR_OP_SETCUSTOMWILDBATTLE           ScrCmd_setcustomwildbattle,         requests_effects=1  @ 0xe9
+	script_cmd_table_entry SCR_OP_SETCUSTOMWILDBATTLEPARTY      ScrCmd_setcustomwildbattleparty,    requests_effects=1  @ 0xea
+	script_cmd_table_entry SCR_OP_SETCUSTOMWILDBATTLEPARTNER    ScrCmd_setcustomwildbattlepartner,  requests_effects=1  @ 0xeb
 	.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

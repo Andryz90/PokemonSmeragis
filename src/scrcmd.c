@@ -38,6 +38,7 @@
 #include "palette.h"
 #include "party_menu.h"
 #include "pokedex.h"
+#include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "random.h"
 #include "overworld.h"
@@ -58,6 +59,7 @@
 #include "window.h"
 #include "list_menu.h"
 #include "malloc.h"
+#include "constants/battle_partner.h"
 #include "constants/event_objects.h"
 #include "constants/map_types.h"
 
@@ -74,12 +76,16 @@ static EWRAM_DATA u16 sFieldEffectScriptId = 0;
 
 static u8 sBrailleWindowId;
 static bool8 sIsScriptedWildDouble;
+static bool8 sIsScriptedWildParty;
+static bool8 sIsScriptedWildMulti;
+static u16 sScriptedWildPartnerId;
 
 extern const SpecialFunc gSpecials[];
 extern const u8 *gStdScripts[];
 extern const u8 *gStdScripts_End[];
 
 static void CloseBrailleWindow(void);
+static void ClearScriptedWildPartnerBattle(void);
 static void DynamicMultichoiceSortList(struct ListMenuItem *items, u32 count);
 
 // This is defined in here so the optimizer can't see its value when compiling
@@ -2524,6 +2530,12 @@ bool8 ScrCmd_cleartrainerflag(struct ScriptContext *ctx)
     return FALSE;
 }
 
+static void ClearScriptedWildPartnerBattle(void)
+{
+    sIsScriptedWildMulti = FALSE;
+    sScriptedWildPartnerId = PARTNER_NONE;
+}
+
 bool8 ScrCmd_setwildbattle(struct ScriptContext *ctx)
 {
     u16 species = ScriptReadHalfword(ctx);
@@ -2534,6 +2546,8 @@ bool8 ScrCmd_setwildbattle(struct ScriptContext *ctx)
     u16 item2 = ScriptReadHalfword(ctx);
 
     Script_RequestEffects(SCREFF_V1);
+    sIsScriptedWildParty = FALSE;
+    ClearScriptedWildPartnerBattle();
 
     if (species >= VAR_0x8000 && species <= SPECIAL_VARS_END)
     {
@@ -2600,6 +2614,8 @@ bool8 ScrCmd_setcustomwildbattle(struct ScriptContext *ctx)
     }
 
     Script_RequestEffects(SCREFF_V1);
+    sIsScriptedWildParty = FALSE;
+    ClearScriptedWildPartnerBattle();
 
     if (species >= VAR_0x8000 && species <= SPECIAL_VARS_END)
     {
@@ -2635,14 +2651,90 @@ bool8 ScrCmd_setcustomwildbattle(struct ScriptContext *ctx)
     return FALSE;
 }
 
+// The encoded data for each party member is seven halfwords: species, level,
+// held item, and four moves. The count is an immediate byte and may be 1-6.
+bool8 ScrCmd_setcustomwildbattleparty(struct ScriptContext *ctx)
+{
+    u8 declaredCount = ScriptReadByte(ctx);
+    u8 partyCount = min(declaredCount, PARTY_SIZE);
+    u32 i, j;
+
+    Script_RequestEffects(SCREFF_V1);
+    ClearScriptedWildPartnerBattle();
+    ZeroEnemyPartyMons();
+    for (i = 0; i < declaredCount; i++)
+    {
+        u16 species = ScriptReadHalfword(ctx);
+        u16 level = ScriptReadHalfword(ctx);
+        u16 item = ScriptReadHalfword(ctx);
+        u16 moves[MAX_MON_MOVES];
+
+        for (j = 0; j < MAX_MON_MOVES; j++)
+            moves[j] = ScriptReadHalfword(ctx);
+
+        if (i >= partyCount)
+            continue;
+
+        if (species >= VAR_0x8000 && species <= SPECIAL_VARS_END)
+            species = VarGet(species);
+        if (level >= VAR_0x8000 && level <= SPECIAL_VARS_END)
+            level = VarGet(level);
+        if (item >= VAR_0x8000 && item <= SPECIAL_VARS_END)
+            item = VarGet(item);
+
+        CreateMon(&gEnemyParty[i], species, level, 32, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &item);
+        for (j = 0; j < MAX_MON_MOVES; j++)
+        {
+            if (moves[j] >= VAR_0x8000 && moves[j] <= SPECIAL_VARS_END)
+                moves[j] = VarGet(moves[j]);
+            SetMonMoveSlot(&gEnemyParty[i], moves[j], j);
+        }
+    }
+
+    CalculateEnemyPartyCount();
+    sIsScriptedWildDouble = partyCount >= 2;
+    sIsScriptedWildParty = TRUE;
+    return FALSE;
+}
+
+bool8 ScrCmd_setcustomwildbattlepartner(struct ScriptContext *ctx)
+{
+    u16 partnerId = ScriptReadHalfword(ctx);
+
+    Script_RequestEffects(SCREFF_V1);
+    if (partnerId >= VAR_0x8000 && partnerId <= SPECIAL_VARS_END)
+        partnerId = VarGet(partnerId);
+
+    if (partnerId == PARTNER_NONE)
+        ClearScriptedWildPartnerBattle();
+    else
+    {
+        sIsScriptedWildMulti = TRUE;
+        sScriptedWildPartnerId = partnerId;
+    }
+
+    return FALSE;
+}
+
 bool8 ScrCmd_dowildbattle(struct ScriptContext *ctx)
 {
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-    if (sIsScriptedWildDouble == FALSE)
+    if (sIsScriptedWildParty)
+    {
+        if (sIsScriptedWildMulti)
+            BattleSetup_StartScriptedWildPartyMultiBattle(sScriptedWildPartnerId);
+        else
+            BattleSetup_StartScriptedWildPartyBattle(sIsScriptedWildDouble);
+    }
+    else if (sIsScriptedWildDouble == FALSE)
         BattleSetup_StartScriptedWildBattle();
     else
         BattleSetup_StartScriptedDoubleWildBattle();
+
+    sIsScriptedWildParty = FALSE;
+    ClearScriptedWildPartnerBattle();
 
     ScriptContext_Stop();
 
@@ -3165,7 +3257,9 @@ void ScriptSetDoubleBattleFlag(struct ScriptContext *ctx)
 {
     Script_RequestEffects(SCREFF_V1);
 
+    sIsScriptedWildParty = FALSE;
     sIsScriptedWildDouble = TRUE;
+    ClearScriptedWildPartnerBattle();
 }
 
 bool8 ScrCmd_buffernaturename(struct ScriptContext *ctx)

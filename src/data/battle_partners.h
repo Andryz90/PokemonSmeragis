@@ -395,3 +395,569 @@
             },
         },
     },
+#line 168
+    [DIFFICULTY_NORMAL][PARTNER_WALLY_AREA_ZERO] =
+    {
+#line 169
+        .trainerName = _("WALLY"),
+#line 170
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 171
+        .trainerPic = TRAINER_BACK_PIC_WALLY,
+        .encounterMusic_gender =
+#line 173
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 175
+            .species = SPECIES_TINKATON,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 175
+            .heldItem = ITEM_AIR_BALLOON,
+#line 176
+            .ability = ABILITY_MOLD_BREAKER,
+#line 177
+            .lvl = 65,
+#line 178
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 179
+                MOVE_FAKE_OUT,
+                MOVE_PROTECT,
+                MOVE_PLAY_ROUGH,
+                MOVE_GIGATON_HAMMER,
+            },
+            },
+            {
+#line 184
+            .species = SPECIES_GALLADE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 184
+            .heldItem = ITEM_EXPERT_BELT,
+#line 185
+            .ability = ABILITY_SHARPNESS,
+#line 186
+            .lvl = 65,
+#line 187
+            .nature = NATURE_JOLLY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 188
+                MOVE_PSYCHO_CUT,
+                MOVE_LEAF_BLADE,
+                MOVE_SACRED_SWORD,
+                MOVE_SWORDS_DANCE,
+            },
+            },
+            {
+#line 193
+            .species = SPECIES_GARDEVOIR,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 193
+            .heldItem = ITEM_GARDEVOIRITE,
+#line 194
+            .ability = ABILITY_TRACE,
+#line 195
+            .lvl = 65,
+#line 196
+            .nature = NATURE_TIMID,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 197
+                MOVE_HYPER_VOICE,
+                MOVE_PROTECT,
+                MOVE_PSYSHOCK,
+                MOVE_THUNDERBOLT,
+            },
+            },
+        },
+    },
+#line 203
+    [DIFFICULTY_NORMAL][PARTNER_MAY_AREA_ZERO_TREECKO] =
+    {
+#line 204
+        .trainerName = _("MAY"),
+#line 205
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 206
+        .trainerPic = TRAINER_BACK_PIC_MAY,
+        .encounterMusic_gender =
+#line 207
+F_TRAINER_FEMALE |
+#line 208
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 210
+            .species = SPECIES_SIRFETCHD,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 210
+            .heldItem = ITEM_LEEK,
+#line 211
+            .ability = ABILITY_SCRAPPY,
+#line 212
+            .lvl = 65,
+#line 213
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 214
+                MOVE_METEOR_ASSAULT,
+                MOVE_ROYAL_GUARD,
+                MOVE_FIRST_IMPRESSION,
+                MOVE_SOLAR_BLADE,
+            },
+            },
+            {
+#line 219
+            .species = SPECIES_RAPIDASH_GALAR,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 219
+            .heldItem = ITEM_EXPERT_BELT,
+#line 220
+            .ability = ABILITY_ADAPTABILITY,
+#line 221
+            .lvl = 65,
+#line 222
+            .nature = NATURE_MODEST,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 223
+                MOVE_PSYCHIC,
+                MOVE_MOONBLAST,
+                MOVE_MYSTICAL_FIRE,
+                MOVE_PROTECT,
+            },
+            },
+            {
+#line 228
+            .species = SPECIES_BLAZIKEN,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 228
+            .heldItem = ITEM_BLAZIKENITE,
+#line 229
+            .ability = ABILITY_SPEED_BOOST,
+#line 230
+            .lvl = 65,
+#line 231
+            .nature = NATURE_JOLLY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 232
+                MOVE_SWORDS_DANCE,
+                MOVE_PROTECT,
+                MOVE_FLARE_BLITZ,
+                MOVE_HIGH_JUMP_KICK,
+            },
+            },
+        },
+    },
+#line 238
+    [DIFFICULTY_NORMAL][PARTNER_MAY_AREA_ZERO_TORCHIC] =
+    {
+#line 239
+        .trainerName = _("MAY"),
+#line 240
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 241
+        .trainerPic = TRAINER_BACK_PIC_MAY,
+        .encounterMusic_gender =
+#line 242
+F_TRAINER_FEMALE |
+#line 243
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 245
+            .species = SPECIES_SIRFETCHD,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 245
+            .heldItem = ITEM_LEEK,
+#line 246
+            .ability = ABILITY_SCRAPPY,
+#line 247
+            .lvl = 65,
+#line 248
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 249
+                MOVE_METEOR_ASSAULT,
+                MOVE_ROYAL_GUARD,
+                MOVE_FIRST_IMPRESSION,
+                MOVE_SOLAR_BLADE,
+            },
+            },
+            {
+#line 254
+            .species = SPECIES_RAPIDASH_GALAR,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 254
+            .heldItem = ITEM_EXPERT_BELT,
+#line 255
+            .ability = ABILITY_ADAPTABILITY,
+#line 256
+            .lvl = 65,
+#line 257
+            .nature = NATURE_MODEST,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 258
+                MOVE_PSYCHIC,
+                MOVE_MOONBLAST,
+                MOVE_MYSTICAL_FIRE,
+                MOVE_PROTECT,
+            },
+            },
+            {
+#line 263
+            .species = SPECIES_SWAMPERT,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 263
+            .heldItem = ITEM_SWAMPERTITE,
+#line 264
+            .ability = ABILITY_DAMP,
+#line 265
+            .lvl = 65,
+#line 266
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 267
+                MOVE_WATERFALL,
+                MOVE_HIGH_HORSEPOWER,
+                MOVE_ICE_PUNCH,
+                MOVE_PROTECT,
+            },
+            },
+        },
+    },
+#line 273
+    [DIFFICULTY_NORMAL][PARTNER_MAY_AREA_ZERO_MUDKIP] =
+    {
+#line 274
+        .trainerName = _("MAY"),
+#line 275
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 276
+        .trainerPic = TRAINER_BACK_PIC_MAY,
+        .encounterMusic_gender =
+#line 277
+F_TRAINER_FEMALE |
+#line 278
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 280
+            .species = SPECIES_SIRFETCHD,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 280
+            .heldItem = ITEM_LEEK,
+#line 281
+            .ability = ABILITY_SCRAPPY,
+#line 282
+            .lvl = 65,
+#line 283
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 284
+                MOVE_METEOR_ASSAULT,
+                MOVE_ROYAL_GUARD,
+                MOVE_FIRST_IMPRESSION,
+                MOVE_SOLAR_BLADE,
+            },
+            },
+            {
+#line 289
+            .species = SPECIES_RAPIDASH_GALAR,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 289
+            .heldItem = ITEM_EXPERT_BELT,
+#line 290
+            .ability = ABILITY_ADAPTABILITY,
+#line 291
+            .lvl = 65,
+#line 292
+            .nature = NATURE_MODEST,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 293
+                MOVE_PSYCHIC,
+                MOVE_MOONBLAST,
+                MOVE_MYSTICAL_FIRE,
+                MOVE_PROTECT,
+            },
+            },
+            {
+#line 298
+            .species = SPECIES_SCEPTILE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 298
+            .heldItem = ITEM_SCEPTILITE,
+#line 299
+            .ability = ABILITY_OVERGROW,
+#line 300
+            .lvl = 65,
+#line 301
+            .nature = NATURE_TIMID,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 302
+                MOVE_LEAF_STORM,
+                MOVE_DRAGON_PULSE,
+                MOVE_FOCUS_BLAST,
+                MOVE_PROTECT,
+            },
+            },
+        },
+    },
+#line 308
+    [DIFFICULTY_NORMAL][PARTNER_BRENDAN_AREA_ZERO_TREECKO] =
+    {
+#line 309
+        .trainerName = _("BRENDAN"),
+#line 310
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 311
+        .trainerPic = TRAINER_BACK_PIC_BRENDAN,
+        .encounterMusic_gender =
+#line 313
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 315
+            .species = SPECIES_SIRFETCHD,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 315
+            .heldItem = ITEM_LEEK,
+#line 316
+            .ability = ABILITY_SCRAPPY,
+#line 317
+            .lvl = 65,
+#line 318
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 319
+                MOVE_METEOR_ASSAULT,
+                MOVE_ROYAL_GUARD,
+                MOVE_FIRST_IMPRESSION,
+                MOVE_SOLAR_BLADE,
+            },
+            },
+            {
+#line 324
+            .species = SPECIES_GRANBULL,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 324
+            .heldItem = ITEM_EXPERT_BELT,
+#line 325
+            .ability = ABILITY_STRONG_JAW,
+#line 326
+            .lvl = 65,
+#line 327
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 328
+                MOVE_THUNDER_FANG,
+                MOVE_DRAIN_PUNCH,
+                MOVE_ICE_FANG,
+                MOVE_PIXIE_FANGS,
+            },
+            },
+            {
+#line 333
+            .species = SPECIES_BLAZIKEN,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 333
+            .heldItem = ITEM_BLAZIKENITE,
+#line 334
+            .ability = ABILITY_SPEED_BOOST,
+#line 335
+            .lvl = 65,
+#line 336
+            .nature = NATURE_JOLLY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 337
+                MOVE_SWORDS_DANCE,
+                MOVE_PROTECT,
+                MOVE_FLARE_BLITZ,
+                MOVE_HIGH_JUMP_KICK,
+            },
+            },
+        },
+    },
+#line 343
+    [DIFFICULTY_NORMAL][PARTNER_BRENDAN_AREA_ZERO_TORCHIC] =
+    {
+#line 344
+        .trainerName = _("BRENDAN"),
+#line 345
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 346
+        .trainerPic = TRAINER_BACK_PIC_BRENDAN,
+        .encounterMusic_gender =
+#line 348
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 350
+            .species = SPECIES_SIRFETCHD,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 350
+            .heldItem = ITEM_LEEK,
+#line 351
+            .ability = ABILITY_SCRAPPY,
+#line 352
+            .lvl = 65,
+#line 353
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 354
+                MOVE_METEOR_ASSAULT,
+                MOVE_ROYAL_GUARD,
+                MOVE_FIRST_IMPRESSION,
+                MOVE_SOLAR_BLADE,
+            },
+            },
+            {
+#line 359
+            .species = SPECIES_GRANBULL,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 359
+            .heldItem = ITEM_EXPERT_BELT,
+#line 360
+            .ability = ABILITY_STRONG_JAW,
+#line 361
+            .lvl = 65,
+#line 362
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 363
+                MOVE_THUNDER_FANG,
+                MOVE_DRAIN_PUNCH,
+                MOVE_ICE_FANG,
+                MOVE_PIXIE_FANGS,
+            },
+            },
+            {
+#line 368
+            .species = SPECIES_SWAMPERT,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 368
+            .heldItem = ITEM_SWAMPERTITE,
+#line 369
+            .ability = ABILITY_DAMP,
+#line 370
+            .lvl = 65,
+#line 371
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 372
+                MOVE_WATERFALL,
+                MOVE_HIGH_HORSEPOWER,
+                MOVE_ICE_PUNCH,
+                MOVE_PROTECT,
+            },
+            },
+        },
+    },
+#line 378
+    [DIFFICULTY_NORMAL][PARTNER_BRENDAN_AREA_ZERO_MUDKIP] =
+    {
+#line 379
+        .trainerName = _("BRENDAN"),
+#line 380
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 381
+        .trainerPic = TRAINER_BACK_PIC_BRENDAN,
+        .encounterMusic_gender =
+#line 383
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 385
+            .species = SPECIES_SIRFETCHD,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 385
+            .heldItem = ITEM_LEEK,
+#line 386
+            .ability = ABILITY_SCRAPPY,
+#line 387
+            .lvl = 65,
+#line 388
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 389
+                MOVE_METEOR_ASSAULT,
+                MOVE_ROYAL_GUARD,
+                MOVE_FIRST_IMPRESSION,
+                MOVE_SOLAR_BLADE,
+            },
+            },
+            {
+#line 394
+            .species = SPECIES_GRANBULL,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 394
+            .heldItem = ITEM_EXPERT_BELT,
+#line 395
+            .ability = ABILITY_STRONG_JAW,
+#line 396
+            .lvl = 65,
+#line 397
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 398
+                MOVE_THUNDER_FANG,
+                MOVE_DRAIN_PUNCH,
+                MOVE_ICE_FANG,
+                MOVE_PIXIE_FANGS,
+            },
+            },
+            {
+#line 403
+            .species = SPECIES_SCEPTILE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 403
+            .heldItem = ITEM_SCEPTILITE,
+#line 404
+            .ability = ABILITY_OVERGROW,
+#line 405
+            .lvl = 65,
+#line 406
+            .nature = NATURE_TIMID,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 407
+                MOVE_LEAF_STORM,
+                MOVE_DRAGON_PULSE,
+                MOVE_FOCUS_BLAST,
+                MOVE_PROTECT,
+            },
+            },
+        },
+    },

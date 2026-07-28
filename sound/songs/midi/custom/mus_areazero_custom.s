@@ -1354,7 +1354,7 @@ mus_areazero_5_B1:
 @ 007   ----------------------------------------
 @ 008   ----------------------------------------
 	.byte		VOICE , 24
-	.byte		VOL   , 84*mus_areazero_mvl/mxv
+	.byte		VOL   , 92*mus_areazero_mvl/mxv
 	.byte		PAN   , c_v+32
 	.byte	W96
 	.byte	W96

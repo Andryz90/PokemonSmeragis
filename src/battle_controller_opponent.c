@@ -11,6 +11,7 @@
 #include "battle_setup.h"
 #include "battle_tower.h"
 #include "battle_tv.h"
+#include "battle_util.h"
 #include "battle_z_move.h"
 #include "bg.h"
 #include "data.h"
@@ -622,8 +623,17 @@ static void OpponentHandleChoosePokemon(u32 battler)
     s32 pokemonInBattle = 1;
     enum SwitchType switchType = SWITCH_AFTER_KO;
 
+    // A custom wild party is one shared boss roster. Replacements are chosen
+    // in party order so the two wild battlers cannot claim an invalid or
+    // duplicated slot while the battle engine is resolving a KO.
+    if ((gBattleTypeFlags & BATTLE_TYPE_CUSTOM_WILD_PARTY)
+     && (gBattleResources->bufferA[battler][1] & 0xF) != PARTY_ACTION_CHOOSE_FAINTED_MON)
+    {
+        chosenMonId = GetNextCustomWildPartyMon(battler);
+        gBattleStruct->monToSwitchIntoId[battler] = chosenMonId;
+    }
     // Choosing Revival Blessing target
-    if ((gBattleResources->bufferA[battler][1] & 0xF) == PARTY_ACTION_CHOOSE_FAINTED_MON)
+    else if ((gBattleResources->bufferA[battler][1] & 0xF) == PARTY_ACTION_CHOOSE_FAINTED_MON)
     {
         chosenMonId = gSelectedMonPartyId = GetFirstFaintedPartyIndex(battler);
     }
@@ -667,6 +677,17 @@ static void OpponentHandleChoosePokemon(u32 battler)
     {
         chosenMonId = gBattleStruct->AI_monToSwitchIntoId[battler];
         gBattleStruct->AI_monToSwitchIntoId[battler] = PARTY_SIZE;
+        gBattleStruct->monToSwitchIntoId[battler] = chosenMonId;
+    }
+
+    // A double wild battle has one shared six-slot party. Never forward the
+    // PARTY_SIZE sentinel as a replacement: doing so later indexes past
+    // gEnemyParty and corrupts the send-out callback. This can happen when an
+    // AI preference rejected every candidate even though a usable mon remains.
+    if ((gBattleTypeFlags & BATTLE_TYPE_CUSTOM_WILD_PARTY)
+     && (chosenMonId < 0 || chosenMonId >= PARTY_SIZE || !IsValidForBattle(&gEnemyParty[chosenMonId])))
+    {
+        chosenMonId = GetNextCustomWildPartyMon(battler);
         gBattleStruct->monToSwitchIntoId[battler] = chosenMonId;
     }
     #if TESTING

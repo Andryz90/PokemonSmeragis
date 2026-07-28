@@ -1779,6 +1779,8 @@ static void TryAddPokeballIconToHealthbox(u8 healthboxSpriteId, bool8 noStatus)
         return;
     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         return;
+    if (gBattleTypeFlags & BATTLE_TYPE_CUSTOM_WILD_PARTY)
+        return;
 
     battler = gSprites[healthboxSpriteId].hMain_Battler;
     if (IsOnPlayerSide(battler))

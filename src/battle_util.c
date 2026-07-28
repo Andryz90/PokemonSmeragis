@@ -1036,6 +1036,9 @@ static void UNUSED MarkAllBattlersForControllerExec(void)
 
 bool32 IsBattlerMarkedForControllerExec(u32 battler)
 {
+    if (battler >= gBattlersCount)
+        return FALSE;
+
     if (gBattleTypeFlags & BATTLE_TYPE_LINK)
         return IsBattleControllerMessageSynchronizedOverLink(battler);
     else
@@ -1044,6 +1047,9 @@ bool32 IsBattlerMarkedForControllerExec(u32 battler)
 
 void MarkBattlerForControllerExec(u32 battler)
 {
+    if (battler >= gBattlersCount)
+        return;
+
     if (gBattleTypeFlags & BATTLE_TYPE_LINK)
         MarkBattleControllerMessageOutboundOverLink(battler);
     else
@@ -2604,6 +2610,31 @@ u32 AtkCanceller_MoveSuccessOrder(void)
     return effect;
 }
 
+u32 GetNextCustomWildPartyMon(u32 battler)
+{
+    u32 i;
+    u32 battlerLeft = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+    u32 battlerRight = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (!IsValidForBattle(&gEnemyParty[i]))
+            continue;
+        if (battlerLeft < gBattlersCount
+         && (i == gBattlerPartyIndexes[battlerLeft]
+          || i == gBattleStruct->monToSwitchIntoId[battlerLeft]))
+            continue;
+        if (battlerRight < gBattlersCount
+         && (i == gBattlerPartyIndexes[battlerRight]
+          || i == gBattleStruct->monToSwitchIntoId[battlerRight]))
+            continue;
+
+        return i;
+    }
+
+    return PARTY_SIZE;
+}
+
 bool32 HasNoMonsToSwitch(u32 battler, u8 partyIdBattlerOn1, u8 partyIdBattlerOn2)
 {
     u32 i, playerId, flankId;
@@ -2613,6 +2644,9 @@ bool32 HasNoMonsToSwitch(u32 battler, u8 partyIdBattlerOn1, u8 partyIdBattlerOn2
         return FALSE;
 
     bool32 isPlayerside = IsOnPlayerSide(battler);
+
+    if ((gBattleTypeFlags & BATTLE_TYPE_CUSTOM_WILD_PARTY) && !isPlayerside)
+        return (GetNextCustomWildPartyMon(battler) == PARTY_SIZE);
 
     if (BATTLE_TWO_VS_ONE_OPPONENT && !isPlayerside)
     {
@@ -2644,7 +2678,8 @@ bool32 HasNoMonsToSwitch(u32 battler, u8 partyIdBattlerOn1, u8 partyIdBattlerOn2
         {
             if (IsValidForBattle(&party[i])
              && i != partyIdBattlerOn1 && i != partyIdBattlerOn2
-             && i != gBattleStruct->monToSwitchIntoId[flankId] && i != playerId[gBattleStruct->monToSwitchIntoId])
+             && i != gBattleStruct->monToSwitchIntoId[flankId]
+             && i != gBattleStruct->monToSwitchIntoId[playerId])
                 break;
         }
         return (i == PARTY_SIZE);
@@ -2666,7 +2701,8 @@ bool32 HasNoMonsToSwitch(u32 battler, u8 partyIdBattlerOn1, u8 partyIdBattlerOn2
             {
                 if (IsValidForBattle(&party[i])
                  && i != partyIdBattlerOn1 && i != partyIdBattlerOn2
-                 && i != gBattleStruct->monToSwitchIntoId[flankId] && i != playerId[gBattleStruct->monToSwitchIntoId])
+                 && i != gBattleStruct->monToSwitchIntoId[flankId]
+                 && i != gBattleStruct->monToSwitchIntoId[playerId])
                     break;
             }
             return (i == PARTY_SIZE);
@@ -2755,7 +2791,8 @@ bool32 HasNoMonsToSwitch(u32 battler, u8 partyIdBattlerOn1, u8 partyIdBattlerOn2
         {
             if (IsValidForBattle(&party[i])
              && i != partyIdBattlerOn1 && i != partyIdBattlerOn2
-             && i != gBattleStruct->monToSwitchIntoId[flankId] && i != playerId[gBattleStruct->monToSwitchIntoId])
+             && i != gBattleStruct->monToSwitchIntoId[flankId]
+             && i != gBattleStruct->monToSwitchIntoId[playerId])
                 break;
         }
         return (i == PARTY_SIZE);

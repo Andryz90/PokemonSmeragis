@@ -39,12 +39,16 @@
 #include "field_control_avatar.h"
 #include "mirage_tower.h"
 #include "field_screen_effect.h"
+#include "frontier_util.h"
 #include "data.h"
+#include "party_menu.h"
 #include "vs_seeker.h"
 #include "item.h"
+#include "constants/battle_partner.h"
 #include "constants/battle_frontier.h"
 #include "constants/battle_setup.h"
 #include "constants/event_objects.h"
+#include "constants/frontier_util.h"
 #include "constants/game_stat.h"
 #include "constants/items.h"
 #include "constants/maps.h"
@@ -75,6 +79,11 @@ static void CB2_StartFirstBattle(void);
 static void CB2_EndFirstBattle(void);
 static void SaveChangesToPlayerParty(void);
 static void HandleBattleVariantEndParty(void);
+static bool32 IsValidScriptedWildPartnerId(u16 partnerId);
+static u16 GetScriptedWildPartnerTrainerId(u16 partnerId);
+static void ChooseFirstThreeEligibleMonsForScriptedPartnerBattle(void);
+static void PrepareScriptedWildPartnerBattle(u16 partnerId);
+static void RestoreScriptedWildPartnerBattle(void);
 static void CB2_EndTrainerBattle(void);
 static bool32 IsPlayerDefeated(u32 battleOutcome);
 #if FREE_MATCH_CALL == FALSE
@@ -93,6 +102,7 @@ EWRAM_DATA u16 gPartnerTrainerId = 0;
 EWRAM_DATA static u8 *sTrainerBattleEndScript = NULL;
 EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
+EWRAM_DATA static bool8 sShouldRestoreScriptedWildPartnerParty = FALSE;
 
 // The first transition is used if the enemy Pokémon are lower level than our Pokémon.
 // Otherwise, the second transition is used.
@@ -476,6 +486,102 @@ void BattleSetup_StartScriptedDoubleWildBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
+static bool32 IsValidScriptedWildPartnerId(u16 partnerId)
+{
+    return (partnerId > PARTNER_NONE && partnerId < PARTNER_COUNT)
+        || (partnerId > TRAINER_PARTNER(PARTNER_NONE) && partnerId < TRAINER_PARTNER(PARTNER_COUNT));
+}
+
+static u16 GetScriptedWildPartnerTrainerId(u16 partnerId)
+{
+    if (partnerId > TRAINER_PARTNER(PARTNER_NONE))
+        return partnerId;
+    return TRAINER_PARTNER(partnerId);
+}
+
+static void ChooseFirstThreeEligibleMonsForScriptedPartnerBattle(void)
+{
+    u32 i;
+    u32 count = 0;
+
+    ClearSelectedPartyOrder();
+    for (i = 0; i < PARTY_SIZE && count < MAX_FRONTIER_PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0
+         && GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) == FALSE
+         && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE)
+        {
+            gSelectedOrderFromParty[count] = i + 1;
+            count++;
+        }
+    }
+}
+
+static void PrepareScriptedWildPartnerBattle(u16 partnerId)
+{
+    SavePlayerParty();
+    ChooseFirstThreeEligibleMonsForScriptedPartnerBattle();
+    ReducePlayerPartyToSelectedMons();
+    VarSet(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA);
+    VarSet(VAR_0x8005, FRONTIER_DATA_SELECTED_MON_ORDER);
+    CallFrontierUtilFunc();
+
+    gPartnerTrainerId = GetScriptedWildPartnerTrainerId(partnerId);
+    FillPartnerParty(gPartnerTrainerId);
+    sShouldRestoreScriptedWildPartnerParty = TRUE;
+}
+
+static void RestoreScriptedWildPartnerBattle(void)
+{
+    if (!sShouldRestoreScriptedWildPartnerParty)
+        return;
+
+    VarSet(VAR_0x8004, FRONTIER_UTIL_FUNC_SAVE_PARTY);
+    CallFrontierUtilFunc();
+    LoadPlayerParty();
+    sShouldRestoreScriptedWildPartnerParty = FALSE;
+}
+
+// Unlike an ordinary double wild encounter, this battle may keep additional
+// wild Pokémon in the same party to replace fainted active Pokémon.
+void BattleSetup_StartScriptedWildPartyBattle(bool8 isDouble)
+{
+    LockPlayerFieldControls();
+    FreezeObjectEvents();
+    StopPlayerAvatar();
+    gMain.savedCallback = CB2_EndScriptedWildBattle;
+    gBattleTypeFlags = BATTLE_TYPE_CUSTOM_WILD_PARTY;
+    if (isDouble)
+        gBattleTypeFlags |= BATTLE_TYPE_DOUBLE;
+    sShouldRestoreScriptedWildPartnerParty = FALSE;
+    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+    IncrementGameStat(GAME_STAT_WILD_BATTLES);
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
+}
+
+void BattleSetup_StartScriptedWildPartyMultiBattle(u16 partnerId)
+{
+    if (!IsValidScriptedWildPartnerId(partnerId))
+    {
+        BattleSetup_StartScriptedWildPartyBattle(TRUE);
+        return;
+    }
+
+    LockPlayerFieldControls();
+    FreezeObjectEvents();
+    StopPlayerAvatar();
+    gMain.savedCallback = CB2_EndScriptedWildBattle;
+    gBattleTypeFlags = BATTLE_TYPE_CUSTOM_WILD_PARTY | BATTLE_TYPE_DOUBLE | BATTLE_TYPE_MULTI | BATTLE_TYPE_INGAME_PARTNER;
+    PrepareScriptedWildPartnerBattle(partnerId);
+    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+    IncrementGameStat(GAME_STAT_WILD_BATTLES);
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
+}
+
 void BattleSetup_StartLatiBattle(void)
 {
     LockPlayerFieldControls();
@@ -627,6 +733,7 @@ static void CB2_EndScriptedWildBattle(void)
 {
     CpuFill16(0, (void *)(BG_PLTT), BG_PLTT_SIZE);
     ResetOamRange(0, 128);
+    RestoreScriptedWildPartnerBattle();
 
     if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {

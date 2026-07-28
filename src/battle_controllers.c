@@ -3104,6 +3104,14 @@ static void SpriteCB_FreeOpponentSprite(struct Sprite *sprite)
 
 void BtlController_HandleDrawPartyStatusSummary(u32 battler, u32 side, bool32 considerDelay)
 {
+    // A scripted wild party is a boss encounter, not a trainer party. Do not
+    // show the opponent's six-Poke Ball tray before or during its replacements.
+    if ((gBattleTypeFlags & BATTLE_TYPE_CUSTOM_WILD_PARTY) && side == B_SIDE_OPPONENT)
+    {
+        BattleControllerComplete(battler);
+        return;
+    }
+
     if (gBattleResources->bufferA[battler][1] != 0 && IsOnPlayerSide(battler))
     {
         BattleControllerComplete(battler);

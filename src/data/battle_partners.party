@@ -163,3 +163,248 @@ Timid Nature
 - Protect
 - Toxic
 - Substitute
+
+
+=== PARTNER_WALLY_AREA_ZERO ===
+Name: WALLY
+Class: Rival
+Pic: Wally
+Gender: Male
+Music: Male
+
+Tinkaton @ Air Balloon
+Ability: Mold Breaker
+Level: 65
+Adamant Nature
+- Fake Out
+- Protect
+- Play Rough
+- Gigaton Hammer
+
+Gallade @ Expert Belt
+Ability: Sharpness
+Level: 65
+Jolly Nature
+- Psycho Cut
+- Leaf Blade
+- Sacred Sword
+- Swords Dance
+
+Gardevoir @ Gardevoirite
+Ability: Trace
+Level: 65
+Timid Nature
+- Hyper Voice
+- Protect
+- Psyshock
+- Thunderbolt
+
+
+=== PARTNER_MAY_AREA_ZERO_TREECKO ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+
+Sirfetchd @ Leek
+Ability: Scrappy
+Level: 65
+Adamant Nature
+- Meteor Assault
+- Royal Guard
+- First Impression
+- Solar Blade
+
+Rapidash-Galar @ Expert Belt
+Ability: Adaptability
+Level: 65
+Modest Nature
+- Psychic
+- Moonblast
+- Mystical Fire
+- Protect
+
+Blaziken @ Blazikenite
+Ability: Speed Boost
+Level: 65
+Jolly Nature
+- Swords Dance
+- Protect
+- Flare Blitz
+- High Jump Kick
+
+
+=== PARTNER_MAY_AREA_ZERO_TORCHIC ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+
+Sirfetchd @ Leek
+Ability: Scrappy
+Level: 65
+Adamant Nature
+- Meteor Assault
+- Royal Guard
+- First Impression
+- Solar Blade
+
+Rapidash-Galar @ Expert Belt
+Ability: Adaptability
+Level: 65
+Modest Nature
+- Psychic
+- Moonblast
+- Mystical Fire
+- Protect
+
+Swampert @ Swampertite
+Ability: Damp
+Level: 65
+Adamant Nature
+- Waterfall
+- High Horsepower
+- Ice Punch
+- Protect
+
+
+=== PARTNER_MAY_AREA_ZERO_MUDKIP ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+
+Sirfetchd @ Leek
+Ability: Scrappy
+Level: 65
+Adamant Nature
+- Meteor Assault
+- Royal Guard
+- First Impression
+- Solar Blade
+
+Rapidash-Galar @ Expert Belt
+Ability: Adaptability
+Level: 65
+Modest Nature
+- Psychic
+- Moonblast
+- Mystical Fire
+- Protect
+
+Sceptile @ Sceptilite
+Ability: Overgrow
+Level: 65
+Timid Nature
+- Leaf Storm
+- Dragon Pulse
+- Focus Blast
+- Protect
+
+
+=== PARTNER_BRENDAN_AREA_ZERO_TREECKO ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+
+Sirfetchd @ Leek
+Ability: Scrappy
+Level: 65
+Adamant Nature
+- Meteor Assault
+- Royal Guard
+- First Impression
+- Solar Blade
+
+Granbull @ Expert Belt
+Ability: Strong Jaw
+Level: 65
+Adamant Nature
+- Thunder Fang
+- Drain Punch
+- Ice Fang
+- Pixie Fangs
+
+Blaziken @ Blazikenite
+Ability: Speed Boost
+Level: 65
+Jolly Nature
+- Swords Dance
+- Protect
+- Flare Blitz
+- High Jump Kick
+
+
+=== PARTNER_BRENDAN_AREA_ZERO_TORCHIC ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+
+Sirfetchd @ Leek
+Ability: Scrappy
+Level: 65
+Adamant Nature
+- Meteor Assault
+- Royal Guard
+- First Impression
+- Solar Blade
+
+Granbull @ Expert Belt
+Ability: Strong Jaw
+Level: 65
+Adamant Nature
+- Thunder Fang
+- Drain Punch
+- Ice Fang
+- Pixie Fangs
+
+Swampert @ Swampertite
+Ability: Damp
+Level: 65
+Adamant Nature
+- Waterfall
+- High Horsepower
+- Ice Punch
+- Protect
+
+
+=== PARTNER_BRENDAN_AREA_ZERO_MUDKIP ===
+Name: BRENDAN
+Class: Rival
+Pic: Brendan
+Gender: Male
+Music: Male
+
+Sirfetchd @ Leek
+Ability: Scrappy
+Level: 65
+Adamant Nature
+- Meteor Assault
+- Royal Guard
+- Dual Wingbeat
+- Solar Blade
+
+Granbull @ Expert Belt
+Ability: Strong Jaw
+Level: 65
+Adamant Nature
+- Thunder Fang
+- Drain Punch
+- Ice Fang
+- Pixie Fangs
+
+Sceptile @ Sceptilite
+Ability: Overgrow
+Level: 65
+Timid Nature
+- Leaf Storm
+- Dragon Pulse
+- Focus Blast
+- Protect

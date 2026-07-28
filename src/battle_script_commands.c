@@ -5916,6 +5916,12 @@ static void Cmd_endselectionscript(void)
 
 static void PlayAnimation(u32 battler, u8 animId, const u16 *argPtr, const u8 *nextInstr)
 {
+    if (battler >= gBattlersCount)
+    {
+        gBattlescriptCurrInstr = nextInstr;
+        return;
+    }
+
     if (B_TERRAIN_BG_CHANGE == FALSE && animId == B_ANIM_RESTORE_BG)
     {
         // workaround for .if not working
@@ -7657,10 +7663,21 @@ static void Cmd_getswitchedmondata(void)
     CMD_ARGS(u8 battler);
 
     u32 battler = GetBattlerForBattleScript(cmd->battler);
+    u32 switchMon;
     if (gBattleControllerExecFlags)
         return;
 
-    gBattlerPartyIndexes[battler] = gBattleStruct->monToSwitchIntoId[battler];
+    switchMon = gBattleStruct->monToSwitchIntoId[battler];
+    if ((gBattleTypeFlags & BATTLE_TYPE_CUSTOM_WILD_PARTY) && !IsOnPlayerSide(battler))
+    {
+        if (switchMon >= PARTY_SIZE || !IsValidForBattle(&gEnemyParty[switchMon]))
+        {
+            switchMon = GetNextCustomWildPartyMon(battler);
+            gBattleStruct->monToSwitchIntoId[battler] = switchMon;
+        }
+    }
+
+    gBattlerPartyIndexes[battler] = switchMon;
 
     BtlController_EmitGetMonData(battler, B_COMM_TO_CONTROLLER, REQUEST_ALL_BATTLE, 1u << gBattlerPartyIndexes[battler]);
     MarkBattlerForControllerExec(battler);
@@ -8225,16 +8242,25 @@ static void Cmd_switchhandleorder(void)
     case 3:
 
         u8 switch_mon = gBattleResources->bufferB[battler][1];
-        gBattleCommunication[0] = gBattleResources->bufferB[battler][1];
 
-        //Custom: patch in order to resolve the switch in bug
-        if (!IsOnPlayerSide(battler) && (gBattleTypeFlags & (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TWO_OPPONENTS))) 
+        // Opponent parties are offset only in two-trainer battles. A normal
+        // double wild battle has one shared enemy party, so its slot ids must
+        // never be offset (nor may PARTY_SIZE be converted to slot 0).
+        if (!IsOnPlayerSide(battler) && (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS))
         {
             // Se è il flank destro (battler 3 di solito) e l'indice è offsettato, rimuovi l'offset di 6
             if (((battler & BIT_FLANK) >> 1) == 1 && switch_mon >= PARTY_SIZE)
                 switch_mon -= PARTY_SIZE;
         }
 
+        if ((gBattleTypeFlags & BATTLE_TYPE_CUSTOM_WILD_PARTY)
+         && !IsOnPlayerSide(battler)
+         && (switch_mon >= PARTY_SIZE || !IsValidForBattle(&gEnemyParty[switch_mon])))
+        {
+            switch_mon = GetNextCustomWildPartyMon(battler);
+        }
+
+        gBattleCommunication[0] = switch_mon;
         gBattleStruct->monToSwitchIntoId[battler] = switch_mon;
 
         if (gBattleTypeFlags & BATTLE_TYPE_LINK && gBattleTypeFlags & BATTLE_TYPE_MULTI)
@@ -8252,13 +8278,16 @@ static void Cmd_switchhandleorder(void)
         {
             SwitchPartyOrderInGameMulti(battler, gBattleStruct->monToSwitchIntoId[battler]);
         }
-        else
+        // SwitchPartyOrder changes the player's party-menu ordering. Ordinary
+        // wild doubles never replace an opponent, but this scripted wild
+        // party does; do not let its enemy replacement corrupt that order.
+        else if (!((gBattleTypeFlags & BATTLE_TYPE_CUSTOM_WILD_PARTY) && !IsOnPlayerSide(battler)))
         {
             SwitchPartyOrder(battler);
         }
 
         PREPARE_SPECIES_BUFFER(gBattleTextBuff1, gBattleMons[gBattlerAttacker].species)
-        PREPARE_MON_NICK_BUFFER(gBattleTextBuff2, battler, gBattleResources->bufferB[battler][1])
+        PREPARE_MON_NICK_BUFFER(gBattleTextBuff2, battler, switch_mon)
         break;
     }
 
@@ -11010,13 +11039,15 @@ static void Cmd_various(void)
     case VARIOUS_ABILITY_POPUP:
     {
         VARIOUS_ARGS();
-        CreateAbilityPopUp(battler, gBattleMons[battler].ability, (IsDoubleBattle()) != 0);
+        if (battler < gBattlersCount)
+            CreateAbilityPopUp(battler, gBattleMons[battler].ability, (IsDoubleBattle()) != 0);
         break;
     }
     case VARIOUS_UPDATE_ABILITY_POPUP:
     {
         VARIOUS_ARGS();
-        UpdateAbilityPopup(battler);
+        if (battler < gBattlersCount)
+            UpdateAbilityPopup(battler);
         break;
     }
     case VARIOUS_JUMP_IF_TARGET_ALLY:
@@ -11231,7 +11262,8 @@ static void Cmd_various(void)
     case VARIOUS_DESTROY_ABILITY_POPUP:
     {
         VARIOUS_ARGS();
-        DestroyAbilityPopUp(battler);
+        if (battler < gBattlersCount)
+            DestroyAbilityPopUp(battler);
         break;
     }
     case VARIOUS_TOTEM_BOOST:
@@ -18196,6 +18228,9 @@ void BS_ActivateWeatherChangeAbilities(void)
 
     u32 battler = GetBattlerForBattleScript(cmd->battler);
     gBattlescriptCurrInstr = cmd->nextInstr;
+    if (battler >= gBattlersCount || (gAbsentBattlerFlags & (1u << battler)))
+        return;
+
     AbilityBattleEffects(ABILITYEFFECT_ON_WEATHER, battler, 0, 0, 0);
 }
 
@@ -18205,6 +18240,9 @@ void BS_ActivateTerrainChangeAbilities(void)
 
     u32 battler = GetBattlerForBattleScript(cmd->battler);
     gBattlescriptCurrInstr = cmd->nextInstr;
+    if (battler >= gBattlersCount || (gAbsentBattlerFlags & (1u << battler)))
+        return;
+
     AbilityBattleEffects(ABILITYEFFECT_ON_TERRAIN, battler, 0, 0, 0);
 }
 
