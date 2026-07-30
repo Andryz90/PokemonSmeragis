@@ -74,10 +74,12 @@
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
 #include "constants/layouts.h"
+#include "constants/maps.h"
 #include "constants/map_types.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
+#include "constants/vars.h"
 #include "constants/weather.h"
 #include "constants/items.h"
 #include "rtc.h"
@@ -371,6 +373,7 @@ static bool8 (*const sLinkPlayerFacingHandlers[])(struct LinkPlayerObjectEvent *
 
 static void MovementStatusHandler_EnterFreeMode(struct LinkPlayerObjectEvent *, struct ObjectEvent *);
 static void MovementStatusHandler_TryAdvanceScript(struct LinkPlayerObjectEvent *, struct ObjectEvent *);
+static bool8 SetAreaZeroWhiteoutRespawn(void);
 
 // These handlers are run after an attempted movement.
 static void (*const sMovementStatusHandler[])(struct LinkPlayerObjectEvent *, struct ObjectEvent *) =
@@ -387,8 +390,32 @@ void DoWhiteOut(void)
     RunScriptImmediately(EventScript_WhiteOut);
     HealPlayerParty();
     Overworld_ResetStateAfterWhiteOut();
-    SetWarpDestinationToLastHealLocation();
+    if (!SetAreaZeroWhiteoutRespawn())
+        SetWarpDestinationToLastHealLocation();
     WarpIntoMap();
+}
+
+static bool8 SetAreaZeroWhiteoutRespawn(void)
+{
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_AREA_ZERO_INSIDE_2)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_AREA_ZERO_INSIDE_2))
+    {
+        VarSet(VAR_AREAZERO_WHITEOUT_RESCUE, AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE);
+        SetWarpDestination(MAP_GROUP(MAP_AREA_ZERO_OUTSIDE), MAP_NUM(MAP_AREA_ZERO_OUTSIDE), WARP_ID_NONE, 23, 18);
+        return TRUE;
+    }
+
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_AREA_ZERO_OUTSIDE2)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_AREA_ZERO_OUTSIDE2))
+    {
+        VarSet(VAR_AREAZERO_WHITEOUT_RESCUE, AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE2);
+        // Return by the cave entrance so LATIAS can heal the player there.
+        SetWarpDestination(MAP_GROUP(MAP_AREA_ZERO_OUTSIDE2), MAP_NUM(MAP_AREA_ZERO_OUTSIDE2), WARP_ID_NONE, 23, 38);
+        return TRUE;
+    }
+
+    VarSet(VAR_AREAZERO_WHITEOUT_RESCUE, AREA_ZERO_WHITEOUT_RESCUE_NONE);
+    return FALSE;
 }
 
 void Overworld_ResetStateAfterFly(void)

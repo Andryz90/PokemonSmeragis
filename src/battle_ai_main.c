@@ -3078,6 +3078,21 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
               || HasMoveWithCriticalHitChance(battlerAtkPartner))
             ADJUST_SCORE(GOOD_EFFECT);
         break;
+    case EFFECT_PROTECT:
+        // Royal Guard protects the whole side, so it is more valuable while an ally is active.
+        if (move == MOVE_ROYAL_GUARD && IsBattlerAlive(battlerAtkPartner))
+        {
+            ADJUST_SCORE(DECENT_EFFECT);
+            if (CanTargetFaintAi(battlerDef, battlerAtk)
+             || CanTargetFaintAi(battlerDef, battlerAtkPartner)
+             || (IsBattlerAlive(BATTLE_PARTNER(battlerDef))
+              && (CanTargetFaintAi(BATTLE_PARTNER(battlerDef), battlerAtk)
+               || CanTargetFaintAi(BATTLE_PARTNER(battlerDef), battlerAtkPartner))))
+            {
+                ADJUST_SCORE(GOOD_EFFECT);
+            }
+        }
+        break;
     default:
         break;
     } // our effect relative to partner

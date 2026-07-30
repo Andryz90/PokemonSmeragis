@@ -5359,8 +5359,11 @@ bool32 NoAliveMonsForPlayer(void)
     }
 
     // Get the number of inelligible slots in the saved player party.
+    // Custom wild-party battles replace the upper half of gPlayerParty with the
+    // partner's party. Their saved party may legitimately have fewer than six
+    // Pokémon, so it must not be used to force a whiteout while the partner lives.
     if (B_MULTI_BATTLE_WHITEOUT > GEN_3 && gBattleTypeFlags & (BATTLE_TYPE_MULTI | BATTLE_TYPE_INGAME_PARTNER)
-     && !(gBattleTypeFlags & BATTLE_TYPE_ARENA))
+     && !(gBattleTypeFlags & (BATTLE_TYPE_ARENA | BATTLE_TYPE_CUSTOM_WILD_PARTY)))
     {
         for (i = 0; i < PARTY_SIZE; i++)
         {
@@ -6465,9 +6468,9 @@ static void Cmd_moveend(void)
                 case PROTECT_ROYAL_GUARD:
                 {
                     gProtectStructs[gBattlerAttacker].touchedProtectLike = FALSE;
-                    gBattleScripting.moveEffect = MOVE_EFFECT_DEF_PLUS_1; //theoretically the def raise should apply on the pokemon that used the move
+                    gBattleScripting.moveEffect = MOVE_EFFECT_DEF_PLUS_1;
                     BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_KingsShieldEffect;
+                    gBattlescriptCurrInstr = BattleScript_RoyalGuardEffect;
                     effect = 1;
                 }
                     break;

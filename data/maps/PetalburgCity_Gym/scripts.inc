@@ -388,6 +388,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	clearflag FLAG_NORMAN_GYM_PATH
 	clearflag FLAG_NORMAN_GYM_PATH_LOCKED
 	setflag FLAG_BADGE05_GET
+	clearflag FLAG_NAV_POKERIDER
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
 	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON

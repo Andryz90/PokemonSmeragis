@@ -4252,13 +4252,13 @@ u8 IsRunningFromBattleImpossible(u32 battler)
     enum ItemHoldEffect holdEffect;
     u32 i;
 
-    /* Custom: In area zero is not allowed to run for fight scripts */
     if (FlagGet(B_FLAG_NO_RUNNING))
     {
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_ESCAPE;
         return BATTLE_RUN_FORBIDDEN;
     }
-    else if (VarGet(VAR_AREAZERO_STATE) != 0xFF)
+    /* Custom: In area zero is not allowed to run for fight scripts */
+    else if (VarGet(VAR_AREAZERO_STATE) > 0u && VarGet(VAR_AREAZERO_STATE) != 0xFF)
     {
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_ESCAPE_SCRIPT;
         return BATTLE_RUN_FORBIDDEN;

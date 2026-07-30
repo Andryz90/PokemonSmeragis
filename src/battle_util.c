@@ -3574,9 +3574,9 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     {
                         // Trace now copies pokemon's ability in front
                         if (GetBattlerPosition(battler) & BIT_FLANK)
-                            chosenTarget = target1; 
+                            chosenTarget = target2; 
                         else
-                            chosenTarget = target2;
+                            chosenTarget = target1;
 
                         effect++;
                         // chosenTarget = GetBattlerAtPosition((RandomPercentage(RNG_TRACE, 50) * 2) | side), effect++;
@@ -7945,7 +7945,7 @@ bool32 IsBattlerProtected(u32 battlerAtk, u32 battlerDef, u32 move)
         isProtected = TRUE;
     else if (gProtectStructs[battlerDef].protected == PROTECT_SPIKY_SHIELD)
         isProtected = TRUE;
-    else if (gProtectStructs[battlerDef].protected == PROTECT_ROYAL_GUARD)
+    else if (IsSideProtected(battlerDef, PROTECT_ROYAL_GUARD))
         isProtected = TRUE;
     else if (gProtectStructs[battlerDef].protected == PROTECT_MAX_GUARD)
         isProtected = TRUE;
@@ -7981,7 +7981,6 @@ u32 GetProtectType(enum ProtectMethod method)
     case PROTECT_NORMAL:
     case PROTECT_SPIKY_SHIELD:
     case PROTECT_KINGS_SHIELD:
-    case PROTECT_ROYAL_GUARD:
     case PROTECT_BANEFUL_BUNKER:
     case PROTECT_BURNING_BULWARK:
     case PROTECT_OBSTRUCT:
@@ -7992,6 +7991,7 @@ u32 GetProtectType(enum ProtectMethod method)
     case PROTECT_QUICK_GUARD:
     case PROTECT_CRAFTY_SHIELD:
     case PROTECT_MAT_BLOCK:
+    case PROTECT_ROYAL_GUARD:
         return PROTECT_TYPE_SIDE;
     }
 

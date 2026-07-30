@@ -77,7 +77,10 @@ static u32 LoopedTask_RegionMapZoomOut(s32);
 static u32 LoopedTask_RegionMapZoomIn(s32);
 static u32 LoopedTask_ExitRegionMap(s32);
 static u32 LoopedTask_TreatAsPokeNavFlyMap(s32);
+static u32 LoopedTask_ShowPokeRiderFlyUnavailable(s32);
 static bool32 CanUsePokeRiderFlyFromRegionMap(struct RegionMap *regionMap);
+static bool32 IsPokeRiderFlyDestination(struct RegionMap *regionMap);
+static void ShowPokeRiderFlyUnavailableMessage(struct Pokenav_RegionMapGfx *);
 
 extern const u16 gRegionMapCityZoomTiles_Pal[];
 extern const u32 gRegionMapCityZoomText_Gfx[];
@@ -126,7 +129,13 @@ static const LoopedTask sRegionMapLoopTaskFuncs[] =
     [POKENAV_MAP_FUNC_ZOOM_IN]      = LoopedTask_RegionMapZoomIn,
     [POKENAV_MAP_FUNC_EXIT]         = LoopedTask_ExitRegionMap,
     [POKENAV_MAP_FUNC_FLY]          = LoopedTask_TreatAsPokeNavFlyMap,
+    [POKENAV_MAP_FUNC_FLY_UNAVAILABLE] = LoopedTask_ShowPokeRiderFlyUnavailable,
 };
+
+static const u8 sText_PokeRiderFlyUnavailable[] = _(
+    "POKéNAV seems\n"
+    "not to work\n"
+    "properly.");
 
 static const struct CompressedSpriteSheet sCityZoomTextSpriteSheet[1] =
 {
@@ -224,8 +233,12 @@ static u32 HandleRegionMapInput(struct Pokenav_RegionMapMenu *state)
         state->callback = GetExitRegionMapMenuId;
         return POKENAV_MAP_FUNC_EXIT;
     case MAP_INPUT_R_BUTTON:
-        if (CanUsePokeRiderFlyFromRegionMap(regionMap))
-            return POKENAV_MAP_FUNC_FLY;
+        if (IsPokeRiderFlyDestination(regionMap))
+        {
+            if (CanUsePokeRiderFlyFromRegionMap(regionMap))
+                return POKENAV_MAP_FUNC_FLY;
+            return POKENAV_MAP_FUNC_FLY_UNAVAILABLE;
+        }
     }
 
     return POKENAV_MAP_FUNC_NONE;
@@ -512,13 +525,34 @@ static u32 LoopedTask_TreatAsPokeNavFlyMap(s32 taskState)
     return LT_FINISH;
 }
 
+static u32 LoopedTask_ShowPokeRiderFlyUnavailable(s32 taskState)
+{
+    struct Pokenav_RegionMapGfx *state = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_ZOOM);
+
+    switch (taskState)
+    {
+    case 0:
+        PlaySE(SE_FAILURE);
+        ShowPokeRiderFlyUnavailableMessage(state);
+        return LT_INC_AND_PAUSE;
+    case 1:
+        if (IsDma3ManagerBusyWithBgCopy_(state))
+            return LT_PAUSE;
+        break;
+    }
+
+    return LT_FINISH;
+}
+
 static bool32 CanUsePokeRiderFlyFromRegionMap(struct RegionMap *regionMap)
 {
-    if (regionMap->mapSecType != MAPSECTYPE_CITY_CANFLY
-     && regionMap->mapSecType != MAPSECTYPE_BATTLE_FRONTIER)
-        return FALSE;
+    return IsPokeRiderFlyDestination(regionMap) && FlagGet(OW_FLAG_POKE_RIDER);
+}
 
-    return FlagGet(OW_FLAG_POKE_RIDER)
+static bool32 IsPokeRiderFlyDestination(struct RegionMap *regionMap)
+{
+    return (regionMap->mapSecType == MAPSECTYPE_CITY_CANFLY
+         || regionMap->mapSecType == MAPSECTYPE_BATTLE_FRONTIER)
         && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE;
 }
 
@@ -606,6 +640,15 @@ static void UpdateMapSecInfoWindow(struct Pokenav_RegionMapGfx *state)
         SetCityZoomTextInvisibility(TRUE);
         break;
     }
+}
+
+static void ShowPokeRiderFlyUnavailableMessage(struct Pokenav_RegionMapGfx *state)
+{
+    FillWindowPixelBuffer(state->infoWindowId, PIXEL_FILL(1));
+    PutWindowTilemap(state->infoWindowId);
+    AddTextPrinterParameterized(state->infoWindowId, FONT_NARROW, sText_PokeRiderFlyUnavailable, 0, 1, TEXT_SKIP_DRAW, NULL);
+    CopyWindowToVram(state->infoWindowId, COPYWIN_FULL);
+    SetCityZoomTextInvisibility(TRUE);
 }
 
 static bool32 IsDma3ManagerBusyWithBgCopy_(struct Pokenav_RegionMapGfx *state)
@@ -785,7 +828,7 @@ void UpdateRegionMapHelpBarText(void)
 {
     struct RegionMap* regionMap = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP);
 
-    if (CanUsePokeRiderFlyFromRegionMap(regionMap))
+    if (IsPokeRiderFlyDestination(regionMap))
     {
         if (IsRegionMapZoomed())
             PrintHelpBarText(HELPBAR_MAP_ZOOMED_IN_CANFLY);

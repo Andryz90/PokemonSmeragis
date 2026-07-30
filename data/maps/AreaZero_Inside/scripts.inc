@@ -776,25 +776,20 @@ AreaZero_Inside_Movement_FlutterManeRushToRival:
 	step_end
 
 AreaZero_Inside_Text_StevenCrystalsRooted:
-	.string "STEVEN: I've never seen\n"
-	.string "a power source like this.\p"
-	.string "Nothing in HOENN comes\n"
-	.string "close to this level of energy. $"
+	.string "STEVEN: This may be the\n"
+	.string "strongest power source\l"
+	.string "HOENN has ever seen. $"
 
 AreaZero_Inside_Text_AndryCaveFeelsAlive:
-	.string "ANDRY: The cave is\n"
-	.string "vibrating.\p"
-	.string "If those cries belong to\n"
-	.string "POKéMON,\p"
-	.string "something may be pulling\n"
-	.string "them toward this place. $"
+	.string "ANDRY: The cave is vibrating.\p"
+	.string "If those cries belong to POKéMON,\n"
+	.string "something is drawing them here. $"
 
 AreaZero_Inside_Text_WallyCrystalPulse:
-	.string "WALLY: Every crystal sparks\n"
-	.string "in a different way.\p"
-	.string "It looks like each one\n"
-	.string "has a different color\l"
-	.string "inside. $"
+	.string "WALLY: Each crystal pulses\n"
+	.string "differently.\p"
+	.string "It's like each one holds\n"
+	.string "a different color inside. $"
 
 AreaZero_Inside_Text_RivalDadNotebook:
 	.string "{RIVAL}: My dad would lose\n"
@@ -803,11 +798,10 @@ AreaZero_Inside_Text_RivalDadNotebook:
 AreaZero_Inside_Text_SplitfaceGlowRocks:
 	.string "SPLITFACE: There are bigger\n"
 	.string "crystals here.\p"
-	.string "The deeper we dig,\n"
-	.string "the more concentrated\l"
-	.string "they seem to get.\p"
-	.string "I wonder what's waiting\n"
-	.string "at the end. $"
+	.string "The deeper we go, the more\n"
+	.string "concentrated they become.\p"
+	.string "Something big has to be\n"
+	.string "waiting ahead. $"
 
 AreaZero_Inside_Text_SmallCrystalPulse:
 	.string "A small crystal pulses with\n"
@@ -817,29 +811,23 @@ AreaZero_Inside_Text_WallyPlayer:
 	.string "WALLY: {PLAYER}! $"
 
 AreaZero_Inside_Text_WhatWasGreatTusk:
-	.string "SPLITFACE: What was that\n"
-	.string "POKéMON?!\p"
-	.string "I've never seen anything\n"
-	.string "like it! $"
+	.string "SPLITFACE: That wasn't\n"
+	.string "a DONPHAN, was it?! $"
 
 AreaZero_Inside_Text_StevenGreatTuskDonphan:
 	.string "STEVEN: Its cry and shape\n"
-	.string "were close to DONPHAN's.\p"
-	.string "But it was not the same.\n"
-	.string "Its body looked far more\l"
-	.string "primitive. $"
+	.string "resembled DONPHAN's.\p"
+	.string "But it was far more primitive. $"
 
 AreaZero_Inside_Text_AndryGreatTuskPrimitive:
-	.string "ANDRY: Almost like a DONPHAN\n"
+	.string "ANDRY: Like a DONPHAN\n"
 	.string "from another age.\p"
-	.string "Whatever power is here,\n"
-	.string "it may be connected to them. $"
+	.string "This energy may be connected\n"
+	.string "to what it has become. $"
 
 AreaZero_Inside_Text_ProceedDeeper:
-	.string "STEVEN: We should keep moving.\p"
-	.string "The deeper we go,\n"
-	.string "the closer we may get\l"
-	.string "to the source. $"
+	.string "STEVEN: The source has to be\n"
+	.string "deeper inside. Let's move. $"
 
 AreaZero_Inside_Text_WallyRivalParadox:
 	.string "WALLY: Wait!\n"

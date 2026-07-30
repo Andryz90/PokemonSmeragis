@@ -115,7 +115,7 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 === PARTNER_ANDRY ===
 Name: ANDRY
 Class: Pkmn Trainer 1
-Pic: Steven
+Pic: Andry
 Gender: Male
 Music: Male
 
@@ -123,7 +123,6 @@ Sylveon @ Throat Spray
 Ability: Pixilate
 Level: 60
 Modest Nature
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Moonblast
 - Hyper Voice
 - Mystical Fire
@@ -138,6 +137,14 @@ Jolly Nature
 - Shadow Claw
 - Shadow Sneak
 
+Togekiss @ Leftovers
+Ability: Disguise
+Level: 60
+Bold Nature
+- Air Slash
+- Roost
+- Dazzling Gleam
+- Protect
 
 === PARTNER_SPLITFACE ===
 Name: SPLITFACE
@@ -163,6 +170,15 @@ Timid Nature
 - Protect
 - Toxic
 - Substitute
+
+Delibird @ Life Orb
+Ability: Hustle
+Level: 60
+Adamant Nature
+- Aerial Ace
+- Ice Spinner
+- Protect
+- Present
 
 
 === PARTNER_WALLY_AREA_ZERO ===
@@ -207,6 +223,16 @@ Pic: May
 Gender: Female
 Music: Female
 
+
+Rapidash-Galar @ Focus Sash
+Ability: Adaptability
+Level: 65
+Timid Nature
+- Psychic
+- Moonblast
+- Mystical Fire
+- Protect
+
 Sirfetchd @ Leek
 Ability: Scrappy
 Level: 65
@@ -215,15 +241,6 @@ Adamant Nature
 - Royal Guard
 - First Impression
 - Solar Blade
-
-Rapidash-Galar @ Expert Belt
-Ability: Adaptability
-Level: 65
-Modest Nature
-- Psychic
-- Moonblast
-- Mystical Fire
-- Protect
 
 Blaziken @ Blazikenite
 Ability: Speed Boost
@@ -251,10 +268,10 @@ Adamant Nature
 - First Impression
 - Solar Blade
 
-Rapidash-Galar @ Expert Belt
+Rapidash-Galar @ Focus Sash
 Ability: Adaptability
 Level: 65
-Modest Nature
+Timid Nature
 - Psychic
 - Moonblast
 - Mystical Fire
@@ -286,10 +303,10 @@ Adamant Nature
 - First Impression
 - Solar Blade
 
-Rapidash-Galar @ Expert Belt
+Rapidash-Galar @ Focus Sash
 Ability: Adaptability
 Level: 65
-Modest Nature
+Timid Nature
 - Psychic
 - Moonblast
 - Mystical Fire
@@ -299,9 +316,9 @@ Sceptile @ Sceptilite
 Ability: Overgrow
 Level: 65
 Timid Nature
-- Leaf Storm
-- Dragon Pulse
-- Focus Blast
+- Bullet Seed
+- Dual Chop
+- Rock Tomb
 - Protect
 
 
@@ -404,7 +421,7 @@ Sceptile @ Sceptilite
 Ability: Overgrow
 Level: 65
 Timid Nature
-- Leaf Storm
-- Dragon Pulse
-- Focus Blast
+- Bullet Seed
+- Dual Chop
+- Rock Tomb
 - Protect

@@ -44,6 +44,7 @@ AreaZero_Outside_OnTransition_SetPostCaveObjectPositions:
 	return
 
 AreaZero_Outside_OnWarp:
+	map_script_2 VAR_AREAZERO_WHITEOUT_RESCUE, AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE, AreaZero_Outside_EventScript_LatiasWhiteOutRescueOnWarp
 	map_script_2 VAR_AREAZERO_STATE, 1, AreaZero_Outside_EventScript_PlayerFaceUp
 	.2byte 0
 
@@ -52,8 +53,29 @@ AreaZero_Outside_EventScript_PlayerFaceUp::
 	end
 
 AreaZero_Outside_OnFrame:
+	map_script_2 VAR_AREAZERO_WHITEOUT_RESCUE, AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE, AreaZero_Outside_EventScript_LatiasWhiteOutRescue
 	map_script_2 VAR_AREAZERO_STATE, 1, AreaZero_Outside_Intro
 	.2byte 0
+
+AreaZero_Outside_EventScript_LatiasWhiteOutRescueOnWarp::
+	removeobject AREA_ZERO_LATIAS
+	setobjectxyperm AREA_ZERO_LATIAS, 24, 18
+	addobject AREA_ZERO_LATIAS
+	turnobject AREA_ZERO_LATIAS, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_EAST
+	return
+
+AreaZero_Outside_EventScript_LatiasWhiteOutRescue::
+	lockall
+	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
+	waitmoncry
+	call Common_EventScript_OutOfCenterPartyHeal
+	call AreaZero_Inside_2_EventScript_ResetAfterWhiteOut
+	setvar VAR_AREAZERO_WHITEOUT_RESCUE, AREA_ZERO_WHITEOUT_RESCUE_NONE
+	warp MAP_AREA_ZERO_INSIDE_2, 0
+	waitstate
+	releaseall
+	end
 
 AreaZero_Outside_EventScript_Steven::
 	lock
@@ -332,11 +354,23 @@ AreaZero_Outside_EventScript_SmashCrystalCommon:
 	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
 	applymovement VAR_LAST_TALKED, Movement_SmashRock
 	waitmovement 0
+	call AreaZero_Outside_EventScript_TryGiveTeraShard
 	compare VAR_AREAZERO_STATE, 4
 	goto_if_eq AreaZero_Outside_EventScript_CheckOutsideStoryCrystal
 	compare VAR_AREAZERO_STATE, 6
 	goto_if_eq AreaZero_Outside_EventScript_CheckInsideStoryCrystal
 	goto AreaZero_Outside_EventScript_RemoveSmashedCrystal
+
+AreaZero_Outside_EventScript_TryGiveTeraShard:
+	checkitem ITEM_TERA_ORB
+	goto_if_eq VAR_RESULT, FALSE, AreaZero_Outside_EventScript_TeraShardRewardComplete
+	random 18
+	addvar VAR_RESULT, ITEM_BUG_TERA_SHARD
+	copyvar VAR_0x8000, VAR_RESULT
+	setvar VAR_0x8001, 1
+	call Std_ObtainItem
+AreaZero_Outside_EventScript_TeraShardRewardComplete:
+	return
 
 AreaZero_Outside_EventScript_CheckOutsideStoryCrystal:
 	compare VAR_LAST_TALKED, AREA_ZERO_CRYSTAL_CAVERN_ENTRANCE
@@ -604,15 +638,14 @@ AreaZero_Outside_Player_EnterCave::
 AreaZero_Outside_Text_StevenThisMustBeThePlace:
 	.string "STEVEN: This appears to be\n"
 	.string "the place.\p"
-	.string "Let's catch up with the others.\n"
-	.string "They went on ahead to explore. $"
+	.string "The others went ahead\n"
+	.string "to explore. Let's catch up. $"
 
 AreaZero_Outside_Text_WallyYouMadeIt:
 	.string "WALLY: {PLAYER}, you made it!\p"
 	.string "Feel that wind?\n"
-	.string "The air is so fresh here.\p"
-	.string "It feels amazing just to\n"
-	.string "breathe it in! $"
+	.string "The air here is so fresh.\p"
+	.string "It feels incredible. $"
 
 AreaZero_Outside_Text_RivalIncredibleIsland:
 	.string "{RIVAL}: I can't believe a\n"
@@ -643,39 +676,37 @@ AreaZero_Outside_Text_SmallCrystalBrightLight:
 	.string "with a bright light. $"
 
 AreaZero_Outside_Text_SplitfaceCrystalBroke:
-	.string "SPLITFACE: Whoa, it broke!\n"
-	.string "What was that cry? A POKéMON? $"
+	.string "SPLITFACE: Whoa! The crystal\n"
+	.string "shattered... What was that cry? $"
 
 AreaZero_Outside_Text_StevenWasItDonphan:
-	.string "STEVEN: Was that...\n"
-	.string "a DONPHAN? $"
+	.string "STEVEN: That sounded like\n"
+	.string "a DONPHAN... but it can't be. $"
 
 AreaZero_Outside_Wally_Cavern_Text::
-	.string "WALLY: I didn't know that there are\nPOKéMON here.\p"
-	.string "We should check it out\nthe cave then. $"
+	.string "WALLY: I didn't know there were\n"
+	.string "POKéMON here.\p"
+	.string "We should check out\n"
+	.string "the cave then. $"
 
 AreaZero_Outside_Text_Rival:
 	.string "{RIVAL}: We shall go inside then. $"
 
 AreaZero_Outside_Text_SplitfaceWasItDelibird:
-	.string "SPLITFACE: Was that...\n"
-	.string "a DELIBIRD? $"
+	.string "SPLITFACE: That sounded like\n"
+	.string "a DELIBIRD... didn't it? $"
 
 AreaZero_Outside_Text_AndryCav:
-	.string "ANDRY: Lets move on. $"
+	.string "ANDRY: Let's move on. $"
 
 AreaZero_Outside_Text_StevenFirstCrystalAnalysis:
-	.string "STEVEN: I've finished my\n"
+	.string "STEVEN: I've finished a\n"
 	.string "preliminary analysis.\p"
 	.string "These crystals appear to act\n"
 	.string "as vessels for energy.\p"
 	.string "A great abundance of that\n"
 	.string "power must have gathered here,\l"
 	.string "crystallizing into this form.\p"
-	.string "Judging by their distribution,\n"
-	.string "the source seems to be coming\l"
-	.string "from the cave.\p"
-	.string "We should investigate.\p"
 	.string "The smaller crystals seem more\n"
 	.string "fragile, though.\p"
 	.string "They may be breakable with\n"
@@ -683,16 +714,16 @@ AreaZero_Outside_Text_StevenFirstCrystalAnalysis:
 
 AreaZero_Outside_Text_AndryLatiWarningBreakCrystal:
 	.string "ANDRY: LATIOS and LATIAS\n"
-	.string "probably sensed this power as\l"
-	.string "a threat.\p"
+	.string "must have sensed this power\l"
+	.string "as a threat.\p"
 	.string "Maybe they came here to warn\n"
 	.string "us.\p"
 	.string "{PLAYER}, break the crystal\n"
 	.string "so we can move on. $"
 
 AreaZero_Outside_Text_BreakCrystalBeforeLeaving:
-	.string "{PLAYER}, destroy the crystal\n"
-	.string "so we can check the cave. $"
+	.string "{PLAYER}, break the crystal\n"
+	.string "so we can enter the cave. $"
 
 AreaZero_Outside_Text_StevenAnalyzingCrystals:
 	.string "STEVEN: I've never seen\n"
@@ -702,15 +733,12 @@ AreaZero_Outside_Text_StevenAnalyzingCrystals:
 	.string "source of their power. $"
 
 AreaZero_Outside_Text_AndryStevenCanStudyCrystals:
-	.string "ANDRY: Edoardo...\p"
-	.string "As overexcited as he is\n"
-	.string "about the crystals, he has a\l"
-	.string "point.\p"
-	.string "We don't know what they are\n"
-	.string "or where they came from.\p"
-	.string "All we know is that they emit\n"
-	.string "a strong light that seems to\l"
-	.string "create a strange power.\p"
+	.string "ANDRY: SPLITFACE...\p"
+	.string "He's excited, but he's right\n"
+	.string "to be curious.\p"
+	.string "We don't know what these\n"
+	.string "crystals are or where they\l"
+	.string "came from.\p"
 	.string "STEVEN is analyzing them to\n"
 	.string "see if he can learn anything.\p"
 	.string "After all, he's the best person\n"
@@ -726,21 +754,18 @@ AreaZero_Outside_Text_WallyLikesThisPlace:
 AreaZero_Outside_Text_RivalSeesMoreCrystals:
 	.string "{RIVAL}: From here, I can see\n"
 	.string "more crystals scattered across\l"
-	.string "this whole part of the island. \p"
-	.string "They seem to glow some kind of\nenergy. $"
+	.string "this whole part of the island.\p"
+	.string "They seem to glow with some kind\n"
+	.string "of energy. $"
 
 AreaZero_Outside_Text_SplitfaceCrystalsEverywhere:
-	.string "SPLITFACE: Look at all these\n"
-	.string "crystals!\p"
+	.string "SPLITFACE: Look at all\n"
+	.string "these crystals!\p"
 	.string "They're everywhere!\n"
 	.string "They're super sparkly!\p"
 	.string "I have no clue what they are,\n"
 	.string "though. $"
 
 AreaZero_Outside_Text_SplitfaceCrystalsComment:
-	.string "SPLITFACE: Cazzo fratello,\nsassi che luccicano!\p"
-	.string "Crystals, crystals, crystals...\n"
-	.string "They're everywhere!\p"
-	.string "They're super sparkly!\l"
-	.string "I have no clue what they are,\n"
-	.string "though. $"
+	.string "SPLITFACE: Cazzo fratello,\n"
+	.string "sassi che luccicano! $"

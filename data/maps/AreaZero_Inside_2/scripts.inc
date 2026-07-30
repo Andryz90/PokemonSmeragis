@@ -28,6 +28,23 @@ AreaZero_Inside_2_OnTransition:
 	call_if_ge VAR_AREAZERO_STATE, AREA_ZERO_FINAL_EVENT_DONE_VALUE, AreaZero_Inside_2_OnTransition_SetFinalEventDone
 	end
 
+AreaZero_Inside_2_EventScript_ResetAfterWhiteOut::
+	setvar VAR_AREAZERO_STATE, 8
+	setvar VAR_TEMP_0, 0
+	clearflag FLAG_AREA_ZERO_OBJ
+	clearflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
+	clearflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
+	clearflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_ANDRY_POKEMON
+	setflag FLAG_AREA_ZERO_INSIDE_2_REINFORCEMENTS
+	setflag FLAG_AREA_ZERO_INSIDE_2_BOTTOM_PARADOXES
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_THORNS
+	setflag FLAG_AREA_ZERO_INSIDE_2_IRON_JUGULIS
+	setflag FLAG_AREA_ZERO_INSIDE_2_POST_SCENE_NPCS
+	clearflag FLAG_TEMP_HIDE_FOLLOWER
+	callnative UpdateFollowingPokemon
+	return
+
 AreaZero_Inside_2_OnTransition_SetEntranceState:
 	clearflag FLAG_AREA_ZERO_OBJ
 	setobjectxyperm AREAZERO_ANDRY_INSIDE_2, 9, 44
@@ -329,9 +346,10 @@ AreaZero_Inside_2_EventScript_AndryBattleIntro:
 AreaZero_Inside_2_EventScript_StartAndryParadoxBattle:
 	turnobject LOCALID_PLAYER, DIR_EAST
 	turnobject AREAZERO_ANDRY_INSIDE_3, DIR_EAST
-	setcustomwildbattle  SPECIES_BRUTE_BONNET, 70, ITEM_BOOSTER_ENERGY, MOVE_SPORE, MOVE_SUCKER_PUNCH, MOVE_SEED_BOMB, MOVE_CLOSE_COMBAT, SPECIES_SLITHER_WING, 70, ITEM_BOOSTER_ENERGY, MOVE_FIRST_IMPRESSION, MOVE_CLOSE_COMBAT, MOVE_LEECH_LIFE, MOVE_WILD_CHARGE
+	setcustomwildbattleparty 2, SPECIES_BRUTE_BONNET, 70, ITEM_BOOSTER_ENERGY, MOVE_SPORE, MOVE_SUCKER_PUNCH, MOVE_SEED_BOMB, MOVE_CLOSE_COMBAT, SPECIES_SLITHER_WING, 70, ITEM_BOOSTER_ENERGY, MOVE_FIRST_IMPRESSION, MOVE_CLOSE_COMBAT, MOVE_LEECH_LIFE, MOVE_WILD_CHARGE
+	setcustomwildbattlepartner PARTNER_ANDRY
 	setwildbattleaiflags AI_FLAG_SMART_TRAINER
-	multi_fixed_wild PARTNER_ANDRY
+	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq AreaZero_Inside_2_EventScript_Lost
@@ -439,9 +457,10 @@ AreaZero_Inside_2_EventScript_AddAndryParadoxes:
 
 AreaZero_Inside_2_EventScript_StartSplitfaceParadoxBattle:
 	call AreaZero_Inside_2_EventScript_PrepareAndryPokemonForSplitfaceBattle
-	setcustomwildbattle  SPECIES_IRON_BUNDLE, 70, ITEM_BOOSTER_ENERGY, MOVE_FREEZE_DRY, MOVE_HYDRO_PUMP, MOVE_SHEER_COLD, MOVE_SUBSTITUTE, SPECIES_IRON_VALIANT, 70, ITEM_BOOSTER_ENERGY, MOVE_SPIRIT_BREAK, MOVE_DRAIN_PUNCH, MOVE_PROTECT, MOVE_KNOCK_OFF
+	setcustomwildbattleparty 2, SPECIES_IRON_BUNDLE, 70, ITEM_BOOSTER_ENERGY, MOVE_FREEZE_DRY, MOVE_HYDRO_PUMP, MOVE_SHEER_COLD, MOVE_SUBSTITUTE, SPECIES_IRON_VALIANT, 70, ITEM_BOOSTER_ENERGY, MOVE_SPIRIT_BREAK, MOVE_DRAIN_PUNCH, MOVE_PROTECT, MOVE_KNOCK_OFF
+	setcustomwildbattlepartner PARTNER_SPLITFACE
 	setwildbattleaiflags AI_FLAG_SMART_TRAINER
-	multi_fixed_wild PARTNER_SPLITFACE
+	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq AreaZero_Inside_2_EventScript_Lost
@@ -614,7 +633,6 @@ AreaZero_Inside_2_EventScript_PlayerParadoxBattleWon:
 	turnobject AREAZERO_RIVAL_INSIDE_2, DIR_EAST
 	delay 8
 	msgbox AreaZero_Inside_2_Text_WallyRivalWereDelayed, MSGBOX_DEFAULT
-	msgbox AreaZero_Inside_2_Text_GroupStillDoesNotKnow, MSGBOX_DEFAULT
 	msgbox AreaZero_Inside_2_Text_WallyNoticesStevenMissing, MSGBOX_DEFAULT
 	msgbox AreaZero_Inside_2_Text_AndryStevenWentAhead, MSGBOX_DEFAULT
 	msgbox AreaZero_Inside_2_Text_HurryAfterSteven, MSGBOX_DEFAULT
@@ -1127,58 +1145,49 @@ AreaZero_Inside_2_Movement_PlayerFinalApproachBottom:
 AreaZero_Inside_2_Text_CantReturn:
 	.string "WALLY and {RIVAL} are\n"
 	.string "holding the entrance.\p"
-	.string "Leave them to it and\n"
-	.string "keep moving forward. $"
+	.string "Keep moving forward. $"
 
 AreaZero_Inside_2_Text_AndryAskHelp:
-	.string "ANDRY: This cave is full of\n"
-	.string "these strange creatures.\p"
-	.string "They're very strong, and we're\n"
-	.string "struggling to move forward.\p"
-	.string "Will you help me? $"
+	.string "ANDRY: These creatures keep\n"
+	.string "blocking the path.\p"
+	.string "They're strong to push.\n"
+	.string "Would you mind help me? $"
 
 AreaZero_Inside_2_Text_AndryThanks:
 	.string "ANDRY: Thanks.\p"
-	.string "SPLITFACE went ahead alone.\n"
-	.string "We should catch up to him. $"
+	.string "SPLITFACE went on ahead.\n"
+	.string "Let's catch with him. $"
 
 AreaZero_Inside_2_Text_AndryAgain:
-	.string "ANDRY: Again...?\n"
-	.string "They just keep coming. $"
+	.string "ANDRY: More of them?\n"
+	.string "They don't let up. $"
 
 AreaZero_Inside_2_Text_SplitfaceDelibird:
 	.string "SPLITFACE: It looks like a\n"
 	.string "DELIBIRD...\p"
-	.string "But way cooler! $"
+	.string "if DELIBIRD were a machine. $"
 
 AreaZero_Inside_2_Text_AndryHandlesNewParadoxes:
-	.string "ANDRY: From here too?\n"
-	.string "We've just cleared that way.\p"
-	.string "Fine. I'll keep these two\n"
-	.string "busy.\p"
-	.string "{PLAYER} please, help SPLITFACE! $"
+	.string "ANDRY: More on this side?\p"
+	.string "Fine. I'll keep these two busy.\p"
+	.string "{PLAYER}, help SPLITFACE! $"
 
 AreaZero_Inside_2_Text_SplitfaceParadoxesIncreasing:
 	.string "SPLITFACE: The farther we go,\n"
 	.string "the more of them show up.\p"
-	.string "What even are they?\p"
-	.string "They look like fusions of\n"
-	.string "creatures we already know...\p"
-	.string "But either futuristic or\n"
-	.string "ancient. $"
+	.string "They look familiar, but ancient\n"
+	.string "or futuristic. What are they? $"
 
 AreaZero_Inside_2_Text_AndrySupportSteven:
-	.string "ANDRY: I noticed that too.\p"
-	.string "But we don't have time\n"
-	.string "to stand around.\p"
-	.string "STEVEN is farther ahead,\n"
-	.string "and he's alone.\p"
-	.string "We need to support him. $"
+	.string "ANDRY: We can work that out\n"
+	.string "later.\p"
+	.string "STEVEN is ahead alone.\n"
+	.string "We need to reach him. $"
 
 AreaZero_Inside_2_Text_GroupSurrounded:
 	.string "SPLITFACE: Dio sborrato-\p"
 	.string "ANDRY: Stay sharp.\n"
-	.string "They're boxing us in. $"
+	.string "They're closing in. $"
 
 AreaZero_Inside_2_Text_BackToBack:
 	.string "ANDRY: Back to back!\p"
@@ -1186,28 +1195,19 @@ AreaZero_Inside_2_Text_BackToBack:
 	.string "split us up. $"
 
 AreaZero_Inside_2_Text_ReinforcementsArrive:
-	.string "WALLY: GUYS!\p"
-	.string "{RIVAL}: We'll help.\n"
-	.string "We'll cover this side! $"
+	.string "WALLY: There you are!\p"
+	.string "{RIVAL}: We'll hold this side! $"
 
 AreaZero_Inside_2_Text_AndryCoversUpperSide:
-	.string "ANDRY: Okay.\n"
-	.string "Then I'll cover this one! $"
+	.string "ANDRY: Then I'll secure\n"
+	.string "the other side! $"
 
 AreaZero_Inside_2_Text_WallyRivalWereDelayed:
-	.string "WALLY: Sorry we're late!\p"
-	.string "We were attacked again\n"
-	.string "and again on the way here.\p"
-	.string "{RIVAL}: They kept coming\n"
-	.string "after us.\p"
-	.string "{RIVAL}: What are these things? $"
-
-AreaZero_Inside_2_Text_GroupStillDoesNotKnow:
-	.string "ANDRY: We still don't know.\p"
-	.string "They look like a real POKéMON\n"
-	.string "but ancient or futuristic.\p"
-	.string "We still have no idea\n"
-	.string "where they come from. $"
+	.string "WALLY: Sorry we're late.\n"
+	.string "More of those things attacked us.\p"
+	.string "{RIVAL}: What are they?\p"
+	.string "ANDRY: We don't know it, yet.\n"
+	.string "They look like POKéMON from another era. $"
 
 AreaZero_Inside_2_Text_WallyNoticesStevenMissing:
 	.string "WALLY: Wait...\n"
@@ -1231,11 +1231,10 @@ AreaZero_Inside_2_Text_PostWally:
 AreaZero_Inside_2_Text_PostRival:
 	.string "{RIVAL}: I'm trying to work out\n"
 	.string "what these crystals really are.\p"
-	.string "I want to bring my dad some\n"
-	.string "real analysis data.\p"
-	.string "Let's head toward STEVEN.\p"
-	.string "Maybe he's figured something\n"
-	.string "out about this phenomenon. $"
+	.string "I want to compare them with\n"
+	.string "my dad's research.\p"
+	.string "Let's find STEVEN. He may\n"
+	.string "have learned something. $"
 
 AreaZero_Inside_2_Text_PostSplitface:
 	.string "SPLITFACE: Sparkles Sparkles...\p"
@@ -1243,18 +1242,14 @@ AreaZero_Inside_2_Text_PostSplitface:
 
 AreaZero_Inside_2_Text_FinalAndryChecksSteven:
 	.string "ANDRY: STEVEN!\p"
-	.string "Are you all right?\n"
-	.string "Did everything go okay? $"
+	.string "Are you all right? $"
 
 AreaZero_Inside_2_Text_FinalStevenSample:
-	.string "STEVEN: I didn't have too much\n"
-	.string "trouble, thanks to you.\p"
-	.string "You kept the POKéMON at bay\n"
-	.string "long enough for me.\p"
-	.string "And I found a lead on what\n"
-	.string "these crystals might be.\p"
-	.string "I also collected a significant\n"
-	.string "sample to analyze in my lab. $"
+	.string "STEVEN: I'm fine, thanks to you.\p"
+	.string "You held the POKéMON off long\n"
+	.string "enough for me to find a lead.\p"
+	.string "I also collected a sample\n"
+	.string "for the lab. $"
 
 AreaZero_Inside_2_Text_FinalAndryHurryOut:
 	.string "ANDRY: That's great news.\p"
@@ -1268,9 +1263,8 @@ AreaZero_Inside_2_Text_FinalStevenProceed:
 	.string "We should be careful. $"
 
 AreaZero_Inside_2_Text_FinalAndryWarnsOthers:
-	.string "ANDRY: Go on ahead.\p"
-	.string "I'll go back and warn\n"
-	.string "the others. $"
+	.string "ANDRY: You two go ahead.\p"
+	.string "I'll warn the others. $"
 
 AreaZero_Inside_2_Text_FinalStevenLetsGo:
 	.string "STEVEN: {PLAYER}, let's go. $"

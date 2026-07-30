@@ -271,8 +271,13 @@
 #define VAR_R110_WARP_TRIGGER                            0x40FB // Custom Var
 #define VAR_SHINY_ODDS_SETTING                           0x40FC // Base shiny odds for newly generated Pokemon. 0 keeps the default rate.
 #define VAR_AREAZERO_STATE                               0x40FD 
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
+#define VAR_AREAZERO_WHITEOUT_RESCUE                      0x40FE
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+
+#define AREA_ZERO_WHITEOUT_RESCUE_NONE                    0
+#define AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE                 1
+#define AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE2                2
+#define AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE2_PREP           3
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

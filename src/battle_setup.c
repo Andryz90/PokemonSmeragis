@@ -103,6 +103,7 @@ EWRAM_DATA static u8 *sTrainerBattleEndScript = NULL;
 EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
 EWRAM_DATA static bool8 sShouldRestoreScriptedWildPartnerParty = FALSE;
+EWRAM_DATA static bool8 sUseSelectedPartyForScriptedWildPartnerBattle = FALSE;
 
 // The first transition is used if the enemy Pokémon are lower level than our Pokémon.
 // Otherwise, the second transition is used.
@@ -520,7 +521,9 @@ static void ChooseFirstThreeEligibleMonsForScriptedPartnerBattle(void)
 static void PrepareScriptedWildPartnerBattle(u16 partnerId)
 {
     SavePlayerParty();
-    ChooseFirstThreeEligibleMonsForScriptedPartnerBattle();
+    if (!sUseSelectedPartyForScriptedWildPartnerBattle)
+        ChooseFirstThreeEligibleMonsForScriptedPartnerBattle();
+    sUseSelectedPartyForScriptedWildPartnerBattle = FALSE;
     ReducePlayerPartyToSelectedMons();
     VarSet(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA);
     VarSet(VAR_0x8005, FRONTIER_DATA_SELECTED_MON_ORDER);
@@ -529,6 +532,11 @@ static void PrepareScriptedWildPartnerBattle(u16 partnerId)
     gPartnerTrainerId = GetScriptedWildPartnerTrainerId(partnerId);
     FillPartnerParty(gPartnerTrainerId);
     sShouldRestoreScriptedWildPartnerParty = TRUE;
+}
+
+void BattleSetup_UseSelectedPartyForNextScriptedWildPartnerBattle(void)
+{
+    sUseSelectedPartyForScriptedWildPartnerBattle = TRUE;
 }
 
 static void RestoreScriptedWildPartnerBattle(void)

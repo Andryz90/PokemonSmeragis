@@ -58,6 +58,7 @@ void BattleSetup_StartScriptedWildBattle(void);
 void BattleSetup_StartScriptedDoubleWildBattle(void);
 void BattleSetup_StartScriptedWildPartyBattle(bool8 isDouble);
 void BattleSetup_StartScriptedWildPartyMultiBattle(u16 partnerId);
+void BattleSetup_UseSelectedPartyForNextScriptedWildPartnerBattle(void);
 void BattleSetup_StartLatiBattle(void);
 void BattleSetup_StartLegendaryBattle(void);
 void StartGroudonKyogreBattle(void);

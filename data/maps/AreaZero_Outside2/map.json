@@ -307,6 +307,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION"
+    },
+    {
+      "local_id": "AREAZERO2_LATIAS",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LATIAS)",
+      "x": 24,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Common_EventScript_PokemonPartner",
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_LATIS"
+    },
+    {
+      "local_id": "AREAZERO2_LATIOS",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LATIOS)",
+      "x": 22,
+      "y": 40,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Common_EventScript_PokemonPartner",
+      "flag": "FLAG_AREA_ZERO_OUTSIDE2_LATIS"
     }
   ],
   "warp_events": [
@@ -325,6 +353,52 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_WHITEOUT_RESCUE",
+      "var_value": "AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE2_PREP",
+      "script": "AreaZero_Outside2_EventScript_ResumeBattleAfterWhiteOut"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_WHITEOUT_RESCUE",
+      "var_value": "AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE2_PREP",
+      "script": "AreaZero_Outside2_EventScript_WhiteoutBoundaryDown"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_WHITEOUT_RESCUE",
+      "var_value": "AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE2_PREP",
+      "script": "AreaZero_Outside2_EventScript_WhiteoutBoundaryLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_WHITEOUT_RESCUE",
+      "var_value": "AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE2_PREP",
+      "script": "AreaZero_Outside2_EventScript_WhiteoutBoundaryRight"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_WHITEOUT_RESCUE",
+      "var_value": "AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE2_PREP",
+      "script": "AreaZero_Outside2_EventScript_WhiteoutBoundaryDown"
+    }
+  ],
   "bg_events": []
 }

@@ -8460,6 +8460,13 @@ BattleScript_KingsShieldEffect::
 	setmoveresultflags MOVE_RESULT_MISSED
 	return
 
+BattleScript_RoyalGuardEffect::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	clearmoveresultflags MOVE_RESULT_NO_EFFECT
+	seteffectsecondary
+	setmoveresultflags MOVE_RESULT_MISSED
+	return
+
 BattleScript_BanefulBunkerEffect::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_STATUS_ABILITY_EFFECT | HITMARKER_PASSIVE_DAMAGE
 	clearmoveresultflags MOVE_RESULT_NO_EFFECT

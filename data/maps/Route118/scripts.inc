@@ -1,4 +1,6 @@
 .set LOCALID_STEVEN, 19
+.set ROUTE118_AREA_ZERO_FINAL_SCENE_VALUE, 2
+.set ROUTE118_AREA_ZERO_EVENT_COMPLETE_VALUE, 3
 
 Route118_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route118_OnTransition
@@ -9,6 +11,7 @@ Route118_MapScripts::
 Route118_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call_if_eq VAR_ROUTE118_STATE, 0, Route118_EventScript_HideAreaZeroActors
+	call_if_eq VAR_ROUTE118_STATE, ROUTE118_AREA_ZERO_FINAL_SCENE_VALUE, Route118_EventScript_SetupAreaZeroFinalScene
 	call GabbyAndTy_EventScript_UpdateLocation
 	call_if_eq VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_HideMapNamePopup
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_118_EAST, AbnormalWeather_StartGroudonWeather
@@ -28,8 +31,70 @@ Route118_OnLoad:
 	end
 
 Route118_OnFrame:
+	map_script_2 VAR_ROUTE118_STATE, ROUTE118_AREA_ZERO_FINAL_SCENE_VALUE, Route118_EventScript_AreaZeroFinalScene
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
 	.2byte 0
+
+Route118_EventScript_SetupAreaZeroFinalScene:
+	removeobject ROUTE118_CRYSTAL_LOCALID
+	setobjectxyperm LOCALID_STEVEN, 41, 14
+	setobjectmovementtype LOCALID_STEVEN, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm LOCALID_ANDRY_118, 42, 13
+	setobjectmovementtype LOCALID_ANDRY_118, MOVEMENT_TYPE_FACE_LEFT
+	setobjectxyperm LOCALID_SPLITFACE_118, 43, 13
+	setobjectmovementtype LOCALID_SPLITFACE_118, MOVEMENT_TYPE_FACE_LEFT
+	setobjectxyperm LOCALID_ROUTE118_WALLY, 42, 15
+	setobjectmovementtype LOCALID_ROUTE118_WALLY, MOVEMENT_TYPE_FACE_LEFT
+	setobjectxyperm LOCALID_ROUTE118_RIVAL, 43, 15
+	setobjectmovementtype LOCALID_ROUTE118_RIVAL, MOVEMENT_TYPE_FACE_LEFT
+	return
+
+Route118_EventScript_AreaZeroFinalScene::
+	lockall
+	turnobject LOCALID_PLAYER, DIR_WEST
+	msgbox Route118_Text_StevenFinalThanks, MSGBOX_DEFAULT
+	closemessage
+	turnobject LOCALID_STEVEN, DIR_EAST
+	playse SE_M_FLY
+	applymovement LOCALID_STEVEN, Route118_Movement_StevenFlyAway
+	waitmovement 0
+	removeobject LOCALID_STEVEN
+	applymovement LOCALID_ROUTE118_WALLY, Common_Movement_FaceUp
+	applymovement LOCALID_ROUTE118_RIVAL, Common_Movement_FaceUp
+	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
+	applymovement LOCALID_ANDRY_118, Common_Movement_FaceDown
+	applymovement LOCALID_SPLITFACE_118, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox Route118_Text_WallyFortreeMeeting, MSGBOX_DEFAULT
+	applymovement LOCALID_ROUTE118_WALLY, Common_Movement_ExclamationMark
+	applymovement LOCALID_ROUTE118_RIVAL, Common_Movement_ExclamationMark
+	msgbox Route118_Text_WallyTeamAquaQuestion, MSGBOX_DEFAULT
+	msgbox Route118_Text_PlayerToldTeamAquaStory, MSGBOX_DEFAULT
+	msgbox Route118_Text_RivalUnknownCave, MSGBOX_DEFAULT
+	msgbox Route118_Text_AndryIslandCave, MSGBOX_DEFAULT
+	msgbox Route118_Text_RivalAbandonedShip, MSGBOX_DEFAULT
+	msgbox Route118_Text_WallyRivalLeaveForFortree, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE118_WALLY, Route118_Movement_WallyLeaveForFortree
+	applymovement LOCALID_ROUTE118_RIVAL, Route118_Movement_RivalLeaveForFortree
+	waitmovement 0
+	removeobject LOCALID_ROUTE118_WALLY
+	removeobject LOCALID_ROUTE118_RIVAL
+
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
+	msgbox Route118_Text_AndryFarewell, MSGBOX_DEFAULT
+	closemessage
+	msgbox Route118_Text_SplitfaceTired, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SPLITFACE_118, Route118_Movement_SplitfaceLeaveFinal
+	applymovement LOCALID_ANDRY_118, Route118_Movement_AndryLeaveFinal
+	waitmovement 0
+	removeobject LOCALID_ANDRY_118
+	removeobject LOCALID_SPLITFACE_118
+	setflag FLAG_HIDE_ROUTE_118_STEVEN
+	setvar VAR_ROUTE118_STATE, ROUTE118_AREA_ZERO_EVENT_COMPLETE_VALUE
+	releaseall
+	end
 
 Route118_EventScript_GoodRodFisherman::
 	lock
@@ -109,6 +174,16 @@ Route118_EventScript_StevenTrigger::
 	applymovement LOCALID_ANDRY_118, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox Route118_Text_StevenGreeting, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_STEVEN, Common_Movement_QuestionMark
+	waitmovement 0
+	msgbox Route118_Text_StevenPokeNavMalfunction, MSGBOX_DEFAULT
+	closemessage
+	playfanfare MUS_REGISTER_MATCH_CALL
+	message Route118_Text_PokeNavFlyRestored
+	waitfanfare
+	setflag FLAG_NAV_POKERIDER
+	msgbox Route118_Text_StevenPokeNavMalfunction, MSGBOX_DEFAULT
 	closemessage
 	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
 	waitmoncry
@@ -262,6 +337,64 @@ Route118_Movement_LatiasLatiosLead:
 	walk_fast_down
 	step_end
 
+Route118_Movement_StevenApproachPlayerFinal:
+	walk_left
+	walk_left
+	face_left
+	step_end
+
+Route118_Movement_AndryApproachPlayerFinal:
+	walk_left
+	walk_left
+	face_left
+	step_end
+
+Route118_Movement_StevenFlyAway:
+	fly_up
+	step_end
+
+Route118_Movement_WallyLeaveForFortree:
+	walk_fast_right
+	walk_fast_right
+	.rept 8
+	walk_fast_up
+	.endr
+	.rept 5
+	walk_fast_right
+	.endr
+	step_end
+
+Route118_Movement_RivalLeaveForFortree:
+	walk_fast_right
+	.rept 8
+	walk_fast_up
+	.endr
+	.rept 5
+	walk_fast_right
+	.endr
+	step_end
+
+Route118_Movement_AndryLeaveFinal:
+	walk_right
+	walk_right
+	.rept 4
+	walk_up
+	.endr
+	.rept 4
+	walk_right
+	.endr
+	step_end
+
+Route118_Movement_SplitfaceLeaveFinal:
+	walk_right
+	.rept 4
+	walk_up
+	.endr
+	.rept 4
+	walk_right
+	.endr
+	step_end
+
 Route118_EventScript_Rose::
 	trainerbattle_single TRAINER_ROSE_1, Route118_Text_RoseIntro, Route118_Text_RoseDefeat, Route118_EventScript_RegisterRose
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -356,6 +489,19 @@ Route118_Text_StevenGreeting:
 	.string "Your POKéMON seem steadier, too.\n"
 	.string "You have grown together. $"
 
+Route118_Text_StevenPokeNavMalfunction:
+	.string "STEVEN: Hmm? Your POKéNAV's\n"
+	.string "FLY function is malfunctioning.\p"
+	.string "It appears the problem is with\n"
+	.string "the navigation module. $"
+
+Route118_Text_PokeNavFlyRestored:
+	.string "The POKéNAV's FLY function\n"
+	.string "has been restored! $"
+
+Route118_Text_StevenPokeNavFixed:
+	.string "STEVEN: Here we go, fixed. $"
+
 Route118_Text_AndryLatiasLatiosWarning:
 	.string "ANDRY: LATIAS, LATIOS?\n"
 	.string "Why are you here?$"
@@ -387,6 +533,54 @@ Route118_Text_StevenExplainsAlarm:
 Route118_Text_FollowLatiasLatios:
 	.string "ANDRY: SPLITFACE, you're coming too.\p"
 	.string "SPLITFACE: Huh?! $"
+
+Route118_Text_StevenFinalThanks:
+	.string "STEVEN: I will continue studying\n"
+	.string "what we found in AREA ZERO.\p"
+	.string "I'll let you know as soon as I\n"
+	.string "discover anything.\p"
+	.string "Thank you all for your help. $"
+
+Route118_Text_WallyFortreeMeeting:
+	.string "WALLY: Like we said on ROUTE 110,\n"
+	.string "we're going to FORTREE CITY.\p"
+	.string "We'll meet the others there\n"
+	.string "to stop TEAM MAGMA. $"
+
+Route118_Text_WallyTeamAquaQuestion:
+	.string "{RIVAL}: {PLAYER}, did you also see\n"
+	.string "TEAM AQUA acting suspiciously? $"
+
+Route118_Text_PlayerToldTeamAquaStory:
+	.string "{PLAYER} told them about TEAM AQUA\n"
+	.string "leaving a cave and raiding the\l"
+	.string "ABANDONED SHIP's crew. $"
+
+Route118_Text_RivalUnknownCave:
+	.string "{RIVAL}: A cave? Do you know\n"
+	.string "which one it was? $"
+
+Route118_Text_AndryIslandCave:
+	.string "ANDRY: The ISLAND CAVE.\p"
+	.string "It's REGICE's resting place. $"
+
+Route118_Text_RivalAbandonedShip:
+	.string "{RIVAL}: They stole sea charts and\n"
+	.string "a navigation device from the crew.\p"
+	.string "TEAM AQUA must be planning\n"
+	.string "something at sea. $"
+
+Route118_Text_WallyRivalLeaveForFortree:
+	.string "WALLY: There's no time to lose.\p"
+	.string "We'll go ahead to FORTREE CITY\n"
+	.string "and wait for you there. $"
+
+Route118_Text_AndryFarewell:
+	.string "ANDRY: We should get moving too.\p"
+	.string "See you soon, {PLAYER}. $"
+
+Route118_Text_SplitfaceTired:
+	.string "SPLITFACE: Sono stanco- $"
 
 Route118_Text_YouAgreeGoodRodIsGood:
 	.string "Hmm!\n"
