@@ -278,6 +278,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_WALLACE
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	setflag FLAG_HIDE_MAGMA_GRUNT_DESERT
+	setflag FLAG_AQUA_R105_EVENT
 	@set flag wally defeat victory road? from merge
 	call EventScript_ResetAllBerries
 	end

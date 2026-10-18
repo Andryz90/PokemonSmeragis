@@ -33,7 +33,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
       "x": 19,
-      "y": 60,
+      "y": 62,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -44,9 +44,10 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_R105_SWIMMERM2",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 27,
-      "y": 36,
+      "x": 28,
+      "y": 66,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
       "movement_range_x": 7,
@@ -54,32 +55,6 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route105_EventScript_Dominik",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 8,
-      "y": 45,
-      "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 7,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route105_EventScript_Beverly",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 19,
-      "y": 9,
-      "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
-      "movement_range_x": 0,
-      "movement_range_y": 5,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route105_EventScript_Imani",
       "flag": "0"
     },
     {
@@ -91,18 +66,18 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_IRON",
+      "trainer_sight_or_berry_tree_id": "ITEM_PEARL",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_105_IRON"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 17,
-      "y": 48,
+      "x": 7,
+      "y": 54,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 0,
-      "movement_range_y": 7,
+      "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route105_EventScript_Foster",
@@ -133,6 +108,202 @@
       "trainer_sight_or_berry_tree_id": "4",
       "script": "Route105_EventScript_Andres",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_BOAT_1",
+      "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+      "x": 19,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_BURIED",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_BOAT_2",
+      "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+      "x": 21,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_BURIED",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_BOAT_3",
+      "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+      "x": 25,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_BURIED",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_BOAT_4",
+      "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+      "x": 23,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_BURIED",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_BOAT_5",
+      "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+      "x": 27,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_BURIED",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_BOAT_6",
+      "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+      "x": 29,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_BURIED",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_GRUNT_F",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 8,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_ARCHIE",
+      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "x": 9,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_WITNESS_F2",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+      "x": 20,
+      "y": 57,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route105_EventScript_AquaBoatWitnessF",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_WITNESS_F1",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
+      "x": 24,
+      "y": 57,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route105_EventScript_AquaBoatWitnessF",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_WITNESS_M1",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+      "x": 22,
+      "y": 57,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route105_EventScript_AquaBoatWitnessM",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_WITNESS_M2",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+      "x": 26,
+      "y": 57,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route105_EventScript_AquaBoatWitnessM",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_GRUNT_M",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 10,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
+    },
+    {
+      "local_id": "LOCALID_R105_AQUA_SCENE_BOAT",
+      "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+      "x": 9,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_BURIED",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_AQUA_R105_EVENT"
     }
   ],
   "warp_events": [
@@ -145,7 +316,51 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_ROUTE105_AQUA_EVENT_STATE",
+      "var_value": "0",
+      "script": "Route105_EventScript_TeamAquaRegice"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_ROUTE105_AQUA_EVENT_STATE",
+      "var_value": "0",
+      "script": "Route105_EventScript_TeamAquaRegice"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_ROUTE105_AQUA_EVENT_STATE",
+      "var_value": "0",
+      "script": "Route105_EventScript_TeamAquaRegice"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_ROUTE105_AQUA_EVENT_STATE",
+      "var_value": "0",
+      "script": "Route105_EventScript_TeamAquaRegice"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_ROUTE105_AQUA_EVENT_STATE",
+      "var_value": "0",
+      "script": "Route105_EventScript_TeamAquaRegice"
+    }
   ],
   "bg_events": [
     {
@@ -161,7 +376,7 @@
       "x": 5,
       "y": 56,
       "elevation": 3,
-      "item": "ITEM_BIG_PEARL",
+      "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL"
     }
   ]

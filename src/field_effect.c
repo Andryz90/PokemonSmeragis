@@ -37,6 +37,7 @@
 #include "constants/flags.h"
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
+#include "constants/vars.h"
 #include "constants/songs.h"
 #include "constants/map_types.h"
 
@@ -3213,6 +3214,9 @@ u8 FldEff_UseSurf(void)
 {
     u8 taskId = CreateTask(Task_SurfFieldEffect, 0xff);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
+#if OW_SURF_MON_SPRITE
+    VarSet(VAR_SURF_MON_SLOT, gFieldEffectArguments[0]);
+#endif
     Overworld_ClearSavedMusic();
     Overworld_ChangeMusicTo(MUS_SURF);
     return FALSE;
@@ -3491,7 +3495,7 @@ static void FlyOutFieldEffect_JumpOnBird(struct Task *task)
         ObjectEventSetHeldMovement(objectEvent, MOVEMENT_ACTION_JUMP_IN_PLACE_LEFT);
         if (task->tAvatarFlags & PLAYER_AVATAR_FLAG_SURFING)
         {
-            DestroySprite(&gSprites[objectEvent->fieldEffectSpriteId]);
+            DestroySurfBlobSprite(objectEvent->fieldEffectSpriteId);
         }
         task->tState++;
         task->tTimer = 0;

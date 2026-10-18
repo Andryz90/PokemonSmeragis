@@ -1104,7 +1104,7 @@ AreaZero_Outside2_Text_StevenGladYouMadeIt:
 	.string "the cave before the others arrive. $"
 
 AreaZero_Outside2_Text_StevenWaitOthers:
-	.string "STEVEN: Let's wait for the others here. $"
+	.string "STEVEN: Let's wait here. $"
 
 AreaZero_Outside2_Text_StevenPastOrFuture:
 	.string "STEVEN: This place has made me\n"
@@ -1220,11 +1220,17 @@ AreaZero_Outside2_Text_StevenThanksForEverything:
 	.string "The situation is stable at last. $"
 
 AreaZero_Outside2_Text_StevenResearchPlan:
-	.string "STEVEN: I'll return home to\n"
-	.string "examine the samples.\p"
-	.string "We'll keep surveying this place,\n"
-	.string "learn where those POKéMON came\l"
-	.string "from, and protect it. $"
+	.string "STEVEN: We still could not pinpoint\n"
+	.string "the origin of the crystals' power.\p"
+	.string "But the samples we gathered should\n"
+	.string "reveal their composition.\p"
+	.string "Nor do we know where those POKéMON\n"
+	.string "came from. Still, the island seems\l"
+	.string "calm for now.\p"
+	.string "I'll send a research team to survey\n"
+	.string "the area and gather more details.\p"
+	.string "They will protect this habitat and\n"
+	.string "the POKéMON that live here. $"
 
 AreaZero_Outside2_Text_GroupAgrees:
 	.string "The others nod in agreement. $"

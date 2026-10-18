@@ -40,6 +40,7 @@ static inline void BattleAI_DoAIProcessing(struct AiThinkingStruct *aiThink, u32
 static inline void BattleAI_DoAIProcessing_PredictedSwitchin(struct AiThinkingStruct *aiThink, struct AiLogicData *aiData, u32 battlerAtk, u32 battlerDef);
 static bool32 IsPinchBerryItemEffect(enum ItemHoldEffect holdEffect);
 static bool32 ShouldForceTrainerOmniscient(u16 trainerId);
+static bool32 ShouldPrioritizeBoostedHyperVoice(u32 battlerAtk, u32 move);
 
 // ewram
 EWRAM_DATA const u8 *gAIScriptPtr = NULL;   // Still used in contests
@@ -298,6 +299,11 @@ void BattleAI_SetupFlags(void)
     if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER)
     {
         gAiThinkingStruct->aiFlags[B_POSITION_PLAYER_RIGHT] = GetAiFlags(gPartnerTrainerId - TRAINER_PARTNER(PARTNER_NONE));
+
+        // Scripted wild multi battles use custom partners, which have no
+        // per-partner AI flags. Make their decisions match the smart wild AI.
+        if (gBattleTypeFlags & BATTLE_TYPE_CUSTOM_WILD_PARTY)
+            gAiThinkingStruct->aiFlags[B_POSITION_PLAYER_RIGHT] |= AI_FLAG_SMART_TRAINER;
     }
     else if (IsDoubleBattle() && IsAiVsAiBattle())
     {
@@ -5382,6 +5388,16 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
 }
 
 // AI_FLAG_CHECK_VIABILITY - Chooses best possible move to hit player
+static bool32 ShouldPrioritizeBoostedHyperVoice(u32 battlerAtk, u32 move)
+{
+    if (move != MOVE_HYPER_VOICE
+     || CountAliveMonsInBattle(BATTLE_ALIVE_SIDE, BATTLE_OPPOSITE(battlerAtk)) < 2)
+        return FALSE;
+
+    return gAiLogicData->abilities[battlerAtk] == ABILITY_PIXILATE
+        || gAiLogicData->holdEffects[battlerAtk] == HOLD_EFFECT_THROAT_SPRAY;
+}
+
 static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
 {
     // Targeting partner, check benefits of doing that instead
@@ -5401,6 +5417,11 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
                 ADJUST_SCORE(AI_CompareDamagingMoves(battlerAtk, battlerDef, gAiThinkingStruct->movesetIndex));
         }
     }
+
+    // Prefer the spread damage and Throat Spray activation of an empowered
+    // Hyper Voice when it can hit both opponents.
+    if (ShouldPrioritizeBoostedHyperVoice(battlerAtk, move))
+        ADJUST_SCORE(GOOD_EFFECT);
 
     ADJUST_SCORE(AI_CalcMoveEffectScore(battlerAtk, battlerDef, move));
     ADJUST_SCORE(AI_CalcHoldEffectMoveScore(battlerAtk, battlerDef, move));

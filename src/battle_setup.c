@@ -104,6 +104,9 @@ EWRAM_DATA static bool8 sShouldCheckTrainerBScript = FALSE;
 EWRAM_DATA static u8 sNoOfPossibleTrainerRetScripts = 0;
 EWRAM_DATA static bool8 sShouldRestoreScriptedWildPartnerParty = FALSE;
 EWRAM_DATA static bool8 sUseSelectedPartyForScriptedWildPartnerBattle = FALSE;
+EWRAM_DATA static struct Pokemon sScriptedWildPartnerPlayerParty[PARTY_SIZE];
+EWRAM_DATA static u8 sScriptedWildPartnerPlayerPartyCount;
+EWRAM_DATA static u8 sScriptedWildPartnerSelectedMons[MAX_FRONTIER_PARTY_SIZE];
 
 // The first transition is used if the enemy Pokémon are lower level than our Pokémon.
 // Otherwise, the second transition is used.
@@ -520,14 +523,22 @@ static void ChooseFirstThreeEligibleMonsForScriptedPartnerBattle(void)
 
 static void PrepareScriptedWildPartnerBattle(u16 partnerId)
 {
-    SavePlayerParty();
+    u32 i;
+
+    // Keep this backup local to the scripted battle. The generic Frontier
+    // party-order buffer is shared state and may be changed between battles.
+    for (i = 0; i < PARTY_SIZE; i++)
+        sScriptedWildPartnerPlayerParty[i] = gPlayerParty[i];
+    sScriptedWildPartnerPlayerPartyCount = gPlayerPartyCount;
+
     if (!sUseSelectedPartyForScriptedWildPartnerBattle)
         ChooseFirstThreeEligibleMonsForScriptedPartnerBattle();
     sUseSelectedPartyForScriptedWildPartnerBattle = FALSE;
+
+    for (i = 0; i < MAX_FRONTIER_PARTY_SIZE; i++)
+        sScriptedWildPartnerSelectedMons[i] = gSelectedOrderFromParty[i];
+
     ReducePlayerPartyToSelectedMons();
-    VarSet(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA);
-    VarSet(VAR_0x8005, FRONTIER_DATA_SELECTED_MON_ORDER);
-    CallFrontierUtilFunc();
 
     gPartnerTrainerId = GetScriptedWildPartnerTrainerId(partnerId);
     FillPartnerParty(gPartnerTrainerId);
@@ -541,11 +552,38 @@ void BattleSetup_UseSelectedPartyForNextScriptedWildPartnerBattle(void)
 
 static void RestoreScriptedWildPartnerBattle(void)
 {
+    u32 i;
+
     if (!sShouldRestoreScriptedWildPartnerParty)
         return;
 
-    VarSet(VAR_0x8004, FRONTIER_UTIL_FUNC_SAVE_PARTY);
-    CallFrontierUtilFunc();
+    // The in-battle party menu can reorder gPlayerParty to interleave both
+    // sides of a multi battle. Find each selected player mon by its permanent
+    // identity instead of assuming slots 0-2 still belong to the player.
+    for (i = 0; i < MAX_FRONTIER_PARTY_SIZE; i++)
+    {
+        u8 partyIndex = sScriptedWildPartnerSelectedMons[i];
+        if (partyIndex != 0 && partyIndex <= PARTY_SIZE)
+        {
+            u32 partySlot;
+            u32 personality = GetMonData(&sScriptedWildPartnerPlayerParty[partyIndex - 1], MON_DATA_PERSONALITY);
+            u32 otId = GetMonData(&sScriptedWildPartnerPlayerParty[partyIndex - 1], MON_DATA_OT_ID);
+
+            for (partySlot = 0; partySlot < PARTY_SIZE; partySlot++)
+            {
+                if (GetMonData(&gPlayerParty[partySlot], MON_DATA_PERSONALITY) == personality
+                 && GetMonData(&gPlayerParty[partySlot], MON_DATA_OT_ID) == otId)
+                {
+                    sScriptedWildPartnerPlayerParty[partyIndex - 1] = gPlayerParty[partySlot];
+                    break;
+                }
+            }
+        }
+    }
+
+    gSaveBlock1Ptr->playerPartyCount = sScriptedWildPartnerPlayerPartyCount;
+    for (i = 0; i < PARTY_SIZE; i++)
+        gSaveBlock1Ptr->playerParty[i] = sScriptedWildPartnerPlayerParty[i];
     LoadPlayerParty();
     sShouldRestoreScriptedWildPartnerParty = FALSE;
 }

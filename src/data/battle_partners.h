@@ -297,7 +297,7 @@
 #line 123
             .ability = ABILITY_PIXILATE,
 #line 124
-            .lvl = 60,
+            .lvl = 65,
 #line 125
             .nature = NATURE_MODEST,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -320,7 +320,7 @@
 #line 132
             .ability = ABILITY_DISGUISE,
 #line 133
-            .lvl = 60,
+            .lvl = 65,
 #line 134
             .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -343,7 +343,7 @@
 #line 141
             .ability = ABILITY_DISGUISE,
 #line 142
-            .lvl = 60,
+            .lvl = 65,
 #line 143
             .nature = NATURE_BOLD,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -376,12 +376,14 @@
 #line 156
             .species = SPECIES_ABOMASNOW,
             .gender = TRAINER_MON_RANDOM_GENDER,
+#line 156
+            .heldItem = ITEM_ABOMASITE,
 #line 160
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 157
             .ability = ABILITY_SNOW_WARNING,
 #line 158
-            .lvl = 60,
+            .lvl = 65,
 #line 159
             .nature = NATURE_MODEST,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -390,7 +392,7 @@
                 MOVE_BLIZZARD,
                 MOVE_GIGA_DRAIN,
                 MOVE_ICE_SHARD,
-                MOVE_PROTECT,
+                MOVE_AURORA_VEIL,
             },
             },
             {
@@ -404,7 +406,7 @@
 #line 166
             .ability = ABILITY_ICE_BODY,
 #line 167
-            .lvl = 60,
+            .lvl = 65,
 #line 168
             .nature = NATURE_TIMID,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -427,7 +429,7 @@
 #line 175
             .ability = ABILITY_HUSTLE,
 #line 176
-            .lvl = 60,
+            .lvl = 65,
 #line 177
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,

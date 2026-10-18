@@ -677,6 +677,9 @@ SlateportCity_EventScript_MegaStones::
 
 	.align 2
 SlateportCity_Pokemart_MegaStones:
+	.2byte ITEM_MEGANIUMITE
+	.2byte ITEM_FERALIGATITE
+	.2byte ITEM_TYPHLOSIONITE
 	.2byte ITEM_BEEDRILLITE
 	.2byte ITEM_PINSIRITE 
 	.2byte ITEM_HOUNDOOMINITE

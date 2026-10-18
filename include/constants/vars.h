@@ -117,7 +117,7 @@
 #define VAR_ROUTE102_STATE                               0x4061 // Unused Var
 #define VAR_ROUTE103_STATE                               0x4062 // Unused Var
 #define VAR_ROUTE104_STATE                               0x4063
-#define VAR_ROUTE105_STATE                               0x4064 // Unused Var
+#define VAR_ROUTE105_AQUA_EVENT_STATE                    0x4064 // 0: Team Aqua blockade active, 1: cleared
 #define VAR_ROUTE106_STATE                               0x4065 // Unused Var
 #define VAR_ROUTE107_STATE                               0x4066 // Unused Var
 #define VAR_ROUTE108_STATE                               0x4067 // Unused Var
@@ -272,7 +272,7 @@
 #define VAR_SHINY_ODDS_SETTING                           0x40FC // Base shiny odds for newly generated Pokemon. 0 keeps the default rate.
 #define VAR_AREAZERO_STATE                               0x40FD 
 #define VAR_AREAZERO_WHITEOUT_RESCUE                      0x40FE
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_SURF_MON_SLOT                                0x40FF // Party index of the Pokémon currently used to Surf. Used by OW_SURF_MON_SPRITE.
 
 #define AREA_ZERO_WHITEOUT_RESCUE_NONE                    0
 #define AREA_ZERO_WHITEOUT_RESCUE_OUTSIDE                 1

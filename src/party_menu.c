@@ -3343,6 +3343,13 @@ static void SwitchPartyMon(void)
     SwitchMenuBoxSprites(&menuBoxes[0]->itemSpriteId, &menuBoxes[1]->itemSpriteId);
     SwitchMenuBoxSprites(&menuBoxes[0]->monSpriteId, &menuBoxes[1]->monSpriteId);
     SwitchMenuBoxSprites(&menuBoxes[0]->statusSpriteId, &menuBoxes[1]->statusSpriteId);
+#if OW_SURF_MON_SPRITE
+    // Keep showing the same Pokémon while Surfing
+    if (gPartyMenu.slotId == VarGet(VAR_SURF_MON_SLOT))
+        VarSet(VAR_SURF_MON_SLOT, gPartyMenu.slotId2);
+    else if (gPartyMenu.slotId2 == VarGet(VAR_SURF_MON_SLOT))
+        VarSet(VAR_SURF_MON_SLOT, gPartyMenu.slotId);
+#endif
 }
 
 // Finish switching mons or using Softboiled

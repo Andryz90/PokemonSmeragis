@@ -47,6 +47,34 @@ void HealPlayerParty(void)
         FlagSet(B_FLAG_TERA_ORB_CHARGED);
 }
 
+void ScriptReviveFirstPlayerMonIfAllFainted(struct ScriptContext *ctx)
+{
+    u32 i;
+    u16 hp = 1;
+    u32 status = STATUS1_NONE;
+
+    (void)ctx;
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE
+         && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG)
+         && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0)
+            return;
+    }
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE
+         && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
+        {
+            SetMonData(&gPlayerParty[i], MON_DATA_HP, &hp);
+            SetMonData(&gPlayerParty[i], MON_DATA_STATUS, &status);
+            return;
+        }
+    }
+}
+
 static void HealPlayerBoxes(void)
 {
     int boxId, boxPosition;

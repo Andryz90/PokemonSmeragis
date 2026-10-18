@@ -1895,7 +1895,7 @@ static void Task_WaitStopSurfing(u8 taskId)
         ObjectEventSetHeldMovement(playerObjEvent, GetFaceDirectionMovementAction(playerObjEvent->facingDirection));
         gPlayerAvatar.preventStep = FALSE;
         UnlockPlayerFieldControls();
-        DestroySprite(&gSprites[playerObjEvent->fieldEffectSpriteId]);
+        DestroySurfBlobSprite(playerObjEvent->fieldEffectSpriteId);
 #ifdef BUGFIX
         // If this is not defined but the player steps into grass from surfing, they will appear over the grass instead of in the grass.
         playerObjEvent->triggerGroundEffectsOnMove = TRUE;

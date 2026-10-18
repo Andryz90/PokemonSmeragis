@@ -29,8 +29,8 @@ AreaZero_Inside_2_OnTransition:
 	end
 
 AreaZero_Inside_2_EventScript_ResetAfterWhiteOut::
-	setvar VAR_AREAZERO_STATE, 8
-	setvar VAR_TEMP_0, 0
+	setvar VAR_AREAZERO_STATE, 9
+	setvar VAR_TEMP_0, 1
 	clearflag FLAG_AREA_ZERO_OBJ
 	clearflag FLAG_AREA_ZERO_INSIDE_2_PARADOXES
 	clearflag FLAG_AREA_ZERO_INSIDE_2_BUNDLE_VALIANT
@@ -457,6 +457,9 @@ AreaZero_Inside_2_EventScript_AddAndryParadoxes:
 
 AreaZero_Inside_2_EventScript_StartSplitfaceParadoxBattle:
 	call AreaZero_Inside_2_EventScript_PrepareAndryPokemonForSplitfaceBattle
+	@ Andry can win the previous multi battle after the player's whole party faints.
+	@ Keep the next battle valid without otherwise healing the party.
+	callnative ScriptReviveFirstPlayerMonIfAllFainted
 	setcustomwildbattleparty 2, SPECIES_IRON_BUNDLE, 70, ITEM_BOOSTER_ENERGY, MOVE_FREEZE_DRY, MOVE_HYDRO_PUMP, MOVE_SHEER_COLD, MOVE_SUBSTITUTE, SPECIES_IRON_VALIANT, 70, ITEM_BOOSTER_ENERGY, MOVE_SPIRIT_BREAK, MOVE_DRAIN_PUNCH, MOVE_PROTECT, MOVE_KNOCK_OFF
 	setcustomwildbattlepartner PARTNER_SPLITFACE
 	setwildbattleaiflags AI_FLAG_SMART_TRAINER
@@ -602,6 +605,7 @@ AreaZero_Inside_2_EventScript_StartPlayerParadoxBattle:
 	playmoncry SPECIES_GREAT_TUSK, CRY_MODE_NORMAL
 	playmoncry SPECIES_FLUTTER_MANE, CRY_MODE_NORMAL
 	waitmoncry
+	callnative ScriptReviveFirstPlayerMonIfAllFainted
 	setcustomwildbattle  SPECIES_GREAT_TUSK, 70, ITEM_BOOSTER_ENERGY, MOVE_HEADLONG_RUSH, MOVE_CLOSE_COMBAT, MOVE_ICE_SPINNER, MOVE_BODY_PRESS, SPECIES_FLUTTER_MANE, 70, ITEM_BOOSTER_ENERGY, MOVE_MOONBLAST, MOVE_SHADOW_BALL, MOVE_PSYSHOCK, MOVE_MYSTICAL_FIRE
 	setwildbattleaiflags AI_FLAG_SMART_TRAINER
 	dowildbattle
@@ -1163,9 +1167,8 @@ AreaZero_Inside_2_Text_AndryAgain:
 	.string "They don't let up. $"
 
 AreaZero_Inside_2_Text_SplitfaceDelibird:
-	.string "SPLITFACE: It looks like a\n"
-	.string "DELIBIRD...\p"
-	.string "if DELIBIRD were a machine. $"
+	.string "SPLITFACE: YOOOO\n"
+	.string "a MECHA DELIBIRD?! $"
 
 AreaZero_Inside_2_Text_AndryHandlesNewParadoxes:
 	.string "ANDRY: More on this side?\p"

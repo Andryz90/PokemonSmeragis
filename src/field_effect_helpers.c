@@ -1,4 +1,5 @@
 #include "global.h"
+#include "event_data.h"
 #include "event_object_movement.h"
 #include "field_camera.h"
 #include "field_effect.h"
@@ -8,6 +9,7 @@
 #include "gpu_regs.h"
 #include "metatile_behavior.h"
 #include "palette.h"
+#include "pokemon.h"
 #include "sound.h"
 #include "sprite.h"
 #include "trig.h"
@@ -15,6 +17,8 @@
 #include "constants/field_effects.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/weather.h"
+#include "constants/vars.h"
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF // duplicate of define in event_object_movement.c
 #define PAL_TAG_REFLECTION_OFFSET 0x2000 // reflection tag value is paletteTag + 0x2000
@@ -1190,25 +1194,387 @@ static void UpdateAshFieldEffect_End(struct Sprite *sprite)
 #define sPrevX        data[6]
 #define sPrevY        data[7]
 
+#define SURF_BLOB_IS_MON       0x1000 // sBitfield flag: the surf blob is a Pokémon sprite with its own palette
+#define SURF_BLOB_FOLLOWER_GFX 0x2000 // sBitfield flag: the Pokémon sprite uses its follower overworld graphics
+
+// Sprite data for the overlay and the reflections of a surfing Pokémon
+#define sBlobSpriteId      data[0]
+#define sReflectedSpriteId data[1]
+
+#define SURF_MON_PAL_TAG 0x1212
+
+// Mirrors the surfing Pokémon around the same line as the player's reflection,
+// which is close to the waterline drawn in the surfing sprites
+#define SURF_MON_REFLECTION_OFFSET 14
+
+// Indexes into sAnimTable_SurfBlob
+static const u8 sSurfBlobDirectionAnims[] = {
+    [DIR_NONE] = 0,
+    [DIR_SOUTH] = 0,
+    [DIR_NORTH] = 1,
+    [DIR_WEST] = 2,
+    [DIR_EAST] = 3,
+    [DIR_SOUTHWEST] = 0,
+    [DIR_SOUTHEAST] = 0,
+    [DIR_NORTHWEST] = 1,
+    [DIR_NORTHEAST] = 1,
+};
+
+#if OW_SURF_MON_SPRITE
+struct SurfMonGraphics
+{
+    u16 species;
+    const u32 *pic;
+    const u32 *shinyPic;
+    const u16 *palette;
+    const u16 *shinyPalette;
+    bool8 is64x64:1;
+    bool8 hasOverlay:1;
+    bool8 noFlip:1; // Has its own east-facing frames instead of flipping the west-facing ones
+};
+
+#include "data/object_events/surfable_pokemon.h"
+
+static void UpdateSurfMonOverlay(struct Sprite *sprite);
+static void UpdateSurfMonReflection(struct Sprite *sprite);
+
+static const union AnimCmd sSurfMonAnim_FaceSouth[] =
+{
+    ANIMCMD_FRAME(2, 16),
+    ANIMCMD_FRAME(3, 16),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSurfMonAnim_FaceNorth[] =
+{
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSurfMonAnim_FaceWest[] =
+{
+    ANIMCMD_FRAME(4, 16),
+    ANIMCMD_FRAME(5, 16),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSurfMonAnim_FaceEast[] =
+{
+    ANIMCMD_FRAME(4, 16, .hFlip = TRUE),
+    ANIMCMD_FRAME(5, 16, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sSurfMonAnim_NoFlipFaceEast[] =
+{
+    ANIMCMD_FRAME(6, 16),
+    ANIMCMD_FRAME(7, 16),
+    ANIMCMD_JUMP(0),
+};
+
+// Same order as sAnimTable_SurfBlob
+static const union AnimCmd *const sSurfMonAnimTable[] =
+{
+    sSurfMonAnim_FaceSouth,
+    sSurfMonAnim_FaceNorth,
+    sSurfMonAnim_FaceWest,
+    sSurfMonAnim_FaceEast,
+};
+
+static const union AnimCmd *const sSurfMonNoFlipAnimTable[] =
+{
+    sSurfMonAnim_FaceSouth,
+    sSurfMonAnim_FaceNorth,
+    sSurfMonAnim_FaceWest,
+    sSurfMonAnim_NoFlipFaceEast,
+};
+
+// Frames of the current surfing Pokémon: the ones drawn below the player, followed by the overlay ones
+static EWRAM_DATA struct SpriteFrameImage sSurfMonFrames[16] = {0};
+
+static const struct SurfMonGraphics *GetSurfMonGraphics(u32 species)
+{
+    u32 i;
+
+    for (i = 0; i < ARRAY_COUNT(sSurfMonGraphics); i++)
+    {
+        if (sSurfMonGraphics[i].species == species)
+            return &sSurfMonGraphics[i];
+    }
+    return NULL;
+}
+
+static u32 LoadSurfMonPalette(const u16 *palette)
+{
+    u32 paletteNum = IndexOfSpritePaletteTag(SURF_MON_PAL_TAG);
+
+    if (paletteNum == 0xFF)
+    {
+        struct SpritePalette spritePalette = {palette, SURF_MON_PAL_TAG};
+        paletteNum = LoadSpritePalette(&spritePalette);
+        if (paletteNum == 0xFF)
+            return 0xFF;
+    }
+    else
+    {
+        // The palette of a previous surfing Pokémon is still loaded under the same tag
+        LoadPalette(palette, OBJ_PLTT_ID(paletteNum), PLTT_SIZE_4BPP);
+    }
+    if (gWeatherPtr->currWeather != WEATHER_FOG_HORIZONTAL) // don't want to weather blend in fog
+        UpdateSpritePaletteWithWeather(paletteNum, FALSE);
+    return paletteNum;
+}
+
+// Loads the blue tinted palette used by the reflections of the surfing Pokémon
+static u32 LoadSurfMonReflectionPalette(u32 paletteNum)
+{
+    u16 filteredData[16];
+    struct SpritePalette filteredPal = {.data = filteredData, .tag = REFLECTION_PAL_TAG(SURF_MON_PAL_TAG, paletteNum)};
+    u32 reflectionPaletteNum = IndexOfSpritePaletteTag(filteredPal.tag);
+
+    ApplyPondFilter(paletteNum, filteredData);
+    if (reflectionPaletteNum == 0xFF)
+    {
+        reflectionPaletteNum = LoadSpritePalette(&filteredPal);
+        if (reflectionPaletteNum == 0xFF)
+            return 0xFF;
+    }
+    else
+    {
+        // The reflection palette of a previous surfing Pokémon is still loaded under the same tag
+        LoadPalette(filteredData, OBJ_PLTT_ID(reflectionPaletteNum), PLTT_SIZE_4BPP);
+    }
+    UpdateSpritePaletteWithWeather(reflectionPaletteNum, TRUE);
+    return reflectionPaletteNum;
+}
+
+// Same as SetUpReflection, but for one of the sprites of the surfing Pokémon.
+// The player's reflection uses subpriority 152, so pass a higher one to draw behind it or a lower one to draw in front.
+static void CreateSurfMonReflection(u8 reflectedSpriteId, u8 blobSpriteId, u8 subpriority, u32 paletteNum)
+{
+    struct Sprite *reflected = &gSprites[reflectedSpriteId];
+    u8 spriteId = CreateCopySpriteAt(reflected, reflected->x, reflected->y, subpriority);
+    struct Sprite *reflection;
+
+    if (spriteId == MAX_SPRITES)
+        return;
+
+    reflection = &gSprites[spriteId];
+    reflection->callback = UpdateSurfMonReflection;
+    reflection->coordOffsetEnabled = TRUE;
+    reflection->oam.priority = 3;
+    reflection->oam.paletteNum = paletteNum;
+    reflection->oam.objMode = ST_OAM_OBJ_BLEND;
+    reflection->oam.affineMode = ST_OAM_AFFINE_NORMAL;
+    reflection->usingSheet = TRUE; // Shares the tiles of the reflected sprite
+    reflection->anims = gDummySpriteAnimTable;
+    StartSpriteAnim(reflection, 0);
+    reflection->affineAnims = gDummySpriteAffineAnimTable;
+    reflection->affineAnimBeginning = TRUE;
+    reflection->invisible = TRUE;
+    reflection->sBlobSpriteId = blobSpriteId;
+    reflection->sReflectedSpriteId = reflectedSpriteId;
+}
+
+// Creates the dedicated surfing sprite of the Pokémon and, if it has one,
+// the overlay drawn above the player (e.g. its head when facing south).
+static u8 TryCreateDedicatedSurfMonSprite(struct Pokemon *mon, s16 x, s16 y)
+{
+    const struct SurfMonGraphics *graphics = GetSurfMonGraphics(GetMonData(mon, MON_DATA_SPECIES));
+    bool32 shiny;
+    const u32 *pic;
+    u32 i, frameCount, frameSize, reflectionPaletteNum;
+    u8 spriteId;
+    struct SpriteTemplate template;
+
+    if (graphics == NULL)
+        return MAX_SPRITES;
+
+    shiny = IsMonShiny(mon);
+    if (LoadSurfMonPalette(shiny ? graphics->shinyPalette : graphics->palette) == 0xFF)
+        return MAX_SPRITES;
+
+    // Sheets have 6 frames (8 if east isn't flipped) below the player, followed by as many overlay frames
+    frameCount = graphics->noFlip ? 8 : 6;
+    frameSize = graphics->is64x64 ? (64 * 64) / 2 : (32 * 32) / 2;
+    pic = shiny ? graphics->shinyPic : graphics->pic;
+    for (i = 0; i < frameCount * (graphics->hasOverlay ? 2 : 1); i++)
+    {
+        sSurfMonFrames[i].data = (const u8 *)pic + frameSize * i;
+        sSurfMonFrames[i].size = frameSize;
+        sSurfMonFrames[i].relativeFrames = FALSE;
+    }
+
+    template.tileTag = TAG_NONE;
+    template.paletteTag = SURF_MON_PAL_TAG;
+    template.oam = graphics->is64x64 ? &gObjectEventBaseOam_64x64 : &gObjectEventBaseOam_32x32;
+    template.anims = graphics->noFlip ? sSurfMonNoFlipAnimTable : sSurfMonAnimTable;
+    template.images = sSurfMonFrames;
+    template.affineAnims = gDummySpriteAffineAnimTable;
+    template.callback = UpdateSurfBlobFieldEffect;
+    spriteId = CreateSprite(&template, x, y, 150);
+    if (spriteId == MAX_SPRITES)
+    {
+        FieldEffectFreePaletteIfUnused(IndexOfSpritePaletteTag(SURF_MON_PAL_TAG));
+        return MAX_SPRITES;
+    }
+
+    // Reflections are only shown when the player has one too, and keep the same layering as the sprites they reflect
+    reflectionPaletteNum = LoadSurfMonReflectionPalette(gSprites[spriteId].oam.paletteNum);
+    if (reflectionPaletteNum != 0xFF)
+        CreateSurfMonReflection(spriteId, spriteId, 153, reflectionPaletteNum);
+
+    if (graphics->hasOverlay)
+    {
+        u8 overlayId;
+
+        template.images = &sSurfMonFrames[frameCount];
+        template.callback = UpdateSurfMonOverlay;
+        overlayId = CreateSprite(&template, x, y, 0);
+        if (overlayId != MAX_SPRITES)
+        {
+            gSprites[overlayId].coordOffsetEnabled = TRUE;
+            gSprites[overlayId].sBlobSpriteId = spriteId;
+            if (reflectionPaletteNum != 0xFF)
+                CreateSurfMonReflection(overlayId, spriteId, 151, reflectionPaletteNum);
+        }
+    }
+    return spriteId;
+}
+
+// Fallback for species without a dedicated surfing sprite: use its follower graphics
+static u8 TryCreateFollowerSurfMonSprite(struct Pokemon *mon, s16 x, s16 y)
+{
+    u16 graphicsId;
+
+    if (!GetMonOverworldGraphicsId(mon, &graphicsId))
+        return MAX_SPRITES;
+
+    return CreateObjectGraphicsSprite(graphicsId, UpdateSurfBlobFieldEffect, x, y, 150);
+}
+
+// Offset {x, y} of the Pokémon's feet from where the generic surf blob would be, by the player's direction.
+// Only used for follower graphics. Tweak these to adjust how the player sits on the Pokémon.
+static const s8 sSurfMonOffsets[][2] =
+{
+    [DIR_NONE]      = { 0,   6},
+    [DIR_SOUTH]     = { 0,   6},
+    [DIR_NORTH]     = { 0, -10},
+    [DIR_WEST]      = {-4,   2},
+    [DIR_EAST]      = { 4,   2},
+    [DIR_SOUTHWEST] = { 0,   6},
+    [DIR_SOUTHEAST] = { 0,   6},
+    [DIR_NORTHWEST] = { 0, -10},
+    [DIR_NORTHEAST] = { 0, -10},
+};
+
+// Positions the Pokémon relative to the surf blob position (x, y) and layers it with the player:
+// facing south the Pokémon's head is in front of the player, otherwise the player is drawn on top.
+static void SetSurfMonSpritePos(struct Sprite *sprite, struct ObjectEvent *playerObj, s16 x, s16 y)
+{
+    struct Sprite *playerSprite = &gSprites[playerObj->spriteId];
+    u8 direction = playerObj->movementDirection;
+
+    if (direction >= ARRAY_COUNT(sSurfMonOffsets))
+        direction = DIR_SOUTH;
+
+    // Align the bottom of the sprite as if it were 32 pixels tall, so bigger sprites aren't sunk into the water
+    sprite->x = x + sSurfMonOffsets[direction][0];
+    sprite->y = y + sSurfMonOffsets[direction][1] + 16 + sprite->centerToCornerVecY;
+
+    if (direction == DIR_SOUTH || direction == DIR_SOUTHWEST || direction == DIR_SOUTHEAST || direction == DIR_NONE)
+        sprite->subpriority = playerSprite->subpriority - 1;
+    else
+        sprite->subpriority = playerSprite->subpriority + 1;
+}
+#endif
+
 u32 FldEff_SurfBlob(void)
 {
-    u8 spriteId;
+    u8 spriteId = MAX_SPRITES;
+    u16 monFlags = 0;
 
     SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SURF_BLOB], gFieldEffectArguments[0], gFieldEffectArguments[1], 150);
+#if OW_SURF_MON_SPRITE
+    // Only the player rides their Pokémon; NPC followers keep the generic blob
+    if (gFieldEffectArguments[2] == gPlayerAvatar.objectEventId && VarGet(VAR_SURF_MON_SLOT) < PARTY_SIZE)
+    {
+        struct Pokemon *mon = &gPlayerParty[VarGet(VAR_SURF_MON_SLOT)];
+
+        spriteId = TryCreateDedicatedSurfMonSprite(mon, gFieldEffectArguments[0], gFieldEffectArguments[1]);
+        if (spriteId != MAX_SPRITES)
+        {
+            monFlags = SURF_BLOB_IS_MON;
+        }
+        else if (OW_SURF_MON_FOLLOWER_FALLBACK)
+        {
+            spriteId = TryCreateFollowerSurfMonSprite(mon, gFieldEffectArguments[0], gFieldEffectArguments[1]);
+            if (spriteId != MAX_SPRITES)
+                monFlags = SURF_BLOB_IS_MON | SURF_BLOB_FOLLOWER_GFX;
+        }
+    }
+#endif
+    if (spriteId == MAX_SPRITES)
+        spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SURF_BLOB], gFieldEffectArguments[0], gFieldEffectArguments[1], 150);
     if (spriteId != MAX_SPRITES)
     {
         struct Sprite *sprite = &gSprites[spriteId];
         sprite->coordOffsetEnabled = TRUE;
         sprite->sPlayerObjId = gFieldEffectArguments[2];
-        // Can use either gender's palette, so try to use the one that should be loaded
-        sprite->oam.paletteNum = LoadPlayerObjectEventPalette(gSaveBlock2Ptr->playerGender);
+        sprite->sBitfield |= monFlags;
+        if (monFlags == 0)
+        {
+            // Generic blob: can use either gender's palette, so try to use the one that should be loaded
+            sprite->oam.paletteNum = LoadPlayerObjectEventPalette(gSaveBlock2Ptr->playerGender);
+        }
+    #if OW_SURF_MON_SPRITE
+        else if (monFlags & SURF_BLOB_FOLLOWER_GFX)
+        {
+            SetSurfMonSpritePos(sprite, &gObjectEvents[sprite->sPlayerObjId], sprite->x, sprite->y);
+        }
+    #endif
         sprite->sVelocity = -1;
         sprite->sPrevX = -1;
         sprite->sPrevY = -1;
     }
     FieldEffectActiveListRemove(FLDEFF_SURF_BLOB);
     return spriteId;
+}
+
+#if OW_SURF_MON_SPRITE
+static void DestroySurfMonReflection(struct Sprite *reflection)
+{
+    // Not using DestroySprite, as the tiles belong to the reflected sprite and the affine matrices are shared
+    reflection->inUse = FALSE;
+    FieldEffectFreePaletteIfUnused(reflection->oam.paletteNum);
+}
+#endif
+
+// A Pokémon surf sprite owns a palette and possibly overlay and reflection sprites, which must be freed along with it
+void DestroySurfBlobSprite(u8 spriteId)
+{
+    struct Sprite *sprite = &gSprites[spriteId];
+    u32 paletteNum = sprite->oam.paletteNum;
+    bool32 isMon = (sprite->sBitfield & SURF_BLOB_IS_MON) != 0;
+
+    DestroySprite(sprite);
+    if (isMon)
+    {
+    #if OW_SURF_MON_SPRITE
+        u32 i;
+        for (i = 0; i < MAX_SPRITES; i++)
+        {
+            if (!gSprites[i].inUse || gSprites[i].sBlobSpriteId != spriteId)
+                continue;
+            if (gSprites[i].callback == UpdateSurfMonOverlay)
+                DestroySprite(&gSprites[i]);
+            else if (gSprites[i].callback == UpdateSurfMonReflection)
+                DestroySurfMonReflection(&gSprites[i]);
+        }
+    #endif
+        FieldEffectFreePaletteIfUnused(paletteNum);
+    }
 }
 
 
@@ -1256,21 +1622,14 @@ void UpdateSurfBlobFieldEffect(struct Sprite *sprite)
 
 static void SynchroniseSurfAnim(struct ObjectEvent *playerObj, struct Sprite *sprite)
 {
-    // Indexes into sAnimTable_SurfBlob
-    u8 surfBlobDirectionAnims[] = {
-        [DIR_NONE] = 0,
-        [DIR_SOUTH] = 0,
-        [DIR_NORTH] = 1,
-        [DIR_WEST] = 2,
-        [DIR_EAST] = 3,
-        [DIR_SOUTHWEST] = 0,
-        [DIR_SOUTHEAST] = 0,
-        [DIR_NORTHWEST] = 1,
-        [DIR_NORTHEAST] = 1,
-    };
-
     if (!GetSurfBlob_DontSyncAnim(sprite))
-        StartSpriteAnimIfDifferent(sprite, surfBlobDirectionAnims[playerObj->movementDirection]);
+    {
+        // Follower graphics use the follower anim table: play the walking anims so it looks like it's swimming
+        if (sprite->sBitfield & SURF_BLOB_FOLLOWER_GFX)
+            StartSpriteAnimIfDifferent(sprite, sSurfBlobDirectionAnims[playerObj->movementDirection] + ANIM_STD_GO_SOUTH);
+        else
+            StartSpriteAnimIfDifferent(sprite, sSurfBlobDirectionAnims[playerObj->movementDirection]);
+    }
 }
 
 void SynchroniseSurfPosition(struct ObjectEvent *playerObj, struct Sprite *sprite)
@@ -1325,10 +1684,79 @@ static void UpdateBobbingEffect(struct ObjectEvent *playerObj, struct Sprite *pl
                 playerSprite->y2 = sprite->sPlayerOffset + sprite->y2;
             sprite->x = playerSprite->x;
             sprite->y = playerSprite->y + 8;
+        #if OW_SURF_MON_SPRITE
+            if (sprite->sBitfield & SURF_BLOB_FOLLOWER_GFX)
+                SetSurfMonSpritePos(sprite, playerObj, sprite->x, sprite->y);
+        #endif
         }
     }
 }
 
+#if OW_SURF_MON_SPRITE
+// The overlay is the part of the surfing Pokémon drawn above the player, and mirrors the surf blob sprite
+static void UpdateSurfMonOverlay(struct Sprite *sprite)
+{
+    struct Sprite *blob = &gSprites[sprite->sBlobSpriteId];
+    struct ObjectEvent *playerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
+    struct Sprite *playerSprite = &gSprites[playerObj->spriteId];
+
+    if (!blob->inUse || blob->callback != UpdateSurfBlobFieldEffect)
+    {
+        DestroySprite(sprite);
+        return;
+    }
+
+    // While ridden the blob is moved along with the player, so follow the player too to not lag a frame behind
+    if (GetSurfBlob_BobState(blob) == BOB_PLAYER_AND_MON)
+    {
+        sprite->x = playerSprite->x;
+        sprite->y = playerSprite->y + 8;
+    }
+    else
+    {
+        sprite->x = blob->x;
+        sprite->y = blob->y;
+    }
+    sprite->y2 = blob->y2;
+    sprite->invisible = blob->invisible;
+    sprite->oam.priority = blob->oam.priority;
+    sprite->subpriority = playerSprite->subpriority - 1;
+    if (!GetSurfBlob_DontSyncAnim(blob))
+        StartSpriteAnimIfDifferent(sprite, sSurfBlobDirectionAnims[playerObj->movementDirection]);
+}
+
+// Same as UpdateObjectReflectionSprite, but follows one of the sprites of the surfing Pokémon
+static void UpdateSurfMonReflection(struct Sprite *reflection)
+{
+    struct Sprite *blob = &gSprites[reflection->sBlobSpriteId];
+    struct Sprite *reflected = &gSprites[reflection->sReflectedSpriteId];
+    struct ObjectEvent *playerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
+
+    if (!blob->inUse || blob->callback != UpdateSurfBlobFieldEffect || !reflected->inUse
+     || (reflected->callback != UpdateSurfBlobFieldEffect && reflected->callback != UpdateSurfMonOverlay))
+    {
+        DestroySurfMonReflection(reflection);
+        return;
+    }
+
+    reflection->oam.shape = reflected->oam.shape;
+    reflection->oam.size = reflected->oam.size;
+    reflection->oam.tileNum = reflected->oam.tileNum;
+    // Water reflection matrix: the one for flipped sprites is 1
+    reflection->oam.matrixNum = (reflected->oam.matrixNum & ST_OAM_HFLIP) ? 1 : 0;
+    reflection->x = reflected->x;
+    reflection->y = reflected->y + SURF_MON_REFLECTION_OFFSET;
+    reflection->x2 = reflected->x2;
+    reflection->y2 = -reflected->y2;
+    reflection->centerToCornerVecX = reflected->centerToCornerVecX;
+    reflection->centerToCornerVecY = reflected->centerToCornerVecY;
+    reflection->coordOffsetEnabled = reflected->coordOffsetEnabled;
+    reflection->invisible = reflected->invisible || !playerObj->hasReflection || playerObj->hideReflection;
+}
+#endif
+
+#undef sBlobSpriteId
+#undef sReflectedSpriteId
 #undef sBitfield
 #undef sPlayerOffset
 #undef sPlayerObjId

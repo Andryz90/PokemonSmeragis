@@ -69,6 +69,9 @@
 #define OW_FOLLOWERS_ALLOWED_SPECIES (0)
 #define OW_FOLLOWERS_ALLOWED_MET_LVL (0)
 #define OW_FOLLOWERS_ALLOWED_MET_LOC (0)
+// Surfing Pokémon
+#define OW_SURF_MON_SPRITE             TRUE      // If TRUE, Surfing shows the overworld sprite of the Pokémon actually used to Surf instead of the generic Surf Blob. Uses the dedicated surfing sprites in graphics/object_events/pics/pokemon/surfable (ported from Pokémon Heart & Soul, by slawter666 and wally-217).
+#define OW_SURF_MON_FOLLOWER_FALLBACK  FALSE     // If TRUE, Pokémon without a dedicated surfing sprite use their follower overworld sprite instead of the generic Surf Blob. Requires OW_SURF_MON_SPRITE and OW_POKEMON_OBJECT_EVENTS.
 
 // Out-of-battle Ability effects
 #define OW_SYNCHRONIZE_NATURE       GEN_LATEST // In Gen8+, if a Pokémon with Synchronize leads the party, wild Pokémon will always have their same Nature as opposed to the 50% chance in previous games. Gift Pokémon excluded.
@@ -107,7 +110,7 @@
 #define OW_FLAG_PAUSE_TIME          0  // If this flag is set and OW_USE_FAKE_RTC is enabled, seconds on the in-game clock will not advance.
 #define OW_FLAG_NO_ENCOUNTER        0  // If this flag is set, wild encounters will be disabled.
 #define OW_FLAG_NO_TRAINER_SEE      0  // If this flag is set, trainers will not battle the player unless they're talked to.
-#define OW_FLAG_NO_COLLISION        0  // If this flag is set, the player will be able to walk over tiles with collision. Mainly intended for debugging purposes.
+#define OW_FLAG_NO_COLLISION        FLAG_UNUSED_0x04A  // If this flag is set, the player will be able to walk over tiles with collision. Mainly intended for debugging purposes.
 #define OW_FLAG_POKE_RIDER          FLAG_NAV_POKERIDER  // If this flag is set, the player will be able to use fly from the Pokenav Region Map and the Town Map key item by pressing 'R' on a city/location they are able to fly to.
 
 #define BATTLE_PYRAMID_RANDOM_ENCOUNTERS    FALSE    // If set to TRUE, battle pyramid Pokemon will be generated randomly based on the round's challenge instead of hardcoded in src/data/battle_frontier/battle_pyramid_level_50_wild_mons.h (or open_level_wild_mons.h)

@@ -907,6 +907,33 @@ const u16 gItemIconPalette_Medichamite[] = INCBIN_U16("graphics/items/icon_palet
 const u32 gItemIcon_Manectite[] = INCBIN_U32("graphics/items/icons/manectite.4bpp.lz");
 const u16 gItemIconPalette_Manectite[] = INCBIN_U16("graphics/items/icon_palettes/manectite.gbapal");
 
+const u32 gItemIcon_Feraligatite[] = INCBIN_U32("graphics/items/icons/feraligatite.4bpp.lz");
+const u16 gItemIconPalette_Feraligatite[] = INCBIN_U16("graphics/items/icon_palettes/feraligatite.gbapal");
+
+const u32 gItemIcon_RaichuniteX[] = INCBIN_U32("graphics/items/icons/raichunite_x.4bpp.lz");
+const u16 gItemIconPalette_RaichuniteX[] = INCBIN_U16("graphics/items/icon_palettes/raichunite_x.gbapal");
+
+const u32 gItemIcon_RaichuniteY[] = INCBIN_U32("graphics/items/icons/raichunite_y.4bpp.lz");
+const u16 gItemIconPalette_RaichuniteY[] = INCBIN_U16("graphics/items/icon_palettes/raichunite_y.gbapal");
+
+const u32 gItemIcon_Chesnaughtite[] = INCBIN_U32("graphics/items/icons/chesnaughtite.4bpp.lz");
+const u16 gItemIconPalette_Chesnaughtite[] = INCBIN_U16("graphics/items/icon_palettes/chesnaughtite.gbapal");
+
+const u32 gItemIcon_Delphoxite[] = INCBIN_U32("graphics/items/icons/delphoxite.4bpp.lz");
+const u16 gItemIconPalette_Delphoxite[] = INCBIN_U16("graphics/items/icon_palettes/delphoxite.gbapal");
+
+const u32 gItemIcon_Meganiumite[] = INCBIN_U32("graphics/items/icons/meganiumite.4bpp.lz");
+const u16 gItemIconPalette_Meganiumite[] = INCBIN_U16("graphics/items/icon_palettes/meganiumite.gbapal");
+
+const u32 gItemIcon_Golisopodite[] = INCBIN_U32("graphics/items/icons/golisopodite.4bpp.lz");
+const u16 gItemIconPalette_Golisopodite[] = INCBIN_U16("graphics/items/icon_palettes/golisopodite.gbapal");
+
+const u32 gItemIcon_Crabominablite[] = INCBIN_U32("graphics/items/icons/crabominablite.4bpp.lz");
+const u16 gItemIconPalette_Crabominablite[] = INCBIN_U16("graphics/items/icon_palettes/crabominablite.gbapal");
+
+const u32 gItemIcon_Typhlosionite[] = INCBIN_U32("graphics/items/icons/typhlosionite.4bpp.lz");
+const u16 gItemIconPalette_Typhlosionite[] = INCBIN_U16("graphics/items/icon_palettes/typhlosionite.gbapal");
+
 const u32 gItemIcon_Sharpedonite[] = INCBIN_U32("graphics/items/icons/sharpedonite.4bpp.lz");
 const u16 gItemIconPalette_Sharpedonite[] = INCBIN_U16("graphics/items/icon_palettes/sharpedonite.gbapal");
 

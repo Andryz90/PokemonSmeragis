@@ -1,6 +1,7 @@
 #ifndef GUARD_FIELD_SPECIALS_H
 #define GUARD_FIELD_SPECIALS_H
 
+struct ScriptContext;
 
 extern bool8 gBikeCyclingChallenge;
 extern u8 gBikeCollisions;
@@ -38,6 +39,7 @@ void GetObjectPosition(u16*, u16*, u32, u32);
 bool32 CheckObjectAtXY(u32, u32);
 bool32 CheckPartyHasSpecies(u32);
 void SetRoute110WarpTrigger(void);
+void ScriptSetNpcFlyOutTarget(struct ScriptContext *ctx);
 
 //Custom
 void Handle_Wingull_Flag (void);
@@ -49,4 +51,5 @@ void DamageMon (void);
 void Script_GiveMonSpecial (void);
 void RegisterTalkedFossil (void);
 void ReturnPokemonSpeciesFromOW (void);
+void SetScriptedWildMonShinyFromOW (void);
 #endif // GUARD_FIELD_SPECIALS_H

@@ -1526,7 +1526,7 @@ const struct Item gItemsInfo[] =
         [ITEM_ABILITY_CAPSULE] =
             {
         .name = _("Ability Capsule"),
-                .price = 10000,
+                .price = 5000,
                 .holdEffectParam = 0,
                 .description = COMPOUND_STRING(
                     "Switches a Poké-\n"
@@ -1542,7 +1542,7 @@ const struct Item gItemsInfo[] =
             {
                 .name = _("Ability Patch"),
                 .pluralName = _("Ability Patches"),
-                .price = 15000,
+                .price = 7500,
                 .holdEffectParam = 0,
                 .description = COMPOUND_STRING(
                     "Turns the ability\n"
@@ -6123,6 +6123,136 @@ const struct Item gItemsInfo[] =
                 .iconPic = gItemIcon_Diancite,
                 .iconPalette = gItemIconPalette_Diancite,
             },
+        [ITEM_RAICHUNITE_X] =
+            {
+                .name = _("Raichunite X"),
+                .pluralName = _("Raichunites X"),
+                .price = 0,
+                .holdEffect = HOLD_EFFECT_MEGA_STONE,
+                .description = COMPOUND_STRING(
+                    "This stone enables\n"
+                    "Raichu to Mega\n"
+                    "Evolve in battle."),
+                .pocket = POCKET_MEGASTONES,
+                .type = ITEM_USE_BAG_MENU,
+                .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+                .flingPower = 80,
+                .iconPic = gItemIcon_RaichuniteX,
+                .iconPalette = gItemIconPalette_RaichuniteX,
+            },
+        [ITEM_RAICHUNITE_Y] =
+            {
+                .name = _("Raichunite Y"),
+                .pluralName = _("Raichunites Y"),
+                .price = 0,
+                .holdEffect = HOLD_EFFECT_MEGA_STONE,
+                .description = COMPOUND_STRING(
+                    "This stone enables\n"
+                    "Raichu to Mega\n"
+                    "Evolve in battle."),
+                .pocket = POCKET_MEGASTONES,
+                .type = ITEM_USE_BAG_MENU,
+                .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+                .flingPower = 80,
+                .iconPic = gItemIcon_RaichuniteY,
+                .iconPalette = gItemIconPalette_RaichuniteY,
+            },
+        [ITEM_CHESNAUGHTITE] =
+            {
+                .name = _("Chesnaughtite"),
+                .price = 0,
+                .holdEffect = HOLD_EFFECT_MEGA_STONE,
+                .description = COMPOUND_STRING(
+                    "This stone enables\n"
+                    "Chesnaught to Mega\n"
+                    "Evolve in battle."),
+                .pocket = POCKET_MEGASTONES,
+                .type = ITEM_USE_BAG_MENU,
+                .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+                .flingPower = 80,
+                .iconPic = gItemIcon_Chesnaughtite,
+                .iconPalette = gItemIconPalette_Chesnaughtite,
+            },
+        [ITEM_DELPHOXITE] =
+            {
+                .name = _("Delphoxite"),
+                .price = 0,
+                .holdEffect = HOLD_EFFECT_MEGA_STONE,
+                .description = COMPOUND_STRING(
+                    "This stone enables\n"
+                    "Delphox to Mega\n"
+                    "Evolve in battle."),
+                .pocket = POCKET_MEGASTONES,
+                .type = ITEM_USE_BAG_MENU,
+                .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+                .flingPower = 80,
+                .iconPic = gItemIcon_Delphoxite,
+                .iconPalette = gItemIconPalette_Delphoxite,
+            },
+        [ITEM_MEGANIUMITE] =
+            {
+                .name = _("Meganiumite"),
+                .price = 0,
+                .holdEffect = HOLD_EFFECT_MEGA_STONE,
+                .description = COMPOUND_STRING(
+                    "This stone enables\n"
+                    "Meganium to Mega\n"
+                    "Evolve in battle."),
+                .pocket = POCKET_MEGASTONES,
+                .type = ITEM_USE_BAG_MENU,
+                .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+                .flingPower = 80,
+                .iconPic = gItemIcon_Meganiumite,
+                .iconPalette = gItemIconPalette_Meganiumite,
+            },
+        [ITEM_GOLISOPODITE] =
+            {
+                .name = _("Golisopodite"),
+                .price = 0,
+                .holdEffect = HOLD_EFFECT_MEGA_STONE,
+                .description = COMPOUND_STRING(
+                    "This stone enables\n"
+                    "Golisopod to Mega\n"
+                    "Evolve in battle."),
+                .pocket = POCKET_MEGASTONES,
+                .type = ITEM_USE_BAG_MENU,
+                .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+                .flingPower = 80,
+                .iconPic = gItemIcon_Golisopodite,
+                .iconPalette = gItemIconPalette_Golisopodite,
+            },
+        [ITEM_CRABOMINABLITE] =
+            {
+                .name = _("Crabominablite"),
+                .price = 0,
+                .holdEffect = HOLD_EFFECT_MEGA_STONE,
+                .description = COMPOUND_STRING(
+                    "This stone enables\n"
+                    "Crabominable to\n"
+                    "Mega Evolve in battle."),
+                .pocket = POCKET_MEGASTONES,
+                .type = ITEM_USE_BAG_MENU,
+                .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+                .flingPower = 80,
+                .iconPic = gItemIcon_Crabominablite,
+                .iconPalette = gItemIconPalette_Crabominablite,
+            },
+        [ITEM_TYPHLOSIONITE] =
+            {
+                .name = _("Typhlosionite"),
+                .price = 0,
+                .holdEffect = HOLD_EFFECT_MEGA_STONE,
+                .description = COMPOUND_STRING(
+                    "This stone enables\n"
+                    "Typhlosion to Mega\n"
+                    "Evolve in battle."),
+                .pocket = POCKET_MEGASTONES,
+                .type = ITEM_USE_BAG_MENU,
+                .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+                .flingPower = 80,
+                .iconPic = gItemIcon_Typhlosionite,
+                .iconPalette = gItemIconPalette_Typhlosionite,
+            },
         [ITEM_FERALIGATITE] =
             {
                 .name = _("Feraligatite"),
@@ -6136,8 +6266,8 @@ const struct Item gItemsInfo[] =
                 .type = ITEM_USE_BAG_MENU,
                 .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
                 .flingPower = 80,
-                .iconPic = gItemIcon_Diancite,
-                .iconPalette = gItemIconPalette_Diancite,
+                .iconPic = gItemIcon_Feraligatite,
+                .iconPalette = gItemIconPalette_Feraligatite,
             },
 
         // Gems
@@ -8206,7 +8336,7 @@ const struct Item gItemsInfo[] =
         [ITEM_ABSORB_BULB] =
             {
                 .name = _("Absorb Bulb"),
-                .price = (I_PRICE >= GEN_9) ? 5000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+                .price = 200,
                 .holdEffect = HOLD_EFFECT_ABSORB_BULB,
                 .holdEffectParam = 0,
                 .description = COMPOUND_STRING(
@@ -8225,7 +8355,7 @@ const struct Item gItemsInfo[] =
             {
                 .name = _("Cell Battery"),
                 .pluralName = _("Cell Batteries"),
-                .price = (I_PRICE >= GEN_9) ? 5000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+                .price = 200,
                 .holdEffect = HOLD_EFFECT_CELL_BATTERY,
                 .holdEffectParam = 0,
                 .description = COMPOUND_STRING(
@@ -8262,7 +8392,7 @@ const struct Item gItemsInfo[] =
         [ITEM_SNOWBALL] =
             {
                 .name = _("Snowball"),
-                .price = (I_PRICE >= GEN_9) ? 5000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+                .price = 200,
                 .holdEffect = HOLD_EFFECT_SNOWBALL,
                 .holdEffectParam = 0,
                 .description = COMPOUND_STRING(
@@ -8872,7 +9002,7 @@ const struct Item gItemsInfo[] =
         [ITEM_RAZOR_CLAW] =
             {
                 .name = _("Razor Claw"),
-                .price = (I_PRICE >= GEN_9) ? 15000 : ((I_PRICE >= GEN_7) ? 5000 : 2100),
+                .price = 1000,
                 .holdEffect = HOLD_EFFECT_SCOPE_LENS,
                 .description = COMPOUND_STRING(
                     "A hooked claw that\n"
@@ -8890,7 +9020,7 @@ const struct Item gItemsInfo[] =
         [ITEM_RAZOR_FANG] =
             {
                 .name = _("Razor Fang"),
-                .price = (I_PRICE >= GEN_9) ? 15000 : ((I_PRICE >= GEN_7) ? 5000 : 2100),
+                .price = 1000,
                 .holdEffect = HOLD_EFFECT_FLINCH,
                 .holdEffectParam = 10,
                 .description = sKingsRockDesc,
@@ -8941,7 +9071,7 @@ const struct Item gItemsInfo[] =
         [ITEM_ROCKY_HELMET] =
             {
                 .name = _("Rocky Helmet"),
-                .price = (I_PRICE >= GEN_9) ? 50000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+                .price = 2000,
                 .holdEffect = HOLD_EFFECT_ROCKY_HELMET,
                 .holdEffectParam = 0,
                 .description = COMPOUND_STRING(
@@ -8959,7 +9089,7 @@ const struct Item gItemsInfo[] =
         [ITEM_AIR_BALLOON] =
             {
                 .name = _("Air Balloon"),
-                .price = (I_PRICE >= GEN_9) ? 15000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+                .price = 200,
                 .holdEffect = HOLD_EFFECT_AIR_BALLOON,
                 .holdEffectParam = 0,
                 .description = COMPOUND_STRING(
@@ -13203,7 +13333,7 @@ const struct Item gItemsInfo[] =
     [ITEM_ABILITY_SHIELD] =
     {
         .name = _("Ability Shield"),
-            .price = 20000,
+            .price = 2000,
             .holdEffect = HOLD_EFFECT_ABILITY_SHIELD,
         .description = COMPOUND_STRING(
             "Ability changes are\n"

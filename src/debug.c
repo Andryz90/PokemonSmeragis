@@ -140,6 +140,7 @@ enum GivePCBagDebugMenu
 
 enum GivePCBagFillDebugMenu
 {
+    DEBUG_PCBAG_MENU_ITEM_FILL_AVAILABLE_WILD_MONS,
     DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST,
     DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW,
     DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS,
@@ -418,6 +419,7 @@ static void DebugAction_TimeMenu_ChangeTimeOfDay(u8 taskId);
 static void DebugAction_TimeMenu_ChangeWeekdays(u8 taskId);
 
 static void DebugAction_OpenPCBagFillMenu(u8 taskId);
+static void DebugAction_PCBag_Fill_AvailableWildMons(u8 taskId);
 static void DebugAction_PCBag_Fill_PCBoxes_Fast(u8 taskId);
 static void DebugAction_PCBag_Fill_PCBoxes_Slow(u8 taskId);
 static void DebugAction_PCBag_Fill_PCItemStorage(u8 taskId);
@@ -531,6 +533,7 @@ extern const u8 PlayersHouse_2F_EventScript_CheckWallClock[];
 extern const u8 Debug_CheckSaveBlock[];
 extern const u8 Debug_CheckROMSpace[];
 extern const u8 Debug_BoxFilledMessage[];
+extern const u8 Debug_AvailableWildMonsAddedMessage[];
 extern const u8 Debug_ShowExpansionVersion[];
 extern const u8 Debug_EventScript_EWRAMCounters[];
 extern const u8 Debug_EventScript_Steven_Multi[];
@@ -697,6 +700,7 @@ static const struct ListMenuItem sDebugMenu_Items_PCBag[] =
 
 static const struct ListMenuItem sDebugMenu_Items_PCBag_Fill[] =
 {
+    [DEBUG_PCBAG_MENU_ITEM_FILL_AVAILABLE_WILD_MONS] = {COMPOUND_STRING("Add Available Wild Mons"),    DEBUG_PCBAG_MENU_ITEM_FILL_AVAILABLE_WILD_MONS},
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST]    = {COMPOUND_STRING("Fill PC Boxes Fast"),        DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST},
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW]    = {COMPOUND_STRING("Fill PC Boxes Slow (LAG!)"), DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW},
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS]         = {COMPOUND_STRING("Fill PC Items") ,            DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS},
@@ -879,6 +883,7 @@ static void (*const sDebugMenu_Actions_PCBag[])(u8) =
 
 static void (*const sDebugMenu_Actions_PCBag_Fill[])(u8) =
 {
+    [DEBUG_PCBAG_MENU_ITEM_FILL_AVAILABLE_WILD_MONS] = DebugAction_PCBag_Fill_AvailableWildMons,
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST]    = DebugAction_PCBag_Fill_PCBoxes_Fast,
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW]    = DebugAction_PCBag_Fill_PCBoxes_Slow,
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS]         = DebugAction_PCBag_Fill_PCItemStorage,
@@ -3904,6 +3909,247 @@ static void DebugAction_OpenPCBagFillMenu(u8 taskId)
     Debug_ShowMenu(DebugTask_HandleMenuInput_PCBag_Fill, sDebugMenu_ListTemplate_PCBag_Fill);
 }
 
+static u8 Debug_GetBadgeCount(void)
+{
+    u8 badgeCount = 0;
+    u16 flagId;
+
+    for (flagId = FLAG_BADGE01_GET; flagId <= FLAG_BADGE08_GET; flagId++)
+    {
+        if (FlagGet(flagId))
+            badgeCount++;
+    }
+
+    return badgeCount;
+}
+
+// Returns the earliest badge at which an encounter map can be reached.
+// Water encounters are handled separately, because Surf unlocks the water on
+// every earlier route once the fifth badge has been earned.
+static u8 Debug_GetEncounterMapBadgeRequirement(u8 mapGroup, u8 mapNum)
+{
+    u16 map = mapNum | (mapGroup << 8);
+
+    switch (map)
+    {
+    case MAP_LITTLEROOT_TOWN:
+    case MAP_OLDALE_TOWN:
+    case MAP_PETALBURG_CITY:
+    case MAP_ROUTE101:
+    case MAP_ROUTE102:
+    case MAP_ROUTE103:
+    case MAP_ROUTE104:
+    case MAP_PETALBURG_WOODS:
+        return 0;
+    case MAP_RUSTBORO_CITY:
+    case MAP_ROUTE116:
+    case MAP_RUSTURF_TUNNEL:
+        return 1;
+    case MAP_SLATEPORT_CITY:
+    case MAP_DEWFORD_TOWN:
+    case MAP_ROUTE105:
+    case MAP_ROUTE106:
+    case MAP_ROUTE107:
+    case MAP_ROUTE108:
+    case MAP_ROUTE109:
+    case MAP_GRANITE_CAVE_1F:
+    case MAP_GRANITE_CAVE_B1F:
+    case MAP_GRANITE_CAVE_B2F:
+    case MAP_GRANITE_CAVE_B3F:
+    case MAP_GRANITE_CAVE_STEVENS_ROOM:
+    case MAP_DEWFORD_MEADOW:
+    case MAP_DEWFORD_MEADOW_HOUSE:
+    case MAP_SLATEPORT_SEWER:
+        return 2;
+    case MAP_MAUVILLE_CITY:
+    case MAP_LAVARIDGE_TOWN:
+    case MAP_VERDANTURF_TOWN:
+    case MAP_ROUTE110:
+    case MAP_ROUTE112:
+    case MAP_ROUTE113:
+    case MAP_ROUTE114:
+    case MAP_ROUTE117:
+    case MAP_FIERY_PATH:
+    case MAP_JAGGED_PASS:
+    case MAP_METEOR_FALLS_1F_1R:
+    case MAP_METEOR_FALLS_1F_2R:
+    case MAP_METEOR_FALLS_B1F_1R:
+    case MAP_METEOR_FALLS_B1F_2R:
+        return 3;
+    // Route 111 contains the desert encounter table, so it becomes available
+    // with the fourth badge rather than exposing the desert table early.
+    case MAP_ROUTE111:
+    case MAP_DESERT_RUINS:
+    case MAP_MIRAGE_TOWER_1F:
+    case MAP_MIRAGE_TOWER_2F:
+    case MAP_MIRAGE_TOWER_3F:
+    case MAP_MIRAGE_TOWER_4F:
+        return 4;
+    case MAP_ROUTE115:
+    case MAP_ROUTE118:
+    case MAP_ROUTE119:
+    case MAP_ROUTE120:
+    case MAP_FORTREE_CITY:
+    case MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS:
+    case MAP_ABANDONED_SHIP_ROOMS_B1F:
+    case MAP_NEW_MAUVILLE_INSIDE:
+        return 5;
+    case MAP_LILYCOVE_CITY:
+    case MAP_MOSSDEEP_CITY:
+    case MAP_ROUTE121:
+    case MAP_ROUTE122:
+    case MAP_ROUTE123:
+    case MAP_ROUTE124:
+    case MAP_ROUTE125:
+    case MAP_ROUTE126:
+    case MAP_MT_PYRE_1F:
+    case MAP_MT_PYRE_2F:
+    case MAP_MT_PYRE_3F:
+    case MAP_MT_PYRE_4F:
+    case MAP_MT_PYRE_5F:
+    case MAP_MT_PYRE_6F:
+    case MAP_MT_PYRE_EXTERIOR:
+    case MAP_MT_PYRE_SUMMIT:
+    case MAP_SAFARI_ZONE_NORTH:
+    case MAP_SAFARI_ZONE_NORTHEAST:
+    case MAP_SAFARI_ZONE_NORTHWEST:
+    case MAP_SAFARI_ZONE_SOUTH:
+    case MAP_SAFARI_ZONE_SOUTHEAST:
+    case MAP_SAFARI_ZONE_SOUTHWEST:
+    case MAP_SHOAL_CAVE_LOW_TIDE_ENTRANCE_ROOM:
+    case MAP_SHOAL_CAVE_LOW_TIDE_INNER_ROOM:
+    case MAP_SHOAL_CAVE_LOW_TIDE_STAIRS_ROOM:
+    case MAP_SHOAL_CAVE_LOW_TIDE_LOWER_ROOM:
+    case MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM:
+        return 6;
+    case MAP_ROUTE127:
+    case MAP_ROUTE128:
+    case MAP_UNDERWATER_ROUTE124:
+    case MAP_UNDERWATER_ROUTE126:
+    case MAP_SEAFLOOR_CAVERN_ENTRANCE:
+    case MAP_SEAFLOOR_CAVERN_ROOM1:
+    case MAP_SEAFLOOR_CAVERN_ROOM2:
+    case MAP_SEAFLOOR_CAVERN_ROOM3:
+    case MAP_SEAFLOOR_CAVERN_ROOM4:
+    case MAP_SEAFLOOR_CAVERN_ROOM5:
+    case MAP_SEAFLOOR_CAVERN_ROOM6:
+    case MAP_SEAFLOOR_CAVERN_ROOM7:
+    case MAP_SEAFLOOR_CAVERN_ROOM8:
+        return 7;
+    default:
+        // Unlisted maps are late-game, post-game, or custom maps. They are
+        // intentionally held until all eight badges are present.
+        return NUM_BADGES;
+    }
+}
+
+static u16 Debug_GetEvolutionFamily(u16 species)
+{
+    u16 preEvolution;
+
+    while ((preEvolution = GetSpeciesPreEvolution(species)) != SPECIES_NONE)
+        species = preEvolution;
+
+    return species;
+}
+
+static bool8 Debug_AddWildEncounterInfoToStorage(const struct WildPokemonInfo *wildMonsInfo, u8 wildCount, bool8 *seenFamilies, u16 *addedCount)
+{
+    u8 i;
+
+    if (wildMonsInfo == NULL)
+        return TRUE;
+
+    for (i = 0; i < wildCount; i++)
+    {
+        u16 species = wildMonsInfo->wildPokemon[i].species;
+        u16 family = Debug_GetEvolutionFamily(species);
+        u8 boxId;
+        u8 boxPosition;
+        struct BoxPokemon boxMon;
+
+        if (species == SPECIES_NONE || seenFamilies[family])
+            continue;
+
+        for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
+        {
+            for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++)
+            {
+                if (!GetBoxMonData(&gPokemonStoragePtr->boxes[boxId][boxPosition], MON_DATA_SANITY_HAS_SPECIES))
+                    goto foundEmptySlot;
+            }
+        }
+
+        return FALSE;
+
+    foundEmptySlot:
+        CreateBoxMon(&boxMon, species, 1, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        gPokemonStoragePtr->boxes[boxId][boxPosition] = boxMon;
+        seenFamilies[family] = TRUE;
+        (*addedCount)++;
+
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_CAUGHT);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_SET_SEEN);
+    }
+
+    return TRUE;
+}
+
+static void DebugAction_PCBag_Fill_AvailableWildMons(u8 taskId)
+{
+    bool8 seenFamilies[NUM_SPECIES] = {0};
+    u8 badgeCount = Debug_GetBadgeCount();
+    u16 addedCount = 0;
+    u16 headerId;
+    u8 timeOfDay;
+    u8 boxId;
+    u8 boxPosition;
+
+    // Existing Box Pokémon count as already supplied, including any of their
+    // evolutions, so this action remains safe to use more than once.
+    for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
+    {
+        for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++)
+        {
+            struct BoxPokemon *boxMon = &gPokemonStoragePtr->boxes[boxId][boxPosition];
+
+            if (GetBoxMonData(boxMon, MON_DATA_SANITY_HAS_SPECIES))
+            {
+                u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES);
+                seenFamilies[Debug_GetEvolutionFamily(species)] = TRUE;
+            }
+        }
+    }
+
+    for (headerId = 0; gWildMonHeaders[headerId].mapGroup != MAP_GROUP(MAP_UNDEFINED); headerId++)
+    {
+        const struct WildPokemonHeader *header = &gWildMonHeaders[headerId];
+        u8 requiredBadges = Debug_GetEncounterMapBadgeRequirement(header->mapGroup, header->mapNum);
+
+        if (badgeCount < requiredBadges)
+            continue;
+
+        for (timeOfDay = 0; timeOfDay < TIMES_OF_DAY_COUNT; timeOfDay++)
+        {
+            const struct WildEncounterTypes *encounterTypes = &header->encounterTypes[timeOfDay];
+
+            if (!Debug_AddWildEncounterInfoToStorage(encounterTypes->landMonsInfo, LAND_WILD_COUNT, seenFamilies, &addedCount)
+             || !Debug_AddWildEncounterInfoToStorage(encounterTypes->fishingMonsInfo, FISH_WILD_COUNT, seenFamilies, &addedCount))
+                goto finish;
+
+            if (badgeCount >= max(requiredBadges, 5)
+             && !Debug_AddWildEncounterInfoToStorage(encounterTypes->waterMonsInfo, WATER_WILD_COUNT, seenFamilies, &addedCount))
+                goto finish;
+        }
+    }
+
+finish:
+    if (addedCount != 0)
+        FlagSet(FLAG_SYS_POKEMON_GET);
+    ConvertIntToDecimalStringN(gStringVar1, addedCount, STR_CONV_MODE_LEFT_ALIGN, 3);
+    Debug_DestroyMenu_Full_Script(taskId, Debug_AvailableWildMonsAddedMessage);
+}
+
 static void DebugAction_PCBag_Fill_PCBoxes_Fast(u8 taskId) //Credit: Sierraffinity
 {
     int boxId, boxPosition;
@@ -5008,4 +5254,3 @@ static void DebugAction_Util_CheckEWRAMCounters(u8 taskId)
 {
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_EWRAMCounters);
 }
-

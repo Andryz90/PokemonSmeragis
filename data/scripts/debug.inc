@@ -116,6 +116,14 @@ Debug_BoxFilledMessage::
 Debug_BoxFilledMessage_Text:
 	.string "Storage boxes filled! $"
 
+Debug_AvailableWildMonsAddedMessage::
+	message Debug_AvailableWildMonsAddedMessage_Text
+	goto Debug_MessageEnd
+
+Debug_AvailableWildMonsAddedMessage_Text:
+	.string "Added {STR_VAR_1} available\n"
+	.string "wild Pokémon at Lv. 1. $"
+
 Debug_EventScript_CheckEVs::
 	lockall
 	getpartysize

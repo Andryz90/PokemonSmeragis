@@ -599,7 +599,8 @@
     "Slateport_Sewer",
     "AreaZero_Inside",
     "AreaZero_Inside_2",
-    "AreaZero_Outside2"
+    "AreaZero_Outside2",
+    "AreaZero_Harbor"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

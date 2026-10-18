@@ -26344,6 +26344,10 @@
         "Move": "MOVE_WATER_SPOUT"
       },
       {
+        "Level": 0,
+        "Move": "MOVE_HYPER_VOICE"
+      },
+      {
         "Level": 1,
         "Move": "MOVE_SOAK"
       },

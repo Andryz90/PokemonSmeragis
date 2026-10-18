@@ -1690,7 +1690,10 @@
 #define SPECIES_DRAGONITE_MEGA                          (SPECIES_RAICHU_MEGA_Y + 1)
 #define SPECIES_CHESNAUGHT_MEGA                         (SPECIES_DRAGONITE_MEGA + 1)
 #define SPECIES_DELPHOX_MEGA                            (SPECIES_CHESNAUGHT_MEGA + 1)
-#define NUMBER_OF_SPECIES_NO_EGG                        (SPECIES_DELPHOX_MEGA)
+#define SPECIES_TYPHLOSION_MEGA                         (SPECIES_DELPHOX_MEGA + 1)
+#define SPECIES_GOLISOPOD_MEGA                          (SPECIES_TYPHLOSION_MEGA + 1)
+#define SPECIES_CRABOMINABLE_MEGA                       (SPECIES_GOLISOPOD_MEGA + 1)
+#define NUMBER_OF_SPECIES_NO_EGG                        (SPECIES_CRABOMINABLE_MEGA)
 
 #define SPECIES_EGG (NUMBER_OF_SPECIES_NO_EGG + 1)
 

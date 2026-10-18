@@ -1248,9 +1248,9 @@
 #define FLAG_NAV_POKERIDER                                          0x4A9 
 #define FLAG_AREA_ZERO_OUTSIDE2_OBJ                                 0x4AA
 #define FLAG_AREA_ZERO_OUTSIDE2_PARADOX_VISION                      0x4AB
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
+#define FLAG_AQUA_R105_EVENT                                        0x4AC
 #define FLAG_AREA_ZERO_OUTSIDE2_LATIS                               0x4AD
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
+#define FLAG_AQUA_R108_EVENT                                        0x4AE
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
 #define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
 #define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag

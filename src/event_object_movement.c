@@ -2360,6 +2360,28 @@ bool32 IsFollowerVisible(void)
             || MetatileBehavior_IsForcedMovementTile(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior));
 }
 
+#if OW_SURF_MON_SPRITE
+// Get the overworld graphicsId of a party Pokémon, resolving forms the same way follower Pokémon do.
+// Returns FALSE if the species has no dedicated overworld sprite.
+bool32 GetMonOverworldGraphicsId(struct Pokemon *mon, u16 *graphicsId)
+{
+    u32 species;
+    bool32 shiny;
+    bool32 female;
+    const struct ObjectEventGraphicsInfo *graphicsInfo;
+
+    if (!GetMonInfo(mon, &species, &shiny, &female) || species == SPECIES_NONE)
+        return FALSE;
+
+    graphicsInfo = SpeciesToGraphicsInfo(species, shiny, female);
+    if (graphicsInfo == NULL || graphicsInfo == &gSpeciesInfo[SPECIES_NONE].overworldData)
+        return FALSE;
+
+    *graphicsId = GetGraphicsIdForMon(species, shiny, female);
+    return TRUE;
+}
+#endif
+
 static bool8 SpeciesHasType(u16 species, u8 type)
 {
     return gSpeciesInfo[species].types[0] == type || gSpeciesInfo[species].types[1] == type;

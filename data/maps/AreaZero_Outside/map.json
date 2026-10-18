@@ -468,8 +468,8 @@
       "x": 21,
       "y": 76,
       "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY",
-      "dest_warp_id": "12"
+      "dest_map": "MAP_AREA_ZERO_HARBOR",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -526,6 +526,177 @@
       "var": "VAR_AREAZERO_STATE",
       "var_value": "4",
       "script": "AreaZero_Outside_EventTrigger_BreakCrystalReminder"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "0",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "1",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "2",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "3",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "4",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "5",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "6",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "7",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "8",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "9",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "10",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "11",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "12",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "13",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "14",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "15",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "16",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "17",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 76,
+      "elevation": 0,
+      "var": "VAR_AREAZERO_STATE",
+      "var_value": "18",
+      "script": "AreaZero_Outside_EventTrigger_CantLeave"
     }
   ],
   "bg_events": []

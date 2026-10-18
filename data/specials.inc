@@ -296,6 +296,8 @@ gSpecials::
 	def_special ShowGlassWorkshopMenu
 	def_special SpawnCameraObject
 	def_special RemoveCameraObject
+	def_special HidePlayerForCutscene
+	def_special ShowPlayerAfterCutscene
 	def_special GetPokeblockNameByMonNature
 	def_special GetSecretBaseNearbyMapName
 	def_special CheckRelicanthWailord
@@ -577,3 +579,4 @@ gSpecials::
 	def_special GetCodeFeedback
 	def_special RegisterTalkedFossil
 	def_special ReturnPokemonSpeciesFromOW
+	def_special SetScriptedWildMonShinyFromOW

@@ -102,6 +102,17 @@ static EWRAM_DATA u8 sFrontierExchangeCorner_ItemIconWindowId = 0;
 static EWRAM_DATA u8 sPCBoxToSendMon = 0;
 static EWRAM_DATA u32 sBattleTowerMultiBattleTypeFlags = 0;
 
+void ScriptSetNpcFlyOutTarget(struct ScriptContext *ctx)
+{
+    u8 objectEventId;
+
+    (void)ctx;
+
+    objectEventId = GetObjectEventIdByLocalId(VarGet(VAR_LAST_TALKED));
+    if (objectEventId != OBJECT_EVENTS_COUNT)
+        gFieldEffectArguments[0] = gObjectEvents[objectEventId].spriteId;
+}
+
 COMMON_DATA struct ListMenuTemplate gScrollableMultichoice_ListMenuTemplate = {0};
 EWRAM_DATA u16 gScrollableMultichoice_ScrollOffset = 0;
 
@@ -1318,6 +1329,16 @@ void RemoveCameraObject(void)
 {
     CameraObjectSetFollowedSpriteId(GetPlayerAvatarSpriteId());
     RemoveObjectEventByLocalIdAndMap(LOCALID_CAMERA, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+}
+
+void HidePlayerForCutscene(void)
+{
+    SetPlayerInvisibility(TRUE);
+}
+
+void ShowPlayerAfterCutscene(void)
+{
+    SetPlayerInvisibility(FALSE);
 }
 
 u8 GetPokeblockNameByMonNature(void)
@@ -4587,10 +4608,14 @@ void RegisterTalkedFossil (void)
     }
 }
 
+static bool8 sLastOWMonIsShiny;
+
 void ReturnPokemonSpeciesFromOW (void)
 {
     u16 pokemon = 0u;
     u8 i;
+
+    sLastOWMonIsShiny = FALSE;
 
     for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
     {
@@ -4609,5 +4634,11 @@ void ReturnPokemonSpeciesFromOW (void)
     if (pokemon & OBJ_EVENT_MON)
     {
         gSpecialVar_Result = pokemon & OBJ_EVENT_MON_SPECIES_MASK;
+        sLastOWMonIsShiny = (pokemon & OBJ_EVENT_MON_SHINY) != 0;
     }
+}
+
+void SetScriptedWildMonShinyFromOW (void)
+{
+    SetMonData(&gEnemyParty[0], MON_DATA_IS_SHINY, &sLastOWMonIsShiny);
 }

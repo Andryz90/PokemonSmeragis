@@ -121,7 +121,7 @@ Music: Male
 
 Sylveon @ Throat Spray
 Ability: Pixilate
-Level: 60
+Level: 65
 Modest Nature
 - Moonblast
 - Hyper Voice
@@ -130,7 +130,7 @@ Modest Nature
 
 Mimikyu @ Life Orb
 Ability: Disguise
-Level: 60
+Level: 65
 Jolly Nature
 - Swords Dance
 - Play Rough
@@ -139,7 +139,7 @@ Jolly Nature
 
 Togekiss @ Leftovers
 Ability: Disguise
-Level: 60
+Level: 65
 Bold Nature
 - Air Slash
 - Roost
@@ -153,18 +153,18 @@ Pic: Steven
 Gender: Male
 Music: Male
 
-Abomasnow
+Abomasnow @ Abomasite
 Ability: Snow Warning
-Level: 60
+Level: 65
 Modest Nature
 - Blizzard
 - Giga Drain
 - Ice Shard
-- Protect
+- Aurora Veil
 
 Glalie @ Leftovers
 Ability: Ice Body
-Level: 60
+Level: 65
 Timid Nature
 - Blizzard
 - Protect
@@ -173,7 +173,7 @@ Timid Nature
 
 Delibird @ Life Orb
 Ability: Hustle
-Level: 60
+Level: 65
 Adamant Nature
 - Aerial Ace
 - Ice Spinner

@@ -1135,6 +1135,7 @@ Common_EventScript_WildOWMon::
 	faceplayer
 	special ReturnPokemonSpeciesFromOW
 	setwildbattle VAR_RESULT, VAR_UNUSED_0x8014
+	special SetScriptedWildMonShinyFromOW
 	waitse
 	playmoncry VAR_RESULT, CRY_MODE_ENCOUNTER
 	delay 40
@@ -1249,3 +1250,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/AreaZero_Inside/scripts.inc"
 
 	.include "data/maps/AreaZero_Outside2/scripts.inc"
+
+	.include "data/maps/AreaZero_Harbor/scripts.inc"

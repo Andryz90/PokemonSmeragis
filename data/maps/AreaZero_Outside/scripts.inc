@@ -316,6 +316,15 @@ AreaZero_Outside_EventTrigger_BreakCrystalReminder_Block:
 	releaseall
 	end
 
+AreaZero_Outside_EventTrigger_CantLeave::
+	lockall
+	msgbox AreaZero_Outside_Text_CantLeaveYet, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
 AreaZero_Crystal_BlockingSign::
 	msgbox AreaZero_Outside_Text_SmallCrystalBrightLight, MSGBOX_SIGN
 	end
@@ -725,17 +734,19 @@ AreaZero_Outside_Text_BreakCrystalBeforeLeaving:
 	.string "{PLAYER}, break the crystal\n"
 	.string "so we can enter the cave. $"
 
+AreaZero_Outside_Text_CantLeaveYet:
+	.string "You can't leave AREA ZERO\n"
+	.string "until the investigation is over. $"
+
 AreaZero_Outside_Text_StevenAnalyzingCrystals:
 	.string "STEVEN: I've never seen\n"
 	.string "anything like this.\p"
-	.string "I'm analyzing these crystals\n"
-	.string "now, trying to trace the\l"
+	.string "I'm trying to trace the\n"
 	.string "source of their power. $"
 
 AreaZero_Outside_Text_AndryStevenCanStudyCrystals:
 	.string "ANDRY: SPLITFACE...\p"
-	.string "He's excited, but he's right\n"
-	.string "to be curious.\p"
+	.string "He's excited, but he's right.\p"
 	.string "We don't know what these\n"
 	.string "crystals are or where they\l"
 	.string "came from.\p"

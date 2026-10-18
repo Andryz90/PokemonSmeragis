@@ -55,10 +55,15 @@ Route118_EventScript_AreaZeroFinalScene::
 	msgbox Route118_Text_StevenFinalThanks, MSGBOX_DEFAULT
 	closemessage
 	turnobject LOCALID_STEVEN, DIR_EAST
-	playse SE_M_FLY
-	applymovement LOCALID_STEVEN, Route118_Movement_StevenFlyAway
+	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
+	delay 50
+	setvar VAR_LAST_TALKED, LOCALID_STEVEN
+	callnative ScriptSetNpcFlyOutTarget
+	dofieldeffect FLDEFF_NPCFLY_OUT
+	delay 15
 	removeobject LOCALID_STEVEN
+	waitfieldeffect FLDEFF_NPCFLY_OUT
 	applymovement LOCALID_ROUTE118_WALLY, Common_Movement_FaceUp
 	applymovement LOCALID_ROUTE118_RIVAL, Common_Movement_FaceUp
 	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
@@ -183,8 +188,6 @@ Route118_EventScript_StevenTrigger::
 	message Route118_Text_PokeNavFlyRestored
 	waitfanfare
 	setflag FLAG_NAV_POKERIDER
-	msgbox Route118_Text_StevenPokeNavMalfunction, MSGBOX_DEFAULT
-	closemessage
 	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
 	waitmoncry
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
@@ -349,10 +352,6 @@ Route118_Movement_AndryApproachPlayerFinal:
 	face_left
 	step_end
 
-Route118_Movement_StevenFlyAway:
-	fly_up
-	step_end
-
 Route118_Movement_WallyLeaveForFortree:
 	walk_fast_right
 	walk_fast_right
@@ -468,16 +467,12 @@ Route118_Text_SplitfaceSessosoCrystal:
 Route118_Text_AndryPiantala:
 	.string "ANDRY: Piantala. $"
 Route118_Text_CrystalAnalysis:
-	.string "STEVEN: This crystal is remarkable.\p"
-	.string "A white matrix, yet these colored\n"
-	.string "fragments are suspended within it.\p"
-	.string "They are not inclusions from any\n"
-	.string "mineral I know in HOENN.\p"
-	.string "ANDRY: The shards are separate colors,\n"
-	.string "but the light bends through them as\l"
-	.string "if they were one substance.\p"
-	.string "I have never seen anything like\n"
-	.string "this. $"
+	.string "STEVEN: I've never seen something\n"
+	.string "like this before.\p"
+	.string "It is almost completely white, yet\n"
+	.string "a powerful light pulses within it.\p"
+	.string "ANDRY: Whatever this crystal is,\n"
+	.string "we should be careful around it. $"
 
 Route118_Text_StevenGreeting:
 	.string "STEVEN: Ah, {PLAYER}{KUN}.\n"

@@ -1001,7 +1001,15 @@
 #define ITEM_FERALIGATITE               833
 #define ITEM_INFINITE_RARE_CANDY        834
 #define ITEM_POCKET_PC                  835
-#define POKEMON_LEGENDS_ZA_ITEM_COUNT   (ITEM_POCKET_PC + 1)
+#define ITEM_RAICHUNITE_X               836
+#define ITEM_RAICHUNITE_Y               837
+#define ITEM_CHESNAUGHTITE              838
+#define ITEM_DELPHOXITE                 839
+#define ITEM_MEGANIUMITE                840
+#define ITEM_GOLISOPODITE               841
+#define ITEM_CRABOMINABLITE              842
+#define ITEM_TYPHLOSIONITE               843
+#define POKEMON_LEGENDS_ZA_ITEM_COUNT   (ITEM_TYPHLOSIONITE + 1)
 // HOPO BERRY
 // LEGEND PLATE
 

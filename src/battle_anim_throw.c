@@ -51,7 +51,7 @@ enum
 {
     /*Screen*/
     SHINY_SCREEN_DARKEN_MIN = 0,
-    SHINY_SCREEN_DARKEN_MAX = 20,
+    SHINY_SCREEN_DARKEN_MAX = 16,
     /*Sparkle*/
     SHINY_SPARKLE_SCALE = 160,
     SHINY_SPARKLE_RADIUS = 18,
@@ -254,6 +254,9 @@ static bool32 IsBattlerReadyForShiny(u8 battler)
         return FALSE;
 
     sprite = &gSprites[gBattlerSpriteIds[battler]];
+    if (sprite->callback == SpriteCB_PlayerMonSlideIn)
+        return FALSE;
+
     if (sprite->x2 != 0 || sprite->y2 != 0)
         return FALSE;
 
